@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Haderach ">
+<meta name="description" content="Neste &amp;lsquo;writeup&amp;rsquo; veremos a resolução da máquina &amp;lsquo;Delivery&amp;rsquo; do HackTheBox. O autor desta máquina é o ippsec, um conhecido membro do HTB que costuma postar a resolução de máquinas retiradas em seu canal no Youtube. Ele também possui um site que permite filtrar seus vídeos no Youtube de acordo com o que é informado na busca.
+Informações da Máquina IP: 10.10.10.222
+Sistema Operacional: Linux
+Nível de dificuldade: Easy
+Varredura e Enumeração Port Scan O primeiro passo é iniciar um scan preliminar pelas portas TCP abertas e logo em seguida um segundo scan para determinar a versão dos serviços que estão rodando no servidor." />
+<meta name="keywords" content="DCPT,Pentest,CTF,Cybersecurity,RedTeam,HackTheBox, writeup, hackthebox" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="#252627" />
+<link rel="canonical" href="https://brunomcuesta.github.io/posts/2021/06/hackthebox-delivery/" />
+
+
+    <title>
+        
+            HackTheBox - Delivery :: Haderach  — Pentest e CTF
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://brunomcuesta.github.io/main.031a8efc33f94f55a4071bf4e91596478a5809fc8c148fab113801189cfd2152.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://brunomcuesta.github.io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://brunomcuesta.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://brunomcuesta.github.io/favicon-16x16.png">
+    <link rel="manifest" href="https://brunomcuesta.github.io/site.webmanifest">
+    <link rel="mask-icon" href="https://brunomcuesta.github.io/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="https://brunomcuesta.github.io/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+
+
+
+<meta itemprop="name" content="HackTheBox - Delivery">
+<meta itemprop="description" content="Neste &lsquo;writeup&rsquo; veremos a resolução da máquina &lsquo;Delivery&rsquo; do HackTheBox. O autor desta máquina é o ippsec, um conhecido membro do HTB que costuma postar a resolução de máquinas retiradas em seu canal no Youtube. Ele também possui um site que permite filtrar seus vídeos no Youtube de acordo com o que é informado na busca.
+Informações da Máquina IP: 10.10.10.222
+Sistema Operacional: Linux
+Nível de dificuldade: Easy
+Varredura e Enumeração Port Scan O primeiro passo é iniciar um scan preliminar pelas portas TCP abertas e logo em seguida um segundo scan para determinar a versão dos serviços que estão rodando no servidor.">
+
+
+<meta itemprop="datePublished" content="2021-06-23T13:23:07-03:00" />
+<meta itemprop="dateModified" content="2021-06-23T13:23:07-03:00" />
+<meta itemprop="wordCount" content="1249">
+
+
+
+<meta itemprop="keywords" content="writeup,hackthebox," />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://brunomcuesta.github.io"/>
+
+<meta name="twitter:title" content="HackTheBox - Delivery"/>
+<meta name="twitter:description" content="Neste &lsquo;writeup&rsquo; veremos a resolução da máquina &lsquo;Delivery&rsquo; do HackTheBox. O autor desta máquina é o ippsec, um conhecido membro do HTB que costuma postar a resolução de máquinas retiradas em seu canal no Youtube. Ele também possui um site que permite filtrar seus vídeos no Youtube de acordo com o que é informado na busca.
+Informações da Máquina IP: 10.10.10.222
+Sistema Operacional: Linux
+Nível de dificuldade: Easy
+Varredura e Enumeração Port Scan O primeiro passo é iniciar um scan preliminar pelas portas TCP abertas e logo em seguida um segundo scan para determinar a versão dos serviços que estão rodando no servidor."/>
+
+
+
+
+    <meta property="og:title" content="HackTheBox - Delivery" />
+<meta property="og:description" content="Neste &lsquo;writeup&rsquo; veremos a resolução da máquina &lsquo;Delivery&rsquo; do HackTheBox. O autor desta máquina é o ippsec, um conhecido membro do HTB que costuma postar a resolução de máquinas retiradas em seu canal no Youtube. Ele também possui um site que permite filtrar seus vídeos no Youtube de acordo com o que é informado na busca.
+Informações da Máquina IP: 10.10.10.222
+Sistema Operacional: Linux
+Nível de dificuldade: Easy
+Varredura e Enumeração Port Scan O primeiro passo é iniciar um scan preliminar pelas portas TCP abertas e logo em seguida um segundo scan para determinar a versão dos serviços que estão rodando no servidor." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://brunomcuesta.github.io/posts/2021/06/hackthebox-delivery/" />
+<meta property="article:published_time" content="2021-06-23T13:23:07-03:00"/>
+<meta property="article:modified_time" content="2021-06-23T13:23:07-03:00"/>
+
+
+
+
+
+
+    <meta property="article:published_time" content="2021-06-23 13:23:07 -0300 -03" />
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://brunomcuesta.github.io/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">$ cd /root/</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://brunomcuesta.github.io/about/">About</a></li><li><a href="https://brunomcuesta.github.io/posts/">Posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        6 minutos
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="https://brunomcuesta.github.io/posts/2021/06/hackthebox-delivery/">HackTheBox - Delivery</a>
+      </h1>
+
+      
+
+      
+        <hr />
+        <aside id="toc">
+          <div class="toc-title">Índice</div>
+          <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#informações-da-máquina">Informações da Máquina</a></li>
+<li><a href="#varredura-e-enumeração">Varredura e Enumeração</a>
+<ul>
+<li><a href="#port-scan">Port Scan</a></li>
+<li><a href="#webserver">Webserver</a></li>
+</ul></li>
+<li><a href="#vulnerabilidade">Vulnerabilidade</a></li>
+<li><a href="#exploração">Exploração</a></li>
+<li><a href="#escalação-de-privilégios">Escalação de Privilégios</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+        </aside>
+        <hr />
+
+      
+
+      <div class="post-content">
+        
+
+
+    <img src="https://i.imgur.com/EeEdgR4.jpg"  alt="Delivery Cover"  class="center"  style="border-radius: 8px;"  />
+
+
+
+<p>Neste &lsquo;writeup&rsquo; veremos a resolução da máquina &lsquo;Delivery&rsquo; do <a href="https://www.hackthebox.eu/" target="_blank">HackTheBox</a>. O autor desta máquina é o <a href="https://www.hackthebox.eu/profile/3769" target="_blank">ippsec</a>, um conhecido membro do HTB que costuma postar a resolução de máquinas retiradas em seu canal no <a href="https://www.youtube.com/c/ippsec" target="_blank">Youtube</a>. Ele também possui um <a href="https://ippsec.rocks/" target="_blank">site</a> que permite filtrar seus vídeos no Youtube de acordo com o que é informado na busca.</p>
+
+<h3 id="informações-da-máquina">Informações da Máquina</h3>
+
+<p>IP: 10.10.10.222</p>
+
+<p>Sistema Operacional: Linux</p>
+
+<p>Nível de dificuldade: Easy</p>
+
+<h3 id="varredura-e-enumeração">Varredura e Enumeração</h3>
+
+<h4 id="port-scan">Port Scan</h4>
+
+<p>O primeiro passo é iniciar um scan preliminar pelas portas TCP abertas e logo em seguida um segundo scan para determinar a versão dos serviços que estão rodando no servidor. Este é o resultado do Nmap.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Nmap 7.91 scan initiated Fri May 14 15:27:04 2021 as: nmap -v -sC -sV -p 22,80,8065 -Pn -oN details 10.10.10.222</span>
+Nmap scan report <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10</span>.10.10.222
+Host is up <span style="color:#f92672">(</span><span style="color:#ae81ff">0</span>.31s latency<span style="color:#f92672">)</span>.
+
+PORT     STATE SERVICE VERSION
+<span style="color:#ae81ff">22</span>/tcp   open  ssh     OpenSSH <span style="color:#ae81ff">7</span>.9p1 Debian <span style="color:#ae81ff">10</span>+deb10u2 <span style="color:#f92672">(</span>protocol <span style="color:#ae81ff">2</span>.0<span style="color:#f92672">)</span>
+| ssh-hostkey: 
+|   <span style="color:#ae81ff">2048</span> 9c:40:fa:85:9b:01:ac:ac:0e:bc:0c:19:51:8a:ee:27 <span style="color:#f92672">(</span>RSA<span style="color:#f92672">)</span>
+|   <span style="color:#ae81ff">256</span> 5a:0c:c0:3b:9b:76:55:2e:6e:c4:f4:b9:5d:76:17:09 <span style="color:#f92672">(</span>ECDSA<span style="color:#f92672">)</span>
+|_  <span style="color:#ae81ff">256</span> b7:9d:f7:48:9d:a2:f2:76:30:fd:42:d3:35:3a:80:8c <span style="color:#f92672">(</span>ED25519<span style="color:#f92672">)</span>
+<span style="color:#ae81ff">80</span>/tcp   open  http    nginx <span style="color:#ae81ff">1</span>.14.2
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-server-header: nginx/1.14.2
+|_http-title: Welcome
+<span style="color:#ae81ff">8065</span>/tcp open  unknown
+| fingerprint-strings: 
+|   GenericLines, Help, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 <span style="color:#ae81ff">400</span> Bad Request
+|     Content-Type: text/plain; charset<span style="color:#f92672">=</span>utf-8
+|     Connection: close
+|     Request
+|   GetRequest: 
+|     HTTP/1.0 <span style="color:#ae81ff">200</span> OK
+|     Accept-Ranges: bytes
+|     Cache-Control: no-cache, max-age<span style="color:#f92672">=</span><span style="color:#ae81ff">31556926</span>, public
+|     Content-Length: <span style="color:#ae81ff">3108</span>
+|     Content-Security-Policy: frame-ancestors <span style="color:#e6db74">&#39;self&#39;</span>; script-src <span style="color:#e6db74">&#39;self&#39;</span> cdn.rudderlabs.com
+|     Content-Type: text/html; charset<span style="color:#f92672">=</span>utf-8
+|     Last-Modified: Fri, <span style="color:#ae81ff">14</span> May <span style="color:#ae81ff">2021</span> <span style="color:#ae81ff">16</span>:47:36 GMT
+|     X-Frame-Options: SAMEORIGIN
+|     X-Request-Id: 6iwifyweep85fkyk7iimfj8kfo
+|     X-Version-Id: <span style="color:#ae81ff">5</span>.30.0.5.30.1.57fb31b889bf81d99d8af8176d4bbaaa.false
+|     Date: Fri, <span style="color:#ae81ff">14</span> May <span style="color:#ae81ff">2021</span> <span style="color:#ae81ff">18</span>:38:43 GMT
+|     &lt;!doctype html&gt;&lt;html lang<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;&lt;head&gt;&lt;meta charset<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;&lt;meta name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> content<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0&#34;</span>&gt;&lt;meta name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;robots&#34;</span> content<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;noindex, nofollow&#34;</span>&gt;&lt;meta name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;referrer&#34;</span> content<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;no-referrer&#34;</span>&gt;&lt;title&gt;Mattermost&lt;/title&gt;&lt;meta name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mobile-web-app-capable&#34;</span> content<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;yes&#34;</span>&gt;&lt;meta name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;application-name&#34;</span> content<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Mattermost&#34;</span>&gt;&lt;meta name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;format-detection&#34;</span> content<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;telephone=no&#34;</span>&gt;&lt;link re
+|   HTTPOptions: 
+|     HTTP/1.0 <span style="color:#ae81ff">405</span> Method Not Allowed
+|     Date: Fri, <span style="color:#ae81ff">14</span> May <span style="color:#ae81ff">2021</span> <span style="color:#ae81ff">18</span>:38:44 GMT
+|_    Content-Length: <span style="color:#ae81ff">0</span>
+<span style="color:#ae81ff">1</span> service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8065-TCP:V<span style="color:#f92672">=</span><span style="color:#ae81ff">7</span>.91%I<span style="color:#f92672">=</span><span style="color:#ae81ff">7</span>%D<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>/14%Time<span style="color:#f92672">=</span>609EC102%P<span style="color:#f92672">=</span>x86_64-pc-linux-gnu%r<span style="color:#f92672">(</span>Ge
+SF:nericLines,67,<span style="color:#e6db74">&#34;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20t
+</span><span style="color:#e6db74">SF:ext/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x
+</span><span style="color:#e6db74">SF:20Request&#34;</span><span style="color:#f92672">)</span>%r<span style="color:#f92672">(</span>GetRequest,DF3,<span style="color:#e6db74">&#34;HTTP/1\.0\x20200\x20OK\r\nAccept-Ranges:\
+</span><span style="color:#e6db74">SF:x20bytes\r\nCache-Control:\x20no-cache,\x20max-age=31556926,\x20public\
+</span><span style="color:#e6db74">SF:r\nContent-Length:\x203108\r\nContent-Security-Policy:\x20frame-ancesto
+</span><span style="color:#e6db74">SF:rs\x20&#39;self&#39;;\x20script-src\x20&#39;self&#39;\x20cdn\.rudderlabs\.com\r\nConten
+</span><span style="color:#e6db74">SF:t-Type:\x20text/html;\x20charset=utf-8\r\nLast-Modified:\x20Fri,\x2014\
+</span><span style="color:#e6db74">SF:x20May\x202021\x2016:47:36\x20GMT\r\nX-Frame-Options:\x20SAMEORIGIN\r\n
+</span><span style="color:#e6db74">SF:X-Request-Id:\x206iwifyweep85fkyk7iimfj8kfo\r\nX-Version-Id:\x205\.30\.
+</span><span style="color:#e6db74">SF:0\.5\.30\.1\.57fb31b889bf81d99d8af8176d4bbaaa\.false\r\nDate:\x20Fri,\x
+</span><span style="color:#e6db74">SF:2014\x20May\x202021\x2018:38:43\x20GMT\r\n\r\n&lt;!doctype\x20html&gt;&lt;html\x
+</span><span style="color:#e6db74">SF:20lang=\&#34;en\&#34;&gt;&lt;head&gt;&lt;meta\x20charset=\&#34;utf-8\&#34;&gt;&lt;meta\x20name=\&#34;viewport
+</span><span style="color:#e6db74">SF:\&#34;\x20content=\&#34;width=device-width,initial-scale=1,maximum-scale=1,user
+</span><span style="color:#e6db74">SF:-scalable=0\&#34;&gt;&lt;meta\x20name=\&#34;robots\&#34;\x20content=\&#34;noindex,\x20nofollo
+</span><span style="color:#e6db74">SF:w\&#34;&gt;&lt;meta\x20name=\&#34;referrer\&#34;\x20content=\&#34;no-referrer\&#34;&gt;&lt;title&gt;Matter
+</span><span style="color:#e6db74">SF:most&lt;/title&gt;&lt;meta\x20name=\&#34;mobile-web-app-capable\&#34;\x20content=\&#34;yes\&#34;
+</span><span style="color:#e6db74">SF:&gt;&lt;meta\x20name=\&#34;application-name\&#34;\x20content=\&#34;Mattermost\&#34;&gt;&lt;meta\x20
+</span><span style="color:#e6db74">SF:name=\&#34;format-detection\&#34;\x20content=\&#34;telephone=no\&#34;&gt;&lt;link\x20re&#34;</span><span style="color:#f92672">)</span>%r<span style="color:#f92672">(</span>H
+SF:TTPOptions,5B,<span style="color:#e6db74">&#34;HTTP/1\.0\x20405\x20Method\x20Not\x20Allowed\r\nDate:\x2
+</span><span style="color:#e6db74">SF:0Fri,\x2014\x20May\x202021\x2018:38:44\x20GMT\r\nContent-Length:\x200\r
+</span><span style="color:#e6db74">SF:\n\r\n&#34;</span><span style="color:#f92672">)</span>%r<span style="color:#f92672">(</span>RTSPRequest,67,<span style="color:#e6db74">&#34;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConten
+</span><span style="color:#e6db74">SF:t-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n
+</span><span style="color:#e6db74">SF:400\x20Bad\x20Request&#34;</span><span style="color:#f92672">)</span>%r<span style="color:#f92672">(</span>Help,67,<span style="color:#e6db74">&#34;HTTP/1\.1\x20400\x20Bad\x20Request\r
+</span><span style="color:#e6db74">SF:\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close
+</span><span style="color:#e6db74">SF:\r\n\r\n400\x20Bad\x20Request&#34;</span><span style="color:#f92672">)</span>%r<span style="color:#f92672">(</span>SSLSessionReq,67,<span style="color:#e6db74">&#34;HTTP/1\.1\x20400\x2
+</span><span style="color:#e6db74">SF:0Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nCon
+</span><span style="color:#e6db74">SF:nection:\x20close\r\n\r\n400\x20Bad\x20Request&#34;</span><span style="color:#f92672">)</span>%r<span style="color:#f92672">(</span>TerminalServerCookie
+SF:,67,<span style="color:#e6db74">&#34;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;
+</span><span style="color:#e6db74">SF:\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request&#34;</span>
+SF:<span style="color:#f92672">)</span>;
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+<span style="color:#75715e"># Nmap done at Fri May 14 15:29:11 2021 -- 1 IP address (1 host up) scanned in 127.39 seconds</span></code></pre></div>
+<h4 id="webserver">Webserver</h4>
+
+<p>Para acessar o site pelo seu domínio e não pelo seu ip basta inserir a linha correspondente ao arquivo /etc/hosts.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">10.10.10.222  delivery.htb</code></pre></div>
+<p>O site poderá ser acessado pela seguinte URL.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">http://delivery.htb</code></pre></div>
+<p>Existem três portas abertas no servidor: 22, 80 e 8065. Acessando pela porta 80 encontramos a seguinte página.</p>
+
+
+    <img src="https://i.imgur.com/IFgz2yF.png"  alt="Delivery"  class="center"  style="border-radius: 8px;"  />
+
+
+
+<p>Analisando a página o botão &ldquo;Contact Us&rdquo; aponta para duas aplicações, a &ldquo;HelpDesk&rdquo; e &ldquo;MatterMost server&rdquo;:</p>
+
+
+    <img src="https://i.imgur.com/RZ6uWsh.png"  alt="Contact-Us"  class="center"  style="border-radius: 8px;"  />
+
+
+
+<p>Adicionado o subdomínio ao /etc/hosts.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">10.10.10.222  delivery.htb helpdesk.delivery.htb</code></pre></div>
+<p>A aplicação agora pode ser acessada diretamente pela sua URL.</p>
+
+
+    <img src="https://i.imgur.com/LpeunWd.png"  alt="Help Desk"  class="center"  style="border-radius: 8px;"  />
+
+
+
+<p>Trata-se de um sistema de chamados <a href="https://osticket.com/" target="_blank">OS Ticket</a>, uma plataforma web de código fonte aberto (open source) que permite gerenciar chamados. Antes de buscar vulnerabilidades na aplicação foi efetuado o registro de um ticket para obter alguma informação que permita algum tipo de acesso administrativo.</p>
+
+
+    <img src="https://i.imgur.com/fhuzHu3.png"  alt="Criar ticket"  class="center"  style="border-radius: 8px;"  />
+
+
+
+<p>Após o registro do ticket foi gerado um e-mail pelo sistema para que o usuário possa acompanhar o status do chamado. Esta é a informação relevante obtida pelo sistema até o momento, o e-mail.</p>
+
+
+    <img src="https://i.imgur.com/ayhfpPN.png"  alt="Ticket criado"  class="center"  style="border-radius: 8px;"  />
+
+
+
+<p>A segunda aplicação que roda na porta 8065 é o Mattermost e este é o seu propósito segundo o <a href="https://mattermost.com/incident-collaboration/" target="_blank">site</a> do fabricante:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">O Mattermost foi desenvolvido como um centro de comando de comunicação
+para ajudar as equipes de DevOps a orquestrar fluxos de trabalho
+de colaboração de incidentes urgentes.</code></pre></div>
+<h3 id="vulnerabilidade">Vulnerabilidade</h3>
+
+<p>Acessando esta aplicação na porta 8065 surge uma tela de login e logo abaixo um link &ldquo;Create one now&rdquo; que direciona para a tela de cadastro de usuário. O problema é que ao fazer o cadastro o sistema envia um link de confirmação ao e-mail informado. Como não há nenhum serviço de e-mail no servidor com a porta exposta, não há como explorar o serviço e visualizar o link de confirmação. A opção seria receber o e-mail do Mattermost de outra forma, talvez pelo OsTicket. Ao fazer uma pesquisa sobre recebimento de e-mails no <a href="https://docs.osticket.com/en/latest/Getting%20Started/Email%20Settings.html#:~:text=osTicket%20allows%20you%20to%20setup,support%20requests%20in%20one%20place." target="_blank">site</a> do OSTicket é possível encontrar a seguinte informação:</p>
+
+
+    <img src="https://i.imgur.com/GK8aRn2.png"  alt="OSTicket routing e-mails"  class="center"  style="border-radius: 8px;"  />
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">A configuração do seu sistema para aceitar vários e-mails
+de sistema para sistema depende de sua preferência pessoal.
+O OsTicket atualmente suporta piping (aliases) e métodos
+de pesquisa POP3 / IMAP para rotear e-mails recebidos.
+Os tickets são roteados para o departamento e atribuídos
+a uma prioridade padrão associada ao e-mail.</code></pre></div>
+<p>No caso, se há roteamento de e-mails de sistema para sistema e de departamento para departamento então o que for enviado pelo sistema Mattermost poderá ser recebido no OSticket. E para visualizar o e-mail será necessário acessar o próprio ticket previamente cadastrado.</p>
+
+
+    <img src="https://i.imgur.com/3xxHju9.png"  alt="Mattermost cadastro"  class="center"  style="border-radius: 8px;"  />
+
+
+
+<p>Ao enviar o formulário pelo site do Mattermost uma mensagem de confirmação de cadastro é recebida pelo OSTicket.</p>
+
+
+    <img src="https://i.imgur.com/j591Qrg.png"  alt="OSTicket - Confirmação de cadastro"  class="center"  style="border-radius: 8px;"  />
+
+
+
+<p>O link gerado pelo Mattermost para confirmar o cadastro no sistema.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">http://delivery.htb:8065/do_verify_email?token=j3wgng8a3qb6tjeescmphz4dhjx9a4edj84i514tyyqy35wz9kcbix87hikh4shk&amp;email=4069966%40delivery.htb</code></pre></div>
+<p>Acessando o link e confirmando o cadastro o usuário é direcionado para a página inicial do Mattermost com a opção para juntar-se ao time &ldquo;internal&rdquo;.</p>
+
+
+    <img src="https://i.imgur.com/3SJ0HFT.png"  alt="Mattermost inicial"  class="center"  style="border-radius: 8px;"  />
+
+
+
+<p>Logo em seguida surge o &lsquo;dashboard&rsquo; para que o usuário possa comunicar-se com outros usuários.</p>
+
+
+    <img src="https://i.imgur.com/XLOTuS6.png"  alt="Mattermost dashboard"  class="center"  style="border-radius: 8px;"  />
+
+
+
+<h3 id="exploração">Exploração</h3>
+
+<p>Explorando as mensagens no &lsquo;dashboard&rsquo; foi encontrada uma mensagem do usuário root e nela uma credencial de acesso.</p>
+
+
+    <img src="https://i.imgur.com/6ZdXPsf.png"  alt="Mattermost mensagem root"  class="center"  style="border-radius: 8px;"  />
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">mmuser:Crack_The_MM_Admin_PW</code></pre></div>
+<p>Com esta credencial é possível conectar ao host pelo SSH na porta 22.</p>
+
+
+    <img src="https://i.imgur.com/Dpa9NcJ.png"  alt="Acesso SSH"  class="center"  style="border-radius: 8px;"  />
+
+
+
+<p>Obtendo a flag do usuário logado.</p>
+
+
+    <img src="https://i.imgur.com/jG2x3Tv.png"  alt="Flag user"  class="center"  style="border-radius: 8px;"  />
+
+
+
+<p>Esta credencial não permite acesso ao banco de dados Mysql, então uma enumeração de diretórios e arquivos na máquina foi necessária. Inicialmente foi feita a varredura por arquivos de configuração dos sistemas que rodam no servidor. O resultado mostrou que o Mattermost possui credenciais para acesso ao banco de dados no seu arquivo de configuração.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">/opt/mattermost/config/config.json</code></pre></div>
+
+    <img src="https://i.imgur.com/MwFMiyh.png"  alt="Mysql credenciais"  class="center"  style="border-radius: 8px;"  />
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">mmuser:Crack_The_MM_Admin_PW</code></pre></div>
+<p>Acessando o Mysql com a credencial encontrada.</p>
+
+
+    <img src="https://i.imgur.com/JebaxGn.png"  alt="Mysql login"  class="center"  style="border-radius: 8px;"  />
+
+
+
+<p>Listando os bancos de dados no servidor.</p>
+
+
+    <img src="https://i.imgur.com/b4wX1Wp.png"  alt="Mysql databases"  class="center"  style="border-radius: 8px;"  />
+
+
+
+<p>Acessando a tabela de usuários.</p>
+
+
+    <img src="https://i.imgur.com/366lnbd.png"  alt="Mysql tabela de usuários"  class="center"  style="border-radius: 8px;"  />
+
+
+
+<p>Nesta tabela foi encontrada a credencial do usuário root.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">root | $2a$10$VM6EeymRxJ29r8Wjkr8Dtev0O.1STWb4.4ScG.anuu7v0EFJwgjjO</code></pre></div>
+<h3 id="escalação-de-privilégios">Escalação de Privilégios</h3>
+
+<p>As duas ferramentas mais usadas para a quebra de hashes são o john e o hashcat. Na lista de formatos suportados do hashcat a hash é reconhecida como &ldquo;bcrypt/blowfish&rdquo;.</p>
+
+
+    <img src="https://i.imgur.com/G4m1hdx.png"  alt="Hashcat bcrypt"  class="center"  style="border-radius: 8px;"  />
+
+
+
+<p>Antes de efetuar a quebra da hash com a wordlist rockyou.txt é necessário uma atenção especial na mensagem do root pelo Mattermost, onde alerta que a senha &ldquo;PleaseSubscribe!&rdquo; não estará na wordlist e que para proceder com a quebra é necessário criar uma wordlist personalizada baseada nas &ldquo;rules&rdquo; do hashcat.</p>
+
+
+    <img src="https://i.imgur.com/Kksj2oW.png"  alt="Root wordlist"  class="center"  style="border-radius: 8px;"  />
+
+
+
+<p>O hashcat possui um <a href="https://hashcat.net/wiki/doku.php?id=rule_based_attack" target="_blank">manual</a> que explica como criar estas wordlists personalizadas baseadas em um &ldquo;pattern&rdquo;.</p>
+
+<p>Portanto, deve-se criar dois arquivos. Um arquivo com a hash e outro com a senha &ldquo;PleaseSubscribe!&rdquo;. Esta senha será usada como base para criar outras senhas variadas e assim gerar uma wordlist personalizada.</p>
+
+
+    <img src="https://i.imgur.com/0dGC9wY.png"  alt="Arquivos"  class="center"  style="border-radius: 8px;"  />
+
+
+
+<p>Existem diversos formatos de &ldquo;rules&rdquo; no hashcat para a geração de wordlist personalizada.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls -l /usr/share/hashcat/rules/</code></pre></div>
+<p>Para gerar esta wordlist foi selecionada a &ldquo;best64.rule&rdquo;, muito utilizada em CTFs.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hashcat --force pattern -r /usr/share/hashcat/rules/best64.rule --stdout &gt; passwords.txt</code></pre></div>
+<p>O comando irá gerar um arquivo passwords.txt com todas as variações de senhas. Logo em seguida se procede com a quebra da hash.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hashcat -a <span style="color:#ae81ff">0</span> -m <span style="color:#ae81ff">3200</span> hash passwords.txt</code></pre></div>
+<p>A saída do comando revela a senha encontrada do usuário root.</p>
+
+
+    <img src="https://i.imgur.com/Mn6w8aA.png"  alt="Crack hash"  class="center"  style="border-radius: 8px;"  />
+
+
+
+<pre><code>PleaseSubscribe!21
+</code></pre>
+
+<p>Como citado anteriormente, esta nova senha revelada é uma variação da senha original &ldquo;PleaseSubscribe!&rdquo;.</p>
+
+<p>Alterando para o usuário root pelo terminal com a senha descoberta.</p>
+
+
+    <img src="https://i.imgur.com/PEBEeXX.png"  alt="Root login"  class="center"  style="border-radius: 8px;"  />
+
+
+
+<p>Acessando a flag do usuário root.</p>
+
+
+    <img src="https://i.imgur.com/oBqoVEQ.png"  alt="Root flag"  class="center"  style="border-radius: 8px;"  />
+
+
+
+<p>Com acesso ao root a máquina &lsquo;Delivery&rsquo; está terminada.</p>
+
+
+    <img src="https://i.imgur.com/oM7pTAq.png"  alt="Pwned"  class="center"  style="border-radius: 8px;"  />
+
+
+
+<p>Até a próxima!</p>
+
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+      
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="https://brunomcuesta.github.io/tags/writeup/">writeup</a></span>
+        <span class="tag"><a href="https://brunomcuesta.github.io/tags/hackthebox/">hackthebox</a></span>
+        
+    </p>
+
+      
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        1249 Palavras
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        
+          23-06-2021 13:23
+        
+
+         
+          
+        
+      </p>
+    </div>
+      <hr />
+      <div class="sharing-buttons">
+        
+<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fbrunomcuesta.github.io%2fposts%2f2021%2f06%2fhackthebox-delivery%2f" target="_blank" rel="noopener" aria-label="" title="Share on facebook">
+  <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?url=https%3a%2f%2fbrunomcuesta.github.io%2fposts%2f2021%2f06%2fhackthebox-delivery%2f" target="_blank" rel="noopener" aria-label="" title="Share on twitter">
+  <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
+      <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=HackTheBox%20-%20Delivery&amp;caption=HackTheBox%20-%20Delivery&amp;canonicalUrl=https%3a%2f%2fbrunomcuesta.github.io%2fposts%2f2021%2f06%2fhackthebox-delivery%2f" target="_blank" rel="noopener" aria-label="" title="Share on tumblr">
+  <div class="resp-sharing-button resp-sharing-button--tumblr resp-sharing-button--small">
+    <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.563 24c-5.093 0-7.031-3.756-7.031-6.411V9.747H5.116V6.648c3.63-1.313 4.512-4.596 4.71-6.469C9.84.051 9.941 0 9.999 0h3.517v6.114h4.801v3.633h-4.82v7.47c.016 1.001.375 2.371 2.207 2.371h.09c.631-.02 1.486-.205 1.936-.419l1.156 3.425c-.436.636-2.4 1.374-4.156 1.404h-.178l.011.002z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="mailto:?subject=HackTheBox%20-%20Delivery&amp;body=https%3a%2f%2fbrunomcuesta.github.io%2fposts%2f2021%2f06%2fhackthebox-delivery%2f" target="_self" rel="noopener" aria-label="" title="Share via email">
+  <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fbrunomcuesta.github.io%2fposts%2f2021%2f06%2fhackthebox-delivery%2f&amp;media=https%3a%2f%2fbrunomcuesta.github.io%2fposts%2f2021%2f06%2fhackthebox-delivery%2f;description=HackTheBox%20-%20Delivery" target="_blank" rel="noopener" aria-label="" title="Share on pinterest">
+  <div class="resp-sharing-button resp-sharing-button--pinterest resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fbrunomcuesta.github.io%2fposts%2f2021%2f06%2fhackthebox-delivery%2f&amp;title=HackTheBox%20-%20Delivery&amp;summary=HackTheBox%20-%20Delivery&amp;source=https%3a%2f%2fbrunomcuesta.github.io%2fposts%2f2021%2f06%2fhackthebox-delivery%2f" target="_blank" rel="noopener" aria-label="" title="Share on linkedin">
+  <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=https%3a%2f%2fbrunomcuesta.github.io%2fposts%2f2021%2f06%2fhackthebox-delivery%2f&amp;resubmit=true&amp;title=HackTheBox%20-%20Delivery" target="_blank" rel="noopener" aria-label="" title="Share on reddit">
+  <div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fbrunomcuesta.github.io%2fposts%2f2021%2f06%2fhackthebox-delivery%2f;title=HackTheBox%20-%20Delivery" target="_blank" rel="noopener" aria-label="" title="Share on xing">
+  <div class="resp-sharing-button resp-sharing-button--xing resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016 0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894 0 21.686 0h-3.498zM3.648 4.74c-.211 0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016 0 .021L1.86 16.051c-.099.188-.093.381 0 .529.085.142.239.234.45.234h3.461c.518 0 .766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="whatsapp://send?text=HackTheBox%20-%20Delivery%20https%3a%2f%2fbrunomcuesta.github.io%2fposts%2f2021%2f06%2fhackthebox-delivery%2f" target="_blank" rel="noopener" aria-label="" title="Share on whatsapp">
+  <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fbrunomcuesta.github.io%2fposts%2f2021%2f06%2fhackthebox-delivery%2f&amp;t=HackTheBox%20-%20Delivery" target="_blank" rel="noopener" aria-label="" title="Share on hacker news">
+  <div class="resp-sharing-button resp-sharing-button--hackernews resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M0 24V0h24v24H0zM6.951 5.896l4.112 7.708v5.064h1.583v-4.972l4.148-7.799h-1.749l-2.457 4.875c-.372.745-.688 1.434-.688 1.434s-.297-.708-.651-1.434L8.831 5.896h-1.88z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://telegram.me/share/url?text=HackTheBox%20-%20Delivery&amp;url=https%3a%2f%2fbrunomcuesta.github.io%2fposts%2f2021%2f06%2fhackthebox-delivery%2f" target="_blank" rel="noopener" aria-label="" title="Share on telegram">
+  <div class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+    </div>
+  </div>
+</a>
+
+      </div>
+
+    
+    <div class="pagination">
+        <div class="pagination__title">
+            <span class="pagination__title-h"></span>
+            <hr />
+        </div>
+
+        <div class="pagination__buttons">
+            
+
+            
+            <span class="button next">
+                <a href="https://brunomcuesta.github.io/posts/2021/02/hackthebox-jewel/">
+                    <span class="button__text">HackTheBox - Jewel</span>
+                    <span class="button__icon">→</span>
+                </a>
+            </span>
+            
+        </div>
+    </div>
+
+
+    
+
+    
+
+  </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="https://brunomcuesta.github.io/bundle.min.4bd4ccd2ab9fe5338bb5c7d92a81317fa54c948bb5605e9807c4e9b6f7ad4186c70f7634b323e7b854c4a2c4af7d9ebd1fc5a6f42b37d2721a735d8b1d7cbf01.js" integrity="sha512-S9TM0quf5TOLtcfZKoExf6VMlIu1YF6YB8TptvetQYbHD3Y0syPnuFTEosSvfZ69H8Wm9Cs30nIac12LHXy/AQ=="></script>
+
+
+
+    </body>
+</html>
