@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Haderach</title>
+    <title></title>
     <link>https://nmmorette.github.io/</link>
     <description>Recent content on Haderach</description>
     <generator>Hugo -- gohugo.io</generator>
@@ -18,29 +18,23 @@
       
       <guid>https://nmmorette.github.io/posts/2021/06/hackthebox-delivery/</guid>
       <description>Neste &amp;lsquo;writeup&amp;rsquo; veremos a resolução da máquina &amp;lsquo;Delivery&amp;rsquo; do HackTheBox. O autor desta máquina é o ippsec, um conhecido membro do HTB que costuma postar a resolução de máquinas retiradas em seu canal no Youtube. Ele também possui um site que permite filtrar seus vídeos no Youtube de acordo com o que é informado na busca.
-Informações da Máquina IP: 10.10.10.222
-Sistema Operacional: Linux
-Nível de dificuldade: Easy
-Varredura e Enumeração Port Scan O primeiro passo é iniciar um scan preliminar pelas portas TCP abertas e logo em seguida um segundo scan para determinar a versão dos serviços que estão rodando no servidor.</description>
+
     </item>
     
     <item>
-      <title>HackTheBox - Jewel</title>
-      <link>https://nmmorette.github.io/posts/2021/02/hackthebox-jewel/</link>
-      <pubDate>Sat, 20 Feb 2021 10:00:00 -0300</pubDate>
+      <title></title>
+      <link></link>
+      <pubDate></pubDate>
       
-      <guid>https://nmmorette.github.io/posts/2021/02/hackthebox-jewel/</guid>
-      <description>Neste primeiro post veremos a resolução da máquina &amp;lsquo;Jewel&amp;rsquo; do HackTheBox. A resolução foi efetuada em outubro de 2020, quando a máquina estava &amp;lsquo;ativa&amp;rsquo;. Em fevereiro de 2021 a mesma passou para &amp;lsquo;retirada&amp;rsquo; e com as evidências coletadas anteriormente foi possível publicar este &amp;lsquo;writeup&amp;rsquo;.
-Informações da Máquina IP: 10.10.10.211
-Sistema Operacional: Linux
-Nível de dificuldade: Médio
-Varredura e Enumeração Port Scan Ao executar o Nmap são mostradas três portas abertas: 22, 8000 e 8080.</description>
+      <guid>/</guid>
+      <description>&amp;lsquo;Jewel&amp;rsquo; do HackTheBox. A resolução foi efetuada em outubro de 2020, quando a máquina estava &amp;lsquo;ativa&amp;rsquo;. Em fevereiro de 2021 a mesma passou para &amp;lsquo;retirada&amp;rsquo; e com as evidências coletadas anteriormente foi possível publicar este &amp;lsquo;writeup&amp;rsquo;.
+
     </item>
     
     <item>
       <title>About</title>
       <link>https://nmmorette.github.io/about/</link>
-      <pubDate>Sat, 26 Sep 2020 18:29:29 -0300</pubDate>
+      <pubDate></pubDate>
       
       <guid>https://nmmorette.github.io/about/</guid>
       <description>DCPT - Desec Certified Penetration Tester System Analyst Python Developer CTF player</description>
