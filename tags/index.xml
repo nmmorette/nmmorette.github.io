@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Haderach</title>
+    <link>https://brunomcuesta.github.io/tags/</link>
+    <description>Recent content in Tags on Haderach</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 23 Jun 2021 13:23:07 -0300</lastBuildDate>
+    
+	<atom:link href="https://brunomcuesta.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hackthebox</title>
+      <link>https://brunomcuesta.github.io/tags/hackthebox/</link>
+      <pubDate>Wed, 23 Jun 2021 13:23:07 -0300</pubDate>
+      
+      <guid>https://brunomcuesta.github.io/tags/hackthebox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Writeup</title>
+      <link>https://brunomcuesta.github.io/tags/writeup/</link>
+      <pubDate>Wed, 23 Jun 2021 13:23:07 -0300</pubDate>
+      
+      <guid>https://brunomcuesta.github.io/tags/writeup/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

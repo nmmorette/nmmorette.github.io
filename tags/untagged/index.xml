@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Untagged on Haderach</title>
+    <link>https://brunomcuesta.github.io/tags/untagged/</link>
+    <description>Recent content in Untagged on Haderach</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sat, 26 Sep 2020 13:59:56 -0300</lastBuildDate>
+    
+	<atom:link href="https://brunomcuesta.github.io/tags/untagged/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Primeiro Post</title>
+      <link>https://brunomcuesta.github.io/posts/2020/09/primeiro-post/</link>
+      <pubDate>Sat, 26 Sep 2020 13:59:56 -0300</pubDate>
+      
+      <guid>https://brunomcuesta.github.io/posts/2020/09/primeiro-post/</guid>
+      <description>Primeiro post!</description>
+    </item>
+    
+  </channel>
+</rss>
