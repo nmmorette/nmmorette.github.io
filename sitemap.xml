@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <sitemap>
-    <loc>http://nmmorette.github.io/en/sitemap.xml</loc>
-    
-      <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>http://nmmorette.github.io/fr/sitemap.xml</loc>
-    
-      <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    
-  </sitemap>
-  
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://example.org/posts/my-first-post/</loc>
+    <lastmod>2021-06-30T13:54:55-03:00</lastmod>
+  </url><url>
+    <loc>http://example.org/</loc>
+    <lastmod>2021-06-30T13:54:55-03:00</lastmod>
+  </url><url>
+    <loc>http://example.org/posts/</loc>
+    <lastmod>2021-06-30T13:54:55-03:00</lastmod>
+  </url><url>
+    <loc>http://example.org/tags/</loc>
+    <lastmod>2021-06-30T13:54:55-03:00</lastmod>
+  </url><url>
+    <loc>http://example.org/tags/untagged/</loc>
+    <lastmod>2021-06-30T13:54:55-03:00</lastmod>
+  </url><url>
+    <loc>http://example.org/categories/</loc>
+  </url>
+</urlset>
