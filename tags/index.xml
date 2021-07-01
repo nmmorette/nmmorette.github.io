@@ -6,13 +6,40 @@
     <description>Recent content in Tags on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Jun 2021 13:54:55 -0300</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>untagged</title>
-      <link>https://nmmorette.github.io/tags/untagged/</link>
-      <pubDate>Wed, 30 Jun 2021 13:54:55 -0300</pubDate>
+      <title>dev</title>
+      <link>https://nmmorette.github.io/tags/dev/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://nmmorette.github.io/tags/untagged/</guid>
+      <guid>https://nmmorette.github.io/tags/dev/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>https://nmmorette.github.io/tags/github/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>helloworld</title>
+      <link>https://nmmorette.github.io/tags/helloworld/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/helloworld/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://nmmorette.github.io/tags/hugo/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     
@@ -40,15 +67,6 @@
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/tags/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hugo</title>
-      <link>https://nmmorette.github.io/tags/hugo/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     
