@@ -38,16 +38,6 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
-      <title>Création d&#39;un nouveau thème</title>
-      <link>https://nmmorette.github.io/posts/2014/09/cr%C3%A9ation-dun-nouveau-th%C3%A8me/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/posts/2014/09/cr%C3%A9ation-dun-nouveau-th%C3%A8me/</guid>
-      <description>Introduction Ce tutoriel vous montrera comment créer un thème simple pour Hugo. Je suppose que vous êtes familier avec HTML, la ligne de commande bash, et que vous êtes à l&amp;rsquo;aise avec Markdown pour formater le contenu. Je vais expliquer comment Hugo utilise des modèles et comment vous pouvez organiser vos modèles pour créer un thème. Je ne couvrirai pas l&amp;rsquo;utilisation de CSS pour styliser votre thème.
-Nous allons commencer par créer un nouveau site avec un modèle très basique.</description>
-    </item>
-    
-    <item>
       <title>About</title>
       <link>https://nmmorette.github.io/about/</link>
       <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
@@ -81,22 +71,6 @@ This document is a brief primer on using Go templates.</description>
     </item>
     
     <item>
-      <title>Débuter avec Hugo</title>
-      <link>https://nmmorette.github.io/posts/2014/04/d%C3%A9buter-avec-hugo/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/posts/2014/04/d%C3%A9buter-avec-hugo/</guid>
-      <description>&lt;h2 id=&#34;étape-1-installer-hugo&#34;&gt;Étape 1. Installer Hugo&lt;/h2&gt;
-&lt;p&gt;Allez sur la page de téléchargements de
-&lt;a href=&#34;https://github.com/spf13/hugo/releases&#34;&gt;hugo&lt;/a&gt; et téléchargez la version
-appropriée à votre système d&amp;rsquo;exploitation et votre architecture.&lt;/p&gt;
-&lt;p&gt;Sauvegardez le fichier téléchargé à un endroit précis, afin de l&amp;rsquo;utiliser dans
-l&amp;rsquo;étape suivante.&lt;/p&gt;
-&lt;p&gt;Des informations plus complètes sont disponibles sur la page
-&lt;a href=&#34;https://nmmorette.github.io/overview/installing/&#34;&gt;installing hugo&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Getting Started with Hugo</title>
       <link>https://nmmorette.github.io/posts/2014/04/getting-started-with-hugo/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
@@ -108,16 +82,6 @@ More complete instructions are available at Install Hugo
 Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
 Follow the following steps:
  Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
-    </item>
-    
-    <item>
-      <title>Introduction aux modèles (Hu)go</title>
-      <link>https://nmmorette.github.io/posts/2014/04/introduction-aux-mod%C3%A8les-hugo/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/posts/2014/04/introduction-aux-mod%C3%A8les-hugo/</guid>
-      <description>Hugo utilise l&amp;rsquo;excellente librairie go html/template pour son moteur de modèles. c&amp;rsquo;est un moteur extrêmement léger qui offre un très petit nombre de fonctions logiques. À notre expérience, c&amp;rsquo;est juste ce qu&amp;rsquo;il faut pour créer un bon site web statique. Si vous avez déjà utilisé d&amp;rsquo;autre moteurs de modèles pour différents langages ou frameworks, vous allez retrouver beaucoup de similitudes avec les modèles go.
-Ce document est une introduction sur l&amp;rsquo;utilisation de Go templates.</description>
     </item>
     
   </channel>

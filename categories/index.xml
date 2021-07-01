@@ -6,16 +6,7 @@
     <description>Recent content in Categories on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hugo</title>
-      <link>https://nmmorette.github.io/categories/hugo/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/categories/hugo/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Development</title>
       <link>https://nmmorette.github.io/categories/development/</link>
@@ -26,29 +17,11 @@
     </item>
     
     <item>
-      <title>Go</title>
-      <link>https://nmmorette.github.io/categories/go/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/categories/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>golang</title>
       <link>https://nmmorette.github.io/categories/golang/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/categories/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jekyll</title>
-      <link>https://nmmorette.github.io/categories/jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/categories/jekyll/</guid>
       <description></description>
     </item>
     
