@@ -5,16 +5,6 @@
     <link>https://nmmorette.github.io/series/</link>
     <description>Recent content in Series on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 01 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/series/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>howtodo</title>
-      <link>https://nmmorette.github.io/series/howtodo/</link>
-      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/series/howtodo/</guid>
-      <description></description>
-    </item>
-    
+    <language>en-us</language><atom:link href="https://nmmorette.github.io/series/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

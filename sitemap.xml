@@ -5,9 +5,6 @@
     <loc>https://nmmorette.github.io/posts/2021/07/hello-world/</loc>
     <lastmod>2021-07-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nmmorette.github.io/posts/2021/07/static-web-page-with-hugo-and-git-hub/</loc>
-    <lastmod>2021-07-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nmmorette.github.io/tags/dev/</loc>
     <lastmod>2021-07-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -17,9 +14,6 @@
     <loc>https://nmmorette.github.io/tags/helloworld/</loc>
     <lastmod>2021-07-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nmmorette.github.io/series/howtodo/</loc>
-    <lastmod>2021-07-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nmmorette.github.io/tags/hugo/</loc>
     <lastmod>2021-07-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -27,9 +21,6 @@
     <lastmod>2021-07-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nmmorette.github.io/posts/</loc>
-    <lastmod>2021-07-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nmmorette.github.io/series/</loc>
     <lastmod>2021-07-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nmmorette.github.io/tags/</loc>
@@ -42,5 +33,7 @@
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nmmorette.github.io/categories/</loc>
+  </url><url>
+    <loc>https://nmmorette.github.io/series/</loc>
   </url>
 </urlset>
