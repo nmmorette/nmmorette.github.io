@@ -8,16 +8,14 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 01 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/reversing/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Write up The Cod Caper Room</title>
-      <link>https://nmmorette.github.io/posts/2021/07/write-up-the-cod-caper-room/</link>
+      <title>TryHackMe - The Cod Caper Writeup</title>
+      <link>https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-writeup/</link>
       <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://nmmorette.github.io/posts/2021/07/write-up-the-cod-caper-room/</guid>
-      <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
-More complete instructions are available at Install Hugo
-Step 2. Configure your Git Hub Pages You need a github account for this step.
-Step 3 Choose a theme In Hugo theme pages choose your favorite theme and download to your computer. Unzip the files into the hugo default theme folder: ./Sites/YOURSITE/Themes
-Then copy the content of config.</description>
+      <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-writeup/</guid>
+      <description>Step 1. Intro This is a write up for &amp;ldquo;The Cod Caper&amp;rdquo; room at Try Hack Me.
+Room&amp;rsquo;s intro note:
+&amp;ldquo;Hello there my name is Pingu. I&amp;rsquo;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&amp;rsquo;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server.</description>
     </item>
     
   </channel>
