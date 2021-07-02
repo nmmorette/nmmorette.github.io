@@ -57,22 +57,22 @@ Unzip the files into the hugo default theme folder: ./Sites/YOURSITE/Themes</p>
             <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-writeup/</guid>
             <description>Step 1. Intro This is a write up for &amp;ldquo;The Cod Caper&amp;rdquo; room at Try Hack Me.
 Room&amp;rsquo;s intro note:
-&amp;ldquo;Hello there my name is Pingu. I&amp;rsquo;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&amp;rsquo;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server.</description>
+Hello there my name is Pingu. I&amp;rsquo;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&amp;rsquo;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server.</description>
             <content type="html"><![CDATA[<p><img src="/images/thecodcaper.jpg" alt="banner image 🤦‍♂️"></p>
 <h2 id="step-1-intro">Step 1. Intro</h2>
 <p>This is a write up for &ldquo;The Cod Caper&rdquo; room at Try Hack Me.</p>
 <p>Room&rsquo;s intro note:</p>
-<p>&ldquo;Hello there my name is Pingu. I&rsquo;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&rsquo;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server. As all penguins are natural experts in penetration testing, I figured I could get the key myself! Unfortunately he banned every IP from Antarctica, so I am unable to do anything to the server. Therefore I call upon you my dear ally to help me get my fish back! Naturally I&rsquo;ll be guiding you through the process.</p>
+<p><em>Hello there my name is Pingu. I&rsquo;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&rsquo;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server. As all penguins are natural experts in penetration testing, I figured I could get the key myself! Unfortunately he banned every IP from Antarctica, so I am unable to do anything to the server. Therefore I call upon you my dear ally to help me get my fish back! Naturally I&rsquo;ll be guiding you through the process.</em></p>
 <h2 id="step-2-host-enumeration">Step 2. Host Enumeration</h2>
 <p>First of all let&rsquo;s nmap the machine IP.</p>
 <p>We&rsquo;re going to scan port 1 to 1000 as suggested in the task.</p>
 <pre><code> nmap -v -A -sC -p 1-100  10.10.41.158
 </code></pre>
 <p>Flags used:</p>
-<p>“-p 1–1000” = Used to specify which port to analyze, can also be used to specify a range of ports.</p>
+<!-- raw HTML omitted -->
 <p>“-sC” = Runs default scripts on the port, useful for doing basic analysis on the service running on a port.</p>
 <p>“-A” = Aggressive mode, go all out and try to get as much information as possible.</p>
-<p>We found 2 open ports, just pay attention in the nmap results, all answers for the first task are there.</p>
+<!-- raw HTML omitted -->
 <p><img src="/images/nmap.jpg" alt="nmap 🤦‍♂️"></p>
 <h2 id="step-3-web-enumeration">Step 3. Web Enumeration</h2>
 <p>Let&rsquo;s search for files and directories.</p>
@@ -136,23 +136,25 @@ find / -name pass* 2&gt;/dev/null</p>
 </code></pre>
 <p>After that, run linenum.sh</p>
 <p>Go to SUID files section and find the answer to task 6 only question.</p>
-<p><img src="/images/thecodcaper/suid.jpg" alt="ssh 🤦‍♂️"></p>
+<p><img src="/images/thecodcaper/su.JPG" alt="ssh 🤦‍♂️"></p>
 <h2 id="step-7-pwndbg">Step 7. pwndbg</h2>
 <p>We found an interesting file in the step above,  moreover as explained in Tryhackme this file expects 32 characters in the input now we used “gdb” to analyze.</p>
 <pre><code> gdb /opt/secret/root
 </code></pre>
 <p><img src="/images/thecodcaper/gbd.jpg" alt="suid 🤦‍♂️"></p>
-<p>The pwndbg has successfully been initialized. The next phase is to test if anything happens when we send more then 32 characters.
-Type:
-r &lt; &lt;(cyclic 50)</p>
+<p>The pwndbg has successfully been initialized. The next phase is to test if anything happens when we send more then 32 characters.</p>
+<p>Type:</p>
+<pre><code> r &lt; &lt;(cyclic 50)
+</code></pre>
 <p>That command runs the program and provides 50 characters worth of &ldquo;cyclic&rdquo; input.
 After running this command you will see something like this:</p>
 <p><img src="/images/thecodcaper/secret.jpg" alt="suid 🤦‍♂️"></p>
-<p>Now this is where some knowledge of assembly helps. It seems that in this case we&rsquo;re able to overwrite EIP, which is known as the instruction pointer. The instruction pointer tells the program which bit of memory to execute next, which in an ideal case would have the program run normally. However, since we&rsquo;re able to overwrite it, we can theoretically execute any part of the program at any time.</p>
+<p><em>Now this is where some knowledge of assembly helps. It seems that in this case we&rsquo;re able to overwrite EIP, which is known as the instruction pointer. The instruction pointer tells the program which bit of memory to execute next, which in an ideal case would have the program run normally. However, since we&rsquo;re able to overwrite it, we can theoretically execute any part of the program at any time.</em></p>
 <p>Recall the shell function from the source code, if we can overwrite EIP to point to the shell function, we can cause it to execute. This is also where the benefits of cyclic input show themselves. Recall that cyclic input goes in 4 character/byte sequences, meaning we&rsquo;re able to calculate exactly how many characters we need to provide before we can overwrite EIP.</p>
-<p>Luckily cyclic provides this functionality with the -l flag, running cyclic -l {fault address} will tell us exactly how many characters we need to provide we can overwrite EIP.</p>
-<p>Running:
-cyclic -l 0x6161616c</p>
+<p>Luckily cyclic provides this functionality with the -l flag, running cyclic -l {fault address} will tell us exactly how many characters we need to provide we can overwrite EIP.&quot;</p>
+<p>Running:</p>
+<pre><code> cyclic -l 0x6161616c 
+</code></pre>
 <p>Outputs 44, meaning we can overwrite EIP once we provide 44 characters of input.</p>
 <p>That&rsquo;s all we needed for pre-explotation!</p>
 <h2 id="step-8-binary-exploitation-manually--9-the-pwntools-way">Step 8. Binary-Exploitation: Manually | 9. The pwntools way</h2>
@@ -169,13 +171,14 @@ python -c &lsquo;print &ldquo;A&rdquo;*44 + &ldquo;\xcb\x84\x04\x08&rdquo;&rsquo
 <p>Save the hash!</p>
 <h2 id="step-10-finish-the-job">Step 10. Finish the job</h2>
 <p>Finally the last task. For this last one we need two things: the hash we get above and a little bit of pacient.</p>
-<p>&ldquo;Luckily hashcat supports cracking linux password hashes. You can find a list of hashcat modes <a href="https://hashcat.net/wiki/doku.php?id=example_hashes">here</a> and <a href="https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt">rockyou</a>.txt(a popular wordlist) here (if you don&rsquo;t already have it on your system)&rdquo;
-hashcat -m 1800 -a 0 pingu.hash /usr/share/wordlists/rockyou.txt</p>
-<p><img src="/images/thecodcaper/5.gif" alt="waiting🤦‍♂️">
-Flags:</p>
+<p>&ldquo;Luckily hashcat supports cracking linux password hashes. You can find a list of hashcat modes <a href="https://hashcat.net/wiki/doku.php?id=example_hashes">here</a> and <a href="https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt">rockyou</a>.txt(a popular wordlist) here (if you don&rsquo;t already have it on your system)&rdquo;</p>
+<pre><code>  hashcat -m 1800 -a 0 pingu.hash /usr/share/wordlists/rockyou.txt
+</code></pre>
+<p><img src="/images/thecodcaper/5.gif" alt="waiting🤦‍♂️"></p>
+<p>Flags:</p>
 <p>&ldquo;-a&rdquo; = Specify attack mode,attack modes can be found in the man page.
 &ldquo;-m&rdquo; = Specifies which mode to use, refer back to the list of modes</p>
-<p><img src="/images/thecodcaper/finalpass.gif" alt="pass🤦‍♂️"></p>
+<p><img src="/images/thecodcaper/finalpass.jpg" alt="pass🤦‍♂️"></p>
 <p>We did it!</p>
 <p>THM suggestion reading:</p>
 <p><a href="http://docs.pwntools.com/en/stable/">http://docs.pwntools.com/en/stable/</a></p>
