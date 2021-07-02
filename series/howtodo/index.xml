@@ -6,13 +6,13 @@
     <description>Recent content in howtodo on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/series/howtodo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/series/howtodo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Static web page with Hugo and Git Hub</title>
-      <link>https://nmmorette.github.io/posts/2021/07/static-web-page-with-hugo-and-git-hub/</link>
-      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      <link>https://nmmorette.github.io/posts/2021/06/static-web-page-with-hugo-and-git-hub/</link>
+      <pubDate>Wed, 30 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://nmmorette.github.io/posts/2021/07/static-web-page-with-hugo-and-git-hub/</guid>
+      <guid>https://nmmorette.github.io/posts/2021/06/static-web-page-with-hugo-and-git-hub/</guid>
       <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
 More complete instructions are available at Install Hugo
 Step 2. Configure your Git Hub Pages You need a github account for this step.

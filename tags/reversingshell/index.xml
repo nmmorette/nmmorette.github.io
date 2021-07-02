@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>pentest on Natan Maia Morette</title>
-    <link>https://nmmorette.github.io/tags/pentest/</link>
-    <description>Recent content in pentest on Natan Maia Morette</description>
+    <title>reversingshell on Natan Maia Morette</title>
+    <link>https://nmmorette.github.io/tags/reversingshell/</link>
+    <description>Recent content in reversingshell on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/pentest/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/reversingshell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>THM - The Cod Caper Write Up</title>
       <link>https://nmmorette.github.io/posts/2021/07/thm-the-cod-caper-write-up/</link>

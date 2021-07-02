@@ -8,15 +8,6 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 01 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/series/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>howtodo</title>
-      <link>https://nmmorette.github.io/series/howtodo/</link>
-      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/series/howtodo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>tryhackme</title>
       <link>https://nmmorette.github.io/series/tryhackme/</link>
       <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
@@ -31,6 +22,15 @@
       <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/series/writeup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>howtodo</title>
+      <link>https://nmmorette.github.io/series/howtodo/</link>
+      <pubDate>Wed, 30 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/series/howtodo/</guid>
       <description></description>
     </item>
     
