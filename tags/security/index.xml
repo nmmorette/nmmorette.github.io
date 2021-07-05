@@ -6,14 +6,56 @@
     <description>Recent content in security on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DCPT - Semana 05 - Information Gathering - Business (pt-br)</title>
+      <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-business-pt-br/</link>
+      <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-business-pt-br/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Não se sabote, não venha aqui somente em busca das respostas.
+Dica de ouro: anote tudo, cada comando e resultado. Isso evita retralho, além de documentar seus passos para consultas futuras.
+. Lab 01 Utilizando o Hunter Faça cadastro no site Hunter para conseguir visualizar os resultados.
+Depois basta digitar o domínio no campo de busca:</description>
+    </item>
+    
+    <item>
+      <title>DCPT - Semana 05 - Information Gathering - Infra (pt-br)</title>
+      <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-infra-pt-br/</link>
+      <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-infra-pt-br/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Não se sabote, não venha aqui somente em busca das respostas.
+Lab 01 Lab 02 Lab 03 Lab 04 Lab 05 Lab 06 Lab 07 Lab 08 Lab 09 </description>
+    </item>
+    
+    <item>
+      <title>DCPT - Semana 05 - Information Gathering - Web (pt-br)</title>
+      <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-web-pt-br/</link>
+      <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-web-pt-br/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Não se sabote, não venha aqui somente em busca das respostas.
+Lab 01 Lab 02 Lab 03 Lab 04 Lab 05 Lab 06 Lab 07 Lab 08 Lab 09 </description>
+    </item>
+    
+    <item>
+      <title>DCPT - Semana 06 - OSINT (pt-br)</title>
+      <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-06-osint-pt-br/</link>
+      <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-06-osint-pt-br/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Não se sabote, não venha aqui somente em busca das respostas.
+1. Recon 2. Recon II 3. Recon III 4. OSINT 5. OSINT II 6. OSINT III 7. OSINT IV 8. OSINT V 9. OSINT VI 10. OSINT VII 11. OSINT VIII 12. OSINT IX 13. OSINT X 14. OSINT XI </description>
+    </item>
+    
     <item>
       <title>THM - The Cod Caper Write Up</title>
       <link>https://nmmorette.github.io/posts/2021/07/thm-the-cod-caper-write-up/</link>
       <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/posts/2021/07/thm-the-cod-caper-write-up/</guid>
-      <description>Step 1. Intro This is a write up for &amp;ldquo;The Cod Caper&amp;rdquo; room at Try Hack Me.
+      <description>Task 1. Intro This is a write up for &amp;ldquo;The Cod Caper&amp;rdquo; room at Try Hack Me.
 Room&amp;rsquo;s intro note:
 Hello there my name is Pingu. I&#39;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&#39;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server.</description>
     </item>

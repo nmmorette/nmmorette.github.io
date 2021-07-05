@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="map[name:Natan]">
-<meta name="description" content="Step 1. Intro This is a write up for &amp;ldquo;The Cod Caper&amp;rdquo; room at Try Hack Me.
+<meta name="description" content="Task 1. Intro This is a write up for &amp;ldquo;The Cod Caper&amp;rdquo; room at Try Hack Me.
 Room&amp;rsquo;s intro note:
 Hello there my name is Pingu. I&#39;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&#39;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server." />
 <meta name="keywords" content="DCPT,Pentest,CTF,Cybersecurity,RedTeam,TryhackMe,Hackthebox,certification, tryhackme, writeup, pentest, security, pwn, pwntools, reversingshell, THM, CTF" />
@@ -44,7 +44,7 @@ Room&amp;rsquo;s intro note:
 
 
 <meta itemprop="name" content="THM - The Cod Caper Write Up">
-<meta itemprop="description" content="Step 1. Intro This is a write up for &ldquo;The Cod Caper&rdquo; room at Try Hack Me.
+<meta itemprop="description" content="Task 1. Intro This is a write up for &ldquo;The Cod Caper&rdquo; room at Try Hack Me.
 Room&rsquo;s intro note:
 Hello there my name is Pingu. I&#39;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&#39;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server."><meta itemprop="datePublished" content="2021-07-01T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-07-01T00:00:00&#43;00:00" />
@@ -54,7 +54,7 @@ Room&rsquo;s intro note:
 <meta name="twitter:image" content="https://nmmorette.github.io"/>
 
 <meta name="twitter:title" content="THM - The Cod Caper Write Up"/>
-<meta name="twitter:description" content="Step 1. Intro This is a write up for &ldquo;The Cod Caper&rdquo; room at Try Hack Me.
+<meta name="twitter:description" content="Task 1. Intro This is a write up for &ldquo;The Cod Caper&rdquo; room at Try Hack Me.
 Room&rsquo;s intro note:
 Hello there my name is Pingu. I&#39;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&#39;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server."/>
 
@@ -62,14 +62,14 @@ Room&rsquo;s intro note:
 
 
     <meta property="og:title" content="THM - The Cod Caper Write Up" />
-<meta property="og:description" content="Step 1. Intro This is a write up for &ldquo;The Cod Caper&rdquo; room at Try Hack Me.
+<meta property="og:description" content="Task 1. Intro This is a write up for &ldquo;The Cod Caper&rdquo; room at Try Hack Me.
 Room&rsquo;s intro note:
 Hello there my name is Pingu. I&#39;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&#39;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nmmorette.github.io/posts/2021/07/thm-the-cod-caper-write-up/" /><meta property="og:image" content="https://nmmorette.github.io"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-07-01T00:00:00&#43;00:00" />
 <meta property="article:modified_time" content="2021-07-01T00:00:00&#43;00:00" />
-
+<meta property="og:see_also" content="https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-business-pt-br/" /><meta property="og:see_also" content="https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-infra-pt-br/" /><meta property="og:see_also" content="https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-web-pt-br/" /><meta property="og:see_also" content="https://nmmorette.github.io/posts/2021/07/dcpt-semana-06-osint-pt-br/" />
 
 
 
@@ -169,7 +169,7 @@ Room&rsquo;s intro note:
     <img src="https://nmmorette.github.io/images/thecodcaper/novo.jpg"  class="center"  style="border-radius: 10px;"  />
 
 
-<h2 id="step-1-intro">Step 1. Intro</h2>
+<h2 id="task-1-intro">Task 1. Intro</h2>
 <p>This is a write up for &ldquo;The Cod Caper&rdquo; <a href="https://tryhackme.com/room/thecodcaper">room</a> at Try Hack Me.</p>
 <p>Room&rsquo;s intro note:</p>
 
@@ -180,7 +180,7 @@ Room&rsquo;s intro note:
 Hello there my name is Pingu. I've come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn't eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server. As all penguins are natural experts in penetration testing, I figured I could get the key myself! Unfortunately he banned every IP from Antarctica, so I am unable to do anything to the server. Therefore I call upon you my dear ally to help me get my fish back! Naturally I'll be guiding you through the process.
 </blockquote>
 
-<h2 id="step-2-host-enumeration">Step 2. Host Enumeration</h2>
+<h2 id="task-2-host-enumeration">Task 2. Host Enumeration</h2>
 <p>First of all let&rsquo;s <code>nmap</code> the machine IP.</p>
 <p>We&rsquo;re going to scan port 1 to 1000 as suggested in the task.</p>
 <pre><code class="language-cli" data-lang="cli"> nmap -v -A -sC -p 1-100  10.10.41.158
@@ -189,7 +189,7 @@ Hello there my name is Pingu. I've come here to put in a request to get my fish 
 <p><code>-sC</code> = Runs default scripts on the port, useful for doing basic analysis on the service running on a port.</p>
 <p><code>-A</code> = Aggressive mode, go all out and try to get as much information as possible.</p>
 <p>We found 2 open ports, just pay attention in the nmap results, all answers for the first task are there.</p>
-<h2 id="step-3-web-enumeration">Step 3. Web Enumeration</h2>
+<h2 id="task-3-web-enumeration">Task 3. Web Enumeration</h2>
 <p>Let&rsquo;s search for files and directories.</p>
 <p>You may use <code>gobuster</code> for that, but I particularly went with my bash script. You can download my script <a href="http:/https://github.com/nmmorette/bash-scripts/blob/25f02fa424136f0d23090072a773892e19c5c5b2/webrecon.sh/">here</a>
 Edit the file with a wordlist of your preference. I suggest the big.txt from <code>dirb</code>.</p>
@@ -207,7 +207,7 @@ Edit the file with a wordlist of your preference. I suggest the big.txt from <co
     <img src="https://nmmorette.github.io/images/thecodcaper/admin.JPG"  class="center"  style="border-radius: 8px;"  />
 
 
-<h2 id="step-4-web-exploitation">Step 4. Web Exploitation</h2>
+<h2 id="task-4-web-exploitation">Task 4. Web Exploitation</h2>
 <p>Now we have a administrator page but we don&rsquo;t have credentials to log in, then lets try some SQL injection using the  <code>sqlmap</code>.</p>
 
     <img src="https://nmmorette.github.io/images/thecodcaper/sql.jpg"  class="center"  style="border-radius: 8px;"  />
@@ -228,7 +228,7 @@ Edit the file with a wordlist of your preference. I suggest the big.txt from <co
     <img src="https://nmmorette.github.io/images/thecodcaper/run.jpg"  class="center"  style="border-radius: 8px;"  />
 
 
-<h2 id="step-5-command-execution">Step 5. Command Execution</h2>
+<h2 id="task-5-command-execution">Task 5. Command Execution</h2>
 <p>Since we have a form to run commands, let&rsquo;s run some basic command as <code>ls</code></p>
 <p>It&rsquo;s working, we have the result:</p>
 
@@ -263,7 +263,7 @@ Net Cat will probaly works too, since the intro of that particular task told us 
 <pre><code class="language-cli" data-lang="cli">    find / -name pass* 2&gt;/dev/null
 </code></pre><p>Take a good look at the results and find the file with user&rsquo;s password. 
 You could also search for a <code>ssh</code> key file.</p>
-<h2 id="step-6-linenum">Step 6. LinEnum</h2>
+<h2 id="task-6-linenum">Task 6. LinEnum</h2>
 <p>We have a user/pass then we should <code>ssh</code> the machine.</p>
 
     <img src="https://nmmorette.github.io/images/thecodcaper/ssh.jpg"  class="center"  style="border-radius: 8px;"  />
@@ -286,7 +286,7 @@ LinEnum is a bash script that searches for possible ways to priv esc. It is incr
     <img src="https://nmmorette.github.io/images/thecodcaper/su.JPG"  class="center"  style="border-radius: 8px;"  />
 
 
-<h2 id="step-7-pwndbg">Step 7. pwndbg</h2>
+<h2 id="task-7-pwndbg">Task 7. pwndbg</h2>
 <p>We found an interesting file in the step above, moreover as explained in Tryhackme,this file expects 32 characters in the input now we used <code>gdb</code> to analyze.</p>
 <pre><code class="language-cli" data-lang="cli">   gdb /opt/secret/root
 </code></pre>
@@ -315,8 +315,8 @@ Luckily cyclic provides this functionality with the -l flag, running <code>cycli
 <pre><code class="language-pwndbg" data-lang="pwndbg">     cyclic -l 0x6161616c 
 </code></pre><p>Outputs 44, meaning we can overwrite EIP once we provide 44 characters of input.</p>
 <p>That&rsquo;s all we needed for pre-explotation!</p>
-<h2 id="step-8-binary-exploitation-manually--9-the-pwntools-way">Step 8. Binary-Exploitation: Manually | 9. The pwntools way</h2>
-<p>These two tasks lead us to the same result, we&rsquo;re going with step 8 pass in this write up, but feel free to try the pwntools way.</p>
+<h2 id="task-8-binary-exploitation-manually--9-the-pwntools-way">Task 8. Binary-Exploitation: Manually | 9. The pwntools way</h2>
+<p>These two steps lead us to the same result, we&rsquo;re going with step 8 pass in this write up, but feel free to try the pwntools way.</p>
 
 
 <blockquote>
@@ -344,7 +344,7 @@ We print 44 random characters(in this case A) and then our memory address in lit
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">      python <span style="color:#f92672">-</span>c <span style="color:#e6db74">&#39;print &#34;A&#34;*44 + &#34;</span><span style="color:#ae81ff">\xcb\x84\x04\x08</span><span style="color:#e6db74">&#34;&#39;</span> <span style="color:#f92672">|</span> <span style="color:#f92672">/</span>opt<span style="color:#f92672">/</span>secret<span style="color:#f92672">/</span>root
 </code></pre></div><p>Save the hash!</p>
-<h2 id="step-10-finish-the-job">Step 10. Finish the job</h2>
+<h2 id="task-10-finish-the-job">Task 10. Finish the job</h2>
 <p>Finally the last task. For this last one we need two things:</p>
 
 
