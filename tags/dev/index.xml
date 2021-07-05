@@ -30,14 +30,5 @@ Then copy the content of config.</description>
       <description>Created with Hugo/hello-friend-ng theme and GitHub pages.</description>
     </item>
     
-    <item>
-      <title>Hello World</title>
-      <link>https://nmmorette.github.io/posts/2021/06/hello-world/</link>
-      <pubDate>Fri, 25 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/posts/2021/06/hello-world/</guid>
-      <description>Created with Hugo/hello-friend-ng theme and GitHub pages.</description>
-    </item>
-    
   </channel>
 </rss>

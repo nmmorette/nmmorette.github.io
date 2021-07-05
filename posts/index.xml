@@ -9,211 +9,93 @@
         <atom:link href="https://nmmorette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>DCPT - Semana 05 - Information Gathering - Business (pt-br)</title>
-            <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-business-pt-br/</link>
+            <title>DCPT - Semana 06 - OSINT (pt-br)</title>
+            <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-06-osint-pt-br/</link>
             <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
             
-            <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-business-pt-br/</guid>
-            <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Dica de ouro: anote tudo, cada comando e resultado. Isso evita retralho, além de documentar seus passos para consultas futuras.
-. Lab 01 Utilizando o Hunter Faça cadastro no site Hunter para conseguir visualizar os resultados.
-Depois basta digitar o domínio no campo de busca:
-Utilizando o TheHarvester Caso ainda não tenha instalado, instale o theHarvester:</description>
-            <content type="html"><![CDATA[<h5 id="o-intuito-desse-post-não-é-dar-as-respostas-e-sim-documentar-os-passos-e-ferramentas-utilizadas">O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</h5>
-
-    <img src="/images/semana05-Business/banner.JPG"  class="center"  style="border-radius: 10px;"  />
+            <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-06-osint-pt-br/</guid>
+            <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Não se sabote, não venha aqui somente em busca das respostas.
+1. Recon 2. Recon II 3. Recon III 4. OSINT 5. OSINT II 6. OSINT III 7. OSINT IV 8. OSINT V 9. OSINT VI 10. OSINT VII 11. OSINT VIII 12. OSINT IX 13. OSINT X 14. OSINT XI </description>
+            <content type="html"><![CDATA[
+    <img src="/images/semana06/desec_pen.png"  class="center"  style="border-radius: 10px;"  />
 
 
-<p><strong>Dica de ouro:</strong> anote tudo, cada comando e resultado. Isso evita retralho, além de documentar seus passos para consultas futuras.</p>
-<h2 id="hahahugoshortcode-s1-hbhb-lab-01"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>. Lab 01</h2>
+<p>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. 
+Não se sabote, não venha aqui somente em busca das respostas.</p>
 
-    <img src="/images/semana05-Business/business.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/semana06.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
-<h3 id="utilizando-o-hunter">Utilizando o Hunter</h3>
-<p>Faça cadastro no site <a href="http://hunterio.">Hunter</a> para conseguir visualizar os resultados.</p>
-<p>Depois basta digitar o domínio no campo de busca:</p>
+<h2 id="1-recon">1. Recon</h2>
 
-    <img src="/images/semana05-Business/hunter.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/1.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
-<h4 id="utilizando-o--theharvester">Utilizando o  TheHarvester</h4>
-<p>Caso ainda não tenha instalado, instale o theHarvester:</p>
-<pre><code class="language-cli" data-lang="cli">apt install theharvester
-</code></pre><p>Fazendo a busca:</p>
-<pre><code class="language-cli" data-lang="cli">theHarvester -d businesscorp.com.br -l 100 -b google
-</code></pre>
-    <img src="/images/semana05-Business/harvester.JPG"  class="center"  style="border-radius: 10px;"  />
+<h2 id="2-recon-ii">2. Recon II</h2>
+
+    <img src="/images/semana06/2.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Flags</p>
-<p><code>-d</code> = pesquisa por domínio</p>
-<p><code>-l</code> = limite de busca</p>
-<p><code>-b</code> = indica o local da busca, nesse caso indicamos o google.</p>
-<p>Para outros &ldquo;sources&rdquo; de busca digite <code>theHarvester -h</code>, algumas fontes de dados precisam de configuração de api. 
-Essa configuração de api deve ser feita em <code>/etc/theHarvester/api-keys.yaml</code></p>
-<p>Colete os emails encontrados.</p>
-<details>
-  <summary>Resposta</summary>
-  <a href="mailto:camila@businesscorp.com.br">camila@businesscorp.com.br</a>,rogerio@businesscorp.com.br,ti@businesscorp.com.br
-</details>
-<h2 id="hahahugoshortcode-s6-hbhb-lab-02"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>. Lab 02</h2>
+<h2 id="3-recon-iii">3. Recon III</h2>
 
-    <img src="/images/semana05-Business/lab2.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/3.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Utilizando os operadores do google hacking, vamos buscar a key no domínio.</p>
-<p>Operadores google hacking:</p>
-<p><code>site:</code>= busca no site especificiado</p>
-<p><code>inurl:</code>=busca na url</p>
-<p><code>intitle:</code>=busca no título</p>
-<p><code>intext </code>= busca no texto</p>
-<p><code>filetype</code>= busca por tipo de arquivo</p>
-<p><code>ext</code>= busca por extensão de arquivo</p>
-<p><code>cache</code>= busca no cache</p>
-<p>Tente buscar por arquivos txt,php,doc e outras extensões. Além de buscar por arquivos com nomes específicos como: pass, senha, config, configuracao, admin etc.</p>
-<p>Vamos iniciar a busca utilizando os operadores <code>site</code>e o opertador <code>ext</code>para buscar por arquivos de texto no domínio.</p>
+<h2 id="4-osint">4. OSINT</h2>
 
-    <img src="/images/semana05-Business/google.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/4.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>O google retornou 1 resultado, ao abrir o site temos uma lista de diretórios configurados com &ldquo;Dissalow&rdquo; ou seja essas páginas não são indexadas pelo google, nossa key pode estar em um deles.</p>
-<p>Infelizmente ao consultar todos os caminhos, ainda não encontramos a key.</p>
-<p>Após algumas tentativas e utilizando os operadores corretos, foi possível encontrar o resultado esperado:</p>
+<h2 id="5-osint-ii">5. OSINT II</h2>
 
-    <img src="/images/semana05-Business/key.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/5.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Essa combinação foi uma das formas de obter a key, porém tratando-se de google hacking existem outras formas de conseguir encontrar a resposta desse lab.</p>
-<details>
-  <summary>Resposta</summary>
-  Gh4ck1ng9988299311
-</details>
-<h2 id="hahahugoshortcode-s11-hbhb---lab-03"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>.   Lab 03</h2>
+<h2 id="6-osint-iii">6. OSINT III</h2>
 
-    <img src="/images/semana05-Business/lab3.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/6.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Para encontrar essa key vamos utilizar o site <a href="https://archive.org/web/">Way Back Machine</a>, que basicamente é um repositório de cache de páginas web.</p>
-<p>Com as informações de páginas que já encontramos do alvo até agora, devemos buscar históricos e verificar o conteúdo para encontrar a key.</p>
+<h2 id="7-osint-iv">7. OSINT IV</h2>
 
-    <img src="/images/semana05-Business/waybackmachine.png"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>Não busque somente na página principal!</p>
-<details>
-  <summary>Resposta</summary>
-  c4ch3_1666277399911a
-</details>
-<h2 id="hahahugoshortcode-s15-hbhb-lab-04"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>. Lab 04</h2>
-
-    <img src="/images/semana05-Business/lab4.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/7.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Ainda utilizando o google hacking vamos buscar a key utlizando os operadores <code>site:trello.com</code>  e o operador <code>intext: businesscorp.com.br</code></p>
-<p>O Google retornou sete resultados, vamos encontrar a informação em um deles.</p>
-<details>
-  <summary>Resposta</summary>
-  123qweAm,webmin
-</details>
-<h2 id="hahahugoshortcode-s18-hbhb-lab-05"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>. Lab 05</h2>
+<h2 id="8-osint-v">8. OSINT V</h2>
 
-    <img src="/images/semana05-Business/lab5.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/8.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Usando os mesmos operadores do lab anterior, vamos setar a busca agora para o Pastebin e encontrar a iformação sensível.</p>
-<p>Infelizmente o resultado apresentado não é o que precisamos.</p>
+<h2 id="9-osint-vi">9. OSINT VI</h2>
 
-    <img src="/images/semana05-Business/pastebin.JPG"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>Olhando com mais detalhe ao link que encontramos no trello do lab anterior, é possível encontrar o link sensível para o Pastebin, olhe com atenção.</p>
-<details>
-  <summary>Resposta</summary>
-  <a href="mailto:camila@businesscorp.com.br">camila@businesscorp.com.br</a>,ca123456
-</details>
-<h2 id="hahahugoshortcode-s22-hbhblab-06"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>.Lab 06</h2>
-
-    <img src="/images/semana05-Business/lab6.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/9.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Para esse lab precisamos encontrar arquivos no site businesscorp.com.br, exitem muitas formas de fazer essa busca, porém como  estamos no módulo do google hacking, vamos utilizar os operadores de busca para encontrar esse arquivo.</p>
-<p>Com o operador <code>filetype</code> buscaremos por arquivos .pdf,.doc,.xls e outras extensões mais comuns para encontrar a resposta desse lab.</p>
+<h2 id="10-osint-vii">10. OSINT VII</h2>
 
-    <img src="/images/semana05-Business/pdf.JPG"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>A busca por arquivos .pdf não foi eficaz, porém se buscarmos por .doc encontraremos um arquivo:</p>
-
-    <img src="/images/semana05-Business/pdffile.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/10.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
-<details>
-  <summary>Resposta</summary>
-  RI.doc
-</details>
-<h2 id="hahahugoshortcode-s27-hbhb-lab-07"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>. Lab 07</h2>
+<h2 id="11-osint-viii">11. OSINT VIII</h2>
 
-    <img src="/images/semana05-Business/lab7.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/11.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Agora precisamos analisar os metadados do arquivo encontrado no lab anterior. <code>exiftool</code>.
-Execute:</p>
-<pre><code class="language-cli" data-lang="cli">exiftool NOME_DO_ARQUIVO
-</code></pre><p>Analise os dados retornados para encontrar o nome do usuário.</p>
-<details>
-  <summary>Resposta</summary>
-  rogerioseverovisk
-</details>
-<h2 id="hahahugoshortcode-s30-hbhb--lab-08"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>.  Lab 08</h2>
+<h2 id="12-osint-ix">12. OSINT IX</h2>
 
-    <img src="/images/semana05-Business/lab8.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/12.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Com o nome do colaborador em mãos, podemos buscar informações em redes sociais para encontrar a key desse lab.</p>
-<p>Como estamos tratando de um information gathering empresarial, podemos iniciar a busca no Linkedin.</p>
+<h2 id="13-osint-x">13. OSINT X</h2>
 
-    <img src="/images/semana05-Business/linkedin.JPG"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>Entrei no perfil do usuário procure pela Key e outras informações úteis.</p>
-<details>
-  <summary>Resposta</summary>
-  8812737123129912s
-</details>
-<h2 id="hahahugoshortcode-s34-hbhb-lab-09"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>. Lab 09</h2>
-
-    <img src="/images/semana05-Business/lab9.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/13.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Buscar por vagas de uma empresa na área de TI ou por perfis de profissionais da área de tecnologia da mesma é uma ótima forma de levantar  informações sobre tecnologias utilizadas. 
-Ainda analisando o perfil do usuário podemos ver uma postagem de uma vaga e nela encontramos uma lista de tecnologias utilizadas na empresa.
-Uma delas é a reposta que precisamos.</p>
+<h2 id="14-osint-xi">14. OSINT XI</h2>
 
-    <img src="/images/semana05-Business/opt.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/14.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
-<details>
-  <summary>Resposta</summary>
-  Netgate-pfSense-Firewall
-</details>
 ]]></content>
         </item>
         
@@ -475,17 +357,6 @@ appropriate version for your OS and architecture.</p>
 <p>Now  just upload the Public folder to your github.</p>
 <p>Tips for Hugo&rsquo;s markdown:</p>
 <p><a href="https://www.philipdaniels.com/blog/2016/hugo-blogging-cheatsheet/">https://www.philipdaniels.com/blog/2016/hugo-blogging-cheatsheet/</a></p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Hello World</title>
-            <link>https://nmmorette.github.io/posts/2021/06/hello-world/</link>
-            <pubDate>Fri, 25 Jun 2021 00:00:00 +0000</pubDate>
-            
-            <guid>https://nmmorette.github.io/posts/2021/06/hello-world/</guid>
-            <description>Created with Hugo/hello-friend-ng theme and GitHub pages.</description>
-            <content type="html"><![CDATA[<p>Created with Hugo/hello-friend-ng theme and GitHub pages.</p>
 ]]></content>
         </item>
         

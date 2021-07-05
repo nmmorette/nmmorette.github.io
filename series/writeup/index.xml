@@ -8,15 +8,13 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 02 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/series/writeup/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>DCPT - Semana 05 - Information Gathering - Business (pt-br)</title>
-      <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-business-pt-br/</link>
+      <title>DCPT - Semana 06 - OSINT (pt-br)</title>
+      <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-06-osint-pt-br/</link>
       <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-business-pt-br/</guid>
-      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Dica de ouro: anote tudo, cada comando e resultado. Isso evita retralho, além de documentar seus passos para consultas futuras.
-. Lab 01 Utilizando o Hunter Faça cadastro no site Hunter para conseguir visualizar os resultados.
-Depois basta digitar o domínio no campo de busca:
-Utilizando o TheHarvester Caso ainda não tenha instalado, instale o theHarvester:</description>
+      <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-06-osint-pt-br/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Não se sabote, não venha aqui somente em busca das respostas.
+1. Recon 2. Recon II 3. Recon III 4. OSINT 5. OSINT II 6. OSINT III 7. OSINT IV 8. OSINT V 9. OSINT VI 10. OSINT VII 11. OSINT VIII 12. OSINT IX 13. OSINT X 14. OSINT XI </description>
     </item>
     
     <item>
