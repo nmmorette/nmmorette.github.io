@@ -14,22 +14,17 @@
             <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
             
             <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-business-pt-br/</guid>
-            <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Não se sabote, não venha aqui somente em busca das respostas.
-Dica de ouro: anote tudo, cada comando e resultado. Isso evita retralho, além de documentar seus passos para consultas futuras.
+            <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Dica de ouro: anote tudo, cada comando e resultado. Isso evita retralho, além de documentar seus passos para consultas futuras.
 . Lab 01 Utilizando o Hunter Faça cadastro no site Hunter para conseguir visualizar os resultados.
-Depois basta digitar o domínio no campo de busca:</description>
-            <content type="html"><![CDATA[
-    <img src="/images/banners/desec_pen.png"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. 
-Não se sabote, não venha aqui somente em busca das respostas.</p>
+Depois basta digitar o domínio no campo de busca:
+Utilizando o TheHarvester Caso ainda não tenha instalado, instale o theHarvester:</description>
+            <content type="html"><![CDATA[<h5 id="o-intuito-desse-post-não-é-dar-as-respostas-e-sim-documentar-os-passos-e-ferramentas-utilizadas">O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</h5>
 
     <img src="/images/semana05-Business/banner.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <p><strong>Dica de ouro:</strong> anote tudo, cada comando e resultado. Isso evita retralho, além de documentar seus passos para consultas futuras.</p>
-<h2 id="hahahugoshortcode-s2-hbhb-lab-01"><figure>
+<h2 id="hahahugoshortcode-s1-hbhb-lab-01"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>. Lab 01</h2>
 
@@ -63,7 +58,7 @@ Essa configuração de api deve ser feita em <code>/etc/theHarvester/api-keys.ya
   <summary>Resposta</summary>
   <a href="mailto:camila@businesscorp.com.br">camila@businesscorp.com.br</a>,rogerio@businesscorp.com.br,ti@businesscorp.com.br
 </details>
-<h2 id="hahahugoshortcode-s7-hbhb-lab-02"><figure>
+<h2 id="hahahugoshortcode-s6-hbhb-lab-02"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>. Lab 02</h2>
 
@@ -97,25 +92,32 @@ Essa configuração de api deve ser feita em <code>/etc/theHarvester/api-keys.ya
   <summary>Resposta</summary>
   Gh4ck1ng9988299311
 </details>
-<h2 id="hahahugoshortcode-s12-hbhb---lab-03"><figure>
+<h2 id="hahahugoshortcode-s11-hbhb---lab-03"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>.   Lab 03</h2>
 
     <img src="/images/semana05-Business/lab3.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
-<h2 id="hahahugoshortcode-s14-hbhb-lab-04"><figure>
+<p>Para encontrar essa key vamos utilizar o site <a href="https://archive.org/web/">Way Back Machine</a>, que basicamente é um repositório de cache de páginas web.</p>
+<p>Com as informações de páginas que já encontramos do alvo até agora, devemos buscar históricos e verificar o conteúdo para encontrar a key.</p>
+
+    <img src="/images/semana05-Business/waybackmachine.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Não busque somente na página principal!</p>
+<details>
+  <summary>Resposta</summary>
+  c4ch3_1666277399911a
+</details>
+<h2 id="hahahugoshortcode-s15-hbhb-lab-04"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>. Lab 04</h2>
 
     <img src="/images/semana05-Business/lab4.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Ainda utilizando o google hacking vamos buscar a key utlizando os operadores <code>site:trello.com</code>  <code>trello.com</code> e o operador <code>intext: businesscorp.com.br</code></p>
-
-    <img src="/images/semana05-Business/trello.JPG"  class="center"  style="border-radius: 10px;"  />
-
-
+<p>Ainda utilizando o google hacking vamos buscar a key utlizando os operadores <code>site:trello.com</code>  e o operador <code>intext: businesscorp.com.br</code></p>
 <p>O Google retornou sete resultados, vamos encontrar a informação em um deles.</p>
 <details>
   <summary>Resposta</summary>
@@ -130,35 +132,24 @@ Essa configuração de api deve ser feita em <code>/etc/theHarvester/api-keys.ya
 
 <p>Usando os mesmos operadores do lab anterior, vamos setar a busca agora para o Pastebin e encontrar a iformação sensível.</p>
 <p>Infelizmente o resultado apresentado não é o que precisamos.</p>
-<p>Olhando com mais detalhe ao link do trello anterior, é possível encontrar o link sensível para o Pastebin, olhe com atenção.</p>
+
+    <img src="/images/semana05-Business/pastebin.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Olhando com mais detalhe ao link que encontramos no trello do lab anterior, é possível encontrar o link sensível para o Pastebin, olhe com atenção.</p>
 <details>
   <summary>Resposta</summary>
   <a href="mailto:camila@businesscorp.com.br">camila@businesscorp.com.br</a>,ca123456
 </details>
-<h2 id="hahahugoshortcode-s21-hbhblab-06"><figure>
+<h2 id="hahahugoshortcode-s22-hbhblab-06"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>.Lab 06</h2>
 
     <img src="/images/semana05-Business/lab6.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
-
-    <img src="/images/semana05-Business/pastebin.JPG"  class="center"  style="border-radius: 10px;"  />
-
-
-<details>
-  <summary>Resposta</summary>
-  RI.doc
-</details>
-<h2 id="hahahugoshortcode-s25-hbhb-lab-07"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>. Lab 07</h2>
-
-    <img src="/images/semana05-Business/lab7.JPG"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>Para esse lab precisamos encontrar arquivos no site businesscorp.com.br, exite muitas formas de vazer essa busca, porém partindo do principio que estamos no módulo do google hacking, vamos utilizar os operadores de busca para encontrar esse arquivo.</p>
-<p>Com o operador <code>filetype</code> buscaremos por arquivos .pdf,.doc,.xls e diversos outros para efetuar a análise dos metadados.</p>
+<p>Para esse lab precisamos encontrar arquivos no site businesscorp.com.br, exitem muitas formas de fazer essa busca, porém como  estamos no módulo do google hacking, vamos utilizar os operadores de busca para encontrar esse arquivo.</p>
+<p>Com o operador <code>filetype</code> buscaremos por arquivos .pdf,.doc,.xls e outras extensões mais comuns para encontrar a resposta desse lab.</p>
 
     <img src="/images/semana05-Business/pdf.JPG"  class="center"  style="border-radius: 10px;"  />
 
@@ -168,10 +159,26 @@ Essa configuração de api deve ser feita em <code>/etc/theHarvester/api-keys.ya
     <img src="/images/semana05-Business/pdffile.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Após fazer o download do arquivo, precisamos analisar os metadados para encontrar o nome do colaborador, informação que foi solicitada nessa questão, para isso utilizaremos o <code>exiftool</code>.</p>
-<p>Outra forma de conseguir essa informação é utilizando o script que foi ensinado em aula. 
-Dessa forma podemos automatizar a busca e resultados por metadados.</p>
-<h2 id="hahahugoshortcode-s29-hbhb--lab-08"><figure>
+<details>
+  <summary>Resposta</summary>
+  RI.doc
+</details>
+<h2 id="hahahugoshortcode-s27-hbhb-lab-07"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>. Lab 07</h2>
+
+    <img src="/images/semana05-Business/lab7.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Agora precisamos analisar os metadados do arquivo encontrado no lab anterior. <code>exiftool</code>.
+Execute:</p>
+<pre><code class="language-cli" data-lang="cli">exiftool NOME_DO_ARQUIVO
+</code></pre><p>Analise os dados retornados para encontrar o nome do usuário.</p>
+<details>
+  <summary>Resposta</summary>
+  rogerioseverovisk
+</details>
+<h2 id="hahahugoshortcode-s30-hbhb--lab-08"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>.  Lab 08</h2>
 
@@ -179,13 +186,34 @@ Dessa forma podemos automatizar a busca e resultados por metadados.</p>
 
 
 <p>Com o nome do colaborador em mãos, podemos buscar informações em redes sociais para encontrar a key desse lab.</p>
-<h2 id="hahahugoshortcode-s31-hbhb-lab-09"><figure>
+<p>Como estamos tratando de um information gathering empresarial, podemos iniciar a busca no Linkedin.</p>
+
+    <img src="/images/semana05-Business/linkedin.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Entrei no perfil do usuário procure pela Key e outras informações úteis.</p>
+<details>
+  <summary>Resposta</summary>
+  8812737123129912s
+</details>
+<h2 id="hahahugoshortcode-s34-hbhb-lab-09"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>. Lab 09</h2>
 
     <img src="/images/semana05-Business/lab9.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
+<p>Buscar por vagas de uma empresa na área de TI ou por perfis de profissionais da área de tecnologia da mesma é uma ótima forma de levantar  informações sobre tecnologias utilizadas. 
+Ainda analisando o perfil do usuário podemos ver uma postagem de uma vaga e nela encontramos uma lista de tecnologias utilizadas na empresa.
+Uma delas é a reposta que precisamos.</p>
+
+    <img src="/images/semana05-Business/opt.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<details>
+  <summary>Resposta</summary>
+  Netgate-pfSense-Firewall
+</details>
 ]]></content>
         </item>
         
