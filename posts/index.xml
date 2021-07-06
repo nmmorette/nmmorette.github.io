@@ -173,12 +173,80 @@ Essa configuração de api deve ser feita em <code>/etc/theHarvester/api-keys.ya
 <p>Agora precisamos analisar os metadados do arquivo encontrado no lab anterior. <code>exiftool</code>.
 Execute:</p>
 <pre><code class="language-cli" data-lang="cli">exiftool NOME_DO_ARQUIVO
-</code></pre><p>Analise os dados retornados para encontrar o nome do usuário.</p>
-<details>
+</code></pre><p>Verifique os dados retornados para encontrar o nome do usuário.</p>
+<p>Além dessa forma, podemos utilizar o script que foi demostrado em aula.
+O que esse script faz é exatamente uma busca em um site por um tipo de arquivo, utilizando os operadores do google.</p>
+<p>Exemplo:</p>
+<pre><code class="language-cli" data-lang="cli">.\metafind.sh businesscorp.com.br txt
+</code></pre><p>Resultado da busca:</p>
+
+    <img src="/images/semana05-Business/metafindsh.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Script <a href="https://github.com/nmmorette/bash-scripts/blob/main/metafind.sh">.\metafind.sh</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">  // <span style="color:#75715e">#!/bin/bash</span>
+<span style="color:#75715e">#Metafind search, download based on Google Dorcking</span>
+<span style="color:#75715e">#</span>
+
+export RED<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;\033[0;31m&#39;</span>
+export GREEN<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;\u001b[32;1m&#39;</span> 
+export NC<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;\033[0m&#39;</span>
+export Y<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;\u001b[33m&#39;</span> 
+
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">]</span> &amp; <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$2<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">]</span>
+<span style="color:#66d9ef">then</span>
+	echo -e <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>RED<span style="color:#e6db74">}</span><span style="color:#e6db74">=================================================&#34;</span>
+	echo -e <span style="color:#e6db74">&#34; Sintax: ./metafind www.site.com filextention&#34;</span>
+	echo -e <span style="color:#e6db74">&#34;Example ./metafind www.tesla.com.br pdf&#34;</span>
+	echo -e <span style="color:#e6db74">&#34;=================================================&#34;</span><span style="color:#e6db74">${</span>NC<span style="color:#e6db74">}</span>
+<span style="color:#66d9ef">else</span>
+	
+	echo -e <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>GREEN<span style="color:#e6db74">}</span><span style="color:#e6db74">Start search...&#34;</span><span style="color:#e6db74">${</span>NC<span style="color:#e6db74">}</span>
+<span style="color:#75715e">#Simple loading status</span>
+	echo -ne <span style="color:#e6db74">${</span>GREEN<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;#####                     (33%)\r&#39;</span>
+
+	sleep <span style="color:#ae81ff">1</span>
+
+	echo -ne <span style="color:#e6db74">&#39;#############             (66%)\r&#39;</span>
+
+	sleep <span style="color:#ae81ff">1</span>
+
+	echo -ne <span style="color:#e6db74">&#39;#######################   (100%)\r&#39;</span><span style="color:#e6db74">${</span>NC<span style="color:#e6db74">}</span>
+
+	echo -ne <span style="color:#e6db74">&#39;\n&#39;</span>
+<span style="color:#75715e"># End of loading status</span>
+
+
+	lynx --dump <span style="color:#e6db74">&#34;https://google.com/search?&amp;q=site:</span>$1<span style="color:#e6db74">+ext:</span>$2<span style="color:#e6db74">&#34;</span> | grep <span style="color:#e6db74">&#34;.</span>$2<span style="color:#e6db74">&#34;</span> | cut -d <span style="color:#e6db74">&#34;=&#34;</span> -f2 | egrep -v <span style="color:#e6db74">&#34;site|google&#34;</span> | sed <span style="color:#e6db74">&#39;s/...$//&#39;</span> &gt; temp 
+      	                           
+echo -e <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>Y<span style="color:#e6db74">}</span><span style="color:#e6db74">==================================================&#34;</span>
+echo -e <span style="color:#e6db74">&#34;=============File URL ==============================&#34;</span>
+echo -e <span style="color:#e6db74">&#34;======================================================&#34;</span><span style="color:#e6db74">${</span>NC<span style="color:#e6db74">}</span>
+cat temp 
+
+<span style="color:#66d9ef">fi</span>                        
+
+
+<span style="color:#66d9ef">for</span> url in <span style="color:#66d9ef">$(</span>cat temp<span style="color:#66d9ef">)</span>;<span style="color:#66d9ef">do</span> wget -q $url;<span style="color:#66d9ef">done</span>
+echo -e <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>GREEN<span style="color:#e6db74">}</span><span style="color:#e6db74">Download files&#34;</span>
+
+echo -ne <span style="color:#e6db74">&#39;#####                     (33%)\r&#39;</span>
+sleep <span style="color:#ae81ff">1</span>
+echo -ne <span style="color:#e6db74">&#39;#############             (66%)\r&#39;</span>
+sleep <span style="color:#ae81ff">1</span>
+echo -ne <span style="color:#e6db74">&#39;#######################   (100%)\r&#39;</span><span style="color:#e6db74">${</span>NC<span style="color:#e6db74">}</span>
+echo -ne <span style="color:#e6db74">&#39;\n&#39;</span>
+
+echo -e <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>RED<span style="color:#e6db74">}</span><span style="color:#e6db74">################################################&#34;</span>
+echo -e <span style="color:#e6db74">&#34; Complete File INFO:&#34;</span>
+echo -e <span style="color:#e6db74">&#34;#################################################&#34;</span><span style="color:#e6db74">${</span>NC<span style="color:#e6db74">}</span>
+
+<span style="color:#66d9ef">for</span> arquivo in <span style="color:#66d9ef">$(</span>ls | grep .$2<span style="color:#66d9ef">)</span>;<span style="color:#66d9ef">do</span> exiftool $arquivo;<span style="color:#66d9ef">done</span>
+</code></pre></div><details>
   <summary>Resposta</summary>
   rogerioseverovisk
 </details>
-<h2 id="hahahugoshortcode-s30-hbhb--lab-08"><figure>
+<h2 id="hahahugoshortcode-s31-hbhb--lab-08"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>.  Lab 08</h2>
 
@@ -191,12 +259,12 @@ Execute:</p>
     <img src="/images/semana05-Business/linkedin.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Entrei no perfil do usuário procure pela Key e outras informações úteis.</p>
+<p>Entre no perfil do usuário procure pela Key e outras informações úteis.</p>
 <details>
   <summary>Resposta</summary>
   8812737123129912s
 </details>
-<h2 id="hahahugoshortcode-s34-hbhb-lab-09"><figure>
+<h2 id="hahahugoshortcode-s35-hbhb-lab-09"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>. Lab 09</h2>
 
