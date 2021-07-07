@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CTF on Natan Maia Morette</title>
-    <link>https://nmmorette.github.io/tags/ctf/</link>
-    <description>Recent content in CTF on Natan Maia Morette</description>
+    <title>OSINT on Natan Maia Morette</title>
+    <link>https://nmmorette.github.io/categories/osint/</link>
+    <description>Recent content in OSINT on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/categories/osint/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DCPT - Semana 05 - Information Gathering - Infra (pt-br)</title>
       <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-infra-pt-br/</link>
@@ -29,17 +29,6 @@ Arin Terminal whois TARGET_IP Para facilitar a visualização do netblock utiliz
 O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Dica de ouro: anote tudo, cada comando e resultado. Isso evita retralho, além de documentar seus passos para consultas futuras.
 . Lab 01 Utilizando o Hunter Faça cadastro no site Hunter para conseguir visualizar os resultados.
 Depois basta digitar o domínio no campo de busca:</description>
-    </item>
-    
-    <item>
-      <title>THM - The Cod Caper Write Up</title>
-      <link>https://nmmorette.github.io/posts/2021/07/thm-the-cod-caper-write-up/</link>
-      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/posts/2021/07/thm-the-cod-caper-write-up/</guid>
-      <description>Task 1. Intro This is a write up for &amp;ldquo;The Cod Caper&amp;rdquo; room at Try Hack Me.
-Room&amp;rsquo;s intro note:
-Hello there my name is Pingu. I&#39;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&#39;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server.</description>
     </item>
     
   </channel>

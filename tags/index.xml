@@ -35,16 +35,7 @@
     </item>
     
     <item>
-      <title>information_gathering</title>
-      <link>https://nmmorette.github.io/tags/information_gathering/</link>
-      <pubDate>Tue, 06 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/tags/information_gathering/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>osint</title>
+      <title>OSINT</title>
       <link>https://nmmorette.github.io/tags/osint/</link>
       <pubDate>Tue, 06 Jul 2021 00:00:00 +0000</pubDate>
       
@@ -94,6 +85,15 @@
       <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/tags/pwntools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reversingshell</title>
+      <link>https://nmmorette.github.io/tags/reversingshell/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/reversingshell/</guid>
       <description></description>
     </item>
     

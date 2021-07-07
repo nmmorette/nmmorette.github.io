@@ -34,6 +34,10 @@ Arin Terminal whois TARGET_IP Para facilitar a visualização do netblock utiliz
 
 
 <p>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</p>
+
+    <img src="/images/banners/banner.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
 <h2 id="lab-01">Lab 01</h2>
 
     <img src="/images/semana05-infra/lab1.JPG"  class="center"  style="border-radius: 10px;"  />
@@ -203,11 +207,11 @@ Após rodar o script no domínio alvo, verifique os resultados para encontrar a 
             <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
             
             <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-business-pt-br/</guid>
-            <description>{{ &amp;lt; thumbnails /images/banners/featured.pn &amp;gt; }}
+            <description>{{ &amp;lt; thumbnails &amp;ldquo;/images/banners/featured.JPG&amp;rdquo; &amp;gt; }}
 O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Dica de ouro: anote tudo, cada comando e resultado. Isso evita retralho, além de documentar seus passos para consultas futuras.
 . Lab 01 Utilizando o Hunter Faça cadastro no site Hunter para conseguir visualizar os resultados.
 Depois basta digitar o domínio no campo de busca:</description>
-            <content type="html"><![CDATA[<p>{{ &lt; thumbnails  /images/banners/featured.pn &gt; }}</p>
+            <content type="html"><![CDATA[<p>{{ &lt; thumbnails  &ldquo;/images/banners/featured.JPG&rdquo; &gt; }}</p>
 
     <img src="/images/banners/desec_pen.png"  class="center"  style="border-radius: 10px;"  />
 
