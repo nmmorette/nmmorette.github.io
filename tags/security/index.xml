@@ -6,7 +6,19 @@
     <description>Recent content in security on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DCPT - Semana 05 - Information Gathering - Infra (pt-br)</title>
+      <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-infra-pt-br/</link>
+      <pubDate>Tue, 06 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-infra-pt-br/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.
+Lab 01 Primeiramente vamos rodar o comando host, para verificar o ip do alvo: host businesscorp.com.br
+host businesscorp.com.brCom o endereço de IP do alvo em mãos, vamos fazer a busca pelo netblock. Existe mais de uma forma de conseguir essa informação:
+Arin Terminal whois TARGET_IP Para facilitar a visualização do netblock utilize o  | grep &amp;quot;inetnum&amp;quot;</description>
+    </item>
+    
     <item>
       <title>DCPT - Semana 05 - Information Gathering - Business (pt-br)</title>
       <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-business-pt-br/</link>

@@ -5,8 +5,182 @@
         <description>Recent content in Posts on Natan Maia Morette</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 02 Jul 2021 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Tue, 06 Jul 2021 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://nmmorette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>DCPT - Semana 05 - Information Gathering - Infra (pt-br)</title>
+            <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-infra-pt-br/</link>
+            <pubDate>Tue, 06 Jul 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-infra-pt-br/</guid>
+            <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.
+Lab 01 Primeiramente vamos rodar o comando host, para verificar o ip do alvo: host businesscorp.com.br
+host businesscorp.com.brCom o endereço de IP do alvo em mãos, vamos fazer a busca pelo netblock. Existe mais de uma forma de conseguir essa informação:
+Arin Terminal whois TARGET_IP Para facilitar a visualização do netblock utilize o  | grep &amp;quot;inetnum&amp;quot;</description>
+            <content type="html"><![CDATA[<p>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</p>
+<h2 id="lab-01">Lab 01</h2>
+
+    <img src="/images/semana05-infra/lab1.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Primeiramente vamos rodar o comando host, para verificar o ip do alvo:
+<code>host</code> businesscorp.com.br</p>
+<pre><code class="language-cli" data-lang="cli">  host businesscorp.com.br
+</code></pre><p>Com o endereço de IP do alvo em mãos, vamos fazer a busca pelo netblock. 
+Existe mais de uma forma de conseguir essa informação:</p>
+<h3 id="arinhttpssearcharinnetrdap"><a href="https://search.arin.net/rdap/">Arin</a></h3>
+
+    <img src="/images/semana05-infra/arin.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<h2 id="terminal">Terminal</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  whois TARGET_IP
+</code></pre></div><p>Para facilitar a visualização do netblock utilize o <code> | grep &quot;inetnum&quot;</code></p>
+
+    <img src="/images/semana05-infra/whois.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<details>
+  <summary>Resposta</summary>
+  37.59.174.224-37.59.174.239
+</details>
+<h2 id="lab-02">Lab 02</h2>
+
+    <img src="/images/semana05-infra/lab2.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Utilizando o mesmo método do primeiro lab, podemos buscar pelo AS do provedor.</p>
+<pre><code class="language-cli" data-lang="cli">  whois 37.59.174.225 | grep &quot;origin&quot;
+</code></pre><details>
+  <summary>Resposta</summary>
+  AS16276
+</details>
+<h2 id="lab-03">Lab 03</h2>
+
+    <img src="/images/semana05-infra/lab3.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Para esse lab esxiste mais de uma forma de encontrar a resposta.</p>
+<h4 id="dns-transfer">DNS transfer</h4>
+<p>Vamos fazer uma consulta utilizando o comando host:</p>
+<pre><code class="language-cli" data-lang="cli"> host -t ns businesscorp.com.br
+</code></pre><p>Com o resultado do comando teremos os nameservers do domínio, assim podemos rodar <code>host</code> e indicar o endereço para consulta:</p>
+<pre><code class="language-cli" data-lang="cli"> host -l businesscorp.com.br ENDEREÇO_DO_NAME_SERVER
+</code></pre><p>Em caso de falha,  podemos tentar em outro nameserver para verificar.</p>
+
+    <img src="/images/semana05-infra/ns2.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<h4 id="brute-force-dns">Brute Force DNS</h4>
+<p>Caso o método acima não funcione, podemos executar um scritp para tentar descobrir os nomes dos subdomínios.</p>
+<p>O script faz um &ldquo;brute force&rdquo; de DNS, ele verifica se os subdomínios existem de acordo com uma wordlist. Dependendo do tamanho da sua wordlist a execução do script pode ser demorada.</p>
+<p>Eu utilizei a wordlist que criei baseada em wordlists do dirb com outras adições minhas e de outras wordlists que encontrei na internet. <a href="https://github.com/nmmorette/worldlist/blob/main/subdomain.txt">subdomain.txt</a></p>
+<pre><code class="language-cli" data-lang="cli"> ./dnsrecon.sh businesscorp.com.br
+</code></pre>
+    <img src="/images/semana05-infra/dns.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Utilize uma das formas descritas acima para encontrar a resposta desse lab.</p>
+<details>
+  <summary>Resposta</summary>
+  infrasecreta.businesscorp.com.br
+</details>
+<h2 id="lab-04">Lab 04</h2>
+
+    <img src="/images/semana05-infra/lab4.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Essa é fácil, basta você utilizar o comando <code>host</code> para o subdomínio encontrado para visualizar o ip.</p>
+<details>
+  <summary>Resposta</summary>
+  37.59.174.225
+</details>
+<h2 id="lab-05">Lab 05</h2>
+
+    <img src="/images/semana05-infra/lab5.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Para fazer a pesquisa reversa podemos utilizar a linha de comando abaixo:</p>
+<pre><code class="language-cli" data-lang="cli">for ip in $(seq 224 239)do
+  host -t ptr 37.59.174.$ip | grep -v &quot;37.59.174&quot; | cut -d &quot; &quot; -f 5
+</code></pre><p>Esse script precisa ser alterado manualmente para correto funcionamento, as informações de netblock e ip devem ser alteradas.</p>
+<details>
+  <summary>Resposta</summary>
+  rh.businesscorp.com.br,piloto.businesscorp.com.br
+</details>
+<h2 id="lab-06">Lab 06</h2>
+
+    <img src="/images/semana05-infra/lab6.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Mais uma vez utilizaremos o <code>host</code> para visualizar o ip de cada subdomínio.</p>
+<pre><code class="language-cli" data-lang="cli">host rh.businesscorp.com.br
+host piloto.businesscorp.com.br
+</code></pre><details>
+  <summary>Resposta</summary>
+  37.59.174.229,37.59.174.230
+</details>
+<h2 id="lab-07">Lab 07</h2>
+
+    <img src="/images/semana05-infra/lab7.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Para esse lab utilizaremos o script <a href="https://github.com/nmmorette/bash-scripts/blob/main/dnstransfer.sh">dnstransfer.sh</a>
+O script verifica se é possível fazer uma transferência de DNS nos nameservers. 
+Se for possível teremos uma cópia dos registros DNS do servidor, isso ocorre quando o servidor DNS não foi configurado corretamente para somente aceitar solicitações de transferências de servidores autorizados.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">#verifica entradas do DNS e tenta um ataque de transfer dns para encontrar subdominios</span>
+<span style="color:#66d9ef">for</span> server in <span style="color:#66d9ef">$(</span>host -t ns $1 | cut -d <span style="color:#e6db74">&#34; &#34;</span> -f <span style="color:#ae81ff">4</span> <span style="color:#66d9ef">)</span>;<span style="color:#66d9ef">do</span>
+	host -l -a $1 $server
+<span style="color:#66d9ef">done</span> 
+
+</code></pre></div>
+    <img src="/images/semana05-infra/dnsrecon.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<details>
+  <summary>Resposta</summary>
+  0989201883299
+</details>
+<h2 id="lab-08">Lab 08</h2>
+
+    <img src="/images/semana05-infra/lab8.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Para encontrar essa key precisamos verificar o SPF do domínio:</p>
+<pre><code class="language-cli" data-lang="cli">host -t txt businesscorp.com.br
+</code></pre><details>
+  <summary>Resposta</summary>
+  9283947588214
+</details>
+<h2 id="lab-09">Lab 09</h2>
+
+    <img src="/images/semana05-infra/lab9.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Para esse lab vamos utilizar o script de subdomain take over: <a href="https://github.com/nmmorette/bash-scripts/blob/main/subtakeover.sh">subtakeover.sh</a>. Para correto funcionamento do script utilize uma boa wordlist.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span><span style="color:#75715e">###subtakeover.sh</span>
+<span style="color:#75715e">###---------------------------------------------------------------</span>
+<span style="color:#75715e">### Objective: find CNAME for subdomaintakover</span>
+<span style="color:#75715e">###---------------------------------------------------------------</span>
+<span style="color:#75715e">### Author: Natan Morette</span>
+<span style="color:#75715e">###---------------------------------------------------------------</span>
+<span style="color:#75715e">### Example: ./subtakeover.sh google.com</span>
+<span style="color:#75715e">###---------------------------------------------------------------</span>
+<span style="color:#66d9ef">for</span> palavra in <span style="color:#66d9ef">$(</span>cat <span style="color:#e6db74">&#34;INSERT YOUR WORDLIST HERE, YOU CAN DOWNLOAD ONE HERE: https://github.com/nmmorette/worldlist);do
+</span><span style="color:#e6db74">host -t cname </span>$palavra<span style="color:#e6db74">.</span>$1<span style="color:#e6db74"> | grep &#34;</span>alias <span style="color:#66d9ef">for</span><span style="color:#e6db74">&#34; 
+</span><span style="color:#e6db74">done
+</span></code></pre></div><p>Utilizando o script do Lab07 também podemos encontrar o resultado.
+Após rodar o script no domínio alvo, verifique os resultados para encontrar a key.</p>
+<details>
+  <summary>Resposta</summary>
+  092935999311009
+</details>
+]]></content>
+        </item>
         
         <item>
             <title>DCPT - Semana 05 - Information Gathering - Business (pt-br)</title>
@@ -317,10 +491,10 @@ Hello there my name is Pingu. I've come here to put in a request to get my fish 
 <p><code>-p 1–1000”</code> = Used to specify which port to analyze, can also be used to specify a range of ports.</p>
 <p><code>-sC</code> = Runs default scripts on the port, useful for doing basic analysis on the service running on a port.</p>
 <p><code>-A</code> = Aggressive mode, go all out and try to get as much information as possible.</p>
-<p>We found 2 open ports, just pay attention in the nmap results, all answers for the first task are there.</p>
+<p>We found 2 open ports, just pay attention to the nmap results, all answers for the first task are there.</p>
 <h2 id="task-3-web-enumeration">Task 3. Web Enumeration</h2>
 <p>Let&rsquo;s search for files and directories.</p>
-<p>You may use <code>gobuster</code> for that, but I particularly went with my bash script. You can download my script <a href="http:/https://github.com/nmmorette/bash-scripts/blob/25f02fa424136f0d23090072a773892e19c5c5b2/webrecon.sh/">here</a>
+<p>You may use <code>gobuster</code> for that, but I would particularly go with my bash script. You can download my script <a href="http:/https://github.com/nmmorette/bash-scripts/blob/25f02fa424136f0d23090072a773892e19c5c5b2/webrecon.sh/">here</a>
 Edit the file with a wordlist of your preference. I suggest the big.txt from <code>dirb</code>.</p>
 <p>Execute the <code>.\webrecon.sh</code> script in the target:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  .<span style="color:#ae81ff">\w</span>ebrecon.sh TARGET_IP
@@ -337,7 +511,7 @@ Edit the file with a wordlist of your preference. I suggest the big.txt from <co
 
 
 <h2 id="task-4-web-exploitation">Task 4. Web Exploitation</h2>
-<p>Now we have a administrator page but we don&rsquo;t have credentials to log in, then lets try some SQL injection using the  <code>sqlmap</code>.</p>
+<p>Now we have an administrator page but we don&rsquo;t have credentials to log in. So let&rsquo;s try some SQL injection using the  <code>sqlmap</code>.</p>
 
     <img src="/images/thecodcaper/sql.jpg"  class="center"  style="border-radius: 8px;"  />
 
@@ -347,28 +521,29 @@ Edit the file with a wordlist of your preference. I suggest the big.txt from <co
 <p><code>-u</code> = Specifies which url to attack.</p>
 <p><code>--forms</code> = Automatically selects parameters from <!-- raw HTML omitted --> elements on the page.</p>
 <p><code>--dump</code> = Used to retrieve data from the db once SQLI is found.</p>
-<p>As result we got a user and pass:</p>
+<p>As result we got a username and a pass:</p>
 
     <img src="/images/thecodcaper/cred.jpg"  class="center"  style="border-radius: 8px;"  />
 
 
-<p>Finally we could login into <code>/administrator.php</code> page then we got a &ldquo;Run Command&rdquo; page:</p>
+<p>Finally we can login into <code>/administrator.php</code> page then we get a &ldquo;Run Command&rdquo; page:</p>
 
     <img src="/images/thecodcaper/run.jpg"  class="center"  style="border-radius: 8px;"  />
 
 
 <h2 id="task-5-command-execution">Task 5. Command Execution</h2>
 <p>Since we have a form to run commands, let&rsquo;s run some basic command as <code>ls</code></p>
-<p>It&rsquo;s working, we have the result:</p>
+<p>It&rsquo;s working!! 
+We have the result:</p>
 
     <img src="/images/thecodcaper/files.jpg"  class="center"  style="border-radius: 8px;"  />
 
 
 <p>That command give us the answer for the first question in the task</p>
 <p>With the ability to run commands we should try some reverse shell.
-We know that server use <code>php</code> then lets try a <code>php</code> reverse shell on it.
+We know that server uses <code>php</code> then let&rsquo;s try a <code>php</code> reverse shell on it.
 This is one way, but feel free to try another kind of reverse shell: python or nc.
-Net Cat will probaly works too, since the intro of that particular task told us that the server has nc enable.</p>
+Net Cat will probably works too, since the intro of that particular task told us that the server has nc enable.</p>
 <p>We need to open a port in our machine:</p>
 <pre><code class="language-cli" data-lang="cli">nc -vnlp 12345
 </code></pre><p>Php reverse shell sintax:</p>
@@ -380,18 +555,18 @@ Net Cat will probaly works too, since the intro of that particular task told us 
     <img src="/images/thecodcaper/home.jpg"  class="center"  style="border-radius: 8px;"  />
 
 
-<p>We also could check in the <code>/etc/passwd</code>:</p>
+<p>We also can check in the <code>/etc/passwd</code>:</p>
 
     <img src="/images/thecodcaper/passwd.jpg"  class="center"  style="border-radius:15px;"  />
 
 
-<p>After this you will have to do some additional enumeration to find user&rsquo;s ssh key, or hidden password</p>
-<p>We could check all files from the user with the command:</p>
+<p>After this, you will have to do some additional enumeration to find user&rsquo;s ssh key, or hidden password</p>
+<p>We can check all files from the user with the command:</p>
 <pre><code class="language-cli" data-lang="cli">  find / -user pingu -print 2&gt;/dev/null
-</code></pre><p>Also we could search for file names like: pass, secret, private etc&hellip;.</p>
+</code></pre><p>Also we can search for file names like: pass, secret, private etc&hellip;.</p>
 <pre><code class="language-cli" data-lang="cli">    find / -name pass* 2&gt;/dev/null
 </code></pre><p>Take a good look at the results and find the file with user&rsquo;s password. 
-You could also search for a <code>ssh</code> key file.</p>
+You can also search for a <code>ssh</code> key file.</p>
 <h2 id="task-6-linenum">Task 6. LinEnum</h2>
 <p>We have a user/pass then we should <code>ssh</code> the machine.</p>
 
@@ -479,9 +654,9 @@ We print 44 random characters(in this case A) and then our memory address in lit
 
 <ul>
 <li>The hash that we found in last task </li>
-<li>A little bit of pacient</li>
+<li>A little bit of patience</li>
 
-<p>Luckily hashcat supports cracking linux password hashes. You can find a list of hashcat modes <a href="https://hashcat.net/wiki/doku.php?id=example_hashes">here</a> and <a href="https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt">rockyou</a>(a popular wordlist) here (if you don&rsquo;t already have it on your system)</p>
+<p>Luckily hashcat supports cracking linux password hashes. You can find a list of hashcat modes <a href="https://hashcat.net/wiki/doku.php?id=example_hashes">here</a> and <a href="https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt">rockyou</a>(a popular wordlist) here (if you don&rsquo;t already have it on your system yet)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"> hashcat -m <span style="color:#ae81ff">1800</span> -a <span style="color:#ae81ff">0</span> pingu.hash /usr/share/wordlists/rockyou.txt
 </code></pre></div>
     <img src="/images/thecodcaper/5.gif"  class="center"  style="border-radius: 3px;"  />

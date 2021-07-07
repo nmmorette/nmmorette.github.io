@@ -48,7 +48,7 @@ Room&amp;rsquo;s intro note:
 Room&rsquo;s intro note:
 Hello there my name is Pingu. I&#39;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&#39;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server."><meta itemprop="datePublished" content="2021-07-01T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-07-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1386"><meta itemprop="image" content="https://nmmorette.github.io"/>
+<meta itemprop="wordCount" content="1389"><meta itemprop="image" content="https://nmmorette.github.io"/>
 <meta itemprop="keywords" content="tryhackme,writeup,pentest,security,pwn,pwntools,reversingshell,THM,CTF," />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://nmmorette.github.io"/>
@@ -69,7 +69,7 @@ Room&rsquo;s intro note:
 <meta property="og:url" content="https://nmmorette.github.io/posts/2021/07/thm-the-cod-caper-write-up/" /><meta property="og:image" content="https://nmmorette.github.io"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-07-01T00:00:00&#43;00:00" />
 <meta property="article:modified_time" content="2021-07-01T00:00:00&#43;00:00" />
-<meta property="og:see_also" content="https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-business-pt-br/" />
+<meta property="og:see_also" content="https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-infra-pt-br/" /><meta property="og:see_also" content="https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-business-pt-br/" />
 
 
 
@@ -188,10 +188,10 @@ Hello there my name is Pingu. I've come here to put in a request to get my fish 
 <p><code>-p 1–1000”</code> = Used to specify which port to analyze, can also be used to specify a range of ports.</p>
 <p><code>-sC</code> = Runs default scripts on the port, useful for doing basic analysis on the service running on a port.</p>
 <p><code>-A</code> = Aggressive mode, go all out and try to get as much information as possible.</p>
-<p>We found 2 open ports, just pay attention in the nmap results, all answers for the first task are there.</p>
+<p>We found 2 open ports, just pay attention to the nmap results, all answers for the first task are there.</p>
 <h2 id="task-3-web-enumeration">Task 3. Web Enumeration</h2>
 <p>Let&rsquo;s search for files and directories.</p>
-<p>You may use <code>gobuster</code> for that, but I particularly went with my bash script. You can download my script <a href="http:/https://github.com/nmmorette/bash-scripts/blob/25f02fa424136f0d23090072a773892e19c5c5b2/webrecon.sh/">here</a>
+<p>You may use <code>gobuster</code> for that, but I would particularly go with my bash script. You can download my script <a href="http:/https://github.com/nmmorette/bash-scripts/blob/25f02fa424136f0d23090072a773892e19c5c5b2/webrecon.sh/">here</a>
 Edit the file with a wordlist of your preference. I suggest the big.txt from <code>dirb</code>.</p>
 <p>Execute the <code>.\webrecon.sh</code> script in the target:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  .<span style="color:#ae81ff">\w</span>ebrecon.sh TARGET_IP
@@ -208,7 +208,7 @@ Edit the file with a wordlist of your preference. I suggest the big.txt from <co
 
 
 <h2 id="task-4-web-exploitation">Task 4. Web Exploitation</h2>
-<p>Now we have a administrator page but we don&rsquo;t have credentials to log in, then lets try some SQL injection using the  <code>sqlmap</code>.</p>
+<p>Now we have an administrator page but we don&rsquo;t have credentials to log in. So let&rsquo;s try some SQL injection using the  <code>sqlmap</code>.</p>
 
     <img src="https://nmmorette.github.io/images/thecodcaper/sql.jpg"  class="center"  style="border-radius: 8px;"  />
 
@@ -218,28 +218,29 @@ Edit the file with a wordlist of your preference. I suggest the big.txt from <co
 <p><code>-u</code> = Specifies which url to attack.</p>
 <p><code>--forms</code> = Automatically selects parameters from <!-- raw HTML omitted --> elements on the page.</p>
 <p><code>--dump</code> = Used to retrieve data from the db once SQLI is found.</p>
-<p>As result we got a user and pass:</p>
+<p>As result we got a username and a pass:</p>
 
     <img src="https://nmmorette.github.io/images/thecodcaper/cred.jpg"  class="center"  style="border-radius: 8px;"  />
 
 
-<p>Finally we could login into <code>/administrator.php</code> page then we got a &ldquo;Run Command&rdquo; page:</p>
+<p>Finally we can login into <code>/administrator.php</code> page then we get a &ldquo;Run Command&rdquo; page:</p>
 
     <img src="https://nmmorette.github.io/images/thecodcaper/run.jpg"  class="center"  style="border-radius: 8px;"  />
 
 
 <h2 id="task-5-command-execution">Task 5. Command Execution</h2>
 <p>Since we have a form to run commands, let&rsquo;s run some basic command as <code>ls</code></p>
-<p>It&rsquo;s working, we have the result:</p>
+<p>It&rsquo;s working!! 
+We have the result:</p>
 
     <img src="https://nmmorette.github.io/images/thecodcaper/files.jpg"  class="center"  style="border-radius: 8px;"  />
 
 
 <p>That command give us the answer for the first question in the task</p>
 <p>With the ability to run commands we should try some reverse shell.
-We know that server use <code>php</code> then lets try a <code>php</code> reverse shell on it.
+We know that server uses <code>php</code> then let&rsquo;s try a <code>php</code> reverse shell on it.
 This is one way, but feel free to try another kind of reverse shell: python or nc.
-Net Cat will probaly works too, since the intro of that particular task told us that the server has nc enable.</p>
+Net Cat will probably works too, since the intro of that particular task told us that the server has nc enable.</p>
 <p>We need to open a port in our machine:</p>
 <pre><code class="language-cli" data-lang="cli">nc -vnlp 12345
 </code></pre><p>Php reverse shell sintax:</p>
@@ -251,18 +252,18 @@ Net Cat will probaly works too, since the intro of that particular task told us 
     <img src="https://nmmorette.github.io/images/thecodcaper/home.jpg"  class="center"  style="border-radius: 8px;"  />
 
 
-<p>We also could check in the <code>/etc/passwd</code>:</p>
+<p>We also can check in the <code>/etc/passwd</code>:</p>
 
     <img src="https://nmmorette.github.io/images/thecodcaper/passwd.jpg"  class="center"  style="border-radius:15px;"  />
 
 
-<p>After this you will have to do some additional enumeration to find user&rsquo;s ssh key, or hidden password</p>
-<p>We could check all files from the user with the command:</p>
+<p>After this, you will have to do some additional enumeration to find user&rsquo;s ssh key, or hidden password</p>
+<p>We can check all files from the user with the command:</p>
 <pre><code class="language-cli" data-lang="cli">  find / -user pingu -print 2&gt;/dev/null
-</code></pre><p>Also we could search for file names like: pass, secret, private etc&hellip;.</p>
+</code></pre><p>Also we can search for file names like: pass, secret, private etc&hellip;.</p>
 <pre><code class="language-cli" data-lang="cli">    find / -name pass* 2&gt;/dev/null
 </code></pre><p>Take a good look at the results and find the file with user&rsquo;s password. 
-You could also search for a <code>ssh</code> key file.</p>
+You can also search for a <code>ssh</code> key file.</p>
 <h2 id="task-6-linenum">Task 6. LinEnum</h2>
 <p>We have a user/pass then we should <code>ssh</code> the machine.</p>
 
@@ -350,9 +351,9 @@ We print 44 random characters(in this case A) and then our memory address in lit
 
 <ul>
 <li>The hash that we found in last task </li>
-<li>A little bit of pacient</li>
+<li>A little bit of patience</li>
 
-<p>Luckily hashcat supports cracking linux password hashes. You can find a list of hashcat modes <a href="https://hashcat.net/wiki/doku.php?id=example_hashes">here</a> and <a href="https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt">rockyou</a>(a popular wordlist) here (if you don&rsquo;t already have it on your system)</p>
+<p>Luckily hashcat supports cracking linux password hashes. You can find a list of hashcat modes <a href="https://hashcat.net/wiki/doku.php?id=example_hashes">here</a> and <a href="https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt">rockyou</a>(a popular wordlist) here (if you don&rsquo;t already have it on your system yet)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"> hashcat -m <span style="color:#ae81ff">1800</span> -a <span style="color:#ae81ff">0</span> pingu.hash /usr/share/wordlists/rockyou.txt
 </code></pre></div>
     <img src="https://nmmorette.github.io/images/thecodcaper/5.gif"  class="center"  style="border-radius: 3px;"  />
@@ -408,7 +409,7 @@ THM suggestion reading:
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        1386 Words
+        1389 Words
       </p>
 
       <p>
