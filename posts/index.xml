@@ -42,7 +42,7 @@ Existe mais de uma forma de conseguir essa informação:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  whois TARGET_IP
 </code></pre></div><p>Para facilitar a visualização do netblock utilize o <code> | grep &quot;inetnum&quot;</code></p>
 
-    <img src="/images/semana05-infra/who."  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana05-infra/whois.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <details>
@@ -196,13 +196,17 @@ Após rodar o script no domínio alvo, verifique os resultados para encontrar a 
 . Lab 01 Utilizando o Hunter Faça cadastro no site Hunter para conseguir visualizar os resultados.
 Depois basta digitar o domínio no campo de busca:
 Utilizando o TheHarvester Caso ainda não tenha instalado, instale o theHarvester:</description>
-            <content type="html"><![CDATA[<h5 id="o-intuito-desse-post-não-é-dar-as-respostas-e-sim-documentar-os-passos-e-ferramentas-utilizadas">O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</h5>
+            <content type="html"><![CDATA[
+    <img src="/images/banners/desec.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h5 id="o-intuito-desse-post-não-é-dar-as-respostas-e-sim-documentar-os-passos-e-ferramentas-utilizadas">O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</h5>
 
     <img src="/images/semana05-Business/banner.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <p><strong>Dica de ouro:</strong> anote tudo, cada comando e resultado. Isso evita retralho, além de documentar seus passos para consultas futuras.</p>
-<h2 id="hahahugoshortcode-s1-hbhb-lab-01"><figure>
+<h2 id="hahahugoshortcode-s2-hbhb-lab-01"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>. Lab 01</h2>
 
@@ -236,7 +240,7 @@ Essa configuração de api deve ser feita em <code>/etc/theHarvester/api-keys.ya
   <summary>Resposta</summary>
   <a href="mailto:camila@businesscorp.com.br">camila@businesscorp.com.br</a>,rogerio@businesscorp.com.br,ti@businesscorp.com.br
 </details>
-<h2 id="hahahugoshortcode-s6-hbhb-lab-02"><figure>
+<h2 id="hahahugoshortcode-s7-hbhb-lab-02"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>. Lab 02</h2>
 
@@ -270,7 +274,7 @@ Essa configuração de api deve ser feita em <code>/etc/theHarvester/api-keys.ya
   <summary>Resposta</summary>
   Gh4ck1ng9988299311
 </details>
-<h2 id="hahahugoshortcode-s11-hbhb---lab-03"><figure>
+<h2 id="hahahugoshortcode-s12-hbhb---lab-03"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>.   Lab 03</h2>
 
@@ -288,7 +292,7 @@ Essa configuração de api deve ser feita em <code>/etc/theHarvester/api-keys.ya
   <summary>Resposta</summary>
   c4ch3_1666277399911a
 </details>
-<h2 id="hahahugoshortcode-s15-hbhb-lab-04"><figure>
+<h2 id="hahahugoshortcode-s16-hbhb-lab-04"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>. Lab 04</h2>
 
@@ -301,7 +305,7 @@ Essa configuração de api deve ser feita em <code>/etc/theHarvester/api-keys.ya
   <summary>Resposta</summary>
   123qweAm,webmin
 </details>
-<h2 id="hahahugoshortcode-s18-hbhb-lab-05"><figure>
+<h2 id="hahahugoshortcode-s19-hbhb-lab-05"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>. Lab 05</h2>
 
@@ -319,7 +323,7 @@ Essa configuração de api deve ser feita em <code>/etc/theHarvester/api-keys.ya
   <summary>Resposta</summary>
   <a href="mailto:camila@businesscorp.com.br">camila@businesscorp.com.br</a>,ca123456
 </details>
-<h2 id="hahahugoshortcode-s22-hbhblab-06"><figure>
+<h2 id="hahahugoshortcode-s23-hbhblab-06"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>.Lab 06</h2>
 
@@ -341,7 +345,7 @@ Essa configuração de api deve ser feita em <code>/etc/theHarvester/api-keys.ya
   <summary>Resposta</summary>
   RI.doc
 </details>
-<h2 id="hahahugoshortcode-s27-hbhb-lab-07"><figure>
+<h2 id="hahahugoshortcode-s28-hbhb-lab-07"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>. Lab 07</h2>
 
@@ -424,7 +428,7 @@ echo -e <span style="color:#e6db74">&#34;#######################################
   <summary>Resposta</summary>
   rogerioseverovisk
 </details>
-<h2 id="hahahugoshortcode-s31-hbhb--lab-08"><figure>
+<h2 id="hahahugoshortcode-s32-hbhb--lab-08"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>.  Lab 08</h2>
 
@@ -442,7 +446,7 @@ echo -e <span style="color:#e6db74">&#34;#######################################
   <summary>Resposta</summary>
   8812737123129912s
 </details>
-<h2 id="hahahugoshortcode-s35-hbhb-lab-09"><figure>
+<h2 id="hahahugoshortcode-s36-hbhb-lab-09"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>. Lab 09</h2>
 
