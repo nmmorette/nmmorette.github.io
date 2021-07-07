@@ -25,10 +25,10 @@ Arin Terminal whois TARGET_IP Para facilitar a visualização do netblock utiliz
       <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-business-pt-br/</guid>
-      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Dica de ouro: anote tudo, cada comando e resultado. Isso evita retralho, além de documentar seus passos para consultas futuras.
+      <description>{{ &amp;lt; thumbnails /images/banners/featured.pn &amp;gt; }}
+O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Dica de ouro: anote tudo, cada comando e resultado. Isso evita retralho, além de documentar seus passos para consultas futuras.
 . Lab 01 Utilizando o Hunter Faça cadastro no site Hunter para conseguir visualizar os resultados.
-Depois basta digitar o domínio no campo de busca:
-Utilizando o TheHarvester Caso ainda não tenha instalado, instale o theHarvester:</description>
+Depois basta digitar o domínio no campo de busca:</description>
     </item>
     
   </channel>
