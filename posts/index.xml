@@ -19,17 +19,6 @@ Lab 01 Primeiramente vamos rodar o comando host, para verificar o ip do alvo: ho
 host businesscorp.com.brCom o endereço de IP do alvo em mãos, vamos fazer a busca pelo netblock. Existe mais de uma forma de conseguir essa informação:
 Arin Terminal whois TARGET_IP Para facilitar a visualização do netblock utilize o  | grep &amp;quot;inetnum&amp;quot;</description>
             <content type="html"><![CDATA[
-<div class="container alert alert-secondary">
-    <div><a href="" alt="">
-        <strong></strong>
-    </a></div>
-    <div class="float-left m-2">
-    
-    </div>
-    <p><small></small></p>
-    <div class="clearfix"></div>
-</div>
-
     <img src="/images/banners/desec_pen.png"  class="center"  style="border-radius: 10px;"  />
 
 
