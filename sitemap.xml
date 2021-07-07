@@ -17,13 +17,16 @@
     <loc>https://nmmorette.github.io/posts/2021/06/hello-world/</loc>
     <lastmod>2021-06-25T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://nmmorette.github.io/categories/</loc>
+    <lastmod>2021-07-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://nmmorette.github.io/tags/ctf/</loc>
     <lastmod>2021-07-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nmmorette.github.io/tags/dcpt/</loc>
     <lastmod>2021-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nmmorette.github.io/series/dcpt/</loc>
+    <loc>https://nmmorette.github.io/categories/dcpt/</loc>
     <lastmod>2021-07-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nmmorette.github.io/tags/desec/</loc>
@@ -47,16 +50,13 @@
     <loc>https://nmmorette.github.io/tags/security/</loc>
     <lastmod>2021-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nmmorette.github.io/series/</loc>
-    <lastmod>2021-07-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nmmorette.github.io/tags/</loc>
     <lastmod>2021-07-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nmmorette.github.io/tags/writeup/</loc>
     <lastmod>2021-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nmmorette.github.io/series/writeup/</loc>
+    <loc>https://nmmorette.github.io/categories/writeup/</loc>
     <lastmod>2021-07-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nmmorette.github.io/tags/pwn/</loc>
@@ -68,6 +68,9 @@
     <loc>https://nmmorette.github.io/tags/reversingshell/</loc>
     <lastmod>2021-07-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://nmmorette.github.io/series/</loc>
+    <lastmod>2021-07-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://nmmorette.github.io/tags/thm/</loc>
     <lastmod>2021-07-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -75,6 +78,9 @@
     <lastmod>2021-07-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nmmorette.github.io/series/tryhackme/</loc>
+    <lastmod>2021-07-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/series/writeup/</loc>
     <lastmod>2021-07-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nmmorette.github.io/tags/dev/</loc>
@@ -100,7 +106,5 @@
   </url><url>
     <loc>https://nmmorette.github.io/badges/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nmmorette.github.io/categories/</loc>
   </url>
 </urlset>
