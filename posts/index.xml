@@ -38,7 +38,7 @@ Existe mais de uma forma de conseguir essa informação:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  whois TARGET_IP
 </code></pre></div><p>Para facilitar a visualização do netblock utilize o <code> | grep &quot;inetnum&quot;</code></p>
 
-    <img src="/images/semana05-infra/whois.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana05-infra/who.jpg"  class="center"  style="border-radius: 10px;"  />
 
 
 <details>
