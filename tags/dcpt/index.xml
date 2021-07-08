@@ -6,13 +6,25 @@
     <description>Recent content in DCPT on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/dcpt/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/dcpt/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>DCPT - Semana 05 - Information Gathering - Web (pt-br)</title>
-      <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-web-pt-br/</link>
+      <title>DCPT - Semana 05 - Information Gathering - Web (VPN)</title>
+      <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-web-vpn/</link>
+      <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-web-vpn/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.
+Conecte na vpn da Desec para realizar esses labs.
+.Lab 01 IP do alvo: 172.16.1.60 Utilizando as ténicas de banner grab, vamos encontar a reposta desse lab
+ Curl  curl -s -I 172.16.1.60 | grep &amp;quot;Server&amp;quot; Wget  wget -q -S 172.16.1.60 Nmap  nmap -sV -p80 172.</description>
+    </item>
+    
+    <item>
+      <title>DCPT - Semana 05 - Information Gathering - Web</title>
+      <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-web/</link>
       <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-web-pt-br/</guid>
+      <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-web/</guid>
       <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.
 Dica: para um bom resultado nesses labs, utilize uma boa wordlist.
 .Lab 01 Para resolver esse lab precisamos fazer um brute force de diretórios, podemos fazer esse processo de diferentes formas, porém as ferramentas mais comuns são dirb ou gobuster.
@@ -20,11 +32,11 @@ Dica: para um bom resultado nesses labs, utilize uma boa wordlist.
     </item>
     
     <item>
-      <title>DCPT - Semana 05 - Information Gathering - Infra (pt-br)</title>
-      <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-infra-pt-br/</link>
+      <title>DCPT - Semana 05 - Information Gathering - Infra</title>
+      <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-infra/</link>
       <pubDate>Tue, 06 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-infra-pt-br/</guid>
+      <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-infra/</guid>
       <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.
 .Lab 01 Primeiramente vamos rodar o comando host, para verificar o ip do alvo: host businesscorp.com.br
 host businesscorp.com.brCom o endereço de IP do alvo em mãos, vamos fazer a busca pelo netblock. Existe mais de uma forma de conseguir essa informação:
@@ -32,11 +44,11 @@ host businesscorp.com.brCom o endereço de IP do alvo em mãos, vamos fazer a b
     </item>
     
     <item>
-      <title>DCPT - Semana 05 - Information Gathering - Business (pt-br)</title>
-      <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-business-pt-br/</link>
+      <title>DCPT - Semana 05 - Information Gathering - Business</title>
+      <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-business/</link>
       <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-business-pt-br/</guid>
+      <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-business/</guid>
       <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Dica de ouro: anote tudo, cada comando e resultado. Isso evita retralho, além de documentar seus passos para consultas futuras.
 . Lab 01 Utilizando o Hunter Faça cadastro no site Hunter para conseguir visualizar os resultados.
 Depois basta digitar o domínio no campo de busca:

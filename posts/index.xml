@@ -5,15 +5,122 @@
         <description>Recent content in Posts on Natan Maia Morette</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 07 Jul 2021 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 08 Jul 2021 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://nmmorette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>DCPT - Semana 05 - Information Gathering - Web (pt-br)</title>
-            <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-web-pt-br/</link>
+            <title>DCPT - Semana 05 - Information Gathering - Web (VPN)</title>
+            <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-web-vpn/</link>
+            <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-web-vpn/</guid>
+            <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.
+Conecte na vpn da Desec para realizar esses labs.
+.Lab 01 IP do alvo: 172.16.1.60 Utilizando as ténicas de banner grab, vamos encontar a reposta desse lab
+ Curl  curl -s -I 172.16.1.60 | grep &amp;quot;Server&amp;quot; Wget  wget -q -S 172.16.1.60 Nmap  nmap -sV -p80 172.</description>
+            <content type="html"><![CDATA[
+    <img src="/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</p>
+
+    <img src="/images/semana-05-vpn/banner.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Conecte na vpn da Desec para realizar esses labs.</p>
+<h2 id="hahahugoshortcode-s2-hbhblab-01"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>.Lab 01</h2>
+<h3 id="ip-do-alvo-17216160">IP do alvo: 172.16.1.60</h3>
+
+    <img src="/images/semana-05-vpn/lab1.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Utilizando as ténicas de banner grab, vamos encontar a reposta desse lab</p>
+<ul>
+<li>Curl</li>
+</ul>
+<pre><code class="language-cli" data-lang="cli">curl -s -I 172.16.1.60 | grep &quot;Server&quot;
+</code></pre><ul>
+<li>Wget</li>
+</ul>
+<pre><code class="language-cli" data-lang="cli">wget -q -S 172.16.1.60
+</code></pre><ul>
+<li>Nmap</li>
+</ul>
+<pre><code class="language-cli" data-lang="cli">nmap -sV -p80 172.16.1.60
+</code></pre><ul>
+<li>Nikto</li>
+</ul>
+<pre><code class="language-cli" data-lang="cli">nikto -h 172.16.1.60
+</code></pre>
+    <img src="/images/semana-05-vpn/nikto.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<ul>
+<li>Whatweb</li>
+</ul>
+<pre><code class="language-cli" data-lang="cli">whatweb -v 172.16.1.60
+</code></pre>
+    <img src="/images/semana-05-vpn/iis.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg?hl=pt-BR">Whaappalyzer</a></li>
+</ul>
+
+    <img src="/images/semana-05-vpn/wapp.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  Microsoft-IIS/7.5
+</details>
+<h2 id="hahahugoshortcode-s9-hbhblab-02"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>.Lab 02</h2>
+
+    <img src="/images/semana-05-vpn/lab2.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>A linguagem de programação utilizada no site pode ser encontrada utilizando as mesmas ferramentas do lab anterior.</p>
+<pre><code class="language-cli" data-lang="cli">curl -s --head 172.16.1.60 | grep &quot;X-Powered-By&quot;
+</code></pre>
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  ASP.NET
+</details>
+<h2 id="hahahugoshortcode-s13-hbhblab-03"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>.Lab 03</h2>
+
+    <img src="/images/semana-05-vpn/lab3.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  2.0.50727
+</details>
+]]></content>
+        </item>
+        
+        <item>
+            <title>DCPT - Semana 05 - Information Gathering - Web</title>
+            <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-web/</link>
             <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
             
-            <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-web-pt-br/</guid>
+            <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-web/</guid>
             <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.
 Dica: para um bom resultado nesses labs, utilize uma boa wordlist.
 .Lab 01 Para resolver esse lab precisamos fazer um brute force de diretórios, podemos fazer esse processo de diferentes formas, porém as ferramentas mais comuns são dirb ou gobuster.
@@ -281,7 +388,7 @@ Abra o site alvo e execute a extensão.</p>
     <img src="/images/semana05-web/lab10.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Utilizando as mesmas ferramentas do lab anterior também pé possível encontrar a respostar para esse lab.</p>
+<p>Utilizando as mesmas ferramentas do lab anterior também é possível encontrar a respostar para esse lab.</p>
 <details>
   <summary>Resposta</summary>
   PHP/5.5.9
@@ -290,11 +397,11 @@ Abra o site alvo e execute a extensão.</p>
         </item>
         
         <item>
-            <title>DCPT - Semana 05 - Information Gathering - Infra (pt-br)</title>
-            <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-infra-pt-br/</link>
+            <title>DCPT - Semana 05 - Information Gathering - Infra</title>
+            <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-infra/</link>
             <pubDate>Tue, 06 Jul 2021 00:00:00 +0000</pubDate>
             
-            <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-infra-pt-br/</guid>
+            <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-infra/</guid>
             <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.
 .Lab 01 Primeiramente vamos rodar o comando host, para verificar o ip do alvo: host businesscorp.com.br
 host businesscorp.com.brCom o endereço de IP do alvo em mãos, vamos fazer a busca pelo netblock. Existe mais de uma forma de conseguir essa informação:
@@ -498,11 +605,11 @@ Após rodar o script no domínio alvo, verifique os resultados para encontrar a 
         </item>
         
         <item>
-            <title>DCPT - Semana 05 - Information Gathering - Business (pt-br)</title>
-            <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-business-pt-br/</link>
+            <title>DCPT - Semana 05 - Information Gathering - Business</title>
+            <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-business/</link>
             <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
             
-            <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-business-pt-br/</guid>
+            <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-business/</guid>
             <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Dica de ouro: anote tudo, cada comando e resultado. Isso evita retralho, além de documentar seus passos para consultas futuras.
 . Lab 01 Utilizando o Hunter Faça cadastro no site Hunter para conseguir visualizar os resultados.
 Depois basta digitar o domínio no campo de busca:
@@ -598,7 +705,8 @@ Essa configuração de api deve ser feita em <code>/etc/theHarvester/api-keys.ya
     <img src="/images/semana05-Business/waybackmachine.png"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Não busque somente na página principal!</p>
+<p>Não busque somente na página principal, olhe versões antigas dos diretórios que já tenha mapeado.</p>
+<p><a href="http://businesscorp.com.br/configuracoes/comunicacao/projeto.txt">Link da resposta</a></p>
 <details>
   <summary>Resposta</summary>
   c4ch3_1666277399911a
