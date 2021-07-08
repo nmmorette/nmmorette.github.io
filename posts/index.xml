@@ -736,7 +736,11 @@ appropriate version for your OS and architecture.</p>
             
             <guid>https://nmmorette.github.io/posts/2021/06/hello-world/</guid>
             <description>Created with Hugo/hello-friend-ng theme and GitHub pages.</description>
-            <content type="html"><![CDATA[<p>Created with Hugo/hello-friend-ng theme and GitHub pages.</p>
+            <content type="html"><![CDATA[
+    <img src="/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Created with Hugo/hello-friend-ng theme and GitHub pages.</p>
 ]]></content>
         </item>
         
