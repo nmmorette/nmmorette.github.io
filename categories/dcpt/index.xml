@@ -6,7 +6,19 @@
     <description>Recent content in DCPT on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/categories/dcpt/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/categories/dcpt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DCPT - Semana 05 - Information Gathering - Web (pt-br)</title>
+      <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-web-pt-br/</link>
+      <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-web-pt-br/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.
+Dica: para um bom resultado nesses labs, utilize uma boa wordlist.
+.Lab 01 Para resolver esse lab precisamos fazer um brute force de diretórios, podemos fazer esse processo de diferentes formas, porém as ferramentas mais comuns são dirb ou gobuster.
+ Gobuster   gobuster dir -u businesscorp.com.br -w /usr/share/wordlist/dirb/big.txt -eAguarde a apresentação dos resultados para iniciar a análise dos endereços.</description>
+    </item>
+    
     <item>
       <title>DCPT - Semana 05 - Information Gathering - Infra (pt-br)</title>
       <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-infra-pt-br/</link>
@@ -14,9 +26,9 @@
       
       <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-infra-pt-br/</guid>
       <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.
-Lab 01 Primeiramente vamos rodar o comando host, para verificar o ip do alvo: host businesscorp.com.br
+.Lab 01 Primeiramente vamos rodar o comando host, para verificar o ip do alvo: host businesscorp.com.br
 host businesscorp.com.brCom o endereço de IP do alvo em mãos, vamos fazer a busca pelo netblock. Existe mais de uma forma de conseguir essa informação:
-Arin Terminal whois TARGET_IP Para facilitar a visualização do netblock utilize o  | grep &amp;quot;inetnum&amp;quot;</description>
+  Arin     Terminal   whois TARGET_IP Para facilitar a visualização do netblock utilize o  | grep &amp;quot;inetnum&amp;quot;</description>
     </item>
     
     <item>

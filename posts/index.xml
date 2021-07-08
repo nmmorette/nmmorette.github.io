@@ -5,8 +5,289 @@
         <description>Recent content in Posts on Natan Maia Morette</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 06 Jul 2021 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 07 Jul 2021 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://nmmorette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>DCPT - Semana 05 - Information Gathering - Web (pt-br)</title>
+            <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-web-pt-br/</link>
+            <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-web-pt-br/</guid>
+            <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.
+Dica: para um bom resultado nesses labs, utilize uma boa wordlist.
+.Lab 01 Para resolver esse lab precisamos fazer um brute force de diretórios, podemos fazer esse processo de diferentes formas, porém as ferramentas mais comuns são dirb ou gobuster.
+ Gobuster   gobuster dir -u businesscorp.com.br -w /usr/share/wordlist/dirb/big.txt -eAguarde a apresentação dos resultados para iniciar a análise dos endereços.</description>
+            <content type="html"><![CDATA[
+    <img src="/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</p>
+
+    <img src="/images/semana05-web/banner.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p><strong>Dica:</strong> para um bom resultado nesses labs, utilize uma boa <a href="https://github.com/nmmorette/worldlist">wordlist</a>.</p>
+<h2 id="hahahugoshortcode-s2-hbhblab-01"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>.Lab 01</h2>
+
+    <img src="/images/semana05-web/lab1.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Para resolver esse lab precisamos fazer um brute force de diretórios, podemos fazer esse processo de diferentes formas, porém as ferramentas mais comuns são <code>dirb</code> ou <code>gobuster</code>.</p>
+<ul>
+<li>Gobuster
+
+    <img src="/images/semana05-web/gobuster.JPG"  class="center"  style="border-radius: 10px;"  />
+
+</li>
+</ul>
+<pre><code class="language-cli" data-lang="cli">gobuster dir -u businesscorp.com.br -w /usr/share/wordlist/dirb/big.txt -e
+</code></pre><p>Aguarde a apresentação dos resultados para iniciar a análise dos endereços.</p>
+<p>Flags:</p>
+<p><code>dir</code> = modo de busca de diretórios do gobsuter</p>
+<p><code> -u</code> = url do alvo</p>
+<p><code>-w </code> = local da wordlist</p>
+<p><code> -e</code> = mode de exibição da url completa</p>
+<ul>
+<li>Dirb</li>
+</ul>
+<pre><code class="language-cli" data-lang="cli"> dirb http://businesscorp.com.br /usr/share/wordlists/dirb/big.txt 
+</code></pre><p>Com o resultado em mãos inicie a coleta de informaçoes, entre em todos os links e anote as informações coletadas.</p>
+<p>A resposta para esse lab vai estar em um arquivo de script e para encontrar ele você precisa encontrar uma URL que vai indicar o local desse arquivo. A resposta não vai estar logo de cara.</p>
+<p>[Link da resposta] (<a href="http://businesscorp.com.br/db/update.sql">http://businesscorp.com.br/db/update.sql</a>)
+
+
+<br>
+</p>
+<details>
+  <summary>Resposta</summary>
+  d81j237sh102k3a88njsnna12
+</details>
+<h2 id="hahahugoshortcode-s7-hbhblab-02"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>.Lab 02</h2>
+
+    <img src="/images/semana05-web/lab2.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Verificar o arquivo sitemap.xml de um site também é uma boa forma de <em>information gathering</em>.
+Acesse o sitemap.xml do businesscorp.com.br para encontrar um link que leva a key desse lab.</p>
+
+    <img src="/images/semana05-web/sitemaps.jpg"  class="center"  style="border-radius: 10px;"  />
+
+
+<p><a href="http://businesscorp.com.br/sitemap.xml">Link da resposta</a>
+Após acessar o endereço encontrado, verifique o códdigo fonte da página para encontrar a key.</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  1nf0gh4t3r1ng89271882
+</details>
+<h2 id="hahahugoshortcode-s12-hbhblab-03"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>.Lab 03</h2>
+
+    <img src="/images/semana05-web/lab3.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Ainda com os resultados do <code>dirb</code> ou <code>gobuster</code> continue verificando os links do site para encontrar a key desse lab.</p>
+<p>A resposta estará direta ao acessar o link específico.</p>
+
+    <img src="/images/semana05-web/vlab3.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p><a href="http://businesscorp.com.br/~administrator/key.txt">Link da resposta</a></p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  g80889113568fkp9
+</details>
+<h2 id="hahahugoshortcode-s17-hbhblab-04"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>.Lab 04</h2>
+
+    <img src="/images/semana05-web/lab4.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Para encontrar a key desse lab, continue acessandos os links encontrados.
+A resposta estará direta ao acessar o link específico.</p>
+
+    <img src="/images/semana05-web/vlab4.jpg"  class="center"  style="border-radius: 10px;"  />
+
+
+<p><a href="http://businesscorp.com.br/info">Link da resposta</a></p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  65784920123nvw0f4
+</details>
+<h2 id="hahahugoshortcode-s22-hbhblab-05"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>.Lab 05</h2>
+
+    <img src="/images/semana05-web/lab5.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>A resposta desse lab não vai estar tão aparente, verifique o resultando de diretórios e busque por uma pasta com arquivos <code>.js</code> lá você encontrará o código fonte que aponta para um diretório com a key.</p>
+
+    <img src="/images/semana05-web/vlab5.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p><a href="http://businesscorp.com.br/apiClients/showNames.txt">Link da resposta</a>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  W3bR3nc0nisN3c3ss4ry1009
+</details></p>
+<h2 id="hahahugoshortcode-s27-hbhblab-06"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>.Lab 06</h2>
+
+    <img src="/images/semana05-web/lab6.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Dessa vez vamos utilizar o script demonstrado em aula para buscar arquivos e diretórios em rh.businesscorp.com.br.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span><span style="color:#75715e">###webrecon.sh</span>
+<span style="color:#75715e">###---------------------------------------------------------------</span>
+<span style="color:#75715e">### Objective: Webrecon/fuzz directories in websites </span>
+<span style="color:#75715e">###---------------------------------------------------------------</span>
+<span style="color:#75715e">### Author: Natan Morette</span>
+<span style="color:#75715e">###---------------------------------------------------------------</span>
+<span style="color:#75715e">### Example: ./webrecon.sh businesscorp.com.br </span>
+<span style="color:#75715e">###---------------------------------------------------------------</span>
+<span style="color:#66d9ef">for</span> palavra in <span style="color:#66d9ef">$(</span>cat <span style="color:#e6db74">&#34;INPUT YOUR WORDLIST HERE, download on here:https://github.com/nmmorette/worldlist)
+</span><span style="color:#e6db74">do
+</span><span style="color:#e6db74">resp=</span><span style="color:#66d9ef">$(</span>curl -s -H <span style="color:#e6db74">&#34;User-Agent: Tony-Stark&#34;</span> -o /dev/null -w <span style="color:#e6db74">&#34;%{http_code}&#34;</span> $1/$palavra/<span style="color:#66d9ef">)</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">if  [[ </span>$resp<span style="color:#e6db74"> == &#34;</span>200<span style="color:#e6db74">&#34; ]]
+</span><span style="color:#e6db74">then
+</span><span style="color:#e6db74">echo &#34;</span> Diretorio encontrado: http://$1/$palavra<span style="color:#e6db74">&#34;
+</span><span style="color:#e6db74">fi
+</span><span style="color:#e6db74">done
+</span></code></pre></div><p>Além dessa forma ainda podemos ainda utilizar o <code>gobuster</code> com a flag <code> -a</code> para alterar o user agent, já que alguns domínios podem estar configurados para negar acessos de user agents conhecidos.</p>
+<pre><code class="language-cli" data-lang="cli">gobuster dir -u rh.businesscorp.com.br -w /home/venomsnake/Documents/wordlists/master.txt --wildcard switch -o -e -a HHHHH
+</code></pre><p>Utilize também a flag <code>-o</code> para omitir o progresso e ter uma resposta limpa na tela.
+Acesse os resultandos para encontrar a key.</p>
+
+    <img src="/images/semana05-web/adminhelp.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p><a href="http://rh.businesscorp.com.br/adminhelp/help.tx?">Link da resposta.</a></p>
+<p>
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  bkmc5502874hdkiw91244hh
+</details></p>
+<h2 id="hahahugoshortcode-s32-hbhblab-07"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>.Lab 07</h2>
+
+    <img src="/images/semana05-web/lab7.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Continue acessando os links encontrados.</p>
+
+    <img src="/images/semana05-web/vlab7.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p><a href="http://rh.businesscorp.com.br/webdata">Link da resposta</a></p>
+<p>
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  00289jfhsyw72ll399s1
+</details></p>
+<h2 id="hahahugoshortcode-s37-hbhblab-08"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>.Lab 08</h2>
+
+    <img src="/images/semana05-web/lab8.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Se você utilizou uma boa wordlist, ela também vai conter extensões para <code>.php</code>, sendo assim continue verificando os resultados para encontar o link.</p>
+
+    <img src="/images/semana05-web/vlab8.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p><a href="http://rh.businesscorp.com.br/backup.php">Link da resposta</a></p>
+<p>
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  ed05a6d4d2fb2c6a35fe40c0e53386f2
+</details></p>
+<h2 id="hahahugoshortcode-s42-hbhblab-09"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>.Lab 09</h2>
+
+    <img src="/images/semana05-web/lab9.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Existem diferentes formas de fazer o &ldquo;banner grab&rdquo; e conseguir a reposta desse lab.</p>
+<ul>
+<li>Curl</li>
+</ul>
+<pre><code class="language-cli" data-lang="cli"> curl -v -H &quot;User-agent: Stark&quot; rh.businesscorp.com.br | grep &quot;server&quot;
+</code></pre><ul>
+<li>Nikto</li>
+</ul>
+<pre><code class="language-cli" data-lang="cli">nikto -h rh.businesscorp.com.br
+</code></pre><ul>
+<li>Whatweb</li>
+</ul>
+<pre><code class="language-cli" data-lang="cli">whatweb -v businesscorp.com.br
+</code></pre><ul>
+<li><a href="https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg?hl=pt-BR">Whaappalyzer</a></li>
+</ul>
+<p>Instale a extensão no navegador Chrome.
+Abra o site alvo e execute a extensão.</p>
+
+    <img src="/images/semana05-web/wapp.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  Apache/2.4.7
+</details></p>
+<h2 id="hahahugoshortcode-s47-hbhblab-10"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>.Lab 10</h2>
+
+    <img src="/images/semana05-web/lab10.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Utilizando as mesmas ferramentas do lab anterior também pé possível encontrar a respostar para esse lab.</p>
+<details>
+  <summary>Resposta</summary>
+  PHP/5.5.9
+</details>
+]]></content>
+        </item>
         
         <item>
             <title>DCPT - Semana 05 - Information Gathering - Infra (pt-br)</title>
@@ -15,9 +296,9 @@
             
             <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-infra-pt-br/</guid>
             <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.
-Lab 01 Primeiramente vamos rodar o comando host, para verificar o ip do alvo: host businesscorp.com.br
+.Lab 01 Primeiramente vamos rodar o comando host, para verificar o ip do alvo: host businesscorp.com.br
 host businesscorp.com.brCom o endereço de IP do alvo em mãos, vamos fazer a busca pelo netblock. Existe mais de uma forma de conseguir essa informação:
-Arin Terminal whois TARGET_IP Para facilitar a visualização do netblock utilize o  | grep &amp;quot;inetnum&amp;quot;</description>
+  Arin     Terminal   whois TARGET_IP Para facilitar a visualização do netblock utilize o  | grep &amp;quot;inetnum&amp;quot;</description>
             <content type="html"><![CDATA[
     <img src="/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
 
@@ -27,7 +308,9 @@ Arin Terminal whois TARGET_IP Para facilitar a visualização do netblock utiliz
     <img src="/images/semana05-infra/banner.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
-<h2 id="lab-01">Lab 01</h2>
+<h2 id="hahahugoshortcode-s2-hbhblab-01"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>.Lab 01</h2>
 
     <img src="/images/semana05-infra/lab1.JPG"  class="center"  style="border-radius: 10px;"  />
 
@@ -37,12 +320,20 @@ Arin Terminal whois TARGET_IP Para facilitar a visualização do netblock utiliz
 <pre><code class="language-cli" data-lang="cli">  host businesscorp.com.br
 </code></pre><p>Com o endereço de IP do alvo em mãos, vamos fazer a busca pelo netblock. 
 Existe mais de uma forma de conseguir essa informação:</p>
+<ul>
+<li>
 <h3 id="arinhttpssearcharinnetrdap"><a href="https://search.arin.net/rdap/">Arin</a></h3>
+</li>
+</ul>
 
     <img src="/images/semana05-infra/arin.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
+<ul>
+<li>
 <h2 id="terminal">Terminal</h2>
+</li>
+</ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  whois TARGET_IP
 </code></pre></div><p>Para facilitar a visualização do netblock utilize o <code> | grep &quot;inetnum&quot;</code></p>
 
@@ -53,7 +344,9 @@ Existe mais de uma forma de conseguir essa informação:</p>
   <summary>Resposta</summary>
   37.59.174.224-37.59.174.239
 </details>
-<h2 id="lab-02">Lab 02</h2>
+<h2 id="hahahugoshortcode-s7-hbhb-lab-02"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>. Lab 02</h2>
 
     <img src="/images/semana05-infra/lab2.JPG"  class="center"  style="border-radius: 10px;"  />
 
@@ -64,7 +357,9 @@ Existe mais de uma forma de conseguir essa informação:</p>
   <summary>Resposta</summary>
   AS16276
 </details>
-<h2 id="lab-03">Lab 03</h2>
+<h2 id="hahahugoshortcode-s10-hbhb-lab-03"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>. Lab 03</h2>
 
     <img src="/images/semana05-infra/lab3.JPG"  class="center"  style="border-radius: 10px;"  />
 
@@ -94,7 +389,9 @@ Existe mais de uma forma de conseguir essa informação:</p>
   <summary>Resposta</summary>
   infrasecreta.businesscorp.com.br
 </details>
-<h2 id="lab-04">Lab 04</h2>
+<h2 id="hahahugoshortcode-s15-hbhb-lab-04"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>. Lab 04</h2>
 
     <img src="/images/semana05-infra/lab4.JPG"  class="center"  style="border-radius: 10px;"  />
 
@@ -104,7 +401,9 @@ Existe mais de uma forma de conseguir essa informação:</p>
   <summary>Resposta</summary>
   37.59.174.225
 </details>
-<h2 id="lab-05">Lab 05</h2>
+<h2 id="hahahugoshortcode-s18-hbhblab-05"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>.Lab 05</h2>
 
     <img src="/images/semana05-infra/lab5.JPG"  class="center"  style="border-radius: 10px;"  />
 
@@ -117,7 +416,9 @@ Existe mais de uma forma de conseguir essa informação:</p>
   <summary>Resposta</summary>
   rh.businesscorp.com.br,piloto.businesscorp.com.br
 </details>
-<h2 id="lab-06">Lab 06</h2>
+<h2 id="hahahugoshortcode-s21-hbhblab-06"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>.Lab 06</h2>
 
     <img src="/images/semana05-infra/lab6.JPG"  class="center"  style="border-radius: 10px;"  />
 
@@ -129,7 +430,9 @@ host piloto.businesscorp.com.br
   <summary>Resposta</summary>
   37.59.174.229,37.59.174.230
 </details>
-<h2 id="lab-07">Lab 07</h2>
+<h2 id="hahahugoshortcode-s24-hbhblab-07"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>.Lab 07</h2>
 
     <img src="/images/semana05-infra/lab7.JPG"  class="center"  style="border-radius: 10px;"  />
 
@@ -152,7 +455,9 @@ Se for possível teremos uma cópia dos registros DNS do servidor, isso ocorre q
   <summary>Resposta</summary>
   0989201883299
 </details>
-<h2 id="lab-08">Lab 08</h2>
+<h2 id="hahahugoshortcode-s28-hbhblab-08"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>.Lab 08</h2>
 
     <img src="/images/semana05-infra/lab8.JPG"  class="center"  style="border-radius: 10px;"  />
 
@@ -163,7 +468,9 @@ Se for possível teremos uma cópia dos registros DNS do servidor, isso ocorre q
   <summary>Resposta</summary>
   9283947588214
 </details>
-<h2 id="lab-09">Lab 09</h2>
+<h2 id="hahahugoshortcode-s31-hbhblab-09"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>.Lab 09</h2>
 
     <img src="/images/semana05-infra/lab9.JPG"  class="center"  style="border-radius: 10px;"  />
 
@@ -740,11 +1047,7 @@ appropriate version for your OS and architecture.</p>
             
             <guid>https://nmmorette.github.io/posts/2021/06/hello-world/</guid>
             <description>Created with Hugo/hello-friend-ng theme and GitHub pages.</description>
-            <content type="html"><![CDATA[
-    <img src="/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>Created with Hugo/hello-friend-ng theme and GitHub pages.</p>
+            <content type="html"><![CDATA[<p>Created with Hugo/hello-friend-ng theme and GitHub pages.</p>
 ]]></content>
         </item>
         
