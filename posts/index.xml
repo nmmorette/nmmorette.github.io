@@ -201,7 +201,7 @@ Após rodar o script no domínio alvo, verifique os resultados para encontrar a 
 Depois basta digitar o domínio no campo de busca:
 Utilizando o TheHarvester Caso ainda não tenha instalado, instale o theHarvester:</description>
             <content type="html"><![CDATA[
-    <img src="/images/banners/desec_pen.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <h5 id="o-intuito-desse-post-não-é-dar-as-respostas-e-sim-documentar-os-passos-e-ferramentas-utilizadas">O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</h5>
