@@ -8,7 +8,7 @@
 <meta name="description" content="O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.
 Dica: para um bom resultado nesses labs, utilize uma boa wordlist.
 .Lab 01 Para resolver esse lab precisamos fazer um brute force de diretórios, podemos fazer esse processo de diferentes formas, porém as ferramentas mais comuns são dirb ou gobuster.
- Gobuster   gobuster dir -u businesscorp.com.br -w /usr/share/wordlist/dirb/big.txt -eAguarde a apresentação dos resultados para iniciar a análise dos endereços." />
+ Gobuster   gobuster dir -u businesscorp.com.br -w /usr/share/wordlists/dirb/big.txt -eAguarde a apresentação dos resultados para iniciar a análise dos endereços." />
 <meta name="keywords" content="DCPT,Pentest,CTF,Cybersecurity,RedTeam,TryhackMe,Hackthebox,certification, writeup, pentest, security, desec, DCPT, CTF, OSINT" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -48,9 +48,9 @@ Dica: para um bom resultado nesses labs, utilize uma boa wordlist.
 <meta itemprop="description" content="O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.
 Dica: para um bom resultado nesses labs, utilize uma boa wordlist.
 .Lab 01 Para resolver esse lab precisamos fazer um brute force de diretórios, podemos fazer esse processo de diferentes formas, porém as ferramentas mais comuns são dirb ou gobuster.
- Gobuster   gobuster dir -u businesscorp.com.br -w /usr/share/wordlist/dirb/big.txt -eAguarde a apresentação dos resultados para iniciar a análise dos endereços."><meta itemprop="datePublished" content="2021-07-07T00:00:00&#43;00:00" />
+ Gobuster   gobuster dir -u businesscorp.com.br -w /usr/share/wordlists/dirb/big.txt -eAguarde a apresentação dos resultados para iniciar a análise dos endereços."><meta itemprop="datePublished" content="2021-07-07T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-07-07T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="585"><meta itemprop="image" content="https://nmmorette.github.io"/>
+<meta itemprop="wordCount" content="608"><meta itemprop="image" content="https://nmmorette.github.io"/>
 <meta itemprop="keywords" content="writeup,pentest,security,desec,DCPT,CTF,OSINT," />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://nmmorette.github.io"/>
@@ -59,7 +59,7 @@ Dica: para um bom resultado nesses labs, utilize uma boa wordlist.
 <meta name="twitter:description" content="O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.
 Dica: para um bom resultado nesses labs, utilize uma boa wordlist.
 .Lab 01 Para resolver esse lab precisamos fazer um brute force de diretórios, podemos fazer esse processo de diferentes formas, porém as ferramentas mais comuns são dirb ou gobuster.
- Gobuster   gobuster dir -u businesscorp.com.br -w /usr/share/wordlist/dirb/big.txt -eAguarde a apresentação dos resultados para iniciar a análise dos endereços."/>
+ Gobuster   gobuster dir -u businesscorp.com.br -w /usr/share/wordlists/dirb/big.txt -eAguarde a apresentação dos resultados para iniciar a análise dos endereços."/>
 
 
 
@@ -68,7 +68,7 @@ Dica: para um bom resultado nesses labs, utilize uma boa wordlist.
 <meta property="og:description" content="O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.
 Dica: para um bom resultado nesses labs, utilize uma boa wordlist.
 .Lab 01 Para resolver esse lab precisamos fazer um brute force de diretórios, podemos fazer esse processo de diferentes formas, porém as ferramentas mais comuns são dirb ou gobuster.
- Gobuster   gobuster dir -u businesscorp.com.br -w /usr/share/wordlist/dirb/big.txt -eAguarde a apresentação dos resultados para iniciar a análise dos endereços." />
+ Gobuster   gobuster dir -u businesscorp.com.br -w /usr/share/wordlists/dirb/big.txt -eAguarde a apresentação dos resultados para iniciar a análise dos endereços." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-web/" /><meta property="og:image" content="https://nmmorette.github.io"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-07-07T00:00:00&#43;00:00" />
@@ -77,8 +77,6 @@ Dica: para um bom resultado nesses labs, utilize uma boa wordlist.
 
 
 
-
-    <meta property="article:section" content="writeup" />
 
     <meta property="article:section" content="DCPT" />
 
@@ -198,7 +196,7 @@ Dica: para um bom resultado nesses labs, utilize uma boa wordlist.
 
 </li>
 </ul>
-<pre><code class="language-cli" data-lang="cli">gobuster dir -u businesscorp.com.br -w /usr/share/wordlist/dirb/big.txt -e
+<pre><code class="language-cli" data-lang="cli">gobuster dir -u businesscorp.com.br -w /usr/share/wordlists/dirb/big.txt -e
 </code></pre><p>Aguarde a apresentação dos resultados para iniciar a análise dos endereços.</p>
 <p>Flags:</p>
 <p><code>dir</code> = modo de busca de diretórios do gobsuter</p>
@@ -383,7 +381,9 @@ Acesse os resultandos para encontrar a key.</p>
     <img src="https://nmmorette.github.io/images/semana05-web/vlab8.png"  class="center"  style="border-radius: 10px;"  />
 
 
-<p><a href="http://rh.businesscorp.com.br/backup.php">Link da resposta</a></p>
+<p>Caso queira rodar o <code>gobuster</code> somente para encontrar os arquivos<code>.php</code> é possível rodar dessa maneira:</p>
+<pre><code class="language-cli" data-lang="cli">gobuster dir --url http://endereço.com.br --wordlist /usr/share/wordlists/dirb/big.txt -x &quot;php&quot;
+</code></pre><p><a href="http://rh.businesscorp.com.br/backup.php">Link da resposta</a></p>
 <p>
 
 <br>
@@ -466,7 +466,6 @@ Abra o site alvo e execute a extensão.</p>
     <p>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder meta-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
 
-        <span class="tag"><a href="https://nmmorette.github.io/categories/writeup/">writeup</a></span>
         <span class="tag"><a href="https://nmmorette.github.io/categories/dcpt/">DCPT</a></span>
         <span class="tag"><a href="https://nmmorette.github.io/categories/osint/">OSINT</a></span>
         
@@ -481,7 +480,7 @@ Abra o site alvo e execute a extensão.</p>
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        585 Words
+        608 Words
       </p>
 
       <p>

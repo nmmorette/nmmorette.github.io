@@ -28,7 +28,7 @@ Conecte na vpn da Desec para realizar esses labs.
       <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.
 Dica: para um bom resultado nesses labs, utilize uma boa wordlist.
 .Lab 01 Para resolver esse lab precisamos fazer um brute force de diretórios, podemos fazer esse processo de diferentes formas, porém as ferramentas mais comuns são dirb ou gobuster.
- Gobuster   gobuster dir -u businesscorp.com.br -w /usr/share/wordlist/dirb/big.txt -eAguarde a apresentação dos resultados para iniciar a análise dos endereços.</description>
+ Gobuster   gobuster dir -u businesscorp.com.br -w /usr/share/wordlists/dirb/big.txt -eAguarde a apresentação dos resultados para iniciar a análise dos endereços.</description>
     </item>
     
     <item>

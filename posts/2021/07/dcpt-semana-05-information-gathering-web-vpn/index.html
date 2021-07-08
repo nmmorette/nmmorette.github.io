@@ -50,7 +50,7 @@ Conecte na vpn da Desec para realizar esses labs.
 .Lab 01 IP do alvo: 172.16.1.60 Utilizando as ténicas de banner grab, vamos encontar a reposta desse lab
  Curl  curl -s -I 172.16.1.60 | grep &quot;Server&quot; Wget  wget -q -S 172.16.1.60 Nmap  nmap -sV -p80 172."><meta itemprop="datePublished" content="2021-07-08T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-07-08T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="105"><meta itemprop="image" content="https://nmmorette.github.io"/>
+<meta itemprop="wordCount" content="238"><meta itemprop="image" content="https://nmmorette.github.io"/>
 <meta itemprop="keywords" content="writeup,pentest,security,desec,DCPT,CTF,OSINT," />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://nmmorette.github.io"/>
@@ -77,8 +77,6 @@ Conecte na vpn da Desec para realizar esses labs.
 
 
 
-
-    <meta property="article:section" content="writeup" />
 
     <meta property="article:section" content="DCPT" />
 
@@ -157,7 +155,7 @@ Conecte na vpn da Desec para realizar esses labs.
           <circle cx="12" cy="12" r="10"></circle>
           <polyline points="12 6 12 12 16 14"></polyline>
         </svg>
-        One minute
+        2 minutes
 
         
       </p>
@@ -207,6 +205,17 @@ Conecte na vpn da Desec para realizar esses labs.
 </ul>
 <pre><code class="language-cli" data-lang="cli">nmap -sV -p80 172.16.1.60
 </code></pre><ul>
+<li>Netcat</li>
+</ul>
+<p>Efetuando conexão na porta 80 podemos enviar requisições HTTP e obter informações do servidor.
+Nesse caso enviamos uma requisição qualquer:</p>
+<pre><code class="language-cli" data-lang="cli">nc -v 172.16.1.60 80  
+GET /index.asp/ HTTP/1.0
+</code></pre>
+    <img src="https://nmmorette.github.io/images/semana-05-vpn/nc.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<ul>
 <li>Nikto</li>
 </ul>
 <pre><code class="language-cli" data-lang="cli">nikto -h 172.16.1.60
@@ -220,6 +229,16 @@ Conecte na vpn da Desec para realizar esses labs.
 <pre><code class="language-cli" data-lang="cli">whatweb -v 172.16.1.60
 </code></pre>
     <img src="https://nmmorette.github.io/images/semana-05-vpn/iis.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<ul>
+<li>Skipfish</li>
+</ul>
+<p>O skipfish é nativo do Kali Linux e gera reports em html das informações:</p>
+<pre><code class="language-cli" data-lang="cli">skipfish -o skip  http://172.16.1.60
+</code></pre><p>A flag <code>-o</code> indica uma pasta para salvar o report.</p>
+
+    <img src="https://nmmorette.github.io/images/semana-05-vpn/skip.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <ul>
@@ -237,7 +256,7 @@ Conecte na vpn da Desec para realizar esses labs.
   <summary>Resposta</summary>
   Microsoft-IIS/7.5
 </details>
-<h2 id="hahahugoshortcode-s9-hbhblab-02"><figure>
+<h2 id="hahahugoshortcode-s11-hbhblab-02"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>.Lab 02</h2>
 
@@ -254,13 +273,18 @@ Conecte na vpn da Desec para realizar esses labs.
   <summary>Resposta</summary>
   ASP.NET
 </details>
-<h2 id="hahahugoshortcode-s13-hbhblab-03"><figure>
+<h2 id="hahahugoshortcode-s15-hbhblab-03"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>.Lab 03</h2>
 
     <img src="https://nmmorette.github.io/images/semana-05-vpn/lab3.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
+<p>Para encontrar essa resposta, primeiro precisamos entender um pouco sobre padrão de páginas na web.
+Se rodarmos as ferramentas acima não encontraremos a versão exata e somente a linguagem.
+Porém já sabemos que a página roda em asp.net e a página default desse tipo de programação é <code>index.aspx</code>.</p>
+<p>O que vamos fazer agora é utilizar os mesmos métodos acima, porém informar no endereço /index.aspx. 
+Assim teremos a versão exata do asp.net que está rodando na página.</p>
 
 
 <br>
@@ -294,7 +318,6 @@ Conecte na vpn da Desec para realizar esses labs.
     <p>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder meta-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
 
-        <span class="tag"><a href="https://nmmorette.github.io/categories/writeup/">writeup</a></span>
         <span class="tag"><a href="https://nmmorette.github.io/categories/dcpt/">DCPT</a></span>
         <span class="tag"><a href="https://nmmorette.github.io/categories/osint/">OSINT</a></span>
         <span class="tag"><a href="https://nmmorette.github.io/categories/vpn/">VPN</a></span>
@@ -310,7 +333,7 @@ Conecte na vpn da Desec para realizar esses labs.
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        105 Words
+        238 Words
       </p>
 
       <p>

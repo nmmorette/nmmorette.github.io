@@ -50,6 +50,17 @@ Conecte na vpn da Desec para realizar esses labs.
 </ul>
 <pre><code class="language-cli" data-lang="cli">nmap -sV -p80 172.16.1.60
 </code></pre><ul>
+<li>Netcat</li>
+</ul>
+<p>Efetuando conexão na porta 80 podemos enviar requisições HTTP e obter informações do servidor.
+Nesse caso enviamos uma requisição qualquer:</p>
+<pre><code class="language-cli" data-lang="cli">nc -v 172.16.1.60 80  
+GET /index.asp/ HTTP/1.0
+</code></pre>
+    <img src="/images/semana-05-vpn/nc.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<ul>
 <li>Nikto</li>
 </ul>
 <pre><code class="language-cli" data-lang="cli">nikto -h 172.16.1.60
@@ -63,6 +74,16 @@ Conecte na vpn da Desec para realizar esses labs.
 <pre><code class="language-cli" data-lang="cli">whatweb -v 172.16.1.60
 </code></pre>
     <img src="/images/semana-05-vpn/iis.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<ul>
+<li>Skipfish</li>
+</ul>
+<p>O skipfish é nativo do Kali Linux e gera reports em html das informações:</p>
+<pre><code class="language-cli" data-lang="cli">skipfish -o skip  http://172.16.1.60
+</code></pre><p>A flag <code>-o</code> indica uma pasta para salvar o report.</p>
+
+    <img src="/images/semana-05-vpn/skip.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <ul>
@@ -80,7 +101,7 @@ Conecte na vpn da Desec para realizar esses labs.
   <summary>Resposta</summary>
   Microsoft-IIS/7.5
 </details>
-<h2 id="hahahugoshortcode-s9-hbhblab-02"><figure>
+<h2 id="hahahugoshortcode-s11-hbhblab-02"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>.Lab 02</h2>
 
@@ -97,13 +118,18 @@ Conecte na vpn da Desec para realizar esses labs.
   <summary>Resposta</summary>
   ASP.NET
 </details>
-<h2 id="hahahugoshortcode-s13-hbhblab-03"><figure>
+<h2 id="hahahugoshortcode-s15-hbhblab-03"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>.Lab 03</h2>
 
     <img src="/images/semana-05-vpn/lab3.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
+<p>Para encontrar essa resposta, primeiro precisamos entender um pouco sobre padrão de páginas na web.
+Se rodarmos as ferramentas acima não encontraremos a versão exata e somente a linguagem.
+Porém já sabemos que a página roda em asp.net e a página default desse tipo de programação é <code>index.aspx</code>.</p>
+<p>O que vamos fazer agora é utilizar os mesmos métodos acima, porém informar no endereço /index.aspx. 
+Assim teremos a versão exata do asp.net que está rodando na página.</p>
 
 
 <br>
@@ -124,7 +150,7 @@ Conecte na vpn da Desec para realizar esses labs.
             <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.
 Dica: para um bom resultado nesses labs, utilize uma boa wordlist.
 .Lab 01 Para resolver esse lab precisamos fazer um brute force de diretórios, podemos fazer esse processo de diferentes formas, porém as ferramentas mais comuns são dirb ou gobuster.
- Gobuster   gobuster dir -u businesscorp.com.br -w /usr/share/wordlist/dirb/big.txt -eAguarde a apresentação dos resultados para iniciar a análise dos endereços.</description>
+ Gobuster   gobuster dir -u businesscorp.com.br -w /usr/share/wordlists/dirb/big.txt -eAguarde a apresentação dos resultados para iniciar a análise dos endereços.</description>
             <content type="html"><![CDATA[
     <img src="/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
 
@@ -150,7 +176,7 @@ Dica: para um bom resultado nesses labs, utilize uma boa wordlist.
 
 </li>
 </ul>
-<pre><code class="language-cli" data-lang="cli">gobuster dir -u businesscorp.com.br -w /usr/share/wordlist/dirb/big.txt -e
+<pre><code class="language-cli" data-lang="cli">gobuster dir -u businesscorp.com.br -w /usr/share/wordlists/dirb/big.txt -e
 </code></pre><p>Aguarde a apresentação dos resultados para iniciar a análise dos endereços.</p>
 <p>Flags:</p>
 <p><code>dir</code> = modo de busca de diretórios do gobsuter</p>
@@ -335,7 +361,9 @@ Acesse os resultandos para encontrar a key.</p>
     <img src="/images/semana05-web/vlab8.png"  class="center"  style="border-radius: 10px;"  />
 
 
-<p><a href="http://rh.businesscorp.com.br/backup.php">Link da resposta</a></p>
+<p>Caso queira rodar o <code>gobuster</code> somente para encontrar os arquivos<code>.php</code> é possível rodar dessa maneira:</p>
+<pre><code class="language-cli" data-lang="cli">gobuster dir --url http://endereço.com.br --wordlist /usr/share/wordlists/dirb/big.txt -x &quot;php&quot;
+</code></pre><p><a href="http://rh.businesscorp.com.br/backup.php">Link da resposta</a></p>
 <p>
 
 <br>
