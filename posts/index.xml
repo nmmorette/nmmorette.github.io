@@ -14,15 +14,14 @@
             <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
             
             <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-web-vpn/</guid>
-            <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.
-Conecte na vpn da Desec para realizar esses labs.
+            <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Conecte na vpn da Desec para realizar esses labs.
 .Lab 01 IP do alvo: 172.16.1.60 Utilizando as ténicas de banner grab, vamos encontar a reposta desse lab
  Curl  curl -s -I 172.16.1.60 | grep &amp;quot;Server&amp;quot; Wget  wget -q -S 172.16.1.60 Nmap  nmap -sV -p80 172.</description>
             <content type="html"><![CDATA[
     <img src="/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</p>
+<h5 id="o-intuito-desse-post-não-é-dar-as-respostas-e-sim-documentar-os-passos-e-ferramentas-utilizadas">O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</h5>
 
     <img src="/images/semana-05-vpn/banner.JPG"  class="center"  style="border-radius: 10px;"  />
 
@@ -142,20 +141,333 @@ Assim teremos a versão exata do asp.net que está rodando na página.</p>
         </item>
         
         <item>
+            <title>DCPT - Semana 06 - OSINT</title>
+            <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-06-osint/</link>
+            <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-06-osint/</guid>
+            <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Alvo: mail.businesscorp.com.br | 37.59.174.227  1. RECON I Vamos iniciar com um scan de todas as portas:
+nmap -A -v mail.businesscorp.com.br -p-Verifique o resultado e informe as portas abertas em ordem crescente.
+Resposta21,80,110,143 2. RECON II Vanos realizar um scan para portas udp, também com nmap</description>
+            <content type="html"><![CDATA[
+    <img src="/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<h5 id="o-intuito-desse-post-não-é-dar-as-respostas-e-sim-documentar-os-passos-e-ferramentas-utilizadas">O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</h5>
+
+    <img src="/images/semana06/semana06.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<h3 id="alvo-mailbusinesscorpcombr--3759174227">Alvo: mail.businesscorp.com.br | 37.59.174.227</h3>
+<h2 id="hahahugoshortcode-s2-hbhb-1-recon-i"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure> 1. RECON I</h2>
+
+    <img src="/images/semana06/1.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Vamos iniciar com um scan de todas as portas:</p>
+<pre><code class="language-cli" data-lang="cli">nmap -A -v mail.businesscorp.com.br -p-
+</code></pre>
+    <img src="/images/semana06/nmap.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Verifique o resultado e informe as portas abertas em ordem crescente.</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  21,80,110,143
+</details>
+<h2 id="hahahugoshortcode-s7-hbhb2-recon-ii"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>2. RECON II</h2>
+
+    <img src="/images/semana06/2.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Vanos realizar um scan para portas udp, também com <code>nmap</code></p>
+<pre><code class="language-cli" data-lang="cli">nmap -sU mail.businesscorp.com.br -p-
+</code></pre><p>Só há uma porta aberta.</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  53
+</details>
+<h2 id="hahahugoshortcode-s11-hbhb3-recon-iii"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>3. RECON III</h2>
+
+    <img src="/images/semana06/3.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Vamos utilizar o <code>netcat</code> para verificar dar um banner grab nessa porta:</p>
+<pre><code class="language-cli" data-lang="cli">netcat -u mail.businesscorp.com.br 53
+</code></pre><p>Não se esqueça de apertar o &ldquo;ENTER&rdquo; após a conexão, para exibir o banner.</p>
+
+    <img src="/images/semana06/banner.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  901238127-1281321-d192919
+</details>
+<h2 id="hahahugoshortcode-s16-hbhb4-osint"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>4. OSINT</h2>
+
+    <img src="/images/semana06/4.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>A importância de documentar e anotar todas as informações, essa informação foi conseguida na fazer de information gathering <a href="https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-business/">bussiness</a>.</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  camila,ca123456
+</details>
+<h2 id="hahahugoshortcode-s20-hbhb5-osint-ii"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>5. OSINT II</h2>
+
+    <img src="/images/semana06/5.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Nosso scan do nmap identificou a porta 110/tcp que é de um serviço de email. 
+Como temos a informação de login e senha, vamos conectar direto na posta com as credenciais:</p>
+<pre><code class="language-cli" data-lang="cli">netcat mail.businesscorp.com.br 110
+USER &lt;username&gt;
+PASS &lt;password&gt;
+</code></pre><p>Depois de autenticado, vamos rodar o comando STAT para verificar a quantidade de mensagens.</p>
+
+    <img src="/images/semana06/stat.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Agora sabemos que a usuária tem 2 mensagens na caixa, vamos rodar o RETR 1 para recuperar a primeira mensagem.</p>
+
+    <img src="/images/semana06/retr.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>No cabeçalho do email é possível identificar o nome do serviço de e-mail.</p>
+<p>Alguns comandos do serviço POP3</p>
+
+    <img src="/images/semana06/pop.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  postfix
+</details>
+<h2 id="hahahugoshortcode-s27-hbhb6-osint-iii"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>6. OSINT III</h2>
+
+    <img src="/images/semana06/6.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Essa informação também será encontrada no cabeçalho do e-mail.</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  squirrelmail
+</details>
+<h2 id="hahahugoshortcode-s31-hbhb7-osint-iv"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>7. OSINT IV</h2>
+
+    <img src="/images/semana06/7.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Verifique o campo <code>User-Agent:</code> para encontrar a resposta.</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  squirrelmail1.4.23
+</details>
+<h2 id="hahahugoshortcode-s35-hbhb8-osint-vi"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>8. OSINT VI</h2>
+
+    <img src="/images/semana06/8.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Continue verificando o cabeçalho da mensagem.</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  <a href="mailto:jotafsantos@businesscorp.com.br">jotafsantos@businesscorp.com.br</a>
+</details>
+<h2 id="hahahugoshortcode-s39-hbhb9osint-vii"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>9.OSINT VII</h2>
+
+    <img src="/images/semana06/9.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Como abrimos a primeira mensagem com o RETR, basta verificar a data no cabeçalho do e-mail.</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  09/10/2018
+</details>
+<h2 id="hahahugoshortcode-s43-hbhb10-osint-vii"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>10. OSINT VII</h2>
+
+    <img src="/images/semana06/10.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Procure pelo campo <code>Received: from</code></p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  189.29.146.62
+</details>
+<h2 id="hahahugoshortcode-s47-hbhb11-osint-viii"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>11. OSINT VIII</h2>
+
+    <img src="/images/semana06/11.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  bj9384221-
+</details>
+<h2 id="hahahugoshortcode-s51-hbhb12-osint-ix"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>12. OSINT IX</h2>
+
+    <img src="/images/semana06/12.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Vamos verificar a mensagem 2 para tentar identificar outros endereços de email.
+No cabeçalho da segunda mensagem é possível encontrar um novo email da organização. Campo <code>Return-Path:</code></p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  <a href="mailto:dev@businesscorp.com.br">dev@businesscorp.com.br</a>
+</details>
+<h2 id="hahahugoshortcode-s55-hbhb13-osint-x"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>13. OSINT X</h2>
+
+    <img src="/images/semana06/13.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Leia o conteúdo de ambos os emails e preste atenção nos detalhes.
+Temos uma troca de mensagens onde é solicitado a senha da usuária.
+Logo, na teoria, ela respondeu esse email com a senha. Precisamos recuperar esse email.</p>
+<p>Não vamos conseguir verificar os emails de saída no pop3, precisamos verificar outro serviço. Voltando ao nmap, podemos ver que há outra porta aberta relacionada a serviço de email, porta 143 protocolo IMAP.</p>
+<p>Temos duas formar de encontrar essa key.</p>
+<ul>
+<li>Netcat</li>
+</ul>
+<pre><code class="language-cli" data-lang="cli">nc -nv 37.59.174.227 143
+</code></pre><p>Vamos conectar via netcat, depois de conectar, precisamos autenticar:</p>
+<pre><code class="language-IMAP" data-lang="IMAP">A1 LOGIN &quot;camila&quot; &quot;ca123456&quot;
+</code></pre><p>Vamos listar as pastas</p>
+<pre><code class="language-IMAP" data-lang="IMAP">A1 LIST &quot;&quot;*
+</code></pre>
+    <img src="/images/semana06/imap.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Agora vamos entrar na caixa de enviados.</p>
+<pre><code class="language-IMAP" data-lang="IMAP">A1 SELECT INBOX.Sent
+A1 FETCH 2 body[text]
+</code></pre><p>A primeira linha selecionamos a caixa de saída 
+Na segunda linha selecionamos o email para visualização.</p>
+<ul>
+<li>Curl</li>
+</ul>
+<p>Também podemos utilizar o <code>curl</code> para verificar os emails.</p>
+<p>Vamos listar os emails da caixa de enviados.</p>
+<pre><code class="language-cli" data-lang="cli">curl -k 'imap://37.59.174.227/Inbox.Sent?ALL' --user camila:ca123456
+</code></pre><p>Temos dois emails, vamos acessar o conteúdo agora:</p>
+<pre><code class="language-cli" data-lang="cli">curl -k 'imap://37.59.174.227/Inbox.Sent;MAILINDEX=2' --user camila:ca123456
+
+</code></pre><p>O comando acima baixa e mostra a mensagem em tela, leia o email e encontre a resposta.</p>
+<p>Mais sobre o protocolo <a href="https://book.hacktricks.xyz/pentesting/pentesting-imap?fbclid=IwAR2nfknmQRCbDBq_CCg3dPG3fvULLr2ha5f1wDhphWiM31SfJsaVcHkFe7c">IMAP</a></p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  camila,bj9384221-
+</details>
+<h2 id="hahahugoshortcode-s60-hbhb14-osint-xi"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>14. OSINT XI</h2>
+
+    <img src="/images/semana06/14.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Agora temos outra senha da usuária.
+Na fase anterior itendificamos URL&rsquo;s e uma delas era da intranet.</p>
+<p>Vamos conectar com as credenciais encontradas e achar a key.</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  327-9931231-48848d3
+</details>
+]]></content>
+        </item>
+        
+        <item>
             <title>DCPT - Semana 05 - Information Gathering - Web</title>
             <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-web/</link>
             <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
             
             <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-web/</guid>
-            <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.
-Dica: para um bom resultado nesses labs, utilize uma boa wordlist.
+            <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Dica: para um bom resultado nesses labs, utilize uma boa wordlist.
 .Lab 01 Para resolver esse lab precisamos fazer um brute force de diretórios, podemos fazer esse processo de diferentes formas, porém as ferramentas mais comuns são dirb ou gobuster.
  Gobuster   gobuster dir -u businesscorp.com.br -w /usr/share/wordlists/dirb/big.txt -eAguarde a apresentação dos resultados para iniciar a análise dos endereços.</description>
             <content type="html"><![CDATA[
     <img src="/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</p>
+<h5 id="o-intuito-desse-post-não-é-dar-as-respostas-e-sim-documentar-os-passos-e-ferramentas-utilizadas">O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</h5>
 
     <img src="/images/semana05-web/banner.JPG"  class="center"  style="border-radius: 10px;"  />
 
@@ -430,15 +742,14 @@ Abra o site alvo e execute a extensão.</p>
             <pubDate>Tue, 06 Jul 2021 00:00:00 +0000</pubDate>
             
             <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-infra/</guid>
-            <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.
-.Lab 01 Primeiramente vamos rodar o comando host, para verificar o ip do alvo: host businesscorp.com.br
+            <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. .Lab 01 Primeiramente vamos rodar o comando host, para verificar o ip do alvo: host businesscorp.com.br
 host businesscorp.com.brCom o endereço de IP do alvo em mãos, vamos fazer a busca pelo netblock. Existe mais de uma forma de conseguir essa informação:
   Arin     Terminal   whois TARGET_IP Para facilitar a visualização do netblock utilize o  | grep &amp;quot;inetnum&amp;quot;</description>
             <content type="html"><![CDATA[
     <img src="/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</p>
+<h5 id="o-intuito-desse-post-não-é-dar-as-respostas-e-sim-documentar-os-passos-e-ferramentas-utilizadas">O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</h5>
 
     <img src="/images/semana05-infra/banner.JPG"  class="center"  style="border-radius: 10px;"  />
 

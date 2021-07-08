@@ -13,10 +13,20 @@
       <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-web-vpn/</guid>
-      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.
-Conecte na vpn da Desec para realizar esses labs.
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Conecte na vpn da Desec para realizar esses labs.
 .Lab 01 IP do alvo: 172.16.1.60 Utilizando as ténicas de banner grab, vamos encontar a reposta desse lab
  Curl  curl -s -I 172.16.1.60 | grep &amp;quot;Server&amp;quot; Wget  wget -q -S 172.16.1.60 Nmap  nmap -sV -p80 172.</description>
+    </item>
+    
+    <item>
+      <title>DCPT - Semana 06 - OSINT</title>
+      <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-06-osint/</link>
+      <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-06-osint/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Alvo: mail.businesscorp.com.br | 37.59.174.227  1. RECON I Vamos iniciar com um scan de todas as portas:
+nmap -A -v mail.businesscorp.com.br -p-Verifique o resultado e informe as portas abertas em ordem crescente.
+Resposta21,80,110,143 2. RECON II Vanos realizar um scan para portas udp, também com nmap</description>
     </item>
     
     <item>
@@ -25,8 +35,7 @@ Conecte na vpn da Desec para realizar esses labs.
       <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-web/</guid>
-      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.
-Dica: para um bom resultado nesses labs, utilize uma boa wordlist.
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Dica: para um bom resultado nesses labs, utilize uma boa wordlist.
 .Lab 01 Para resolver esse lab precisamos fazer um brute force de diretórios, podemos fazer esse processo de diferentes formas, porém as ferramentas mais comuns são dirb ou gobuster.
  Gobuster   gobuster dir -u businesscorp.com.br -w /usr/share/wordlists/dirb/big.txt -eAguarde a apresentação dos resultados para iniciar a análise dos endereços.</description>
     </item>
@@ -37,8 +46,7 @@ Dica: para um bom resultado nesses labs, utilize uma boa wordlist.
       <pubDate>Tue, 06 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-infra/</guid>
-      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.
-.Lab 01 Primeiramente vamos rodar o comando host, para verificar o ip do alvo: host businesscorp.com.br
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. .Lab 01 Primeiramente vamos rodar o comando host, para verificar o ip do alvo: host businesscorp.com.br
 host businesscorp.com.brCom o endereço de IP do alvo em mãos, vamos fazer a busca pelo netblock. Existe mais de uma forma de conseguir essa informação:
   Arin     Terminal   whois TARGET_IP Para facilitar a visualização do netblock utilize o  | grep &amp;quot;inetnum&amp;quot;</description>
     </item>
