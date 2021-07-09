@@ -443,7 +443,7 @@ Na segunda linha selecionamos o email para visualização.</p>
 <p>Agora temos outra senha da usuária.
 Vamos autenticar no endereço: mail.businesscorp.com.br</p>
 
-    <img src="/images/semana06/camila.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/camila.jpg"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -454,6 +454,92 @@ Vamos autenticar no endereço: mail.businesscorp.com.br</p>
   <summary>Resposta</summary>
   327-9931231-48848d3
 </details>
+]]></content>
+        </item>
+        
+        <item>
+            <title>TryHackme - Choose your destiny</title>
+            <link>https://nmmorette.github.io/posts/2021/07/tryhackme-choose-your-destiny/</link>
+            <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-choose-your-destiny/</guid>
+            <description>Do you want to be a hacker? An IT professional? Or maybe just know about thechnology.But you don&amp;rsquo;t know where to start. Try Hack Me is definitely the right place for you!
+Especially now with the new Pre Security learn path.
+You don&amp;rsquo;t need to be an IT pro for start here. This learning path will take you by the hand and show you the basics of cyber security. You will learn about:</description>
+            <content type="html"><![CDATA[
+    <img src="/images/presec/banner.jpg"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Do you want to be a hacker? An IT professional? Or maybe just know about thechnology.But you don&rsquo;t know where to start. Try Hack Me is definitely the right place for you!</p>
+<p>Especially now with the new <a href="https://tryhackme.com/path-action/presecurity/join">Pre Security learn path</a>.</p>
+
+    <img src="/images/presec/presec.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>You don&rsquo;t need to be an IT pro for start here. This learning path will take you by the hand and show you the basics of cyber security. 
+You will learn about:</p>
+
+
+<ul>
+<li>Cyber Security basics</li>
+<li>Networkig basics</li>
+<li>The web common attacks</li>
+<li>Learn to use the Linux and Windows operating system</li>
+</ul>
+
+<p>First of all, you need an account in <a href="https://tryhackme.com">Try Hack Me</a>, don&rsquo;t waste time and just do it! Its free&quot;</p>
+
+    <img src="/images/presec/try.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Equally important about THM, are the methods they use, you will feel like you are playing a game!
+Forget about reading a lot of boring texts! THM know how to teach any content in a fun way to learn.
+In all THM learning path you have hands-on exercises and virtual labs.</p>
+<p>If you don&rsquo;t know the way,</p>
+
+    <img src="/images/presec/mando.gif"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>In the linux and windows funtamentals, you have the ability to start a vitual machine directly in your browser and <del>play</del> study.</p>
+<p>
+    <img src="/images/presec/machine.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+
+    <img src="/images/presec/kevin.gif"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+
+    <img src="/images/presec/linux2.JPG"  class="center"  style="border-radius: 10px;"  />
+
+</p>
+<p>And finally after finish the Pre Security path, you will get a THM certificate:</p>
+
+    <img src="/images/presec/thm.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Moreover you have to choose your destiny now.
+Pre security is the best start point for beginners, after that THM have new paths for you:</p>
+
+    <img src="/images/presec/roadmap.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+
+    <img src="/images/presec/hackerman.gif"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
 ]]></content>
         </item>
         

@@ -30,6 +30,17 @@ nmap -A -v mail.businesscorp.com.br -p-Verifique o resultado e informe as port
     </item>
     
     <item>
+      <title>TryHackme - Choose your destiny</title>
+      <link>https://nmmorette.github.io/posts/2021/07/tryhackme-choose-your-destiny/</link>
+      <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-choose-your-destiny/</guid>
+      <description>Do you want to be a hacker? An IT professional? Or maybe just know about thechnology.But you don&amp;rsquo;t know where to start. Try Hack Me is definitely the right place for you!
+Especially now with the new Pre Security learn path.
+You don&amp;rsquo;t need to be an IT pro for start here. This learning path will take you by the hand and show you the basics of cyber security. You will learn about:</description>
+    </item>
+    
+    <item>
       <title>DCPT - Semana 05 - Information Gathering - Web</title>
       <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-web/</link>
       <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
@@ -104,15 +115,6 @@ Then copy the content of config.</description>
       
       <guid>https://nmmorette.github.io/about/</guid>
       <description> Cybersecurity Graduate Student MIT Network Engineering Licentiate in Computer Network Microsoft Technology Associate DCPT - In progress&amp;hellip;. CTF Player Free Surfer Nerd  </description>
-    </item>
-    
-    <item>
-      <title>Badges</title>
-      <link>https://nmmorette.github.io/badges/</link>
-      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/badges/</guid>
-      <description> Microsoft   IBM   Cisco   Try Hack Me  </description>
     </item>
     
   </channel>
