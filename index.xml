@@ -6,13 +6,25 @@
     <description>Recent content on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>TryHackme - Choose your destiny</title>
-      <link>https://nmmorette.github.io/posts/2021/07/tryhackme-choose-your-destiny/</link>
+      <title>DCPT - Semana 06 - Scanning (Externo e Interno)</title>
+      <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-06-scanning-externo-e-interno/</link>
+      <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-06-scanning-externo-e-interno/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Alvo: businesscorp.com.br  1. WebSite Vamos iniciar um scan completo do host.
+nmap -A -v businesscorp.com.br -p-Informe as portas encontradas.
+Resposta21,22,53,80,111 2. WebSite II Verifique no resultado detalhado do NMAP da porta 53, que é a porta do serviço DNS.
+Respostabind9.8.4 3.</description>
+    </item>
+    
+    <item>
+      <title>TryHackme - Pre-Security Path - Review</title>
+      <link>https://nmmorette.github.io/posts/2021/07/tryhackme-pre-security-path-review/</link>
       <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-choose-your-destiny/</guid>
+      <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-pre-security-path-review/</guid>
       <description>Do you want to be a hacker? An IT professional? Or maybe just know about thechnology.But you don&amp;rsquo;t know where to start. Try Hack Me is definitely the right place for you!
 Especially now with the new Pre Security learn path.
 You don&amp;rsquo;t need to be an IT pro for start here. This learning path will take you by the hand and show the basics of cyber security. You will learn about:</description>
@@ -75,11 +87,11 @@ Utilizando o TheHarvester Caso ainda não tenha instalado, instale o theHarveste
     </item>
     
     <item>
-      <title>THM - The Cod Caper Write Up</title>
-      <link>https://nmmorette.github.io/posts/2021/07/thm-the-cod-caper-write-up/</link>
+      <title>TryHackme - The Cod Caper - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-write-up/</link>
       <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://nmmorette.github.io/posts/2021/07/thm-the-cod-caper-write-up/</guid>
+      <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-write-up/</guid>
       <description>Task 1. Intro This is a write up for &amp;ldquo;The Cod Caper&amp;rdquo; room at Try Hack Me.
 Room&amp;rsquo;s intro note:
 Hello there my name is Pingu. I&#39;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&#39;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server.</description>
@@ -106,15 +118,6 @@ Then copy the content of config.</description>
       
       <guid>https://nmmorette.github.io/posts/2021/06/hello-world/</guid>
       <description>Created with Hugo/hello-friend-ng theme and GitHub pages.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://nmmorette.github.io/about/</link>
-      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/about/</guid>
-      <description> Cybersecurity Graduate Student MIT Network Engineering Licentiate in Computer Network Microsoft Technology Associate DCPT - In progress&amp;hellip;. CTF Player Free Surfer Nerd  </description>
     </item>
     
   </channel>

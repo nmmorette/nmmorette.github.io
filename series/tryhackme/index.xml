@@ -8,11 +8,11 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 01 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/series/tryhackme/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>THM - The Cod Caper Write Up</title>
-      <link>https://nmmorette.github.io/posts/2021/07/thm-the-cod-caper-write-up/</link>
+      <title>TryHackme - The Cod Caper - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-write-up/</link>
       <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://nmmorette.github.io/posts/2021/07/thm-the-cod-caper-write-up/</guid>
+      <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-write-up/</guid>
       <description>Task 1. Intro This is a write up for &amp;ldquo;The Cod Caper&amp;rdquo; room at Try Hack Me.
 Room&amp;rsquo;s intro note:
 Hello there my name is Pingu. I&#39;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&#39;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server.</description>

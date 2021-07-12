@@ -5,15 +5,315 @@
         <description>Recent content in Posts on Natan Maia Morette</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 09 Jul 2021 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Sat, 10 Jul 2021 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://nmmorette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>TryHackme - Choose your destiny</title>
-            <link>https://nmmorette.github.io/posts/2021/07/tryhackme-choose-your-destiny/</link>
+            <title>DCPT - Semana 06 - Scanning (Externo e Interno)</title>
+            <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-06-scanning-externo-e-interno/</link>
+            <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-06-scanning-externo-e-interno/</guid>
+            <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Alvo: businesscorp.com.br  1. WebSite Vamos iniciar um scan completo do host.
+nmap -A -v businesscorp.com.br -p-Informe as portas encontradas.
+Resposta21,22,53,80,111 2. WebSite II Verifique no resultado detalhado do NMAP da porta 53, que é a porta do serviço DNS.
+Respostabind9.8.4 3.</description>
+            <content type="html"><![CDATA[
+    <img src="/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<h5 id="o-intuito-desse-post-não-é-dar-as-respostas-e-sim-documentar-os-passos-e-ferramentas-utilizadas">O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</h5>
+
+    <img src="/images/semana06-scan/banner.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<h3 id="alvo-businesscorpcombr">Alvo: businesscorp.com.br</h3>
+<h2 id="hahahugoshortcode-s2-hbhb-1-website"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure> 1. WebSite</h2>
+
+    <img src="/images/semana06-scan/1.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Vamos iniciar um scan completo do host.</p>
+<pre><code class="language-cli" data-lang="cli">nmap -A -v businesscorp.com.br -p-
+</code></pre>
+    <img src="/images/semana06-scan/nmap.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Informe as portas encontradas.</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  21,22,53,80,111
+</details>
+<h2 id="hahahugoshortcode-s7-hbhb2-website-ii"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>2. WebSite II</h2>
+
+    <img src="/images/semana06-scan/2.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Verifique no resultado detalhado do NMAP da porta 53, que é a porta do serviço DNS.</p>
+
+    <img src="/images/semana06-scan/bind.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  bind9.8.4
+</details>
+<h2 id="hahahugoshortcode-s12-hbhb3-website-iii"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>3. WebSite III</h2>
+
+    <img src="/images/semana06-scan/3.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Verifique o resultado detalhado da porta 21 do serviço ftp, lá você encontrará a versão do serviço utilizaddo.</p>
+
+    <img src="/images/semana06-scan/ftp.png"  class="center"  style="border-radius: 8px;"  />
+
+
+
+
+
+
+<details>
+  <summary>Resposta</summary>
+  proftpd1.3.4a
+</details>
+<h2 id="hahahugoshortcode-s17-hbhb4-172300024"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>4. 172.30.0.0/24</h2>
+
+    <img src="/images/semana06-scan/4.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p><em>Desse lab em diante precisamos conectar na VPN da Desec.</em></p>
+<h3 id="alvo-172300024">Alvo: 172.30.0.0/24</h3>
+<p>Existe mais de uma forma de realizar um ping sweep, porém vamos utilizar o <a href="https://github.com/nmmorette/bash-scripts/blob/main/ping_sweep.sh">script</a> que foi ensinado em aula:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span><span style="color:#75715e">###ping_sweep.sh</span>
+<span style="color:#75715e">###---------------------------------------------------------------</span>
+<span style="color:#75715e">### Objective: Ping all hosts in the network</span>
+<span style="color:#75715e">###---------------------------------------------------------------</span>
+<span style="color:#75715e">### Author: Natan Morette</span>
+<span style="color:#75715e">###---------------------------------------------------------------</span>
+
+
+
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">]</span>
+<span style="color:#66d9ef">then</span>
+	echo <span style="color:#e6db74">&#34;PING SWEEP&#34;</span>
+	echo <span style="color:#e6db74">&#34;Use mode : </span>$0<span style="color:#e6db74"> REDE&#34;</span>
+	echo <span style="color:#e6db74">&#34;Example: </span>$0<span style="color:#e6db74"> 192.168.0&#34;</span>
+<span style="color:#66d9ef">else</span>
+	<span style="color:#66d9ef">for</span> host in <span style="color:#f92672">{</span>1..254<span style="color:#f92672">}</span>;
+	<span style="color:#66d9ef">do</span>
+		ping -c <span style="color:#ae81ff">1</span> $1.$host | grep <span style="color:#e6db74">&#34;64 bytes&#34;</span> | cut -d <span style="color:#e6db74">&#34;:&#34;</span> -f <span style="color:#ae81ff">1</span> | cut -d <span style="color:#e6db74">&#34; &#34;</span> -f 4;
+	<span style="color:#66d9ef">done</span>
+<span style="color:#66d9ef">fi</span>
+
+</code></pre></div><p>Execução:</p>
+<p><code>./ping_sweep.sh 172.30.0</code></p>
+<p>Outra forma de realizar esse procedimento é com o próprio <code>nmap</code>:</p>
+<p><code>nmap -sP 172.30.0.1-255</code></p>
+<p>A flag -sP informa para o <code>nmap</code> realizar somente um ping scan e verificar se os hosts estão up.</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  vinte
+</details>
+<h2 id="hahahugoshortcode-s21-hbhb5-172300024"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>5. 172.30.0.0/24</h2>
+
+    <img src="/images/semana06-scan/5.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Vamos realizar um scan Arp Ping, é um método muito eficiênte para descoberta de hosts em uma rede. O Arp Ping funciona enviando uma serie de requisições ARP para o ip dentro do range e descobre os hosts ativos. ARP ping uma forma rápida e bem confiável de verificar todos os hosts ativos. Diferente do uso da flag -sP onde os hosts que não respondem ao protocolo ICMP são tratados como hosts down.</p>
+<pre><code class="language-cli" data-lang="cli">nmap -sn -PR 172.30.0.0/24
+</code></pre>
+    <img src="/images/semana06-scan/scan.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Outra forma é utilizando a flag para TCP SYN Stealth, além de retornar todos os hosts up de forma rápida, também retorna as postas abertas.</p>
+<pre><code class="language-cli" data-lang="cli">nmap -sS 172.30.0.0/24
+</code></pre>
+    <img src="/images/semana06-scan/tcp.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Você também poderia realizar um scan completo com o nmap em toda rede, porém devido a quantidade de hosts e portas esse scan provavelmente vai demorar bastante.</p>
+<pre><code class="language-cli" data-lang="cli">nmap -A -v 172.30.0.0/24
+</code></pre>
+    <img src="/images/semana06-scan/5.gif"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  vinteetres
+</details>
+<h2 id="hahahugoshortcode-s28-hbhb6-172300024"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>6. 172.30.0.0/24</h2>
+
+    <img src="/images/semana06-scan/6.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Após descobrir todos os hosts ativos, vamos fazer um scan completo para descobrir os serviços dos hosts. 
+Porém vamos rodar o <code>nmap</code> somente com os hosts que descobrimos anteriormente, assim não perderemos tempo.
+Salve todos os hosts encontrados em um arquivo <code>.txt</code>.</p>
+<pre><code class="language-cli" data-lang="cli">nmap -v -A  -iL ip
+</code></pre><p>Flags:</p>
+<p><code>v</code> = modo detalhado, se você é ansioso como eu, rode com -v para verificar o status em tempo real.
+<code>-A</code> = determina versão do SO e serviço 
+<code>-iL</code> = arquivo com os hosts.</p>
+<p>Busque nos resultados o IP que corresponde ao SO windows. 
+Se preferir exportar os resultados para melhor visualização utilize a flag <code>-aA</code>.</p>
+
+    <img src="/images/semana06-scan/windows.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  172.30.0.103
+</details>
+<h2 id="hahahugoshortcode-s33-hbhb7-172300024"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>7. 172.30.0.0/24</h2>
+<p>O scan anterior já identificou as portas abertas no host indicado, porém com as flags utilizadas o <code>nmap</code> faz o scan somente das portas mais comun, logo podemos perder alguma porta.
+Então vamos fazer o  scan completo nesse host:</p>
+<pre><code class="language-cli" data-lang="cli">nmap -v -A  172.30.0.103 -p-
+</code></pre><p>Vamos encontrar 6 portas abertas nesse host.</p>
+
+    <img src="/images/semana06-scan/7.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Com o resultado do scan anterior, temos as portas abertas desse host.</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  135,139,445,2810,5985,8080
+</details>
+<h2 id="hahahugoshortcode-s37-hbhb8-172300024"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>8. 172.30.0.0/24</h2>
+
+    <img src="/images/semana06-scan/8.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>No scan que rodamos na tarefa 6, vamos buscar pelo host que esteja executando um serviço de email.</p>
+
+    <img src="/images/semana06-scan/128.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  172.30.0.128
+</details>
+<h2 id="hahahugoshortcode-s42-hbhb9172300024"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>9.172.30.0.0/24</h2>
+
+    <img src="/images/semana06-scan/9.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Utilizando o mesmo report do host anterior, podemos indentificar o serviço de e-mail</p>
+
+    <img src="/images/semana06-scan/128.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  postfix
+</details>
+<h2 id="hahahugoshortcode-s47-hbhb10-172300024"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>10. 172.30.0.0/24</h2>
+
+    <img src="/images/semana06-scan/10.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Essa informação também será encontrada junto com as respostas anteriores.</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  ubuntu
+</details>
+<h2 id="hahahugoshortcode-s51-hbhb11-172300024"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>11. 172.30.0.0./24</h2>
+
+    <img src="/images/semana06-scan/11.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Utilizando o resport completo feito no lab6, procure pelos hosts executando o MySql.</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  172.30.0.20,172.30.0.104
+</details>
+<h2 id="hahahugoshortcode-s55-hbhb12-172300024"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>12. 172.30.0.0/24</h2>
+
+    <img src="/images/semana06-scan/12.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Utilizando o resport completo feito no lab6, procure pelo host executando o Webadmin.</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  172.30.0.15
+</details>
+]]></content>
+        </item>
+        
+        <item>
+            <title>TryHackme - Pre-Security Path - Review</title>
+            <link>https://nmmorette.github.io/posts/2021/07/tryhackme-pre-security-path-review/</link>
             <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
             
-            <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-choose-your-destiny/</guid>
+            <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-pre-security-path-review/</guid>
             <description>Do you want to be a hacker? An IT professional? Or maybe just know about thechnology.But you don&amp;rsquo;t know where to start. Try Hack Me is definitely the right place for you!
 Especially now with the new Pre Security learn path.
 You don&amp;rsquo;t need to be an IT pro for start here. This learning path will take you by the hand and show the basics of cyber security. You will learn about:</description>
@@ -72,7 +372,7 @@ In all THM learning path you have hands-on exercises and virtual labs.</p>
     <img src="/images/presec/linux2.JPG"  class="center"  style="border-radius: 10px;"  />
 
 </p>
-<p>And finally after finish the Pre Security path, you will get a THM certificate:</p>
+<p>And finally after finish the Pre-Security path, you will get a THM certificate:</p>
 
     <img src="/images/presec/thm.png"  class="center"  style="border-radius: 10px;"  />
 
@@ -1319,11 +1619,11 @@ Uma delas é a reposta que precisamos.</p>
         </item>
         
         <item>
-            <title>THM - The Cod Caper Write Up</title>
-            <link>https://nmmorette.github.io/posts/2021/07/thm-the-cod-caper-write-up/</link>
+            <title>TryHackme - The Cod Caper - Write Up</title>
+            <link>https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-write-up/</link>
             <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
             
-            <guid>https://nmmorette.github.io/posts/2021/07/thm-the-cod-caper-write-up/</guid>
+            <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-write-up/</guid>
             <description>Task 1. Intro This is a write up for &amp;ldquo;The Cod Caper&amp;rdquo; room at Try Hack Me.
 Room&amp;rsquo;s intro note:
 Hello there my name is Pingu. I&#39;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&#39;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server.</description>
