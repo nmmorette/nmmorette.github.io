@@ -142,8 +142,8 @@ nmap -A -v businesscorp.com.br -p-Informe as portas encontradas.
     <img src="/images/semana06-scan/5.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Vamos realizar um scan Arp Ping, é um método muito eficiênte para descoberta de hosts em uma rede. O Arp Ping funciona enviando uma serie de requisições ARP para o ip dentro do range e descobre os hosts ativos. ARP ping uma forma rápida e bem confiável de verificar todos os hosts ativos. Diferente do uso da flag -sP onde os hosts que não respondem ao protocolo ICMP são tratados como hosts down.</p>
-<pre><code class="language-cli" data-lang="cli">nmap -sn -PR 172.30.0.0/24
+<p>Vamor realizar um scan com <code>nmap</code> utiliznado a flag <code>-sn</code>, assim vamos descobrir os hosts que estão ativos na rede, mesmo os que não respondem a ICMP.</p>
+<pre><code class="language-cli" data-lang="cli">nmap -sn 172.30.0.0/24
 </code></pre>
     <img src="/images/semana06-scan/scan.png"  class="center"  style="border-radius: 10px;"  />
 
@@ -154,12 +154,6 @@ nmap -A -v businesscorp.com.br -p-Informe as portas encontradas.
     <img src="/images/semana06-scan/tcp.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Você também poderia realizar um scan completo com o nmap em toda rede, porém devido a quantidade de hosts e portas esse scan provavelmente vai demorar bastante.</p>
-<pre><code class="language-cli" data-lang="cli">nmap -A -v 172.30.0.0/24
-</code></pre>
-    <img src="/images/semana06-scan/5.gif"  class="center"  style="border-radius: 10px;"  />
-
-
 
 
 <br>
@@ -168,7 +162,7 @@ nmap -A -v businesscorp.com.br -p-Informe as portas encontradas.
   <summary>Resposta</summary>
   vinteetres
 </details>
-<h2 id="hahahugoshortcode-s28-hbhb6-172300024"><figure>
+<h2 id="hahahugoshortcode-s27-hbhb6-172300024"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>6. 172.30.0.0/24</h2>
 
@@ -197,7 +191,7 @@ Se preferir exportar os resultados para melhor visualização utilize a flag <co
   <summary>Resposta</summary>
   172.30.0.103
 </details>
-<h2 id="hahahugoshortcode-s33-hbhb7-172300024"><figure>
+<h2 id="hahahugoshortcode-s32-hbhb7-172300024"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>7. 172.30.0.0/24</h2>
 <p>O scan anterior já identificou as portas abertas no host indicado, porém com as flags utilizadas o <code>nmap</code> faz o scan somente das portas mais comun, logo podemos perder alguma porta.
@@ -217,7 +211,7 @@ Então vamos fazer o  scan completo nesse host:</p>
   <summary>Resposta</summary>
   135,139,445,2810,5985,8080
 </details>
-<h2 id="hahahugoshortcode-s37-hbhb8-172300024"><figure>
+<h2 id="hahahugoshortcode-s36-hbhb8-172300024"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>8. 172.30.0.0/24</h2>
 
@@ -237,7 +231,7 @@ Então vamos fazer o  scan completo nesse host:</p>
   <summary>Resposta</summary>
   172.30.0.128
 </details>
-<h2 id="hahahugoshortcode-s42-hbhb9172300024"><figure>
+<h2 id="hahahugoshortcode-s41-hbhb9172300024"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>9.172.30.0.0/24</h2>
 
@@ -257,7 +251,7 @@ Então vamos fazer o  scan completo nesse host:</p>
   <summary>Resposta</summary>
   postfix
 </details>
-<h2 id="hahahugoshortcode-s47-hbhb10-172300024"><figure>
+<h2 id="hahahugoshortcode-s46-hbhb10-172300024"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>10. 172.30.0.0/24</h2>
 
@@ -273,7 +267,7 @@ Então vamos fazer o  scan completo nesse host:</p>
   <summary>Resposta</summary>
   ubuntu
 </details>
-<h2 id="hahahugoshortcode-s51-hbhb11-172300024"><figure>
+<h2 id="hahahugoshortcode-s50-hbhb11-172300024"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>11. 172.30.0.0./24</h2>
 
@@ -289,7 +283,7 @@ Então vamos fazer o  scan completo nesse host:</p>
   <summary>Resposta</summary>
   172.30.0.20,172.30.0.104
 </details>
-<h2 id="hahahugoshortcode-s55-hbhb12-172300024"><figure>
+<h2 id="hahahugoshortcode-s54-hbhb12-172300024"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>12. 172.30.0.0/24</h2>
 
