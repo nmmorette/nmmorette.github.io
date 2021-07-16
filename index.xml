@@ -6,7 +6,19 @@
     <description>Recent content on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 11 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DCPT - Semana 06 - Mecanismos de Defesa</title>
+      <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-06-mecanismos-de-defesa/</link>
+      <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-06-mecanismos-de-defesa/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Conecte na vpn da Desec para realizar os Lab 1 e 2.
+ 1. FW Iniciando o primeiro scan:
+nmap -v -sS -Pn 172.16.1.59 Com a porta 80 fechada, podemos deduzir que há um firewall bloqueando a rede.
+Vamos tentar um hping3 em uma porta conhecida para verificar o resultado:</description>
+    </item>
+    
     <item>
       <title>DCPT - Semana 06 - Scanning (Externo e Interno)</title>
       <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-06-scanning-externo-e-interno/</link>
@@ -109,15 +121,6 @@ Step 2. Configure your Git Hub Pages You need a github account for this step.
 Step 3 Choose a theme In Hugo theme pages choose your favorite theme and download to your computer.
 Unzip the files into the hugo default theme folder: ./Sites/YOURSITE/Themes
 Then copy the content of config.</description>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>https://nmmorette.github.io/posts/2021/06/hello-world/</link>
-      <pubDate>Fri, 25 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/posts/2021/06/hello-world/</guid>
-      <description>Created with Hugo/hello-friend-ng theme and GitHub pages.</description>
     </item>
     
   </channel>

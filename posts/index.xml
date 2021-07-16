@@ -5,8 +5,225 @@
         <description>Recent content in Posts on Natan Maia Morette</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 11 Jul 2021 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 15 Jul 2021 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://nmmorette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>DCPT - Semana 06 - Mecanismos de Defesa</title>
+            <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-06-mecanismos-de-defesa/</link>
+            <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-06-mecanismos-de-defesa/</guid>
+            <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Conecte na vpn da Desec para realizar os Lab 1 e 2.
+ 1. FW Iniciando o primeiro scan:
+nmap -v -sS -Pn 172.16.1.59 Com a porta 80 fechada, podemos deduzir que há um firewall bloqueando a rede.
+Vamos tentar um hping3 em uma porta conhecida para verificar o resultado:</description>
+            <content type="html"><![CDATA[
+    <img src="/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<h5 id="o-intuito-desse-post-não-é-dar-as-respostas-e-sim-documentar-os-passos-e-ferramentas-utilizadas">O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</h5>
+
+    <img src="/images/semana06-defesa/banner.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Conecte na vpn da Desec para realizar os Lab 1 e 2.</p>
+<h2 id="hahahugoshortcode-s2-hbhb-1-fw"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure> 1. FW</h2>
+<p>Iniciando o primeiro scan:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">-</span>v <span style="color:#f92672">-</span>sS <span style="color:#f92672">-</span>Pn <span style="color:#ae81ff">172.16.1.59</span>
+</code></pre></div><p>Com a porta 80 fechada, podemos deduzir que há um firewall bloqueando a rede.</p>
+<p>Vamos tentar um <code>hping3</code> em uma porta conhecida para verificar o resultado:</p>
+
+    <img src="/images/semana06-defesa/no.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Sem resposta, logo podemos deduzir que um firewall está bloqueando a conexão.</p>
+<p>Vamos com nmap novamente e vamos tentar um scan nas 20 top ports, porém alterando a porta de origem para uma aleátoria.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">-</span>v <span style="color:#f92672">-</span>sS <span style="color:#f92672">-</span>Pn <span style="color:#f92672">--</span>source<span style="color:#f92672">-</span>port <span style="color:#ae81ff">21</span> <span style="color:#f92672">--</span>top<span style="color:#f92672">-</span>ports<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>  <span style="color:#ae81ff">172.16.1.59</span>
+</code></pre></div><p>Tivemos um resultado diferente e podemos notar várias portas filtradas.</p>
+
+    <img src="/images/semana06-defesa/scannmap.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Agora é tentativa e erro, de acordo com as portas encontradas, vá alterando a porta de origem até encontrar uma que vai dar bypass no firewall. Com ela você vai encontrar outra porta aberta além da porta 22.</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  443
+</details>
+<h2 id="hahahugoshortcode-s7-hbhb2-fw"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>2. FW</h2>
+
+    <img src="/images/semana06-defesa/2.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Agora que temos uma porta que faz um bypass no firewall, vamos conectar na outra porta aberta.</p>
+
+    <img src="/images/semana06-defesa/http.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Após conectar na porta, basta dar um GET / HTTP/1.0 para verificar o conteúdo e encontrar a Key.</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  120537778998
+</details>
+<h2 id="hahahugoshortcode-s12-hbhb3-intranet"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>3. Intranet</h2>
+
+    <img src="/images/semana06-defesa/1.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<h3 id="alvo-intranetbusinesscorpcombr">Alvo: intranet.businesscorp.com.br</h3>
+<h3 id="ip-3759174228">IP: 37.59.174.228</h3>
+
+    <img src="/images/semana06-defesa/host.png"  class="center"  style="border-radius: 8px;"  />
+
+
+<p>Como se trata de um alvo externo, podemos utilizar o <strong><a href="https://www.shodan.io">Shodan</a></strong> para conseguir as informações.</p>
+
+    <img src="/images/semana06-defesa/shodan.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Porém, vamos também utilizar o <code>nmap</code>.
+No enunciado já foi informado para tomar cuidado com um possível IDS, ou seja técnicas de portscan podem estar bloqueadas.</p>
+<p>Tentar um scan em todas as 65535 portas provavelmente levará seu IP para a block list do host. 
+Então nesse caso a ideia é tentar fazer menos ruído possível.</p>
+<p>Minha estratégia foi iniciar um scan com as top ports e aumentar em cada tentativa:</p>
+<p>Primeira tentativa:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">-</span>v <span style="color:#f92672">-</span>D RND:<span style="color:#ae81ff">20</span> <span style="color:#f92672">--</span>top<span style="color:#f92672">-</span>ports<span style="color:#f92672">=</span><span style="color:#ae81ff">25</span> <span style="color:#f92672">--</span>open <span style="color:#f92672">-</span>T2 <span style="color:#ae81ff">37.59.174.228</span>
+</code></pre></div>
+    <img src="/images/semana06-defesa/tentativa1.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Pegamos somente uma porta aberta, vamos continuar aumentando as top ports, agora com 100</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">-</span>v <span style="color:#f92672">-</span>D RND:<span style="color:#ae81ff">20</span> <span style="color:#f92672">--</span>top<span style="color:#f92672">-</span>ports<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span> <span style="color:#f92672">--</span>open <span style="color:#f92672">-</span>T2 <span style="color:#ae81ff">37.59.174.228</span>
+</code></pre></div><p>Dessa vez encontramos 2 portas:</p>
+
+    <img src="/images/semana06-defesa/tentativa2.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Repita o processo aumentando as top ports, pode aumentar de 100 em 100.</p>
+
+    <img src="/images/semana06-defesa/final.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>As flags chaves aqui são:</p>
+<p><code>RND</code> = 20 múltiplas conexões aleatórias.</p>
+<p><code>-T2</code> = modo mais lento para não causar tanto ruído no host e ser detectado pelo IDS.</p>
+
+
+
+
+<details>
+  <summary>Resposta</summary>
+  80,2222,10000
+</details>
+<h2 id="hahahugoshortcode-s21-hbhb4-intranet"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>4. Intranet</h2>
+
+    <img src="/images/semana06-defesa/4.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Agora que temos as portas abertas, podemos seguir a mesma estratégia de scan anterior, porém acrescentando mais opções ao <code>nmap</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">-</span>v <span style="color:#f92672">-</span>D RND:<span style="color:#ae81ff">20</span> <span style="color:#f92672">-</span>p <span style="color:#ae81ff">80</span>,<span style="color:#ae81ff">2222</span>,<span style="color:#ae81ff">10000</span> <span style="color:#f92672">-</span>Pn <span style="color:#f92672">-</span>T2 <span style="color:#f92672">-</span>sSV <span style="color:#ae81ff">37.59.174.228</span>
+</code></pre></div>
+    <img src="/images/semana06-defesa/version.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Na coluna version encontraremos a informação do sistema Operacional</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  debian4
+</details>
+<h2 id="hahahugoshortcode-s26-hbhb5-intranet"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>5. Intranet</h2>
+
+    <img src="/images/semana06-defesa/5.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Ainda com o resultado anterior, basta verificar a coluna &ldquo;Version&rdquo; da porta 80.</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  Apache/2.2.22
+</details>
+<h2 id="hahahugoshortcode-s30-hbhb6-intranet"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>6. Intranet</h2>
+
+    <img src="/images/semana06-defesa/6.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Ainda com o resultado anterior, basta verificar a coluna &ldquo;Version&rdquo; da porta 2222.</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  openssh6.0p1
+</details>
+<h2 id="hahahugoshortcode-s34-hbhb7-intranet"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>7. Intranet</h2>
+
+    <img src="/images/semana06-defesa/7.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Ainda com o resultado anterior, basta verificar a coluna &ldquo;Version&rdquo; da porta 10000.</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  miniserv/0.01
+</details>
+<h2 id="hahahugoshortcode-s38-hbhb8-intranet"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>8. Intranet</h2>
+
+    <img src="/images/semana06-defesa/8.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Para resposder essa questão precisamos rodar o nmap novamente com um script para descobrir os métodos de autenticação do ssh.</p>
+<p>Seguiremos o mesmo padrão dos scripts anteriores para evitar detecção:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">-</span>v <span style="color:#f92672">-</span>D RND:<span style="color:#ae81ff">20</span> <span style="color:#f92672">-</span>p <span style="color:#ae81ff">2222</span> <span style="color:#f92672">-</span>Pn <span style="color:#f92672">-</span>T2 <span style="color:#f92672">-</span>sSV <span style="color:#f92672">--</span>script ssh<span style="color:#f92672">-</span>auth<span style="color:#f92672">-</span>methods  <span style="color:#ae81ff">37.59.174.228</span>
+</code></pre></div><p>A flag <code>-script ssh-auth-methods</code> chama o script padrão do nmap para descoberta de métodos de autenticação do ssh.</p>
+
+    <img src="/images/semana06-defesa/autenticacao.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  publickey,password
+</details>
+]]></content>
+        </item>
         
         <item>
             <title>DCPT - Semana 06 - Scanning (Externo e Interno)</title>
@@ -148,7 +365,7 @@ nmap -A -v businesscorp.com.br -p-Informe as portas encontradas.
     <img src="/images/semana06-scan/scan.png"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Outra forma é utilizando a flag para TCP SYN Stealth, além de retornar todos os hosts up de forma rápida, também retorna as postas abertas.</p>
+<p>Outra forma é utilizando a flag para TCP SYN, além de retornar todos os hosts up de forma rápida, também retorna as postas abertas.</p>
 <pre><code class="language-cli" data-lang="cli">nmap -sS 172.30.0.0/24
 </code></pre>
     <img src="/images/semana06-scan/tcp.JPG"  class="center"  style="border-radius: 10px;"  />
