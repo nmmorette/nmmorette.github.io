@@ -6,7 +6,19 @@
     <description>Recent content in desec on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/desec/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/desec/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DCPT - Semana - 07 Enumeration</title>
+      <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-07-enumeration/</link>
+      <pubDate>Tue, 20 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-07-enumeration/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.  1.Database Vamos iniciar com um scan do range informado:
+nmap -sS 172.16.1.1-100 Basta verificar o host que está com a porta 3306 ativa.
+Resposta172.16.1.33 2.Database Vamos conectar ao servidor com mysql utilizando o usuário root sem senha:
+mysql -h 172.16.1.33 -u root No banner do servidor é possível encontar a versão.</description>
+    </item>
+    
     <item>
       <title>DCPT - Semana 06 - Mecanismos de Defesa</title>
       <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-06-mecanismos-de-defesa/</link>

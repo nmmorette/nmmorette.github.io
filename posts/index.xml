@@ -5,8 +5,477 @@
         <description>Recent content in Posts on Natan Maia Morette</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 15 Jul 2021 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Tue, 20 Jul 2021 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://nmmorette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>DCPT - Semana - 07 Enumeration</title>
+            <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-07-enumeration/</link>
+            <pubDate>Tue, 20 Jul 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-07-enumeration/</guid>
+            <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.  1.Database Vamos iniciar com um scan do range informado:
+nmap -sS 172.16.1.1-100 Basta verificar o host que está com a porta 3306 ativa.
+Resposta172.16.1.33 2.Database Vamos conectar ao servidor com mysql utilizando o usuário root sem senha:
+mysql -h 172.16.1.33 -u root No banner do servidor é possível encontar a versão.</description>
+            <content type="html"><![CDATA[
+    <img src="/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<h5 id="o-intuito-desse-post-não-é-dar-as-respostas-e-sim-documentar-os-passos-e-ferramentas-utilizadas">O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</h5>
+
+    <img src="/images/semana7-enumeration/banner.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<h2 id="hahahugoshortcode-s2-hbhb-1database"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure> 1.Database</h2>
+
+    <img src="/images/semana7-enumeration/1.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Vamos iniciar com um scan do range informado:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">-</span>sS <span style="color:#ae81ff">172.16.1.1</span><span style="color:#f92672">-</span><span style="color:#ae81ff">100</span>
+</code></pre></div>
+    <img src="/images/semana7-enumeration/nmap.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Basta verificar o host que está com a porta 3306 ativa.</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  172.16.1.33
+</details>
+<h2 id="hahahugoshortcode-s7-hbhb2database"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>2.Database</h2>
+
+    <img src="/images/semana7-enumeration/2.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Vamos conectar ao servidor com <code>mysql</code> utilizando o usuário root sem senha:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">mysql <span style="color:#f92672">-</span>h <span style="color:#ae81ff">172.16.1.33</span> <span style="color:#f92672">-</span>u root
+</code></pre></div>
+    <img src="/images/semana7-enumeration/sql.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>No banner do servidor é possível encontar a versão.</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  5.1.73-1
+</details>
+<h2 id="hahahugoshortcode-s12-hbhb3database"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>3.Database</h2>
+
+    <img src="/images/semana7-enumeration/3.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Nesse lab vamos precisar interagir com o <code>mysql</code>.</p>
+
+    <img src="/images/semana7-enumeration/enum.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  662102538896
+</details>
+<h2 id="hahahugoshortcode-s17-hbhb4ssh"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>4.SSH</h2>
+
+    <img src="/images/semana7-enumeration/4.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Vamos rodar o <code>nmap</code>nesse host com o script para reconhecer os métodos de autenticação do <code>ssh</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">-</span>v <span style="color:#f92672">-</span>p <span style="color:#ae81ff">22</span> <span style="color:#f92672">-</span>sSV <span style="color:#f92672">--</span>script ssh<span style="color:#f92672">-</span>auth<span style="color:#f92672">-</span>methods <span style="color:#ae81ff">172.16.1.33</span>
+</code></pre></div>
+    <img src="/images/semana7-enumeration/ssh.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  publickey,password
+</details>
+<h2 id="hahahugoshortcode-s22-hbhb5nfs---parte-i"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>5.NFS - Parte I</h2>
+
+    <img src="/images/semana7-enumeration/5.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>O enunciado já disse qual host tem o NFS, então vamos listar os compartilhamentos nele:</p>
+
+    <img src="/images/semana7-enumeration/nfs.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Agora que temos o compartilhamento, vamos montar em nossa máquina e acessar para conseguir a key:</p>
+
+    <img src="/images/semana7-enumeration/nfs2.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  284857642780
+</details>
+<h2 id="hahahugoshortcode-s28-hbhb6nfs---parte-ii"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>6.NFS - Parte II</h2>
+
+    <img src="/images/semana7-enumeration/6.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Primeiro precisamos criar uma chave em nosso sistema.</p>
+
+    <img src="/images/semana7-enumeration/chave.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Depois disso, camos copiar o conteúdo da chave criada:</p>
+
+    <img src="/images/semana7-enumeration/chave2.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Vanos colocar esse conteúdo dentro da pasta <code>.ssh/authorized_keys</code> na máquina de destino.</p>
+<p>Agora com a informação inserida, podemos fazer a conexão, mas antes vamos iniciar o ssh-agent e adicionar a chave com o comando ssh-add.</p>
+
+    <img src="/images/semana7-enumeration/chave3.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Executando a conexão:</p>
+
+    <img src="/images/semana7-enumeration/chave4.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Busque por arquivos onde possa encontrar a key: pasta de usuários, pasta do root etc&hellip;</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  999675754423
+</details>
+<h2 id="hahahugoshortcode-s36-hbhb7nfs-ii"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>7.NFS II</h2>
+
+    <img src="/images/semana7-enumeration/7.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Para conseguir essa informação vamos  utilizar o <code>rpcinfo</code>:</p>
+
+    <img src="/images/semana7-enumeration/rpcinfo.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  3,4
+</details>
+<h2 id="hahahugoshortcode-s41-hbhb8nfs-ii"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>8.NFS II</h2>
+
+    <img src="/images/semana7-enumeration/8.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Basta executar o <code>showmount</code> para visualizar os compartilhamentos:</p>
+
+    <img src="/images/semana7-enumeration/showmount.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  /opt/comp
+</details>
+<h2 id="hahahugoshortcode-s46-hbhb9nfs-ii"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>9.NFS II</h2>
+
+    <img src="/images/semana7-enumeration/9.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Vamos montar o diretório:</p>
+
+    <img src="/images/semana7-enumeration/montando.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Depois de montar vamos acessar o local de montagem e verificar a key.</p>
+
+    <img src="/images/semana7-enumeration/chave8.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  fd9e513cc470b0e57fa3c36e41b62bb4
+</details>
+<h2 id="hahahugoshortcode-s52-hbhb10ftp"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>10.FTP</h2>
+
+    <img src="/images/semana7-enumeration/10.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Vamos voltar ao scan inical para verificar as portas desse host:</p>
+
+    <img src="/images/semana7-enumeration/ftp.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>O ftp está configurado na porta 2121, vamos conectar direto no servidor:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">ftp <span style="color:#ae81ff">172.16.1.31</span> <span style="color:#ae81ff">2121</span>
+</code></pre></div><p>Depois de conectar, vamos tentar autenticação com usuário anonymous e senha anonymous:</p>
+
+    <img src="/images/semana7-enumeration/anom.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Após autenticar vamos listar os arquivos e procurar algum arquivo que possa estar a key.</p>
+
+    <img src="/images/semana7-enumeration/keyvlab10.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Abra o arquivo para encontrar a key.</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  257501915537
+</details>
+<h2 id="hahahugoshortcode-s59-hbhb11ftp---parte-i"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>11.FTP - Parte I</h2>
+
+    <img src="/images/semana7-enumeration/11.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Esse host também está com o <code>ftp</code> configurado na porta 2121, vamos conectar e verificar a informação solicitada no banner:</p>
+
+    <img src="/images/semana7-enumeration/proftp.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  ProFTPD1.3.5
+</details>
+<h2 id="hahahugoshortcode-s64-hbhb12-ftp---parte-ii"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>12. FTP - Parte II</h2>
+
+    <img src="/images/semana7-enumeration/12.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Com a conexão estabelecida, vamos verificar os arquivos com <code>dir</code>.</p>
+
+    <img src="/images/semana7-enumeration/dir.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Um dos arquivos é a key.</p>
+<p>Para fazer o download do arquivo, utilize o comando <code>get</code>.</p>
+
+    <img src="/images/semana7-enumeration/get.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Abra o arquivo e veja a key para pontuar.</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  ce6cfad1ff11b600bef6da1aa844996a
+</details>
+<h2 id="hahahugoshortcode-s70-hbhb13smb"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>13.SMB</h2>
+
+    <img src="/images/semana7-enumeration/13.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Vamos rodar o <code>nmap</code> com o script <code>smb-os-discovery</code> para termos mais informações desse host:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">--</span>script<span style="color:#f92672">=</span>smb<span style="color:#f92672">-</span>os<span style="color:#f92672">-</span>discovery <span style="color:#ae81ff">172.16.1.14</span>
+</code></pre></div>
+    <img src="/images/semana7-enumeration/smb.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Sabemos que é um server windows, e que provavelmente o nome de usuário é &ldquo;administrator&rdquo;, além disso também conseguimos o nome do host &ldquo;wks01&rdquo;, vamos utilizar o smbclient para enumerar:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"> smbclient <span style="color:#f92672">-</span>L <span style="color:#75715e">//172.16.1.4/ -N -U &#34;administrator&#34; -W &#34;wks01&#34; --option=&#39;client min protocol=NT1&#39;
+</span></code></pre></div>
+    <img src="/images/semana7-enumeration/docs.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Agora vamos conectar no compartilhamento &ldquo;_DOCS&rdquo;:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">smbclient <span style="color:#75715e">//172.16.1.4/_DOCS -N -U &#34;administrator&#34; -W &#34;wks01&#34; --option=&#39;client min protocol=NT1&#39;
+</span></code></pre></div><p>Depois de conectar vamos listar os arquivos do diretório com <code>ls</code> e fazer o download do arquivo com <code>get</code>:</p>
+
+    <img src="/images/semana7-enumeration/dsmbclient.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Depois de baixar o arquivo, basta visualizar para conseguir a key:</p>
+
+    <img src="/images/semana7-enumeration/catkey.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  181831987455
+</details>
+<h2 id="hahahugoshortcode-s78-hbhb14snmp"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>14.SNMP</h2>
+
+    <img src="/images/semana7-enumeration/14.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Vamos buscar pela porta do SNMP nesse host:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">-</span>sVU <span style="color:#f92672">-</span>p161 <span style="color:#f92672">-</span>Pn <span style="color:#ae81ff">172.16.1.4</span>
+</code></pre></div>
+    <img src="/images/semana7-enumeration/snmp.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Agora temos o nome da communite do SNMP, vamos conectar e buscar por informações:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">snmp<span style="color:#f92672">-</span>check <span style="color:#ae81ff">172.16.1.4</span> <span style="color:#f92672">-</span>c public
+</code></pre></div>
+    <img src="/images/semana7-enumeration/snmp2.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  298700191820
+</details>
+<h2 id="hahahugoshortcode-s84-hbhb15snmp-ii"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>15.SNMP II</h2>
+
+    <img src="/images/semana7-enumeration/14.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Nesse server o método acima não vai retornar o nome da communite, logo vamos fazer um brute force, utilizando o <code>onesixtyone</code>, para descobrir o nome. Utilizando uma <a href="https://github.com/nmmorette/wordlist/blob/main/snmp.txt">wordlist</a> que montei.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">onesixtyone <span style="color:#f92672">-</span>c NOMEDAWORDLIST.txt <span style="color:#ae81ff">172.30.0.103</span>
+</code></pre></div>
+    <img src="/images/semana7-enumeration/one.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  Secret
+</details>
+<h2 id="hahahugoshortcode-s89-hbhb16snmp-ii"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>16.SNMP II</h2>
+
+    <img src="/images/semana7-enumeration/14.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Utilizando o <code>snmp-check</code> vamos encontrar as respostas dos próximos labs:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">snmp<span style="color:#f92672">-</span>check <span style="color:#ae81ff">172.30.0.103</span> <span style="color:#f92672">-</span>c NOMEDACOMMUNITE
+</code></pre></div>
+    <img src="/images/semana7-enumeration/snmp3.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>No setor [*] System Information, vamos encontrar o nome do host.</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  srv01
+</details>
+<h2 id="hahahugoshortcode-s94-hbhb17snmp-ii"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>17.SNMP II</h2>
+<p>
+    <img src="/images/semana7-enumeration/14.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+</p>
+
+    <img src="/images/semana7-enumeration/snmp4.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  ade760c5657314c336e121a6ee42ea1e
+</details>
+<h2 id="hahahugoshortcode-s100-hbhb18snmp-ii"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>18.SNMP II</h2>
+<p>
+    <img src="/images/semana7-enumeration/14.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+
+    <img src="/images/semana7-enumeration/snmp5.png"  class="center"  style="border-radius: 10px;"  />
+
+</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  ADM01,CPD01,DEV01,USER01
+</details>
+]]></content>
+        </item>
         
         <item>
             <title>DCPT - Semana 06 - Mecanismos de Defesa</title>
