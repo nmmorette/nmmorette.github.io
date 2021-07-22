@@ -9,7 +9,7 @@
         <atom:link href="https://nmmorette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>DCPT - Semana - 07 Enumeration</title>
+            <title>DCPT - Semana 07 - Enumeration</title>
             <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-07-enumeration/</link>
             <pubDate>Tue, 20 Jul 2021 00:00:00 +0000</pubDate>
             
@@ -342,7 +342,7 @@ mysql -h 172.16.1.33 -u root No banner do servidor é possível encontar a vers
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">smbclient <span style="color:#75715e">//172.16.1.4/_DOCS -N -U &#34;administrator&#34; -W &#34;wks01&#34; --option=&#39;client min protocol=NT1&#39;
 </span></code></pre></div><p>Depois de conectar vamos listar os arquivos do diretório com <code>ls</code> e fazer o download do arquivo com <code>get</code>:</p>
 
-    <img src="/images/semana7-enumeration/dsmbclient.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana7-enumeration/smbclient.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Depois de baixar o arquivo, basta visualizar para conseguir a key:</p>
@@ -389,7 +389,7 @@ mysql -h 172.16.1.33 -u root No banner do servidor é possível encontar a vers
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>15.SNMP II</h2>
 
-    <img src="/images/semana7-enumeration/14.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana7-enumeration/15.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Nesse server o método acima não vai retornar o nome da communite, logo vamos fazer um brute force, utilizando o <code>onesixtyone</code>, para descobrir o nome. Utilizando uma <a href="https://github.com/nmmorette/wordlist/blob/main/snmp.txt">wordlist</a> que montei.</p>
@@ -410,7 +410,7 @@ mysql -h 172.16.1.33 -u root No banner do servidor é possível encontar a vers
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>16.SNMP II</h2>
 
-    <img src="/images/semana7-enumeration/14.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana7-enumeration/16.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Utilizando o <code>snmp-check</code> vamos encontrar as respostas dos próximos labs:</p>
@@ -432,7 +432,7 @@ mysql -h 172.16.1.33 -u root No banner do servidor é possível encontar a vers
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>17.SNMP II</h2>
 <p>
-    <img src="/images/semana7-enumeration/14.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana7-enumeration/17.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -455,7 +455,7 @@ mysql -h 172.16.1.33 -u root No banner do servidor é possível encontar a vers
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>18.SNMP II</h2>
 <p>
-    <img src="/images/semana7-enumeration/14.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana7-enumeration/18.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 
