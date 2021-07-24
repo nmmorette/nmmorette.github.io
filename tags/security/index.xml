@@ -6,7 +6,24 @@
     <description>Recent content in security on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TryHackme - Steel Mountain - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2021/07/tryhackme-steel-mountain-write-up/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-steel-mountain-write-up/</guid>
+      <description>Task 1. Introduction Let&amp;rsquo;s open the web page:
+Take a look at the source code:
+Who is the employee of the month?
+Bill Harper
+Task 2. Inicial Access First of all, let&amp;rsquo;s nmap the machine IP.
+nmap -sS -A 10.10.169.181 -PnScan the machine with nmap. What is the other port running a web server on?
+Nmap gives this answer:
+8080
+Take a look at the other web server.</description>
+    </item>
+    
     <item>
       <title>DCPT - Semana 07 - Enumeration</title>
       <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-07-enumeration/</link>
@@ -108,17 +125,6 @@ host businesscorp.com.brCom o endereço de IP do alvo em mãos, vamos fazer a b
 . Lab 01 Utilizando o Hunter Faça cadastro no site Hunter para conseguir visualizar os resultados.
 Depois basta digitar o domínio no campo de busca:
 Utilizando o TheHarvester Caso ainda não tenha instalado, instale o theHarvester:</description>
-    </item>
-    
-    <item>
-      <title>TryHackme - The Cod Caper - Write Up</title>
-      <link>https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-write-up/</link>
-      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-write-up/</guid>
-      <description>Task 1. Intro This is a write up for &amp;ldquo;The Cod Caper&amp;rdquo; room at Try Hack Me.
-Room&amp;rsquo;s intro note:
-Hello there my name is Pingu. I&#39;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&#39;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server.</description>
     </item>
     
   </channel>

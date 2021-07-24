@@ -6,94 +6,94 @@
     <description>Recent content in Tags on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CTF</title>
       <link>https://nmmorette.github.io/tags/ctf/</link>
-      <pubDate>Tue, 20 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/tags/ctf/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>DCPT</title>
-      <link>https://nmmorette.github.io/tags/dcpt/</link>
-      <pubDate>Tue, 20 Jul 2021 00:00:00 +0000</pubDate>
+      <title>metasploit</title>
+      <link>https://nmmorette.github.io/tags/metasploit/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://nmmorette.github.io/tags/dcpt/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>desec</title>
-      <link>https://nmmorette.github.io/tags/desec/</link>
-      <pubDate>Tue, 20 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/tags/desec/</guid>
+      <guid>https://nmmorette.github.io/tags/metasploit/</guid>
       <description></description>
     </item>
     
     <item>
       <title>pentest</title>
       <link>https://nmmorette.github.io/tags/pentest/</link>
-      <pubDate>Tue, 20 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/tags/pentest/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>security</title>
-      <link>https://nmmorette.github.io/tags/security/</link>
-      <pubDate>Tue, 20 Jul 2021 00:00:00 +0000</pubDate>
+      <title>privesc</title>
+      <link>https://nmmorette.github.io/tags/privesc/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://nmmorette.github.io/tags/security/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>writeup</title>
-      <link>https://nmmorette.github.io/tags/writeup/</link>
-      <pubDate>Tue, 20 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/tags/writeup/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>OSINT</title>
-      <link>https://nmmorette.github.io/tags/osint/</link>
-      <pubDate>Sun, 11 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/tags/osint/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>review</title>
-      <link>https://nmmorette.github.io/tags/review/</link>
-      <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/tags/review/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>THM</title>
-      <link>https://nmmorette.github.io/tags/thm/</link>
-      <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/tags/thm/</guid>
+      <guid>https://nmmorette.github.io/tags/privesc/</guid>
       <description></description>
     </item>
     
     <item>
       <title>pwn</title>
       <link>https://nmmorette.github.io/tags/pwn/</link>
-      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/tags/pwn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pwntools</title>
+      <link>https://nmmorette.github.io/tags/pwntools/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/pwntools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reversingshell</title>
+      <link>https://nmmorette.github.io/tags/reversingshell/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/reversingshell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>https://nmmorette.github.io/tags/security/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>THM</title>
+      <link>https://nmmorette.github.io/tags/thm/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/thm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tryhackme</title>
+      <link>https://nmmorette.github.io/tags/tryhackme/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/tryhackme/</guid>
       <description></description>
     </item>
     

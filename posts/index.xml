@@ -5,8 +5,133 @@
         <description>Recent content in Posts on Natan Maia Morette</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 20 Jul 2021 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Sat, 24 Jul 2021 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://nmmorette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>TryHackme - Steel Mountain - Write Up</title>
+            <link>https://nmmorette.github.io/posts/2021/07/tryhackme-steel-mountain-write-up/</link>
+            <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-steel-mountain-write-up/</guid>
+            <description>Task 1. Introduction Let&amp;rsquo;s open the web page:
+Take a look at the source code:
+Who is the employee of the month?
+Bill Harper
+Task 2. Inicial Access First of all, let&amp;rsquo;s nmap the machine IP.
+nmap -sS -A 10.10.169.181 -PnScan the machine with nmap. What is the other port running a web server on?
+Nmap gives this answer:
+8080
+Take a look at the other web server.</description>
+            <content type="html"><![CDATA[
+    <img src="/images/steelmountain/banner.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h2 id="task-1-introduction">Task 1. Introduction</h2>
+<p>Let&rsquo;s open the web page:</p>
+
+    <img src="/images/steelmountain/80.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Take a look at the source code:</p>
+
+    <img src="/images/steelmountain/sourcepage.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p><strong>Who is the employee of the month?</strong></p>
+<p><code>Bill Harper</code></p>
+<h2 id="task-2-inicial-access">Task 2. Inicial Access</h2>
+<p>First of all, let&rsquo;s <code>nmap</code> the machine IP.</p>
+<pre><code class="language-cli" data-lang="cli"> nmap -sS -A 10.10.169.181 -Pn
+</code></pre>
+    <img src="/images/steelmountain/task1.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p><strong>Scan the machine with nmap. What is the other port running a web server on?</strong></p>
+<p>Nmap gives this answer:</p>
+<p><code>8080</code></p>
+<p><strong>Take a look at the other web server. What file server is running?</strong></p>
+<p>Nmap shows: HttpFileServer, google it!</p>
+<p><code>Rejetto HTTP File Server</code></p>
+<p><strong>What is the CVE number to exploit this file server?</strong></p>
+<p><a href="https://www.exploit-db.com/exploits/39161">https://www.exploit-db.com/exploits/39161</a></p>
+<p><code>2014-6287</code></p>
+<p><strong>Use Metasploit to get an initial shell. What is the user flag?</strong></p>
+<p>Open the msfconsole and search for rejetto:</p>
+
+    <img src="/images/steelmountain/rejetto.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Configure the exploit options:</p>
+
+    <img src="/images/steelmountain/task1.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Run the exploit and wait for shell access:</p>
+
+    <img src="/images/steelmountain/exploit.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Now that we have an initial shell on this Windows machine as Bill, let&rsquo;s search for the key in Bill’s desktop:</p>
+
+    <img src="/images/steelmountain/key.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p><code>b04763b6fcf51fcd7c13abc7db4fd365</code></p>
+<h2 id="task-3-privilege-escalation">Task 3. Privilege Escalation</h2>
+<p>We need to enumerate this system, we&rsquo;re going to use a <code>PowerShell</code> script called <code>PowerUp</code>.</p>
+
+
+
+<blockquote>
+
+"PowerUp aims to be a clearinghouse of common Windows privilege escalation vectors that rely on misconfigurations."
+</blockquote>
+
+<p>You can download the script <a href="https://github.com/PowerShellMafia/PowerSploit/blob/master/Privesc/PowerUp.ps1">here</a>. Now you can use the upload command in Metasploit to upload the script.</p>
+
+    <img src="/images/steelmountain/powerup.png"  class="center"  style="border-radius: 8px;"  />
+
+
+<p>Let&rsquo;s load the <code>PowerShell</code> module in meterpreter:</p>
+<pre><code>load powershell
+</code></pre><p>Then run:</p>
+<pre><code>powershell_shell
+</code></pre><p>This will open a PowerShell session, after that ruin the script and use: <code>Invoke-Allchecks</code>
+Look at the results and search for True in the <code>Can Restart</code> option:</p>
+
+    <img src="/images/steelmountain/canrestart.png"  class="center"  style="border-radius: 8px;"  />
+
+
+<p>Search to the CanRestart option that is set to true.</p>
+<p><strong>What is the name of the service which shows up as an unquoted service path vulnerability?</strong></p>
+<p><code>AdvancedSystemCareService9</code></p>
+<p>Now let&rsquo;s configure the <code>.exe</code> with <code>msfvenom</code>:</p>
+
+    <img src="/images/steelmountain/msfvenom.png"  class="center"  style="border-radius: 8px;"  />
+
+
+<p>Then upload the file to <code>Iobit</code> folder:</p>
+
+    <img src="/images/steelmountain/iobit.png"  class="center"  style="border-radius: 8px;"  />
+
+
+<p>Preparing the <code>netcat</code>:</p>
+
+    <img src="/images/steelmountain/netcat.png"  class="center"  style="border-radius: 8px;"  />
+
+
+<p>After that, stop the service <code>AdvancedSystemCareService9</code>, then copy the <code>Advanced.exe</code> to the “Advanced SystemCare” folder, now we should start the <code>AdvancedSystemCareService9</code> again.</p>
+<p>Take a look at your netcat connection:</p>
+
+    <img src="/images/steelmountain/netcat2.png"  class="center"  style="border-radius: 8px;"  />
+
+
+<p>We have an administrator shell, search for the key in the Administrator&rsquo;s folder.</p>
+<p><strong>What is the root flag ?</strong></p>
+<p><code>9af5f314f57607c00fd09803a587db80</code></p>
+]]></content>
+        </item>
         
         <item>
             <title>DCPT - Semana 07 - Enumeration</title>

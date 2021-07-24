@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>privesc on Natan Maia Morette</title>
+    <link>https://nmmorette.github.io/tags/privesc/</link>
+    <description>Recent content in privesc on Natan Maia Morette</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 24 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/privesc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TryHackme - Steel Mountain - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2021/07/tryhackme-steel-mountain-write-up/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-steel-mountain-write-up/</guid>
+      <description>Task 1. Introduction Let&amp;rsquo;s open the web page:
+Take a look at the source code:
+Who is the employee of the month?
+Bill Harper
+Task 2. Inicial Access First of all, let&amp;rsquo;s nmap the machine IP.
+nmap -sS -A 10.10.169.181 -PnScan the machine with nmap. What is the other port running a web server on?
+Nmap gives this answer:
+8080
+Take a look at the other web server.</description>
+    </item>
+    
+  </channel>
+</rss>
