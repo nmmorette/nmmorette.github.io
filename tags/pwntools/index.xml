@@ -13,15 +13,14 @@
       <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-steel-mountain-write-up/</guid>
-      <description>Task 1. Introduction Let&amp;rsquo;s open the web page:
+      <description>Task 1. Introduction First of all, let&amp;rsquo;s nmap the machine IP.
+nmap -sS -A 10.10.169.181 -PnWe found a web service open port (80), let&amp;rsquo;s open the web page:
 Take a look at the source code:
 Who is the employee of the month?
 Bill Harper
-Task 2. Inicial Access First of all, let&amp;rsquo;s nmap the machine IP.
-nmap -sS -A 10.10.169.181 -PnScan the machine with nmap. What is the other port running a web server on?
+Task 2. Inicial Access Scan the machine with nmap. What is the other port running a web server on?
 Nmap gives this answer:
-8080
-Take a look at the other web server.</description>
+8080</description>
     </item>
     
     <item>

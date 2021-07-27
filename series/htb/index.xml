@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HTB on Natan Maia Morette</title>
+    <link>https://nmmorette.github.io/series/htb/</link>
+    <description>Recent content in HTB on Natan Maia Morette</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 27 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/series/htb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTB - Archetype - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2021/07/htb-archetype-write-up/</link>
+      <pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/htb-archetype-write-up/</guid>
+      <description>Enumeration Initial scan:
+nmap -sSV 10.10.10.27Second nmap scan with --script vuln
+We found a possible starting point: CVE-2008-4250.
+SMB Enumeration The next step is to try to connect in the SMB service:
+smbclient -L \\10.10.10.27 -NIPC$: this hidden share is a special share used for inter-process communication. It doesn’t allow one to access files or directories like other shares, but rather allows one to communicate with processes running on the remote system.</description>
+    </item>
+    
+  </channel>
+</rss>

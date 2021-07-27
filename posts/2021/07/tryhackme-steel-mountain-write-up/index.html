@@ -5,15 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="map[name:Natan]">
-<meta name="description" content="Task 1. Introduction Let&amp;rsquo;s open the web page:
+<meta name="description" content="Task 1. Introduction First of all, let&amp;rsquo;s nmap the machine IP.
+nmap -sS -A 10.10.169.181 -PnWe found a web service open port (80), let&amp;rsquo;s open the web page:
 Take a look at the source code:
 Who is the employee of the month?
 Bill Harper
-Task 2. Inicial Access First of all, let&amp;rsquo;s nmap the machine IP.
-nmap -sS -A 10.10.169.181 -PnScan the machine with nmap. What is the other port running a web server on?
+Task 2. Inicial Access Scan the machine with nmap. What is the other port running a web server on?
 Nmap gives this answer:
-8080
-Take a look at the other web server." />
+8080" />
 <meta name="keywords" content="DCPT,Pentest,CTF,Cybersecurity,RedTeam,TryhackMe,Hackthebox,certification, tryhackme, writeup, pentest, security, pwn, pwntools, reversingshell, THM, CTF, metasploit, privesc" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -50,50 +49,47 @@ Take a look at the other web server." />
 
 
 <meta itemprop="name" content="TryHackme - Steel Mountain - Write Up">
-<meta itemprop="description" content="Task 1. Introduction Let&rsquo;s open the web page:
+<meta itemprop="description" content="Task 1. Introduction First of all, let&rsquo;s nmap the machine IP.
+nmap -sS -A 10.10.169.181 -PnWe found a web service open port (80), let&rsquo;s open the web page:
 Take a look at the source code:
 Who is the employee of the month?
 Bill Harper
-Task 2. Inicial Access First of all, let&rsquo;s nmap the machine IP.
-nmap -sS -A 10.10.169.181 -PnScan the machine with nmap. What is the other port running a web server on?
+Task 2. Inicial Access Scan the machine with nmap. What is the other port running a web server on?
 Nmap gives this answer:
-8080
-Take a look at the other web server."><meta itemprop="datePublished" content="2021-07-24T00:00:00&#43;00:00" />
+8080"><meta itemprop="datePublished" content="2021-07-24T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-07-24T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="334"><meta itemprop="image" content="https://nmmorette.github.io"/>
+<meta itemprop="wordCount" content="342"><meta itemprop="image" content="https://nmmorette.github.io"/>
 <meta itemprop="keywords" content="tryhackme,writeup,pentest,security,pwn,pwntools,reversingshell,THM,CTF,metasploit,privesc," />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://nmmorette.github.io"/>
 
 <meta name="twitter:title" content="TryHackme - Steel Mountain - Write Up"/>
-<meta name="twitter:description" content="Task 1. Introduction Let&rsquo;s open the web page:
+<meta name="twitter:description" content="Task 1. Introduction First of all, let&rsquo;s nmap the machine IP.
+nmap -sS -A 10.10.169.181 -PnWe found a web service open port (80), let&rsquo;s open the web page:
 Take a look at the source code:
 Who is the employee of the month?
 Bill Harper
-Task 2. Inicial Access First of all, let&rsquo;s nmap the machine IP.
-nmap -sS -A 10.10.169.181 -PnScan the machine with nmap. What is the other port running a web server on?
+Task 2. Inicial Access Scan the machine with nmap. What is the other port running a web server on?
 Nmap gives this answer:
-8080
-Take a look at the other web server."/>
+8080"/>
 
 
 
 
     <meta property="og:title" content="TryHackme - Steel Mountain - Write Up" />
-<meta property="og:description" content="Task 1. Introduction Let&rsquo;s open the web page:
+<meta property="og:description" content="Task 1. Introduction First of all, let&rsquo;s nmap the machine IP.
+nmap -sS -A 10.10.169.181 -PnWe found a web service open port (80), let&rsquo;s open the web page:
 Take a look at the source code:
 Who is the employee of the month?
 Bill Harper
-Task 2. Inicial Access First of all, let&rsquo;s nmap the machine IP.
-nmap -sS -A 10.10.169.181 -PnScan the machine with nmap. What is the other port running a web server on?
+Task 2. Inicial Access Scan the machine with nmap. What is the other port running a web server on?
 Nmap gives this answer:
-8080
-Take a look at the other web server." />
+8080" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nmmorette.github.io/posts/2021/07/tryhackme-steel-mountain-write-up/" /><meta property="og:image" content="https://nmmorette.github.io"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-07-24T00:00:00&#43;00:00" />
 <meta property="article:modified_time" content="2021-07-24T00:00:00&#43;00:00" />
-<meta property="og:see_also" content="https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-write-up/" />
+<meta property="og:see_also" content="https://nmmorette.github.io/posts/2021/07/htb-archetype-write-up/" /><meta property="og:see_also" content="https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-write-up/" />
 <meta property="og:see_also" content="https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-write-up/" />
 
 
@@ -206,7 +202,9 @@ if (!doNotTrack) {
 
 
 <h2 id="task-1-introduction">Task 1. Introduction</h2>
-<p>Let&rsquo;s open the web page:</p>
+<p>First of all, let&rsquo;s <code>nmap</code> the machine IP.</p>
+<pre><code class="language-cli" data-lang="cli"> nmap -sS -A 10.10.169.181 -Pn
+</code></pre><p>We found a web service open port (80), let&rsquo;s open the web page:</p>
 
     <img src="https://nmmorette.github.io/images/steelmountain/80.png"  class="center"  style="border-radius: 10px;"  />
 
@@ -219,9 +217,7 @@ if (!doNotTrack) {
 <p><strong>Who is the employee of the month?</strong></p>
 <p><code>Bill Harper</code></p>
 <h2 id="task-2-inicial-access">Task 2. Inicial Access</h2>
-<p>First of all, let&rsquo;s <code>nmap</code> the machine IP.</p>
-<pre><code class="language-cli" data-lang="cli"> nmap -sS -A 10.10.169.181 -Pn
-</code></pre>
+
     <img src="https://nmmorette.github.io/images/steelmountain/task1.png"  class="center"  style="border-radius: 10px;"  />
 
 
@@ -343,7 +339,7 @@ Look at the results and search for True in the <code>Can Restart</code> option:<
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        334 Words
+        342 Words
       </p>
 
       <p>
@@ -464,6 +460,13 @@ Look at the results and search for True in the <code>Can Restart</code> option:<
         </div>
 
         <div class="pagination__buttons">
+            
+            <span class="button previous">
+                <a href="https://nmmorette.github.io/posts/2021/07/htb-archetype-write-up/">
+                    <span class="button__icon">←</span>
+                    <span class="button__text">HTB - Archetype - Write Up</span>
+                </a>
+            </span>
             
 
             
