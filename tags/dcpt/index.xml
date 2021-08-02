@@ -6,7 +6,18 @@
     <description>Recent content in DCPT on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/dcpt/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/dcpt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DCPT - Semana 07 - Vulnerabilidades</title>
+      <link>https://nmmorette.github.io/posts/2021/08/dcpt-semana-07-vulnerabilidades/</link>
+      <pubDate>Mon, 02 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/08/dcpt-semana-07-vulnerabilidades/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.  1.Host I Nesse host vamos iniciar com o msfconsole. Vamos rodar o primeiro scan:
+msf6 &amp;gt; db_nmap -sSV -Pn 172.16.1.100 Temos a porta 81 rodando um Apache, vamos tentar acessar via web e conseguir mais informações do host.
+Na web recebemos uma solicitação de credenciais que informou o serviço que está em execução: IPFire</description>
+    </item>
+    
     <item>
       <title>DCPT - Semana 07 - Enumeration</title>
       <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-07-enumeration/</link>
