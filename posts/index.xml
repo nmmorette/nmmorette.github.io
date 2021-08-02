@@ -220,8 +220,7 @@ Edite as informações de LHOST, LPORT e payload no <code>mfsconsole</code> util
 
 
 <p>Scan inicial:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">db_nmap <span style="color:#f92672">-</span>sSV <span style="color:#ae81ff">172.16.1.165</span>
-</code></pre></div>
+
     <img src="/images/semana07-vuln/host4.png"  class="center"  style="border-radius: 10px;"  />
 
 
@@ -237,369 +236,59 @@ Edite as informações de LHOST, LPORT e payload no <code>mfsconsole</code> util
 
 <details>
   <summary>Resposta</summary>
-  publickey,password
+  b60e2fc3f7ba9095b8099f21ec9b0084
 </details>
-<h2 id="hahahugoshortcode-s45-hbhb5nfs---parte-i"><figure>
+<h2 id="hahahugoshortcode-s45-hbhb5host-v"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>5.NFS - Parte I</h2>
+    </figure>5.Host V</h2>
 
-    <img src="/images/semana07-vuln/5.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/5.png"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>O enunciado já disse qual host tem o NFS, então vamos listar os compartilhamentos nele:</p>
+<p>Esse host tem a porta 80 aberta:</p>
 
-    <img src="/images/semana07-vuln/nfs.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/80.png"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Agora que temos o compartilhamento, vamos montar em nossa máquina e acessar para conseguir a key:</p>
+<p>Vamos enumerar os arquivos com gobuster:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">gobuster dir <span style="color:#f92672">--</span>no<span style="color:#f92672">-</span>error <span style="color:#f92672">-</span>u http:<span style="color:#75715e">//172.30.0.108/   -w /usr/share/wfuzz/wordlist/vulns/cgis.txt
+</span></code></pre></div>
+    <img src="/images/semana07-vuln/gobuster.png"  class="center"  style="border-radius: 10px;"  />
 
-    <img src="/images/semana07-vuln/nfs2.png"  class="center"  style="border-radius: 10px;"  />
 
+<p>Econtramos um arquivo <code>cgi</code> que pode ser um vetor de ataque.
+Acessando o arquivo podemos ver que ele roda um script de uptime:</p>
 
+    <img src="/images/semana07-vuln/uptime.png"  class="center"  style="border-radius: 10px;"  />
 
 
-<br>
+<p>Com um pouco de pesquisa no google foi possível encontrar o CVE:</p>
 
-<details>
-  <summary>Resposta</summary>
-  284857642780
-</details>
-<h2 id="hahahugoshortcode-s51-hbhb6nfs---parte-ii"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>6.NFS - Parte II</h2>
+    <img src="/images/semana07-vuln/cve.png"  class="center"  style="border-radius: 10px;"  />
 
-    <img src="/images/semana07-vuln/6.JPG"  class="center"  style="border-radius: 10px;"  />
 
+<p>Buscando o CVE no msf podemos encontrar o módulo para explorar essa vulnerabilidade:</p>
 
-<p>Primeiro precisamos criar uma chave em nosso sistema.</p>
+    <img src="/images/semana07-vuln/cve.png"  class="center"  style="border-radius: 10px;"  />
 
-    <img src="/images/semana07-vuln/chave.png"  class="center"  style="border-radius: 10px;"  />
 
+<p>Vamos utilizar o <code>msf6</code> com modulo apache_mod_cgi_bash_env, não esquecendo se configurar o alvo para o link encontrado:</p>
 
-<p>Depois disso, vamos copiar o conteúdo da chave criada:</p>
+    <img src="/images/semana07-vuln/host51.png"  class="center"  style="border-radius: 10px;"  />
 
-    <img src="/images/semana07-vuln/chave2.png"  class="center"  style="border-radius: 10px;"  />
 
-
-<p>Vanos colocar esse conteúdo dentro da pasta <code>.ssh/authorized_keys</code> na máquina de destino.</p>
-<p>Agora com a informação inserida, podemos fazer a conexão, mas antes vamos iniciar o ssh-agent e adicionar a chave com o comando ssh-add.</p>
-
-    <img src="/images/semana07-vuln/chave3.png"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>Executando a conexão:</p>
-
-    <img src="/images/semana07-vuln/chave4.png"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>Busque por arquivos onde possa encontrar a key: pasta de usuários, pasta do root etc&hellip;</p>
-
-
-<br>
-
-<details>
-  <summary>Resposta</summary>
-  999675754423
-</details>
-<h2 id="hahahugoshortcode-s59-hbhb7nfs-ii"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>7.NFS II</h2>
-
-    <img src="/images/semana07-vuln/7.JPG"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>Para conseguir essa informação vamos  utilizar o <code>rpcinfo</code>:</p>
-
-    <img src="/images/semana07-vuln/rpcinfo.png"  class="center"  style="border-radius: 10px;"  />
-
-
-
-
-<br>
-
-<details>
-  <summary>Resposta</summary>
-  3,4
-</details>
-<h2 id="hahahugoshortcode-s64-hbhb8nfs-ii"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>8.NFS II</h2>
-
-    <img src="/images/semana07-vuln/8.JPG"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>Basta executar o <code>showmount</code> para visualizar os compartilhamentos:</p>
-
-    <img src="/images/semana07-vuln/showmount.png"  class="center"  style="border-radius: 10px;"  />
-
-
-
-
-<br>
-
-<details>
-  <summary>Resposta</summary>
-  /opt/comp
-</details>
-<h2 id="hahahugoshortcode-s69-hbhb9nfs-ii"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>9.NFS II</h2>
-
-    <img src="/images/semana07-vuln/9.JPG"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>Vamos montar o diretório:</p>
-
-    <img src="/images/semana07-vuln/montando.png"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>Depois de montar vamos acessar o local de montagem e verificar a key.</p>
-
-    <img src="/images/semana07-vuln/chave8.png"  class="center"  style="border-radius: 10px;"  />
-
-
-
-
-<br>
-
-<details>
-  <summary>Resposta</summary>
-  fd9e513cc470b0e57fa3c36e41b62bb4
-</details>
-<h2 id="hahahugoshortcode-s75-hbhb10ftp"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>10.FTP</h2>
-
-    <img src="/images/semana07-vuln/10.JPG"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>Vamos voltar ao scan inical para verificar as portas desse host:</p>
-
-    <img src="/images/semana07-vuln/ftp.png"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>O ftp está configurado na porta 2121, vamos conectar direto no servidor:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">ftp <span style="color:#ae81ff">172.16.1.31</span> <span style="color:#ae81ff">2121</span>
-</code></pre></div><p>Depois de conectar, vamos tentar autenticação com usuário anonymous e senha anonymous:</p>
-
-    <img src="/images/semana07-vuln/anom.png"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>Após autenticar vamos listar os arquivos e procurar algum arquivo que possa estar a key.</p>
-
-    <img src="/images/semana07-vuln/keyvlab10.png"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>Abra o arquivo para encontrar a key.</p>
-
-
-<br>
-
-<details>
-  <summary>Resposta</summary>
-  257501915537
-</details>
-<h2 id="hahahugoshortcode-s82-hbhb11ftp---parte-i"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>11.FTP - Parte I</h2>
-
-    <img src="/images/semana07-vuln/11.JPG"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>Esse host também está com o <code>ftp</code> configurado na porta 2121, vamos conectar e verificar a informação solicitada no banner:</p>
-
-    <img src="/images/semana07-vuln/proftp.png"  class="center"  style="border-radius: 10px;"  />
-
-
-
-
-<br>
-
-<details>
-  <summary>Resposta</summary>
-  ProFTPD1.3.5
-</details>
-<h2 id="hahahugoshortcode-s87-hbhb12-ftp---parte-ii"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>12. FTP - Parte II</h2>
-
-    <img src="/images/semana07-vuln/12.JPG"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>Com a conexão estabelecida, vamos verificar os arquivos com <code>dir</code>.</p>
+<p>Após rodar o exploit temos acesso a shell do servidor, vamos verificar na raiz o arquivo solicitado:</p>
 
     <img src="/images/semana07-vuln/dir.png"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Um dos arquivos é a key.</p>
-<p>Para fazer o download do arquivo, utilize o comando <code>get</code>.</p>
-
-    <img src="/images/semana07-vuln/get.png"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>Abra o arquivo e veja a key para pontuar.</p>
 
 
 <br>
 
 <details>
   <summary>Resposta</summary>
-  ce6cfad1ff11b600bef6da1aa844996a
-</details>
-<h2 id="hahahugoshortcode-s93-hbhb13smb"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>13.SMB</h2>
-
-    <img src="/images/semana07-vuln/13.JPG"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>Vamos rodar o <code>nmap</code> com o script <code>smb-os-discovery</code> para termos mais informações desse host:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">--</span>script<span style="color:#f92672">=</span>smb<span style="color:#f92672">-</span>os<span style="color:#f92672">-</span>discovery <span style="color:#ae81ff">172.16.1.14</span>
-</code></pre></div>
-    <img src="/images/semana07-vuln/smb.png"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>Sabemos que é um server windows, e que provavelmente o nome de usuário é &ldquo;administrator&rdquo;, além disso também conseguimos o nome do host &ldquo;wks01&rdquo;, vamos utilizar o smbclient para enumerar:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"> smbclient <span style="color:#f92672">-</span>L <span style="color:#75715e">//172.16.1.4/ -N -U &#34;administrator&#34; -W &#34;wks01&#34; --option=&#39;client min protocol=NT1&#39;
-</span></code></pre></div>
-    <img src="/images/semana07-vuln/docs.png"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>Agora vamos conectar no compartilhamento &ldquo;_DOCS&rdquo;:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">smbclient <span style="color:#75715e">//172.16.1.4/_DOCS -N -U &#34;administrator&#34; -W &#34;wks01&#34; --option=&#39;client min protocol=NT1&#39;
-</span></code></pre></div><p>Depois de conectar vamos listar os arquivos do diretório com <code>ls</code> e fazer o download do arquivo com <code>get</code>:</p>
-
-    <img src="/images/semana07-vuln/smbclient.png"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>Depois de baixar o arquivo, basta visualizar para conseguir a key:</p>
-
-    <img src="/images/semana07-vuln/catkey.png"  class="center"  style="border-radius: 10px;"  />
-
-
-
-
-<br>
-
-<details>
-  <summary>Resposta</summary>
-  181831987455
-</details>
-<h2 id="hahahugoshortcode-s101-hbhb14snmp"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>14.SNMP</h2>
-
-    <img src="/images/semana07-vuln/14.JPG"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>Vamos buscar pela porta do SNMP nesse host:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">-</span>sVU <span style="color:#f92672">-</span>p161 <span style="color:#f92672">-</span>Pn <span style="color:#ae81ff">172.16.1.4</span>
-</code></pre></div>
-    <img src="/images/semana07-vuln/snmp.png"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>Agora temos o nome da communite do SNMP, vamos conectar e buscar por informações:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">snmp<span style="color:#f92672">-</span>check <span style="color:#ae81ff">172.16.1.4</span> <span style="color:#f92672">-</span>c public
-</code></pre></div>
-    <img src="/images/semana07-vuln/snmp2.png"  class="center"  style="border-radius: 10px;"  />
-
-
-
-
-<br>
-
-<details>
-  <summary>Resposta</summary>
-  298700191820
-</details>
-<h2 id="hahahugoshortcode-s107-hbhb15snmp-ii"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>15.SNMP II</h2>
-
-    <img src="/images/semana07-vuln/15.JPG"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>Nesse server o método acima não vai retornar o nome da communite, logo vamos fazer um brute force, utilizando o <code>onesixtyone</code>, para descobrir o nome. Utilizando uma <a href="https://github.com/nmmorette/wordlist/blob/main/snmp.txt">wordlist</a> que montei.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">onesixtyone <span style="color:#f92672">-</span>c NOMEDAWORDLIST.txt <span style="color:#ae81ff">172.30.0.103</span>
-</code></pre></div>
-    <img src="/images/semana07-vuln/one.png"  class="center"  style="border-radius: 10px;"  />
-
-
-
-
-<br>
-
-<details>
-  <summary>Resposta</summary>
-  Secret
-</details>
-<h2 id="hahahugoshortcode-s112-hbhb16snmp-ii"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>16.SNMP II</h2>
-
-    <img src="/images/semana07-vuln/16.JPG"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>Utilizando o <code>snmp-check</code> vamos encontrar as respostas dos próximos labs:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">snmp<span style="color:#f92672">-</span>check <span style="color:#ae81ff">172.30.0.103</span> <span style="color:#f92672">-</span>c NOMEDACOMMUNITE
-</code></pre></div>
-    <img src="/images/semana07-vuln/snmp3.png"  class="center"  style="border-radius: 10px;"  />
-
-
-<p>No setor [*] System Information, vamos encontrar o nome do host.</p>
-
-
-<br>
-
-<details>
-  <summary>Resposta</summary>
-  srv01
-</details>
-<h2 id="hahahugoshortcode-s117-hbhb17snmp-ii"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>17.SNMP II</h2>
-<p>
-    <img src="/images/semana07-vuln/17.JPG"  class="center"  style="border-radius: 10px;"  />
-
-
-
-
-<br>
-</p>
-
-    <img src="/images/semana07-vuln/snmp4.png"  class="center"  style="border-radius: 10px;"  />
-
-
-
-
-<br>
-
-<details>
-  <summary>Resposta</summary>
-  ade760c5657314c336e121a6ee42ea1e
-</details>
-<h2 id="hahahugoshortcode-s123-hbhb18snmp-ii"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>18.SNMP II</h2>
-<p>
-    <img src="/images/semana07-vuln/18.JPG"  class="center"  style="border-radius: 10px;"  />
-
-
-
-
-<br>
-
-
-    <img src="/images/semana07-vuln/snmp5.png"  class="center"  style="border-radius: 10px;"  />
-
-</p>
-
-
-<br>
-
-<details>
-  <summary>Resposta</summary>
-  ADM01,CPD01,DEV01,USER01
+  dhc{sh311shOCKisD4ng3r2017}
 </details>
 ]]></content>
         </item>
