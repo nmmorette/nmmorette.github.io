@@ -2116,6 +2116,145 @@ Vamos autenticar no endereço: mail.businesscorp.com.br</p>
         </item>
         
         <item>
+            <title>DCPT - Semana 08 - Hashes e Senhas</title>
+            <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-08-hashes-e-senhas/</link>
+            <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-08-hashes-e-senhas/</guid>
+            <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.  1. Caso.zip Resposta 2. Caso.zip Resposta 3. Hash Resposta 4. Hash Resposta 5. Hash Resposta 6. Hash Resposta 7. Hash Resposta 8.</description>
+            <content type="html"><![CDATA[
+    <img src="/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<h5 id="o-intuito-desse-post-não-é-dar-as-respostas-e-sim-documentar-os-passos-e-ferramentas-utilizadas">O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</h5>
+
+    <img src="/images/semana08/banner.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h2 id="hahahugoshortcode-s2-hbhb-1-casozip"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure> 1. Caso.zip</h2>
+
+    <img src="/images/semana08/1.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  
+</details>
+<h2 id="hahahugoshortcode-s6-hbhb2-casozip"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>2. Caso.zip</h2>
+
+    <img src="/images/semana08/2.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  
+</details>
+<h2 id="hahahugoshortcode-s10-hbhb3-hash"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>3. Hash</h2>
+
+    <img src="/images/semana08/3.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  
+</details>
+<h2 id="hahahugoshortcode-s14-hbhb4-hash"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>4. Hash</h2>
+
+    <img src="/images/semana08/4.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  
+</details>
+<h2 id="hahahugoshortcode-s18-hbhb5-hash"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>5. Hash</h2>
+
+    <img src="/images/semana08/5.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  
+</details>
+<h2 id="hahahugoshortcode-s22-hbhb6-hash"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>6. Hash</h2>
+
+    <img src="/images/semana08/6.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  
+</details>
+<h2 id="hahahugoshortcode-s26-hbhb7-hash"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>7. Hash</h2>
+
+    <img src="/images/semana08/7.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  
+</details>
+<h2 id="hahahugoshortcode-s30-hbhb8-hash"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>8. Hash</h2>
+
+    <img src="/images/semana08/8.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  
+</details>
+]]></content>
+        </item>
+        
+        <item>
             <title>DCPT - Semana 05 - Information Gathering - Web</title>
             <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-web/</link>
             <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
