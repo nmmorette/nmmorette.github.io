@@ -5,8 +5,229 @@
         <description>Recent content in Posts on Natan Maia Morette</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 02 Aug 2021 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 04 Aug 2021 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://nmmorette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>DCPT - Semana 08 - Hashes e Senhas</title>
+            <link>https://nmmorette.github.io/posts/2021/08/dcpt-semana-08-hashes-e-senhas/</link>
+            <pubDate>Wed, 04 Aug 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2021/08/dcpt-semana-08-hashes-e-senhas/</guid>
+            <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.  1. Caso.zip Alguns fornecedores informam o checksum os executáveis no site, porém não encontramos no caso do Zoom. Foi necessário fazer o download no site oficial e checar:
+Para esse lab, fiz um script simples para listagem dos arquivos com seus respectivos hahes, bastou verificar qual hash era o diferente para identificar o arquivo modificado:</description>
+            <content type="html"><![CDATA[
+    <img src="/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<h5 id="o-intuito-desse-post-não-é-dar-as-respostas-e-sim-documentar-os-passos-e-ferramentas-utilizadas">O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</h5>
+
+    <img src="/images/semana08/banner.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h2 id="hahahugoshortcode-s2-hbhb-1-casozip"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure> 1. Caso.zip</h2>
+
+    <img src="/images/semana08/1.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Alguns fornecedores informam o checksum os executáveis no site, porém não encontramos no caso do Zoom.
+Foi necessário fazer o download no site oficial e checar:</p>
+
+    <img src="/images/semana08/md5sum.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Para esse lab, fiz um script simples para listagem dos arquivos com seus respectivos hahes, bastou verificar qual hash era o diferente para identificar o arquivo modificado:</p>
+
+    <img src="/images/semana08/checagem.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Script:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e">#Script para checagem de hash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">#Scritp para verificação do hash md5 em um arquivo na pasta ./original e comparação com arquivos na pasta ./files
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">#cores
+</span><span style="color:#75715e"></span>
+export GREEN<span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">&#39;\</span><span style="color:#ae81ff">033</span>[<span style="color:#ae81ff">1</span>;<span style="color:#ae81ff">32</span>m<span style="color:#960050;background-color:#1e0010">&#39;</span>
+export RED<span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">&#39;\</span><span style="color:#ae81ff">033</span>[<span style="color:#ae81ff">0</span>;<span style="color:#ae81ff">31</span>m<span style="color:#960050;background-color:#1e0010">&#39;</span>
+export PURPLE<span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">&#39;\</span>e[<span style="color:#ae81ff">35</span>m<span style="color:#960050;background-color:#1e0010">&#39;</span>
+export blink<span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">&#39;\</span>e[<span style="color:#ae81ff">5</span>m<span style="color:#960050;background-color:#1e0010">&#39;</span>
+export NC<span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">&#39;\</span><span style="color:#ae81ff">033</span>[<span style="color:#ae81ff">0</span>m<span style="color:#960050;background-color:#1e0010">&#39;</span> <span style="color:#960050;background-color:#1e0010">#</span> No Color
+
+
+<span style="color:#75715e">#Tratamento do arquivo original 
+</span><span style="color:#75715e"></span>
+	ORIGINAL<span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">$</span>(ls original)
+	PWDORIGINAL<span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">$</span>(pwd)
+	MD5original<span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">$</span>(md5sum  <span style="color:#e6db74">&#34;$PWDORIGINAL&#34;</span><span style="color:#f92672">/</span>original<span style="color:#f92672">/</span><span style="color:#e6db74">&#34;$ORIGINAL&#34;</span>)
+	MD5FILTRADO<span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">$</span>(echo <span style="color:#e6db74">&#34;$MD5original&#34;</span> <span style="color:#f92672">|</span> cut <span style="color:#f92672">-</span>d <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">-</span>f <span style="color:#ae81ff">1</span>)
+
+
+echo <span style="color:#f92672">-</span>e <span style="color:#960050;background-color:#1e0010">$</span>{GREEN}<span style="color:#e6db74">&#34;============================================================================================================================&#34;</span>
+echo <span style="color:#f92672">-</span>e <span style="color:#960050;background-color:#1e0010">$</span>{blink}<span style="color:#e6db74">&#34;HASH MD5 do arquivo original:&#34;</span><span style="color:#960050;background-color:#1e0010">$</span>{NC}   <span style="color:#960050;background-color:#1e0010">$</span>{PURPLE} <span style="color:#e6db74">&#34;$MD5FILTRADO&#34;</span>
+echo <span style="color:#f92672">-</span>e <span style="color:#960050;background-color:#1e0010">$</span>{GREEN}<span style="color:#e6db74">&#34;============================================================================================================================&#34;</span><span style="color:#960050;background-color:#1e0010">$</span>{NC}
+
+
+
+ 
+<span style="color:#75715e">#declando local atual
+</span><span style="color:#75715e"></span>PWD<span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">$</span>(pwd)
+<span style="color:#75715e">#Lendo arquivos da pasta files
+</span><span style="color:#75715e"></span>CHECK<span style="color:#f92672">=</span>(<span style="color:#960050;background-color:#1e0010">$</span>(ls files))
+<span style="color:#75715e">#imprimindo caminho completo dos arquivos
+</span><span style="color:#75715e"></span>ALL<span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">$</span>(printf <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#f92672">%</span>s<span style="color:#960050;background-color:#1e0010">\</span>n<span style="color:#960050;background-color:#1e0010">&#39;</span> <span style="color:#960050;background-color:#1e0010">$</span>{CHECK[<span style="color:#960050;background-color:#1e0010">@</span>]<span style="color:#f92672">/</span><span style="color:#960050;background-color:#1e0010">#</span><span style="color:#f92672">/</span><span style="color:#960050;background-color:#1e0010">$</span>PWD<span style="color:#f92672">/</span>files<span style="color:#f92672">/</span>})
+
+<span style="color:#75715e">#Fazendo a checagem do MD5
+</span><span style="color:#75715e"></span>
+	MD5<span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">$</span>(md5sum <span style="color:#960050;background-color:#1e0010">$</span>{ALL[<span style="color:#960050;background-color:#1e0010">@</span>]})
+	
+	ARQUIVOALTERADO<span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">$</span>(printf <span style="color:#e6db74">&#34;${MD5}&#34;</span> <span style="color:#f92672">|</span> grep <span style="color:#f92672">-</span>v <span style="color:#e6db74">&#34;$MD5FILTRADO&#34;</span>)
+	echo <span style="color:#f92672">-</span>e <span style="color:#960050;background-color:#1e0010">$</span>{RED} <span style="color:#e6db74">&#34;$ARQUIVOALTERADO&#34;</span> <span style="color:#960050;background-color:#1e0010">$</span>{NC}
+
+
+</code></pre></div>
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  CleanZoomHost38.exe
+</details>
+<h2 id="hahahugoshortcode-s8-hbhb2-casozip"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>2. Caso.zip</h2>
+
+    <img src="/images/semana08/2.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Basta verificar o resultado do script e informar a hash do arquivo modificado.</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  37ecb62f912e85ac16faf220a3d09292
+</details>
+<h2 id="hahahugoshortcode-s12-hbhb3-hash"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>3. Hash</h2>
+
+    <img src="/images/semana08/3.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>O hash foi colhido do arquivo original na primeira checagem.</p>
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  6bc664de142144d81576fe4788d60327
+</details>
+<h2 id="hahahugoshortcode-s16-hbhb4-hash"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>4. Hash</h2>
+
+    <img src="/images/semana08/4.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Basta fazer a conversão com echo -n:</p>
+
+    <img src="/images/semana08/keep.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  1d2da0cc838de8996cc71dc72bdbbe03d347b573cb3a4ab46c9e68987832f6bfe192579ab7604cdea76347828b3a0382602401e3417cc8a53e87da7565da4766
+</details>
+<h2 id="hahahugoshortcode-s21-hbhb5-hash"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>5. Hash</h2>
+
+    <img src="/images/semana08/5.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Executando o <code>openssl</code> com as informações do hash e salt encontraremos o resultado:</p>
+
+    <img src="/images/semana08/openssl.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  JDUkZGVzZWMkS2NhRGsxeEt6b05zZUtIclVEQ01CLjNqcHc4MHNzVFFydzFMdG56Rml5MA==
+</details>
+<h2 id="hahahugoshortcode-s26-hbhb6-hash"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>6. Hash</h2>
+
+    <img src="/images/semana08/6.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Primeiro vamos descobrir qual o tipo do hash utilizando o site <a href="https://www.tunnelsup.com/hash-analyzer/">Hash Analyzer</a>:</p>
+
+    <img src="/images/semana08/hash.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Agora vamos executar o <code>hashcat</code> para descobrir o valor:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">hashcat <span style="color:#f92672">-</span>m <span style="color:#ae81ff">0</span> hash wl.txt <span style="color:#f92672">--</span>force
+</code></pre></div>
+    <img src="/images/semana08/power.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  _power11
+</details>
+<h2 id="hahahugoshortcode-s32-hbhb7-hash"><figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+    </figure>7. Hash</h2>
+
+    <img src="/images/semana08/7.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Seguindo a lógica da questão, vamos criar um script para converter toda wordlist em md5, depois base64 e por fim sha1. 
+Assim podemos buscar na conversão o valor informado e verificar em qual linha está o mesmo valor na wordlist original.</p>
+<p>Script:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">for</span> iq in <span style="color:#960050;background-color:#1e0010">$</span>(cat password.lst);
+<span style="color:#66d9ef">do</span>
+	echo <span style="color:#f92672">-</span>n  <span style="color:#960050;background-color:#1e0010">$</span>iq <span style="color:#f92672">|</span> md5sum <span style="color:#f92672">|</span> cut <span style="color:#f92672">-</span>d <span style="color:#e6db74">&#34;-&#34;</span> <span style="color:#f92672">-</span>f1; done <span style="color:#f92672">&gt;</span> md5a.txt
+
+	<span style="color:#66d9ef">for</span> ip in <span style="color:#960050;background-color:#1e0010">$</span>(cat md5a.txt);
+	<span style="color:#66d9ef">do</span>
+		echo <span style="color:#f92672">-</span>n <span style="color:#960050;background-color:#1e0010">$</span>ip <span style="color:#f92672">|</span> base64; done <span style="color:#f92672">&gt;</span> bs64a.txt
+	
+		<span style="color:#66d9ef">for</span> ic in <span style="color:#960050;background-color:#1e0010">$</span>(cat bs64a.txt);
+		<span style="color:#66d9ef">do</span>
+			echo <span style="color:#f92672">-</span>n <span style="color:#960050;background-color:#1e0010">$</span>ic <span style="color:#f92672">|</span> sha1sum <span style="color:#f92672">|</span> cut <span style="color:#f92672">-</span>d <span style="color:#e6db74">&#34;-&#34;</span> <span style="color:#f92672">-</span>f1; done <span style="color:#f92672">&gt;</span> shauma.txt
+
+</code></pre></div>
+
+<br>
+
+<details>
+  <summary>Resposta</summary>
+  help123
+</details>
+]]></content>
+        </item>
         
         <item>
             <title>DCPT - Semana 07 - Vulnerabilidades</title>
@@ -2111,145 +2332,6 @@ Vamos autenticar no endereço: mail.businesscorp.com.br</p>
 <details>
   <summary>Resposta</summary>
   327-9931231-48848d3
-</details>
-]]></content>
-        </item>
-        
-        <item>
-            <title>DCPT - Semana 08 - Hashes e Senhas</title>
-            <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-08-hashes-e-senhas/</link>
-            <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
-            
-            <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-08-hashes-e-senhas/</guid>
-            <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.  1. Caso.zip Resposta 2. Caso.zip Resposta 3. Hash Resposta 4. Hash Resposta 5. Hash Resposta 6. Hash Resposta 7. Hash Resposta 8.</description>
-            <content type="html"><![CDATA[
-    <img src="/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
-
-
-<h5 id="o-intuito-desse-post-não-é-dar-as-respostas-e-sim-documentar-os-passos-e-ferramentas-utilizadas">O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</h5>
-
-    <img src="/images/semana08/banner.png"  class="center"  style="border-radius: 10px;"  />
-
-
-<h2 id="hahahugoshortcode-s2-hbhb-1-casozip"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure> 1. Caso.zip</h2>
-
-    <img src="/images/semana08/1.png"  class="center"  style="border-radius: 10px;"  />
-
-
-
-
-<br>
-
-<details>
-  <summary>Resposta</summary>
-  
-</details>
-<h2 id="hahahugoshortcode-s6-hbhb2-casozip"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>2. Caso.zip</h2>
-
-    <img src="/images/semana08/2.png"  class="center"  style="border-radius: 10px;"  />
-
-
-
-
-<br>
-
-<details>
-  <summary>Resposta</summary>
-  
-</details>
-<h2 id="hahahugoshortcode-s10-hbhb3-hash"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>3. Hash</h2>
-
-    <img src="/images/semana08/3.png"  class="center"  style="border-radius: 10px;"  />
-
-
-
-
-<br>
-
-<details>
-  <summary>Resposta</summary>
-  
-</details>
-<h2 id="hahahugoshortcode-s14-hbhb4-hash"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>4. Hash</h2>
-
-    <img src="/images/semana08/4.png"  class="center"  style="border-radius: 10px;"  />
-
-
-
-
-<br>
-
-<details>
-  <summary>Resposta</summary>
-  
-</details>
-<h2 id="hahahugoshortcode-s18-hbhb5-hash"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>5. Hash</h2>
-
-    <img src="/images/semana08/5.png"  class="center"  style="border-radius: 10px;"  />
-
-
-
-
-<br>
-
-<details>
-  <summary>Resposta</summary>
-  
-</details>
-<h2 id="hahahugoshortcode-s22-hbhb6-hash"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>6. Hash</h2>
-
-    <img src="/images/semana08/6.png"  class="center"  style="border-radius: 10px;"  />
-
-
-
-
-<br>
-
-<details>
-  <summary>Resposta</summary>
-  
-</details>
-<h2 id="hahahugoshortcode-s26-hbhb7-hash"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>7. Hash</h2>
-
-    <img src="/images/semana08/7.png"  class="center"  style="border-radius: 10px;"  />
-
-
-
-
-<br>
-
-<details>
-  <summary>Resposta</summary>
-  
-</details>
-<h2 id="hahahugoshortcode-s30-hbhb8-hash"><figure>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-    </figure>8. Hash</h2>
-
-    <img src="/images/semana08/8.png"  class="center"  style="border-radius: 10px;"  />
-
-
-
-
-<br>
-
-<details>
-  <summary>Resposta</summary>
-  
 </details>
 ]]></content>
         </item>

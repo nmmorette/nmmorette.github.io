@@ -6,7 +6,17 @@
     <description>Recent content in security on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DCPT - Semana 08 - Hashes e Senhas</title>
+      <link>https://nmmorette.github.io/posts/2021/08/dcpt-semana-08-hashes-e-senhas/</link>
+      <pubDate>Wed, 04 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/08/dcpt-semana-08-hashes-e-senhas/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.  1. Caso.zip Alguns fornecedores informam o checksum os executáveis no site, porém não encontramos no caso do Zoom. Foi necessário fazer o download no site oficial e checar:
+Para esse lab, fiz um script simples para listagem dos arquivos com seus respectivos hahes, bastou verificar qual hash era o diferente para identificar o arquivo modificado:</description>
+    </item>
+    
     <item>
       <title>DCPT - Semana 07 - Vulnerabilidades</title>
       <link>https://nmmorette.github.io/posts/2021/08/dcpt-semana-07-vulnerabilidades/</link>
@@ -114,15 +124,6 @@ You don&amp;rsquo;t need to be an IT pro for start here. This learning path will
       <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Alvo: mail.businesscorp.com.br | 37.59.174.227  1. RECON I Vamos iniciar com um scan de todas as portas:
 nmap -A -v mail.businesscorp.com.br -p-Verifique o resultado e informe as portas abertas em ordem crescente.
 Resposta21,80,110,143 2. RECON II Vanos realizar um scan para portas udp, também com nmap</description>
-    </item>
-    
-    <item>
-      <title>DCPT - Semana 08 - Hashes e Senhas</title>
-      <link>https://nmmorette.github.io/posts/2021/07/dcpt-semana-08-hashes-e-senhas/</link>
-      <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/posts/2021/07/dcpt-semana-08-hashes-e-senhas/</guid>
-      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.  1. Caso.zip Resposta 2. Caso.zip Resposta 3. Hash Resposta 4. Hash Resposta 5. Hash Resposta 6. Hash Resposta 7. Hash Resposta 8.</description>
     </item>
     
   </channel>
