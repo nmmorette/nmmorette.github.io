@@ -6,7 +6,17 @@
     <description>Recent content in writeup on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/series/writeup/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/series/writeup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTB - Blue- Write Up</title>
+      <link>https://nmmorette.github.io/posts/2021/08/htb-blue-write-up/</link>
+      <pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/08/htb-blue-write-up/</guid>
+      <description>Enumeration Initial scan:
+└──╼ $sudo nmap -sS -Pn 10.10.10.40 Host discovery disabled (-Pn). All addresses will be marked &amp;#39;up&amp;#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-11 15:11 -03 Nmap scan report for 10.10.10.40 Host is up (0.45s latency). Not shown: 991 closed ports PORT STATE SERVICE 135/tcp open msrpc 139/tcp open netbios-ssn 445/tcp open microsoft-ds 49152/tcp open unknown 49153/tcp open unknown 49154/tcp open unknown 49155/tcp open unknown 49156/tcp open unknown 49157/tcp open unknown Second nmap scan with --script vuln only on the open ports:</description>
+    </item>
+    
     <item>
       <title>HTB - Archetype - Write Up</title>
       <link>https://nmmorette.github.io/posts/2021/07/htb-archetype-write-up/</link>
