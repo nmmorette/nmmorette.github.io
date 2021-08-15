@@ -6,7 +6,17 @@
     <description>Recent content in CTF on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TryHackme - Bounty Hacker - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2021/08/tryhackme-bounty-hacker-write-up/</link>
+      <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/08/tryhackme-bounty-hacker-write-up/</guid>
+      <description>First of all, let&amp;rsquo;s nmap the machine IP.
+└─$ sudo nmap -sS -Pn 10.10.207.23 [sudo] password for venomsnake: Host discovery disabled (-Pn). All addresses will be marked &amp;#39;up&amp;#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-15 07:43 -03 Nmap scan report for 10.10.207.23 Host is up (0.20s latency). Not shown: 967 filtered ports, 30 closed ports PORT STATE SERVICE 21/tcp open ftp 22/tcp open ssh 80/tcp open http Nmap done: 1 IP address (1 host up) scanned in 9.</description>
+    </item>
+    
     <item>
       <title>HTB - Blue- Write Up</title>
       <link>https://nmmorette.github.io/posts/2021/08/htb-blue-write-up/</link>
@@ -113,17 +123,6 @@ Vamos tentar um hping3 em uma porta conhecida para verificar o resultado:</descr
 nmap -A -v businesscorp.com.br -p-Informe as portas encontradas.
 Resposta21,22,53,80,111 2. WebSite II Verifique no resultado detalhado do NMAP da porta 53, que é a porta do serviço DNS.
 Respostabind9.8.4 3.</description>
-    </item>
-    
-    <item>
-      <title>NPP - Semana 05 - Information Gathering - Web (VPN)</title>
-      <link>https://nmmorette.github.io/posts/2021/07/npp-semana-05-information-gathering-web-vpn/</link>
-      <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/posts/2021/07/npp-semana-05-information-gathering-web-vpn/</guid>
-      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Conecte na vpn da Desec para realizar esses labs.
-.Lab 01 IP do alvo: 172.16.1.60 Utilizando as ténicas de banner grab, vamos encontar a reposta desse lab
- Curl  curl -s -I 172.16.1.60 | grep &amp;quot;Server&amp;quot; Wget  wget -q -S 172.16.1.60 Nmap  nmap -sV -p80 172.</description>
     </item>
     
   </channel>

