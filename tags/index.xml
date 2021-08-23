@@ -6,22 +6,58 @@
     <description>Recent content in Tags on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CTF</title>
       <link>https://nmmorette.github.io/tags/ctf/</link>
-      <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/tags/ctf/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>DCPT</title>
+      <link>https://nmmorette.github.io/tags/dcpt/</link>
+      <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/dcpt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>desec</title>
+      <link>https://nmmorette.github.io/tags/desec/</link>
+      <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/desec/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>pentest</title>
       <link>https://nmmorette.github.io/tags/pentest/</link>
-      <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/tags/pentest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>https://nmmorette.github.io/tags/security/</link>
+      <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>writeup</title>
+      <link>https://nmmorette.github.io/tags/writeup/</link>
+      <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/writeup/</guid>
       <description></description>
     </item>
     
@@ -31,15 +67,6 @@
       <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/tags/privesc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>security</title>
-      <link>https://nmmorette.github.io/tags/security/</link>
-      <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/tags/security/</guid>
       <description></description>
     </item>
     
@@ -62,38 +89,11 @@
     </item>
     
     <item>
-      <title>writeup</title>
-      <link>https://nmmorette.github.io/tags/writeup/</link>
-      <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/tags/writeup/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>HTB</title>
       <link>https://nmmorette.github.io/tags/htb/</link>
       <pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/tags/htb/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>metasploit</title>
-      <link>https://nmmorette.github.io/tags/metasploit/</link>
-      <pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/tags/metasploit/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pwn</title>
-      <link>https://nmmorette.github.io/tags/pwn/</link>
-      <pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/tags/pwn/</guid>
       <description></description>
     </item>
     

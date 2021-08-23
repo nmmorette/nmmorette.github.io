@@ -46,7 +46,7 @@
 <meta itemprop="description" content="First of all, let&rsquo;s nmap the machine IP.
 └─$ sudo nmap -sS -Pn 10.10.207.23 [sudo] password for venomsnake: Host discovery disabled (-Pn). All addresses will be marked &#39;up&#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-15 07:43 -03 Nmap scan report for 10.10.207.23 Host is up (0.20s latency). Not shown: 967 filtered ports, 30 closed ports PORT STATE SERVICE 21/tcp open ftp 22/tcp open ssh 80/tcp open http Nmap done: 1 IP address (1 host up) scanned in 9."><meta itemprop="datePublished" content="2021-08-15T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-08-15T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="316"><meta itemprop="image" content="https://nmmorette.github.io"/>
+<meta itemprop="wordCount" content="318"><meta itemprop="image" content="https://nmmorette.github.io"/>
 <meta itemprop="keywords" content="tryhackme,writeup,pentest,security,THM,CTF,privesc," />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://nmmorette.github.io"/>
@@ -65,7 +65,7 @@
 <meta property="og:url" content="https://nmmorette.github.io/posts/2021/08/tryhackme-bounty-hacker-write-up/" /><meta property="og:image" content="https://nmmorette.github.io"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-08-15T00:00:00&#43;00:00" />
 <meta property="article:modified_time" content="2021-08-15T00:00:00&#43;00:00" />
-<meta property="og:see_also" content="https://nmmorette.github.io/posts/2021/08/htb-blue-write-up/" /><meta property="og:see_also" content="https://nmmorette.github.io/posts/2021/07/htb-archetype-write-up/" /><meta property="og:see_also" content="https://nmmorette.github.io/posts/2021/07/tryhackme-steel-mountain-write-up/" /><meta property="og:see_also" content="https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-write-up/" />
+<meta property="og:see_also" content="https://nmmorette.github.io/posts/2021/08/hack-the-box-blue-write-up/" /><meta property="og:see_also" content="https://nmmorette.github.io/posts/2021/07/hack-the-box-archetype-write-up/" /><meta property="og:see_also" content="https://nmmorette.github.io/posts/2021/07/tryhackme-steel-mountain-write-up/" /><meta property="og:see_also" content="https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-write-up/" />
 <meta property="og:see_also" content="https://nmmorette.github.io/posts/2021/07/tryhackme-steel-mountain-write-up/" /><meta property="og:see_also" content="https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-write-up/" />
 
 
@@ -191,31 +191,31 @@ PORT   STATE SERVICE
 <span style="color:#ae81ff">80</span><span style="color:#f92672">/</span>tcp open  http
 
 Nmap done: <span style="color:#ae81ff">1</span> IP address (<span style="color:#ae81ff">1</span> host up) scanned in <span style="color:#ae81ff">9.46</span> seconds
-</code></pre></div><p>We found three open ports: 21,22 and 80. The next step is enumerate these ports:</p>
+</code></pre></div><p>We found three open ports: 21,22 and 80. The next step is to enumerate these ports:</p>
 <h2 id="http-80">HTTP 80</h2>
 
     <img src="https://nmmorette.github.io/images/tryhackme/bountyhacker/80.png"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>We found a text introduction in the web page.</p>
-<p>Let&rsquo;s use digobuster for dig more info:</p>
+<p>We found a text introduction on the web page.</p>
+<p>Let&rsquo;s use dirbuster to dig more info:</p>
 
     <img src="https://nmmorette.github.io/images/tryhackme/bountyhacker/dirbuster.png"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Unfortunelly we don&rsquo;t find usefull information.</p>
+<p>Unfortunately, we don&rsquo;t find useful information.</p>
 <h2 id="ftp-21">FTP 21</h2>
-<p>Le&rsquo;ts try a anonymous login into the ftp server:</p>
+<p>Let&rsquo;s try an anonymous login into the FTP server:</p>
 
     <img src="https://nmmorette.github.io/images/tryhackme/bountyhacker/ftp.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>It&rsquo;s working!</p>
 <p>We found 2 files in the server: <code>task.txt</code> with the answer for the question: <em>&ldquo;Who wrote the task list?&quot;</em>. 
-The other file <code>locks.txt</code> looks like a list of passwords.
-Now we have a users name and a list of possible passwords, we could try to brute force the port 22.</p>
+The other file <code>locks.txt</code> looks like a list of passwords.</p>
+<p>Now we have one user name and a list of possible passwords, we could try to brute force port 22.</p>
 <h2 id="ssh-22">SSH 22</h2>
-<p>Let&rsquo;s use <code>hydra</code> with a lista of users. We found a user in the file <code>task.txt</code> but just in case we could use a lista of possible users.</p>
+<p>Let&rsquo;s use <code>hydra</code> with a list of users. We found one user in the file <code>task.txt</code> but just in case we could use a list of possible users.</p>
 
     <img src="https://nmmorette.github.io/images/tryhackme/bountyhacker/users.png"  class="center"  style="border-radius: 10px;"  />
 
@@ -226,14 +226,14 @@ Now we have a users name and a list of possible passwords, we could try to brute
 
 
 <p>We got the lin&rsquo;s password to ssh.</p>
-<p>Finally we could have access to the host:</p>
+<p>Finally, we could have access to the host:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">ssh lin<span style="color:#960050;background-color:#1e0010">@</span><span style="color:#ae81ff">10.10.207.23</span>
-</code></pre></div><p>Now we&rsquo;re looking for the <code>users.txt</code> file:</p>
+</code></pre></div><p>Now we&rsquo;re looking the <code>users.txt</code> file in ~/Desktop:</p>
 
     <img src="https://nmmorette.github.io/images/tryhackme/bountyhacker/txt.png"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>The next step is find the <code>root.txt</code> file, but the user lin isn&rsquo;t in the sudoers group.
+<p>The next step is to find the <code>root.txt</code> file, but the user lin isn&rsquo;t in the sudoers group.
 So we need to find some way to privesc this host.</p>
 <p>Checking what we can run with <code>sudo -l</code>:</p>
 
@@ -283,7 +283,7 @@ So we need to find some way to privesc this host.</p>
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        316 Words
+        318 Words
       </p>
 
       <p>
@@ -405,11 +405,18 @@ So we need to find some way to privesc this host.</p>
 
         <div class="pagination__buttons">
             
+            <span class="button previous">
+                <a href="https://nmmorette.github.io/posts/2021/08/npp-semana-08-hashes-e-senhas-windows/">
+                    <span class="button__icon">←</span>
+                    <span class="button__text">NPP - Semana 08 - Hashes e Senhas Windows</span>
+                </a>
+            </span>
+            
 
             
             <span class="button next">
-                <a href="https://nmmorette.github.io/posts/2021/08/htb-blue-write-up/">
-                    <span class="button__text">HTB - Blue- Write Up</span>
+                <a href="https://nmmorette.github.io/posts/2021/08/hack-the-box-blue-write-up/">
+                    <span class="button__text">Hack the Box - Blue- Write Up</span>
                     <span class="button__icon">→</span>
                 </a>
             </span>

@@ -18,11 +18,11 @@
     </item>
     
     <item>
-      <title>HTB - Archetype - Write Up</title>
-      <link>https://nmmorette.github.io/posts/2021/07/htb-archetype-write-up/</link>
+      <title>Hack the Box - Archetype - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2021/07/hack-the-box-archetype-write-up/</link>
       <pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://nmmorette.github.io/posts/2021/07/htb-archetype-write-up/</guid>
+      <guid>https://nmmorette.github.io/posts/2021/07/hack-the-box-archetype-write-up/</guid>
       <description>Enumeration Initial scan:
 nmap -sSV 10.10.10.27Second nmap scan with --script vuln
 We found a possible starting point: CVE-2008-4250.
