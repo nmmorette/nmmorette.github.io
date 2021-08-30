@@ -5,8 +5,43 @@
         <description>Recent content in Posts on Natan Maia Morette</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 23 Aug 2021 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 30 Aug 2021 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://nmmorette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>RoadMap para MS-900</title>
+            <link>https://nmmorette.github.io/posts/2021/08/roadmap-para-ms-900/</link>
+            <pubDate>Mon, 30 Aug 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2021/08/roadmap-para-ms-900/</guid>
+            <description>Introdução O intuito desse post é ajudar os interessados em fazer a prova MS-900 Microsoft 365 Fundamentals. Nesse post vou falar um pouco sobre a prova e sobre o meu plano de estudos para passar.
+A prova tem nível fundamental ou seja é uma prova baseada em conceitos e não há prática, além disso é uma certificação de &amp;ldquo;entrada&amp;rdquo; para Microsoft 365. Vai te ajudar muito a conhecer a tecnologia ou por em prova seus conhecimentos.</description>
+            <content type="html"><![CDATA[
+    <img src="/images/ms-900/fundamental.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h3 id="introdução">Introdução</h3>
+<p>O intuito desse post é ajudar os interessados em fazer a prova MS-900 Microsoft 365 Fundamentals.
+Nesse post vou falar um pouco sobre a prova e sobre o meu plano de estudos para passar.</p>
+<p>A prova tem nível fundamental ou seja é uma prova baseada em conceitos e não há prática, além disso é uma certificação de &ldquo;entrada&rdquo; para Microsoft 365. Vai te ajudar muito a conhecer a tecnologia ou por em prova seus conhecimentos.</p>
+<p>Minha dica principal é ter vivência com a plataforma da microsoft, caso já tenha experiência sua prova com certeza será muito mais fácil. Porém também é possível fazer a prova sem ter experiência, mas talvez o candidato tenha certa dificuldade em assimilar a função de cada ferramenta dentro da plataforma. O que não é um impedimento, com um pouco mais de estudo é possível entender e até mesmo testar os serviços no plano free da Microsoft.</p>
+<p>A prova possui 40 questões e é preciso ter 70% de acerto. 
+O valor no Brasil é de 90 dólares. 
+Porém talvez você seja elegível a descontos de estudante ou corporativo. Consulte o desconto na página de agendamento.
+Além disso, existe um desconto para pessoas que foram atingidas pela situação atual em que estamos de pandêmia, o valor da prova fica em torno de 15 dólares nesse caso.</p>
+
+    <img src="/images/htb/ms-900/banner.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>As questões são de múltipla escolha, verdadeiro ou falso e também questões de correlacionar. 
+O contexto das questões as vezes são simples com perguntas diretas e outras envolvem uma descrição de uma &ldquo;situação&rdquo; ou &ldquo;cenário&rdquo; onde o profissional precisa responder com as soluções/ferramentas correspondentes da plataforma.</p>
+<h3 id="conteúdo">Conteúdo</h3>
+
+    <img src="/images/htb/ms-900/preco.png"  class="center"  style="border-radius: 10px;"  />
+
+
+]]></content>
+        </item>
         
         <item>
             <title>NPP - Semana 08 - Hashes e Senhas Windows</title>
@@ -95,12 +130,12 @@ nmap -sS -Pn -A 172.16.1.233 Um possível vetor de ataque é o SMB, vamos enume
 
 
 <p>Agora que temos a shell no host vamos buscar pela senha do usuário.
-Buscando por hashs com <code>hashdump</code>:</p>
+Buscando por hashes com <code>hashdump</code>:</p>
 
     <img src="/images/semana08_win/hashdump.png"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Encontramos as hashs dos usuários, agora basta utilizar o <code>john</code> ou o <code>hashcat</code> para decifrar a hash do usuário nicolas.</p>
+<p>Encontramos as hashes dos usuários, agora basta utilizar o <code>john</code> ou o <code>hashcat</code> para decifrar a hash do usuário nicolas.</p>
 
 
 <br>
@@ -217,7 +252,7 @@ Vamos bucar o script primeiro:</p>
     <img src="/images/semana08_win/queryuser.png"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Sabemos que o usuário CPD existe, agora precisamos de uma shell para explorar o host.
+<p>Encontramos o usuário CPD,  agora precisamos de uma shell para explorar o host e descobrir a senha.
 Vamos enviar um payload em powershell para o host usando a vulnerabilidade que descobrimos:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">function Invoke<span style="color:#f92672">-</span>PowerShellTcp 
 { 
@@ -350,7 +385,27 @@ http:<span style="color:#75715e">//www.labofapenetrationtester.com/2015/05/week-
 
 
 <p>Agora temos a shell do host.</p>
-<p>Vamos encontrar a senha solicitada.</p>
+<p>Vamos salvar os registros system10 e sam10 para obter as hashes:</p>
+
+    <img src="/images/semana08_win/sam10.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Configure um compartilhamento para receber o arquivo em sua máquina:</p>
+
+    <img src="/images/semana08_win/compart.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Vamos combinar os arquivos com o <code>impacket-secretsdump</code></p>
+
+    <img src="/images/semana08_win/secret.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Temos a hash do usuário CPD, vamos quebrar:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">hashcat <span style="color:#f92672">-</span>m <span style="color:#ae81ff">1000</span> hashes <span style="color:#f92672">/</span>home<span style="color:#f92672">/</span>venomsnake<span style="color:#f92672">/</span>Documents<span style="color:#f92672">/</span>loncrack<span style="color:#f92672">/</span>wl.txt 
+</code></pre></div>
+    <img src="/images/semana08_win/bck.png"  class="center"  style="border-radius: 10px;"  />
+
+
 
 
 <br>
@@ -359,14 +414,16 @@ http:<span style="color:#75715e">//www.labofapenetrationtester.com/2015/05/week-
   <summary>Resposta</summary>
   CPD01:bk7cpd
 </details>
-<h2 id="hahahugoshortcode-s47-hbhb7-172300103"><figure>
+<h2 id="hahahugoshortcode-s51-hbhb7-172300103"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>7. 172.30.0.103</h2>
 
     <img src="/images/semana08_win/7.png"  class="center"  style="border-radius: 10px;"  />
 
 
-
+<p>Encontramos o usuário e hash anteriormente, agora precisamos quebrar o hash e descobrir a senha.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">hashcat <span style="color:#f92672">-</span>m <span style="color:#ae81ff">1000</span> hashes <span style="color:#f92672">/</span>usr<span style="color:#f92672">/</span>share<span style="color:#f92672">/</span>wordlists<span style="color:#f92672">/</span>rockyou.txt 
+</code></pre></div>
 
 <br>
 
@@ -374,11 +431,17 @@ http:<span style="color:#75715e">//www.labofapenetrationtester.com/2015/05/week-
   <summary>Resposta</summary>
   DEV01:dev0105
 </details>
-<h2 id="hahahugoshortcode-s51-hbhb8-172300103"><figure>
+<h2 id="hahahugoshortcode-s55-hbhb8-172300103"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>8. 172.30.0.103</h2>
 
     <img src="/images/semana08_win/8.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Mesmo processo que anterior para descobrir a senha do adm:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">hashcat <span style="color:#f92672">-</span>m <span style="color:#ae81ff">1000</span> hashes <span style="color:#f92672">/</span>usr<span style="color:#f92672">/</span>share<span style="color:#f92672">/</span>wordlists<span style="color:#f92672">/</span>rockyou.txt 
+</code></pre></div>
+    <img src="/images/semana08_win/adm.png"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -389,12 +452,16 @@ http:<span style="color:#75715e">//www.labofapenetrationtester.com/2015/05/week-
   <summary>Resposta</summary>
   ADM01:admd0458
 </details>
-<h2 id="heading"></h2>
-<h2 id="hahahugoshortcode-s55-hbhb9-172300103"><figure>
+<h2 id="hahahugoshortcode-s60-hbhb9-172300103"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>9. 172.30.0.103</h2>
 
     <img src="/images/semana08_win/9.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Agora que temos o usuário e senha ADM, vamos logar via <code>psexec</code> no host e buscar o arquivo confidencial:</p>
+
+    <img src="/images/semana08_win/vlab.png"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -405,7 +472,7 @@ http:<span style="color:#75715e">//www.labofapenetrationtester.com/2015/05/week-
   <summary>Resposta</summary>
   vlab{VuLnRISK10winiMC}
 </details>
-<h2 id="heading-1"></h2>
+<h2 id="heading"></h2>
 ]]></content>
         </item>
         

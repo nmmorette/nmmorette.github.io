@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nmmorette.github.io/posts/2021/08/roadmap-para-ms-900/</loc>
+    <lastmod>2021-08-30T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://nmmorette.github.io/posts/2021/08/npp-semana-08-hashes-e-senhas-windows/</loc>
     <lastmod>2021-08-23T00:00:00+00:00</lastmod>
   </url><url>
@@ -62,6 +65,27 @@
     <loc>https://nmmorette.github.io/posts/2021/06/hello-world/</loc>
     <lastmod>2021-06-25T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://nmmorette.github.io/tags/certifica%C3%A7%C3%A3o/</loc>
+    <lastmod>2021-08-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/tags/microsoft/</loc>
+    <lastmod>2021-08-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/tags/ms/</loc>
+    <lastmod>2021-08-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/</loc>
+    <lastmod>2021-08-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/posts/</loc>
+    <lastmod>2021-08-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/tags/roadmap/</loc>
+    <lastmod>2021-08-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/tags/</loc>
+    <lastmod>2021-08-30T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://nmmorette.github.io/categories/</loc>
     <lastmod>2021-08-23T00:00:00+00:00</lastmod>
   </url><url>
@@ -77,22 +101,13 @@
     <loc>https://nmmorette.github.io/tags/desec/</loc>
     <lastmod>2021-08-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nmmorette.github.io/</loc>
-    <lastmod>2021-08-23T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nmmorette.github.io/categories/npp/</loc>
     <lastmod>2021-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nmmorette.github.io/tags/pentest/</loc>
     <lastmod>2021-08-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nmmorette.github.io/posts/</loc>
-    <lastmod>2021-08-23T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nmmorette.github.io/tags/security/</loc>
-    <lastmod>2021-08-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nmmorette.github.io/tags/</loc>
     <lastmod>2021-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nmmorette.github.io/tags/writeup/</loc>
