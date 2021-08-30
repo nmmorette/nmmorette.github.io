@@ -5,7 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="map[name:Natan]">
-<meta name="description" content="Enumeration Initial scan:
+<meta name="description" content="Content
+ Enumeration SMB Enumeration mssqlcli.py Payload First Key Privileged user access    Enumeration Initial scan:
 nmap -sSV 10.10.10.27Second nmap scan with --script vuln
 We found a possible starting point: CVE-2008-4250.
 SMB Enumeration The next step is to try to connect in the SMB service:
@@ -46,19 +47,21 @@ smbclient -L \\10.10.10.27 -NIPC$: this hidden share is a special share used f
 
 
 <meta itemprop="name" content="Hack the Box - Archetype - Write Up">
-<meta itemprop="description" content="Enumeration Initial scan:
+<meta itemprop="description" content="Content
+ Enumeration SMB Enumeration mssqlcli.py Payload First Key Privileged user access    Enumeration Initial scan:
 nmap -sSV 10.10.10.27Second nmap scan with --script vuln
 We found a possible starting point: CVE-2008-4250.
 SMB Enumeration The next step is to try to connect in the SMB service:
 smbclient -L \\10.10.10.27 -NIPC$: this hidden share is a special share used for inter-process communication. It doesn’t allow one to access files or directories like other shares, but rather allows one to communicate with processes running on the remote system."><meta itemprop="datePublished" content="2021-07-27T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-07-27T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="555"><meta itemprop="image" content="https://nmmorette.github.io"/>
+<meta itemprop="wordCount" content="566"><meta itemprop="image" content="https://nmmorette.github.io"/>
 <meta itemprop="keywords" content="HTB,writeup,pentest,security,pwn,HTB,CTF,metasploit,privesc," />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://nmmorette.github.io"/>
 
 <meta name="twitter:title" content="Hack the Box - Archetype - Write Up"/>
-<meta name="twitter:description" content="Enumeration Initial scan:
+<meta name="twitter:description" content="Content
+ Enumeration SMB Enumeration mssqlcli.py Payload First Key Privileged user access    Enumeration Initial scan:
 nmap -sSV 10.10.10.27Second nmap scan with --script vuln
 We found a possible starting point: CVE-2008-4250.
 SMB Enumeration The next step is to try to connect in the SMB service:
@@ -68,7 +71,8 @@ smbclient -L \\10.10.10.27 -NIPC$: this hidden share is a special share used f
 
 
     <meta property="og:title" content="Hack the Box - Archetype - Write Up" />
-<meta property="og:description" content="Enumeration Initial scan:
+<meta property="og:description" content="Content
+ Enumeration SMB Enumeration mssqlcli.py Payload First Key Privileged user access    Enumeration Initial scan:
 nmap -sSV 10.10.10.27Second nmap scan with --script vuln
 We found a possible starting point: CVE-2008-4250.
 SMB Enumeration The next step is to try to connect in the SMB service:
@@ -185,7 +189,26 @@ if (!doNotTrack) {
       
 
       <div class="post-content">
-        
+        <hr>
+<p>Content</p>
+<div class="toc">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#enumeration">Enumeration</a></li>
+    <li><a href="#smb-enumeration">SMB Enumeration</a></li>
+    <li><a href="#mssqlclipy">mssqlcli.py</a></li>
+    <li><a href="#payload">Payload</a></li>
+    <li><a href="#first-key">First Key</a></li>
+    <li><a href="#privileged-user-access">Privileged user access</a></li>
+  </ul>
+</nav>
+  </div>
+<hr>
+
+
+<br>
+
+
     <img src="https://nmmorette.github.io/images/htb/archetype/banner.png"  class="center"  style="border-radius: 10px;"  />
 
 
@@ -303,7 +326,7 @@ We only need to execute the payload in the target and wait for connection into t
     <img src="https://nmmorette.github.io/images/htb/archetype/shell.png"  class="center"  style="border-radius: 8px;"  />
 
 
-<h2 id="firts-key">Firts Key</h2>
+<h2 id="first-key">First Key</h2>
 <p>For the first key we need to enumerate the files:</p>
 
     <img src="https://nmmorette.github.io/images/htb/archetype/key.png"  class="center"  style="border-radius: 10px;"  />
@@ -379,7 +402,7 @@ We only need to execute the payload in the target and wait for connection into t
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        555 Words
+        566 Words
       </p>
 
       <p>

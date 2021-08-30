@@ -23,7 +23,8 @@
       <pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/posts/2021/07/hack-the-box-archetype-write-up/</guid>
-      <description>Enumeration Initial scan:
+      <description>Content
+ Enumeration SMB Enumeration mssqlcli.py Payload First Key Privileged user access    Enumeration Initial scan:
 nmap -sSV 10.10.10.27Second nmap scan with --script vuln
 We found a possible starting point: CVE-2008-4250.
 SMB Enumeration The next step is to try to connect in the SMB service:

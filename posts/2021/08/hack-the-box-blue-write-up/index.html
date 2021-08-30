@@ -5,7 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="map[name:Natan]">
-<meta name="description" content="Enumeration Initial scan:
+<meta name="description" content="Índice
+ Enumeration Exploit Flag    Enumeration Initial scan:
 └──╼ $sudo nmap -sS -Pn 10.10.10.40 Host discovery disabled (-Pn). All addresses will be marked &amp;#39;up&amp;#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-11 15:11 -03 Nmap scan report for 10.10.10.40 Host is up (0.45s latency). Not shown: 991 closed ports PORT STATE SERVICE 135/tcp open msrpc 139/tcp open netbios-ssn 445/tcp open microsoft-ds 49152/tcp open unknown 49153/tcp open unknown 49154/tcp open unknown 49155/tcp open unknown 49156/tcp open unknown 49157/tcp open unknown Second nmap scan with --script vuln only on the open ports:" />
 <meta name="keywords" content="DCPT,Pentest,CTF,Cybersecurity,RedTeam,TryhackMe,Hackthebox,certification, HTB, writeup, pentest, security, pwn, CTF, metasploit" />
 <meta name="robots" content="noodp" />
@@ -43,23 +44,26 @@
 
 
 <meta itemprop="name" content="Hack the Box - Blue- Write Up">
-<meta itemprop="description" content="Enumeration Initial scan:
+<meta itemprop="description" content="Índice
+ Enumeration Exploit Flag    Enumeration Initial scan:
 └──╼ $sudo nmap -sS -Pn 10.10.10.40 Host discovery disabled (-Pn). All addresses will be marked &#39;up&#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-11 15:11 -03 Nmap scan report for 10.10.10.40 Host is up (0.45s latency). Not shown: 991 closed ports PORT STATE SERVICE 135/tcp open msrpc 139/tcp open netbios-ssn 445/tcp open microsoft-ds 49152/tcp open unknown 49153/tcp open unknown 49154/tcp open unknown 49155/tcp open unknown 49156/tcp open unknown 49157/tcp open unknown Second nmap scan with --script vuln only on the open ports:"><meta itemprop="datePublished" content="2021-08-14T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-08-14T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="520"><meta itemprop="image" content="https://nmmorette.github.io"/>
+<meta itemprop="wordCount" content="526"><meta itemprop="image" content="https://nmmorette.github.io"/>
 <meta itemprop="keywords" content="HTB,writeup,pentest,security,pwn,CTF,metasploit," />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://nmmorette.github.io"/>
 
 <meta name="twitter:title" content="Hack the Box - Blue- Write Up"/>
-<meta name="twitter:description" content="Enumeration Initial scan:
+<meta name="twitter:description" content="Índice
+ Enumeration Exploit Flag    Enumeration Initial scan:
 └──╼ $sudo nmap -sS -Pn 10.10.10.40 Host discovery disabled (-Pn). All addresses will be marked &#39;up&#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-11 15:11 -03 Nmap scan report for 10.10.10.40 Host is up (0.45s latency). Not shown: 991 closed ports PORT STATE SERVICE 135/tcp open msrpc 139/tcp open netbios-ssn 445/tcp open microsoft-ds 49152/tcp open unknown 49153/tcp open unknown 49154/tcp open unknown 49155/tcp open unknown 49156/tcp open unknown 49157/tcp open unknown Second nmap scan with --script vuln only on the open ports:"/>
 
 
 
 
     <meta property="og:title" content="Hack the Box - Blue- Write Up" />
-<meta property="og:description" content="Enumeration Initial scan:
+<meta property="og:description" content="Índice
+ Enumeration Exploit Flag    Enumeration Initial scan:
 └──╼ $sudo nmap -sS -Pn 10.10.10.40 Host discovery disabled (-Pn). All addresses will be marked &#39;up&#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-11 15:11 -03 Nmap scan report for 10.10.10.40 Host is up (0.45s latency). Not shown: 991 closed ports PORT STATE SERVICE 135/tcp open msrpc 139/tcp open netbios-ssn 445/tcp open microsoft-ds 49152/tcp open unknown 49153/tcp open unknown 49154/tcp open unknown 49155/tcp open unknown 49156/tcp open unknown 49157/tcp open unknown Second nmap scan with --script vuln only on the open ports:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nmmorette.github.io/posts/2021/08/hack-the-box-blue-write-up/" /><meta property="og:image" content="https://nmmorette.github.io"/><meta property="article:section" content="posts" />
@@ -173,7 +177,23 @@ if (!doNotTrack) {
       
 
       <div class="post-content">
-        
+        <hr>
+<p>Índice</p>
+<div class="toc">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#enumeration">Enumeration</a></li>
+    <li><a href="#exploit">Exploit</a></li>
+    <li><a href="#flag">Flag</a></li>
+  </ul>
+</nav>
+  </div>
+<hr>
+
+
+<br>
+
+
     <img src="https://nmmorette.github.io/images/htb/blue/banner.png"  class="center"  style="border-radius: 10px;"  />
 
 
@@ -256,6 +276,7 @@ OS and Service detection performed. Please report any incorrect results at https
     <img src="https://nmmorette.github.io/images/htb/blue/vuln.png"  class="center"  style="border-radius: 10px;"  />
 
 
+<h2 id="exploit">Exploit</h2>
 <p>Let&rsquo;s double-check this vuln with <code>msfconsole</code>.
 Search for &ldquo;ms17-010&rdquo; and use the module: scanner/smb/smb_ms17_010:</p>
 
@@ -277,6 +298,7 @@ Search for &ldquo;ms17-010&rdquo; and use the module: scanner/smb/smb_ms17_010:<
     <img src="https://nmmorette.github.io/images/htb/blue/exploit.png"  class="center"  style="border-radius: 8px;"  />
 
 
+<h2 id="flag">Flag</h2>
 <p>Search for the flag in the commons users folders.</p>
 
     <img src="https://nmmorette.github.io/images/htb/blue/pawnd.PNG"  class="center"  style="border-radius: 8px;"  />
@@ -313,7 +335,7 @@ Search for &ldquo;ms17-010&rdquo; and use the module: scanner/smb/smb_ms17_010:<
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        520 Words
+        526 Words
       </p>
 
       <p>
