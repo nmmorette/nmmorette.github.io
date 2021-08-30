@@ -27,17 +27,17 @@ nmap -A -v mail.businesscorp.com.br -p-Verifique o resultado e informe as port
 
 
 
-<link rel="stylesheet" href="https://nmmorette.github.io/main.031a8efc33f94f55a4071bf4e91596478a5809fc8c148fab113801189cfd2152.css">
+<link rel="stylesheet" href="/main.031a8efc33f94f55a4071bf4e91596478a5809fc8c148fab113801189cfd2152.css">
 
 
 
 
-    <link rel="apple-touch-icon" sizes="180x180" href="https://nmmorette.github.io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://nmmorette.github.io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://nmmorette.github.io/favicon-16x16.png">
-    <link rel="manifest" href="https://nmmorette.github.io/site.webmanifest">
-    <link rel="mask-icon" href="https://nmmorette.github.io/safari-pinned-tab.svg" color="#1b1c1d">
-    <link rel="shortcut icon" href="https://nmmorette.github.io/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1b1c1d">
+    <link rel="shortcut icon" href="/favicon.ico">
     <meta name="msapplication-TileColor" content="#1b1c1d">
     <meta name="theme-color" content="#1b1c1d">
 
@@ -112,7 +112,7 @@ if (!doNotTrack) {
         <div class="container">
             <header class="header">
     <span class="header__inner">
-        <a href="https://nmmorette.github.io/" style="text-decoration: none;">
+        <a href="/" style="text-decoration: none;">
     <div class="logo">
         
             <span class="logo__mark">&gt;</span>
@@ -130,7 +130,7 @@ if (!doNotTrack) {
         <span class="header__right">
             
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="https://nmmorette.github.io/whoami/">$whoami</a></li><li><a href="https://nmmorette.github.io/badges/">Badges</a></li><li><a href="https://nmmorette.github.io/posts/">Posts</a></li>
+    <ul class="menu__inner"><li><a href="/whoami/">$whoami</a></li><li><a href="/badges/">Badges</a></li><li><a href="/posts/">Posts</a></li>
     </ul>
 </nav>
 
@@ -180,12 +180,12 @@ if (!doNotTrack) {
 
       <div class="post-content">
         
-    <img src="https://nmmorette.github.io/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <h5 id="o-intuito-desse-post-não-é-dar-as-respostas-e-sim-documentar-os-passos-e-ferramentas-utilizadas">O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</h5>
 
-    <img src="https://nmmorette.github.io/images/semana06/semana06.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/semana06.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <h3 id="alvo-mailbusinesscorpcombr--3759174227">Alvo: mail.businesscorp.com.br | 37.59.174.227</h3>
@@ -193,13 +193,13 @@ if (!doNotTrack) {
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure> 1. RECON I</h2>
 
-    <img src="https://nmmorette.github.io/images/semana06/1.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/1.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Vamos iniciar com um scan de todas as portas:</p>
 <pre><code class="language-cli" data-lang="cli">nmap -A -v mail.businesscorp.com.br -p-
 </code></pre>
-    <img src="https://nmmorette.github.io/images/semana06/nmap.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/nmap.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Verifique o resultado e informe as portas abertas em ordem crescente.</p>
@@ -215,7 +215,7 @@ if (!doNotTrack) {
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>2. RECON II</h2>
 
-    <img src="https://nmmorette.github.io/images/semana06/2.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/2.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Vanos realizar um scan para portas udp, também com <code>nmap</code></p>
@@ -233,14 +233,14 @@ if (!doNotTrack) {
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>3. RECON III</h2>
 
-    <img src="https://nmmorette.github.io/images/semana06/3.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/3.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Vamos utilizar o <code>netcat</code> para verificar dar um banner grab nessa porta:</p>
 <pre><code class="language-cli" data-lang="cli">netcat -u mail.businesscorp.com.br 53
 </code></pre><p>Não se esqueça de apertar o &ldquo;ENTER&rdquo; após a conexão, para exibir o banner.</p>
 
-    <img src="https://nmmorette.github.io/images/semana06/banner.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/banner.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -255,7 +255,7 @@ if (!doNotTrack) {
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>4. OSINT</h2>
 
-    <img src="https://nmmorette.github.io/images/semana06/4.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/4.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>A importância de documentar e anotar todas as informações, essa informação foi conseguida na fazer de information gathering <a href="https://nmmorette.github.io/posts/2021/07/dcpt-semana-05-information-gathering-business/">bussiness</a>.</p>
@@ -271,7 +271,7 @@ if (!doNotTrack) {
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>5. OSINT II</h2>
 
-    <img src="https://nmmorette.github.io/images/semana06/5.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/5.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Nosso scan do nmap identificou a porta 110/tcp que é de um serviço de email. 
@@ -281,18 +281,18 @@ USER &lt;username&gt;
 PASS &lt;password&gt;
 </code></pre><p>Depois de autenticado, vamos rodar o comando STAT para verificar a quantidade de mensagens.</p>
 
-    <img src="https://nmmorette.github.io/images/semana06/stat.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/stat.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Agora sabemos que a usuária tem 2 mensagens na caixa, vamos rodar o RETR 1 para recuperar a primeira mensagem.</p>
 
-    <img src="https://nmmorette.github.io/images/semana06/retr.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/retr.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>No cabeçalho do email é possível identificar o nome do serviço de e-mail.</p>
 <p>Alguns comandos do serviço POP3</p>
 
-    <img src="https://nmmorette.github.io/images/semana06/pop.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/pop.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -307,7 +307,7 @@ PASS &lt;password&gt;
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>6. OSINT III</h2>
 
-    <img src="https://nmmorette.github.io/images/semana06/6.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/6.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Essa informação também será encontrada no cabeçalho do e-mail.</p>
@@ -323,7 +323,7 @@ PASS &lt;password&gt;
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>7. OSINT IV</h2>
 
-    <img src="https://nmmorette.github.io/images/semana06/7.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/7.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Verifique o campo <code>User-Agent:</code> para encontrar a resposta.</p>
@@ -339,7 +339,7 @@ PASS &lt;password&gt;
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>8. OSINT VI</h2>
 
-    <img src="https://nmmorette.github.io/images/semana06/8.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/8.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Continue verificando o cabeçalho da mensagem.</p>
@@ -355,7 +355,7 @@ PASS &lt;password&gt;
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>9.OSINT VII</h2>
 
-    <img src="https://nmmorette.github.io/images/semana06/9.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/9.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Como abrimos a primeira mensagem com o RETR, basta verificar a data no cabeçalho do e-mail.</p>
@@ -371,7 +371,7 @@ PASS &lt;password&gt;
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>10. OSINT VII</h2>
 
-    <img src="https://nmmorette.github.io/images/semana06/10.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/10.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Procure pelo campo <code>Received: from</code></p>
@@ -387,7 +387,7 @@ PASS &lt;password&gt;
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>11. OSINT VIII</h2>
 
-    <img src="https://nmmorette.github.io/images/semana06/11.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/11.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -402,7 +402,7 @@ PASS &lt;password&gt;
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>12. OSINT IX</h2>
 
-    <img src="https://nmmorette.github.io/images/semana06/12.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/12.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Vamos verificar a mensagem 2 para tentar identificar outros endereços de email.
@@ -419,7 +419,7 @@ No cabeçalho da segunda mensagem é possível encontrar um novo email da organi
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>13. OSINT X</h2>
 
-    <img src="https://nmmorette.github.io/images/semana06/13.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/13.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Leia o conteúdo de ambos os emails e preste atenção nos detalhes.
@@ -436,7 +436,7 @@ Logo, na teoria, ela respondeu esse email com a senha. Precisamos recuperar esse
 </code></pre><p>Vamos listar as pastas</p>
 <pre><code class="language-IMAP" data-lang="IMAP">A1 LIST &quot;&quot;*
 </code></pre>
-    <img src="https://nmmorette.github.io/images/semana06/imap.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/imap.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Agora vamos entrar na caixa de enviados.</p>
@@ -467,13 +467,13 @@ Na segunda linha selecionamos o email para visualização.</p>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>14. OSINT XI</h2>
 
-    <img src="https://nmmorette.github.io/images/semana06/14.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/14.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Agora temos outra senha da usuária.
 Vamos autenticar no endereço: mail.businesscorp.com.br</p>
 
-    <img src="https://nmmorette.github.io/images/semana06/camila.jpg"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana06/camila.jpg"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -686,7 +686,7 @@ Vamos autenticar no endereço: mail.businesscorp.com.br</p>
 
 
 
-<script type="text/javascript" src="https://nmmorette.github.io/bundle.min.599099f1f14b78b657d524b28e10e0c5098e7cd46e9c7aed73d577068a276c3ff1bb234cbf29cb313333e83cf411727b43157c91ce5b809e2ffc81664614608e.js" integrity="sha512-WZCZ8fFLeLZX1SSyjhDgxQmOfNRunHrtc9V3BoonbD/xuyNMvynLMTMz6Dz0EXJ7QxV8kc5bgJ4v/IFmRhRgjg=="></script>
+<script type="text/javascript" src="/bundle.min.599099f1f14b78b657d524b28e10e0c5098e7cd46e9c7aed73d577068a276c3ff1bb234cbf29cb313333e83cf411727b43157c91ce5b809e2ffc81664614608e.js" integrity="sha512-WZCZ8fFLeLZX1SSyjhDgxQmOfNRunHrtc9V3BoonbD/xuyNMvynLMTMz6Dz0EXJ7QxV8kc5bgJ4v/IFmRhRgjg=="></script>
 
 
 

@@ -27,17 +27,17 @@
 
 
 
-<link rel="stylesheet" href="https://nmmorette.github.io/main.031a8efc33f94f55a4071bf4e91596478a5809fc8c148fab113801189cfd2152.css">
+<link rel="stylesheet" href="/main.031a8efc33f94f55a4071bf4e91596478a5809fc8c148fab113801189cfd2152.css">
 
 
 
 
-    <link rel="apple-touch-icon" sizes="180x180" href="https://nmmorette.github.io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://nmmorette.github.io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://nmmorette.github.io/favicon-16x16.png">
-    <link rel="manifest" href="https://nmmorette.github.io/site.webmanifest">
-    <link rel="mask-icon" href="https://nmmorette.github.io/safari-pinned-tab.svg" color="#1b1c1d">
-    <link rel="shortcut icon" href="https://nmmorette.github.io/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1b1c1d">
+    <link rel="shortcut icon" href="/favicon.ico">
     <meta name="msapplication-TileColor" content="#1b1c1d">
     <meta name="theme-color" content="#1b1c1d">
 
@@ -112,7 +112,7 @@ if (!doNotTrack) {
         <div class="container">
             <header class="header">
     <span class="header__inner">
-        <a href="https://nmmorette.github.io/" style="text-decoration: none;">
+        <a href="/" style="text-decoration: none;">
     <div class="logo">
         
             <span class="logo__mark">&gt;</span>
@@ -130,7 +130,7 @@ if (!doNotTrack) {
         <span class="header__right">
             
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="https://nmmorette.github.io/whoami/">$whoami</a></li><li><a href="https://nmmorette.github.io/badges/">Badges</a></li><li><a href="https://nmmorette.github.io/posts/">Posts</a></li>
+    <ul class="menu__inner"><li><a href="/whoami/">$whoami</a></li><li><a href="/badges/">Badges</a></li><li><a href="/posts/">Posts</a></li>
     </ul>
 </nav>
 
@@ -180,12 +180,12 @@ if (!doNotTrack) {
 
       <div class="post-content">
         
-    <img src="https://nmmorette.github.io/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <h5 id="o-intuito-desse-post-não-é-dar-as-respostas-e-sim-documentar-os-passos-e-ferramentas-utilizadas">O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</h5>
 
-    <img src="https://nmmorette.github.io/images/semana-05-vpn/banner.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana-05-vpn/banner.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Conecte na vpn da Desec para realizar esses labs.</p>
@@ -194,7 +194,7 @@ if (!doNotTrack) {
     </figure>.Lab 01</h2>
 <h3 id="ip-do-alvo-17216160">IP do alvo: 172.16.1.60</h3>
 
-    <img src="https://nmmorette.github.io/images/semana-05-vpn/lab1.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana-05-vpn/lab1.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Utilizando as ténicas de banner grab, vamos encontar a reposta desse lab</p>
@@ -218,7 +218,7 @@ Nesse caso enviamos uma requisição qualquer:</p>
 <pre><code class="language-cli" data-lang="cli">nc -v 172.16.1.60 80  
 GET /index.asp/ HTTP/1.0
 </code></pre>
-    <img src="https://nmmorette.github.io/images/semana-05-vpn/nc.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana-05-vpn/nc.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <ul>
@@ -226,7 +226,7 @@ GET /index.asp/ HTTP/1.0
 </ul>
 <pre><code class="language-cli" data-lang="cli">nikto -h 172.16.1.60
 </code></pre>
-    <img src="https://nmmorette.github.io/images/semana-05-vpn/nikto.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana-05-vpn/nikto.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <ul>
@@ -234,7 +234,7 @@ GET /index.asp/ HTTP/1.0
 </ul>
 <pre><code class="language-cli" data-lang="cli">whatweb -v 172.16.1.60
 </code></pre>
-    <img src="https://nmmorette.github.io/images/semana-05-vpn/iis.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana-05-vpn/iis.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <ul>
@@ -244,14 +244,14 @@ GET /index.asp/ HTTP/1.0
 <pre><code class="language-cli" data-lang="cli">skipfish -o skip  http://172.16.1.60
 </code></pre><p>A flag <code>-o</code> indica uma pasta para salvar o report.</p>
 
-    <img src="https://nmmorette.github.io/images/semana-05-vpn/skip.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana-05-vpn/skip.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <ul>
 <li><a href="https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg?hl=pt-BR">Whaappalyzer</a></li>
 </ul>
 
-    <img src="https://nmmorette.github.io/images/semana-05-vpn/wapp.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana-05-vpn/wapp.png"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -266,7 +266,7 @@ GET /index.asp/ HTTP/1.0
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>.Lab 02</h2>
 
-    <img src="https://nmmorette.github.io/images/semana-05-vpn/lab2.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana-05-vpn/lab2.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>A linguagem de programação utilizada no site pode ser encontrada utilizando as mesmas ferramentas do lab anterior.</p>
@@ -283,7 +283,7 @@ GET /index.asp/ HTTP/1.0
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>.Lab 03</h2>
 
-    <img src="https://nmmorette.github.io/images/semana-05-vpn/lab3.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana-05-vpn/lab3.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Para encontrar essa resposta, primeiro precisamos entender um pouco sobre padrão de páginas na web.
@@ -501,7 +501,7 @@ Assim teremos a versão exata do asp.net que está rodando na página.</p>
 
 
 
-<script type="text/javascript" src="https://nmmorette.github.io/bundle.min.599099f1f14b78b657d524b28e10e0c5098e7cd46e9c7aed73d577068a276c3ff1bb234cbf29cb313333e83cf411727b43157c91ce5b809e2ffc81664614608e.js" integrity="sha512-WZCZ8fFLeLZX1SSyjhDgxQmOfNRunHrtc9V3BoonbD/xuyNMvynLMTMz6Dz0EXJ7QxV8kc5bgJ4v/IFmRhRgjg=="></script>
+<script type="text/javascript" src="/bundle.min.599099f1f14b78b657d524b28e10e0c5098e7cd46e9c7aed73d577068a276c3ff1bb234cbf29cb313333e83cf411727b43157c91ce5b809e2ffc81664614608e.js" integrity="sha512-WZCZ8fFLeLZX1SSyjhDgxQmOfNRunHrtc9V3BoonbD/xuyNMvynLMTMz6Dz0EXJ7QxV8kc5bgJ4v/IFmRhRgjg=="></script>
 
 
 

@@ -32,17 +32,17 @@ Nmap gives this answer:
 
 
 
-<link rel="stylesheet" href="https://nmmorette.github.io/main.031a8efc33f94f55a4071bf4e91596478a5809fc8c148fab113801189cfd2152.css">
+<link rel="stylesheet" href="/main.031a8efc33f94f55a4071bf4e91596478a5809fc8c148fab113801189cfd2152.css">
 
 
 
 
-    <link rel="apple-touch-icon" sizes="180x180" href="https://nmmorette.github.io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://nmmorette.github.io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://nmmorette.github.io/favicon-16x16.png">
-    <link rel="manifest" href="https://nmmorette.github.io/site.webmanifest">
-    <link rel="mask-icon" href="https://nmmorette.github.io/safari-pinned-tab.svg" color="#1b1c1d">
-    <link rel="shortcut icon" href="https://nmmorette.github.io/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1b1c1d">
+    <link rel="shortcut icon" href="/favicon.ico">
     <meta name="msapplication-TileColor" content="#1b1c1d">
     <meta name="theme-color" content="#1b1c1d">
 
@@ -130,7 +130,7 @@ if (!doNotTrack) {
         <div class="container">
             <header class="header">
     <span class="header__inner">
-        <a href="https://nmmorette.github.io/" style="text-decoration: none;">
+        <a href="/" style="text-decoration: none;">
     <div class="logo">
         
             <span class="logo__mark">&gt;</span>
@@ -148,7 +148,7 @@ if (!doNotTrack) {
         <span class="header__right">
             
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="https://nmmorette.github.io/whoami/">$whoami</a></li><li><a href="https://nmmorette.github.io/badges/">Badges</a></li><li><a href="https://nmmorette.github.io/posts/">Posts</a></li>
+    <ul class="menu__inner"><li><a href="/whoami/">$whoami</a></li><li><a href="/badges/">Badges</a></li><li><a href="/posts/">Posts</a></li>
     </ul>
 </nav>
 
@@ -198,7 +198,7 @@ if (!doNotTrack) {
 
       <div class="post-content">
         
-    <img src="https://nmmorette.github.io/images/steelmountain/banner.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/steelmountain/banner.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <h2 id="task-1-introduction">Task 1. Introduction</h2>
@@ -206,19 +206,19 @@ if (!doNotTrack) {
 <pre><code class="language-cli" data-lang="cli"> nmap -sS -A 10.10.169.181 -Pn
 </code></pre><p>We found a web service open port (80), let&rsquo;s open the web page:</p>
 
-    <img src="https://nmmorette.github.io/images/steelmountain/80.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/steelmountain/80.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Take a look at the source code:</p>
 
-    <img src="https://nmmorette.github.io/images/steelmountain/sourcepage.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/steelmountain/sourcepage.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p><strong>Who is the employee of the month?</strong></p>
 <p><code>Bill Harper</code></p>
 <h2 id="task-2-inicial-access">Task 2. Inicial Access</h2>
 
-    <img src="https://nmmorette.github.io/images/steelmountain/task1.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/steelmountain/task1.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p><strong>Scan the machine with nmap. What is the other port running a web server on?</strong></p>
@@ -233,22 +233,22 @@ if (!doNotTrack) {
 <p><strong>Use Metasploit to get an initial shell. What is the user flag?</strong></p>
 <p>Open the msfconsole and search for rejetto:</p>
 
-    <img src="https://nmmorette.github.io/images/steelmountain/rejetto.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/steelmountain/rejetto.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Configure the exploit options:</p>
 
-    <img src="https://nmmorette.github.io/images/steelmountain/task1.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/steelmountain/task1.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Run the exploit and wait for shell access:</p>
 
-    <img src="https://nmmorette.github.io/images/steelmountain/exploit.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/steelmountain/exploit.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Now that we have an initial shell on this Windows machine as Bill, let&rsquo;s search for the key in Bill’s desktop:</p>
 
-    <img src="https://nmmorette.github.io/images/steelmountain/key.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/steelmountain/key.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p><code>b04763b6fcf51fcd7c13abc7db4fd365</code></p>
@@ -264,7 +264,7 @@ if (!doNotTrack) {
 
 <p>You can download the script <a href="https://github.com/PowerShellMafia/PowerSploit/blob/master/Privesc/PowerUp.ps1">here</a>. Now you can use the upload command in Metasploit to upload the script.</p>
 
-    <img src="https://nmmorette.github.io/images/steelmountain/powerup.png"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/steelmountain/powerup.png"  class="center"  style="border-radius: 8px;"  />
 
 
 <p>Let&rsquo;s load the <code>PowerShell</code> module in meterpreter:</p>
@@ -274,7 +274,7 @@ if (!doNotTrack) {
 </code></pre><p>This will open a PowerShell session, after that ruin the script and use: <code>Invoke-Allchecks</code>
 Look at the results and search for True in the <code>Can Restart</code> option:</p>
 
-    <img src="https://nmmorette.github.io/images/steelmountain/canrestart.png"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/steelmountain/canrestart.png"  class="center"  style="border-radius: 8px;"  />
 
 
 <p>Search to the CanRestart option that is set to true.</p>
@@ -282,23 +282,23 @@ Look at the results and search for True in the <code>Can Restart</code> option:<
 <p><code>AdvancedSystemCareService9</code></p>
 <p>Now let&rsquo;s configure the <code>.exe</code> with <code>msfvenom</code>:</p>
 
-    <img src="https://nmmorette.github.io/images/steelmountain/msfvenom.png"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/steelmountain/msfvenom.png"  class="center"  style="border-radius: 8px;"  />
 
 
 <p>Then upload the file to <code>Iobit</code> folder:</p>
 
-    <img src="https://nmmorette.github.io/images/steelmountain/iobit.png"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/steelmountain/iobit.png"  class="center"  style="border-radius: 8px;"  />
 
 
 <p>Preparing the <code>netcat</code>:</p>
 
-    <img src="https://nmmorette.github.io/images/steelmountain/netcat.png"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/steelmountain/netcat.png"  class="center"  style="border-radius: 8px;"  />
 
 
 <p>After that, stop the service <code>AdvancedSystemCareService9</code>, then copy the <code>Advanced.exe</code> to the “Advanced SystemCare” folder, now we should start the <code>AdvancedSystemCareService9</code> again.</p>
 <p>Take a look at your netcat connection:</p>
 
-    <img src="https://nmmorette.github.io/images/steelmountain/netcat2.png"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/steelmountain/netcat2.png"  class="center"  style="border-radius: 8px;"  />
 
 
 <p>We have an administrator shell, search for the key in the Administrator&rsquo;s folder.</p>
@@ -502,7 +502,7 @@ Look at the results and search for True in the <code>Can Restart</code> option:<
 
 
 
-<script type="text/javascript" src="https://nmmorette.github.io/bundle.min.599099f1f14b78b657d524b28e10e0c5098e7cd46e9c7aed73d577068a276c3ff1bb234cbf29cb313333e83cf411727b43157c91ce5b809e2ffc81664614608e.js" integrity="sha512-WZCZ8fFLeLZX1SSyjhDgxQmOfNRunHrtc9V3BoonbD/xuyNMvynLMTMz6Dz0EXJ7QxV8kc5bgJ4v/IFmRhRgjg=="></script>
+<script type="text/javascript" src="/bundle.min.599099f1f14b78b657d524b28e10e0c5098e7cd46e9c7aed73d577068a276c3ff1bb234cbf29cb313333e83cf411727b43157c91ce5b809e2ffc81664614608e.js" integrity="sha512-WZCZ8fFLeLZX1SSyjhDgxQmOfNRunHrtc9V3BoonbD/xuyNMvynLMTMz6Dz0EXJ7QxV8kc5bgJ4v/IFmRhRgjg=="></script>
 
 
 

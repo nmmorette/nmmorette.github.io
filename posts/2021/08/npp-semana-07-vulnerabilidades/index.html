@@ -27,17 +27,17 @@ Na web recebemos uma solicitação de credenciais que informou o serviço que es
 
 
 
-<link rel="stylesheet" href="https://nmmorette.github.io/main.031a8efc33f94f55a4071bf4e91596478a5809fc8c148fab113801189cfd2152.css">
+<link rel="stylesheet" href="/main.031a8efc33f94f55a4071bf4e91596478a5809fc8c148fab113801189cfd2152.css">
 
 
 
 
-    <link rel="apple-touch-icon" sizes="180x180" href="https://nmmorette.github.io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://nmmorette.github.io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://nmmorette.github.io/favicon-16x16.png">
-    <link rel="manifest" href="https://nmmorette.github.io/site.webmanifest">
-    <link rel="mask-icon" href="https://nmmorette.github.io/safari-pinned-tab.svg" color="#1b1c1d">
-    <link rel="shortcut icon" href="https://nmmorette.github.io/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1b1c1d">
+    <link rel="shortcut icon" href="/favicon.ico">
     <meta name="msapplication-TileColor" content="#1b1c1d">
     <meta name="theme-color" content="#1b1c1d">
 
@@ -112,7 +112,7 @@ if (!doNotTrack) {
         <div class="container">
             <header class="header">
     <span class="header__inner">
-        <a href="https://nmmorette.github.io/" style="text-decoration: none;">
+        <a href="/" style="text-decoration: none;">
     <div class="logo">
         
             <span class="logo__mark">&gt;</span>
@@ -130,7 +130,7 @@ if (!doNotTrack) {
         <span class="header__right">
             
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="https://nmmorette.github.io/whoami/">$whoami</a></li><li><a href="https://nmmorette.github.io/badges/">Badges</a></li><li><a href="https://nmmorette.github.io/posts/">Posts</a></li>
+    <ul class="menu__inner"><li><a href="/whoami/">$whoami</a></li><li><a href="/badges/">Badges</a></li><li><a href="/posts/">Posts</a></li>
     </ul>
 </nav>
 
@@ -180,62 +180,62 @@ if (!doNotTrack) {
 
       <div class="post-content">
         
-    <img src="https://nmmorette.github.io/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <h5 id="o-intuito-desse-post-não-é-dar-as-respostas-e-sim-documentar-os-passos-e-ferramentas-utilizadas">O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</h5>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/banner.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/banner.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <h2 id="hahahugoshortcode-s2-hbhb-1host-i"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure> 1.Host I</h2>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/1.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/1.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Nesse host vamos iniciar com o <code>msfconsole</code>.
 Vamos rodar o primeiro scan:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">msf6 <span style="color:#f92672">&gt;</span> db_nmap <span style="color:#f92672">-</span>sSV <span style="color:#f92672">-</span>Pn <span style="color:#ae81ff">172.16.1.100</span>
 </code></pre></div>
-    <img src="https://nmmorette.github.io/images/semana07-vuln/nmap1.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/nmap1.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Temos a porta 81 rodando um Apache, vamos tentar acessar via web e conseguir mais informações do host.</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/ipfire.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/ipfire.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Na web recebemos uma solicitação de credenciais que informou o serviço que está em execução: <code>IPFire</code></p>
 <p>Como o acesso é http vamos buscar no mfsconsole um módulo de ataque de força bruta:</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/http.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/http.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Setando as opções do módulo:</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/conf.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/conf.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Executando:</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/pass.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/pass.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Agora que descobrimos o usuário e senha, vamos logar na interface web do serviço para verificação:</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/fw.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/fw.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Com as credenciais vamos rodar um exploit no <code>IpFire</code> que para correto funcionamento precisa de credenciais:</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/exploit.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/exploit.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Executando o exploit conseguimos uma shell no host:
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/exploit2.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/exploit2.png"  class="center"  style="border-radius: 10px;"  />
 
 </p>
 <p>Agora podemos enumerar os diretórios para encontrar a key.</p>
@@ -251,40 +251,40 @@ Vamos rodar o primeiro scan:</p>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>2.Host II</h2>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/2.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/2.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Vamos fazer um scan no segundo host:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"> db_nmap <span style="color:#f92672">-</span>sSV <span style="color:#f92672">-</span>Pn <span style="color:#ae81ff">172.16.1.233</span>
 </code></pre></div><p>Agora temos dois hosts em nossa seção do msf6:</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/hosts.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/hosts.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Vamos executar o <code>nmap</code> com o script de vulnerabilidades para encontrar possíveis vetores de ataque:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">msf6 <span style="color:#f92672">&gt;</span> db_nmap <span style="color:#f92672">--</span>script vuln <span style="color:#ae81ff">172.16.1.233</span>
 </code></pre></div>
-    <img src="https://nmmorette.github.io/images/semana07-vuln/ms017.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/ms017.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Encontramos a vulnerabilidade <code>ms17-010</code>, vamos buscar por exploits no console:</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/ms172.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/ms172.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Vamos utilizar o exploit 0 e setar as configurações para o ataque:</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/ms173.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/ms173.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Executando o exploit:</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/ms174.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/ms174.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Agora que temos a shell no hsot, vamos bucar plea informação confidencial:</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/key.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/key.png"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -299,51 +299,51 @@ Vamos rodar o primeiro scan:</p>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>3.Host III</h2>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/3.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/3.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Scan inicial:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">msf6 <span style="color:#f92672">&gt;</span> db_nmap <span style="color:#f92672">-</span>sSV <span style="color:#f92672">-</span>Pn <span style="color:#ae81ff">172.16.1.108</span>
 </code></pre></div>
-    <img src="https://nmmorette.github.io/images/semana07-vuln/host31.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/host31.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Faremos o mesmo processo do host anterior, vamos executar o <code>nmap</code> com script de vulnerabilidade</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">msf6 <span style="color:#f92672">&gt;</span> db_nmap <span style="color:#f92672">--</span>script vuln <span style="color:#ae81ff">172.16.1.108</span>
 </code></pre></div><p>Agora temos três hosts em nosso console:</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/host32.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/host32.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Fazendo enumeração inicial, encontramos um IIS rodando:</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/iis.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/iis.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Além disso no resultado do <code>nmap</code> foi possível identificar que o FTP está aberto para login anônimo.</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/host33.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/host33.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Com o ftp aberto, vamos subir um payload para execução, antes vamos testar o acesso.
 Criando arquivo de teste e logando no servidor:</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/ftp.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/ftp.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>O arquivo deve ser inserido na pasta correta:</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/ftp2.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/ftp2.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Inserindo arquivo:</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/ftp3.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/ftp3.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Testando o upload do arquivo:</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/teste.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/teste.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Agora vamos preparar um payload para envio.
@@ -352,17 +352,17 @@ O IIS utiliza asp, logo vamos gerar um payload nesse formado.</p>
 </code></pre></div><p>Vamos utilizar o exploit multi/handler 
 Edite as informações de LHOST, LPORT e payload no <code>mfsconsole</code> utilizando o multi/handler:</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/multi.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/multi.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Vamos abrir o payload via web e executar o multi/handler no console:</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/hello.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/hello.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Agora temos acesso a máquina:</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/run.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/run.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Busque pelo arquivo com informação dentro de diretórios de usuários, raiz do C:\ etc&hellip;.</p>
@@ -378,18 +378,18 @@ Edite as informações de LHOST, LPORT e payload no <code>mfsconsole</code> util
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>4.Host IV</h2>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/4.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/4.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Scan inicial:</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/host4.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/host4.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Encontramos uma vulnerabilidade no serviço VNC,vamos utilizar o exploit <code>realvnc_41_bypass</code>:</p>
 <p>Conseguimos o acesso via VNC e vamos buscar a key:</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/key.txt.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/key.txt.png"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -404,44 +404,44 @@ Edite as informações de LHOST, LPORT e payload no <code>mfsconsole</code> util
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>5.Host V</h2>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/5.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/5.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Esse host tem a porta 80 aberta:</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/80.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/80.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Vamos enumerar os arquivos com gobuster:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">gobuster dir <span style="color:#f92672">--</span>no<span style="color:#f92672">-</span>error <span style="color:#f92672">-</span>u http:<span style="color:#75715e">//172.30.0.108/   -w /usr/share/wfuzz/wordlist/vulns/cgis.txt
 </span></code></pre></div>
-    <img src="https://nmmorette.github.io/images/semana07-vuln/gobuster.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/gobuster.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Econtramos um arquivo <code>cgi</code> que pode ser um vetor de ataque.
 Acessando o arquivo podemos ver que ele roda um script de uptime:</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/uptime.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/uptime.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Com um pouco de pesquisa no google foi possível encontrar o CVE:</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/cve.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/cve.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Buscando o CVE no msf podemos encontrar o módulo para explorar essa vulnerabilidade:</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/cve.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/cve.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Vamos utilizar o <code>msf6</code> com modulo apache_mod_cgi_bash_env, não esquecendo se configurar o alvo para o link encontrado:</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/host51.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/host51.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Após rodar o exploit temos acesso a shell do servidor, vamos verificar na raiz o arquivo solicitado:</p>
 
-    <img src="https://nmmorette.github.io/images/semana07-vuln/dir.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana07-vuln/dir.png"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -653,7 +653,7 @@ Acessando o arquivo podemos ver que ele roda um script de uptime:</p>
 
 
 
-<script type="text/javascript" src="https://nmmorette.github.io/bundle.min.599099f1f14b78b657d524b28e10e0c5098e7cd46e9c7aed73d577068a276c3ff1bb234cbf29cb313333e83cf411727b43157c91ce5b809e2ffc81664614608e.js" integrity="sha512-WZCZ8fFLeLZX1SSyjhDgxQmOfNRunHrtc9V3BoonbD/xuyNMvynLMTMz6Dz0EXJ7QxV8kc5bgJ4v/IFmRhRgjg=="></script>
+<script type="text/javascript" src="/bundle.min.599099f1f14b78b657d524b28e10e0c5098e7cd46e9c7aed73d577068a276c3ff1bb234cbf29cb313333e83cf411727b43157c91ce5b809e2ffc81664614608e.js" integrity="sha512-WZCZ8fFLeLZX1SSyjhDgxQmOfNRunHrtc9V3BoonbD/xuyNMvynLMTMz6Dz0EXJ7QxV8kc5bgJ4v/IFmRhRgjg=="></script>
 
 
 

@@ -28,17 +28,17 @@ nmap -sS -Pn -A 172.16.1.233 Um possível vetor de ataque é o SMB, vamos enume
 
 
 
-<link rel="stylesheet" href="https://nmmorette.github.io/main.031a8efc33f94f55a4071bf4e91596478a5809fc8c148fab113801189cfd2152.css">
+<link rel="stylesheet" href="/main.031a8efc33f94f55a4071bf4e91596478a5809fc8c148fab113801189cfd2152.css">
 
 
 
 
-    <link rel="apple-touch-icon" sizes="180x180" href="https://nmmorette.github.io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://nmmorette.github.io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://nmmorette.github.io/favicon-16x16.png">
-    <link rel="manifest" href="https://nmmorette.github.io/site.webmanifest">
-    <link rel="mask-icon" href="https://nmmorette.github.io/safari-pinned-tab.svg" color="#1b1c1d">
-    <link rel="shortcut icon" href="https://nmmorette.github.io/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1b1c1d">
+    <link rel="shortcut icon" href="/favicon.ico">
     <meta name="msapplication-TileColor" content="#1b1c1d">
     <meta name="theme-color" content="#1b1c1d">
 
@@ -116,7 +116,7 @@ if (!doNotTrack) {
         <div class="container">
             <header class="header">
     <span class="header__inner">
-        <a href="https://nmmorette.github.io/" style="text-decoration: none;">
+        <a href="/" style="text-decoration: none;">
     <div class="logo">
         
             <span class="logo__mark">&gt;</span>
@@ -134,7 +134,7 @@ if (!doNotTrack) {
         <span class="header__right">
             
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="https://nmmorette.github.io/whoami/">$whoami</a></li><li><a href="https://nmmorette.github.io/badges/">Badges</a></li><li><a href="https://nmmorette.github.io/posts/">Posts</a></li>
+    <ul class="menu__inner"><li><a href="/whoami/">$whoami</a></li><li><a href="/badges/">Badges</a></li><li><a href="/posts/">Posts</a></li>
     </ul>
 </nav>
 
@@ -188,42 +188,42 @@ if (!doNotTrack) {
 <br>
 
 
-    <img src="https://nmmorette.github.io/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
 
 </p>
 <h5 id="o-intuito-desse-post-não-é-dar-as-respostas-e-sim-documentar-os-passos-e-ferramentas-utilizadas">O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</h5>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/banner.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/banner.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <h2 id="hahahugoshortcode-s3-hbhb-1-legado"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure> 1. Legado</h2>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/1.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/1.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Exitem diferentes formas de decifrar o hash infomado.</p>
 <p>Algumas formas:</p>
 <h4 id="hashescom">Hashes.com</h4>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/hash.com.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/hash.com.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <h4 id="crackstation">CrackStation</h4>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/crackstation.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/crackstation.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <h4 id="john">john</h4>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/john.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/john.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <h4 id="hashcat">hashcat</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">hashcat <span style="color:#f92672">-</span>m <span style="color:#ae81ff">3000</span> test <span style="color:#f92672">/</span>usr<span style="color:#f92672">/</span>share<span style="color:#f92672">/</span>john<span style="color:#f92672">/</span>password.lst <span style="color:#f92672">--</span>force     
 </code></pre></div>
-    <img src="https://nmmorette.github.io/images/semana08_win/hashcat.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/hashcat.png"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -238,35 +238,35 @@ if (!doNotTrack) {
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>2. 172.16.1.233</h2>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/2.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/2.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Scan inicial com <code>nmap</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">-</span>sS <span style="color:#f92672">-</span>Pn <span style="color:#f92672">-</span>A <span style="color:#ae81ff">172.16.1.233</span>
 </code></pre></div>
-    <img src="https://nmmorette.github.io/images/semana08_win/nmapinicial.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/nmapinicial.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Um possível vetor de ataque é o SMB, vamos enumerar um pouco mais com outro scan:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">sudo nmap  <span style="color:#f92672">-</span>sS  <span style="color:#ae81ff">172.16.1.233</span> <span style="color:#f92672">-</span>Pn <span style="color:#f92672">--</span>script smb<span style="color:#f92672">-</span>vuln<span style="color:#f92672">*</span>
 </code></pre></div>
-    <img src="https://nmmorette.github.io/images/semana08_win/smb.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/smb.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>O host parece ser vulnerável a ms17-010.</p>
 <p>No <code>msfconsole</code> vamos executar o exploit abaixo:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/exploit.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/exploit.png"  class="center"  style="border-radius: 10px;"  />
 
 
 
-    <img src="https://nmmorette.github.io/images/semana08_win/exploit2.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/exploit2.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Agora que temos a shell no host vamos buscar pela senha do usuário.
 Buscando por hashes com <code>hashdump</code>:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/hashdump.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/hashdump.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Encontramos as hashes dos usuários, agora basta utilizar o <code>john</code> ou o <code>hashcat</code> para decifrar a hash do usuário nicolas.</p>
@@ -282,13 +282,13 @@ Buscando por hashes com <code>hashdump</code>:</p>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>3. 172.16.1.233</h2>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/3.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/3.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Conseguimos o hash do usuário ti na captura anterior, basta utilizar o <code>hashcat</code> para descobrir a senha:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">hashcat <span style="color:#f92672">-</span>m <span style="color:#ae81ff">1000</span> ti <span style="color:#f92672">/</span>usr<span style="color:#f92672">/</span>share<span style="color:#f92672">/</span>wordlists<span style="color:#f92672">/</span>rockyou.txt
 </code></pre></div>
-    <img src="https://nmmorette.github.io/images/semana08_win/2hashcat.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/2hashcat.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Com o arquivo podemos verificar qual usuário faz parte do grupo TI.</p>
@@ -304,17 +304,17 @@ Buscando por hashes com <code>hashdump</code>:</p>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>4. 172.30.0.103</h2>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/4.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/4.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Vamos acessar o host via porta 8080:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/imc.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/imc.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>O serviço em questão é o IMC da HP, vamos buscar por algum exploit no exploitdb:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/imc7.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/imc7.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Foi possível encontrar um remote code execution para esse serviço.</p>
@@ -330,28 +330,28 @@ Buscando por hashes com <code>hashdump</code>:</p>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>5. 172.30.0.103</h2>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/5novo.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/5novo.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Vamos explorar a vulnerabilidade e ganhar acesso ao host.</p>
 <p>Essa vulnerabilidade em questão, executa um comando no host, logo podemos tentar criar um usuário local para acesso.
 Vamos bucar o script primeiro:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/script.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/script.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Agora vamos editar o script e setar o comando de criação de usuário:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/criar.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/criar.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Após a execução do script, criamos um usuário local chamado natan, vamos acessar o smb e verificar o compartilhamento em questão e conseguir o arquivo.</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/smbnatan.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/smbnatan.png"  class="center"  style="border-radius: 10px;"  />
 
 
 
-    <img src="https://nmmorette.github.io/images/semana08_win/arquivo.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/arquivo.png"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -366,24 +366,24 @@ Vamos bucar o script primeiro:</p>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>6. 172.30.0.103</h2>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/6.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/6.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Vamos validar nossas credenciais com o <code>crackmapexec</code>:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/crackmap.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/crackmap.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Vamos conectar via <code>rpcclient</code> e fazer algumas enumerações:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">rpcclient <span style="color:#f92672">-</span>w SRV01 <span style="color:#f92672">-</span>U natan <span style="color:#ae81ff">172.30.0.103</span>
 </code></pre></div><p>#####enumdomusers:
 
-    <img src="https://nmmorette.github.io/images/semana08_win/enumdomusers.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/enumdomusers.png"  class="center"  style="border-radius: 10px;"  />
 
 </p>
 <p>#####queryuser 0x3ee:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/queryuser.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/queryuser.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Encontramos o usuário CPD,  agora precisamos de uma shell para explorar o host e descobrir a senha.
@@ -510,34 +510,34 @@ http:<span style="color:#75715e">//www.labofapenetrationtester.com/2015/05/week-
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nc <span style="color:#f92672">-</span>nvlp <span style="color:#ae81ff">2225</span>
 </code></pre></div><p>Configurando o payload:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/payload.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/payload.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Após executar o payload, o arquivo shell2.ps1 será baixado da máquina do atacante e a shell enviada para o <code>netcat</code>.</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/nvlp.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/nvlp.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Agora temos a shell do host.</p>
 <p>Vamos salvar os registros system10 e sam10 para obter as hashes:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/sam10.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/sam10.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Configure um compartilhamento para receber o arquivo em sua máquina:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/compart.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/compart.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Vamos combinar os arquivos com o <code>impacket-secretsdump</code></p>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/secret.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/secret.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Temos a hash do usuário CPD, vamos quebrar:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">hashcat <span style="color:#f92672">-</span>m <span style="color:#ae81ff">1000</span> hashes <span style="color:#f92672">/</span>home<span style="color:#f92672">/</span>venomsnake<span style="color:#f92672">/</span>Documents<span style="color:#f92672">/</span>loncrack<span style="color:#f92672">/</span>wl.txt 
 </code></pre></div>
-    <img src="https://nmmorette.github.io/images/semana08_win/bck.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/bck.png"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -552,7 +552,7 @@ http:<span style="color:#75715e">//www.labofapenetrationtester.com/2015/05/week-
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>7. 172.30.0.103</h2>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/7.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/7.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Encontramos o usuário e hash anteriormente, agora precisamos quebrar o hash e descobrir a senha.</p>
@@ -569,13 +569,13 @@ http:<span style="color:#75715e">//www.labofapenetrationtester.com/2015/05/week-
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>8. 172.30.0.103</h2>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/8.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/8.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Mesmo processo que anterior para descobrir a senha do adm:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">hashcat <span style="color:#f92672">-</span>m <span style="color:#ae81ff">1000</span> hashes <span style="color:#f92672">/</span>usr<span style="color:#f92672">/</span>share<span style="color:#f92672">/</span>wordlists<span style="color:#f92672">/</span>rockyou.txt 
 </code></pre></div>
-    <img src="https://nmmorette.github.io/images/semana08_win/adm.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/adm.png"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -590,12 +590,12 @@ http:<span style="color:#75715e">//www.labofapenetrationtester.com/2015/05/week-
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>9. 172.30.0.103</h2>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/9.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/9.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Agora que temos o usuário e senha ADM, vamos logar via <code>psexec</code> no host e buscar o arquivo confidencial:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_win/vlab.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_win/vlab.png"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -808,7 +808,7 @@ http:<span style="color:#75715e">//www.labofapenetrationtester.com/2015/05/week-
 
 
 
-<script type="text/javascript" src="https://nmmorette.github.io/bundle.min.599099f1f14b78b657d524b28e10e0c5098e7cd46e9c7aed73d577068a276c3ff1bb234cbf29cb313333e83cf411727b43157c91ce5b809e2ffc81664614608e.js" integrity="sha512-WZCZ8fFLeLZX1SSyjhDgxQmOfNRunHrtc9V3BoonbD/xuyNMvynLMTMz6Dz0EXJ7QxV8kc5bgJ4v/IFmRhRgjg=="></script>
+<script type="text/javascript" src="/bundle.min.599099f1f14b78b657d524b28e10e0c5098e7cd46e9c7aed73d577068a276c3ff1bb234cbf29cb313333e83cf411727b43157c91ce5b809e2ffc81664614608e.js" integrity="sha512-WZCZ8fFLeLZX1SSyjhDgxQmOfNRunHrtc9V3BoonbD/xuyNMvynLMTMz6Dz0EXJ7QxV8kc5bgJ4v/IFmRhRgjg=="></script>
 
 
 

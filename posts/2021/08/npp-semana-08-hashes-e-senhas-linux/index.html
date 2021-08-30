@@ -28,17 +28,17 @@ O host parece ser vulnerável ao CVE-2006-3392 na porta 1000. No resultado do pr
 
 
 
-<link rel="stylesheet" href="https://nmmorette.github.io/main.031a8efc33f94f55a4071bf4e91596478a5809fc8c148fab113801189cfd2152.css">
+<link rel="stylesheet" href="/main.031a8efc33f94f55a4071bf4e91596478a5809fc8c148fab113801189cfd2152.css">
 
 
 
 
-    <link rel="apple-touch-icon" sizes="180x180" href="https://nmmorette.github.io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://nmmorette.github.io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://nmmorette.github.io/favicon-16x16.png">
-    <link rel="manifest" href="https://nmmorette.github.io/site.webmanifest">
-    <link rel="mask-icon" href="https://nmmorette.github.io/safari-pinned-tab.svg" color="#1b1c1d">
-    <link rel="shortcut icon" href="https://nmmorette.github.io/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1b1c1d">
+    <link rel="shortcut icon" href="/favicon.ico">
     <meta name="msapplication-TileColor" content="#1b1c1d">
     <meta name="theme-color" content="#1b1c1d">
 
@@ -116,7 +116,7 @@ if (!doNotTrack) {
         <div class="container">
             <header class="header">
     <span class="header__inner">
-        <a href="https://nmmorette.github.io/" style="text-decoration: none;">
+        <a href="/" style="text-decoration: none;">
     <div class="logo">
         
             <span class="logo__mark">&gt;</span>
@@ -134,7 +134,7 @@ if (!doNotTrack) {
         <span class="header__right">
             
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="https://nmmorette.github.io/whoami/">$whoami</a></li><li><a href="https://nmmorette.github.io/badges/">Badges</a></li><li><a href="https://nmmorette.github.io/posts/">Posts</a></li>
+    <ul class="menu__inner"><li><a href="/whoami/">$whoami</a></li><li><a href="/badges/">Badges</a></li><li><a href="/posts/">Posts</a></li>
     </ul>
 </nav>
 
@@ -184,30 +184,30 @@ if (!doNotTrack) {
 
       <div class="post-content">
         
-    <img src="https://nmmorette.github.io/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <h5 id="o-intuito-desse-post-não-é-dar-as-respostas-e-sim-documentar-os-passos-e-ferramentas-utilizadas">O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</h5>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/banner.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/banner.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <h2 id="hahahugoshortcode-s2-hbhb-1-17230015"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure> 1. 172.30.0.15</h2>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/1.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/1.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Scan inicial no host:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">-</span>sS <span style="color:#f92672">-</span>Pn <span style="color:#f92672">-</span>A <span style="color:#ae81ff">172.30.0.15</span>
 </code></pre></div>
-    <img src="https://nmmorette.github.io/images/semana08_linux/1.1.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/1.1.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Agora vamos rodar o nmap buscando por alguma vulnerabilidade com &ndash;script vuln:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/1.2.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/1.2.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>O host parece ser vulnerável ao CVE-2006-3392 na porta 1000.
@@ -224,18 +224,18 @@ No resultado do primeiro scan encontramos o serviço que roda na porta 1000.</p>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>2. 172.30.0.15</h2>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/2.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/2.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Para explorar essa vulnerabilidade vamos executar o script <a href="https://github.com/IvanGlinkin/CVE-2006-3392">CVE-2006-3392</a>
 Primeiro precisamos alterar o script com o ip do alvo e depois executar solicitando o retorno do arquivo shadow.</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/2.1.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/2.1.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Como podemos notar o arquivo inicia com  $6 isso indica tipo de criptografia sha512.</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/hash.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/hash.png"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -250,12 +250,12 @@ Primeiro precisamos alterar o script com o ip do alvo e depois executar solicita
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>3. 172.30.0.15</h2>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/3.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/3.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Vamos utilizar o script e agora solicitar o retorno do arquivo /etc/passwd:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/3.1.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/3.1.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Com o arquivo podemos verificar qual usuário faz parte do grupo TI.</p>
@@ -271,12 +271,12 @@ Primeiro precisamos alterar o script com o ip do alvo e depois executar solicita
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>4. 172.30.0.15</h2>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/4.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/4.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Para idenficiar o salta basta verificarmos os valor entre $:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/4.1.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/4.1.png"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -291,20 +291,20 @@ Primeiro precisamos alterar o script com o ip do alvo e depois executar solicita
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>5. 172.30.0.15</h2>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/5.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/5.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Com a informação dos arquivos conseguidos anteriormente, vamos quebrar a senha do usuário rogerio.
 Precisamos salvar os arquivos <code>/etc/passwd</code> e <code> /etc/shadow</code> e utilizar o comando <code>unshadow</code> para combinar os arquivos. Depois disso podemos utilizar o <code>hashcat</code> para quebrar o hash.</p>
 <p>Antes de rodar o hashcat precisamos definir o tipo de criptografia, para esse caso 1800 corresponde ao sha512.</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/sha512.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/sha512.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Vamos executar o hashcat:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">hashcat <span style="color:#f92672">-</span>m <span style="color:#ae81ff">1800</span> nomedoarquivo <span style="color:#f92672">/</span>usr<span style="color:#f92672">/</span>share<span style="color:#f92672">/</span>wordlists<span style="color:#f92672">/</span>rock<span style="color:#f92672">-</span>mini.txt
 </code></pre></div>
-    <img src="https://nmmorette.github.io/images/semana08_linux/hashcat.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/hashcat.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Nesse lab utilizei uma versão menor da wordlist rockyou.txt.</p>
@@ -321,12 +321,12 @@ Precisamos salvar os arquivos <code>/etc/passwd</code> e <code> /etc/shadow</cod
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>6. 172.30.0.15</h2>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/6.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/6.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Agora com usuário e senha, podemos simplesmente conectar via ssh e ter acesso ao servidor para encontrar a key:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/6.1.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/6.1.png"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -341,24 +341,24 @@ Precisamos salvar os arquivos <code>/etc/passwd</code> e <code> /etc/shadow</cod
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>7. 172.30.0.15</h2>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/7.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/7.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Agora precisamos descobrir a senha em questão.
 Enumerando arquivos e pasta, foi possível encontrar um arquivo oculto .db.</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/db.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/db.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Verificamos o hash com <code>hashid</code>:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/hashid.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/hashid.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Tentamos quebrar a senha com <code>john</code> e com <code>hashcat</code> porém não foi possível. 
 Recoremos ao site <a href="hashes.com">Hashes.com</a> e após inserir a hash no site ele informou a senha:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/7.1.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/7.1.png"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -373,37 +373,37 @@ Recoremos ao site <a href="hashes.com">Hashes.com</a> e após inserir a hash no 
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>8. 172.16.1.107</h2>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/8.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/8.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Ainda dentro do host, vamos conectar ao banco de dados com as credenciais encontradas no lab anterior:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/banco.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/banco.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Vamos exibir as databases:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/database.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/database.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Vamos entrar na database <code>wp</code>:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/wp.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/wp.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Uma vez dentro da database, vamos exibir as tabelas:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/tables.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/tables.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>E agora vamos inspecionar a tabela <code>wp_users</code>:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/wp_users.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/wp_users.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Encontramos o valor, porém precisamos converter para <code>base64</code></p>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/base64.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/base64.png"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -418,7 +418,7 @@ Recoremos ao site <a href="hashes.com">Hashes.com</a> e após inserir a hash no 
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>9. 172.16.1.107</h2>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/9.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/9.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Vamos salvar o valor encontrado em um arquivo chamado md5 e rodar o john:</p>
@@ -427,7 +427,7 @@ Recoremos ao site <a href="hashes.com">Hashes.com</a> e após inserir a hash no 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">john md5 <span style="color:#f92672">--</span>show 
 </code></pre></div><p>Temos a informação em texto claro:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/9.1.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/9.1.png"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -442,19 +442,19 @@ Recoremos ao site <a href="hashes.com">Hashes.com</a> e após inserir a hash no 
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>10. 172.16.1.107</h2>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/10.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/10.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Primeiro scan:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">sudo nmap <span style="color:#f92672">-</span>sSV <span style="color:#f92672">-</span>A <span style="color:#ae81ff">172.16.1.107</span> <span style="color:#f92672">-</span>Pn
 </code></pre></div>
-    <img src="https://nmmorette.github.io/images/semana08_linux/10.1.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/10.1.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Encontramos as portas 139 e 445 abertas, provável serviço vulnerável.
 Vamos pesquisar um exploit para versão do samba instalada:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/samba4.2.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/samba4.2.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>O exploit <code>is_know_pipename()</code> parece ser aplicável nessa versão. Com um pouco mais de pesquisa foi possível encontrar o CVE-2017-7494, vamos checar com nmap:</p>
@@ -472,24 +472,24 @@ Vamos pesquisar um exploit para versão do samba instalada:</p>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>11. 172.16.1.107</h2>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/11.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/11.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Vamos abrir o `````msfconsole<code>e executar o exploit</code> is_known_pipename````.
 Após setar as configurações rodamos o exploit:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/exploit.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/exploit.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Não funcionou de primeira, precisamos definir também a versão de protocolo do SMB e rodar o exploit novamente:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/exploit2.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/exploit2.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Pronto temos a shell no host.
 Vamos em busca da informação na pasta <code>/etc/samba</code>, dentro da pasta foi possível encontrar a key:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/11.1.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/11.1.png"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -504,7 +504,7 @@ Vamos em busca da informação na pasta <code>/etc/samba</code>, dentro da pasta
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>12. 172.16.1.107</h2>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/12.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/12.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Temos a shell no host então podemos pegar o s arquivos <code>/etc/passwd</code> e <code>/etc/shadow</code>
@@ -512,7 +512,7 @@ Vamos copiar as linhas dos usuários solicitados e salvar o conteúdo com os nom
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">unshadow etc shadow 
 </code></pre></div><p>Temos o arquivo pronto para ser quebrado, vamos utilizar o <code>john</code> dessa vez:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/senhas.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/senhas.png"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -527,12 +527,12 @@ Vamos copiar as linhas dos usuários solicitados e salvar o conteúdo com os nom
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>13. 172.16.1.107</h2>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/13.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/13.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Vamos verificar o arquivo passwd novamente em busca do usuário com a string VLAB:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/abner.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/abner.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Vamos repedir o processo anterior com as informações do abner do /ect/passwd e do /etc/shadow:</p>
@@ -541,7 +541,7 @@ Vamos copiar as linhas dos usuários solicitados e salvar o conteúdo com os nom
 </code></pre></div><p>Vamos quebrar a hash com o <code>hashacat</code> hash do tipo 1800 com a wordlist <a href="https://github.com/ricardolongatto/loncrack">wl.txt</a></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#960050;background-color:#1e0010">$</span>hashcat <span style="color:#f92672">-</span>m <span style="color:#ae81ff">1800</span> hash <span style="color:#f92672">/</span>home<span style="color:#f92672">/</span>nakedsnake<span style="color:#f92672">/</span>Documents<span style="color:#f92672">/</span>loncrack<span style="color:#f92672">/</span>wl.txt
 </code></pre></div>
-    <img src="https://nmmorette.github.io/images/semana08_linux/araujo.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/araujo.png"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -556,18 +556,18 @@ Vamos copiar as linhas dos usuários solicitados e salvar o conteúdo com os nom
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>14. 172.16.1.107</h2>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/14.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/14.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Vamos logar no host com o usuário e senha encontrados anteriormente e buscar a informação na pasta do administrador:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/administrador.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/administrador.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Encontramos a informação: <code>$1$SECRET$wmbWtt7DyAOGN2wbyIljP.</code></p>
 <p>Vamos converter a hash para md5 conforme solicitado:</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/md5.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/md5.png"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -582,7 +582,7 @@ Vamos copiar as linhas dos usuários solicitados e salvar o conteúdo com os nom
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>15. 172.16.1.107</h2>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/15.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/15.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Aparentemente o salt seria SECRET porém não é esse, tem uma pegadinha aí.
@@ -590,7 +590,7 @@ Na mesma pasta que encontramos o hash tem outro arquivo encodado em base 64.
 Vamos usar o site:https://base64.guru para converter a informação.</p>
 <p>Após a conversão foi gerado um png para download onde é possível encontrar o salt verdadeiro.</p>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/salt.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/salt.png"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -605,14 +605,14 @@ Vamos usar o site:https://base64.guru para converter a informação.</p>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure>16. 172.16.1.107</h2>
 
-    <img src="https://nmmorette.github.io/images/semana08_linux/16.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/16.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Agora que temos o hash completo: <code>$1$bC0rp21$wmbWtt7DyAOGN2wbyIljP.</code>
 Vamos quebrar com hashcat utilizando a wordlist wl.txt</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">hashcat <span style="color:#f92672">-</span>m <span style="color:#ae81ff">500</span> hash <span style="color:#f92672">/</span>home<span style="color:#f92672">/</span>venomsnake<span style="color:#f92672">/</span>Documents<span style="color:#f92672">/</span>loncrack<span style="color:#f92672">/</span>wl.txt
 </code></pre></div>
-    <img src="https://nmmorette.github.io/images/semana08_linux/16.1.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/semana08_linux/16.1.png"  class="center"  style="border-radius: 10px;"  />
 
 
 
@@ -824,7 +824,7 @@ Vamos quebrar com hashcat utilizando a wordlist wl.txt</p>
 
 
 
-<script type="text/javascript" src="https://nmmorette.github.io/bundle.min.599099f1f14b78b657d524b28e10e0c5098e7cd46e9c7aed73d577068a276c3ff1bb234cbf29cb313333e83cf411727b43157c91ce5b809e2ffc81664614608e.js" integrity="sha512-WZCZ8fFLeLZX1SSyjhDgxQmOfNRunHrtc9V3BoonbD/xuyNMvynLMTMz6Dz0EXJ7QxV8kc5bgJ4v/IFmRhRgjg=="></script>
+<script type="text/javascript" src="/bundle.min.599099f1f14b78b657d524b28e10e0c5098e7cd46e9c7aed73d577068a276c3ff1bb234cbf29cb313333e83cf411727b43157c91ce5b809e2ffc81664614608e.js" integrity="sha512-WZCZ8fFLeLZX1SSyjhDgxQmOfNRunHrtc9V3BoonbD/xuyNMvynLMTMz6Dz0EXJ7QxV8kc5bgJ4v/IFmRhRgjg=="></script>
 
 
 

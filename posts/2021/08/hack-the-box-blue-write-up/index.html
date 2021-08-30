@@ -27,17 +27,17 @@
 
 
 
-<link rel="stylesheet" href="https://nmmorette.github.io/main.031a8efc33f94f55a4071bf4e91596478a5809fc8c148fab113801189cfd2152.css">
+<link rel="stylesheet" href="/main.031a8efc33f94f55a4071bf4e91596478a5809fc8c148fab113801189cfd2152.css">
 
 
 
 
-    <link rel="apple-touch-icon" sizes="180x180" href="https://nmmorette.github.io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://nmmorette.github.io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://nmmorette.github.io/favicon-16x16.png">
-    <link rel="manifest" href="https://nmmorette.github.io/site.webmanifest">
-    <link rel="mask-icon" href="https://nmmorette.github.io/safari-pinned-tab.svg" color="#1b1c1d">
-    <link rel="shortcut icon" href="https://nmmorette.github.io/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1b1c1d">
+    <link rel="shortcut icon" href="/favicon.ico">
     <meta name="msapplication-TileColor" content="#1b1c1d">
     <meta name="theme-color" content="#1b1c1d">
 
@@ -110,7 +110,7 @@ if (!doNotTrack) {
         <div class="container">
             <header class="header">
     <span class="header__inner">
-        <a href="https://nmmorette.github.io/" style="text-decoration: none;">
+        <a href="/" style="text-decoration: none;">
     <div class="logo">
         
             <span class="logo__mark">&gt;</span>
@@ -128,7 +128,7 @@ if (!doNotTrack) {
         <span class="header__right">
             
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="https://nmmorette.github.io/whoami/">$whoami</a></li><li><a href="https://nmmorette.github.io/badges/">Badges</a></li><li><a href="https://nmmorette.github.io/posts/">Posts</a></li>
+    <ul class="menu__inner"><li><a href="/whoami/">$whoami</a></li><li><a href="/badges/">Badges</a></li><li><a href="/posts/">Posts</a></li>
     </ul>
 </nav>
 
@@ -194,7 +194,7 @@ if (!doNotTrack) {
 <br>
 
 
-    <img src="https://nmmorette.github.io/images/htb/blue/banner.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/htb/blue/banner.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <h2 id="enumeration">Enumeration</h2>
@@ -273,35 +273,35 @@ OS and Service detection performed. Please report any incorrect results at https
 
 </code></pre></div><p>The host is vulnerable to ms17-10:</p>
 
-    <img src="https://nmmorette.github.io/images/htb/blue/vuln.png"  class="center"  style="border-radius: 10px;"  />
+    <img src="/images/htb/blue/vuln.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <h2 id="exploit">Exploit</h2>
 <p>Let&rsquo;s double-check this vuln with <code>msfconsole</code>.
 Search for &ldquo;ms17-010&rdquo; and use the module: scanner/smb/smb_ms17_010:</p>
 
-    <img src="https://nmmorette.github.io/images/htb/blue/search.png"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/htb/blue/search.png"  class="center"  style="border-radius: 8px;"  />
 
 
 <p>We have the confirmation:</p>
 
-    <img src="https://nmmorette.github.io/images/htb/blue/run.png"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/htb/blue/run.png"  class="center"  style="border-radius: 8px;"  />
 
 
 <p>We need to set the exploit <code>windows/smb/ms17_010_eternal</code> and configure the options: RPORT, RHOSTS, LPORT and LHOST. Also, check the payload.</p>
 
-    <img src="https://nmmorette.github.io/images/htb/blue/smb.png"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/htb/blue/smb.png"  class="center"  style="border-radius: 8px;"  />
 
 
 <p>After that we could run the exploit and get access to the host:</p>
 
-    <img src="https://nmmorette.github.io/images/htb/blue/exploit.png"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/htb/blue/exploit.png"  class="center"  style="border-radius: 8px;"  />
 
 
 <h2 id="flag">Flag</h2>
 <p>Search for the flag in the commons users folders.</p>
 
-    <img src="https://nmmorette.github.io/images/htb/blue/pawnd.PNG"  class="center"  style="border-radius: 8px;"  />
+    <img src="/images/htb/blue/pawnd.PNG"  class="center"  style="border-radius: 8px;"  />
 
 
 
@@ -498,7 +498,7 @@ Search for &ldquo;ms17-010&rdquo; and use the module: scanner/smb/smb_ms17_010:<
 
 
 
-<script type="text/javascript" src="https://nmmorette.github.io/bundle.min.599099f1f14b78b657d524b28e10e0c5098e7cd46e9c7aed73d577068a276c3ff1bb234cbf29cb313333e83cf411727b43157c91ce5b809e2ffc81664614608e.js" integrity="sha512-WZCZ8fFLeLZX1SSyjhDgxQmOfNRunHrtc9V3BoonbD/xuyNMvynLMTMz6Dz0EXJ7QxV8kc5bgJ4v/IFmRhRgjg=="></script>
+<script type="text/javascript" src="/bundle.min.599099f1f14b78b657d524b28e10e0c5098e7cd46e9c7aed73d577068a276c3ff1bb234cbf29cb313333e83cf411727b43157c91ce5b809e2ffc81664614608e.js" integrity="sha512-WZCZ8fFLeLZX1SSyjhDgxQmOfNRunHrtc9V3BoonbD/xuyNMvynLMTMz6Dz0EXJ7QxV8kc5bgJ4v/IFmRhRgjg=="></script>
 
 
 
