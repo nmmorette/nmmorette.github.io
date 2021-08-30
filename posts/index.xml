@@ -105,6 +105,28 @@ Eu comprei esse <a href="https://www.udemy.com/course/ms-900-5-practice-tests-on
     <img src="/images/ms-900/udemy.png"  class="center"  style="border-radius: 10px;"  />
 
 
+<h3 id="tópicos-importantes">Tópicos importantes</h3>
+<p>Esse item pode ser um pouco complicado, não existe o tópico mais importante! Porém existem ferramentas e itens que são certos de cair na prova, e você precisa saber o que são.</p>
+<ul>
+<li>É fundamental entender as diferenças de planos, o que tem em um e em outro não.</li>
+<li>Entender o básico dos itens:
+<ul>
+<li>Microsoft Intune</li>
+<li>Azure Information Protection</li>
+<li>Azure Active Directory</li>
+<li>Microsoft Advanced Threat Analytics</li>
+</ul>
+</li>
+<li>Conceitos de segurança:
+<ul>
+<li>Secure authentication</li>
+<li>Conditional access</li>
+<li>Identity Protection</li>
+<li>Threat protection</li>
+</ul>
+</li>
+</ul>
+<p>Como eu disse esse são só pontos em destaque que eu percebi que foram muito cobrados na minha prova, então não foque só nesses, mas se você leu e sabe o que são todos esses itens e entende o que cada um deles faz, você provavelmente já tem uma boa base para prova.</p>
 <h3 id="dia-da-prova">Dia da Prova</h3>
 <p>Essa foi a minha primeira certificação online, todas as outras eu fiz em centros de estudo.
 O processo é bem simples, você vai receber um link para acessar no dia da prova. Além disso existe um link para testar seu sistema, ele testa seu navegador, câmera e microfone. Você será monitorado o tempo todo durante a prova, para que não exista possibilidade de fraude. 
