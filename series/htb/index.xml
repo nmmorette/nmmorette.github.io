@@ -6,15 +6,24 @@
     <description>Recent content in HTB on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/series/htb/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/series/htb/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hack the Box - Blue- Write Up</title>
+      <title>Hack the Box - Lame - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2021/09/hack-the-box-lame-write-up/</link>
+      <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/09/hack-the-box-lame-write-up/</guid>
+      <description>Enumeration Initial scan:
+└─$ sudo nmap -sS -Pn 10.10.10.3 [sudo] password for venomsnake: Host discovery disabled (-Pn). All addresses will be marked &amp;#39;up&amp;#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-09-01 10:40 -03 Nmap scan report for 10.10.10.3 Host is up (0.17s latency). Not shown: 996 filtered ports PORT STATE SERVICE 21/tcp open ftp 22/tcp open ssh 139/tcp open netbios-ssn 445/tcp open microsoft-ds Nmap done: 1 IP address (1 host up) scanned in 20.</description>
+    </item>
+    
+    <item>
+      <title>Hack the Box - Blue - Write Up</title>
       <link>https://nmmorette.github.io/posts/2021/08/hack-the-box-blue-write-up/</link>
       <pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/posts/2021/08/hack-the-box-blue-write-up/</guid>
-      <description>Índice
- Enumeration Exploit Flag    Enumeration Initial scan:
+      <description>Enumeration Initial scan:
 └──╼ $sudo nmap -sS -Pn 10.10.10.40 Host discovery disabled (-Pn). All addresses will be marked &amp;#39;up&amp;#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-11 15:11 -03 Nmap scan report for 10.10.10.40 Host is up (0.45s latency). Not shown: 991 closed ports PORT STATE SERVICE 135/tcp open msrpc 139/tcp open netbios-ssn 445/tcp open microsoft-ds 49152/tcp open unknown 49153/tcp open unknown 49154/tcp open unknown 49155/tcp open unknown 49156/tcp open unknown 49157/tcp open unknown Second nmap scan with --script vuln only on the open ports:</description>
     </item>
     
@@ -24,8 +33,7 @@
       <pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/posts/2021/07/hack-the-box-archetype-write-up/</guid>
-      <description>Content
- Enumeration SMB Enumeration mssqlcli.py Payload First Key Privileged user access    Enumeration Initial scan:
+      <description>Enumeration Initial scan:
 nmap -sSV 10.10.10.27Second nmap scan with --script vuln
 We found a possible starting point: CVE-2008-4250.
 SMB Enumeration The next step is to try to connect in the SMB service:
