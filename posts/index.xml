@@ -5,8 +5,171 @@
         <description>Recent content in Posts on Natan Maia Morette</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 01 Sep 2021 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 06 Sep 2021 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://nmmorette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>RoadMap para AZ-900</title>
+            <link>https://nmmorette.github.io/posts/2021/09/roadmap-para-az-900/</link>
+            <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2021/09/roadmap-para-az-900/</guid>
+            <description>Introdução O intuito desse post é ajudar os interessados em fazer a prova AZ-900 Microsoft 365 Fundamentals. Nesse post vou falar um pouco sobre a prova e sobre o meu plano de estudos para aprovação.
+A prova tem nível fundamental ou seja é uma prova baseada em conceitos e não há prática, o foca é entender os conceitos do azure e de cada serviço. Ter uma noção básica do que cada serviço do azure faz é fundamental.</description>
+            <content type="html"><![CDATA[
+    <img src="/images/az-900/az.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h2 id="introdução">Introdução</h2>
+<p>O intuito desse post é ajudar os interessados em fazer a prova AZ-900 Microsoft 365 Fundamentals.
+Nesse post vou falar um pouco sobre a prova e sobre o meu plano de estudos para aprovação.</p>
+<p>A prova tem nível fundamental ou seja é uma prova baseada em conceitos e não há prática, o foca é entender os conceitos do azure e de cada serviço. Ter uma noção básica do que cada serviço do azure faz é fundamental.</p>
+<p>Além disso essa prova é considerada uma prova de entrada para o mundo Azure, sendo assim após essa prova, você pode optar por seguir o caminho azure de infra ou de dev.</p>
+<h2 id="sobre-a-prova">Sobre a prova</h2>
+
+
+
+<blockquote>
+
+Os candidatos a este exame devem ter conhecimentos básicos nos serviços em nuvem e como os serviços são provisionados com o Microsoft Azure.
+
+
+
+<br>
+
+
+
+<br>
+
+O exame Azure Fundamentals é uma oportunidade para avaliar o
+conhecimento dos candidatos nos conceitos de nuvem, serviços básicos do Azure, preços, SLA e ciclo de vida do Azure e os fundamentos de segurança, privacidade, conformidade e confiabilidade na nuvem.
+
+
+<br>
+
+
+
+<br>
+
+
+Este exame foi desenvolvido para pessoas que estão iniciando no ambiente de soluções e serviços baseados em nuvem. Os candidatos devem ser capazes de demonstrar um conhecimento básico nos conceitos de nuvem, bem como serviços, cargas de trabalho, segurança, privacidade, preços e suporte do Azure. Além disso, devem estar familiarizados com os conceitos de rede, armazenamento, computação, suporte a aplicativos e desenvolvimento de aplicativos.
+</blockquote>
+
+<p>A prova possui 41 questões e é preciso ter 70% de acerto.</p>
+<p>A prova custa em torno de 60 dólares, porém procure participar de eventos da Microsoft como o <a href="https://www.microsoft.com/en-us/trainingdays">Microsoft Training Day </a> onde é possível ganhar vouchers para realizar a prova.</p>
+
+    <img src="/images/az-900/preco.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>O exame pode ser agendado tanto presencial quanto online, eu fiz o exame de forma presencial depois de ter problemas com a realização online.</p>
+<p>As questões são de múltipla escolha, verdadeiro ou falso e também questões de correlacionar. 
+Um tipo de questão diferente nessa prova, no meu caso foram duas, é uma questão onde você deve clicar na área correspondente da ferramenta. A questão mostra um print de uma tela do Microsoft Azure com partes &ldquo;clicáveis&rdquo; e você deve clicar na área correta de acordo com a pergunta.</p>
+<p>Minha prova foi realizada no dia 03/09/2021, idioma inglês.</p>
+<h2 id="composição-da-prova">Composição da Prova</h2>
+<ul>
+<li>Descrever os conceitos do cloud (20-25%)</li>
+<li>Descrever os principais serviços do Azure (15-20%</li>
+<li>Descrever as principais soluções e ferramentas de administração no Azure (10-15%)</li>
+<li>Descrever os recursos gerais de segurança e segurança de rede (10-15%)</li>
+<li>Descrever recursos de identidade, governança, privacidade e conformidade (20-25%)</li>
+<li>Descrever o administração de custos do Azure e Service Level Agreements (10-15%)</li>
+</ul>
+<p>O documento completo com a estrutura da prova pode ser encontrado <a href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3VwUY">aqui</a>.</p>
+<h2 id="preparação">Preparação</h2>
+<p>Na minha opinião existem duas formas de se preparar para essa prova: uma é com conteúdos gratuitos e outra com conteúdo pago.</p>
+<h3 id="conteúdo-gratuito">Conteúdo Gratuito</h3>
+<p>Na internet é possível encontrar diversas fontes de estudo gratuitas para essa prova.</p>
+<p>Eu recomendo o canal <a href="https://www.youtube.com/channel/UCg8OCdG1yeiSPFDyqQDxHnw">A guide to Cloud</a> além do conteúdo para az-900 ele possui outros vídeos para certificações da microsoft.</p>
+
+    <img src="/images/az-900/guidetocloud.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>A playlist do curso é bem completa com todo conteúdo da prova:</p>
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UyaZWgkuQE8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+<p>Outra forma de preparação são os cursos gratuitos da <a href="https://www.linkedin.com/company/ka-solution/">KaSolution</a>, eles estão sempre promovendo cursos aos sábados. Completos para várias formações Microsoft.
+Infelizmente para esse método você vai precisar contar com a sorte de abrirem uma turma gratuita. 
+Basta ficar de olho na rede social deles, o último AZ-900 foi no dia 28/08/2021.</p>
+
+    <img src="/images/az-900/ka.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Eu fiz o curso da Ka Solution para me preparar para essa prova. Inclusive eles fornecem certificado de conclusão:</p>
+
+    <img src="/images/az-900/certificado.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h3 id="conteúdo-pago">Conteúdo Pago</h3>
+<p>Como recomendação de conteúdo pago eu deixo o curso da <a href="https://cursos.alura.com.br">Alura</a>, eu fiz a formação completa deles como uma revisão, já que eu tinha feito o curso gratuito da <a href="https://www.linkedin.com/company/ka-solution/">KaSolution</a>.</p>
+<p>No <a href="https://www.udemy.com">Udemy</a> também é possível encontrar muitos cursos de preparação para az-900 com valores acessíveis.</p>
+<p>Na <a href="https://www.kasolution.com.br/Home?pt=google">KaSolution</a> além dos cursos gratuitos é possível comprar diversas formações para preparação de certificações diversas da Microsoft.</p>
+<p>Além disso é possível comprar o livro oficial da microsoft para preparação, infelizmente para essa prova eu não comprei, devido o valor elevado aqui no Brasil. Entretanto eu conheço os livros de outras certificações da microsoft que tirei e eles são bem completos e recomendo muito quando é possível encontrar com preços acessíveis.</p>
+
+    <img src="/images/az-900/book.jpg"  class="center"  style="border-radius: 10px;"  />
+
+
+<h2 id="simulados">Simulados</h2>
+<p>Acredito que os simulados são uma preparação extra para prova, muitos não apoiam a ideia porém a própria microsoft vende os famosos brain dumps. Dentro da página de agendamento é possível encontrar um link para compra:</p>
+
+    <img src="/images/az-900/exame.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Esse eu realmente não indico a compra, nunca comprei devido o alto valor solicitado.</p>
+<p>Uma opção gratuita para testar seu conhecimento com questões é o site: <a href="https://www.itexams.com">IT Exams</a>, especificamente para o AZ-900 eles possuem um banco de dados com 244 questões.</p>
+
+    <img src="/images/az-900/itexams.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Outra forma porém paga, é comprar simulados preparatórios no Udemy, existem vários na plataforma. 
+Eu recomendo esse <a href="https://www.udemy.com/course/az-900-5-practice-tests-on-ms-365-certification">aqui</a>. As questões refletem a dinâmica da prova, sendo uma ótima maneira de treinar.</p>
+
+    <img src="/images/az-900/udemy.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h2 id="tópicos-importantes">Tópicos importantes</h2>
+<p>Esse item pode ser um pouco complicado, não existe o tópico mais importante! Porém aqui descrevo os tópicos que percebi na prova com mais frequência.</p>
+<ul>
+<li>
+<p>Conceitos básicos de Nuvem</p>
+<p>É fundamental saber o que é PaaS,Saas,Iaas. Algumas questões na minha prova informaram um serviço da Microsoft e pediam na resposta para identificar em qual tipo de serviço na nuvem ele se enquadrava. 
+Também é fundamental saber a diferença entre CapEx e OpEx, Nuvem Pública e Privada.
+Outro ponto aqui é saber quais serviços do Azure são aplicáveis em ambiente On-premise, algumas questões pegam nesse ponto, na minha prova por exemplo uma questão pedia para informar se o Azure Sentinel também tinha abrangência em ambiente on-premises e outra perguntou o mesmo porém para o serviço Azure Monitor.</p>
+</li>
+<li>
+<p>Onde executar e onde encontrar informações:</p>
+<p>Muitas questões perguntavam onde era possível encontrar a política de dados da Microsoft ou onde era possível gerar relatórios de desempenho, onde é possível ver os alertas de saúde do serviço. Você precisa saber onde cada informação dessa pode ser encontrada, por isso é fundamental saber o que cada página do Azure Portal faz.</p>
+<p>Outro ponto importante aqui é como executar uma tarefa, muitas questões perguntavam qual o menu para abrir o Azure Shell ou se é possível criar máquinas virtuais de um celular android ou computador Mac. Outra questão mostrava uma tela de tipos de armazenamentos e perguntava qual era o ideal para utilização em VM&rsquo;s.</p>
+</li>
+<li>
+<p>Conceitos de segurança:</p>
+<p>Tive duas questões na minha prova que basicamente perguntavam a diferença entre NSGs, Azure Firewall e Application Firewall. Em duas questões tive como resposta o Azure Key Vault, ambas as questões descreveram formas diferentes de utilizar o serviço. Uma única questão perguntou sobre o Azure Sentinel, seguindo o padrão da maioria das questões a pergunta descrevia uma ação e era preciso dizer qual é o serviço.</p>
+</li>
+</ul>
+<p>Como eu disse esses são só pontos em destaque que eu percebi que foram muito cobrados na minha prova, então não foque só nesses. Mas se você leu e sabe o que são todos esses itens e entende o que cada um deles faz, você provavelmente já tem uma boa base para prova.</p>
+<h2 id="dia-da-prova">Dia da Prova</h2>
+<p>Primeiramente eu havia marcado a prova para o dia 02/09/2021 de forma online com a PersonVue. 
+Realizei o teste do ambiente com o software e deu tudo certo, esperei a hora da prova e fiz todo o procedimento inicial: enviar minha foto, foto do documento e foto do ambiente.</p>
+<p>Na hora do exame de forma pontual o proctor me chamou via chamada de voz e iniciou a prova, porém aparecia um erro genérico <em>&ldquo;Hmmm Something it&rsquo;s wrong&rdquo;</em> e simplesmente não consegui iniciar a prova. 
+Falei com o proctor que tentou me ajudar, mas sem sucesso. Repeti todo o processo umas cinco vezes e falei com cinco proctores diferente em cada uma delas e nenhum pode ajudar. 
+Na quinta tentativa eu pedi o cancelamento do exame, já que a solução dada era sempre reiniciar a máquina.</p>
+<p>Após cancelar o exame, por sorte consegui marcar presencial no dia seguinte 03/09/2021 no Instituto Infnet no Rio de Janeiro.</p>
+
+    <img src="/images/az-900/badge.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+
+
+<img src="https://nmorette.files.wordpress.com/2021/06/capturar.png">
+
+]]></content>
+        </item>
         
         <item>
             <title>Hack the Box - Lame - Write Up</title>
@@ -147,6 +310,10 @@ Fail with exploit/unix/ftp/vsftpd_234_backdoor.</p>
 
 
 
+
+<br>
+
+
     <img src="/images/htb/lame/pwned.png"  class="center"  style="border-radius: 10px;"  />
 
 
@@ -211,11 +378,6 @@ Porém se você tem um pouco de familiaridade com o idioma, é possível sim ass
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZtOo7prP4_M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 </p>
-<p>Além disso é possível comprar o livro oficial da microsoft para preparação, infelizmente para essa prova eu não comprei, devido o valor elevado aqui no Brasil. Entretanto eu conheço os livros de outras certificações da microsoft que tirei e eles são bem completos e recomendo muito quando é possível encontrar com preços acessíveis.</p>
-
-    <img src="/images/ms-900/book.jpg"  class="center"  style="border-radius: 10px;"  />
-
-
 <p>Outra forma de preparação são os cursos gratuitos da <a href="https://www.linkedin.com/company/ka-solution/">KaSolution</a>, eles estão sempre promovendo cursos aos sábados. Completos para várias formações Microsoft.
 Infelizmente para esse método você vai precisar contar com a sorte de abrirem uma turma gratuita. 
 Basta ficar de olho na rede social deles, no último sábado dia 28/08/2021 eles promoveram um curso do AZ-900 por exemplo.</p>
@@ -230,6 +392,11 @@ Basta ficar de olho na rede social deles, no último sábado dia 28/08/2021 eles
 <p>Além disso o curso possui diversas questões de exemplo para preparação e também explicações para as respostas.</p>
 <p>No <a href="https://www.udemy.com">Udemy</a> também é possível encontrar muitos cursos de preparação para MS-900 com valores acessíveis.</p>
 <p>Na <a href="https://www.kasolution.com.br/Home?pt=google">KaSolution</a> além dos cursos gratuitos é possível comprar diversas formações para preparação de certificações diversas da Microsoft.</p>
+<p>Além disso é possível comprar o livro oficial da microsoft para preparação, infelizmente para essa prova eu não comprei, devido o valor elevado aqui no Brasil. Entretanto eu conheço os livros de outras certificações da microsoft que tirei e eles são bem completos e recomendo muito quando é possível encontrar com preços acessíveis.</p>
+
+    <img src="/images/ms-900/book.jpg"  class="center"  style="border-radius: 10px;"  />
+
+
 <h2 id="simulados">Simulados</h2>
 <p>Acredito que os simulados são uma preparação extra para prova, muitos não apoiam a ideia porém a própria microsoft vende os famosos brain dumps. Dentro da página de agendamento é possível encontrar um link para compra:</p>
 

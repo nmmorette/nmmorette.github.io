@@ -6,7 +6,17 @@
     <description>Recent content on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RoadMap para AZ-900</title>
+      <link>https://nmmorette.github.io/posts/2021/09/roadmap-para-az-900/</link>
+      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/09/roadmap-para-az-900/</guid>
+      <description>Introdução O intuito desse post é ajudar os interessados em fazer a prova AZ-900 Microsoft 365 Fundamentals. Nesse post vou falar um pouco sobre a prova e sobre o meu plano de estudos para aprovação.
+A prova tem nível fundamental ou seja é uma prova baseada em conceitos e não há prática, o foca é entender os conceitos do azure e de cada serviço. Ter uma noção básica do que cada serviço do azure faz é fundamental.</description>
+    </item>
+    
     <item>
       <title>Hack the Box - Lame - Write Up</title>
       <link>https://nmmorette.github.io/posts/2021/09/hack-the-box-lame-write-up/</link>
@@ -103,22 +113,6 @@ nmap -sSV 10.10.10.27Second nmap scan with --script vuln
 We found a possible starting point: CVE-2008-4250.
 SMB Enumeration The next step is to try to connect in the SMB service:
 smbclient -L \\10.10.10.27 -NIPC$: this hidden share is a special share used for inter-process communication. It doesn’t allow one to access files or directories like other shares, but rather allows one to communicate with processes running on the remote system.</description>
-    </item>
-    
-    <item>
-      <title>TryHackme - Steel Mountain - Write Up</title>
-      <link>https://nmmorette.github.io/posts/2021/07/tryhackme-steel-mountain-write-up/</link>
-      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-steel-mountain-write-up/</guid>
-      <description>Task 1. Introduction First of all, let&amp;rsquo;s nmap the machine IP.
-nmap -sS -A 10.10.169.181 -PnWe found a web service open port (80), let&amp;rsquo;s open the web page:
-Take a look at the source code:
-Who is the employee of the month?
-Bill Harper
-Task 2. Inicial Access Scan the machine with nmap. What is the other port running a web server on?
-Nmap gives this answer:
-8080</description>
     </item>
     
   </channel>
