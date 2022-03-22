@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OSINT on Natan Maia Morette</title>
+    <link>https://nmmorette.github.io/tags/osint/</link>
+    <description>Recent content in OSINT on Natan Maia Morette</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/osint/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NPP - Semana 06 - Scanning (Externo e Interno)</title>
+      <link>https://nmmorette.github.io/posts/2021/07/npp-semana-06-scanning-externo-e-interno/</link>
+      <pubDate>Sun, 11 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/npp-semana-06-scanning-externo-e-interno/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Alvo: businesscorp.com.br  1. WebSite Vamos iniciar um scan completo do host.
+nmap -A -v businesscorp.com.br -p- Informe as portas encontradas.
+Resposta21,22,53,80,111 2. WebSite II Verifique no resultado detalhado do NMAP da porta 53, que é a porta do serviço DNS.
+Respostabind9.8.4 3.</description>
+    </item>
+    
+    <item>
+      <title>NPP - Semana 05 - Information Gathering - Web (VPN)</title>
+      <link>https://nmmorette.github.io/posts/2021/07/npp-semana-05-information-gathering-web-vpn/</link>
+      <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/npp-semana-05-information-gathering-web-vpn/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Conecte na vpn da Desec para realizar esses labs.
+.Lab 01 IP do alvo: 172.16.1.60 Utilizando as ténicas de banner grab, vamos encontar a reposta desse lab
+ Curl  curl -s -I 172.16.1.60 | grep &amp;#34;Server&amp;#34;  Wget  wget -q -S 172.16.1.60  Nmap  nmap -sV -p80 172.</description>
+    </item>
+    
+    <item>
+      <title>NPP - Semana 06 - OSINT</title>
+      <link>https://nmmorette.github.io/posts/2021/07/npp-semana-06-osint/</link>
+      <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/npp-semana-06-osint/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Alvo: mail.businesscorp.com.br | 37.59.174.227  1. RECON I Vamos iniciar com um scan de todas as portas:
+nmap -A -v mail.businesscorp.com.br -p- Verifique o resultado e informe as portas abertas em ordem crescente.
+Resposta21,80,110,143 2. RECON II Vanos realizar um scan para portas udp, também com nmap</description>
+    </item>
+    
+    <item>
+      <title>NPP - Semana 05 - Information Gathering - Web</title>
+      <link>https://nmmorette.github.io/posts/2021/07/npp-semana-05-information-gathering-web/</link>
+      <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/npp-semana-05-information-gathering-web/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Dica: para um bom resultado nesses labs, utilize uma boa wordlist.
+.Lab 01 Para resolver esse lab precisamos fazer um brute force de diretórios, podemos fazer esse processo de diferentes formas, porém as ferramentas mais comuns são dirb ou gobuster.
+ Gobuster   gobuster dir -u businesscorp.com.br -w /usr/share/wordlists/dirb/big.txt -e Aguarde a apresentação dos resultados para iniciar a análise dos endereços.</description>
+    </item>
+    
+    <item>
+      <title>NPP - Semana 05 - Information Gathering - Infra</title>
+      <link>https://nmmorette.github.io/posts/2021/07/npp-semana-05-information-gathering-infra/</link>
+      <pubDate>Tue, 06 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/npp-semana-05-information-gathering-infra/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. .Lab 01 Primeiramente vamos rodar o comando host, para verificar o ip do alvo: host businesscorp.com.br
+host businesscorp.com.br Com o endereço de IP do alvo em mãos, vamos fazer a busca pelo netblock. Existe mais de uma forma de conseguir essa informação:
+  Arin     Terminal    whois TARGET_IP Para facilitar a visualização do netblock utilize o  | grep &amp;quot;inetnum&amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>NPP - Semana 05 - Information Gathering - Business</title>
+      <link>https://nmmorette.github.io/posts/2021/07/npp-semana-05-information-gathering-business/</link>
+      <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/npp-semana-05-information-gathering-business/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Dica de ouro: anote tudo, cada comando e resultado. Isso evita retralho, além de documentar seus passos para consultas futuras.
+. Lab 01 Utilizando o Hunter Faça cadastro no site Hunter para conseguir visualizar os resultados.
+Depois basta digitar o domínio no campo de busca:
+Utilizando o TheHarvester Caso ainda não tenha instalado, instale o theHarvester:</description>
+    </item>
+    
+  </channel>
+</rss>

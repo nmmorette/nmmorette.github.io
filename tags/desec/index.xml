@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>desec on Natan Maia Morette</title>
+    <link>https://nmmorette.github.io/tags/desec/</link>
+    <description>Recent content in desec on Natan Maia Morette</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/desec/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NPP - Semana 08 - Hashes e Senhas Linux</title>
+      <link>https://nmmorette.github.io/posts/2021/08/npp-semana-08-hashes-e-senhas-linux/</link>
+      <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/08/npp-semana-08-hashes-e-senhas-linux/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.  1. 172.30.0.15 Scan inicial no host:
+nmap -sS -Pn -A 172.30.0.15 Agora vamos rodar o nmap buscando por alguma vulnerabilidade com &amp;ndash;script vuln:
+O host parece ser vulnerável ao CVE-2006-3392 na porta 1000. No resultado do primeiro scan encontramos o serviço que roda na porta 1000.
+Respostawebmin 2.</description>
+    </item>
+    
+    <item>
+      <title>NPP - Semana 08 - Hashes e Senhas</title>
+      <link>https://nmmorette.github.io/posts/2021/08/npp-semana-08-hashes-e-senhas/</link>
+      <pubDate>Wed, 04 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/08/npp-semana-08-hashes-e-senhas/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.  1. Caso.zip Alguns fornecedores informam o checksum os executáveis no site, porém não encontramos no caso do Zoom. Foi necessário fazer o download no site oficial e checar:
+Para esse lab, fiz um script simples para listagem dos arquivos com seus respectivos hahes, bastou verificar qual hash era o diferente para identificar o arquivo modificado:</description>
+    </item>
+    
+    <item>
+      <title>NPP - Semana 07 - Vulnerabilidades</title>
+      <link>https://nmmorette.github.io/posts/2021/08/npp-semana-07-vulnerabilidades/</link>
+      <pubDate>Mon, 02 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/08/npp-semana-07-vulnerabilidades/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.  1.Host I Nesse host vamos iniciar com o msfconsole. Vamos rodar o primeiro scan:
+msf6 &amp;gt; db_nmap -sSV -Pn 172.16.1.100 Temos a porta 81 rodando um Apache, vamos tentar acessar via web e conseguir mais informações do host.
+Na web recebemos uma solicitação de credenciais que informou o serviço que está em execução: IPFire</description>
+    </item>
+    
+    <item>
+      <title>NPP - Semana 07 - Enumeration</title>
+      <link>https://nmmorette.github.io/posts/2021/07/npp-semana-07-enumeration/</link>
+      <pubDate>Tue, 20 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/npp-semana-07-enumeration/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.  1.Database Vamos iniciar com um scan do range informado:
+nmap -sS 172.16.1.1-100 Basta verificar o host que está com a porta 3306 ativa.
+Resposta172.16.1.33 2.Database Vamos conectar ao servidor com mysql utilizando o usuário root sem senha:
+mysql -h 172.16.1.33 -u root No banner do servidor é possível encontar a versão.</description>
+    </item>
+    
+    <item>
+      <title>NPP - Semana 06 - Mecanismos de Defesa</title>
+      <link>https://nmmorette.github.io/posts/2021/07/npp-semana-06-mecanismos-de-defesa/</link>
+      <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/npp-semana-06-mecanismos-de-defesa/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Conecte na vpn da Desec para realizar os Lab 1 e 2.
+ 1. FW Iniciando o primeiro scan:
+nmap -v -sS -Pn 172.16.1.59 Com a porta 80 fechada, podemos deduzir que há um firewall bloqueando a rede.
+Vamos tentar um hping3 em uma porta conhecida para verificar o resultado:</description>
+    </item>
+    
+    <item>
+      <title>NPP - Semana 06 - Scanning (Externo e Interno)</title>
+      <link>https://nmmorette.github.io/posts/2021/07/npp-semana-06-scanning-externo-e-interno/</link>
+      <pubDate>Sun, 11 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/npp-semana-06-scanning-externo-e-interno/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Alvo: businesscorp.com.br  1. WebSite Vamos iniciar um scan completo do host.
+nmap -A -v businesscorp.com.br -p- Informe as portas encontradas.
+Resposta21,22,53,80,111 2. WebSite II Verifique no resultado detalhado do NMAP da porta 53, que é a porta do serviço DNS.
+Respostabind9.8.4 3.</description>
+    </item>
+    
+    <item>
+      <title>NPP - Semana 05 - Information Gathering - Web (VPN)</title>
+      <link>https://nmmorette.github.io/posts/2021/07/npp-semana-05-information-gathering-web-vpn/</link>
+      <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/npp-semana-05-information-gathering-web-vpn/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Conecte na vpn da Desec para realizar esses labs.
+.Lab 01 IP do alvo: 172.16.1.60 Utilizando as ténicas de banner grab, vamos encontar a reposta desse lab
+ Curl  curl -s -I 172.16.1.60 | grep &amp;#34;Server&amp;#34;  Wget  wget -q -S 172.16.1.60  Nmap  nmap -sV -p80 172.</description>
+    </item>
+    
+    <item>
+      <title>NPP - Semana 06 - OSINT</title>
+      <link>https://nmmorette.github.io/posts/2021/07/npp-semana-06-osint/</link>
+      <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/npp-semana-06-osint/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Alvo: mail.businesscorp.com.br | 37.59.174.227  1. RECON I Vamos iniciar com um scan de todas as portas:
+nmap -A -v mail.businesscorp.com.br -p- Verifique o resultado e informe as portas abertas em ordem crescente.
+Resposta21,80,110,143 2. RECON II Vanos realizar um scan para portas udp, também com nmap</description>
+    </item>
+    
+    <item>
+      <title>NPP - Semana 05 - Information Gathering - Web</title>
+      <link>https://nmmorette.github.io/posts/2021/07/npp-semana-05-information-gathering-web/</link>
+      <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/npp-semana-05-information-gathering-web/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Dica: para um bom resultado nesses labs, utilize uma boa wordlist.
+.Lab 01 Para resolver esse lab precisamos fazer um brute force de diretórios, podemos fazer esse processo de diferentes formas, porém as ferramentas mais comuns são dirb ou gobuster.
+ Gobuster   gobuster dir -u businesscorp.com.br -w /usr/share/wordlists/dirb/big.txt -e Aguarde a apresentação dos resultados para iniciar a análise dos endereços.</description>
+    </item>
+    
+    <item>
+      <title>NPP - Semana 05 - Information Gathering - Infra</title>
+      <link>https://nmmorette.github.io/posts/2021/07/npp-semana-05-information-gathering-infra/</link>
+      <pubDate>Tue, 06 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/npp-semana-05-information-gathering-infra/</guid>
+      <description>O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. .Lab 01 Primeiramente vamos rodar o comando host, para verificar o ip do alvo: host businesscorp.com.br
+host businesscorp.com.br Com o endereço de IP do alvo em mãos, vamos fazer a busca pelo netblock. Existe mais de uma forma de conseguir essa informação:
+  Arin     Terminal    whois TARGET_IP Para facilitar a visualização do netblock utilize o  | grep &amp;quot;inetnum&amp;quot;</description>
+    </item>
+    
+  </channel>
+</rss>
