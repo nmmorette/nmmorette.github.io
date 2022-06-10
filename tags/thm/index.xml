@@ -24,7 +24,7 @@
       
       <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-steel-mountain-write-up/</guid>
       <description>Task 1. Introduction First of all, let&amp;rsquo;s nmap the machine IP.
-nmap -sS -A 10.10.169.181 -PnWe found a web service open port (80), let&amp;rsquo;s open the web page:
+nmap -sS -A 10.10.169.181 -Pn We found a web service open port (80), let&amp;rsquo;s open the web page:
 Take a look at the source code:
 Who is the employee of the month?
 Bill Harper
@@ -52,7 +52,7 @@ You don&amp;rsquo;t need to be an IT pro for start here. This learning path will
       <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-write-up/</guid>
       <description>Task 1. Intro This is a write up for &amp;ldquo;The Cod Caper&amp;rdquo; room at Try Hack Me.
 Room&amp;rsquo;s intro note:
-Hello there my name is Pingu. I&#39;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&#39;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server.</description>
+Hello there my name is Pingu. I&#39;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&#39;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server.</description>
     </item>
     
   </channel>

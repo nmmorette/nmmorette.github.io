@@ -11,9 +11,6 @@
     <loc>https://nmmorette.github.io/posts/2021/08/roadmap-para-ms-900/</loc>
     <lastmod>2021-08-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nmmorette.github.io/posts/2021/08/npp-semana-08-hashes-e-senhas-windows/</loc>
-    <lastmod>2021-08-23T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nmmorette.github.io/posts/2021/08/tryhackme-bounty-hacker-write-up/</loc>
     <lastmod>2021-08-15T00:00:00+00:00</lastmod>
   </url><url>
@@ -74,10 +71,10 @@
     <loc>https://nmmorette.github.io/categories/</loc>
     <lastmod>2021-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nmmorette.github.io/categories/certifica%C3%A7%C3%A3o/</loc>
+    <loc>https://nmmorette.github.io/tags/certifica%C3%A7%C3%A3o/</loc>
     <lastmod>2021-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nmmorette.github.io/tags/certifica%C3%A7%C3%A3o/</loc>
+    <loc>https://nmmorette.github.io/categories/certifica%C3%A7%C3%A3o/</loc>
     <lastmod>2021-09-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nmmorette.github.io/tags/microsoft/</loc>
@@ -128,18 +125,6 @@
     <loc>https://nmmorette.github.io/series/writeup/</loc>
     <lastmod>2021-09-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nmmorette.github.io/tags/dcpt/</loc>
-    <lastmod>2021-08-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nmmorette.github.io/categories/dcpt/</loc>
-    <lastmod>2021-08-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nmmorette.github.io/tags/desec/</loc>
-    <lastmod>2021-08-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nmmorette.github.io/categories/npp/</loc>
-    <lastmod>2021-08-23T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nmmorette.github.io/tags/privesc/</loc>
     <lastmod>2021-08-15T00:00:00+00:00</lastmod>
   </url><url>
@@ -151,6 +136,18 @@
   </url><url>
     <loc>https://nmmorette.github.io/series/tryhackme/</loc>
     <lastmod>2021-08-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/tags/dcpt/</loc>
+    <lastmod>2021-08-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/categories/dcpt/</loc>
+    <lastmod>2021-08-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/tags/desec/</loc>
+    <lastmod>2021-08-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/categories/npp/</loc>
+    <lastmod>2021-08-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nmmorette.github.io/tags/pwntools/</loc>
     <lastmod>2021-07-24T00:00:00+00:00</lastmod>

@@ -44,10 +44,10 @@
       
       <guid>https://nmmorette.github.io/posts/2021/07/hack-the-box-archetype-write-up/</guid>
       <description>Enumeration Initial scan:
-nmap -sSV 10.10.10.27Second nmap scan with --script vuln
+nmap -sSV 10.10.10.27 Second nmap scan with --script vuln
 We found a possible starting point: CVE-2008-4250.
 SMB Enumeration The next step is to try to connect in the SMB service:
-smbclient -L \\10.10.10.27 -NIPC$: this hidden share is a special share used for inter-process communication. It doesn’t allow one to access files or directories like other shares, but rather allows one to communicate with processes running on the remote system.</description>
+smbclient -L \\10.10.10.27 -N IPC$: this hidden share is a special share used for inter-process communication. It doesn’t allow one to access files or directories like other shares, but rather allows one to communicate with processes running on the remote system.</description>
     </item>
     
     <item>
@@ -57,7 +57,7 @@ smbclient -L \\10.10.10.27 -NIPC$: this hidden share is a special share used f
       
       <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-steel-mountain-write-up/</guid>
       <description>Task 1. Introduction First of all, let&amp;rsquo;s nmap the machine IP.
-nmap -sS -A 10.10.169.181 -PnWe found a web service open port (80), let&amp;rsquo;s open the web page:
+nmap -sS -A 10.10.169.181 -Pn We found a web service open port (80), let&amp;rsquo;s open the web page:
 Take a look at the source code:
 Who is the employee of the month?
 Bill Harper
@@ -74,7 +74,7 @@ Nmap gives this answer:
       <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-write-up/</guid>
       <description>Task 1. Intro This is a write up for &amp;ldquo;The Cod Caper&amp;rdquo; room at Try Hack Me.
 Room&amp;rsquo;s intro note:
-Hello there my name is Pingu. I&#39;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&#39;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server.</description>
+Hello there my name is Pingu. I&#39;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&#39;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server.</description>
     </item>
     
   </channel>
