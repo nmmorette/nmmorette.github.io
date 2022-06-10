@@ -6,9 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="map[name:Natan]">
 <meta name="description" content="O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Conecte na vpn da Desec para realizar os Lab 1 e 2.
- 1. FW Iniciando o primeiro scan:
+1. FW Iniciando o primeiro scan:
 nmap -v -sS -Pn 172.16.1.59 Com a porta 80 fechada, podemos deduzir que há um firewall bloqueando a rede.
-Vamos tentar um hping3 em uma porta conhecida para verificar o resultado:" />
+Vamos tentar um hping3 em uma porta conhecida para verificar o resultado:
+Sem resposta, logo podemos deduzir que um firewall está bloqueando a conexão." />
 <meta name="keywords" content="DCPT,Pentest,CTF,Cybersecurity,RedTeam,TryhackMe,Hackthebox,certification, writeup, pentest, security, desec, DCPT, CTF" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -46,10 +47,11 @@ Vamos tentar um hping3 em uma porta conhecida para verificar o resultado:" />
 
 <meta itemprop="name" content="NPP - Semana 06 - Mecanismos de Defesa">
 <meta itemprop="description" content="O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Conecte na vpn da Desec para realizar os Lab 1 e 2.
- 1. FW Iniciando o primeiro scan:
+1. FW Iniciando o primeiro scan:
 nmap -v -sS -Pn 172.16.1.59 Com a porta 80 fechada, podemos deduzir que há um firewall bloqueando a rede.
-Vamos tentar um hping3 em uma porta conhecida para verificar o resultado:"><meta itemprop="datePublished" content="2021-07-15T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-07-15T00:00:00&#43;00:00" />
+Vamos tentar um hping3 em uma porta conhecida para verificar o resultado:
+Sem resposta, logo podemos deduzir que um firewall está bloqueando a conexão."><meta itemprop="datePublished" content="2021-07-15T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-07-15T00:00:00+00:00" />
 <meta itemprop="wordCount" content="526"><meta itemprop="image" content="https://nmmorette.github.io"/>
 <meta itemprop="keywords" content="writeup,pentest,security,desec,DCPT,CTF," />
 <meta name="twitter:card" content="summary_large_image"/>
@@ -57,22 +59,24 @@ Vamos tentar um hping3 em uma porta conhecida para verificar o resultado:"><meta
 
 <meta name="twitter:title" content="NPP - Semana 06 - Mecanismos de Defesa"/>
 <meta name="twitter:description" content="O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Conecte na vpn da Desec para realizar os Lab 1 e 2.
- 1. FW Iniciando o primeiro scan:
+1. FW Iniciando o primeiro scan:
 nmap -v -sS -Pn 172.16.1.59 Com a porta 80 fechada, podemos deduzir que há um firewall bloqueando a rede.
-Vamos tentar um hping3 em uma porta conhecida para verificar o resultado:"/>
+Vamos tentar um hping3 em uma porta conhecida para verificar o resultado:
+Sem resposta, logo podemos deduzir que um firewall está bloqueando a conexão."/>
 
 
 
 
     <meta property="og:title" content="NPP - Semana 06 - Mecanismos de Defesa" />
 <meta property="og:description" content="O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Conecte na vpn da Desec para realizar os Lab 1 e 2.
- 1. FW Iniciando o primeiro scan:
+1. FW Iniciando o primeiro scan:
 nmap -v -sS -Pn 172.16.1.59 Com a porta 80 fechada, podemos deduzir que há um firewall bloqueando a rede.
-Vamos tentar um hping3 em uma porta conhecida para verificar o resultado:" />
+Vamos tentar um hping3 em uma porta conhecida para verificar o resultado:
+Sem resposta, logo podemos deduzir que um firewall está bloqueando a conexão." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nmmorette.github.io/posts/2021/07/npp-semana-06-mecanismos-de-defesa/" /><meta property="og:image" content="https://nmmorette.github.io"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-07-15T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-07-15T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2021-07-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-07-15T00:00:00+00:00" />
 
 
 
@@ -201,8 +205,8 @@ if (!doNotTrack) {
 
 
 <p>Iniciando o primeiro scan:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">-</span>v <span style="color:#f92672">-</span>sS <span style="color:#f92672">-</span>Pn <span style="color:#ae81ff">172.16.1.59</span>
-</code></pre></div><p>Com a porta 80 fechada, podemos deduzir que há um firewall bloqueando a rede.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>nmap <span style="color:#f92672">-</span>v <span style="color:#f92672">-</span>sS <span style="color:#f92672">-</span>Pn <span style="color:#ae81ff">172.16.1.59</span>
+</span></span></code></pre></div><p>Com a porta 80 fechada, podemos deduzir que há um firewall bloqueando a rede.</p>
 <p>Vamos tentar um <code>hping3</code> em uma porta conhecida para verificar o resultado:</p>
 
     <img src="/images/semana06-defesa/no.png"  class="center"  style="border-radius: 10px;"  />
@@ -210,8 +214,8 @@ if (!doNotTrack) {
 
 <p>Sem resposta, logo podemos deduzir que um firewall está bloqueando a conexão.</p>
 <p>Vamos com nmap novamente e vamos tentar um scan nas 20 top ports, porém alterando a porta de origem para uma aleátoria.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">-</span>v <span style="color:#f92672">-</span>sS <span style="color:#f92672">-</span>Pn <span style="color:#f92672">--</span>source<span style="color:#f92672">-</span>port <span style="color:#ae81ff">21</span> <span style="color:#f92672">--</span>top<span style="color:#f92672">-</span>ports<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>  <span style="color:#ae81ff">172.16.1.59</span>
-</code></pre></div><p>Tivemos um resultado diferente e podemos notar várias portas filtradas.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>nmap <span style="color:#f92672">-</span>v <span style="color:#f92672">-</span>sS <span style="color:#f92672">-</span>Pn <span style="color:#f92672">--</span>source<span style="color:#f92672">-</span>port <span style="color:#ae81ff">21</span> <span style="color:#f92672">--</span>top<span style="color:#f92672">-</span>ports<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>  <span style="color:#ae81ff">172.16.1.59</span>
+</span></span></code></pre></div><p>Tivemos um resultado diferente e podemos notar várias portas filtradas.</p>
 
     <img src="/images/semana06-defesa/scannmap.JPG"  class="center"  style="border-radius: 10px;"  />
 
@@ -270,14 +274,14 @@ No enunciado já foi informado para tomar cuidado com um possível IDS, ou seja 
 Então nesse caso a ideia é tentar fazer menos ruído possível.</p>
 <p>Minha estratégia foi iniciar um scan com as top ports e aumentar em cada tentativa:</p>
 <p>Primeira tentativa:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">-</span>v <span style="color:#f92672">-</span>D RND:<span style="color:#ae81ff">20</span> <span style="color:#f92672">--</span>top<span style="color:#f92672">-</span>ports<span style="color:#f92672">=</span><span style="color:#ae81ff">25</span> <span style="color:#f92672">--</span>open <span style="color:#f92672">-</span>T2 <span style="color:#ae81ff">37.59.174.228</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>nmap <span style="color:#f92672">-</span>v <span style="color:#f92672">-</span>D RND:<span style="color:#ae81ff">20</span> <span style="color:#f92672">--</span>top<span style="color:#f92672">-</span>ports<span style="color:#f92672">=</span><span style="color:#ae81ff">25</span> <span style="color:#f92672">--</span>open <span style="color:#f92672">-</span>T2 <span style="color:#ae81ff">37.59.174.228</span>
+</span></span></code></pre></div>
     <img src="/images/semana06-defesa/tentativa1.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Pegamos somente uma porta aberta, vamos continuar aumentando as top ports, agora com 100</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">-</span>v <span style="color:#f92672">-</span>D RND:<span style="color:#ae81ff">20</span> <span style="color:#f92672">--</span>top<span style="color:#f92672">-</span>ports<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span> <span style="color:#f92672">--</span>open <span style="color:#f92672">-</span>T2 <span style="color:#ae81ff">37.59.174.228</span>
-</code></pre></div><p>Dessa vez encontramos 2 portas:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>nmap <span style="color:#f92672">-</span>v <span style="color:#f92672">-</span>D RND:<span style="color:#ae81ff">20</span> <span style="color:#f92672">--</span>top<span style="color:#f92672">-</span>ports<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span> <span style="color:#f92672">--</span>open <span style="color:#f92672">-</span>T2 <span style="color:#ae81ff">37.59.174.228</span>
+</span></span></code></pre></div><p>Dessa vez encontramos 2 portas:</p>
 
     <img src="/images/semana06-defesa/tentativa2.png"  class="center"  style="border-radius: 10px;"  />
 
@@ -306,8 +310,8 @@ Então nesse caso a ideia é tentar fazer menos ruído possível.</p>
 
 
 <p>Agora que temos as portas abertas, podemos seguir a mesma estratégia de scan anterior, porém acrescentando mais opções ao <code>nmap</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">-</span>v <span style="color:#f92672">-</span>D RND:<span style="color:#ae81ff">20</span> <span style="color:#f92672">-</span>p <span style="color:#ae81ff">80</span>,<span style="color:#ae81ff">2222</span>,<span style="color:#ae81ff">10000</span> <span style="color:#f92672">-</span>Pn <span style="color:#f92672">-</span>T2 <span style="color:#f92672">-</span>sSV <span style="color:#ae81ff">37.59.174.228</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>nmap <span style="color:#f92672">-</span>v <span style="color:#f92672">-</span>D RND:<span style="color:#ae81ff">20</span> <span style="color:#f92672">-</span>p <span style="color:#ae81ff">80</span>,<span style="color:#ae81ff">2222</span>,<span style="color:#ae81ff">10000</span> <span style="color:#f92672">-</span>Pn <span style="color:#f92672">-</span>T2 <span style="color:#f92672">-</span>sSV <span style="color:#ae81ff">37.59.174.228</span>
+</span></span></code></pre></div>
     <img src="/images/semana06-defesa/version.png"  class="center"  style="border-radius: 10px;"  />
 
 
@@ -377,8 +381,8 @@ Então nesse caso a ideia é tentar fazer menos ruído possível.</p>
 
 <p>Para resposder essa questão precisamos rodar o nmap novamente com um script para descobrir os métodos de autenticação do ssh.</p>
 <p>Seguiremos o mesmo padrão dos scripts anteriores para evitar detecção:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">-</span>v <span style="color:#f92672">-</span>D RND:<span style="color:#ae81ff">20</span> <span style="color:#f92672">-</span>p <span style="color:#ae81ff">2222</span> <span style="color:#f92672">-</span>Pn <span style="color:#f92672">-</span>T2 <span style="color:#f92672">-</span>sSV <span style="color:#f92672">--</span>script ssh<span style="color:#f92672">-</span>auth<span style="color:#f92672">-</span>methods  <span style="color:#ae81ff">37.59.174.228</span>
-</code></pre></div><p>A flag <code>-script ssh-auth-methods</code> chama o script padrão do nmap para descoberta de métodos de autenticação do ssh.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>nmap <span style="color:#f92672">-</span>v <span style="color:#f92672">-</span>D RND:<span style="color:#ae81ff">20</span> <span style="color:#f92672">-</span>p <span style="color:#ae81ff">2222</span> <span style="color:#f92672">-</span>Pn <span style="color:#f92672">-</span>T2 <span style="color:#f92672">-</span>sSV <span style="color:#f92672">--</span>script ssh<span style="color:#f92672">-</span>auth<span style="color:#f92672">-</span>methods  <span style="color:#ae81ff">37.59.174.228</span>
+</span></span></code></pre></div><p>A flag <code>-script ssh-auth-methods</code> chama o script padrão do nmap para descoberta de métodos de autenticação do ssh.</p>
 
     <img src="/images/semana06-defesa/autenticacao.png"  class="center"  style="border-radius: 10px;"  />
 
@@ -592,7 +596,7 @@ Então nesse caso a ideia é tentar fazer menos ruído possível.</p>
 
 
 
-<script type="text/javascript" src="/bundle.min.599099f1f14b78b657d524b28e10e0c5098e7cd46e9c7aed73d577068a276c3ff1bb234cbf29cb313333e83cf411727b43157c91ce5b809e2ffc81664614608e.js" integrity="sha512-WZCZ8fFLeLZX1SSyjhDgxQmOfNRunHrtc9V3BoonbD/xuyNMvynLMTMz6Dz0EXJ7QxV8kc5bgJ4v/IFmRhRgjg=="></script>
+<script type="text/javascript" src="/bundle.min.a2c5b062c87998f04d1b5dfb6a89a1b2d79786c21d0cb63a05e8a2082984b64b77d80955e3b97eab17273775162ba372511b711fea2f7608f216e68a67bb22d6.js" integrity="sha512-osWwYsh5mPBNG137aomhsteXhsIdDLY6BeiiCCmEtkt32AlV47l&#43;qxcnN3UWK6NyURtxH&#43;ovdgjyFuaKZ7si1g=="></script>
 
 
 

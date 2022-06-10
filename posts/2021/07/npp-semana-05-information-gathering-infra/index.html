@@ -5,9 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="map[name:Natan]">
-<meta name="description" content="O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. .Lab 01 Primeiramente vamos rodar o comando host, para verificar o ip do alvo: host businesscorp.com.br
-host businesscorp.com.brCom o endereço de IP do alvo em mãos, vamos fazer a busca pelo netblock. Existe mais de uma forma de conseguir essa informação:
-  Arin     Terminal   whois TARGET_IP Para facilitar a visualização do netblock utilize o  | grep &amp;quot;inetnum&amp;quot;" />
+<meta name="description" content="O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. .Lab 01 Primeiramente vamos rodar o comando host, para verificar o ip do alvo: host businesscorp.com.br
+host businesscorp.com.br Com o endereço de IP do alvo em mãos, vamos fazer a busca pelo netblock. Existe mais de uma forma de conseguir essa informação:
+Arin Terminal whois TARGET_IP Para facilitar a visualização do netblock utilize o | grep &amp;quot;inetnum&amp;quot;" />
 <meta name="keywords" content="DCPT,Pentest,CTF,Cybersecurity,RedTeam,TryhackMe,Hackthebox,certification, writeup, pentest, security, desec, DCPT, CTF, OSINT" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -44,31 +44,31 @@ host businesscorp.com.brCom o endereço de IP do alvo em mãos, vamos fazer a b
 
 
 <meta itemprop="name" content="NPP - Semana 05 - Information Gathering - Infra">
-<meta itemprop="description" content="O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. .Lab 01 Primeiramente vamos rodar o comando host, para verificar o ip do alvo: host businesscorp.com.br
-host businesscorp.com.brCom o endereço de IP do alvo em mãos, vamos fazer a busca pelo netblock. Existe mais de uma forma de conseguir essa informação:
-  Arin     Terminal   whois TARGET_IP Para facilitar a visualização do netblock utilize o  | grep &quot;inetnum&quot;"><meta itemprop="datePublished" content="2021-07-06T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-07-06T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="552"><meta itemprop="image" content="https://nmmorette.github.io"/>
+<meta itemprop="description" content="O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. .Lab 01 Primeiramente vamos rodar o comando host, para verificar o ip do alvo: host businesscorp.com.br
+host businesscorp.com.br Com o endereço de IP do alvo em mãos, vamos fazer a busca pelo netblock. Existe mais de uma forma de conseguir essa informação:
+Arin Terminal whois TARGET_IP Para facilitar a visualização do netblock utilize o | grep &quot;inetnum&quot;"><meta itemprop="datePublished" content="2021-07-06T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-07-06T00:00:00+00:00" />
+<meta itemprop="wordCount" content="553"><meta itemprop="image" content="https://nmmorette.github.io"/>
 <meta itemprop="keywords" content="writeup,pentest,security,desec,DCPT,CTF,OSINT," />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://nmmorette.github.io"/>
 
 <meta name="twitter:title" content="NPP - Semana 05 - Information Gathering - Infra"/>
-<meta name="twitter:description" content="O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. .Lab 01 Primeiramente vamos rodar o comando host, para verificar o ip do alvo: host businesscorp.com.br
-host businesscorp.com.brCom o endereço de IP do alvo em mãos, vamos fazer a busca pelo netblock. Existe mais de uma forma de conseguir essa informação:
-  Arin     Terminal   whois TARGET_IP Para facilitar a visualização do netblock utilize o  | grep &quot;inetnum&quot;"/>
+<meta name="twitter:description" content="O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. .Lab 01 Primeiramente vamos rodar o comando host, para verificar o ip do alvo: host businesscorp.com.br
+host businesscorp.com.br Com o endereço de IP do alvo em mãos, vamos fazer a busca pelo netblock. Existe mais de uma forma de conseguir essa informação:
+Arin Terminal whois TARGET_IP Para facilitar a visualização do netblock utilize o | grep &quot;inetnum&quot;"/>
 
 
 
 
     <meta property="og:title" content="NPP - Semana 05 - Information Gathering - Infra" />
-<meta property="og:description" content="O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. .Lab 01 Primeiramente vamos rodar o comando host, para verificar o ip do alvo: host businesscorp.com.br
-host businesscorp.com.brCom o endereço de IP do alvo em mãos, vamos fazer a busca pelo netblock. Existe mais de uma forma de conseguir essa informação:
-  Arin     Terminal   whois TARGET_IP Para facilitar a visualização do netblock utilize o  | grep &quot;inetnum&quot;" />
+<meta property="og:description" content="O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. .Lab 01 Primeiramente vamos rodar o comando host, para verificar o ip do alvo: host businesscorp.com.br
+host businesscorp.com.br Com o endereço de IP do alvo em mãos, vamos fazer a busca pelo netblock. Existe mais de uma forma de conseguir essa informação:
+Arin Terminal whois TARGET_IP Para facilitar a visualização do netblock utilize o | grep &quot;inetnum&quot;" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nmmorette.github.io/posts/2021/07/npp-semana-05-information-gathering-infra/" /><meta property="og:image" content="https://nmmorette.github.io"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-07-06T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-07-06T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2021-07-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-07-06T00:00:00+00:00" />
 
 
 
@@ -197,7 +197,7 @@ if (!doNotTrack) {
 
 <p>Primeiramente vamos rodar o comando host, para verificar o ip do alvo:
 <code>host</code> businesscorp.com.br</p>
-<pre><code class="language-cli" data-lang="cli">  host businesscorp.com.br
+<pre tabindex="0"><code class="language-cli" data-lang="cli">  host businesscorp.com.br
 </code></pre><p>Com o endereço de IP do alvo em mãos, vamos fazer a busca pelo netblock. 
 Existe mais de uma forma de conseguir essa informação:</p>
 <ul>
@@ -214,8 +214,8 @@ Existe mais de uma forma de conseguir essa informação:</p>
 <h2 id="terminal">Terminal</h2>
 </li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  whois TARGET_IP
-</code></pre></div><p>Para facilitar a visualização do netblock utilize o <code> | grep &quot;inetnum&quot;</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>  whois TARGET_IP
+</span></span></code></pre></div><p>Para facilitar a visualização do netblock utilize o <code> | grep &quot;inetnum&quot;</code></p>
 
     <img src="/images/semana05-infra/who.jpg"  class="center"  style="border-radius: 10px;"  />
 
@@ -232,7 +232,7 @@ Existe mais de uma forma de conseguir essa informação:</p>
 
 
 <p>Utilizando o mesmo método do primeiro lab, podemos buscar pelo AS do provedor.</p>
-<pre><code class="language-cli" data-lang="cli">  whois 37.59.174.225 | grep &quot;origin&quot;
+<pre tabindex="0"><code class="language-cli" data-lang="cli">  whois 37.59.174.225 | grep &#34;origin&#34;
 </code></pre><details>
   <summary>Resposta</summary>
   AS16276
@@ -247,9 +247,9 @@ Existe mais de uma forma de conseguir essa informação:</p>
 <p>Para esse lab esxiste mais de uma forma de encontrar a resposta.</p>
 <h4 id="dns-transfer">DNS transfer</h4>
 <p>Vamos fazer uma consulta utilizando o comando host:</p>
-<pre><code class="language-cli" data-lang="cli"> host -t ns businesscorp.com.br
+<pre tabindex="0"><code class="language-cli" data-lang="cli"> host -t ns businesscorp.com.br
 </code></pre><p>Com o resultado do comando teremos os nameservers do domínio, assim podemos rodar <code>host</code> e indicar o endereço para consulta:</p>
-<pre><code class="language-cli" data-lang="cli"> host -l businesscorp.com.br ENDEREÇO_DO_NAME_SERVER
+<pre tabindex="0"><code class="language-cli" data-lang="cli"> host -l businesscorp.com.br ENDEREÇO_DO_NAME_SERVER
 </code></pre><p>Em caso de falha,  podemos tentar em outro nameserver para verificar.</p>
 
     <img src="/images/semana05-infra/ns2.JPG"  class="center"  style="border-radius: 10px;"  />
@@ -259,7 +259,7 @@ Existe mais de uma forma de conseguir essa informação:</p>
 <p>Caso o método acima não funcione, podemos executar um scritp para tentar descobrir os nomes dos subdomínios.</p>
 <p>O script faz um &ldquo;brute force&rdquo; de DNS, ele verifica se os subdomínios existem de acordo com uma wordlist. Dependendo do tamanho da sua wordlist a execução do script pode ser demorada.</p>
 <p>Eu utilizei a wordlist que criei baseada em wordlists do dirb com outras adições minhas e de outras wordlists que encontrei na internet. <a href="https://github.com/nmmorette/worldlist/blob/main/subdomain.txt">subdomain.txt</a></p>
-<pre><code class="language-cli" data-lang="cli"> ./dnsrecon.sh businesscorp.com.br
+<pre tabindex="0"><code class="language-cli" data-lang="cli"> ./dnsrecon.sh businesscorp.com.br
 </code></pre>
     <img src="/images/semana05-infra/dns.JPG"  class="center"  style="border-radius: 10px;"  />
 
@@ -289,8 +289,8 @@ Existe mais de uma forma de conseguir essa informação:</p>
 
 
 <p>Para fazer a pesquisa reversa podemos utilizar a linha de comando abaixo:</p>
-<pre><code class="language-cli" data-lang="cli">for ip in $(seq 224 239)do
-  host -t ptr 37.59.174.$ip | grep -v &quot;37.59.174&quot; | cut -d &quot; &quot; -f 5
+<pre tabindex="0"><code class="language-cli" data-lang="cli">for ip in $(seq 224 239)do
+  host -t ptr 37.59.174.$ip | grep -v &#34;37.59.174&#34; | cut -d &#34; &#34; -f 5
 </code></pre><p>Esse script precisa ser alterado manualmente para correto funcionamento, as informações de netblock e ip devem ser alteradas.</p>
 <details>
   <summary>Resposta</summary>
@@ -304,7 +304,7 @@ Existe mais de uma forma de conseguir essa informação:</p>
 
 
 <p>Mais uma vez utilizaremos o <code>host</code> para visualizar o ip de cada subdomínio.</p>
-<pre><code class="language-cli" data-lang="cli">host rh.businesscorp.com.br
+<pre tabindex="0"><code class="language-cli" data-lang="cli">host rh.businesscorp.com.br
 host piloto.businesscorp.com.br
 </code></pre><details>
   <summary>Resposta</summary>
@@ -320,14 +320,13 @@ host piloto.businesscorp.com.br
 <p>Para esse lab utilizaremos o script <a href="https://github.com/nmmorette/bash-scripts/blob/main/dnstransfer.sh">dnstransfer.sh</a>
 O script verifica se é possível fazer uma transferência de DNS nos nameservers. 
 Se for possível teremos uma cópia dos registros DNS do servidor, isso ocorre quando o servidor DNS não foi configurado corretamente para somente aceitar solicitações de transferências de servidores autorizados.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e">#verifica entradas do DNS e tenta um ataque de transfer dns para encontrar subdominios</span>
-<span style="color:#66d9ef">for</span> server in <span style="color:#66d9ef">$(</span>host -t ns $1 | cut -d <span style="color:#e6db74">&#34; &#34;</span> -f <span style="color:#ae81ff">4</span> <span style="color:#66d9ef">)</span>;<span style="color:#66d9ef">do</span>
-	host -l -a $1 $server
-<span style="color:#66d9ef">done</span> 
-
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#verifica entradas do DNS e tenta um ataque de transfer dns para encontrar subdominios</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> server in <span style="color:#66d9ef">$(</span>host -t ns $1 | cut -d <span style="color:#e6db74">&#34; &#34;</span> -f <span style="color:#ae81ff">4</span> <span style="color:#66d9ef">)</span>;<span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>	host -l -a $1 $server
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span> 
+</span></span></code></pre></div>
     <img src="/images/semana05-infra/dnsrecon.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
@@ -343,7 +342,7 @@ Se for possível teremos uma cópia dos registros DNS do servidor, isso ocorre q
 
 
 <p>Para encontrar essa key precisamos verificar o SPF do domínio:</p>
-<pre><code class="language-cli" data-lang="cli">host -t txt businesscorp.com.br
+<pre tabindex="0"><code class="language-cli" data-lang="cli">host -t txt businesscorp.com.br
 </code></pre><details>
   <summary>Resposta</summary>
   9283947588214
@@ -356,19 +355,19 @@ Se for possível teremos uma cópia dos registros DNS do servidor, isso ocorre q
 
 
 <p>Para esse lab vamos utilizar o script de subdomain take over: <a href="https://github.com/nmmorette/bash-scripts/blob/main/subtakeover.sh">subtakeover.sh</a>. Para correto funcionamento do script utilize uma boa wordlist.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/bash
-</span><span style="color:#75715e"></span><span style="color:#75715e">###subtakeover.sh</span>
-<span style="color:#75715e">###---------------------------------------------------------------</span>
-<span style="color:#75715e">### Objective: find CNAME for subdomaintakover</span>
-<span style="color:#75715e">###---------------------------------------------------------------</span>
-<span style="color:#75715e">### Author: Natan Morette</span>
-<span style="color:#75715e">###---------------------------------------------------------------</span>
-<span style="color:#75715e">### Example: ./subtakeover.sh google.com</span>
-<span style="color:#75715e">###---------------------------------------------------------------</span>
-<span style="color:#66d9ef">for</span> palavra in <span style="color:#66d9ef">$(</span>cat <span style="color:#e6db74">&#34;INSERT YOUR WORDLIST HERE, YOU CAN DOWNLOAD ONE HERE: https://github.com/nmmorette/worldlist);do
-</span><span style="color:#e6db74">host -t cname </span>$palavra<span style="color:#e6db74">.</span>$1<span style="color:#e6db74"> | grep &#34;</span>alias <span style="color:#66d9ef">for</span><span style="color:#e6db74">&#34; 
-</span><span style="color:#e6db74">done
-</span></code></pre></div><p>Utilizando o script do Lab07 também podemos encontrar o resultado.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">###subtakeover.sh</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">###---------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### Objective: find CNAME for subdomaintakover</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">###---------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### Author: Natan Morette</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">###---------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### Example: ./subtakeover.sh google.com</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">###---------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> palavra in <span style="color:#66d9ef">$(</span>cat <span style="color:#e6db74">&#34;INSERT YOUR WORDLIST HERE, YOU CAN DOWNLOAD ONE HERE: https://github.com/nmmorette/worldlist);do
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">host -t cname </span>$palavra<span style="color:#e6db74">.</span>$1<span style="color:#e6db74"> | grep &#34;</span>alias <span style="color:#66d9ef">for</span><span style="color:#e6db74">&#34; 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">done
+</span></span></span></code></pre></div><p>Utilizando o script do Lab07 também podemos encontrar o resultado.
 Após rodar o script no domínio alvo, verifique os resultados para encontrar a key.</p>
 <details>
   <summary>Resposta</summary>
@@ -413,7 +412,7 @@ Após rodar o script no domínio alvo, verifique os resultados para encontrar a 
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        552 Words
+        553 Words
       </p>
 
       <p>
@@ -576,7 +575,7 @@ Após rodar o script no domínio alvo, verifique os resultados para encontrar a 
 
 
 
-<script type="text/javascript" src="/bundle.min.599099f1f14b78b657d524b28e10e0c5098e7cd46e9c7aed73d577068a276c3ff1bb234cbf29cb313333e83cf411727b43157c91ce5b809e2ffc81664614608e.js" integrity="sha512-WZCZ8fFLeLZX1SSyjhDgxQmOfNRunHrtc9V3BoonbD/xuyNMvynLMTMz6Dz0EXJ7QxV8kc5bgJ4v/IFmRhRgjg=="></script>
+<script type="text/javascript" src="/bundle.min.a2c5b062c87998f04d1b5dfb6a89a1b2d79786c21d0cb63a05e8a2082984b64b77d80955e3b97eab17273775162ba372511b711fea2f7608f216e68a67bb22d6.js" integrity="sha512-osWwYsh5mPBNG137aomhsteXhsIdDLY6BeiiCCmEtkt32AlV47l&#43;qxcnN3UWK6NyURtxH&#43;ovdgjyFuaKZ7si1g=="></script>
 
 
 

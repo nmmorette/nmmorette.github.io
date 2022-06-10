@@ -34,10 +34,10 @@
       
       <guid>https://nmmorette.github.io/posts/2021/07/hack-the-box-archetype-write-up/</guid>
       <description>Enumeration Initial scan:
-nmap -sSV 10.10.10.27Second nmap scan with --script vuln
+nmap -sSV 10.10.10.27 Second nmap scan with --script vuln
 We found a possible starting point: CVE-2008-4250.
 SMB Enumeration The next step is to try to connect in the SMB service:
-smbclient -L \\10.10.10.27 -NIPC$: this hidden share is a special share used for inter-process communication. It doesn’t allow one to access files or directories like other shares, but rather allows one to communicate with processes running on the remote system.</description>
+smbclient -L \\10.10.10.27 -N IPC$: this hidden share is a special share used for inter-process communication. It doesn’t allow one to access files or directories like other shares, but rather allows one to communicate with processes running on the remote system.</description>
     </item>
     
   </channel>
