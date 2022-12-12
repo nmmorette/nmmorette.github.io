@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Natan Maia Morette</title>
+    <link>https://nmmorette.github.io/</link>
+    <description>Recent content on Natan Maia Morette</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RoadMap para AZ-900 (Pt-br)</title>
+      <link>https://nmmorette.github.io/posts/2021/09/roadmap-para-az-900-pt-br/</link>
+      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/09/roadmap-para-az-900-pt-br/</guid>
+      <description>Introdução O intuito desse post é ajudar os interessados em fazer a prova AZ-900 Microsoft 365 Fundamentals. Nesse post vou falar um pouco sobre a prova e sobre o meu plano de estudos para aprovação.
+A prova tem nível fundamental ou seja é uma prova baseada em conceitos e não há prática, o foca é entender os conceitos do azure e de cada serviço. Ter uma noção básica do que cada serviço do azure faz é fundamental.</description>
+    </item>
+    
+    <item>
+      <title>Hack the Box - Lame - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2021/09/hack-the-box-lame-write-up/</link>
+      <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/09/hack-the-box-lame-write-up/</guid>
+      <description>Enumeration Initial scan:
+└─$ sudo nmap -sS -Pn 10.10.10.3 [sudo] password for venomsnake: Host discovery disabled (-Pn). All addresses will be marked &amp;#39;up&amp;#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-09-01 10:40 -03 Nmap scan report for 10.10.10.3 Host is up (0.17s latency). Not shown: 996 filtered ports PORT STATE SERVICE 21/tcp open ftp 22/tcp open ssh 139/tcp open netbios-ssn 445/tcp open microsoft-ds Nmap done: 1 IP address (1 host up) scanned in 20.</description>
+    </item>
+    
+    <item>
+      <title>RoadMap para MS-900 (Pt-br)</title>
+      <link>https://nmmorette.github.io/posts/2021/08/roadmap-para-ms-900-pt-br/</link>
+      <pubDate>Mon, 30 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/08/roadmap-para-ms-900-pt-br/</guid>
+      <description>Introdução O intuito desse post é ajudar os interessados em fazer a prova MS-900 Microsoft 365 Fundamentals. Nesse post vou falar um pouco sobre a prova e sobre o meu plano de estudos para aprovação.
+A prova tem nível fundamental ou seja é uma prova baseada em conceitos e não há prática, além disso é uma certificação de &amp;ldquo;entrada&amp;rdquo; para Microsoft 365. Vai te ajudar a conhecer a tecnologia ou provar seus conhecimentos.</description>
+    </item>
+    
+    <item>
+      <title>TryHackme - Bounty Hacker - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2021/08/tryhackme-bounty-hacker-write-up/</link>
+      <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/08/tryhackme-bounty-hacker-write-up/</guid>
+      <description>First of all, let&amp;rsquo;s nmap the machine IP.
+└─$ sudo nmap -sS -Pn 10.10.207.23 [sudo] password for venomsnake: Host discovery disabled (-Pn). All addresses will be marked &amp;#39;up&amp;#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-15 07:43 -03 Nmap scan report for 10.10.207.23 Host is up (0.20s latency). Not shown: 967 filtered ports, 30 closed ports PORT STATE SERVICE 21/tcp open ftp 22/tcp open ssh 80/tcp open http Nmap done: 1 IP address (1 host up) scanned in 9.</description>
+    </item>
+    
+    <item>
+      <title>Hack the Box - Blue - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2021/08/hack-the-box-blue-write-up/</link>
+      <pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/08/hack-the-box-blue-write-up/</guid>
+      <description>Enumeration Initial scan:
+└──╼ $sudo nmap -sS -Pn 10.10.10.40 Host discovery disabled (-Pn). All addresses will be marked &amp;#39;up&amp;#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-11 15:11 -03 Nmap scan report for 10.10.10.40 Host is up (0.45s latency). Not shown: 991 closed ports PORT STATE SERVICE 135/tcp open msrpc 139/tcp open netbios-ssn 445/tcp open microsoft-ds 49152/tcp open unknown 49153/tcp open unknown 49154/tcp open unknown 49155/tcp open unknown 49156/tcp open unknown 49157/tcp open unknown Second nmap scan with --script vuln only on the open ports:</description>
+    </item>
+    
+    <item>
+      <title>Hack the Box - Archetype - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2021/07/hack-the-box-archetype-write-up/</link>
+      <pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/hack-the-box-archetype-write-up/</guid>
+      <description>Enumeration Initial scan:
+nmap -sSV 10.10.10.27Second nmap scan with --script vuln
+We found a possible starting point: CVE-2008-4250.
+SMB Enumeration The next step is to try to connect in the SMB service:
+smbclient -L \\10.10.10.27 -NIPC$: this hidden share is a special share used for inter-process communication. It doesn’t allow one to access files or directories like other shares, but rather allows one to communicate with processes running on the remote system.</description>
+    </item>
+    
+    <item>
+      <title>TryHackme - Steel Mountain - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2021/07/tryhackme-steel-mountain-write-up/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-steel-mountain-write-up/</guid>
+      <description>Task 1. Introduction First of all, let&amp;rsquo;s nmap the machine IP.
+nmap -sS -A 10.10.169.181 -PnWe found a web service open port (80), let&amp;rsquo;s open the web page:
+Take a look at the source code:
+Who is the employee of the month?
+Bill Harper
+Task 2. Inicial Access Scan the machine with nmap. What is the other port running a web server on?
+Nmap gives this answer:
+8080</description>
+    </item>
+    
+    <item>
+      <title>TryHackme - The Cod Caper - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-write-up/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-write-up/</guid>
+      <description>Task 1. Intro This is a write up for &amp;ldquo;The Cod Caper&amp;rdquo; room at Try Hack Me.
+Room&amp;rsquo;s intro note:
+Hello there my name is Pingu. I&#39;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&#39;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server.</description>
+    </item>
+    
+    <item>
+      <title>Static web page with Hugo and Git Hub</title>
+      <link>https://nmmorette.github.io/posts/2021/06/static-web-page-with-hugo-and-git-hub/</link>
+      <pubDate>Wed, 30 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/06/static-web-page-with-hugo-and-git-hub/</guid>
+      <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
+More complete instructions are available at Install Hugo
+Step 2. Configure your Git Hub Pages You need a github account for this step.
+Step 3 Choose a theme In Hugo theme pages choose your favorite theme and download to your computer.
+Unzip the files into the hugo default theme folder: ./Sites/YOURSITE/Themes
+Then copy the content of config.</description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://nmmorette.github.io/posts/2021/06/hello-world/</link>
+      <pubDate>Fri, 25 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/06/hello-world/</guid>
+      <description>Created with Hugo/hello-friend-ng theme and GitHub pages.</description>
+    </item>
+    
+  </channel>
+</rss>
