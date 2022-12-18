@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="map[name:Natan]">
-<meta name="description" content="Instalar WSL sem Windows Store Talvez você se depare com a necessidade de instalar alguma instancia WSL em uma máquina windows onde a Windows Store não está disponível. Esse cenário pode acontecer em muitos ambientes corporativos, onde a loja é bloqueada devido a baselines de segurança ou por algum outro motivo.
+<meta name="description" content="Instalar WSL sem Windows Store Talvez você se depare com a necessidade de instalar alguma instância WSL em uma máquina windows onde a Windows Store não está disponível. Esse cenário pode acontecer em muitos ambientes corporativos, onde a loja é bloqueada devido a baselines de segurança ou por algum outro motivo.
 Nesse caso é necessário seguir alguns passos para instalar o WSL e fazer o download das imagens de diferentes tipos de sistemas Linux." />
 <meta name="keywords" content="DCPT,Pentest,CTF,Cybersecurity,RedTeam,TryhackMe,Hackthebox,certification, tutorial, howto, windows, wsl" />
 <meta name="robots" content="noodp" />
@@ -43,11 +43,11 @@ Nesse caso é necessário seguir alguns passos para instalar o WSL e fazer o dow
 
 
 <meta itemprop="name" content="Instalar WSL sem Windows Store">
-<meta itemprop="description" content="Instalar WSL sem Windows Store Talvez você se depare com a necessidade de instalar alguma instancia WSL em uma máquina windows onde a Windows Store não está disponível. Esse cenário pode acontecer em muitos ambientes corporativos, onde a loja é bloqueada devido a baselines de segurança ou por algum outro motivo.
+<meta itemprop="description" content="Instalar WSL sem Windows Store Talvez você se depare com a necessidade de instalar alguma instância WSL em uma máquina windows onde a Windows Store não está disponível. Esse cenário pode acontecer em muitos ambientes corporativos, onde a loja é bloqueada devido a baselines de segurança ou por algum outro motivo.
 Nesse caso é necessário seguir alguns passos para instalar o WSL e fazer o download das imagens de diferentes tipos de sistemas Linux.">
 <meta itemprop="datePublished" content="2022-12-17T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2022-12-17T00:00:00+00:00" />
-<meta itemprop="wordCount" content="514">
+<meta itemprop="wordCount" content="511">
 <meta itemprop="image" content="https://nmmorette.github.io"/>
 
 
@@ -58,14 +58,14 @@ Nesse caso é necessário seguir alguns passos para instalar o WSL e fazer o dow
 <meta name="twitter:image" content="https://nmmorette.github.io"/>
 
 <meta name="twitter:title" content="Instalar WSL sem Windows Store"/>
-<meta name="twitter:description" content="Instalar WSL sem Windows Store Talvez você se depare com a necessidade de instalar alguma instancia WSL em uma máquina windows onde a Windows Store não está disponível. Esse cenário pode acontecer em muitos ambientes corporativos, onde a loja é bloqueada devido a baselines de segurança ou por algum outro motivo.
+<meta name="twitter:description" content="Instalar WSL sem Windows Store Talvez você se depare com a necessidade de instalar alguma instância WSL em uma máquina windows onde a Windows Store não está disponível. Esse cenário pode acontecer em muitos ambientes corporativos, onde a loja é bloqueada devido a baselines de segurança ou por algum outro motivo.
 Nesse caso é necessário seguir alguns passos para instalar o WSL e fazer o download das imagens de diferentes tipos de sistemas Linux."/>
 
 
 
 
     <meta property="og:title" content="Instalar WSL sem Windows Store" />
-<meta property="og:description" content="Instalar WSL sem Windows Store Talvez você se depare com a necessidade de instalar alguma instancia WSL em uma máquina windows onde a Windows Store não está disponível. Esse cenário pode acontecer em muitos ambientes corporativos, onde a loja é bloqueada devido a baselines de segurança ou por algum outro motivo.
+<meta property="og:description" content="Instalar WSL sem Windows Store Talvez você se depare com a necessidade de instalar alguma instância WSL em uma máquina windows onde a Windows Store não está disponível. Esse cenário pode acontecer em muitos ambientes corporativos, onde a loja é bloqueada devido a baselines de segurança ou por algum outro motivo.
 Nesse caso é necessário seguir alguns passos para instalar o WSL e fazer o download das imagens de diferentes tipos de sistemas Linux." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nmmorette.github.io/posts/2022/12/instalar-wsl-sem-windows-store/" />
@@ -200,10 +200,10 @@ if (!doNotTrack) {
 
       <div class="post-content">
         <h1 id="instalar-wsl-sem-windows-store">Instalar WSL sem Windows Store</h1>
-<p>Talvez você se depare com a necessidade de instalar alguma instancia WSL em uma máquina windows onde a Windows Store não está disponível. Esse cenário pode acontecer em muitos ambientes corporativos, onde a loja é bloqueada devido a baselines de segurança ou por algum outro motivo.</p>
+<p>Talvez você se depare com a necessidade de instalar alguma instância WSL em uma máquina windows onde a Windows Store não está disponível. Esse cenário pode acontecer em muitos ambientes corporativos, onde a loja é bloqueada devido a baselines de segurança ou por algum outro motivo.</p>
 <p>Nesse caso é necessário seguir alguns passos para instalar o WSL e fazer o download das imagens de diferentes tipos de sistemas Linux.</p>
 <h2 id="pré-requisitos">Pré requisitos</h2>
-<p>É necessário estar rodando Windows 10 versão 2004 ou superior ( Build 19041 ou maior), ou Windows 11. Se você está utilizando uma versão anterior, faça update do seu sistema.</p>
+<p>Necessário Windows 10 versão 2004 ou superior ( Build 19041 ou maior), ou Windows 11. Se você está utilizando uma versão anterior, faça update do seu sistema.</p>
 <h2 id="1---habilitando-o-wsl">1 - Habilitando o WSL</h2>
 <p>Abra o PowerShell como <strong>administrador</strong> e digite o comando:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">dism.exe /online /enable-feature /featurename<span style="color:#960050;background-color:#1e0010">:</span>Microsoft-Windows-Subsystem-Linux /all /norestart
@@ -305,7 +305,7 @@ Com o Powershell aberto digite:</p>
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        514 Words
+        511 Words
       </p>
 
       <p>
