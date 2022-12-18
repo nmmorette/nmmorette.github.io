@@ -5,8 +5,97 @@
         <description>Recent content in Posts on Natan Maia Morette</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 06 Sep 2021 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Sat, 17 Dec 2022 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://nmmorette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Instalar WSL sem Windows Store</title>
+            <link>https://nmmorette.github.io/posts/2022/12/instalar-wsl-sem-windows-store/</link>
+            <pubDate>Sat, 17 Dec 2022 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2022/12/instalar-wsl-sem-windows-store/</guid>
+            <description>Instalar WSL sem Windows Store Talvez você se depare com a necessidade de instalar alguma instancia WSL em uma máquina windows onde a Windows Store não está disponível. Esse cenário pode acontecer em muitos ambientes corporativos, onde a loja é bloqueada devido a baselines de segurança ou por algum outro motivo.
+Nesse caso é necessário seguir alguns passos para instalar o WSL e fazer o download das imagens de diferentes tipos de sistemas Linux.</description>
+            <content type="html"><![CDATA[<h1 id="instalar-wsl-sem-windows-store">Instalar WSL sem Windows Store</h1>
+<p>Talvez você se depare com a necessidade de instalar alguma instancia WSL em uma máquina windows onde a Windows Store não está disponível. Esse cenário pode acontecer em muitos ambientes corporativos, onde a loja é bloqueada devido a baselines de segurança ou por algum outro motivo.</p>
+<p>Nesse caso é necessário seguir alguns passos para instalar o WSL e fazer o download das imagens de diferentes tipos de sistemas Linux.</p>
+<h2 id="pré-requisitos">Pré requisitos</h2>
+<p>É necessário estar rodando Windows 10 versão 2004 ou superior ( Build 19041 ou maior), ou Windows 11. Se você está utilizando uma versão anterior, faça update do seu sistema.</p>
+<h2 id="1---habilitando-o-wsl">1 - Habilitando o WSL</h2>
+<p>Abra o PowerShell como <strong>administrador</strong> e digite o comando:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">dism.exe /online /enable-feature /featurename<span style="color:#960050;background-color:#1e0010">:</span>Microsoft-Windows-Subsystem-Linux /all /norestart
+</code></pre></div><p>Esse comando vai habilitar os componentes necessários para o funcionamento do WSL.</p>
+<h2 id="2---habilite-o-serviço-de-máquina-virtual">2 - Habilite o serviço de Máquina Virtual</h2>
+<p>Depois de instalar o WSL, é preciso habilitar o serviço de Máquina Virtual do windows.
+Com o Powershell aberto digite:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">dism.exe /online /enable-feature /featurename<span style="color:#960050;background-color:#1e0010">:</span>VirtualMachinePlatform /all /norestart
+</code></pre></div><h2 id="3---download-do-pacote-linux-kernel-update">3 - Download do pacote Linux Kernel update</h2>
+<p>Download da última versão:</p>
+<p>• <a href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">WSL2 Linux kernel update package for x64 machines</a></p>
+<p>Após instalar o pacote de atualização siga para o próximo passo.</p>
+<p>4 - Configure o WSL 2 como padrão</p>
+<p>Com o PowerShell aberto rode o comando abaixo para configurar o WSL 2 como o serviço padrão:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">wsl --set-default-version 2
+</code></pre></div><h2 id="4---download-e-instalação-do-linux">4 - Download e Instalação do Linux</h2>
+<p>Aqui é possível encontrar os links de download dos pacotes fora da Windows Store:</p>
+<ul>
+<li><a href="https://aka.ms/wslubuntu">Ubuntu</a></li>
+<li><a href="https://aka.ms/wslubuntu2204">Ubuntu 22.04 LTS</a></li>
+<li><a href="https://aka.ms/wslubuntu2004">Ubuntu 20.04</a></li>
+<li><a href="https://aka.ms/wslubuntu2004arm">Ubuntu 20.04 ARM</a></li>
+<li><a href="https://aka.ms/wsl-ubuntu-1804">Ubuntu 18.04</a></li>
+<li><a href="https://aka.ms/wsl-ubuntu-1804-arm">Ubuntu 18.04 ARM</a></li>
+<li><a href="https://aka.ms/wsl-ubuntu-1604">Ubuntu 16.04</a></li>
+<li><a href="https://aka.ms/wsl-debian-gnulinux">Debian GNU/Linux</a></li>
+<li><a href="https://aka.ms/wsl-kali-linux-new">Kali Linux</a></li>
+<li><a href="https://aka.ms/wsl-sles-12">SUSE Linux Enterprise Server 12</a></li>
+<li><a href="https://aka.ms/wsl-SUSELinuxEnterpriseServer15SP2">SUSE Linux Enterprise Server 15 SP2</a></li>
+<li><a href="https://aka.ms/wsl-SUSELinuxEnterpriseServer15SP3">SUSE Linux Enterprise Server 15 SP3</a></li>
+<li><a href="https://aka.ms/wsl-opensuse-tumbleweed">openSUSE Tumbleweed</a></li>
+<li><a href="https://aka.ms/wsl-opensuseleap15-3">openSUSE Leap 15.3</a></li>
+<li><a href="https://aka.ms/wsl-opensuseleap15-2">openSUSE Leap 15.2</a></li>
+<li><a href="https://aka.ms/wsl-oraclelinux-8-5">Oracle Linux 8.5</a></li>
+<li><a href="https://aka.ms/wsl-oraclelinux-7-9">Oracle Linux 7.9</a></li>
+<li><a href="https://github.com/WhitewaterFoundry/WSLFedoraRemix/releases/">Fedora Remix for WSL</a></li>
+</ul>
+<p>Escolha a versão que deseja, faça o download e salve o arquivo com extensão <code>.appx</code></p>
+<p>Se você preferir, você também pode fazer o download da distribuição via linha de comando utilizando Powershell com <a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest">Invoke-WebRequest</a>. Nesse caso, download do Ubuntu 20.04:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Invoke-WebRequest -Uri https<span style="color:#960050;background-color:#1e0010">:</span>//aka.ms/wslubuntu2004 -OutFile Ubuntu.appx -UseBasicParsing
+</code></pre></div><p>Também é possível fazer o download via <code>curl.exe</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">curl.exe -L -o ubuntu-2004.appx https<span style="color:#960050;background-color:#1e0010">:</span>//aka.ms/wslubuntu2004
+</code></pre></div><p>Após o download do pacote, é preciso fazer a instalação do mesmo com o comando <code>Add-AppxPackage</code></p>
+<p>⚠️ Lembre-se de abrir na linha de comando o local onde o pacote foi baixado.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Add-AppxPackage .\app_name.appx
+</code></pre></div><p>Mude  <code>.\app_name.appx</code> para o nome do pacote que foi feito download.</p>
+<h2 id="5---instalação-do-windows-terminal-opcional">5 - Instalação do Windows Terminal (opcional)</h2>
+<p>Utilizando o Windows Terminal você tem opção de abrir múltiplas abas com suas diferentes versões do Linux instaladas.</p>
+
+    <img src="/images/wsl/0.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p><a href="https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=pt-br&amp;gl=br">Download do Windows Terminal</a></p>
+<h3 id="51---instalação-sem-windows-store">5.1 - Instalação sem Windows Store</h3>
+<p>Partindo do princípio que não temos acesso a Windows Store, o link acima não vai funcionar, portanto é preciso fazer a instalação manual.</p>
+<p>Faça o download do arquivo <code>.msixbundle</code> <a href="https://github.com/microsoft/terminal/releases">aqui</a>.</p>
+
+    <img src="/images/wsl/1.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Abra o Powershell como administrador e vá até a pasta onde o arquivo foi salvo.</p>
+<p>Rode o comando de instalação:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Add-AppxPackage Microsoft.WindowsTerminalPreview_Win10_1.16.2641.0_8wekyb3d8bbwe.msixbundle
+</code></pre></div><p>⚠️ Atente-se ao nome do arquivo, a versão baixada pode ser difetente.</p>
+
+    <img src="/images/wsl/2.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>O <code>Windows Terminal</code>foi instalado.</p>
+
+    <img src="/images/wsl/3.png"  class="center"  style="border-radius: 10px;"  />
+
+
+]]></content>
+        </item>
         
         <item>
             <title>RoadMap para AZ-900 (Pt-br)</title>
@@ -986,6 +1075,96 @@ Look at the results and search for True in the <code>Can Restart</code> option:<
 <p>We have an administrator shell, search for the key in the Administrator&rsquo;s folder.</p>
 <p><strong>What is the root flag ?</strong></p>
 <p><code>9af5f314f57607c00fd09803a587db80</code></p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>TryHackme - Pre-Security Path - Review</title>
+            <link>https://nmmorette.github.io/posts/2021/07/tryhackme-pre-security-path-review/</link>
+            <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-pre-security-path-review/</guid>
+            <description>Do you want to be a hacker? An IT professional? Or maybe just know about thechnology.But you don&amp;rsquo;t know where to start. Try Hack Me is definitely the right place for you!
+Especially now with the new Pre Security learn path.
+You don&amp;rsquo;t need to be an IT pro for start here. This learning path will take you by the hand and show the basics of cyber security. You will learn about:</description>
+            <content type="html"><![CDATA[
+    <img src="/images/presec/banner.jpg"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Do you want to be a hacker? An IT professional? Or maybe just know about thechnology.But you don&rsquo;t know where to start. Try Hack Me is definitely the right place for you!</p>
+<p>Especially now with the new <a href="https://tryhackme.com/path-action/presecurity/join">Pre Security learn path</a>.</p>
+
+    <img src="/images/presec/presec.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>You don&rsquo;t need to be an IT pro for start here. This learning path will take you by the hand and show the basics of cyber security. 
+You will learn about:</p>
+
+
+<ul>
+<li>Cyber Security basics</li>
+<li>Networkig basics</li>
+<li>The web common attacks</li>
+<li>Learn to use the Linux and Windows operating system</li>
+</ul>
+
+<p>First of all, you need an account in <a href="https://tryhackme.com">Try Hack Me</a>, don&rsquo;t waste your time and just do it! Its free!!</p>
+
+    <img src="/images/presec/try.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Equally important about THM, are the methods they use, you will feel like you are playing a game!
+Forget about reading a lot of boring texts! THM know how to teach any content in a fun way to learn.
+In all THM learning path you have hands-on exercises and virtual labs.</p>
+<p>If you don&rsquo;t know the way,</p>
+
+    <img src="/images/presec/mando.gif"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>In the linux and windows funtamentals, you have the ability to start a vitual machine directly in your browser and <del>play</del> study.</p>
+<p>
+    <img src="/images/presec/machine.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+
+    <img src="/images/presec/kevin.gif"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+
+    <img src="/images/presec/linux2.JPG"  class="center"  style="border-radius: 10px;"  />
+
+</p>
+<p>And finally after finish the Pre-Security path, you will get a THM certificate:</p>
+
+    <img src="/images/presec/thm.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Moreover you have to choose your destiny now.
+Pre security is the best start point for beginners, after that THM have new paths for you:</p>
+<p>
+    <img src="/images/presec/roadmap.JPG"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+
+    <img src="/images/presec/hackerman.gif"  class="center"  style="border-radius: 10px;"  />
+
+</p>
+
+
+<br>
+
 ]]></content>
         </item>
         
