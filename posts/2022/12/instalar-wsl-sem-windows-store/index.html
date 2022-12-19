@@ -185,10 +185,11 @@ if (!doNotTrack) {
     <li><a href="#1---habilitando-o-wsl">1 - Habilitando o WSL</a></li>
     <li><a href="#2---habilite-o-serviço-de-máquina-virtual">2 - Habilite o serviço de Máquina Virtual</a></li>
     <li><a href="#3---download-do-pacote-linux-kernel-update">3 - Download do pacote Linux Kernel update</a></li>
-    <li><a href="#4---download-e-instalação-do-linux">4 - Download e Instalação do Linux</a></li>
-    <li><a href="#5---instalação-do-windows-terminal-opcional">5 - Instalação do Windows Terminal (opcional)</a>
+    <li><a href="#4---configure-o-wsl-2-como-padrão">4 - Configure o WSL 2 como padrão</a></li>
+    <li><a href="#5---download-e-instalação-do-linux">5 - Download e Instalação do Linux</a></li>
+    <li><a href="#6---instalação-do-windows-terminal-opcional">6 - Instalação do Windows Terminal (opcional)</a>
       <ul>
-        <li><a href="#51---instalação-sem-windows-store">5.1 - Instalação sem Windows Store</a></li>
+        <li><a href="#61---instalação-sem-windows-store">6.1 - Instalação sem Windows Store</a></li>
       </ul>
     </li>
   </ul>
@@ -216,10 +217,10 @@ Com o Powershell aberto digite:</p>
 <p>Download da última versão:</p>
 <p>• <a href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">WSL2 Linux kernel update package for x64 machines</a></p>
 <p>Após instalar o pacote de atualização siga para o próximo passo.</p>
-<p>4 - Configure o WSL 2 como padrão</p>
+<h2 id="4---configure-o-wsl-2-como-padrão">4 - Configure o WSL 2 como padrão</h2>
 <p>Com o PowerShell aberto rode o comando abaixo para configurar o WSL 2 como o serviço padrão:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">wsl --set-default-version 2
-</code></pre></div><h2 id="4---download-e-instalação-do-linux">4 - Download e Instalação do Linux</h2>
+</code></pre></div><h2 id="5---download-e-instalação-do-linux">5 - Download e Instalação do Linux</h2>
 <p>Aqui é possível encontrar os links de download dos pacotes fora da Windows Store:</p>
 <ul>
 <li><a href="https://aka.ms/wslubuntu">Ubuntu</a></li>
@@ -250,14 +251,14 @@ Com o Powershell aberto digite:</p>
 <p>⚠️ Lembre-se de abrir na linha de comando o local onde o pacote foi baixado.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Add-AppxPackage .\app_name.appx
 </code></pre></div><p>Mude  <code>.\app_name.appx</code> para o nome do pacote que foi feito download.</p>
-<h2 id="5---instalação-do-windows-terminal-opcional">5 - Instalação do Windows Terminal (opcional)</h2>
+<h2 id="6---instalação-do-windows-terminal-opcional">6 - Instalação do Windows Terminal (opcional)</h2>
 <p>Utilizando o Windows Terminal você tem opção de abrir múltiplas abas com suas diferentes versões do Linux instaladas.</p>
 
     <img src="/images/wsl/0.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p><a href="https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=pt-br&amp;gl=br">Download do Windows Terminal</a></p>
-<h3 id="51---instalação-sem-windows-store">5.1 - Instalação sem Windows Store</h3>
+<h3 id="61---instalação-sem-windows-store">6.1 - Instalação sem Windows Store</h3>
 <p>Partindo do princípio que não temos acesso a Windows Store, o link acima não vai funcionar, portanto é preciso fazer a instalação manual.</p>
 <p>Faça o download do arquivo <code>.msixbundle</code> <a href="https://github.com/microsoft/terminal/releases">aqui</a>.</p>
 
