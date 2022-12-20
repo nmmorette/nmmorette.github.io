@@ -8,12 +8,12 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 17 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Instalar WSL sem Windows Store</title>
-      <link>https://nmmorette.github.io/posts/2022/12/instalar-wsl-sem-windows-store/</link>
+      <title>Instalando WSL sem Windows Store</title>
+      <link>https://nmmorette.github.io/posts/2022/12/instalando-wsl-sem-windows-store/</link>
       <pubDate>Sat, 17 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://nmmorette.github.io/posts/2022/12/instalar-wsl-sem-windows-store/</guid>
-      <description>Instalar WSL sem Windows Store Talvez você se depare com a necessidade de instalar alguma instância WSL em uma máquina windows onde a Windows Store não está disponível. Esse cenário pode acontecer em muitos ambientes corporativos, onde a loja é bloqueada devido a baselines de segurança ou por algum outro motivo.
+      <guid>https://nmmorette.github.io/posts/2022/12/instalando-wsl-sem-windows-store/</guid>
+      <description>Instalando WSL sem Windows Store Talvez você se depare com a necessidade de instalar alguma instância WSL em uma máquina windows onde a Windows Store não está disponível. Esse cenário pode acontecer em muitos ambientes corporativos, onde a loja é bloqueada devido a baselines de segurança ou por algum outro motivo.
 Nesse caso é necessário seguir alguns passos para instalar o WSL e fazer o download das imagens de diferentes tipos de sistemas Linux.</description>
     </item>
     
