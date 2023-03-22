@@ -6,7 +6,17 @@
     <description>Recent content on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 17 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hack the Box - Precious - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2023/03/hack-the-box-precious-write-up/</link>
+      <pubDate>Wed, 22 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2023/03/hack-the-box-precious-write-up/</guid>
+      <description>Enumeration Initial scan:
+sudo nmap -sS -A 10.10.11.189 Starting Nmap 7.93 ( https://nmap.org ) at 2023-03-21 20:20 -03 Nmap scan report for precious.htb (10.10.11.189) Host is up (0.24s latency). Not shown: 998 closed tcp ports (reset) PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.4p1 Debian 5+deb11u1 (protocol 2.0) | ssh-hostkey: | 3072 845e13a8e31e20661d235550f63047d2 (RSA) | 256 a2ef7b9665ce4161c467ee4e96c7c892 (ECDSA) |_ 256 33053dcd7ab798458239e7ae3c91a658 (ED25519) 80/tcp open http nginx 1.18.0 |_http-title: Convert Web Page to PDF | http-server-header: | nginx/1.</description>
+    </item>
+    
     <item>
       <title>Instalando WSL sem Windows Store</title>
       <link>https://nmmorette.github.io/posts/2022/12/instalando-wsl-sem-windows-store/</link>
@@ -105,17 +115,6 @@ Nmap gives this answer:
       <description>Do you want to be a hacker? An IT professional? Or maybe just know about thechnology.But you don&amp;rsquo;t know where to start. Try Hack Me is definitely the right place for you!
 Especially now with the new Pre Security learn path.
 You don&amp;rsquo;t need to be an IT pro for start here. This learning path will take you by the hand and show the basics of cyber security. You will learn about:</description>
-    </item>
-    
-    <item>
-      <title>TryHackme - The Cod Caper - Write Up</title>
-      <link>https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-write-up/</link>
-      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-write-up/</guid>
-      <description>Task 1. Intro This is a write up for &amp;ldquo;The Cod Caper&amp;rdquo; room at Try Hack Me.
-Room&amp;rsquo;s intro note:
-Hello there my name is Pingu. I&#39;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&#39;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server.</description>
     </item>
     
   </channel>

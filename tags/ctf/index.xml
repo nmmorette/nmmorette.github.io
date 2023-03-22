@@ -6,7 +6,17 @@
     <description>Recent content in CTF on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hack the Box - Precious - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2023/03/hack-the-box-precious-write-up/</link>
+      <pubDate>Wed, 22 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2023/03/hack-the-box-precious-write-up/</guid>
+      <description>Enumeration Initial scan:
+sudo nmap -sS -A 10.10.11.189 Starting Nmap 7.93 ( https://nmap.org ) at 2023-03-21 20:20 -03 Nmap scan report for precious.htb (10.10.11.189) Host is up (0.24s latency). Not shown: 998 closed tcp ports (reset) PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.4p1 Debian 5+deb11u1 (protocol 2.0) | ssh-hostkey: | 3072 845e13a8e31e20661d235550f63047d2 (RSA) | 256 a2ef7b9665ce4161c467ee4e96c7c892 (ECDSA) |_ 256 33053dcd7ab798458239e7ae3c91a658 (ED25519) 80/tcp open http nginx 1.18.0 |_http-title: Convert Web Page to PDF | http-server-header: | nginx/1.</description>
+    </item>
+    
     <item>
       <title>Hack the Box - Lame - Write Up</title>
       <link>https://nmmorette.github.io/posts/2021/09/hack-the-box-lame-write-up/</link>
