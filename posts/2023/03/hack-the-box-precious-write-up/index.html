@@ -47,7 +47,7 @@ sudo nmap -sS -A 10.10.11.189 Starting Nmap 7.93 ( https://nmap.org ) at 2023-03
 sudo nmap -sS -A 10.10.11.189 Starting Nmap 7.93 ( https://nmap.org ) at 2023-03-21 20:20 -03 Nmap scan report for precious.htb (10.10.11.189) Host is up (0.24s latency). Not shown: 998 closed tcp ports (reset) PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.4p1 Debian 5&#43;deb11u1 (protocol 2.0) | ssh-hostkey: | 3072 845e13a8e31e20661d235550f63047d2 (RSA) | 256 a2ef7b9665ce4161c467ee4e96c7c892 (ECDSA) |_ 256 33053dcd7ab798458239e7ae3c91a658 (ED25519) 80/tcp open http nginx 1.18.0 |_http-title: Convert Web Page to PDF | http-server-header: | nginx/1.">
 <meta itemprop="datePublished" content="2023-03-22T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-03-22T00:00:00+00:00" />
-<meta itemprop="wordCount" content="699">
+<meta itemprop="wordCount" content="700">
 <meta itemprop="image" content="https://nmmorette.github.io"/>
 
 
@@ -185,8 +185,12 @@ if (!doNotTrack) {
     <li><a href="#enumeration">Enumeration</a>
       <ul>
         <li><a href="#http---80">HTTP - 80</a></li>
+        <li><a href="#exploit">Exploit</a></li>
         <li><a href="#local-enumeration">Local Enumeration</a></li>
-        <li><a href="#ssh">SSH</a></li>
+      </ul>
+    </li>
+    <li><a href="#ssh">SSH</a>
+      <ul>
         <li><a href="#privilege-escalation">Privilege Escalation</a></li>
       </ul>
     </li>
@@ -247,6 +251,7 @@ Then I decide to set up a local HTTP server with python and try to convert a Loc
     <img src="/images/htb/precious/exif.png"  class="center"  style="border-radius: 10px;"  />
 
 
+<h3 id="exploit">Exploit</h3>
 <p>Using <code>exiftool</code> I found the tool behind this conversion <code>pdfkit v0.8.6</code>, after google it I discovered the CVE-2022-25765 related to this tool.</p>
 <p>The process to explore this vulnerability was simple, the first step was open the HTTP local server again.
 Then open a local port with <code>netcat</code> and send the payload with <code>curl</code>.</p>
@@ -267,7 +272,7 @@ Then open a local port with <code>netcat</code> and send the payload with <code>
     <img src="/images/htb/precious/henry.png"  class="center"  style="border-radius: 10px;"  />
 
 
-<h3 id="ssh">SSH</h3>
+<h2 id="ssh">SSH</h2>
 <p>With a combination of user and pass I connected to the machine through <code>ssh</code> and was able to open the <code>user.txt</code>flag:</p>
 
     <img src="/images/htb/precious/user.png"  class="center"  style="border-radius: 10px;"  />
@@ -374,7 +379,7 @@ Then open a local port with <code>netcat</code> and send the payload with <code>
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        699 Words
+        700 Words
       </p>
 
       <p>

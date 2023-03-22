@@ -65,6 +65,7 @@ Then I decide to set up a local HTTP server with python and try to convert a Loc
     <img src="/images/htb/precious/exif.png"  class="center"  style="border-radius: 10px;"  />
 
 
+<h3 id="exploit">Exploit</h3>
 <p>Using <code>exiftool</code> I found the tool behind this conversion <code>pdfkit v0.8.6</code>, after google it I discovered the CVE-2022-25765 related to this tool.</p>
 <p>The process to explore this vulnerability was simple, the first step was open the HTTP local server again.
 Then open a local port with <code>netcat</code> and send the payload with <code>curl</code>.</p>
@@ -85,7 +86,7 @@ Then open a local port with <code>netcat</code> and send the payload with <code>
     <img src="/images/htb/precious/henry.png"  class="center"  style="border-radius: 10px;"  />
 
 
-<h3 id="ssh">SSH</h3>
+<h2 id="ssh">SSH</h2>
 <p>With a combination of user and pass I connected to the machine through <code>ssh</code> and was able to open the <code>user.txt</code>flag:</p>
 
     <img src="/images/htb/precious/user.png"  class="center"  style="border-radius: 10px;"  />
