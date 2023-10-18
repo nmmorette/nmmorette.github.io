@@ -53,6 +53,17 @@ sudo nmap -PA 10.10.248.155 Starting Nmap 7.94 ( https://nmap.org ) at 2023-10-1
     </item>
     
     <item>
+      <title>Hack the Box - Forest - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2022/06/hack-the-box-forest-write-up/</link>
+      <pubDate>Mon, 13 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2022/06/hack-the-box-forest-write-up/</guid>
+      <description>Forest Enumeration nmap Initian enumeration with nmap
+Some usefull information:
+Computer name: FOREST | NetBIOS computer name: FOREST\x00 | Domain name: htb.local | Forest name: htb.local | FQDN: FOREST.htb.local |_ System time: 2022-06-13T01:57:38-07:00 OS: Windows Server 2016 Standard 14393 (Windows Server 2016 Standard 6.3 3268/tcp open ldap Microsoft Windows Active Directory LDAP (Domain: htb.local, Site: Default-First-Site-Name) Users Lets enumerate users. For the user enumeration, we can search for objectClass as person and search for sAMAccountName:.</description>
+    </item>
+    
+    <item>
       <title>Hack the Box - Blue- Write Up</title>
       <link>https://nmmorette.github.io/posts/2022/03/hack-the-box-blue-write-up/</link>
       <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
@@ -109,17 +120,6 @@ Bill Harper
 Task 2. Inicial Access Scan the machine with nmap. What is the other port running a web server on?
 Nmap gives this answer:
 8080</description>
-    </item>
-    
-    <item>
-      <title>TryHackme - Pre-Security Path - Review</title>
-      <link>https://nmmorette.github.io/posts/2021/07/tryhackme-pre-security-path-review/</link>
-      <pubDate>Fri, 09 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-pre-security-path-review/</guid>
-      <description>Ever dreamt of becoming a hacker or an IT professional? Or perhaps, you&amp;rsquo;re simply intrigued by technology. If you&amp;rsquo;re unsure where to begin, Try Hack Me is the perfect starting point for you!
-Dive right into the new Pre Security Learning Path.
-No prior IT experience? No problem! This learning path is designed to gently introduce you to the world of cyber security. Here&amp;rsquo;s a glimpse of what you&amp;rsquo;ll discover:</description>
     </item>
     
   </channel>

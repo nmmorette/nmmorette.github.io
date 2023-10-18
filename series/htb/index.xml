@@ -30,6 +30,17 @@ sudo nmap -sS -A 10.10.11.189 Starting Nmap 7.93 ( https://nmap.org ) at 2023-03
     </item>
     
     <item>
+      <title>Hack the Box - Forest - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2022/06/hack-the-box-forest-write-up/</link>
+      <pubDate>Mon, 13 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2022/06/hack-the-box-forest-write-up/</guid>
+      <description>Forest Enumeration nmap Initian enumeration with nmap
+Some usefull information:
+Computer name: FOREST | NetBIOS computer name: FOREST\x00 | Domain name: htb.local | Forest name: htb.local | FQDN: FOREST.htb.local |_ System time: 2022-06-13T01:57:38-07:00 OS: Windows Server 2016 Standard 14393 (Windows Server 2016 Standard 6.3 3268/tcp open ldap Microsoft Windows Active Directory LDAP (Domain: htb.local, Site: Default-First-Site-Name) Users Lets enumerate users. For the user enumeration, we can search for objectClass as person and search for sAMAccountName:.</description>
+    </item>
+    
+    <item>
       <title>Hack the Box - Blue- Write Up</title>
       <link>https://nmmorette.github.io/posts/2022/03/hack-the-box-blue-write-up/</link>
       <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>

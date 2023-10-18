@@ -64,6 +64,17 @@ sudo nmap -PA 10.10.248.155 Starting Nmap 7.94 ( https://nmap.org ) at 2023-10-1
     </item>
     
     <item>
+      <title>Hack the Box - Forest - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2022/06/hack-the-box-forest-write-up/</link>
+      <pubDate>Mon, 13 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2022/06/hack-the-box-forest-write-up/</guid>
+      <description>Forest Enumeration nmap Initian enumeration with nmap
+Some usefull information:
+Computer name: FOREST | NetBIOS computer name: FOREST\x00 | Domain name: htb.local | Forest name: htb.local | FQDN: FOREST.htb.local |_ System time: 2022-06-13T01:57:38-07:00 OS: Windows Server 2016 Standard 14393 (Windows Server 2016 Standard 6.3 3268/tcp open ldap Microsoft Windows Active Directory LDAP (Domain: htb.local, Site: Default-First-Site-Name) Users Lets enumerate users. For the user enumeration, we can search for objectClass as person and search for sAMAccountName:.</description>
+    </item>
+    
+    <item>
       <title>Hack the Box - Blue- Write Up</title>
       <link>https://nmmorette.github.io/posts/2022/03/hack-the-box-blue-write-up/</link>
       <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
@@ -101,16 +112,6 @@ A prova tem nível fundamental ou seja é uma prova baseada em conceitos e não 
       <guid>https://nmmorette.github.io/posts/2021/08/roadmap-para-ms-900-pt-br/</guid>
       <description>Introdução O intuito desse post é ajudar os interessados em fazer a prova MS-900 Microsoft 365 Fundamentals. Nesse post vou falar um pouco sobre a prova e sobre o meu plano de estudos para aprovação.
 A prova tem nível fundamental ou seja é uma prova baseada em conceitos e não há prática, além disso é uma certificação de &amp;ldquo;entrada&amp;rdquo; para Microsoft 365. Vai te ajudar a conhecer a tecnologia ou provar seus conhecimentos.</description>
-    </item>
-    
-    <item>
-      <title>TryHackme - Bounty Hacker - Write Up</title>
-      <link>https://nmmorette.github.io/posts/2021/08/tryhackme-bounty-hacker-write-up/</link>
-      <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/posts/2021/08/tryhackme-bounty-hacker-write-up/</guid>
-      <description>First of all, let&amp;rsquo;s nmap the machine IP.
-└─$ sudo nmap -sS -Pn 10.10.207.23 [sudo] password for venomsnake: Host discovery disabled (-Pn). All addresses will be marked &amp;#39;up&amp;#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-15 07:43 -03 Nmap scan report for 10.10.207.23 Host is up (0.20s latency). Not shown: 967 filtered ports, 30 closed ports PORT STATE SERVICE 21/tcp open ftp 22/tcp open ssh 80/tcp open http Nmap done: 1 IP address (1 host up) scanned in 9.</description>
     </item>
     
   </channel>
