@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Natan Maia Morette</title>
+    <link>https://nmmorette.github.io/</link>
+    <description>Recent content on Natan Maia Morette</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 17 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hack the Box - Keeper - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2023/10/hack-the-box-keeper-write-up/</link>
+      <pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2023/10/hack-the-box-keeper-write-up/</guid>
+      <description>Keeper ​12thAug 2023
+Machine Author(s): knightmare
+Enumeration Initial nmap scan:
+nmap 10.10.11.227 Starting Nmap 7.94 ( https://nmap.org ) at 2023-10-17 18:52 EDT Nmap scan report for 10.10.11.227 Host is up (0.13s latency). Not shown: 998 closed tcp ports (conn-refused) PORT STATE SERVICE 22/tcp open ssh 80/tcp open http Nmap done: 1 IP address (1 host up) scanned in 14.86 seconds sudo nmap -sS -A 10.10.11.227 -p 22,80 Starting Nmap 7.94 ( https://nmap.</description>
+    </item>
+    
+    <item>
+      <title>Hack the Box - Precious - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2023/03/hack-the-box-precious-write-up/</link>
+      <pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2023/03/hack-the-box-precious-write-up/</guid>
+      <description>Enumeration Initial scan using nmap:
+sudo nmap -sS -A 10.10.11.189 Starting Nmap 7.93 ( https://nmap.org ) at 2023-03-21 20:20 -03 Nmap scan report for precious.htb (10.10.11.189) Host is up (0.24s latency). Not shown: 998 closed tcp ports (reset) PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.4p1 Debian 5+deb11u1 (protocol 2.0) | ssh-hostkey: | 3072 845e13a8e31e20661d235550f63047d2 (RSA) | 256 a2ef7b9665ce4161c467ee4e96c7c892 (ECDSA) |_ 256 33053dcd7ab798458239e7ae3c91a658 (ED25519) 80/tcp open http nginx 1.</description>
+    </item>
+    
+    <item>
+      <title>Instalando WSL sem Windows Store Pt-br</title>
+      <link>https://nmmorette.github.io/posts/2022/12/instalando-wsl-sem-windows-store-pt-br/</link>
+      <pubDate>Sat, 17 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2022/12/instalando-wsl-sem-windows-store-pt-br/</guid>
+      <description>Talvez você se depare com a necessidade de instalar alguma instancia WSL em uma máquina windows onde a Windows Store não está disponível. Esse cenário pode acontecer em muitos ambientes corporativos, onde a loja é bloqueada devido a baselines de segurança ou por algum outro motivo.
+Nesse caso é necessário seguir alguns passos para instalar o WSL e fazer o download das imagens de diferentes tipos de sistemas Linux.
+Pré requisitos É necessário estar rodando Windows 10 versão 2004 ou superior ( Build 19041 ou maior), ou Windows 11.</description>
+    </item>
+    
+    <item>
+      <title>TryHackme - OhSINT - Write-Up</title>
+      <link>https://nmmorette.github.io/posts/2022/08/tryhackme-ohsint-write-up/</link>
+      <pubDate>Wed, 24 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2022/08/tryhackme-ohsint-write-up/</guid>
+      <description>OhSINT - TryHackMe  What information can you possible get with just one photo?
+ First step is download the file and open it.
+A nostalgic Wallpaper
+Using exiftool to check some attributes:
+exiftool WindowsXP.jpg ExifTool Version Number : 12.65 File Name : WindowsXP.jpg Directory : . File Size : 234 kB File Modification Date/Time : 2023:09:26 18:33:44-04:00 File Access Date/Time : 2023:09:26 18:33:49-04:00 File Inode Change Date/Time : 2023:09:26 18:33:48-04:00 File Permissions : -rwxrw-rw- File Type : JPEG File Type Extension : jpg MIME Type : image/jpeg XMP Toolkit : Image::ExifTool 11.</description>
+    </item>
+    
+    <item>
+      <title>TryHackme - Blue - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2022/08/tryhackme-blue-write-up/</link>
+      <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2022/08/tryhackme-blue-write-up/</guid>
+      <description>Blue Enumeration Initiated the first scan using nmap: The scan results:
+sudo nmap -PA 10.10.248.155 Starting Nmap 7.94 ( https://nmap.org ) at 2023-10-10 19:48 EDT Nmap scan report for 10.10.248.155 Host is up (0.25s latency). Not shown: 991 closed tcp ports (reset) PORT STATE SERVICE 135/tcp open msrpc 139/tcp open netbios-ssn 445/tcp open microsoft-ds 3389/tcp open ms-wbt-server 49152/tcp open unknown 49153/tcp open unknown 49154/tcp open unknown 49158/tcp open unknown 49160/tcp open unknown Nmap done: 1 IP address (1 host up) scanned in 8.</description>
+    </item>
+    
+    <item>
+      <title>Hack the Box - Blue- Write Up</title>
+      <link>https://nmmorette.github.io/posts/2022/03/hack-the-box-blue-write-up/</link>
+      <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2022/03/hack-the-box-blue-write-up/</guid>
+      <description>Enumeration Initial scan:
+└──╼ $sudo nmap -sS -Pn 10.10.10.40 Host discovery disabled (-Pn). All addresses will be marked &amp;#39;up&amp;#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-11 15:11 -03 Nmap scan report for 10.10.10.40 Host is up (0.45s latency). Not shown: 991 closed ports PORT STATE SERVICE 135/tcp open msrpc 139/tcp open netbios-ssn 445/tcp open microsoft-ds 49152/tcp open unknown 49153/tcp open unknown 49154/tcp open unknown 49155/tcp open unknown 49156/tcp open unknown 49157/tcp open unknown Second nmap scan with --script vuln only on the open ports:</description>
+    </item>
+    
+    <item>
+      <title>RoadMap para AZ-900 (Pt-br)</title>
+      <link>https://nmmorette.github.io/posts/2021/09/roadmap-para-az-900-pt-br/</link>
+      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/09/roadmap-para-az-900-pt-br/</guid>
+      <description>Introdução O intuito desse post é ajudar os interessados em fazer a prova AZ-900 Microsoft 365 Fundamentals. Nesse post vou falar um pouco sobre a prova e sobre o meu plano de estudos para aprovação.
+A prova tem nível fundamental ou seja é uma prova baseada em conceitos e não há prática, o foca é entender os conceitos do azure e de cada serviço. Ter uma noção básica do que cada serviço do azure faz é fundamental.</description>
+    </item>
+    
+    <item>
+      <title>Hack the Box - Lame - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2021/09/hack-the-box-lame-write-up/</link>
+      <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/09/hack-the-box-lame-write-up/</guid>
+      <description>Enumeration Initial scan:
+└─$ sudo nmap -sS -Pn 10.10.10.3 [sudo] password for venomsnake: Host discovery disabled (-Pn). All addresses will be marked &amp;#39;up&amp;#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-09-01 10:40 -03 Nmap scan report for 10.10.10.3 Host is up (0.17s latency). Not shown: 996 filtered ports PORT STATE SERVICE 21/tcp open ftp 22/tcp open ssh 139/tcp open netbios-ssn 445/tcp open microsoft-ds Nmap done: 1 IP address (1 host up) scanned in 20.</description>
+    </item>
+    
+    <item>
+      <title>RoadMap para MS-900 (Pt-br)</title>
+      <link>https://nmmorette.github.io/posts/2021/08/roadmap-para-ms-900-pt-br/</link>
+      <pubDate>Mon, 30 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/08/roadmap-para-ms-900-pt-br/</guid>
+      <description>Introdução O intuito desse post é ajudar os interessados em fazer a prova MS-900 Microsoft 365 Fundamentals. Nesse post vou falar um pouco sobre a prova e sobre o meu plano de estudos para aprovação.
+A prova tem nível fundamental ou seja é uma prova baseada em conceitos e não há prática, além disso é uma certificação de &amp;ldquo;entrada&amp;rdquo; para Microsoft 365. Vai te ajudar a conhecer a tecnologia ou provar seus conhecimentos.</description>
+    </item>
+    
+    <item>
+      <title>TryHackme - Bounty Hacker - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2021/08/tryhackme-bounty-hacker-write-up/</link>
+      <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/08/tryhackme-bounty-hacker-write-up/</guid>
+      <description>First of all, let&amp;rsquo;s nmap the machine IP.
+└─$ sudo nmap -sS -Pn 10.10.207.23 [sudo] password for venomsnake: Host discovery disabled (-Pn). All addresses will be marked &amp;#39;up&amp;#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-15 07:43 -03 Nmap scan report for 10.10.207.23 Host is up (0.20s latency). Not shown: 967 filtered ports, 30 closed ports PORT STATE SERVICE 21/tcp open ftp 22/tcp open ssh 80/tcp open http Nmap done: 1 IP address (1 host up) scanned in 9.</description>
+    </item>
+    
+  </channel>
+</rss>
