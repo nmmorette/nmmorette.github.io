@@ -46,8 +46,8 @@
 <meta itemprop="name" content="NPP - Semana 05 - Information Gathering - Web">
 <meta itemprop="description" content="O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Dica: para um bom resultado nesses labs, utilize uma boa wordlist.
 .Lab 01 Para resolver esse lab precisamos fazer um brute force de diretórios, podemos fazer esse processo de diferentes formas, porém as ferramentas mais comuns são dirb ou gobuster.
- Gobuster   gobuster dir -u businesscorp.com.br -w /usr/share/wordlists/dirb/big.txt -eAguarde a apresentação dos resultados para iniciar a análise dos endereços."><meta itemprop="datePublished" content="2021-07-07T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-07-07T00:00:00&#43;00:00" />
+ Gobuster   gobuster dir -u businesscorp.com.br -w /usr/share/wordlists/dirb/big.txt -eAguarde a apresentação dos resultados para iniciar a análise dos endereços."><meta itemprop="datePublished" content="2021-07-07T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-07-07T00:00:00+00:00" />
 <meta itemprop="wordCount" content="608"><meta itemprop="image" content="https://nmmorette.github.io"/>
 <meta itemprop="keywords" content="writeup,pentest,security,desec,DCPT,CTF,OSINT," />
 <meta name="twitter:card" content="summary_large_image"/>
@@ -67,8 +67,8 @@
  Gobuster   gobuster dir -u businesscorp.com.br -w /usr/share/wordlists/dirb/big.txt -eAguarde a apresentação dos resultados para iniciar a análise dos endereços." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nmmorette.github.io/posts/2021/07/npp-semana-05-information-gathering-web/" /><meta property="og:image" content="https://nmmorette.github.io"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-07-07T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-07-07T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2021-07-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-07-07T00:00:00+00:00" />
 
 
 
@@ -204,7 +204,7 @@ if (!doNotTrack) {
 
 </li>
 </ul>
-<pre><code class="language-cli" data-lang="cli">gobuster dir -u businesscorp.com.br -w /usr/share/wordlists/dirb/big.txt -e
+<pre tabindex="0"><code class="language-cli" data-lang="cli">gobuster dir -u businesscorp.com.br -w /usr/share/wordlists/dirb/big.txt -e
 </code></pre><p>Aguarde a apresentação dos resultados para iniciar a análise dos endereços.</p>
 <p>Flags:</p>
 <p><code>dir</code> = modo de busca de diretórios do gobsuter</p>
@@ -214,7 +214,7 @@ if (!doNotTrack) {
 <ul>
 <li>Dirb</li>
 </ul>
-<pre><code class="language-cli" data-lang="cli"> dirb http://businesscorp.com.br /usr/share/wordlists/dirb/big.txt 
+<pre tabindex="0"><code class="language-cli" data-lang="cli"> dirb http://businesscorp.com.br /usr/share/wordlists/dirb/big.txt 
 </code></pre><p>Com o resultado em mãos inicie a coleta de informaçoes, entre em todos os links e anote as informações coletadas.</p>
 <p>A resposta para esse lab vai estar em um arquivo de script e para encontrar ele você precisa encontrar uma URL que vai indicar o local desse arquivo. A resposta não vai estar logo de cara.</p>
 <p>[Link da resposta] (<a href="http://businesscorp.com.br/db/update.sql">http://businesscorp.com.br/db/update.sql</a>)
@@ -322,7 +322,7 @@ A resposta estará direta ao acessar o link específico.</p>
 
 
 <p>Dessa vez vamos utilizar o script demonstrado em aula para buscar arquivos e diretórios em rh.businesscorp.com.br.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span><span style="color:#75715e">###webrecon.sh</span>
 <span style="color:#75715e">###---------------------------------------------------------------</span>
 <span style="color:#75715e">### Objective: Webrecon/fuzz directories in websites </span>
@@ -340,7 +340,7 @@ A resposta estará direta ao acessar o link específico.</p>
 </span><span style="color:#e6db74">fi
 </span><span style="color:#e6db74">done
 </span></code></pre></div><p>Além dessa forma ainda podemos ainda utilizar o <code>gobuster</code> com a flag <code> -a</code> para alterar o user agent, já que alguns domínios podem estar configurados para negar acessos de user agents conhecidos.</p>
-<pre><code class="language-cli" data-lang="cli">gobuster dir -u rh.businesscorp.com.br -w /home/venomsnake/Documents/wordlists/master.txt --wildcard switch -o -e -a HHHHH
+<pre tabindex="0"><code class="language-cli" data-lang="cli">gobuster dir -u rh.businesscorp.com.br -w /home/venomsnake/Documents/wordlists/master.txt --wildcard switch -o -e -a HHHHH
 </code></pre><p>Utilize também a flag <code>-o</code> para omitir o progresso e ter uma resposta limpa na tela.
 Acesse os resultandos para encontrar a key.</p>
 
@@ -390,7 +390,7 @@ Acesse os resultandos para encontrar a key.</p>
 
 
 <p>Caso queira rodar o <code>gobuster</code> somente para encontrar os arquivos<code>.php</code> é possível rodar dessa maneira:</p>
-<pre><code class="language-cli" data-lang="cli">gobuster dir --url http://endereço.com.br --wordlist /usr/share/wordlists/dirb/big.txt -x &quot;php&quot;
+<pre tabindex="0"><code class="language-cli" data-lang="cli">gobuster dir --url http://endereço.com.br --wordlist /usr/share/wordlists/dirb/big.txt -x &quot;php&quot;
 </code></pre><p><a href="http://rh.businesscorp.com.br/backup.php">Link da resposta</a></p>
 <p>
 
@@ -411,15 +411,15 @@ Acesse os resultandos para encontrar a key.</p>
 <ul>
 <li>Curl</li>
 </ul>
-<pre><code class="language-cli" data-lang="cli"> curl -v -H &quot;User-agent: Stark&quot; rh.businesscorp.com.br | grep &quot;server&quot;
+<pre tabindex="0"><code class="language-cli" data-lang="cli"> curl -v -H &quot;User-agent: Stark&quot; rh.businesscorp.com.br | grep &quot;server&quot;
 </code></pre><ul>
 <li>Nikto</li>
 </ul>
-<pre><code class="language-cli" data-lang="cli">nikto -h rh.businesscorp.com.br
+<pre tabindex="0"><code class="language-cli" data-lang="cli">nikto -h rh.businesscorp.com.br
 </code></pre><ul>
 <li>Whatweb</li>
 </ul>
-<pre><code class="language-cli" data-lang="cli">whatweb -v businesscorp.com.br
+<pre tabindex="0"><code class="language-cli" data-lang="cli">whatweb -v businesscorp.com.br
 </code></pre><ul>
 <li><a href="https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg?hl=pt-BR">Whaappalyzer</a></li>
 </ul>

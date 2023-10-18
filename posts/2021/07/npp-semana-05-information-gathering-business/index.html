@@ -48,8 +48,8 @@ Utilizando o TheHarvester Caso ainda não tenha instalado, instale o theHarveste
 <meta itemprop="description" content="O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas. Dica de ouro: anote tudo, cada comando e resultado. Isso evita retralho, além de documentar seus passos para consultas futuras.
 . Lab 01 Utilizando o Hunter Faça cadastro no site Hunter para conseguir visualizar os resultados.
 Depois basta digitar o domínio no campo de busca:
-Utilizando o TheHarvester Caso ainda não tenha instalado, instale o theHarvester:"><meta itemprop="datePublished" content="2021-07-02T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-07-02T00:00:00&#43;00:00" />
+Utilizando o TheHarvester Caso ainda não tenha instalado, instale o theHarvester:"><meta itemprop="datePublished" content="2021-07-02T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-07-02T00:00:00+00:00" />
 <meta itemprop="wordCount" content="908"><meta itemprop="image" content="https://nmmorette.github.io"/>
 <meta itemprop="keywords" content="writeup,pentest,security,desec,DCPT,CTF,OSINT," />
 <meta name="twitter:card" content="summary_large_image"/>
@@ -71,8 +71,8 @@ Depois basta digitar o domínio no campo de busca:
 Utilizando o TheHarvester Caso ainda não tenha instalado, instale o theHarvester:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nmmorette.github.io/posts/2021/07/npp-semana-05-information-gathering-business/" /><meta property="og:image" content="https://nmmorette.github.io"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-07-02T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-07-02T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2021-07-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-07-02T00:00:00+00:00" />
 
 
 
@@ -209,9 +209,9 @@ if (!doNotTrack) {
 
 <h4 id="utilizando-o--theharvester">Utilizando o  TheHarvester</h4>
 <p>Caso ainda não tenha instalado, instale o theHarvester:</p>
-<pre><code class="language-cli" data-lang="cli">apt install theharvester
+<pre tabindex="0"><code class="language-cli" data-lang="cli">apt install theharvester
 </code></pre><p>Fazendo a busca:</p>
-<pre><code class="language-cli" data-lang="cli">theHarvester -d businesscorp.com.br -l 100 -b google
+<pre tabindex="0"><code class="language-cli" data-lang="cli">theHarvester -d businesscorp.com.br -l 100 -b google
 </code></pre>
     <img src="/images/semana05-Business/harvester.JPG"  class="center"  style="border-radius: 10px;"  />
 
@@ -342,19 +342,19 @@ Essa configuração de api deve ser feita em <code>/etc/theHarvester/api-keys.ya
 
 <p>Agora precisamos analisar os metadados do arquivo encontrado no lab anterior. <code>exiftool</code>.
 Execute:</p>
-<pre><code class="language-cli" data-lang="cli">exiftool NOME_DO_ARQUIVO
+<pre tabindex="0"><code class="language-cli" data-lang="cli">exiftool NOME_DO_ARQUIVO
 </code></pre><p>Verifique os dados retornados para encontrar o nome do usuário.</p>
 <p>Além dessa forma, podemos utilizar o script que foi demostrado em aula.
 O que esse script faz é exatamente uma busca em um site por um tipo de arquivo, utilizando os operadores do google.</p>
 <p>Exemplo:</p>
-<pre><code class="language-cli" data-lang="cli">.\metafind.sh businesscorp.com.br txt
+<pre tabindex="0"><code class="language-cli" data-lang="cli">.\metafind.sh businesscorp.com.br txt
 </code></pre><p>Resultado da busca:</p>
 
     <img src="/images/semana05-Business/metafindsh.JPG"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Script <a href="https://github.com/nmmorette/bash-scripts/blob/main/metafind.sh">.\metafind.sh</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">  // <span style="color:#75715e">#!/bin/bash</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">  // <span style="color:#75715e">#!/bin/bash</span>
 <span style="color:#75715e">#Metafind search, download based on Google Dorcking</span>
 <span style="color:#75715e">#</span>
 

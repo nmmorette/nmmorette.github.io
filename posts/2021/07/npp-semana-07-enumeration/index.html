@@ -48,8 +48,8 @@ mysql -h 172.16.1.33 -u root No banner do servidor é possível encontar a vers
 <meta itemprop="description" content="O intuito desse post não é dar as respostas e sim documentar os passos e ferramentas utilizadas.  1.Database Vamos iniciar com um scan do range informado:
 nmap -sS 172.16.1.1-100 Basta verificar o host que está com a porta 3306 ativa.
 Resposta172.16.1.33 2.Database Vamos conectar ao servidor com mysql utilizando o usuário root sem senha:
-mysql -h 172.16.1.33 -u root No banner do servidor é possível encontar a versão."><meta itemprop="datePublished" content="2021-07-20T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-07-20T00:00:00&#43;00:00" />
+mysql -h 172.16.1.33 -u root No banner do servidor é possível encontar a versão."><meta itemprop="datePublished" content="2021-07-20T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-07-20T00:00:00+00:00" />
 <meta itemprop="wordCount" content="614"><meta itemprop="image" content="https://nmmorette.github.io"/>
 <meta itemprop="keywords" content="writeup,pentest,security,desec,DCPT,CTF," />
 <meta name="twitter:card" content="summary_large_image"/>
@@ -71,8 +71,8 @@ nmap -sS 172.16.1.1-100 Basta verificar o host que está com a porta 3306 ativa
 mysql -h 172.16.1.33 -u root No banner do servidor é possível encontar a versão." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nmmorette.github.io/posts/2021/07/npp-semana-07-enumeration/" /><meta property="og:image" content="https://nmmorette.github.io"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-07-20T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-07-20T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2021-07-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-07-20T00:00:00+00:00" />
 
 
 
@@ -200,7 +200,7 @@ if (!doNotTrack) {
 
 
 <p>Vamos iniciar com um scan do range informado:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">-</span>sS <span style="color:#ae81ff">172.16.1.1</span><span style="color:#f92672">-</span><span style="color:#ae81ff">100</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">-</span>sS <span style="color:#ae81ff">172.16.1.1</span><span style="color:#f92672">-</span><span style="color:#ae81ff">100</span>
 </code></pre></div>
     <img src="/images/semana7-enumeration/nmap.png"  class="center"  style="border-radius: 10px;"  />
 
@@ -222,7 +222,7 @@ if (!doNotTrack) {
 
 
 <p>Vamos conectar ao servidor com <code>mysql</code> utilizando o usuário root sem senha:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">mysql <span style="color:#f92672">-</span>h <span style="color:#ae81ff">172.16.1.33</span> <span style="color:#f92672">-</span>u root
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">mysql <span style="color:#f92672">-</span>h <span style="color:#ae81ff">172.16.1.33</span> <span style="color:#f92672">-</span>u root
 </code></pre></div>
     <img src="/images/semana7-enumeration/sql.png"  class="center"  style="border-radius: 10px;"  />
 
@@ -264,7 +264,7 @@ if (!doNotTrack) {
 
 
 <p>Vamos rodar o <code>nmap</code>nesse host com o script para reconhecer os métodos de autenticação do <code>ssh</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">-</span>v <span style="color:#f92672">-</span>p <span style="color:#ae81ff">22</span> <span style="color:#f92672">-</span>sSV <span style="color:#f92672">--</span>script ssh<span style="color:#f92672">-</span>auth<span style="color:#f92672">-</span>methods <span style="color:#ae81ff">172.16.1.33</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">-</span>v <span style="color:#f92672">-</span>p <span style="color:#ae81ff">22</span> <span style="color:#f92672">-</span>sSV <span style="color:#f92672">--</span>script ssh<span style="color:#f92672">-</span>auth<span style="color:#f92672">-</span>methods <span style="color:#ae81ff">172.16.1.33</span>
 </code></pre></div>
     <img src="/images/semana7-enumeration/ssh.png"  class="center"  style="border-radius: 10px;"  />
 
@@ -417,7 +417,7 @@ if (!doNotTrack) {
 
 
 <p>O ftp está configurado na porta 2121, vamos conectar direto no servidor:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">ftp <span style="color:#ae81ff">172.16.1.31</span> <span style="color:#ae81ff">2121</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">ftp <span style="color:#ae81ff">172.16.1.31</span> <span style="color:#ae81ff">2121</span>
 </code></pre></div><p>Depois de conectar, vamos tentar autenticação com usuário anonymous e senha anonymous:</p>
 
     <img src="/images/semana7-enumeration/anom.png"  class="center"  style="border-radius: 10px;"  />
@@ -492,19 +492,19 @@ if (!doNotTrack) {
 
 
 <p>Vamos rodar o <code>nmap</code> com o script <code>smb-os-discovery</code> para termos mais informações desse host:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">--</span>script<span style="color:#f92672">=</span>smb<span style="color:#f92672">-</span>os<span style="color:#f92672">-</span>discovery <span style="color:#ae81ff">172.16.1.14</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">--</span>script<span style="color:#f92672">=</span>smb<span style="color:#f92672">-</span>os<span style="color:#f92672">-</span>discovery <span style="color:#ae81ff">172.16.1.14</span>
 </code></pre></div>
     <img src="/images/semana7-enumeration/smb.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Sabemos que é um server windows, e que provavelmente o nome de usuário é &ldquo;administrator&rdquo;, além disso também conseguimos o nome do host &ldquo;wks01&rdquo;, vamos utilizar o smbclient para enumerar:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"> smbclient <span style="color:#f92672">-</span>L <span style="color:#75715e">//172.16.1.4/ -N -U &#34;administrator&#34; -W &#34;wks01&#34; --option=&#39;client min protocol=NT1&#39;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"> smbclient <span style="color:#f92672">-</span>L <span style="color:#75715e">//172.16.1.4/ -N -U &#34;administrator&#34; -W &#34;wks01&#34; --option=&#39;client min protocol=NT1&#39;
 </span></code></pre></div>
     <img src="/images/semana7-enumeration/docs.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Agora vamos conectar no compartilhamento &ldquo;_DOCS&rdquo;:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">smbclient <span style="color:#75715e">//172.16.1.4/_DOCS -N -U &#34;administrator&#34; -W &#34;wks01&#34; --option=&#39;client min protocol=NT1&#39;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">smbclient <span style="color:#75715e">//172.16.1.4/_DOCS -N -U &#34;administrator&#34; -W &#34;wks01&#34; --option=&#39;client min protocol=NT1&#39;
 </span></code></pre></div><p>Depois de conectar vamos listar os arquivos do diretório com <code>ls</code> e fazer o download do arquivo com <code>get</code>:</p>
 
     <img src="/images/semana7-enumeration/smbclient.png"  class="center"  style="border-radius: 10px;"  />
@@ -531,13 +531,13 @@ if (!doNotTrack) {
 
 
 <p>Vamos buscar pela porta do SNMP nesse host:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">-</span>sVU <span style="color:#f92672">-</span>p161 <span style="color:#f92672">-</span>Pn <span style="color:#ae81ff">172.16.1.4</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">nmap <span style="color:#f92672">-</span>sVU <span style="color:#f92672">-</span>p161 <span style="color:#f92672">-</span>Pn <span style="color:#ae81ff">172.16.1.4</span>
 </code></pre></div>
     <img src="/images/semana7-enumeration/snmp.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Agora temos o nome da communite do SNMP, vamos conectar e buscar por informações:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">snmp<span style="color:#f92672">-</span>check <span style="color:#ae81ff">172.16.1.4</span> <span style="color:#f92672">-</span>c public
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">snmp<span style="color:#f92672">-</span>check <span style="color:#ae81ff">172.16.1.4</span> <span style="color:#f92672">-</span>c public
 </code></pre></div>
     <img src="/images/semana7-enumeration/snmp2.png"  class="center"  style="border-radius: 10px;"  />
 
@@ -558,7 +558,7 @@ if (!doNotTrack) {
 
 
 <p>Nesse server o método acima não vai retornar o nome da communite, logo vamos fazer um brute force, utilizando o <code>onesixtyone</code>, para descobrir o nome. Utilizando uma <a href="https://github.com/nmmorette/wordlist/blob/main/snmp.txt">wordlist</a> que montei.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">onesixtyone <span style="color:#f92672">-</span>c NOMEDAWORDLIST.txt <span style="color:#ae81ff">172.30.0.103</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">onesixtyone <span style="color:#f92672">-</span>c NOMEDAWORDLIST.txt <span style="color:#ae81ff">172.30.0.103</span>
 </code></pre></div>
     <img src="/images/semana7-enumeration/one.png"  class="center"  style="border-radius: 10px;"  />
 
@@ -579,7 +579,7 @@ if (!doNotTrack) {
 
 
 <p>Utilizando o <code>snmp-check</code> vamos encontrar as respostas dos próximos labs:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">snmp<span style="color:#f92672">-</span>check <span style="color:#ae81ff">172.30.0.103</span> <span style="color:#f92672">-</span>c NOMEDACOMMUNITE
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">snmp<span style="color:#f92672">-</span>check <span style="color:#ae81ff">172.30.0.103</span> <span style="color:#f92672">-</span>c NOMEDACOMMUNITE
 </code></pre></div>
     <img src="/images/semana7-enumeration/snmp3.png"  class="center"  style="border-radius: 10px;"  />
 
