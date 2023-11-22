@@ -6,7 +6,19 @@
     <description>Recent content in tryhackme on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/tryhackme/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/tryhackme/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TryHackme - Rootme - Write-Up</title>
+      <link>https://nmmorette.github.io/posts/2023/11/tryhackme-rootme-write-up/</link>
+      <pubDate>Wed, 22 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2023/11/tryhackme-rootme-write-up/</guid>
+      <description>RootMe A ctf for beginners, can you root me?
+https://tryhackme.com/room/rrootme
+Enumeration nmap Initial enumeration with nmap
+nmap 10.10.88.1 Starting Nmap 7.94SVN ( https://nmap.org ) at 2023-11-21 05:03 PST Nmap scan report for 10.10.88.1 Host is up (0.32s latency). Not shown: 996 closed tcp ports (conn-refused) PORT STATE SERVICE 1/tcp filtered tcpmux 22/tcp open ssh 80/tcp open http 2200/tcp filtered ici Nmap done: 1 IP address (1 host up) scanned in 27.</description>
+    </item>
+    
     <item>
       <title>TryHackme - OhSINT - Write-Up</title>
       <link>https://nmmorette.github.io/posts/2022/08/tryhackme-ohsint-write-up/</link>

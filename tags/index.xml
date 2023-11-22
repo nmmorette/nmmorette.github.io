@@ -6,13 +6,58 @@
     <description>Recent content in Tags on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CTF</title>
       <link>https://nmmorette.github.io/tags/ctf/</link>
-      <pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 22 Nov 2023 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/tags/ctf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OSINT</title>
+      <link>https://nmmorette.github.io/tags/osint/</link>
+      <pubDate>Wed, 22 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/osint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>https://nmmorette.github.io/tags/security/</link>
+      <pubDate>Wed, 22 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>THM</title>
+      <link>https://nmmorette.github.io/tags/thm/</link>
+      <pubDate>Wed, 22 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/thm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tryhackme</title>
+      <link>https://nmmorette.github.io/tags/tryhackme/</link>
+      <pubDate>Wed, 22 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/tryhackme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>writeup</title>
+      <link>https://nmmorette.github.io/tags/writeup/</link>
+      <pubDate>Wed, 22 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/writeup/</guid>
       <description></description>
     </item>
     
@@ -44,56 +89,11 @@
     </item>
     
     <item>
-      <title>security</title>
-      <link>https://nmmorette.github.io/tags/security/</link>
-      <pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/tags/security/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>writeup</title>
-      <link>https://nmmorette.github.io/tags/writeup/</link>
-      <pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/tags/writeup/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>windows</title>
       <link>https://nmmorette.github.io/tags/windows/</link>
       <pubDate>Sat, 17 Dec 2022 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/tags/windows/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>OSINT</title>
-      <link>https://nmmorette.github.io/tags/osint/</link>
-      <pubDate>Wed, 24 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/tags/osint/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>THM</title>
-      <link>https://nmmorette.github.io/tags/thm/</link>
-      <pubDate>Wed, 24 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/tags/thm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tryhackme</title>
-      <link>https://nmmorette.github.io/tags/tryhackme/</link>
-      <pubDate>Wed, 24 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/tags/tryhackme/</guid>
       <description></description>
     </item>
     

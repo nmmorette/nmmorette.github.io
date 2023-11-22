@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nmmorette.github.io/posts/2023/11/tryhackme-rootme-write-up/</loc>
+    <lastmod>2023-11-22T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://nmmorette.github.io/posts/2023/10/hack-the-box-keeper-write-up/</loc>
     <lastmod>2023-10-17T00:00:00+00:00</lastmod>
   </url><url>
@@ -20,9 +23,6 @@
     <loc>https://nmmorette.github.io/posts/2022/06/hack-the-box-forest-write-up/</loc>
     <lastmod>2022-06-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nmmorette.github.io/posts/2022/03/hack-the-box-blue-write-up/</loc>
-    <lastmod>2022-03-14T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nmmorette.github.io/posts/2021/09/roadmap-para-az-900-pt-br/</loc>
     <lastmod>2021-09-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -34,6 +34,9 @@
   </url><url>
     <loc>https://nmmorette.github.io/posts/2021/08/tryhackme-bounty-hacker-write-up/</loc>
     <lastmod>2021-08-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/posts/2021/08/hack-the-box-blue-write-up/</loc>
+    <lastmod>2021-08-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nmmorette.github.io/posts/2021/07/hack-the-box-archetype-write-up/</loc>
     <lastmod>2021-07-27T00:00:00+00:00</lastmod>
@@ -54,7 +57,40 @@
     <lastmod>2021-06-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nmmorette.github.io/tags/ctf/</loc>
-    <lastmod>2023-10-17T00:00:00+00:00</lastmod>
+    <lastmod>2023-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/</loc>
+    <lastmod>2023-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/tags/osint/</loc>
+    <lastmod>2023-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/posts/</loc>
+    <lastmod>2023-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/tags/security/</loc>
+    <lastmod>2023-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/series/</loc>
+    <lastmod>2023-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/tags/</loc>
+    <lastmod>2023-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/tags/thm/</loc>
+    <lastmod>2023-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/tags/tryhackme/</loc>
+    <lastmod>2023-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/series/tryhackme/</loc>
+    <lastmod>2023-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/tags/writeup/</loc>
+    <lastmod>2023-11-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/series/writeup/</loc>
+    <lastmod>2023-11-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nmmorette.github.io/tags/htb/</loc>
     <lastmod>2023-10-17T00:00:00+00:00</lastmod>
@@ -62,31 +98,10 @@
     <loc>https://nmmorette.github.io/series/htb/</loc>
     <lastmod>2023-10-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nmmorette.github.io/</loc>
-    <lastmod>2023-10-17T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nmmorette.github.io/tags/pentest/</loc>
     <lastmod>2023-10-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nmmorette.github.io/posts/</loc>
-    <lastmod>2023-10-17T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nmmorette.github.io/tags/pwn/</loc>
-    <lastmod>2023-10-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nmmorette.github.io/tags/security/</loc>
-    <lastmod>2023-10-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nmmorette.github.io/series/</loc>
-    <lastmod>2023-10-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nmmorette.github.io/tags/</loc>
-    <lastmod>2023-10-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nmmorette.github.io/tags/writeup/</loc>
-    <lastmod>2023-10-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nmmorette.github.io/series/writeup/</loc>
     <lastmod>2023-10-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nmmorette.github.io/series/tutorial/</loc>
@@ -94,18 +109,6 @@
   </url><url>
     <loc>https://nmmorette.github.io/tags/windows/</loc>
     <lastmod>2022-12-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nmmorette.github.io/tags/osint/</loc>
-    <lastmod>2022-08-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nmmorette.github.io/tags/thm/</loc>
-    <lastmod>2022-08-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nmmorette.github.io/tags/tryhackme/</loc>
-    <lastmod>2022-08-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nmmorette.github.io/series/tryhackme/</loc>
-    <lastmod>2022-08-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nmmorette.github.io/tags/privesc/</loc>
     <lastmod>2022-08-15T00:00:00+00:00</lastmod>

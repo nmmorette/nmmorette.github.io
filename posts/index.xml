@@ -5,8 +5,107 @@
         <description>Recent content in Posts on Natan Maia Morette</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 17 Oct 2023 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 22 Nov 2023 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://nmmorette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>TryHackme - Rootme - Write-Up</title>
+            <link>https://nmmorette.github.io/posts/2023/11/tryhackme-rootme-write-up/</link>
+            <pubDate>Wed, 22 Nov 2023 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2023/11/tryhackme-rootme-write-up/</guid>
+            <description>RootMe A ctf for beginners, can you root me?
+https://tryhackme.com/room/rrootme
+Enumeration nmap Initial enumeration with nmap
+nmap 10.10.88.1 Starting Nmap 7.94SVN ( https://nmap.org ) at 2023-11-21 05:03 PST Nmap scan report for 10.10.88.1 Host is up (0.32s latency). Not shown: 996 closed tcp ports (conn-refused) PORT STATE SERVICE 1/tcp filtered tcpmux 22/tcp open ssh 80/tcp open http 2200/tcp filtered ici Nmap done: 1 IP address (1 host up) scanned in 27.</description>
+            <content type="html"><![CDATA[<h1 id="rootme">RootMe</h1>
+<p>A ctf for beginners, can you root me?</p>
+<p><a href="https://tryhackme.com/room/rrootme">https://tryhackme.com/room/rrootme</a></p>
+<h1 id="enumeration">Enumeration</h1>
+<h2 id="nmap">nmap</h2>
+<p>Initial enumeration with nmap</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">nmap</span> <span style="color:#ae81ff">10.10.88.1</span>    
+<span style="color:#a6e22e">Starting</span> <span style="color:#a6e22e">Nmap</span> <span style="color:#ae81ff">7.94</span><span style="color:#a6e22e">SVN</span> ( <span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//nmap.org ) at 2023-11-21 05:03 PST
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">Nmap</span> <span style="color:#a6e22e">scan</span> <span style="color:#a6e22e">report</span> <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10.10.88.1</span>
+<span style="color:#a6e22e">Host</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">up</span> (<span style="color:#ae81ff">0.32</span><span style="color:#a6e22e">s</span> <span style="color:#a6e22e">latency</span>).
+<span style="color:#a6e22e">Not</span> <span style="color:#a6e22e">shown</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">996</span> <span style="color:#a6e22e">closed</span> <span style="color:#a6e22e">tcp</span> <span style="color:#a6e22e">ports</span> (<span style="color:#a6e22e">conn</span><span style="color:#f92672">-</span><span style="color:#a6e22e">refused</span>)
+<span style="color:#a6e22e">PORT</span>     <span style="color:#a6e22e">STATE</span>    <span style="color:#a6e22e">SERVICE</span>
+<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#a6e22e">tcp</span>    <span style="color:#a6e22e">filtered</span> <span style="color:#a6e22e">tcpmux</span>
+<span style="color:#ae81ff">22</span><span style="color:#f92672">/</span><span style="color:#a6e22e">tcp</span>   <span style="color:#a6e22e">open</span>     <span style="color:#a6e22e">ssh</span>
+<span style="color:#ae81ff">80</span><span style="color:#f92672">/</span><span style="color:#a6e22e">tcp</span>   <span style="color:#a6e22e">open</span>     <span style="color:#a6e22e">http</span>
+<span style="color:#ae81ff">2200</span><span style="color:#f92672">/</span><span style="color:#a6e22e">tcp</span> <span style="color:#a6e22e">filtered</span> <span style="color:#a6e22e">ici</span>
+
+<span style="color:#a6e22e">Nmap</span> <span style="color:#a6e22e">done</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span> <span style="color:#a6e22e">IP</span> <span style="color:#a6e22e">address</span> (<span style="color:#ae81ff">1</span> <span style="color:#a6e22e">host</span> <span style="color:#a6e22e">up</span>) <span style="color:#a6e22e">scanned</span> <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">27.19</span> <span style="color:#a6e22e">seconds</span>
+</code></pre></div><p>After conducting the initial enumeration using Nmap, I discovered two open ports: port 22, typically used for Secure Shell (SSH) connections, and port 80, which is the default port for HTTP traffic. This finding suggests potential avenues for further investigation, such as examining the HTTP service for web vulnerabilities or exploring the SSH service for secure remote access possibilities.</p>
+<h2 id="80---http">80 - HTTP</h2>
+<p>Let&rsquo;s begin by enumerating port 80, often a primary entry point. To gather more detailed information about the target on port 80, I utilized tools like <code>Nuclei</code> and <code>Wappalyzer</code>. Nuclei is adept at identifying vulnerabilities and security-related configurations, while <code>Wappalyzer</code> helps in detecting various technologies and services running on the web server. This approach ensures a thorough examination of the web server&rsquo;s configuration, security posture, and the technologies in use, paving the way for a more informed and strategic exploration of the target system.</p>
+
+    <img src="/images/rootme/Untitled.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+    <img src="/images/rootme/Untitled%201.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Having gathered initial information about the target, the next step involves enumerating interesting folders and files on the HTTP server. This process is critical in identifying potentially sensitive directories, misconfigured files, or hidden resources that could provide further insights into the server&rsquo;s structure and vulnerabilities. Tools like <code>DirBuster</code>, <code>Gobuster</code>, or <code>ffuf</code> can be employed for this purpose. They systematically scan the web server for known paths and can be configured with wordlists tailored to the server&rsquo;s profile, enhancing the chances of uncovering significant findings in the server&rsquo;s file and directory structure. This step is pivotal for a comprehensive security assessment, often revealing avenues for deeper exploitation or data extraction. I particularly like the<code>ghobuster</code>.</p>
+
+    <img src="/images/rootme/Untitled%202.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>I came across two intriguing folders named &lsquo;upload&rsquo; and &lsquo;panel&rsquo;. These directories hinted at more complex functionalities within the server&rsquo;s architecture. Notably, the &lsquo;panel&rsquo; folder contained an upload feature, which immediately piqued my interest as a potential security vector.</p>
+<p>I attempted to upload a PHP file, anticipating some level of interaction or perhaps even a breakthrough. However, instead of success, I was met with an error message. This outcome, while initially seeming like a setback, actually opens up new avenues for investigation. It suggests that there are underlying controls or filters in place, which now become a focal point of my analysis. Understanding and potentially circumventing these restrictions could be key to uncovering deeper vulnerabilities within the system.</p>
+
+    <img src="/images/rootme/Untitled%203.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Then, I decided to employ a straightforward yet potentially effective tactic: I simply renamed the file to have a .png extension. This approach aimed to test the server&rsquo;s file validation mechanisms — to see if it merely checks file extensions superficially or delves deeper into the actual file content. Renaming a PHP file to a .png could potentially bypass basic filters that only scrutinize file extensions, allowing for further exploration of how the server handles unexpected file types under familiar extensions.</p>
+
+    <img src="/images/rootme/Untitled%204.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>The file goes to the <code>upload</code> page:</p>
+
+    <img src="/images/rootme/Untitled%205.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>In my initial attempt to exploit the discovered vulnerability, I sent a simple PHP reverse shell script. However, it didn&rsquo;t work on the first try. This led me to a phase of trial and error, experimenting with various forms of PHP shell scripts, and trying to pinpoint the reason for the failure. During this process, I realized that the issue might not be with the shell scripts themselves, but rather with the file extension.</p>
+<p>Originally, I was removing the <strong><code>.php</code></strong> extension to upload the shell, which seemed like a reasonable approach given the server&rsquo;s file validation system. But then, I had an insight: What if the server was still processing PHP, but only with a different extension? Acting on this hunch, I renamed the shell to have a <strong><code>.php5</code></strong> extension. To my satisfaction, this small tweak was the key. The server accepted the file, and I successfully gained a reverse shell.</p>
+<p>This breakthrough was a testament to the importance of persistence and creative thinking in penetration testing. It highlighted how even seemingly minor details, like a file extension, can be critical in security testing scenarios.</p>
+
+    <img src="/images/rootme/Untitled%206.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+    <img src="/images/rootme/Untitled%207.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>I used the PHP-reverse-shell from pentestmonkey:</p>
+<p><a href="https://pentestmonkey.net/tools/web-shells/php-reverse-shell">php-reverse-shell</a></p>
+<p>When the usual search in common folders didn&rsquo;t yield the flag, I resorted to using the <strong><code>find</code></strong> command to search for the <strong><code>user.txt</code></strong> file. This approach is often necessary in capture the flag (CTF) challenges or penetration testing scenarios when the flag, a text file containing a specific string used for scoring or verification purposes, isn&rsquo;t located in the standard directories.</p>
+<p>Executing a command like <strong><code>find / -type f -name user.txt</code></strong> allowed me to scan the entire file system for any file named <strong><code>user.txt</code></strong>. This method is thorough and ensures that no directory is overlooked, but it can be time-consuming and may require sifting through a lot of data. Nonetheless, it&rsquo;s an effective technique when the location of a target file is unknown or hidden in an unconventional location.</p>
+
+    <img src="/images/rootme/Untitled%208.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h2 id="privilege-escalation">Privilege Escalation</h2>
+<p>When searching for potential privilege escalation avenues, I turned my attention to files with SUID (Set Owner User ID upon execution) permissions. SUID is a special type of file permission given to a file. It enables users to execute the file with the permissions of the file owner, which could be the root user.</p>
+<p>Noticing that Python had SUID permissions set, it immediately stood out as a promising target. Python being SUID enabled could be a significant misconfiguration, allowing for privilege escalation. In a typical Linux environment, Python with SUID permissions could be exploited to execute arbitrary commands with elevated privileges.</p>
+<p>For instance, one could invoke a Python shell with elevated permissions using a command like <strong><code>/usr/bin/python -c 'import os; os.system(&quot;/bin/sh&quot;)'</code></strong>. This could potentially provide a shell with root-level access, assuming Python&rsquo;s SUID bit is set and the binary is owned by the root.</p>
+
+    <img src="/images/rootme/Untitled%209.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+    <img src="/images/rootme/Untitled%2010.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>After running the exploit I got the shell, and the flag was in the root folder.</p>
+
+    <img src="/images/rootme/Untitled%2011.png"  class="center"  style="border-radius: 10px;"  />
+
+
+]]></content>
+        </item>
         
         <item>
             <title>Hack the Box - Keeper - Write Up</title>
@@ -742,132 +841,6 @@ copy 20220613040930_file.zip y:
         </item>
         
         <item>
-            <title>Hack the Box - Blue- Write Up</title>
-            <link>https://nmmorette.github.io/posts/2022/03/hack-the-box-blue-write-up/</link>
-            <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
-            
-            <guid>https://nmmorette.github.io/posts/2022/03/hack-the-box-blue-write-up/</guid>
-            <description>Enumeration Initial scan:
-└──╼ $sudo nmap -sS -Pn 10.10.10.40 Host discovery disabled (-Pn). All addresses will be marked &amp;#39;up&amp;#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-11 15:11 -03 Nmap scan report for 10.10.10.40 Host is up (0.45s latency). Not shown: 991 closed ports PORT STATE SERVICE 135/tcp open msrpc 139/tcp open netbios-ssn 445/tcp open microsoft-ds 49152/tcp open unknown 49153/tcp open unknown 49154/tcp open unknown 49155/tcp open unknown 49156/tcp open unknown 49157/tcp open unknown Second nmap scan with --script vuln only on the open ports:</description>
-            <content type="html"><![CDATA[
-
-<br>
-
-
-    <img src="/images/htb/blue/banner.png"  class="center"  style="border-radius: 10px;"  />
-
-
-<h2 id="enumeration">Enumeration</h2>
-<p>Initial scan:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#960050;background-color:#1e0010">└──╼</span> <span style="color:#960050;background-color:#1e0010">$</span>sudo nmap <span style="color:#f92672">-</span>sS <span style="color:#f92672">-</span>Pn <span style="color:#ae81ff">10.10.10.40</span> 
-Host discovery disabled (<span style="color:#f92672">-</span>Pn). All addresses will be marked <span style="color:#960050;background-color:#1e0010">&#39;</span>up<span style="color:#960050;background-color:#1e0010">&#39;</span> and scan times will be slower.
-Starting Nmap <span style="color:#ae81ff">7.91</span> ( https:<span style="color:#75715e">//nmap.org ) at 2021-08-11 15:11 -03
-</span><span style="color:#75715e"></span>Nmap scan report <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10.10.10.40</span>
-Host is up (<span style="color:#ae81ff">0.45</span>s latency).
-Not shown: <span style="color:#ae81ff">991</span> closed ports
-PORT      STATE SERVICE
-<span style="color:#ae81ff">135</span><span style="color:#f92672">/</span>tcp   open  msrpc
-<span style="color:#ae81ff">139</span><span style="color:#f92672">/</span>tcp   open  netbios<span style="color:#f92672">-</span>ssn
-<span style="color:#ae81ff">445</span><span style="color:#f92672">/</span>tcp   open  microsoft<span style="color:#f92672">-</span>ds
-<span style="color:#ae81ff">49152</span><span style="color:#f92672">/</span>tcp open  unknown
-<span style="color:#ae81ff">49153</span><span style="color:#f92672">/</span>tcp open  unknown
-<span style="color:#ae81ff">49154</span><span style="color:#f92672">/</span>tcp open  unknown
-<span style="color:#ae81ff">49155</span><span style="color:#f92672">/</span>tcp open  unknown
-<span style="color:#ae81ff">49156</span><span style="color:#f92672">/</span>tcp open  unknown
-<span style="color:#ae81ff">49157</span><span style="color:#f92672">/</span>tcp open  unknown
-</code></pre></div><p>Second nmap scan with <code>--script vuln</code> only on the open ports:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">sudo nmap <span style="color:#f92672">-</span>sS <span style="color:#f92672">-</span>Pn <span style="color:#ae81ff">10.10.10.40</span> <span style="color:#f92672">-</span>A <span style="color:#f92672">-</span>p135,<span style="color:#ae81ff">139</span>,<span style="color:#ae81ff">445</span>,<span style="color:#ae81ff">49152</span>,<span style="color:#ae81ff">49153</span>,<span style="color:#ae81ff">49154</span>,<span style="color:#ae81ff">49155</span>,<span style="color:#ae81ff">49156</span>,<span style="color:#ae81ff">49157</span> <span style="color:#f92672">--</span>script vuln
-Host discovery disabled (<span style="color:#f92672">-</span>Pn). All addresses will be marked <span style="color:#960050;background-color:#1e0010">&#39;</span>up<span style="color:#960050;background-color:#1e0010">&#39;</span> and scan times will be slower.
-Starting Nmap <span style="color:#ae81ff">7.91</span> ( https:<span style="color:#75715e">//nmap.org ) at 2021-08-11 15:25 -03
-</span><span style="color:#75715e"></span>Pre<span style="color:#f92672">-</span>scan script results:
-<span style="color:#f92672">|</span> broadcast<span style="color:#f92672">-</span>avahi<span style="color:#f92672">-</span>dos: 
-<span style="color:#f92672">|</span>   Discovered hosts:
-<span style="color:#f92672">|</span>     <span style="color:#ae81ff">224.0.0.251</span>
-<span style="color:#f92672">|</span>   After NULL UDP avahi packet DoS (CVE<span style="color:#f92672">-</span><span style="color:#ae81ff">2011</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1002</span>).
-<span style="color:#f92672">|</span>_  Hosts are all up (not vulnerable).
-Nmap scan report <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10.10.10.40</span>
-Host is up (<span style="color:#ae81ff">0.50</span>s latency).
-
-PORT      STATE SERVICE      VERSION
-<span style="color:#ae81ff">135</span><span style="color:#f92672">/</span>tcp   open  msrpc        Microsoft Windows RPC
-<span style="color:#ae81ff">139</span><span style="color:#f92672">/</span>tcp   open  netbios<span style="color:#f92672">-</span>ssn  Microsoft Windows netbios<span style="color:#f92672">-</span>ssn
-<span style="color:#ae81ff">445</span><span style="color:#f92672">/</span>tcp   open  microsoft<span style="color:#f92672">-</span>ds Microsoft Windows <span style="color:#ae81ff">7</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">10</span> microsoft<span style="color:#f92672">-</span>ds (workgroup: WORKGROUP)
-<span style="color:#ae81ff">49152</span><span style="color:#f92672">/</span>tcp open  msrpc        Microsoft Windows RPC
-<span style="color:#ae81ff">49153</span><span style="color:#f92672">/</span>tcp open  msrpc        Microsoft Windows RPC
-<span style="color:#ae81ff">49154</span><span style="color:#f92672">/</span>tcp open  msrpc        Microsoft Windows RPC
-<span style="color:#ae81ff">49155</span><span style="color:#f92672">/</span>tcp open  msrpc        Microsoft Windows RPC
-<span style="color:#ae81ff">49156</span><span style="color:#f92672">/</span>tcp open  msrpc        Microsoft Windows RPC
-<span style="color:#ae81ff">49157</span><span style="color:#f92672">/</span>tcp open  msrpc        Microsoft Windows RPC
-Warning: OSScan results may be unreliable because we could not find at least <span style="color:#ae81ff">1</span> open and <span style="color:#ae81ff">1</span> closed port
-Aggressive OS guesses: Microsoft Windows <span style="color:#ae81ff">7</span> or Windows Server <span style="color:#ae81ff">2008</span> R2 (<span style="color:#ae81ff">97</span><span style="color:#f92672">%</span>), Microsoft Windows Home Server <span style="color:#ae81ff">2011</span> (Windows Server <span style="color:#ae81ff">2008</span> R2) (<span style="color:#ae81ff">96</span><span style="color:#f92672">%</span>), Microsoft Windows Server <span style="color:#ae81ff">2008</span> SP1 (<span style="color:#ae81ff">96</span><span style="color:#f92672">%</span>), Microsoft Windows Server <span style="color:#ae81ff">2008</span> SP2 (<span style="color:#ae81ff">96</span><span style="color:#f92672">%</span>), Microsoft Windows <span style="color:#ae81ff">7</span> (<span style="color:#ae81ff">96</span><span style="color:#f92672">%</span>), Microsoft Windows <span style="color:#ae81ff">7</span> SP0 <span style="color:#f92672">-</span> SP1 or Windows Server <span style="color:#ae81ff">2008</span> (<span style="color:#ae81ff">96</span><span style="color:#f92672">%</span>), Microsoft Windows <span style="color:#ae81ff">7</span> SP0 <span style="color:#f92672">-</span> SP1, Windows Server <span style="color:#ae81ff">2008</span> SP1, Windows Server <span style="color:#ae81ff">2008</span> R2, Windows <span style="color:#ae81ff">8</span>, or Windows <span style="color:#ae81ff">8.1</span> Update <span style="color:#ae81ff">1</span> (<span style="color:#ae81ff">96</span><span style="color:#f92672">%</span>), Microsoft Windows <span style="color:#ae81ff">7</span> SP1 (<span style="color:#ae81ff">96</span><span style="color:#f92672">%</span>), Microsoft Windows <span style="color:#ae81ff">7</span> Ultimate (<span style="color:#ae81ff">96</span><span style="color:#f92672">%</span>), Microsoft Windows <span style="color:#ae81ff">7</span> Ultimate SP1 or Windows <span style="color:#ae81ff">8.1</span> Update <span style="color:#ae81ff">1</span> (<span style="color:#ae81ff">96</span><span style="color:#f92672">%</span>)
-No exact OS matches <span style="color:#66d9ef">for</span> host (test conditions non<span style="color:#f92672">-</span>ideal).
-Network Distance: <span style="color:#ae81ff">2</span> hops
-Service Info: Host: HARIS<span style="color:#f92672">-</span>PC; OS: Windows; CPE: cpe:<span style="color:#f92672">/</span>o:microsoft:windows
-
-Host script results:
-<span style="color:#f92672">|</span>_smb<span style="color:#f92672">-</span>vuln<span style="color:#f92672">-</span>ms10<span style="color:#f92672">-</span><span style="color:#ae81ff">054</span><span style="color:#f92672">:</span> false
-<span style="color:#f92672">|</span>_smb<span style="color:#f92672">-</span>vuln<span style="color:#f92672">-</span>ms10<span style="color:#f92672">-</span><span style="color:#ae81ff">061</span><span style="color:#f92672">:</span> NT_STATUS_OBJECT_NAME_NOT_FOUND
-<span style="color:#f92672">|</span> smb<span style="color:#f92672">-</span>vuln<span style="color:#f92672">-</span>ms17<span style="color:#f92672">-</span><span style="color:#ae81ff">010</span><span style="color:#f92672">:</span> 
-<span style="color:#f92672">|</span>   VULNERABLE:
-<span style="color:#f92672">|</span>   Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17<span style="color:#f92672">-</span><span style="color:#ae81ff">010</span>)
-<span style="color:#f92672">|</span>     State: VULNERABLE
-<span style="color:#f92672">|</span>     IDs:  CVE:CVE<span style="color:#f92672">-</span><span style="color:#ae81ff">2017</span><span style="color:#f92672">-</span><span style="color:#ae81ff">0143</span>
-<span style="color:#f92672">|</span>     Risk factor: HIGH
-<span style="color:#f92672">|</span>       A critical remote code execution vulnerability exists in Microsoft SMBv1
-<span style="color:#f92672">|</span>        servers (ms17<span style="color:#f92672">-</span><span style="color:#ae81ff">010</span>).
-<span style="color:#f92672">|</span>           
-<span style="color:#f92672">|</span>     Disclosure date: <span style="color:#ae81ff">2017</span><span style="color:#f92672">-</span><span style="color:#ae81ff">03</span><span style="color:#f92672">-</span><span style="color:#ae81ff">14</span>
-<span style="color:#f92672">|</span>     References:
-<span style="color:#f92672">|</span>       https:<span style="color:#75715e">//cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143
-</span><span style="color:#75715e"></span><span style="color:#f92672">|</span>       https:<span style="color:#75715e">//technet.microsoft.com/en-us/library/security/ms17-010.aspx
-</span><span style="color:#75715e"></span><span style="color:#f92672">|</span>_      https:<span style="color:#75715e">//blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/
-</span><span style="color:#75715e"></span>
-TRACEROUTE (using port <span style="color:#ae81ff">135</span><span style="color:#f92672">/</span>tcp)
-HOP RTT       ADDRESS
-<span style="color:#ae81ff">1</span>   <span style="color:#ae81ff">244.54</span> ms <span style="color:#ae81ff">10.10.16.1</span>
-<span style="color:#ae81ff">2</span>   <span style="color:#ae81ff">445.61</span> ms <span style="color:#ae81ff">10.10.10.40</span>
-
-OS and Service detection performed. Please report any incorrect results at https:<span style="color:#75715e">//nmap.org/submit/ .
-</span><span style="color:#75715e"></span>Nmap done: <span style="color:#ae81ff">1</span> IP address (<span style="color:#ae81ff">1</span> host up) scanned in <span style="color:#ae81ff">130.01</span> seconds
-
-
-</code></pre></div><p>The host is vulnerable to ms17-10:</p>
-
-    <img src="/images/htb/blue/vuln.png"  class="center"  style="border-radius: 10px;"  />
-
-
-<h2 id="exploit">Exploit</h2>
-<p>Let&rsquo;s double-check this vuln with <code>msfconsole</code>.
-Search for &ldquo;ms17-010&rdquo; and use the module: scanner/smb/smb_ms17_010:</p>
-
-    <img src="/images/htb/blue/search.png"  class="center"  style="border-radius: 8px;"  />
-
-
-<p>We have the confirmation:</p>
-
-    <img src="/images/htb/blue/run.png"  class="center"  style="border-radius: 8px;"  />
-
-
-<p>We need to set the exploit <code>windows/smb/ms17_010_eternal</code> and configure the options: RPORT, RHOSTS, LPORT and LHOST. Also, check the payload.</p>
-
-    <img src="/images/htb/blue/smb.png"  class="center"  style="border-radius: 8px;"  />
-
-
-<p>After that we could run the exploit and get access to the host:</p>
-
-    <img src="/images/htb/blue/exploit.png"  class="center"  style="border-radius: 8px;"  />
-
-
-<h2 id="flag">Flag</h2>
-<p>Search for the flag in the commons users folders.</p>
-
-    <img src="/images/htb/blue/pawnd.PNG"  class="center"  style="border-radius: 8px;"  />
-
-
-]]></content>
-        </item>
-        
-        <item>
             <title>RoadMap para AZ-900 (Pt-br)</title>
             <link>https://nmmorette.github.io/posts/2021/09/roadmap-para-az-900-pt-br/</link>
             <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
@@ -1414,6 +1387,132 @@ So we need to find some way to privesc this host.</p>
 </code></pre></div><p>That&rsquo;s it! We&rsquo;re root!</p>
 
     <img src="/images/tryhackme/bountyhacker/root.png"  class="center"  style="border-radius: 10px;"  />
+
+
+]]></content>
+        </item>
+        
+        <item>
+            <title>Hack the Box - Blue- Write Up</title>
+            <link>https://nmmorette.github.io/posts/2021/08/hack-the-box-blue-write-up/</link>
+            <pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2021/08/hack-the-box-blue-write-up/</guid>
+            <description>Enumeration Initial scan:
+└──╼ $sudo nmap -sS -Pn 10.10.10.40 Host discovery disabled (-Pn). All addresses will be marked &amp;#39;up&amp;#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-11 15:11 -03 Nmap scan report for 10.10.10.40 Host is up (0.45s latency). Not shown: 991 closed ports PORT STATE SERVICE 135/tcp open msrpc 139/tcp open netbios-ssn 445/tcp open microsoft-ds 49152/tcp open unknown 49153/tcp open unknown 49154/tcp open unknown 49155/tcp open unknown 49156/tcp open unknown 49157/tcp open unknown Second nmap scan with --script vuln only on the open ports:</description>
+            <content type="html"><![CDATA[
+
+<br>
+
+
+    <img src="/images/htb/blue/banner.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h2 id="enumeration">Enumeration</h2>
+<p>Initial scan:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#960050;background-color:#1e0010">└──╼</span> <span style="color:#960050;background-color:#1e0010">$</span>sudo nmap <span style="color:#f92672">-</span>sS <span style="color:#f92672">-</span>Pn <span style="color:#ae81ff">10.10.10.40</span> 
+Host discovery disabled (<span style="color:#f92672">-</span>Pn). All addresses will be marked <span style="color:#960050;background-color:#1e0010">&#39;</span>up<span style="color:#960050;background-color:#1e0010">&#39;</span> and scan times will be slower.
+Starting Nmap <span style="color:#ae81ff">7.91</span> ( https:<span style="color:#75715e">//nmap.org ) at 2021-08-11 15:11 -03
+</span><span style="color:#75715e"></span>Nmap scan report <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10.10.10.40</span>
+Host is up (<span style="color:#ae81ff">0.45</span>s latency).
+Not shown: <span style="color:#ae81ff">991</span> closed ports
+PORT      STATE SERVICE
+<span style="color:#ae81ff">135</span><span style="color:#f92672">/</span>tcp   open  msrpc
+<span style="color:#ae81ff">139</span><span style="color:#f92672">/</span>tcp   open  netbios<span style="color:#f92672">-</span>ssn
+<span style="color:#ae81ff">445</span><span style="color:#f92672">/</span>tcp   open  microsoft<span style="color:#f92672">-</span>ds
+<span style="color:#ae81ff">49152</span><span style="color:#f92672">/</span>tcp open  unknown
+<span style="color:#ae81ff">49153</span><span style="color:#f92672">/</span>tcp open  unknown
+<span style="color:#ae81ff">49154</span><span style="color:#f92672">/</span>tcp open  unknown
+<span style="color:#ae81ff">49155</span><span style="color:#f92672">/</span>tcp open  unknown
+<span style="color:#ae81ff">49156</span><span style="color:#f92672">/</span>tcp open  unknown
+<span style="color:#ae81ff">49157</span><span style="color:#f92672">/</span>tcp open  unknown
+</code></pre></div><p>Second nmap scan with <code>--script vuln</code> only on the open ports:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">sudo nmap <span style="color:#f92672">-</span>sS <span style="color:#f92672">-</span>Pn <span style="color:#ae81ff">10.10.10.40</span> <span style="color:#f92672">-</span>A <span style="color:#f92672">-</span>p135,<span style="color:#ae81ff">139</span>,<span style="color:#ae81ff">445</span>,<span style="color:#ae81ff">49152</span>,<span style="color:#ae81ff">49153</span>,<span style="color:#ae81ff">49154</span>,<span style="color:#ae81ff">49155</span>,<span style="color:#ae81ff">49156</span>,<span style="color:#ae81ff">49157</span> <span style="color:#f92672">--</span>script vuln
+Host discovery disabled (<span style="color:#f92672">-</span>Pn). All addresses will be marked <span style="color:#960050;background-color:#1e0010">&#39;</span>up<span style="color:#960050;background-color:#1e0010">&#39;</span> and scan times will be slower.
+Starting Nmap <span style="color:#ae81ff">7.91</span> ( https:<span style="color:#75715e">//nmap.org ) at 2021-08-11 15:25 -03
+</span><span style="color:#75715e"></span>Pre<span style="color:#f92672">-</span>scan script results:
+<span style="color:#f92672">|</span> broadcast<span style="color:#f92672">-</span>avahi<span style="color:#f92672">-</span>dos: 
+<span style="color:#f92672">|</span>   Discovered hosts:
+<span style="color:#f92672">|</span>     <span style="color:#ae81ff">224.0.0.251</span>
+<span style="color:#f92672">|</span>   After NULL UDP avahi packet DoS (CVE<span style="color:#f92672">-</span><span style="color:#ae81ff">2011</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1002</span>).
+<span style="color:#f92672">|</span>_  Hosts are all up (not vulnerable).
+Nmap scan report <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">10.10.10.40</span>
+Host is up (<span style="color:#ae81ff">0.50</span>s latency).
+
+PORT      STATE SERVICE      VERSION
+<span style="color:#ae81ff">135</span><span style="color:#f92672">/</span>tcp   open  msrpc        Microsoft Windows RPC
+<span style="color:#ae81ff">139</span><span style="color:#f92672">/</span>tcp   open  netbios<span style="color:#f92672">-</span>ssn  Microsoft Windows netbios<span style="color:#f92672">-</span>ssn
+<span style="color:#ae81ff">445</span><span style="color:#f92672">/</span>tcp   open  microsoft<span style="color:#f92672">-</span>ds Microsoft Windows <span style="color:#ae81ff">7</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">10</span> microsoft<span style="color:#f92672">-</span>ds (workgroup: WORKGROUP)
+<span style="color:#ae81ff">49152</span><span style="color:#f92672">/</span>tcp open  msrpc        Microsoft Windows RPC
+<span style="color:#ae81ff">49153</span><span style="color:#f92672">/</span>tcp open  msrpc        Microsoft Windows RPC
+<span style="color:#ae81ff">49154</span><span style="color:#f92672">/</span>tcp open  msrpc        Microsoft Windows RPC
+<span style="color:#ae81ff">49155</span><span style="color:#f92672">/</span>tcp open  msrpc        Microsoft Windows RPC
+<span style="color:#ae81ff">49156</span><span style="color:#f92672">/</span>tcp open  msrpc        Microsoft Windows RPC
+<span style="color:#ae81ff">49157</span><span style="color:#f92672">/</span>tcp open  msrpc        Microsoft Windows RPC
+Warning: OSScan results may be unreliable because we could not find at least <span style="color:#ae81ff">1</span> open and <span style="color:#ae81ff">1</span> closed port
+Aggressive OS guesses: Microsoft Windows <span style="color:#ae81ff">7</span> or Windows Server <span style="color:#ae81ff">2008</span> R2 (<span style="color:#ae81ff">97</span><span style="color:#f92672">%</span>), Microsoft Windows Home Server <span style="color:#ae81ff">2011</span> (Windows Server <span style="color:#ae81ff">2008</span> R2) (<span style="color:#ae81ff">96</span><span style="color:#f92672">%</span>), Microsoft Windows Server <span style="color:#ae81ff">2008</span> SP1 (<span style="color:#ae81ff">96</span><span style="color:#f92672">%</span>), Microsoft Windows Server <span style="color:#ae81ff">2008</span> SP2 (<span style="color:#ae81ff">96</span><span style="color:#f92672">%</span>), Microsoft Windows <span style="color:#ae81ff">7</span> (<span style="color:#ae81ff">96</span><span style="color:#f92672">%</span>), Microsoft Windows <span style="color:#ae81ff">7</span> SP0 <span style="color:#f92672">-</span> SP1 or Windows Server <span style="color:#ae81ff">2008</span> (<span style="color:#ae81ff">96</span><span style="color:#f92672">%</span>), Microsoft Windows <span style="color:#ae81ff">7</span> SP0 <span style="color:#f92672">-</span> SP1, Windows Server <span style="color:#ae81ff">2008</span> SP1, Windows Server <span style="color:#ae81ff">2008</span> R2, Windows <span style="color:#ae81ff">8</span>, or Windows <span style="color:#ae81ff">8.1</span> Update <span style="color:#ae81ff">1</span> (<span style="color:#ae81ff">96</span><span style="color:#f92672">%</span>), Microsoft Windows <span style="color:#ae81ff">7</span> SP1 (<span style="color:#ae81ff">96</span><span style="color:#f92672">%</span>), Microsoft Windows <span style="color:#ae81ff">7</span> Ultimate (<span style="color:#ae81ff">96</span><span style="color:#f92672">%</span>), Microsoft Windows <span style="color:#ae81ff">7</span> Ultimate SP1 or Windows <span style="color:#ae81ff">8.1</span> Update <span style="color:#ae81ff">1</span> (<span style="color:#ae81ff">96</span><span style="color:#f92672">%</span>)
+No exact OS matches <span style="color:#66d9ef">for</span> host (test conditions non<span style="color:#f92672">-</span>ideal).
+Network Distance: <span style="color:#ae81ff">2</span> hops
+Service Info: Host: HARIS<span style="color:#f92672">-</span>PC; OS: Windows; CPE: cpe:<span style="color:#f92672">/</span>o:microsoft:windows
+
+Host script results:
+<span style="color:#f92672">|</span>_smb<span style="color:#f92672">-</span>vuln<span style="color:#f92672">-</span>ms10<span style="color:#f92672">-</span><span style="color:#ae81ff">054</span><span style="color:#f92672">:</span> false
+<span style="color:#f92672">|</span>_smb<span style="color:#f92672">-</span>vuln<span style="color:#f92672">-</span>ms10<span style="color:#f92672">-</span><span style="color:#ae81ff">061</span><span style="color:#f92672">:</span> NT_STATUS_OBJECT_NAME_NOT_FOUND
+<span style="color:#f92672">|</span> smb<span style="color:#f92672">-</span>vuln<span style="color:#f92672">-</span>ms17<span style="color:#f92672">-</span><span style="color:#ae81ff">010</span><span style="color:#f92672">:</span> 
+<span style="color:#f92672">|</span>   VULNERABLE:
+<span style="color:#f92672">|</span>   Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17<span style="color:#f92672">-</span><span style="color:#ae81ff">010</span>)
+<span style="color:#f92672">|</span>     State: VULNERABLE
+<span style="color:#f92672">|</span>     IDs:  CVE:CVE<span style="color:#f92672">-</span><span style="color:#ae81ff">2017</span><span style="color:#f92672">-</span><span style="color:#ae81ff">0143</span>
+<span style="color:#f92672">|</span>     Risk factor: HIGH
+<span style="color:#f92672">|</span>       A critical remote code execution vulnerability exists in Microsoft SMBv1
+<span style="color:#f92672">|</span>        servers (ms17<span style="color:#f92672">-</span><span style="color:#ae81ff">010</span>).
+<span style="color:#f92672">|</span>           
+<span style="color:#f92672">|</span>     Disclosure date: <span style="color:#ae81ff">2017</span><span style="color:#f92672">-</span><span style="color:#ae81ff">03</span><span style="color:#f92672">-</span><span style="color:#ae81ff">14</span>
+<span style="color:#f92672">|</span>     References:
+<span style="color:#f92672">|</span>       https:<span style="color:#75715e">//cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143
+</span><span style="color:#75715e"></span><span style="color:#f92672">|</span>       https:<span style="color:#75715e">//technet.microsoft.com/en-us/library/security/ms17-010.aspx
+</span><span style="color:#75715e"></span><span style="color:#f92672">|</span>_      https:<span style="color:#75715e">//blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/
+</span><span style="color:#75715e"></span>
+TRACEROUTE (using port <span style="color:#ae81ff">135</span><span style="color:#f92672">/</span>tcp)
+HOP RTT       ADDRESS
+<span style="color:#ae81ff">1</span>   <span style="color:#ae81ff">244.54</span> ms <span style="color:#ae81ff">10.10.16.1</span>
+<span style="color:#ae81ff">2</span>   <span style="color:#ae81ff">445.61</span> ms <span style="color:#ae81ff">10.10.10.40</span>
+
+OS and Service detection performed. Please report any incorrect results at https:<span style="color:#75715e">//nmap.org/submit/ .
+</span><span style="color:#75715e"></span>Nmap done: <span style="color:#ae81ff">1</span> IP address (<span style="color:#ae81ff">1</span> host up) scanned in <span style="color:#ae81ff">130.01</span> seconds
+
+
+</code></pre></div><p>The host is vulnerable to ms17-10:</p>
+
+    <img src="/images/htb/blue/vuln.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h2 id="exploit">Exploit</h2>
+<p>Let&rsquo;s double-check this vuln with <code>msfconsole</code>.
+Search for &ldquo;ms17-010&rdquo; and use the module: scanner/smb/smb_ms17_010:</p>
+
+    <img src="/images/htb/blue/search.png"  class="center"  style="border-radius: 8px;"  />
+
+
+<p>We have the confirmation:</p>
+
+    <img src="/images/htb/blue/run.png"  class="center"  style="border-radius: 8px;"  />
+
+
+<p>We need to set the exploit <code>windows/smb/ms17_010_eternal</code> and configure the options: RPORT, RHOSTS, LPORT and LHOST. Also, check the payload.</p>
+
+    <img src="/images/htb/blue/smb.png"  class="center"  style="border-radius: 8px;"  />
+
+
+<p>After that we could run the exploit and get access to the host:</p>
+
+    <img src="/images/htb/blue/exploit.png"  class="center"  style="border-radius: 8px;"  />
+
+
+<h2 id="flag">Flag</h2>
+<p>Search for the flag in the commons users folders.</p>
+
+    <img src="/images/htb/blue/pawnd.PNG"  class="center"  style="border-radius: 8px;"  />
 
 
 ]]></content>
