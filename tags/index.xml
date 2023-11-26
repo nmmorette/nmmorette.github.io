@@ -6,7 +6,34 @@
     <description>Recent content in Tags on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>certification</title>
+      <link>https://nmmorette.github.io/tags/certification/</link>
+      <pubDate>Sat, 25 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/certification/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cnsp</title>
+      <link>https://nmmorette.github.io/tags/cnsp/</link>
+      <pubDate>Sat, 25 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/cnsp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>thesecopsgroup</title>
+      <link>https://nmmorette.github.io/tags/thesecopsgroup/</link>
+      <pubDate>Sat, 25 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/thesecopsgroup/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>CTF</title>
       <link>https://nmmorette.github.io/tags/ctf/</link>
@@ -17,11 +44,11 @@
     </item>
     
     <item>
-      <title>OSINT</title>
-      <link>https://nmmorette.github.io/tags/osint/</link>
+      <title>linux</title>
+      <link>https://nmmorette.github.io/tags/linux/</link>
       <pubDate>Wed, 22 Nov 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://nmmorette.github.io/tags/osint/</guid>
+      <guid>https://nmmorette.github.io/tags/linux/</guid>
       <description></description>
     </item>
     
@@ -67,33 +94,6 @@
       <pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/tags/htb/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pentest</title>
-      <link>https://nmmorette.github.io/tags/pentest/</link>
-      <pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/tags/pentest/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pwn</title>
-      <link>https://nmmorette.github.io/tags/pwn/</link>
-      <pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/tags/pwn/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>windows</title>
-      <link>https://nmmorette.github.io/tags/windows/</link>
-      <pubDate>Sat, 17 Dec 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/tags/windows/</guid>
       <description></description>
     </item>
     

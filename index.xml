@@ -6,7 +6,17 @@
     <description>Recent content on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Review CNSP - Certified Network Security Practitioner</title>
+      <link>https://nmmorette.github.io/posts/2023/11/review-cnsp-certified-network-security-practitioner/</link>
+      <pubDate>Sat, 25 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2023/11/review-cnsp-certified-network-security-practitioner/</guid>
+      <description>CNSP - Certified Network Security Practitioner Who Should Take This Exam? CNSP (Certified Network Security Professional) is a certification designed for a wide range of professionals in the cybersecurity field. It&amp;rsquo;s particularly suitable for security engineers, network architects, penetration testers, and members of red and blue teams. Moreover, it&amp;rsquo;s an excellent choice for any security enthusiast who aims to test and enhance their understanding of network security.
+In my view, professionals with experience in networking or cybersecurity will find the exam relatively easy.</description>
+    </item>
+    
     <item>
       <title>TryHackme - Rootme - Write-Up</title>
       <link>https://nmmorette.github.io/posts/2023/11/tryhackme-rootme-write-up/</link>
@@ -104,16 +114,6 @@ A prova tem nível fundamental ou seja é uma prova baseada em conceitos e não 
       <guid>https://nmmorette.github.io/posts/2021/09/hack-the-box-lame-write-up/</guid>
       <description>Enumeration Initial scan:
 └─$ sudo nmap -sS -Pn 10.10.10.3 [sudo] password for venomsnake: Host discovery disabled (-Pn). All addresses will be marked &amp;#39;up&amp;#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-09-01 10:40 -03 Nmap scan report for 10.10.10.3 Host is up (0.17s latency). Not shown: 996 filtered ports PORT STATE SERVICE 21/tcp open ftp 22/tcp open ssh 139/tcp open netbios-ssn 445/tcp open microsoft-ds Nmap done: 1 IP address (1 host up) scanned in 20.</description>
-    </item>
-    
-    <item>
-      <title>RoadMap para MS-900 (Pt-br)</title>
-      <link>https://nmmorette.github.io/posts/2021/08/roadmap-para-ms-900-pt-br/</link>
-      <pubDate>Mon, 30 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/posts/2021/08/roadmap-para-ms-900-pt-br/</guid>
-      <description>Introdução O intuito desse post é ajudar os interessados em fazer a prova MS-900 Microsoft 365 Fundamentals. Nesse post vou falar um pouco sobre a prova e sobre o meu plano de estudos para aprovação.
-A prova tem nível fundamental ou seja é uma prova baseada em conceitos e não há prática, além disso é uma certificação de &amp;ldquo;entrada&amp;rdquo; para Microsoft 365. Vai te ajudar a conhecer a tecnologia ou provar seus conhecimentos.</description>
     </item>
     
   </channel>

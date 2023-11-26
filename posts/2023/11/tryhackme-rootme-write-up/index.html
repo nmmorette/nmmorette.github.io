@@ -9,7 +9,7 @@
 https://tryhackme.com/room/rrootme
 Enumeration nmap Initial enumeration with nmap
 nmap 10.10.88.1 Starting Nmap 7.94SVN ( https://nmap.org ) at 2023-11-21 05:03 PST Nmap scan report for 10.10.88.1 Host is up (0.32s latency). Not shown: 996 closed tcp ports (conn-refused) PORT STATE SERVICE 1/tcp filtered tcpmux 22/tcp open ssh 80/tcp open http 2200/tcp filtered ici Nmap done: 1 IP address (1 host up) scanned in 27." />
-<meta name="keywords" content="DCPT,Pentest,CTF,Cybersecurity,RedTeam,TryhackMe,Hackthebox,certification, tryhackme, writeup, security, THM, CTF, OSINT" />
+<meta name="keywords" content="DCPT,Pentest,CTF,Cybersecurity,RedTeam,TryhackMe,Hackthebox,certification, tryhackme, writeup, security, THM, CTF, linux" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
 <link rel="canonical" href="https://nmmorette.github.io/posts/2023/11/tryhackme-rootme-write-up/" />
@@ -51,7 +51,7 @@ Enumeration nmap Initial enumeration with nmap
 nmap 10.10.88.1 Starting Nmap 7.94SVN ( https://nmap.org ) at 2023-11-21 05:03 PST Nmap scan report for 10.10.88.1 Host is up (0.32s latency). Not shown: 996 closed tcp ports (conn-refused) PORT STATE SERVICE 1/tcp filtered tcpmux 22/tcp open ssh 80/tcp open http 2200/tcp filtered ici Nmap done: 1 IP address (1 host up) scanned in 27."><meta itemprop="datePublished" content="2023-11-22T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-11-22T00:00:00+00:00" />
 <meta itemprop="wordCount" content="1020"><meta itemprop="image" content="https://nmmorette.github.io"/>
-<meta itemprop="keywords" content="tryhackme,writeup,security,THM,CTF,OSINT," />
+<meta itemprop="keywords" content="tryhackme,writeup,security,THM,CTF,linux," />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://nmmorette.github.io"/>
 
@@ -177,6 +177,22 @@ if (!doNotTrack) {
       
 
       
+        <hr />
+        <aside id="toc">
+          <div class="toc-title">Table of Contents</div>
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#enumeration">Enumeration</a>
+      <ul>
+        <li><a href="#nmap">nmap</a></li>
+        <li><a href="#80---http">80 - HTTP</a></li>
+      </ul>
+    </li>
+    <li><a href="#privilege-escalation">Privilege Escalation</a></li>
+  </ul>
+</nav>
+        </aside>
+        <hr />
 
       
 
@@ -184,8 +200,8 @@ if (!doNotTrack) {
         <h1 id="rootme">RootMe</h1>
 <p>A ctf for beginners, can you root me?</p>
 <p><a href="https://tryhackme.com/room/rrootme">https://tryhackme.com/room/rrootme</a></p>
-<h1 id="enumeration">Enumeration</h1>
-<h2 id="nmap">nmap</h2>
+<h2 id="enumeration">Enumeration</h2>
+<h3 id="nmap">nmap</h3>
 <p>Initial enumeration with nmap</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">nmap</span> <span style="color:#ae81ff">10.10.88.1</span>    
 <span style="color:#a6e22e">Starting</span> <span style="color:#a6e22e">Nmap</span> <span style="color:#ae81ff">7.94</span><span style="color:#a6e22e">SVN</span> ( <span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//nmap.org ) at 2023-11-21 05:03 PST
@@ -200,7 +216,7 @@ if (!doNotTrack) {
 
 <span style="color:#a6e22e">Nmap</span> <span style="color:#a6e22e">done</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span> <span style="color:#a6e22e">IP</span> <span style="color:#a6e22e">address</span> (<span style="color:#ae81ff">1</span> <span style="color:#a6e22e">host</span> <span style="color:#a6e22e">up</span>) <span style="color:#a6e22e">scanned</span> <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">27.19</span> <span style="color:#a6e22e">seconds</span>
 </code></pre></div><p>After conducting the initial enumeration using Nmap, I discovered two open ports: port 22, typically used for Secure Shell (SSH) connections, and port 80, which is the default port for HTTP traffic. This finding suggests potential avenues for further investigation, such as examining the HTTP service for web vulnerabilities or exploring the SSH service for secure remote access possibilities.</p>
-<h2 id="80---http">80 - HTTP</h2>
+<h3 id="80---http">80 - HTTP</h3>
 <p>Let&rsquo;s begin by enumerating port 80, often a primary entry point. To gather more detailed information about the target on port 80, I utilized tools like <code>Nuclei</code> and <code>Wappalyzer</code>. Nuclei is adept at identifying vulnerabilities and security-related configurations, while <code>Wappalyzer</code> helps in detecting various technologies and services running on the web server. This approach ensures a thorough examination of the web server&rsquo;s configuration, security posture, and the technologies in use, paving the way for a more informed and strategic exploration of the target system.</p>
 
     <img src="/images/rootme/Untitled.png"  class="center"  style="border-radius: 10px;"  />
@@ -283,7 +299,7 @@ if (!doNotTrack) {
         <span class="tag"><a href="https://nmmorette.github.io/tags/security/">security</a></span>
         <span class="tag"><a href="https://nmmorette.github.io/tags/thm/">THM</a></span>
         <span class="tag"><a href="https://nmmorette.github.io/tags/ctf/">CTF</a></span>
-        <span class="tag"><a href="https://nmmorette.github.io/tags/osint/">OSINT</a></span>
+        <span class="tag"><a href="https://nmmorette.github.io/tags/linux/">linux</a></span>
         
     </p>
 
@@ -418,6 +434,13 @@ if (!doNotTrack) {
         </div>
 
         <div class="pagination__buttons">
+            
+            <span class="button previous">
+                <a href="https://nmmorette.github.io/posts/2023/11/review-cnsp-certified-network-security-practitioner/">
+                    <span class="button__icon">←</span>
+                    <span class="button__text">Review CNSP - Certified Network Security Practitioner</span>
+                </a>
+            </span>
             
 
             

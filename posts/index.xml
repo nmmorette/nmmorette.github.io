@@ -5,8 +5,132 @@
         <description>Recent content in Posts on Natan Maia Morette</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 22 Nov 2023 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Sat, 25 Nov 2023 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://nmmorette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Review CNSP - Certified Network Security Practitioner</title>
+            <link>https://nmmorette.github.io/posts/2023/11/review-cnsp-certified-network-security-practitioner/</link>
+            <pubDate>Sat, 25 Nov 2023 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2023/11/review-cnsp-certified-network-security-practitioner/</guid>
+            <description>CNSP - Certified Network Security Practitioner Who Should Take This Exam? CNSP (Certified Network Security Professional) is a certification designed for a wide range of professionals in the cybersecurity field. It&amp;rsquo;s particularly suitable for security engineers, network architects, penetration testers, and members of red and blue teams. Moreover, it&amp;rsquo;s an excellent choice for any security enthusiast who aims to test and enhance their understanding of network security.
+In my view, professionals with experience in networking or cybersecurity will find the exam relatively easy.</description>
+            <content type="html"><![CDATA[<h1 id="cnsp---certified-network-security-practitioner">CNSP - Certified Network Security Practitioner</h1>
+<h2 id="who-should-take-this-exam"><strong>Who Should Take This Exam?</strong></h2>
+<p>CNSP (Certified Network Security Professional) is a certification designed for a wide range of professionals in the cybersecurity field. It&rsquo;s particularly suitable for security engineers, network architects, penetration testers, and members of red and blue teams. Moreover, it&rsquo;s an excellent choice for any security enthusiast who aims to test and enhance their understanding of network security.</p>
+<p>In my view, professionals with experience in networking or cybersecurity will find the exam relatively easy. This is because the exam covers fundamental concepts of networking and cybersecurity, which are commonly applied in the professional environment. Moreover, for students in fields related to information technology, this certification represents an excellent entry point. All the concepts covered in the exam are encompassed in IT degree courses, providing a solid and applicable foundation for those who are starting their careers in the field.</p>
+<h2 id="exam-format"><strong>Exam Format</strong></h2>
+<p>The CNSP exam consists of multiple-choice questions (MCQs) that span the comprehensive syllabus. Candidates are allotted 60 minutes to complete the exam, which is proctored yet conveniently available online. This on-demand flexibility allows the exam to be taken anytime, anywhere. The questions range from factual knowledge checks to scenario-based queries, ensuring a thorough assessment of the candidate&rsquo;s abilities.</p>
+<h2 id="certification-cost"><strong>Certification Cost</strong></h2>
+<p>The CNSP typically costs £250, but there may be discounts available.</p>
+<p><img src="/images/CNSP/Untitled.png" alt="Untitled"></p>
+<p><a href="https://secops.group/pentesting-exams/certified-network-security-practitioner/" title="Buy Here">Buy Here</a></p>
+<h2 id="passing-criteria"><strong>Passing Criteria</strong></h2>
+<p>Success in the CNSP exam is tiered:</p>
+<ul>
+<li>Scoring over 60% is considered a pass.</li>
+<li>Achieving above 75% grants a merit distinction.</li>
+</ul>
+<h2 id="prerequisites"><strong>Prerequisites</strong></h2>
+<p>Targeted as an entry-level certification, CNSP focuses on core network security fundamentals. Prospective candidates should understand security misconfigurations, best practices, defense-in-depth strategies, and basic knowledge of vulnerability exploitation. Professional penetration testing experience, however, is not a prerequisite.</p>
+<h2 id="exam-retake-policy"><strong>Exam Retake Policy</strong></h2>
+<p>Candidates who do not pass must purchase a new voucher for a retake.</p>
+<h2 id="career-advantages"><strong>Career Advantages</strong></h2>
+<p>Earning the CNSP certification demonstrates a solid foundation in network security, paving the way for career advancement and recognition in the field.</p>
+<h2 id="exam-syllabus-overview"><strong>Exam Syllabus Overview</strong></h2>
+<p>Studying for the CNSP exam requires a good mix of resources that cover each topic in the syllabus. Here are some website suggestions for each topic to help you prepare effectively:</p>
+<ol>
+<li><strong>TCP/IP, OSI Layer, IPv4, and IPv6</strong>
+<ul>
+<li><strong><a href="https://www.netacad.com/">Cisco Networking Academy</a></strong>: Offers courses and resources on networking basics, including TCP/IP and OSI models.</li>
+<li><strong><a href="https://www.ipv6.com/">IPv6.com</a></strong>: Dedicated to IPv6 education, offering articles and tutorials.</li>
+</ul>
+</li>
+<li><strong>Networking Hardware (Routers, Switches, Hubs)</strong>
+<ul>
+<li><strong><a href="https://networklessons.com/">NetworkLessons.com</a></strong>: Provides easy-to-understand lessons on networking hardware and concepts.</li>
+<li><strong><a href="https://www.practicalnetworking.net/">Practical Networking</a></strong>: Offers tutorials focused on practical aspects of networking devices.</li>
+</ul>
+</li>
+<li><strong>Network Discovery and Mapping Protocols</strong>
+<ul>
+<li><strong><a href="https://www.wiresharktraining.com/">Wireshark University</a></strong>: Learn about network protocol analysis and how to use Wireshark for network discovery.</li>
+</ul>
+</li>
+<li><strong>Network Architectures and Target Identification</strong>
+<ul>
+<li><strong><a href="https://www.computernetworkingnotes.com/">ComputerNetworkingNotes</a></strong>: Covers various network architecture models and concepts.</li>
+</ul>
+</li>
+<li><strong>Network Scanning and Fingerprinting</strong>
+<ul>
+<li><strong><a href="https://nmap.org/">Nmap.org</a></strong>: The official site for Nmap, a tool for network scanning and security auditing.</li>
+</ul>
+</li>
+<li><strong>Cryptography</strong>
+<ul>
+<li><strong><a href="https://www.crypto101.io/">Crypto101.io</a></strong>: A free introductory book on cryptography.</li>
+<li><strong><a href="http://www.crypto-textbook.com/">Cryptography and Network Security</a></strong>: Textbook site with additional resources and lectures.</li>
+</ul>
+</li>
+<li><strong>Active Directory, Linux, and Windows Security Basics</strong>
+<ul>
+<li><strong><a href="https://docs.microsoft.com/en-us/learn/">Microsoft Learn</a></strong>: Offers courses on Windows and Active Directory security.</li>
+<li><strong><a href="https://www.linuxtopia.org/online_books/linux_beginner_books/linux_security/index.html">Linux Security for Beginners</a></strong>: A guide for Linux security basics.</li>
+</ul>
+</li>
+<li><strong>Vulnerabilities in Windows Services</strong>
+<ul>
+<li><strong><a href="https://cve.mitre.org/">CVE Mitre</a></strong>: Database of publicly known cybersecurity vulnerabilities, including those affecting Windows services.</li>
+<li><a href="https://book.hacktricks.xyz/windows-hardening/checklist-windows-privilege-escalation">HackTricks - Windows Privilege Escalation</a>:  Checklist with local Windows privesc</li>
+</ul>
+</li>
+<li><strong>Testing Web Servers and Frameworks</strong>
+<ul>
+<li><strong><a href="https://www.owasp.org/">OWASP</a></strong>: Resources and guidelines for secure web application development and testing.</li>
+</ul>
+</li>
+<li><strong>Basic Malware Analysis and Social Engineering</strong>
+<ul>
+<li><strong><a href="http://fumalwareanalysis.blogspot.com/p/malware-analysis-tutorials-reverse.html">Malware Analysis Tutorials</a></strong>: A blog with tutorials on malware analysis.</li>
+<li><strong><a href="https://www.social-engineer.org/">Social-Engineer.org</a></strong>: Information and resources on the art of social engineering.</li>
+</ul>
+</li>
+<li><strong>Network Security Tools and Frameworks (Nmap, Wireshark, etc.)</strong>
+<ul>
+<li><strong><a href="https://nmap.org/">Nmap.org</a></strong>: As mentioned earlier, for Nmap.</li>
+<li><strong><a href="https://www.wiresharktraining.com/">Wireshark University</a></strong>: For Wireshark tutorials.</li>
+</ul>
+</li>
+<li><strong>Open-Source Intelligence Gathering (OSINT)</strong>
+<ul>
+<li><strong><a href="https://osintframework.com/">OSINT Framework</a></strong>: A framework focused on gathering information from free tools or resources.</li>
+</ul>
+</li>
+<li><strong>Database and TLS Security Basics</strong>
+<ul>
+<li><strong><a href="https://sqlzoo.net/">SQLZoo</a></strong>: Interactive SQL tutorials, good for understanding database basics.</li>
+<li><strong><a href="https://letsencrypt.org/docs/">Let&rsquo;s Encrypt</a></strong>: Information on TLS/SSL and how it secures websites.</li>
+</ul>
+</li>
+<li><strong>Password Storage</strong>
+<ul>
+<li><strong><a href="https://owasp.org/www-project-cheat-sheets/cheatsheets/Password_Storage_Cheat_Sheet.html">OWASP Password Storage Cheat Sheet</a></strong>: Best practices for password storage.</li>
+</ul>
+</li>
+</ol>
+<p>Remember, while these resources are a great starting point, the key to success in any exam is a well-rounded study plan that includes a variety of learning materials, such as books, video tutorials, practice exams, and hands-on labs. Good luck with your preparation!</p>
+<p>In conclusion, the CNSP certification offers a robust platform for professionals to validate and enhance their network security skills. Its comprehensive syllabus, combined with the convenience of online testing, makes it an attractive option for those starting their journey in cybersecurity and seasoned practitioners looking to formalize their expertise.</p>
+<h2 id="mock-exam"><strong>Mock Exam</strong></h2>
+<p>The SecOps Group offers free mock exams on their website, allowing you to test your machine&rsquo;s environment before taking the actual exam, as well as providing some sample questions.</p>
+<p><img src="/images/CNSP//Untitled%201.png" alt="Untitled"></p>
+<p><img src="/images/CNSP/Untitled%202.png" alt="Untitled"></p>
+<p><img src="/images/CNSP//Untitled%203.png" alt="Untitled"></p>
+<p><img src="/images/CNSP/Untitled%204.png" alt="Untitled"></p>
+<p><img src="/images/CNSP//Untitled%205.png" alt="Untitled"></p>
+]]></content>
+        </item>
         
         <item>
             <title>TryHackme - Rootme - Write-Up</title>
@@ -21,8 +145,8 @@ nmap 10.10.88.1 Starting Nmap 7.94SVN ( https://nmap.org ) at 2023-11-21 05:03 P
             <content type="html"><![CDATA[<h1 id="rootme">RootMe</h1>
 <p>A ctf for beginners, can you root me?</p>
 <p><a href="https://tryhackme.com/room/rrootme">https://tryhackme.com/room/rrootme</a></p>
-<h1 id="enumeration">Enumeration</h1>
-<h2 id="nmap">nmap</h2>
+<h2 id="enumeration">Enumeration</h2>
+<h3 id="nmap">nmap</h3>
 <p>Initial enumeration with nmap</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">nmap</span> <span style="color:#ae81ff">10.10.88.1</span>    
 <span style="color:#a6e22e">Starting</span> <span style="color:#a6e22e">Nmap</span> <span style="color:#ae81ff">7.94</span><span style="color:#a6e22e">SVN</span> ( <span style="color:#a6e22e">https</span><span style="color:#f92672">:</span><span style="color:#75715e">//nmap.org ) at 2023-11-21 05:03 PST
@@ -37,7 +161,7 @@ nmap 10.10.88.1 Starting Nmap 7.94SVN ( https://nmap.org ) at 2023-11-21 05:03 P
 
 <span style="color:#a6e22e">Nmap</span> <span style="color:#a6e22e">done</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span> <span style="color:#a6e22e">IP</span> <span style="color:#a6e22e">address</span> (<span style="color:#ae81ff">1</span> <span style="color:#a6e22e">host</span> <span style="color:#a6e22e">up</span>) <span style="color:#a6e22e">scanned</span> <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">27.19</span> <span style="color:#a6e22e">seconds</span>
 </code></pre></div><p>After conducting the initial enumeration using Nmap, I discovered two open ports: port 22, typically used for Secure Shell (SSH) connections, and port 80, which is the default port for HTTP traffic. This finding suggests potential avenues for further investigation, such as examining the HTTP service for web vulnerabilities or exploring the SSH service for secure remote access possibilities.</p>
-<h2 id="80---http">80 - HTTP</h2>
+<h3 id="80---http">80 - HTTP</h3>
 <p>Let&rsquo;s begin by enumerating port 80, often a primary entry point. To gather more detailed information about the target on port 80, I utilized tools like <code>Nuclei</code> and <code>Wappalyzer</code>. Nuclei is adept at identifying vulnerabilities and security-related configurations, while <code>Wappalyzer</code> helps in detecting various technologies and services running on the web server. This approach ensures a thorough examination of the web server&rsquo;s configuration, security posture, and the technologies in use, paving the way for a more informed and strategic exploration of the target system.</p>
 
     <img src="/images/rootme/Untitled.png"  class="center"  style="border-radius: 10px;"  />
