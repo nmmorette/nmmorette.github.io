@@ -5,8 +5,118 @@
         <description>Recent content in Posts on Natan Maia Morette</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 25 Nov 2023 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 06 Dec 2023 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://nmmorette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>The Essential Nmap Cheat Sheet for Quick Reference</title>
+            <link>https://nmmorette.github.io/posts/2023/12/the-essential-nmap-cheat-sheet-for-quick-reference/</link>
+            <pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2023/12/the-essential-nmap-cheat-sheet-for-quick-reference/</guid>
+            <description>Introduction Nmap (Network Mapper) is an open-source tool for network exploration and security auditing. Widely used by network administrators, it&amp;rsquo;s crucial for vulnerability scanning and network inventory. This cheat sheet provides a quick reference to the most commonly used Nmap commands and options, ideal for both beginners and experienced users.
+Basic Scanning Techniques  Basic Network Scan: Command: nmap [target]  Use to quickly scan a target IP or domain.</description>
+            <content type="html"><![CDATA[
+    <img src="/images/The%20Essential%20Nmap%20Cheat%20Sheet%20for%20Quick%20Reference/nmap.jpg"  class="center"  style="border-radius: 10px;"  />
+
+
+<h2 id="introduction"><strong>Introduction</strong></h2>
+<p>Nmap (Network Mapper) is an open-source tool for network exploration and security auditing. Widely used by network administrators, it&rsquo;s crucial for vulnerability scanning and network inventory. This cheat sheet provides a quick reference to the most commonly used Nmap commands and options, ideal for both beginners and experienced users.</p>
+<h2 id="basic-scanning-techniques"><strong>Basic Scanning Techniques</strong></h2>
+<ol>
+<li><strong>Basic Network Scan:</strong>
+Command: <strong><code>nmap [target]</code></strong>
+<ul>
+<li>Use to quickly scan a target IP or domain.</li>
+</ul>
+</li>
+<li><strong>Scan Multiple IPs or Subnets:</strong>
+Command: <strong><code>nmap [target1, target2, etc.]</code></strong>
+<ul>
+<li>Handy for scanning multiple targets.</li>
+</ul>
+</li>
+<li><strong>Ping Scan (No Port Scan):</strong>
+Command: <strong><code>nmap -sn [target]</code></strong>
+<ul>
+<li>Useful for checking if the host is online without performing a port scan.</li>
+</ul>
+</li>
+</ol>
+<h2 id="advanced-scanning-options"><strong>Advanced Scanning Options</strong></h2>
+<ol>
+<li><strong>TCP SYN Scan (Stealth Scan):</strong>
+Command: <strong><code>nmap -sS [target]</code></strong>
+- Less intrusive and stealthier than a connect scan.</li>
+<li><strong>UDP Scan:</strong>
+Command: <strong><code>nmap -sU [target]</code></strong>
+- For scanning UDP ports. It&rsquo;s slower but essential for a complete security audit.</li>
+<li><strong>Aggressive Scan:</strong>
+Command: <strong><code>nmap -A [target]</code></strong>
+- Provides a more comprehensive output including OS detection, version detection, script scanning, and traceroute.</li>
+<li><strong>Version Detection:</strong>
+Command: <strong><code>nmap -sV [target]</code></strong>
+- Detects the service version on the open ports.</li>
+</ol>
+<h3 id="output-options"><strong>Output Options</strong></h3>
+<ol>
+<li><strong>Saving Output in a Specific Format:</strong>
+Command: <strong><code>nmap -oX [output.xml] [target]</code></strong> (for XML format)
+- Other formats include <strong><code>oN</code></strong> for normal, <strong><code>oG</code></strong> for grepable, and <strong><code>oA</code></strong> for all.</li>
+<li><strong>Verbose Output:</strong>
+Command: <strong><code>nmap -v [target]</code></strong>
+- Provides more detailed output.</li>
+</ol>
+<h2 id="scripts"><strong>Scripts</strong></h2>
+<p>Nmap&rsquo;s scripting engine (NSE) is one of its most powerful and flexible features. It allows users to write (or use existing) scripts to automate a wide variety of networking tasks. This cheat sheet covers some of the most useful Nmap scripts for network discovery, vulnerability detection, and more.</p>
+<h3 id="understanding-nmap-script-types"><strong>Understanding Nmap Script Types:</strong></h3>
+<ol>
+<li><strong>Default Scripts:</strong>
+- Automatically used by Nmap for common tasks.
+- Example: <strong><code>nmap -sC [target]</code></strong> (Runs default scripts)</li>
+<li><strong>Safe Scripts:</strong>
+- Designed not to disrupt the target network.
+- Example: <strong><code>nmap --script safe [target]</code></strong></li>
+<li><strong>Intrusive Scripts:</strong>
+- Potentially disruptive, should be used with caution.
+- Example: <strong><code>nmap --script intrusive [target]</code></strong></li>
+</ol>
+<h3 id="popular-script-categories"><strong>Popular Script Categories</strong></h3>
+<ol>
+<li><strong>Discovery:</strong>
+- Scripts for network and service discovery.
+- Example: <strong><code>nmap --script discovery [target]</code></strong></li>
+<li><strong>Vulnerability:</strong>
+- Identifies known vulnerabilities.
+- Example: <strong><code>nmap --script vuln [target]</code></strong></li>
+<li><strong>Authentication:</strong>
+- Tests for authentication mechanisms and weaknesses.
+- Example: <strong><code>nmap --script auth [target]</code></strong></li>
+<li><strong>Database:</strong>
+- Specific scripts for database servers.
+- Example: <strong><code>nmap --script &quot;database* and safe&quot; [target]</code></strong></li>
+<li><strong>Malware:</strong>
+- Checks for signs of infection or backdoors.
+- Example: <strong><code>nmap --script malware [target]</code></strong></li>
+</ol>
+<h3 id="using-script-arguments"><strong>Using Script Arguments</strong></h3>
+<p>Some scripts accept arguments for more specific control.</p>
+<ul>
+<li>Example: <strong><code>nmap --script [script-name] --script-args=[arg]=[value] [target]</code></strong></li>
+</ul>
+<h3 id="combining-scripts-and-scan-techniques"><strong>Combining Scripts and Scan Techniques</strong></h3>
+<p>Scripts can be combined with standard Nmap scan techniques.</p>
+<ul>
+<li>Example: <strong><code>nmap -sV --script=default,vuln [target]</code></strong></li>
+</ul>
+<h3 id="output-and-debugging"><strong>Output and Debugging</strong></h3>
+<p>Use verbose and debugging options for detailed script output.</p>
+<ul>
+<li>Example: <strong><code>nmap --script [script] -d [target]</code></strong> (debugging mode)</li>
+<li>Example: <strong><code>nmap --script [script] -v [target]</code></strong> (verbose mode)</li>
+</ul>
+]]></content>
+        </item>
         
         <item>
             <title>Review CNSP - Certified Network Security Practitioner</title>
@@ -962,6 +1072,16 @@ copy 20220613040930_file.zip y:
 <p><img src="/images/htb/Forest/Untitled%2013.png" alt="Untitled"></p>
 <p><img src="/images/htb/Forest/Untitled%2014.png" alt="Untitled"></p>
 ]]></content>
+        </item>
+        
+        <item>
+            <title>Hack the Box - Paper - Write Up</title>
+            <link>https://nmmorette.github.io/posts/2022/04/hack-the-box-paper-write-up/</link>
+            <pubDate>Thu, 14 Apr 2022 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2022/04/hack-the-box-paper-write-up/</guid>
+            <description></description>
+            <content type="html"><![CDATA[]]></content>
         </item>
         
         <item>

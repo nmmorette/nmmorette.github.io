@@ -41,6 +41,15 @@ Computer name: FOREST | NetBIOS computer name: FOREST\x00 | Domain name: htb.loc
     </item>
     
     <item>
+      <title>Hack the Box - Paper - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2022/04/hack-the-box-paper-write-up/</link>
+      <pubDate>Thu, 14 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2022/04/hack-the-box-paper-write-up/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Hack the Box - Lame - Write Up</title>
       <link>https://nmmorette.github.io/posts/2021/09/hack-the-box-lame-write-up/</link>
       <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
