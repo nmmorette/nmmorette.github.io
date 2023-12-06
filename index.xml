@@ -109,10 +109,11 @@ Computer name: FOREST | NetBIOS computer name: FOREST\x00 | Domain name: htb.loc
     <item>
       <title>Hack the Box - Paper - Write Up</title>
       <link>https://nmmorette.github.io/posts/2022/04/hack-the-box-paper-write-up/</link>
-      <pubDate>Thu, 14 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/posts/2022/04/hack-the-box-paper-write-up/</guid>
-      <description></description>
+      <description>Enumeration The journey begins with the execution of Nmap. This versatile tool offers a plethora of scanning options.
+sudo nmap -sS 10.129.153.125 -A -p22,80,443 Starting Nmap 7.92 ( https://nmap.org ) at 2022-04-04 13:30 -03 Nmap scan report for 10.129.153.125 Host is up (0.32s latency). PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.0 (protocol 2.0) | ssh-hostkey: | 2048 10:05:ea:50:56:a6:00:cb:1c:9c:93:df:5f:83:e0:64 (RSA) | 256 58:8c:82:1c:c6:63:2a:83:87:5c:2f:2b:4f:4d:c3:79 (ECDSA) |_ 256 31:78:af:d1:3b:c4:2e:9d:60:4e:eb:5d:03:ec:a0:22 (ED25519) 80/tcp open http Apache httpd 2.</description>
     </item>
     
   </channel>
