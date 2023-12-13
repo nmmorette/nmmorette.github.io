@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nmmorette.github.io/posts/2023/12/review-ejptv2-junior-penetration-tester/</loc>
+    <lastmod>2023-12-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/posts/2023/12/ejptv2-cheat-sheet/</loc>
+    <lastmod>2023-12-11T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://nmmorette.github.io/posts/2023/12/the-essential-nmap-cheat-sheet-for-quick-reference/</loc>
     <lastmod>2023-12-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -65,10 +71,43 @@
     <loc>https://nmmorette.github.io/posts/2021/06/hello-world/</loc>
     <lastmod>2021-06-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nmmorette.github.io/tags/cheatsheet/</loc>
-    <lastmod>2023-12-06T00:00:00+00:00</lastmod>
+    <loc>https://nmmorette.github.io/series/certification/</loc>
+    <lastmod>2023-12-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nmmorette.github.io/series/cheatsheet/</loc>
+    <loc>https://nmmorette.github.io/tags/certification/</loc>
+    <lastmod>2023-12-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/tags/ejpt/</loc>
+    <lastmod>2023-12-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/tags/ine/</loc>
+    <lastmod>2023-12-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/</loc>
+    <lastmod>2023-12-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/posts/</loc>
+    <lastmod>2023-12-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/tags/review/</loc>
+    <lastmod>2023-12-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/series/review/</loc>
+    <lastmod>2023-12-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/series/</loc>
+    <lastmod>2023-12-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/tags/</loc>
+    <lastmod>2023-12-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/series/cheat-sheet/</loc>
+    <lastmod>2023-12-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/tags/cheet-sheet/</loc>
+    <lastmod>2023-12-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/tags/cheat-sheet/</loc>
     <lastmod>2023-12-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nmmorette.github.io/tags/cybersec/</loc>
@@ -77,31 +116,13 @@
     <loc>https://nmmorette.github.io/series/cybersec/</loc>
     <lastmod>2023-12-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nmmorette.github.io/</loc>
-    <lastmod>2023-12-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nmmorette.github.io/tags/nmap/</loc>
     <lastmod>2023-12-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nmmorette.github.io/posts/</loc>
+    <loc>https://nmmorette.github.io/tags/tools/</loc>
     <lastmod>2023-12-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nmmorette.github.io/series/</loc>
-    <lastmod>2023-12-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nmmorette.github.io/tags/</loc>
-    <lastmod>2023-12-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nmmorette.github.io/series/certification/</loc>
-    <lastmod>2023-11-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nmmorette.github.io/tags/certification/</loc>
-    <lastmod>2023-11-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nmmorette.github.io/tags/cnsp/</loc>
-    <lastmod>2023-11-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nmmorette.github.io/series/review/</loc>
     <lastmod>2023-11-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nmmorette.github.io/tags/thesecopsgroup/</loc>
@@ -181,9 +202,6 @@
   </url><url>
     <loc>https://nmmorette.github.io/tags/reversingshell/</loc>
     <lastmod>2021-07-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nmmorette.github.io/tags/review/</loc>
-    <lastmod>2021-07-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nmmorette.github.io/categories/review/</loc>
     <lastmod>2021-07-09T00:00:00+00:00</lastmod>

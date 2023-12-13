@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ejpt on Natan Maia Morette</title>
+    <link>https://nmmorette.github.io/tags/ejpt/</link>
+    <description>Recent content in ejpt on Natan Maia Morette</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/ejpt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Review eJPTv2 - Junior Penetration Tester</title>
+      <link>https://nmmorette.github.io/posts/2023/12/review-ejptv2-junior-penetration-tester/</link>
+      <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2023/12/review-ejptv2-junior-penetration-tester/</guid>
+      <description>Introduction This is my review of the eJPTv2 certification offered by INE. Initially, I purchased the voucher for the exam, version V1, without including the training. Later, I was able to exchange it for the V2 version with INE, a process that went smoothly and without complications or costs.
+I decided not to participate in the training offered by INE, a choice based on my pre-existing experience in the field. This experience led me to believe that I already had the necessary knowledge to take the eJPT exam without the need for additional preparation.</description>
+    </item>
+    
+  </channel>
+</rss>

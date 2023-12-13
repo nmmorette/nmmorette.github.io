@@ -6,13 +6,58 @@
     <description>Recent content in Tags on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>cheatsheet</title>
-      <link>https://nmmorette.github.io/tags/cheatsheet/</link>
+      <title>certification</title>
+      <link>https://nmmorette.github.io/tags/certification/</link>
+      <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/certification/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ejpt</title>
+      <link>https://nmmorette.github.io/tags/ejpt/</link>
+      <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/ejpt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>INE</title>
+      <link>https://nmmorette.github.io/tags/ine/</link>
+      <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/ine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>review</title>
+      <link>https://nmmorette.github.io/tags/review/</link>
+      <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/review/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cheet sheet</title>
+      <link>https://nmmorette.github.io/tags/cheet-sheet/</link>
+      <pubDate>Mon, 11 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/cheet-sheet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cheat sheet</title>
+      <link>https://nmmorette.github.io/tags/cheat-sheet/</link>
       <pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://nmmorette.github.io/tags/cheatsheet/</guid>
+      <guid>https://nmmorette.github.io/tags/cheat-sheet/</guid>
       <description></description>
     </item>
     
@@ -35,11 +80,11 @@
     </item>
     
     <item>
-      <title>certification</title>
-      <link>https://nmmorette.github.io/tags/certification/</link>
-      <pubDate>Sat, 25 Nov 2023 00:00:00 +0000</pubDate>
+      <title>tools</title>
+      <link>https://nmmorette.github.io/tags/tools/</link>
+      <pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://nmmorette.github.io/tags/certification/</guid>
+      <guid>https://nmmorette.github.io/tags/tools/</guid>
       <description></description>
     </item>
     
@@ -49,51 +94,6 @@
       <pubDate>Sat, 25 Nov 2023 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/tags/cnsp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>thesecopsgroup</title>
-      <link>https://nmmorette.github.io/tags/thesecopsgroup/</link>
-      <pubDate>Sat, 25 Nov 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/tags/thesecopsgroup/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CTF</title>
-      <link>https://nmmorette.github.io/tags/ctf/</link>
-      <pubDate>Wed, 22 Nov 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/tags/ctf/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>https://nmmorette.github.io/tags/linux/</link>
-      <pubDate>Wed, 22 Nov 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>security</title>
-      <link>https://nmmorette.github.io/tags/security/</link>
-      <pubDate>Wed, 22 Nov 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/tags/security/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>THM</title>
-      <link>https://nmmorette.github.io/tags/thm/</link>
-      <pubDate>Wed, 22 Nov 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/tags/thm/</guid>
       <description></description>
     </item>
     

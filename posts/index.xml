@@ -5,8 +5,388 @@
         <description>Recent content in Posts on Natan Maia Morette</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 06 Dec 2023 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Tue, 12 Dec 2023 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://nmmorette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Review eJPTv2 - Junior Penetration Tester</title>
+            <link>https://nmmorette.github.io/posts/2023/12/review-ejptv2-junior-penetration-tester/</link>
+            <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2023/12/review-ejptv2-junior-penetration-tester/</guid>
+            <description>Introduction This is my review of the eJPTv2 certification offered by INE. Initially, I purchased the voucher for the exam, version V1, without including the training. Later, I was able to exchange it for the V2 version with INE, a process that went smoothly and without complications or costs.
+I decided not to participate in the training offered by INE, a choice based on my pre-existing experience in the field. This experience led me to believe that I already had the necessary knowledge to take the eJPT exam without the need for additional preparation.</description>
+            <content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
+
+    <img src="/images/eJPTv2-Review/ejpt.gif"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>This is my review of the eJPTv2 certification offered by INE.
+Initially, I purchased the voucher for the exam, version V1, without including the training. Later, I was able to exchange it for the V2 version with INE, a process that went smoothly and without complications or costs.</p>
+<p>I decided not to participate in the training offered by INE, a choice based on my pre-existing experience in the field. This experience led me to believe that I already had the necessary knowledge to take the eJPT exam without the need for additional preparation.</p>
+<p>To be considered successful in the exam, it is necessary to achieve a minimum of 70% correct answers. The result is calculated and displayed on the screen immediately after submitting the answers, which provides a clear and immediate view of the performance achieved.</p>
+<p>INE no longer supports the V1 version of this exam, so you can now only purchase the new version.</p>
+<h2 id="price">Price</h2>
+<p>Link to buy <a href="https://checkout.ine.com/?product_selected=ejptv2_funda_quarterly" target="_blank" >Here</a></p>
+
+    <img src="/images/eJPTv2-Review/Untitled.png"  class="center"  style="border-radius: 10px ;"  />
+
+
+<p>INE offers a package that includes an exam voucher and three months of access to its educational platform for $249. This package is ideal for those seeking structured training along with the opportunity to get certified.</p>
+<p>A valuable tip for potential candidates is to consider waiting for promotions. INE often offers discounts on exam vouchers and subscriptions, which can lead to significant savings.Based on my experience and observations of INE&rsquo;s pricing practices, I recommend that those interested in obtaining INE certifications keep an eye out for these promotional opportunities. The quality of the training material and the efficiency of the exam process make the investment worthwhile, especially if you can take advantage of these discounts.</p>
+
+    <img src="/images/eJPTv2-Review/Untitled%201.png"  class="center"  style="border-radius: 10px ;"  />
+
+
+<p>My experience with INE&rsquo;s certification included a transition in how the company offers its products. When I purchased the voucher for the eJPT v1 exam, I chose not to include the training course. This option was available on INE&rsquo;s old website, allowing the separate purchase of just the exam voucher.</p>
+<p>However, it&rsquo;s important to highlight a significant change for those currently considering this certification. On INE&rsquo;s website, the option to purchase only the exam voucher without the associated training seems to no longer be available. This may represent a change in study strategy and budget for candidates, especially for those who, like me, feel confident in their pre-existing skills and prefer not to acquire additional training.</p>
+<p>Therefore, for future candidates, I recommend a detailed evaluation of the options available on INE&rsquo;s current website. Additionally, as mentioned earlier, stay alert for promotions offered by INE, as they may include significant discounts on the training and voucher package.</p>
+<p>For more information, contact INE support: <strong><a href="mailto:support@ine.com" >support@ine.com</a></strong></p>
+
+    <img src="/images/eJPTv2-Review/Untitled%202.png"  class="center"  style="border-radius: 10px ;"  />
+
+
+<h2 id="who-its-for">Who It&rsquo;s For</h2>
+<p>The eJPT is a certification for individuals with a basic understanding of networks, systems, and an interest in penetration testing. Anyone can attempt the certification exam; however, it is designed for:</p>
+<ul>
+<li>Systems Administrators***</li>
+<li>IT Project Managers</li>
+<li>Information Security Officers</li>
+<li>Security Engineers/Analysts</li>
+<li>DevOps/ Software Developers</li>
+<li>Managed Service Providers (MSPs)</li>
+<li>Manage Security Service Providers (MSSPs)</li>
+</ul>
+<p>Despite these recommendations, anyone can take the exam as there are no mandatory prerequisites. Moreover, if your knowledge of the subject is minimal, it is highly recommended that you prepare for this exam using the INE&rsquo;s Penetration Testing Learning Path.</p>
+
+    <img src="/images/eJPTv2-Review/Untitled%203.png"  class="center"  style="border-radius: 10px ;"  />
+
+
+<h2 id="content">Content</h2>
+<p>The eJPT assesses and certifies an individual’s skills in Assessment Methodologies (25%), Host and Networking Auditing (25%), Host and Network Penetration Testing (35%), and Web Application Penetration Testing (15%). The following objectives are tested:</p>
+<h3 id="1-assessment-methodologies">1. Assessment Methodologies</h3>
+<pre><code>1. Locate endpoints on a network
+2. Identify vulnerabilities in services
+3. Identify operating system of a target
+4. Identify open ports and services on a target
+5. Extract company information from public sources
+6. Gather technical information from public sources
+7. Gather email addresses from public sources
+8. Evaluate information and criticality or impact of vulnerabilities
+</code></pre>
+<h3 id="2-host--network-auditing">2. Host &amp; Network Auditing</h3>
+<pre><code>1. Transfer files to and from target
+2. Enumerate system information on target
+3. Compile information from files on target
+4. Gather user account information on target
+5. Gather hash/password information from target
+6. Enumerate network information from files on target
+</code></pre>
+<h3 id="3-host--network-penetration-testing">3. Host &amp; Network Penetration Testing</h3>
+<pre><code>1. Conduct hash cracking
+2. Identify and modify exploits
+3. Conduct brute-force password attacks
+4. Conduct exploitation with metasploit
+5. Demonstrate pivoting by adding a route
+6. Demonstrate pivoting by port forwarding
+</code></pre>
+<h3 id="4-web-application-penetration-testing">4. Web Application Penetration Testing</h3>
+<pre><code>1. Conduct webapp reconnaissance
+2. Conduct brute-force login attack
+3. Locate hidden file and directories
+4. Identify vulnerabilities in webapps
+</code></pre>
+
+    <img src="/images/eJPTv2-Review/Untitled%204.png"  class="center"  style="border-radius: 10px ;"  />
+
+
+<p>The certification exam follows a Capture The Flag (CTF) style. If you are familiar with platforms like TryHackMe and Hack The Box, you&rsquo;ll have a preliminary idea of what to expect in the exam.</p>
+<p>As it&rsquo;s a practical exam, candidates have 48 hours to complete it, and the responses are multiple-choice. This format gives you a certain advantage when answering.</p>
+<p>Some questions will require a flag, while others will ask about open ports on hosts, vulnerable services, and questions related to exploiting the host. There&rsquo;s no need to submit a report after the exam; you just have to answer the questions and complete the test.</p>
+<h2 id="how-to-study">How to Study</h2>
+<p>I need to divide this topic into two sections: how to study for the exam if you are a beginner, and how to study for the exam if you already work in the field of cybersecurity or have extensive experience with CTFs.</p>
+<h3 id="begginer">Begginer</h3>
+<p>If your knowledge in Cyber Security is very limited, I advise taking the course offered by INE itself (Penetration Testing Learning Path). They provide a comprehensive preparation for this certification, covering all the topics related to the exam. By completing the entire course and the labs, you will be prepared for this certification, as all the exam content is included in the course.</p>
+<h3 id="security-professional">Security Professional</h3>
+<p>If you are a professional in the field and already have knowledge in penetration testing, or are experienced in hacking machines on platforms like TryHackMe or Hack the Box, this certification will likely not present many challenges. Therefore, I believe it can be undertaken without extensive preparation, as was the case for me.</p>
+<h2 id="tips">Tips</h2>
+<h3 id="cheat-sheet">Cheat Sheet</h3>
+<p>Check out my Cheat Sheet for eJPTV2 certification: <a href="/posts/2023/12/ejptv2-cheat-sheet/" >eJPT Cheat Sheet</a></p>
+<h2 id="labs">Labs</h2>
+<p>I&rsquo;m providing a list of machines that I believe can help beginners practice and allow experienced individuals to test their knowledge before attempting the exam.</p>
+<blockquote>
+<p>This is just my recommendation, based on my opinion and knowledge. Take your notes and prepare for the exam.</p>
+</blockquote>
+<h3 id="tryhackme">TryhackMe</h3>
+
+    <img src="/images/eJPTv2-Review/try.jpg"  class="center"  style="border-radius: 10px ;"  />
+
+
+<p><a href="https://tryhackme.com/room/basicpentestingjt" target="_blank" >TryHackMe | Basic Pentesting</a></p>
+<p><a href="https://tryhackme.com/room/ice" target="_blank" >TryHackMe | Ice</a></p>
+<p><a href="https://tryhackme.com/room/brooklynninenine" target="_blank" >TryHackMe | Brooklyn Nine Nine</a></p>
+<p><a href="https://tryhackme.com/room/anonymous" target="_blank" >TryHackMe | Anonymous</a></p>
+<p><a href="https://tryhackme.com/room/easypeasyctf" target="_blank" >TryHackMe | Easy Peasy</a></p>
+<p><a href="https://tryhackme.com/room/goldeneye" target="_blank" >TryHackMe | GoldenEye</a></p>
+<p><a href="https://tryhackme.com/room/jokerctf" target="_blank" >TryHackMe | HA Joker CTF</a></p>
+<p><a href="https://tryhackme.com/room/source" target="_blank" >TryHackMe | Source</a></p>
+<p><a href="https://tryhackme.com/room/poster" target="_blank" >TryHackMe | Poster</a></p>
+<p><a href="https://tryhackme.com/room/wordpresscve202129447" target="_blank" >TryHackMe | Wordpress: CVE-2021-29447</a></p>
+<p><a href="https://tryhackme.com/room/blog" target="_blank" >TryHackMe | Blog</a></p>
+<p><a href="https://tryhackme.com/room/rrootme" target="_blank" >TryHackMe | RootMe</a></p>
+<h3 id="hack-the-box">Hack the Box</h3>
+
+    <img src="/images/eJPTv2-Review/hackthebox.jpg"  class="center"  style="border-radius: 10px ;"  />
+
+
+<p><a href="https://app.hackthebox.com/starting-point?tier=1" target="_blank" >Hack The Box - Pennyworth </a></p>
+<p><a href="https://app.hackthebox.com/starting-point?tier=1" target="_blank" >Hack The Box - Archetype </a></p>
+<p><a href="https://app.hackthebox.com/starting-point?tier=1" target="_blank" >Hack The Box - Oopsie </a></p>
+<p><a href="https://app.hackthebox.com/machines/3" target="_blank" >Hack The Box - Devel </a></p>
+<p><a href="https://app.hackthebox.com/machines/344" target="_blank" >Hack The Box - Love </a></p>
+<p><a href="https://app.hackthebox.com/machines/2" target="_blank" >Hack The Box - Legacy </a></p>
+<p><a href="https://app.hackthebox.com/machines/1" target="_blank" >Hack The Box - Lame</a></p>
+<p><a href="https://app.hackthebox.com/machines/114" target="_blank" >Hack The Box - Jeeves </a></p>
+<p><a href="https://app.hackthebox.com/machines/146" target="_blank" >Hack The Box - Hawk </a></p>
+<h2 id="materials-from-content-creators">Materials from Content Creators</h2>
+<p>There is a lot of content from cyber security professionals over the internet to help you study to eJPT.</p>
+<p><a href="https://drive.google.com/file/d/1bfZH7ZluaX5nmBx1Dcof43IN0PfHwChG/view?usp=sharing" target="_blank" >eLernSecurity Junior Penetration Testing Notes by Joas</a></p>
+<p><a href="https://github.com/edoardottt/eJPT-notes" target="_blank" >eJPT Notes by edoardottt</a></p>
+<p><a href="https://github.com/JasonTurley/eJPT/blob/main/cheat-sheet.md" target="_blank" >eJPT cheat-sheet by JasonTurley</a></p>
+<p><a href="https://github.com/d3m0n4l3x/eJPT" target="_blank" >eJPT notes by d3m0n4l3x</a></p>
+<p><a href="https://kentosec.com/2019/08/04/how-to-pass-the-ejpt/" target="_blank" >How to Pass the eJPT</a></p>
+<p><a href="https://joasantonio108.medium.com/my-journey-to-pass-ejpt-elearnsecurity-7de5cd532dd9" target="_blank" >My Journey to Pass eJPT (eLearnsecurity)</a></p>
+<h2 id="steps">Steps</h2>
+<p><strong><a href="https://security.ine.com/certifications/ejpt-certification/#c448a743d6ef69376" target="_blank" >1. Purchase a certification exam voucher</a></strong></p>
+<p>Purchase an exam voucher to start the certification process. Login to the certification area to manage the exam and any other materials related to the certification process.</p>
+<p><strong><a href="https://security.ine.com/certifications/ejpt-certification/#129ece376f18b2a90" target="_blank" >2. Begin the certification process</a></strong></p>
+<p><strong>Regular vouchers expire after 180 days from purchase.</strong> Before the certification voucher expires (180 days from purchase), complete the initial exam attempt and if desired, the complimentary re-take that is provided with the voucher’s purchase. Both attempts must be submitted before the certification voucher expires. The expiration date will always be available in the certification area, and reminder emails are sent to ensure the voucher is taken advantage of.</p>
+<p><strong><a href="https://security.ine.com/certifications/ejpt-certification/#07e104512ff2c3ba4" target="_blank" >3. Take your exam</a></strong></p>
+<p>Follow the certification instructions and complete the exam within the allotted time. If technical issues are encountered at any time during the exam, please email <a href="mailto:support@ine.com" >support@ine.com</a> for assistance.</p>
+<p><strong><a href="https://security.ine.com/certifications/ejpt-certification/#4642f5a2d275206b3" target="_blank" >4. Receive your results</a></strong></p>
+<p>Results are on an auto-graded system. This means results will be delivered within a few hours after completing the exam. The eJPT score report will show performance metrics in each section of the exam, allowing reflection on mastery of each exam objective. <strong>All passing score credentials will be valid for three years from the date they were awarded.</strong></p>
+<h2 id="worth-it">Worth it?</h2>
+<p>The eJPT certification stands out as a valuable option, especially for those at the beginning of their journey in the field of cybersecurity. It diverges from the traditional question-and-answer model of other certifications by offering a practical introduction to the world of penetration testing, covering essential concepts and providing hands-on experience. With an approach that prioritizes practical learning, this certification is an excellent gateway into the field of cybersecurity, equipping candidates with the knowledge and skills necessary to take their first steps in a pentesting career.</p>
+<p>If you are a professional with limited experience or no specific prior knowledge in cybersecurity, I firmly believe that the training offered for this certification is worth the effort. The training provides a solid foundation of essential knowledge and practical skills to get started in the field.</p>
+<p>Moreover, I highly recommend the eJPT for professionals working in related fields, such as infrastructure and networking, who are considering a transition to cybersecurity. It serves as an effective bridge, translating and expanding the skills already acquired into the cybersecurity domain.</p>
+<p>The practical approach of eJPT allows professionals to not only learn theoretically but also apply practical knowledge, thus becoming more prepared for the challenges and demands of the cybersecurity field. Therefore, for those looking to transition careers or start in the world of cybersecurity, the eJPT certification emerges as a strategic and valuable choice.</p>
+<p>I personally favor practical certifications like those from INE, OffSec, and TCM Security, so if I had to recommend an entry-level certification for Information Security, I would steer away from theoretical certifications, and eJPT would definitely be on my list of recommendations.</p>
+
+    <img src="/images/eJPTv2-Review/Untitled%205.png"  class="center"  style="border-radius: 10px ;"  />
+
+
+<p>If you already have significant experience and are seeking challenges that match your level of expertise, the eJPT may seem less challenging. As an entry-level certification, it is designed to establish foundational knowledge but may not offer much advancement for those who are already well-established in the field.</p>
+<p>For experienced professionals, I would recommend considering more advanced certifications like the eCPPT (Certified Professional Penetration Tester) or the PNPT (Professional Network Penetration Tester). These certifications provide a higher level of challenge and are in line with the needs of professionals looking to deepen and demonstrate advanced cybersecurity skills.</p>
+<p>In summary, while the eJPT certification is an excellent starting point for beginners or professionals from related fields transitioning into cybersecurity, experienced professionals might find more value in pursuing certifications that offer more complex and in-depth challenges.</p>
+
+    <img src="/images/eJPTv2-Review/Untitled%206.png"  class="center"  style="border-radius: 10px ;"  />
+
+
+]]></content>
+        </item>
+        
+        <item>
+            <title>eJPTv2 - Cheat Sheet</title>
+            <link>https://nmmorette.github.io/posts/2023/12/ejptv2-cheat-sheet/</link>
+            <pubDate>Mon, 11 Dec 2023 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2023/12/ejptv2-cheat-sheet/</guid>
+            <description>Disclaimer  This is merely a suggestion based on the tools I personally found useful during the test. I encourage you to take your own notes and tailor your preparation to best suit your needs for the exam
+ For additional details about the Exam, please refer to my exam Review post: eJPT Review
+Recommended Tools  Nmap Dirbuster nikto WPSCan CrackMapExec The Metasploit Framework SearchSploit Hydra  1. Assessment Methodologies  Ping Sweep fping -a -g 10.</description>
+            <content type="html"><![CDATA[
+    <img src="/images/eJPTv2-Review/cheatsheet.jpg"  class="center"  style="border-radius: 10px;"  />
+
+
+<h1 id="disclaimer">Disclaimer</h1>
+<blockquote>
+<p>This is merely a suggestion based on the tools I personally found useful during the test. I encourage you to take your own notes and tailor your preparation to best suit your needs for the exam</p>
+</blockquote>
+<p>For additional details about the Exam, please refer to my exam Review post: <a href="/posts/2023/12/review-ejptv2-junior-penetration-tester/" >eJPT Review</a></p>
+<h2 id="recommended-tools">Recommended Tools</h2>
+<ul>
+<li>Nmap</li>
+<li>Dirbuster</li>
+<li>nikto</li>
+<li>WPSCan</li>
+<li>CrackMapExec</li>
+<li>The Metasploit Framework</li>
+<li>SearchSploit</li>
+<li>Hydra</li>
+</ul>
+<h2 id="1-assessment-methodologies">1. Assessment Methodologies</h2>
+<hr>
+<h3 id="ping-sweep">Ping Sweep</h3>
+<pre tabindex="0"><code>fping -a -g 10.10.10.0/24 2&gt;/dev/null
+nmap -sn 10.10.10.0/24
+</code></pre><p>Simple Bash ping sweep:</p>
+<p><a href="https://github.com/nmmorette/bash-scripts/blob/main/ping_sweep.sh" target="_blank" ></a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#!/bin/bash</span>
+<span style="color:#75715e">###ping_sweep.sh</span>
+<span style="color:#75715e">###---------------------------------------------------------------</span>
+<span style="color:#75715e">### Objective: Ping all hosts in the network</span>
+<span style="color:#f92672">-----------------------------------------------------</span>
+
+<span style="color:#66d9ef">if</span> [ <span style="color:#e6db74">&#34;$1&#34;</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span> ]
+then
+	echo <span style="color:#e6db74">&#34;PING SWEEP&#34;</span>
+	echo <span style="color:#e6db74">&#34;Use mode : $0 REDE&#34;</span>
+	echo <span style="color:#e6db74">&#34;Example: $0 192.168.0&#34;</span>
+<span style="color:#66d9ef">else</span>
+	<span style="color:#66d9ef">for</span> host <span style="color:#f92672">in</span> {<span style="color:#ae81ff">1..254</span>};
+	do
+		ping <span style="color:#f92672">-</span>c <span style="color:#ae81ff">1</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#ae81ff">1.</span><span style="color:#960050;background-color:#1e0010">$</span>host <span style="color:#f92672">|</span> grep <span style="color:#e6db74">&#34;64 bytes&#34;</span> <span style="color:#f92672">|</span> cut <span style="color:#f92672">-</span>d <span style="color:#e6db74">&#34;:&#34;</span> <span style="color:#f92672">-</span>f <span style="color:#ae81ff">1</span> <span style="color:#f92672">|</span> cut <span style="color:#f92672">-</span>d <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">-</span>f <span style="color:#ae81ff">4</span>;
+	done
+fi
+</code></pre></div><h3 id="nmap---scans">Nmap - Scans</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">nmap <span style="color:#f92672">-</span>sS <span style="color:#f92672">-</span>A <span style="color:#ae81ff">10.10.10.10</span> 
+nmap <span style="color:#f92672">-</span>script vuln <span style="color:#f92672">-</span>p(open ports <span style="color:#f92672">from</span> the first scan)
+OS Detection: nmap <span style="color:#f92672">-</span>Pn <span style="color:#f92672">-</span>O <span style="color:#ae81ff">10.10.10.10</span>
+Quick Scan: nmap <span style="color:#f92672">-</span>sC <span style="color:#f92672">-</span>sV <span style="color:#ae81ff">10.10.10.10</span>
+Full Scan: nmap <span style="color:#f92672">-</span>sC <span style="color:#f92672">-</span>sV <span style="color:#f92672">-</span>p<span style="color:#f92672">-</span> <span style="color:#ae81ff">10.10.10.10</span>
+UDP Quick Scan: nmap <span style="color:#f92672">-</span>sU <span style="color:#f92672">-</span>sV <span style="color:#ae81ff">10.10.10.10</span>
+</code></pre></div><h3 id="smb-enumeration">SMB Enumeration</h3>
+<hr>
+<h3 id="enum4linux">enum4linux</h3>
+<pre tabindex="0"><code>enum4linux -a &lt;ip&gt;      # Enumerating using enum4linux tool
+</code></pre><h3 id="smbclient">smbclient</h3>
+<pre tabindex="0"><code>smbclient -L //IP -N    # Checking for available shares
+smbclient //&lt;target IP&gt;/IPC$ -N     # Connecting to a share
+</code></pre><h3 id="smbmap">smbmap</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">smbmap <span style="color:#f92672">-</span>u guest <span style="color:#f92672">-</span>p <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">-</span>d <span style="color:#f92672">.</span> <span style="color:#f92672">-</span>H <span style="color:#f92672">&lt;</span>TARGET_IP<span style="color:#f92672">&gt;</span>
+
+smbmap <span style="color:#f92672">-</span>u <span style="color:#f92672">&lt;</span>USER<span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span>p <span style="color:#e6db74">&#39;&lt;PW&gt;&#39;</span> <span style="color:#f92672">-</span>d <span style="color:#f92672">.</span> <span style="color:#f92672">-</span>H <span style="color:#f92672">&lt;</span>TARGET_IP<span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e">## Run a command</span>
+smbmap <span style="color:#f92672">-</span>u <span style="color:#f92672">&lt;</span>USER<span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span>p <span style="color:#e6db74">&#39;&lt;PW&gt;&#39;</span> <span style="color:#f92672">-</span>H <span style="color:#f92672">&lt;</span>TARGET_IP<span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span>x <span style="color:#e6db74">&#39;ipconfig&#39;</span>
+<span style="color:#75715e">## List all drives</span>
+smbmap <span style="color:#f92672">-</span>u <span style="color:#f92672">&lt;</span>USER<span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span>p <span style="color:#e6db74">&#39;&lt;PW&gt;&#39;</span> <span style="color:#f92672">-</span>H <span style="color:#f92672">&lt;</span>TARGET_IP<span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span>L
+<span style="color:#75715e">## List dir content</span>
+smbmap <span style="color:#f92672">-</span>u <span style="color:#f92672">&lt;</span>USER<span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span>p <span style="color:#e6db74">&#39;&lt;PW&gt;&#39;</span> <span style="color:#f92672">-</span>H <span style="color:#f92672">&lt;</span>TARGET_IP<span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span>r <span style="color:#e6db74">&#39;C$&#39;</span>
+<span style="color:#75715e">## Upload a file</span>
+smbmap <span style="color:#f92672">-</span>u <span style="color:#f92672">&lt;</span>USER<span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span>p <span style="color:#e6db74">&#39;&lt;PW&gt;&#39;</span> <span style="color:#f92672">-</span>H <span style="color:#f92672">&lt;</span>TARGET_IP<span style="color:#f92672">&gt;</span> <span style="color:#f92672">--</span>upload <span style="color:#e6db74">&#39;/root/sample_backdoor&#39;</span> <span style="color:#e6db74">&#39;C$\sample_backdoor&#39;</span>
+<span style="color:#75715e">## Download a file</span>
+smbmap <span style="color:#f92672">-</span>u <span style="color:#f92672">&lt;</span>USER<span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span>p <span style="color:#e6db74">&#39;&lt;PW&gt;&#39;</span> <span style="color:#f92672">-</span>H <span style="color:#f92672">&lt;</span>TARGET_IP<span style="color:#f92672">&gt;</span> <span style="color:#f92672">--</span>download <span style="color:#e6db74">&#39;C$</span><span style="color:#ae81ff">\f</span><span style="color:#e6db74">lag.txt&#39;</span>
+</code></pre></div><h3 id="metasploit">Metasploit</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># METASPLOIT SMB</span>
+use auxiliary<span style="color:#f92672">/</span>scanner<span style="color:#f92672">/</span>smb<span style="color:#f92672">/</span>smb_version
+use auxiliary<span style="color:#f92672">/</span>scanner<span style="color:#f92672">/</span>smb<span style="color:#f92672">/</span>smb_enumusers
+use auxiliary<span style="color:#f92672">/</span>scanner<span style="color:#f92672">/</span>smb<span style="color:#f92672">/</span>smb_enumshares
+use auxiliary<span style="color:#f92672">/</span>scanner<span style="color:#f92672">/</span>smb<span style="color:#f92672">/</span>smb_login
+use auxiliary<span style="color:#f92672">/</span>scanner<span style="color:#f92672">/</span>smb<span style="color:#f92672">/</span>pipe_auditor
+</code></pre></div><h2 id="2-host--network-auditing">2. Host &amp; Network Auditing</h2>
+<hr>
+<h3 id="checking-routes">Checking Routes</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ip route    <span style="color:#75715e"># Checking defined routes in linux</span>
+route       <span style="color:#75715e"># Checking defined routes in linux</span>
+route print     <span style="color:#75715e"># Checking defined routes in windows</span>
+</code></pre></div><h3 id="adding-manual-routes">Adding Manual Routes</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ip route add <span style="color:#f92672">&lt;</span>subnet<span style="color:#f92672">&gt;</span> via <span style="color:#f92672">&lt;</span>gateway <span style="color:#f92672">or</span> router address<span style="color:#f92672">&gt;</span>
+</code></pre></div><h3 id="finding-mac-addresses">Finding Mac Addresses</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ipconfig <span style="color:#f92672">/</span>all       <span style="color:#75715e"># windows</span>
+ifconfig        <span style="color:#75715e"># *nix OSs</span>
+ip addr     <span style="color:#75715e"># linux</span>
+</code></pre></div><h3 id="checking-arp-cache">Checking ARP Cache</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">arp <span style="color:#f92672">-</span>a      <span style="color:#75715e"># Windows</span>
+arp     <span style="color:#75715e"># *nix OSs</span>
+ip neighbour        <span style="color:#75715e"># Linux</span>
+</code></pre></div><h3 id="checking-for-listening-ports-on-a-host">Checking for Listening Ports On a Host</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#Windows</span>
+netstat <span style="color:#f92672">-</span>ano      
+Get<span style="color:#f92672">-</span>NetTCPConnection <span style="color:#f92672">|</span> where {<span style="color:#960050;background-color:#1e0010">$</span>_<span style="color:#f92672">.</span>State <span style="color:#f92672">-</span>eq <span style="color:#e6db74">&#39;Listen&#39;</span>} 
+
+<span style="color:#75715e">#Linux</span>
+netstat <span style="color:#f92672">-</span>tunp      
+lsof <span style="color:#f92672">-</span>i <span style="color:#f92672">-</span>P <span style="color:#f92672">-</span>n <span style="color:#f92672">|</span> grep LISTEN
+ss <span style="color:#f92672">-</span>tuln 
+</code></pre></div><h2 id="3-host--network-penetration-testing">3. Host &amp; Network Penetration Testing</h2>
+<hr>
+<p>Use the information from the 1 and 2  phases to find a vulnerable threat vector.</p>
+<p>Below are some helpful Vulnerability assessment resources:</p>
+<ul>
+<li>Searchsploit</li>
+<li>ExploitDB</li>
+<li>Msfconsole search command</li>
+<li>Google</li>
+<li>Nessus</li>
+</ul>
+<h3 id="reverse-shell">Reverse Shell</h3>
+<p>Excelente online Reverse Shell Generator</p>
+<p><a href="https://www.revshells.com/" target="_blank" >Online - Reverse Shell Generator</a></p>
+<h3 id="enconde-decode">Enconde-Decode</h3>
+<p><a href="https://gchq.github.io/CyberChef/" target="_blank" >CyberChef</a></p>
+<h3 id="metasploit-basic-commands">Metasploit Basic Commands</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">search x
+use x
+info
+show options, show advanced options
+SET X (e<span style="color:#f92672">.</span>g<span style="color:#f92672">.</span> set RHOST <span style="color:#ae81ff">10.10.10.10</span>, set payload x)
+</code></pre></div><h3 id="meterpreter">Meterpreter</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#Autoroute</span>
+meterpreter<span style="color:#f92672">&gt;</span> run autoroute <span style="color:#f92672">-</span>s <span style="color:#f92672">&lt;</span>subnet<span style="color:#f92672">&gt;</span>
+meterpreter <span style="color:#f92672">&gt;</span> run autoroute <span style="color:#f92672">-</span>p      <span style="color:#75715e"># show active route table</span>
+
+<span style="color:#75715e">#Basic Commands</span>
+
+background
+sessions <span style="color:#f92672">-</span>l
+sessions <span style="color:#f92672">-</span>i <span style="color:#ae81ff">1</span>
+sysinfo, ifconfig, route, getuid
+getsystem (privesc)
+bypassuac
+download x <span style="color:#f92672">/</span>root<span style="color:#f92672">/</span>
+upload x C:\\Windows
+shell
+use post<span style="color:#f92672">/</span>windows<span style="color:#f92672">/</span>gather<span style="color:#f92672">/</span>hashdump
+</code></pre></div><h3 id="hydra">Hydra</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">hydra <span style="color:#f92672">-</span>U ftp        <span style="color:#75715e"># hydra uses module for each service to attack. To get information about a module this command can be used</span>
+hydra <span style="color:#f92672">-</span>L users<span style="color:#f92672">.</span>txt <span style="color:#f92672">-</span>P <span style="color:#66d9ef">pass</span><span style="color:#f92672">.</span>txt <span style="color:#f92672">&lt;</span>service:<span style="color:#f92672">//</span>server<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>options<span style="color:#f92672">&gt;</span>
+hydra <span style="color:#f92672">-</span>l admin <span style="color:#f92672">-</span>P <span style="color:#66d9ef">pass</span><span style="color:#f92672">.</span>txt <span style="color:#f92672">-</span>f ftp:<span style="color:#f92672">//</span><span style="color:#ae81ff">10.10.10.10</span>        <span style="color:#75715e"># Stop attacking on finding first successful hit for user admin</span>
+hydra  <span style="color:#f92672">-</span>L users<span style="color:#f92672">.</span>txt <span style="color:#f92672">-</span>P passwords<span style="color:#f92672">.</span>txt <span style="color:#f92672">&lt;</span>IP<span style="color:#f92672">&gt;</span> http<span style="color:#f92672">-</span>post<span style="color:#f92672">-</span>form <span style="color:#e6db74">&#34;/login.php:user=^USER^&amp;pass=^PASS^:Incorrect credentials&#34;</span> <span style="color:#f92672">-</span>f <span style="color:#f92672">-</span>V    <span style="color:#75715e"># Attacking http post form</span>
+</code></pre></div><h3 id="john-the-ripper">John-The-Ripper</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">john <span style="color:#f92672">--</span>list<span style="color:#f92672">=</span>formats
+john <span style="color:#f92672">-</span>incremental <span style="color:#f92672">-</span>users:<span style="color:#f92672">&lt;</span>users list<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>file to crack<span style="color:#f92672">&gt;</span>       <span style="color:#75715e"># if you want to crack only certain users from the password database such as /etc/shadow file</span>
+john <span style="color:#f92672">--</span>show crackme     <span style="color:#75715e"># Check cracked password after completion of cracking session, where crackme is the password database file</span>
+john <span style="color:#f92672">-</span>wordlist<span style="color:#f92672">=&lt;</span>wordlist<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>file to crack<span style="color:#f92672">&gt;</span>
+john <span style="color:#f92672">-</span>wordlist<span style="color:#f92672">=&lt;</span>wordlist<span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span>rules <span style="color:#f92672">&lt;</span>file to crack<span style="color:#f92672">&gt;</span>        <span style="color:#75715e"># rules are used for cracking mangling words such as for cat mangling words could be c@t,caT,CAT,CaT</span>
+</code></pre></div><h2 id="4-web-application-penetration-testing">4. Web Application Penetration Testing</h2>
+<h3 id="information-gathering">Information Gathering</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">wappanalyzer
+whatweb
+nikto <span style="color:#f92672">-</span>h
+whatweb <span style="color:#f92672">&lt;</span>HOST<span style="color:#f92672">&gt;</span>
+whois <span style="color:#f92672">&lt;</span>HOST<span style="color:#f92672">&gt;</span>
+whois <span style="color:#f92672">&lt;</span>IP<span style="color:#f92672">&gt;</span>
+dnsrecon <span style="color:#f92672">-</span>d <span style="color:#f92672">&lt;</span>HOST<span style="color:#f92672">&gt;</span>
+</code></pre></div><h3 id="banner-grabbing">Banner Grabbing</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">**</span>nc <span style="color:#f92672">-</span>v <span style="color:#ae81ff">10.10.10.10</span> port<span style="color:#f92672">**</span>
+<span style="color:#f92672">**</span>HEAD <span style="color:#f92672">/</span> HTTP<span style="color:#f92672">/</span><span style="color:#ae81ff">1.0</span><span style="color:#f92672">**</span>
+</code></pre></div><h3 id="openssl-for-https-services">OpenSSL for HTTPS services</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">**</span>openssl s_client <span style="color:#f92672">-</span>connect <span style="color:#ae81ff">10.10.10.10</span>:<span style="color:#ae81ff">443</span><span style="color:#f92672">**</span>, <span style="color:#f92672">**</span>HEAD <span style="color:#f92672">/</span> HTTP<span style="color:#f92672">/</span><span style="color:#ae81ff">1.0</span><span style="color:#f92672">**</span>
+</code></pre></div><h3 id="httprint">Httprint</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">**</span>httprint <span style="color:#f92672">-</span>P0 <span style="color:#f92672">-</span>h <span style="color:#ae81ff">10.10.10.10</span> <span style="color:#f92672">-</span>s <span style="color:#f92672">/</span>path<span style="color:#f92672">/</span>to<span style="color:#f92672">/</span>signaturefile<span style="color:#f92672">.</span>txt<span style="color:#f92672">**</span>
+</code></pre></div><h3 id="http-verbs">HTTP Verbs</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">GET, POST, HEAD, PUT, DELETE, OPTIONS
+
+</code></pre></div><p>Use the OPTIONS to check if other verbs are available:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">nc <span style="color:#ae81ff">10.10.10.10</span> <span style="color:#ae81ff">80</span>
+OPTIONS <span style="color:#f92672">/</span> HTPP<span style="color:#f92672">/</span><span style="color:#ae81ff">1.0</span>
+</code></pre></div><p>To upload a PHP shell, HTTP verbs can be utilized. First, determine the content length, then employ the PUT method for uploading the shell. It&rsquo;s essential to include the payload size in the PUT command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">wc <span style="color:#f92672">-</span>m shell<span style="color:#f92672">.</span>php
+x shell<span style="color:#f92672">.</span>php
+
+PUT <span style="color:#f92672">/</span>shell<span style="color:#f92672">.</span>php
+Content<span style="color:#f92672">-</span>type: text<span style="color:#f92672">/</span>html
+Content<span style="color:#f92672">-</span>length: y
+</code></pre></div><h3 id="directory-and-file-scanning">Directory and File Scanning</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">**</span>dirsearch<span style="color:#f92672">.</span>py <span style="color:#f92672">-</span>u http:<span style="color:#f92672">//</span><span style="color:#ae81ff">10.10.10.10</span> <span style="color:#f92672">-</span>e <span style="color:#f92672">***</span>
+<span style="color:#f92672">**</span>gobuster <span style="color:#f92672">-</span>u <span style="color:#ae81ff">10.10.10.10</span> <span style="color:#f92672">-</span>w <span style="color:#f92672">/</span>path<span style="color:#f92672">/</span>to<span style="color:#f92672">/</span>wordlist<span style="color:#f92672">.</span>txt
+ffuf<span style="color:#f92672">**</span> <span style="color:#f92672">-</span>w <span style="color:#f92672">**/</span>path<span style="color:#f92672">/</span>to<span style="color:#f92672">/</span>wordlist<span style="color:#f92672">.</span>txt<span style="color:#f92672">**</span>:FUZZ <span style="color:#f92672">-</span>u http:<span style="color:#f92672">//</span>www<span style="color:#f92672">.</span>evil<span style="color:#f92672">.</span>com<span style="color:#f92672">/</span>FUZZ
+dirb http:<span style="color:#f92672">//&lt;</span>IP<span style="color:#f92672">&gt;/</span>
+<span style="color:#f92672">**</span>dirbyster<span style="color:#f92672">&amp;**</span> 
+
+</code></pre></div>]]></content>
+        </item>
         
         <item>
             <title>The Essential Nmap Cheat Sheet for Quick Reference</title>
@@ -135,7 +515,7 @@ In my view, professionals with experience in networking or cybersecurity will fi
 <h2 id="certification-cost"><strong>Certification Cost</strong></h2>
 <p>The CNSP typically costs £250, but there may be discounts available.</p>
 <p><img src="/images/CNSP/Untitled.png" alt="Untitled"></p>
-<p><a href="https://secops.group/pentesting-exams/certified-network-security-practitioner/" title="Buy Here">Buy Here</a></p>
+<p><a href="https://secops.group/pentesting-exams/certified-network-security-practitioner/" title="Buy Here" target="_blank" >Buy Here</a></p>
 <h2 id="passing-criteria"><strong>Passing Criteria</strong></h2>
 <p>Success in the CNSP exam is tiered:</p>
 <ul>
@@ -153,80 +533,80 @@ In my view, professionals with experience in networking or cybersecurity will fi
 <ol>
 <li><strong>TCP/IP, OSI Layer, IPv4, and IPv6</strong>
 <ul>
-<li><strong><a href="https://www.netacad.com/">Cisco Networking Academy</a></strong>: Offers courses and resources on networking basics, including TCP/IP and OSI models.</li>
-<li><strong><a href="https://www.ipv6.com/">IPv6.com</a></strong>: Dedicated to IPv6 education, offering articles and tutorials.</li>
+<li><strong><a href="https://www.netacad.com/" target="_blank" >Cisco Networking Academy</a></strong>: Offers courses and resources on networking basics, including TCP/IP and OSI models.</li>
+<li><strong><a href="https://www.ipv6.com/" target="_blank" >IPv6.com</a></strong>: Dedicated to IPv6 education, offering articles and tutorials.</li>
 </ul>
 </li>
 <li><strong>Networking Hardware (Routers, Switches, Hubs)</strong>
 <ul>
-<li><strong><a href="https://networklessons.com/">NetworkLessons.com</a></strong>: Provides easy-to-understand lessons on networking hardware and concepts.</li>
-<li><strong><a href="https://www.practicalnetworking.net/">Practical Networking</a></strong>: Offers tutorials focused on practical aspects of networking devices.</li>
+<li><strong><a href="https://networklessons.com/" target="_blank" >NetworkLessons.com</a></strong>: Provides easy-to-understand lessons on networking hardware and concepts.</li>
+<li><strong><a href="https://www.practicalnetworking.net/" target="_blank" >Practical Networking</a></strong>: Offers tutorials focused on practical aspects of networking devices.</li>
 </ul>
 </li>
 <li><strong>Network Discovery and Mapping Protocols</strong>
 <ul>
-<li><strong><a href="https://www.wiresharktraining.com/">Wireshark University</a></strong>: Learn about network protocol analysis and how to use Wireshark for network discovery.</li>
+<li><strong><a href="https://www.wiresharktraining.com/" target="_blank" >Wireshark University</a></strong>: Learn about network protocol analysis and how to use Wireshark for network discovery.</li>
 </ul>
 </li>
 <li><strong>Network Architectures and Target Identification</strong>
 <ul>
-<li><strong><a href="https://www.computernetworkingnotes.com/">ComputerNetworkingNotes</a></strong>: Covers various network architecture models and concepts.</li>
+<li><strong><a href="https://www.computernetworkingnotes.com/" target="_blank" >ComputerNetworkingNotes</a></strong>: Covers various network architecture models and concepts.</li>
 </ul>
 </li>
 <li><strong>Network Scanning and Fingerprinting</strong>
 <ul>
-<li><strong><a href="https://nmap.org/">Nmap.org</a></strong>: The official site for Nmap, a tool for network scanning and security auditing.</li>
+<li><strong><a href="https://nmap.org/" target="_blank" >Nmap.org</a></strong>: The official site for Nmap, a tool for network scanning and security auditing.</li>
 </ul>
 </li>
 <li><strong>Cryptography</strong>
 <ul>
-<li><strong><a href="https://www.crypto101.io/">Crypto101.io</a></strong>: A free introductory book on cryptography.</li>
-<li><strong><a href="http://www.crypto-textbook.com/">Cryptography and Network Security</a></strong>: Textbook site with additional resources and lectures.</li>
+<li><strong><a href="https://www.crypto101.io/" target="_blank" >Crypto101.io</a></strong>: A free introductory book on cryptography.</li>
+<li><strong><a href="http://www.crypto-textbook.com/" target="_blank" >Cryptography and Network Security</a></strong>: Textbook site with additional resources and lectures.</li>
 </ul>
 </li>
 <li><strong>Active Directory, Linux, and Windows Security Basics</strong>
 <ul>
-<li><strong><a href="https://docs.microsoft.com/en-us/learn/">Microsoft Learn</a></strong>: Offers courses on Windows and Active Directory security.</li>
-<li><strong><a href="https://www.linuxtopia.org/online_books/linux_beginner_books/linux_security/index.html">Linux Security for Beginners</a></strong>: A guide for Linux security basics.</li>
+<li><strong><a href="https://docs.microsoft.com/en-us/learn/" target="_blank" >Microsoft Learn</a></strong>: Offers courses on Windows and Active Directory security.</li>
+<li><strong><a href="https://www.linuxtopia.org/online_books/linux_beginner_books/linux_security/index.html" target="_blank" >Linux Security for Beginners</a></strong>: A guide for Linux security basics.</li>
 </ul>
 </li>
 <li><strong>Vulnerabilities in Windows Services</strong>
 <ul>
-<li><strong><a href="https://cve.mitre.org/">CVE Mitre</a></strong>: Database of publicly known cybersecurity vulnerabilities, including those affecting Windows services.</li>
-<li><a href="https://book.hacktricks.xyz/windows-hardening/checklist-windows-privilege-escalation">HackTricks - Windows Privilege Escalation</a>:  Checklist with local Windows privesc</li>
+<li><strong><a href="https://cve.mitre.org/" target="_blank" >CVE Mitre</a></strong>: Database of publicly known cybersecurity vulnerabilities, including those affecting Windows services.</li>
+<li><a href="https://book.hacktricks.xyz/windows-hardening/checklist-windows-privilege-escalation" target="_blank" >HackTricks - Windows Privilege Escalation</a>:  Checklist with local Windows privesc</li>
 </ul>
 </li>
 <li><strong>Testing Web Servers and Frameworks</strong>
 <ul>
-<li><strong><a href="https://www.owasp.org/">OWASP</a></strong>: Resources and guidelines for secure web application development and testing.</li>
+<li><strong><a href="https://www.owasp.org/" target="_blank" >OWASP</a></strong>: Resources and guidelines for secure web application development and testing.</li>
 </ul>
 </li>
 <li><strong>Basic Malware Analysis and Social Engineering</strong>
 <ul>
-<li><strong><a href="http://fumalwareanalysis.blogspot.com/p/malware-analysis-tutorials-reverse.html">Malware Analysis Tutorials</a></strong>: A blog with tutorials on malware analysis.</li>
-<li><strong><a href="https://www.social-engineer.org/">Social-Engineer.org</a></strong>: Information and resources on the art of social engineering.</li>
+<li><strong><a href="http://fumalwareanalysis.blogspot.com/p/malware-analysis-tutorials-reverse.html" target="_blank" >Malware Analysis Tutorials</a></strong>: A blog with tutorials on malware analysis.</li>
+<li><strong><a href="https://www.social-engineer.org/" target="_blank" >Social-Engineer.org</a></strong>: Information and resources on the art of social engineering.</li>
 </ul>
 </li>
 <li><strong>Network Security Tools and Frameworks (Nmap, Wireshark, etc.)</strong>
 <ul>
-<li><strong><a href="https://nmap.org/">Nmap.org</a></strong>: As mentioned earlier, for Nmap.</li>
-<li><strong><a href="https://www.wiresharktraining.com/">Wireshark University</a></strong>: For Wireshark tutorials.</li>
+<li><strong><a href="https://nmap.org/" target="_blank" >Nmap.org</a></strong>: As mentioned earlier, for Nmap.</li>
+<li><strong><a href="https://www.wiresharktraining.com/" target="_blank" >Wireshark University</a></strong>: For Wireshark tutorials.</li>
 </ul>
 </li>
 <li><strong>Open-Source Intelligence Gathering (OSINT)</strong>
 <ul>
-<li><strong><a href="https://osintframework.com/">OSINT Framework</a></strong>: A framework focused on gathering information from free tools or resources.</li>
+<li><strong><a href="https://osintframework.com/" target="_blank" >OSINT Framework</a></strong>: A framework focused on gathering information from free tools or resources.</li>
 </ul>
 </li>
 <li><strong>Database and TLS Security Basics</strong>
 <ul>
-<li><strong><a href="https://sqlzoo.net/">SQLZoo</a></strong>: Interactive SQL tutorials, good for understanding database basics.</li>
-<li><strong><a href="https://letsencrypt.org/docs/">Let&rsquo;s Encrypt</a></strong>: Information on TLS/SSL and how it secures websites.</li>
+<li><strong><a href="https://sqlzoo.net/" target="_blank" >SQLZoo</a></strong>: Interactive SQL tutorials, good for understanding database basics.</li>
+<li><strong><a href="https://letsencrypt.org/docs/" target="_blank" >Let&rsquo;s Encrypt</a></strong>: Information on TLS/SSL and how it secures websites.</li>
 </ul>
 </li>
 <li><strong>Password Storage</strong>
 <ul>
-<li><strong><a href="https://owasp.org/www-project-cheat-sheets/cheatsheets/Password_Storage_Cheat_Sheet.html">OWASP Password Storage Cheat Sheet</a></strong>: Best practices for password storage.</li>
+<li><strong><a href="https://owasp.org/www-project-cheat-sheets/cheatsheets/Password_Storage_Cheat_Sheet.html" target="_blank" >OWASP Password Storage Cheat Sheet</a></strong>: Best practices for password storage.</li>
 </ul>
 </li>
 </ol>
@@ -254,7 +634,7 @@ Enumeration nmap Initial enumeration with nmap
 nmap 10.10.88.1 Starting Nmap 7.94SVN ( https://nmap.org ) at 2023-11-21 05:03 PST Nmap scan report for 10.10.88.1 Host is up (0.32s latency). Not shown: 996 closed tcp ports (conn-refused) PORT STATE SERVICE 1/tcp filtered tcpmux 22/tcp open ssh 80/tcp open http 2200/tcp filtered ici Nmap done: 1 IP address (1 host up) scanned in 27.</description>
             <content type="html"><![CDATA[<h1 id="rootme">RootMe</h1>
 <p>A ctf for beginners, can you root me?</p>
-<p><a href="https://tryhackme.com/room/rrootme">https://tryhackme.com/room/rrootme</a></p>
+<p><a href="https://tryhackme.com/room/rrootme" target="_blank" >https://tryhackme.com/room/rrootme</a></p>
 <h2 id="enumeration">Enumeration</h2>
 <h3 id="nmap">nmap</h3>
 <p>Initial enumeration with nmap</p>
@@ -314,7 +694,7 @@ nmap 10.10.88.1 Starting Nmap 7.94SVN ( https://nmap.org ) at 2023-11-21 05:03 P
 
 
 <p>I used the PHP-reverse-shell from pentestmonkey:</p>
-<p><a href="https://pentestmonkey.net/tools/web-shells/php-reverse-shell">php-reverse-shell</a></p>
+<p><a href="https://pentestmonkey.net/tools/web-shells/php-reverse-shell" target="_blank" >php-reverse-shell</a></p>
 <p>When the usual search in common folders didn&rsquo;t yield the flag, I resorted to using the <strong><code>find</code></strong> command to search for the <strong><code>user.txt</code></strong> file. This approach is often necessary in capture the flag (CTF) challenges or penetration testing scenarios when the flag, a text file containing a specific string used for scoring or verification purposes, isn&rsquo;t located in the standard directories.</p>
 <p>Executing a command like <strong><code>find / -type f -name user.txt</code></strong> allowed me to scan the entire file system for any file named <strong><code>user.txt</code></strong>. This method is thorough and ensures that no directory is overlooked, but it can be time-consuming and may require sifting through a lot of data. Nonetheless, it&rsquo;s an effective technique when the location of a target file is unknown or hidden in an unconventional location.</p>
 
@@ -357,7 +737,7 @@ nmap 10.10.11.227 Starting Nmap 7.94 ( https://nmap.org ) at 2023-10-17 18:52 ED
 
 
 <p>​12<!-- raw HTML omitted -->th<!-- raw HTML omitted --> Aug 2023</p>
-<p>Machine Author(s): <strong><a href="https://app.hackthebox.com/users/8930">knightmare</a></strong></p>
+<p>Machine Author(s): <strong><a href="https://app.hackthebox.com/users/8930" target="_blank" >knightmare</a></strong></p>
 <h2 id="enumeration">Enumeration</h2>
 <p>Initial <code>nmap</code> scan:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">nmap</span> <span style="color:#ae81ff">10.10.11.227</span>
@@ -428,7 +808,7 @@ nmap 10.10.11.227 Starting Nmap 7.94 ( https://nmap.org ) at 2023-10-17 18:52 ED
 <p>But it took too long, so I decided to explore another approach.</p>
 <p><img src="/images/keeper/Untitled%2011.png" alt="Untitled"></p>
 <p>While searching on Google for KeePass vulnerabilities, I came across <strong>CVE-2023-32784</strong>, which allows for dumping the master password from Keepass .dmp files.</p>
-<p><a href="https://github.com/CMEPW/keepass-dump-masterkey">https://github.com/CMEPW/keepass-dump-masterkey</a></p>
+<p><a href="https://github.com/CMEPW/keepass-dump-masterkey" target="_blank" >https://github.com/CMEPW/keepass-dump-masterkey</a></p>
 <p><img src="/images/keeper/Untitled%2012.png" alt="Untitled"></p>
 <p>I couldn&rsquo;t dump the entire password; some characters were missing. But a quick search on Google revealed the reason for the error: the password contains special characters.</p>
 <p><img src="/images/keeper/Untitled%2013.png" alt="Untitled"></p>
@@ -618,7 +998,7 @@ Com o Powershell aberto digite:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">dism.exe /online /enable-feature /featurename<span style="color:#960050;background-color:#1e0010">:</span>VirtualMachinePlatform /all /norestart
 </code></pre></div><h2 id="3---download-do-pacote-linux-kernel-update">3 - Download do pacote Linux Kernel update</h2>
 <p>Download da última versão:</p>
-<p>• <a href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">WSL2 Linux kernel update package for x64 machines</a></p>
+<p>• <a href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi" target="_blank" >WSL2 Linux kernel update package for x64 machines</a></p>
 <p>Após instalar o pacote de atualização siga para o próximo passo.</p>
 <h2 id="4---configure-o-wsl-2-como-padrão">4 - Configure o WSL 2 como padrão</h2>
 <p>Com o PowerShell aberto rode o comando abaixo para configurar o WSL 2 como o serviço padrão:</p>
@@ -626,27 +1006,27 @@ Com o Powershell aberto digite:</p>
 </code></pre></div><h2 id="5---download-e-instalação-do-linux">5 - Download e Instalação do Linux</h2>
 <p>Aqui é possível encontrar os links de download dos pacotes fora da Windows Store:</p>
 <ul>
-<li><a href="https://aka.ms/wslubuntu">Ubuntu</a></li>
-<li><a href="https://aka.ms/wslubuntu2204">Ubuntu 22.04 LTS</a></li>
-<li><a href="https://aka.ms/wslubuntu2004">Ubuntu 20.04</a></li>
-<li><a href="https://aka.ms/wslubuntu2004arm">Ubuntu 20.04 ARM</a></li>
-<li><a href="https://aka.ms/wsl-ubuntu-1804">Ubuntu 18.04</a></li>
-<li><a href="https://aka.ms/wsl-ubuntu-1804-arm">Ubuntu 18.04 ARM</a></li>
-<li><a href="https://aka.ms/wsl-ubuntu-1604">Ubuntu 16.04</a></li>
-<li><a href="https://aka.ms/wsl-debian-gnulinux">Debian GNU/Linux</a></li>
-<li><a href="https://aka.ms/wsl-kali-linux-new">Kali Linux</a></li>
-<li><a href="https://aka.ms/wsl-sles-12">SUSE Linux Enterprise Server 12</a></li>
-<li><a href="https://aka.ms/wsl-SUSELinuxEnterpriseServer15SP2">SUSE Linux Enterprise Server 15 SP2</a></li>
-<li><a href="https://aka.ms/wsl-SUSELinuxEnterpriseServer15SP3">SUSE Linux Enterprise Server 15 SP3</a></li>
-<li><a href="https://aka.ms/wsl-opensuse-tumbleweed">openSUSE Tumbleweed</a></li>
-<li><a href="https://aka.ms/wsl-opensuseleap15-3">openSUSE Leap 15.3</a></li>
-<li><a href="https://aka.ms/wsl-opensuseleap15-2">openSUSE Leap 15.2</a></li>
-<li><a href="https://aka.ms/wsl-oraclelinux-8-5">Oracle Linux 8.5</a></li>
-<li><a href="https://aka.ms/wsl-oraclelinux-7-9">Oracle Linux 7.9</a></li>
-<li><a href="https://github.com/WhitewaterFoundry/WSLFedoraRemix/releases/">Fedora Remix for WSL</a></li>
+<li><a href="https://aka.ms/wslubuntu" target="_blank" >Ubuntu</a></li>
+<li><a href="https://aka.ms/wslubuntu2204" target="_blank" >Ubuntu 22.04 LTS</a></li>
+<li><a href="https://aka.ms/wslubuntu2004" target="_blank" >Ubuntu 20.04</a></li>
+<li><a href="https://aka.ms/wslubuntu2004arm" target="_blank" >Ubuntu 20.04 ARM</a></li>
+<li><a href="https://aka.ms/wsl-ubuntu-1804" target="_blank" >Ubuntu 18.04</a></li>
+<li><a href="https://aka.ms/wsl-ubuntu-1804-arm" target="_blank" >Ubuntu 18.04 ARM</a></li>
+<li><a href="https://aka.ms/wsl-ubuntu-1604" target="_blank" >Ubuntu 16.04</a></li>
+<li><a href="https://aka.ms/wsl-debian-gnulinux" target="_blank" >Debian GNU/Linux</a></li>
+<li><a href="https://aka.ms/wsl-kali-linux-new" target="_blank" >Kali Linux</a></li>
+<li><a href="https://aka.ms/wsl-sles-12" target="_blank" >SUSE Linux Enterprise Server 12</a></li>
+<li><a href="https://aka.ms/wsl-SUSELinuxEnterpriseServer15SP2" target="_blank" >SUSE Linux Enterprise Server 15 SP2</a></li>
+<li><a href="https://aka.ms/wsl-SUSELinuxEnterpriseServer15SP3" target="_blank" >SUSE Linux Enterprise Server 15 SP3</a></li>
+<li><a href="https://aka.ms/wsl-opensuse-tumbleweed" target="_blank" >openSUSE Tumbleweed</a></li>
+<li><a href="https://aka.ms/wsl-opensuseleap15-3" target="_blank" >openSUSE Leap 15.3</a></li>
+<li><a href="https://aka.ms/wsl-opensuseleap15-2" target="_blank" >openSUSE Leap 15.2</a></li>
+<li><a href="https://aka.ms/wsl-oraclelinux-8-5" target="_blank" >Oracle Linux 8.5</a></li>
+<li><a href="https://aka.ms/wsl-oraclelinux-7-9" target="_blank" >Oracle Linux 7.9</a></li>
+<li><a href="https://github.com/WhitewaterFoundry/WSLFedoraRemix/releases/" target="_blank" >Fedora Remix for WSL</a></li>
 </ul>
 <p>Escolha a versão que deseja, faça o download e salve o arquivo com extensão <code>.appx</code></p>
-<p>Se você preferir, você também pode fazer o download da distribuição via linha de comando utilizando Powershell com <a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest">Invoke-WebRequest</a>. Nesse caso, download do Ubuntu 20.04:</p>
+<p>Se você preferir, você também pode fazer o download da distribuição via linha de comando utilizando Powershell com <a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest" target="_blank" >Invoke-WebRequest</a>. Nesse caso, download do Ubuntu 20.04:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Invoke-WebRequest -Uri https<span style="color:#960050;background-color:#1e0010">:</span>//aka.ms/wslubuntu2004 -OutFile Ubuntu.appx -UseBasicParsing
 </code></pre></div><p>Também é possível fazer o download via <code>curl.exe</code>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">curl.exe -L -o ubuntu-2004.appx https<span style="color:#960050;background-color:#1e0010">:</span>//aka.ms/wslubuntu2004
@@ -659,10 +1039,10 @@ Com o Powershell aberto digite:</p>
     <img src="/images/wsl/Untitled.png"  class="center"  style="border-radius: 10px;"  />
 
 
-<a href="https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=pt-br&amp;gl=br">Download do Windows Terminal</a></p>
+<a href="https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=pt-br&amp;gl=br" target="_blank" >Download do Windows Terminal</a></p>
 <h3 id="61---instalação-sem-windows-store">6.1 - Instalação sem Windows Store</h3>
 <p>Partindo do princípio que não temos acesso a Windows Store, o link acima não vai funcionar, portanto é preciso fazer a instalação manual.</p>
-<p>Faça o download do arquivo <code>.msixbundle</code> <a href="https://github.com/microsoft/terminal/releases">aqui</a>.</p>
+<p>Faça o download do arquivo <code>.msixbundle</code> <a href="https://github.com/microsoft/terminal/releases" target="_blank" >aqui</a>.</p>
 
     <img src="/images/wsl/Untitled%201.png"  class="center"  style="border-radius: 10px;"  />
 
@@ -754,7 +1134,7 @@ exiftool WindowsXP.jpg ExifTool Version Number : 12.65 File Name : WindowsXP.jpg
 <p><em>BSSID means the unique MAC Address of a WAP (Wireless Access Point). WAP is the device that works as a base for other devices to connect to it wirelessly. For example, in your home the phones and laptops are connected to the router wirelessly. This router is a WAP and the MAC Address this router has is BSSID. The name of the Wifi Network is called SSID.</em></p>
 </blockquote>
 <p>Now with the <strong>BSSID,</strong> I can use <code>[geowifi.py](http://geowifi.py)</code> search for a location:</p>
-<p><a href="https://github.com/GONZOsint/geowifi">https://github.com/GONZOsint/geowifi</a>
+<p><a href="https://github.com/GONZOsint/geowifi" target="_blank" >https://github.com/GONZOsint/geowifi</a>
 
     <img src="/images/OhSINT/Untitled%204.png"  class="center"  style="border-radius: 10px;"  />
 
@@ -767,7 +1147,7 @@ exiftool WindowsXP.jpg ExifTool Version Number : 12.65 File Name : WindowsXP.jpg
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">Q2</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">What</span> <span style="color:#a6e22e">city</span> <span style="color:#a6e22e">is</span> <span style="color:#66d9ef">this</span> <span style="color:#a6e22e">person</span> <span style="color:#66d9ef">in</span> <span style="color:#f92672">?</span>
 <span style="color:#a6e22e">Ans</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">London</span>
 </code></pre></div><p>Now we need to find the SSID of the WAP he connected, we could use <code>wigle.net</code></p>
-<p><a href="https://wigle.net/">WiGLE: Wireless Network Mapping</a></p>
+<p><a href="https://wigle.net/" target="_blank" >WiGLE: Wireless Network Mapping</a></p>
 <p>Just enter the approximate latitude and longitude of the region and the BSSID
 
     <img src="/images/OhSINT/Untitled%206.png"  class="center"  style="border-radius: 10px;"  />
@@ -1167,7 +1547,7 @@ Nmap <span style="color:#66d9ef">done</span>: <span style="color:#ae81ff">1</spa
 
 
 <h3 id="wordpress">WordPress</h3>
-<p>I utilized the tool <code>Wappalyzer</code> to analyze the webpage and discovered it&rsquo;s built with WordPress. By navigating through some default WordPress PHP pages, I successfully reached the login page at: <a href="http://office.paper/wp-login.php">http://office.paper/wp-login.php</a>.</p>
+<p>I utilized the tool <code>Wappalyzer</code> to analyze the webpage and discovered it&rsquo;s built with WordPress. By navigating through some default WordPress PHP pages, I successfully reached the login page at: <a href="http://office.paper/wp-login.php" target="_blank" >http://office.paper/wp-login.php</a>.</p>
 
     <img src="/images/htb/Paper/Untitled%202.png"  class="center"  style="border-radius: 10px;"  />
 
@@ -1193,7 +1573,7 @@ Nmap <span style="color:#66d9ef">done</span>: <span style="color:#ae81ff">1</spa
     <img src="/images/htb/Paper/Untitled%206.png"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>⚠️ SecretURL: <a href="http://chat.office.paper/register/8qozr226AhkCHZdyY">http://chat.office.paper/register/8qozr226AhkCHZdyY</a></p>
+<p>⚠️ SecretURL: <a href="http://chat.office.paper/register/8qozr226AhkCHZdyY" target="_blank" >http://chat.office.paper/register/8qozr226AhkCHZdyY</a></p>
 
     <img src="/images/htb/Paper/Untitled%207.png"  class="center"  style="border-radius: 10px;"  />
 
@@ -1353,7 +1733,7 @@ drwxr-xr-x <span style="color:#ae81ff">2</span> dwight dwight <span style="color
 
 </p>
 <h3 id="exploit">Exploit</h3>
-<p>Git Hub (<a href="https://github.com/secnigma/CVE-2021-3560-Polkit-Privilege-Esclation">https://github.com/secnigma/CVE-2021-3560-Polkit-Privilege-Esclation</a>)</p>
+<p>Git Hub (<a href="https://github.com/secnigma/CVE-2021-3560-Polkit-Privilege-Esclation" target="_blank" >https://github.com/secnigma/CVE-2021-3560-Polkit-Privilege-Esclation</a>)</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./exploit.sh -u<span style="color:#f92672">=</span>hacker -p<span style="color:#f92672">=</span>password -f<span style="color:#f92672">=</span>y
 </code></pre></div><p>I encountered an authentication error occasionally, so I executed the command approximately five times until it worked successfully.</p>
 <p>
@@ -1427,7 +1807,7 @@ Este exame foi desenvolvido para pessoas que estão iniciando no ambiente de sol
 </blockquote>
 
 <p>A prova possui 41 questões e é preciso ter 70% de acerto.</p>
-<p>A prova custa em torno de 60 dólares, porém procure participar de eventos da Microsoft como o <a href="https://www.microsoft.com/en-us/trainingdays">Microsoft Training Day </a> onde é possível ganhar vouchers para realizar a prova.</p>
+<p>A prova custa em torno de 60 dólares, porém procure participar de eventos da Microsoft como o <a href="https://www.microsoft.com/en-us/trainingdays" target="_blank" >Microsoft Training Day </a> onde é possível ganhar vouchers para realizar a prova.</p>
 
     <img src="/images/az-900/preco.png"  class="center"  style="border-radius: 10px;"  />
 
@@ -1445,12 +1825,12 @@ Um tipo de questão diferente nessa prova, no meu caso foram duas, é uma quest�
 <li>Descrever recursos de identidade, governança, privacidade e conformidade (20-25%)</li>
 <li>Descrever o administração de custos do Azure e Service Level Agreements (10-15%)</li>
 </ul>
-<p>O documento completo com a estrutura da prova pode ser encontrado <a href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3VwUY">aqui</a>.</p>
+<p>O documento completo com a estrutura da prova pode ser encontrado <a href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3VwUY" target="_blank" >aqui</a>.</p>
 <h2 id="preparação">Preparação</h2>
 <p>Na minha opinião existem duas formas de se preparar para essa prova: uma é com conteúdos gratuitos e outra com conteúdo pago.</p>
 <h3 id="conteúdo-gratuito">Conteúdo Gratuito</h3>
 <p>Na internet é possível encontrar diversas fontes de estudo gratuitas para essa prova.</p>
-<p>Eu recomendo o canal <a href="https://www.youtube.com/channel/UCg8OCdG1yeiSPFDyqQDxHnw">A guide to Cloud</a> além do conteúdo para az-900 ele possui outros vídeos para certificações da microsoft.</p>
+<p>Eu recomendo o canal <a href="https://www.youtube.com/channel/UCg8OCdG1yeiSPFDyqQDxHnw" target="_blank" >A guide to Cloud</a> além do conteúdo para az-900 ele possui outros vídeos para certificações da microsoft.</p>
 
     <img src="/images/az-900/guidetocloud.png"  class="center"  style="border-radius: 10px;"  />
 
@@ -1461,7 +1841,7 @@ Um tipo de questão diferente nessa prova, no meu caso foram duas, é uma quest�
 <iframe width="560" height="315" src="https://www.youtube.com/embed/UyaZWgkuQE8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-<p>Outra forma de preparação são os cursos gratuitos da <a href="https://www.linkedin.com/company/ka-solution/">KaSolution</a>, eles estão sempre promovendo cursos aos sábados. Completos para várias formações Microsoft.
+<p>Outra forma de preparação são os cursos gratuitos da <a href="https://www.linkedin.com/company/ka-solution/" target="_blank" >KaSolution</a>, eles estão sempre promovendo cursos aos sábados. Completos para várias formações Microsoft.
 Infelizmente para esse método você vai precisar contar com a sorte de abrirem uma turma gratuita. 
 Basta ficar de olho na rede social deles, o último AZ-900 foi no dia 28/08/2021.</p>
 
@@ -1474,9 +1854,9 @@ Basta ficar de olho na rede social deles, o último AZ-900 foi no dia 28/08/2021
 
 
 <h3 id="conteúdo-pago">Conteúdo Pago</h3>
-<p>Como recomendação de conteúdo pago eu deixo o curso da <a href="https://cursos.alura.com.br">Alura</a>, eu fiz a formação completa deles como uma revisão, já que eu tinha feito o curso gratuito da <a href="https://www.linkedin.com/company/ka-solution/">KaSolution</a>.</p>
-<p>No <a href="https://www.udemy.com">Udemy</a> também é possível encontrar muitos cursos de preparação para az-900 com valores acessíveis.</p>
-<p>Na <a href="https://www.kasolution.com.br/Home?pt=google">KaSolution</a> além dos cursos gratuitos é possível comprar diversas formações para preparação de certificações diversas da Microsoft.</p>
+<p>Como recomendação de conteúdo pago eu deixo o curso da <a href="https://cursos.alura.com.br" target="_blank" >Alura</a>, eu fiz a formação completa deles como uma revisão, já que eu tinha feito o curso gratuito da <a href="https://www.linkedin.com/company/ka-solution/" target="_blank" >KaSolution</a>.</p>
+<p>No <a href="https://www.udemy.com" target="_blank" >Udemy</a> também é possível encontrar muitos cursos de preparação para az-900 com valores acessíveis.</p>
+<p>Na <a href="https://www.kasolution.com.br/Home?pt=google" target="_blank" >KaSolution</a> além dos cursos gratuitos é possível comprar diversas formações para preparação de certificações diversas da Microsoft.</p>
 <p>Além disso é possível comprar o livro oficial da microsoft para preparação, infelizmente para essa prova eu não comprei, devido o valor elevado aqui no Brasil. Entretanto eu conheço os livros de outras certificações da microsoft que tirei e eles são bem completos e recomendo muito quando é possível encontrar com preços acessíveis.</p>
 
     <img src="/images/az-900/book.jpg"  class="center"  style="border-radius: 10px;"  />
@@ -1489,13 +1869,13 @@ Basta ficar de olho na rede social deles, o último AZ-900 foi no dia 28/08/2021
 
 
 <p>Esse eu realmente não indico a compra, nunca comprei devido o alto valor solicitado.</p>
-<p>Uma opção gratuita para testar seu conhecimento com questões é o site: <a href="https://www.itexams.com">IT Exams</a>, especificamente para o AZ-900 eles possuem um banco de dados com 244 questões.</p>
+<p>Uma opção gratuita para testar seu conhecimento com questões é o site: <a href="https://www.itexams.com" target="_blank" >IT Exams</a>, especificamente para o AZ-900 eles possuem um banco de dados com 244 questões.</p>
 
     <img src="/images/az-900/itexams.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Outra forma porém paga, é comprar simulados preparatórios no Udemy, existem vários na plataforma. 
-Eu recomendo esse <a href="https://www.udemy.com/course/az-900-5-practice-tests-on-ms-365-certification">aqui</a>. As questões refletem a dinâmica da prova, sendo uma ótima maneira de treinar.</p>
+Eu recomendo esse <a href="https://www.udemy.com/course/az-900-5-practice-tests-on-ms-365-certification" target="_blank" >aqui</a>. As questões refletem a dinâmica da prova, sendo uma ótima maneira de treinar.</p>
 
     <img src="/images/az-900/udemy.png"  class="center"  style="border-radius: 10px;"  />
 
@@ -1667,7 +2047,7 @@ Fail with exploit/unix/ftp/vsftpd_234_backdoor.</p>
     <img src="/images/htb/lame/exploit.png"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>The <a href="https://www.rapid7.com/db/modules/exploit/multi/samba/usermap_script/">exploit</a><code>username map script</code>  it&rsquo;s a good candidate for the exploitation.</p>
+<p>The <a href="https://www.rapid7.com/db/modules/exploit/multi/samba/usermap_script/" target="_blank" >exploit</a><code>username map script</code>  it&rsquo;s a good candidate for the exploitation.</p>
 <p>Using the <code>msfconsole</code> we need to set the <code>multi/samba/usermap_script</code> and set the LHOST and RHOST options:</p>
 
     <img src="/images/htb/lame/access.png"  class="center"  style="border-radius: 10px;"  />
@@ -1727,13 +2107,13 @@ No meu caso eu estudei por uma semana de forma mais intensiva e depois fiz a pro
 -Descrever os serviços e conceitos básicos do Microsoft 365 (30-35%)
 -Descrever a segurança, conformidade, privacidade e confiança no Microsoft 365 (30-35%)
 -Descrever os preços e suporte do Microsoft 365 (20-25%)</p>
-<p>O documento completo com a estrutura da prova pode ser encontrado <a href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3VwVw">aqui</a>.</p>
+<p>O documento completo com a estrutura da prova pode ser encontrado <a href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3VwVw" target="_blank" >aqui</a>.</p>
 <h2 id="preparação">Preparação</h2>
 <p>Na minha opinião existem duas formas de se preparar para essa prova: uma é com conteúdos gratuitos e outra com conteúdo pago.</p>
 <h3 id="conteúdo-gratuito">Conteúdo Gratuito</h3>
 <p>Na internet é possível encontrar diversas fontes de estudo gratuitas para essa prova, porém a maioria que encontrei foi no idioma em inglês.
 Porém se você tem um pouco de familiaridade com o idioma, é possível sim assistir os vídeos e até realizar a prova no idioma inglês, o conteúdo é bem técnico e se você já é um profissional da área de TI vai encontrar termos e expressões comuns utilizados no seu dia a dia.</p>
-<p>Eu recomendo o canal <a href="https://www.youtube.com/channel/UCg8OCdG1yeiSPFDyqQDxHnw">A guide to Cloud</a> além do conteúdo para MS-900 ele possui outros vídeos para certificações da microsoft.</p>
+<p>Eu recomendo o canal <a href="https://www.youtube.com/channel/UCg8OCdG1yeiSPFDyqQDxHnw" target="_blank" >A guide to Cloud</a> além do conteúdo para MS-900 ele possui outros vídeos para certificações da microsoft.</p>
 
     <img src="/images/ms-900/guidetocloud.png"  class="center"  style="border-radius: 10px;"  />
 
@@ -1749,20 +2129,20 @@ Porém se você tem um pouco de familiaridade com o idioma, é possível sim ass
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZtOo7prP4_M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 </p>
-<p>Outra forma de preparação são os cursos gratuitos da <a href="https://www.linkedin.com/company/ka-solution/">KaSolution</a>, eles estão sempre promovendo cursos aos sábados. Completos para várias formações Microsoft.
+<p>Outra forma de preparação são os cursos gratuitos da <a href="https://www.linkedin.com/company/ka-solution/" target="_blank" >KaSolution</a>, eles estão sempre promovendo cursos aos sábados. Completos para várias formações Microsoft.
 Infelizmente para esse método você vai precisar contar com a sorte de abrirem uma turma gratuita. 
 Basta ficar de olho na rede social deles, no último sábado dia 28/08/2021 eles promoveram um curso do AZ-900 por exemplo.</p>
 <h3 id="conteúdo-pago">Conteúdo Pago</h3>
-<p>Como recomendação de conteúdo pago eu deixo o curso da <a href="https://www.cbtnuggets.com/it-training/microsoft-365/certified-fundamentals">Cbtnugget</a>, foi o curso que eu fiz por completo para me preparar para essa certificação.</p>
+<p>Como recomendação de conteúdo pago eu deixo o curso da <a href="https://www.cbtnuggets.com/it-training/microsoft-365/certified-fundamentals" target="_blank" >Cbtnugget</a>, foi o curso que eu fiz por completo para me preparar para essa certificação.</p>
 
     <img src="/images/ms-900/cbt.png"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Um dos instrutores é o Chuck Keith o <a href="https://www.youtube.com/user/NetworkChuck">Network Chuck</a>, ele apresenta a parte inicial dos conceitos básicos. A <a href="https://www.linkedin.com/in/simonamillham/">Simona Millham</a> entra na parte do conteúdo da prova, apresentando todos os tópicos necessários para a prova.</p>
+<p>Um dos instrutores é o Chuck Keith o <a href="https://www.youtube.com/user/NetworkChuck" target="_blank" >Network Chuck</a>, ele apresenta a parte inicial dos conceitos básicos. A <a href="https://www.linkedin.com/in/simonamillham/" target="_blank" >Simona Millham</a> entra na parte do conteúdo da prova, apresentando todos os tópicos necessários para a prova.</p>
 <p>A plataforma tem um valor mensal um pouco alto para nossos padrões, porém você pode aproveitar os 7 dias gratuitos e testar a vasta gama de cursos que eles possuem. Sempre que tenho possibilidade de fazer um curso com eles eu faço devido a qualidade do conteúdo e metodologia.</p>
 <p>Além disso o curso possui diversas questões de exemplo para preparação e também explicações para as respostas.</p>
-<p>No <a href="https://www.udemy.com">Udemy</a> também é possível encontrar muitos cursos de preparação para MS-900 com valores acessíveis.</p>
-<p>Na <a href="https://www.kasolution.com.br/Home?pt=google">KaSolution</a> além dos cursos gratuitos é possível comprar diversas formações para preparação de certificações diversas da Microsoft.</p>
+<p>No <a href="https://www.udemy.com" target="_blank" >Udemy</a> também é possível encontrar muitos cursos de preparação para MS-900 com valores acessíveis.</p>
+<p>Na <a href="https://www.kasolution.com.br/Home?pt=google" target="_blank" >KaSolution</a> além dos cursos gratuitos é possível comprar diversas formações para preparação de certificações diversas da Microsoft.</p>
 <p>Além disso é possível comprar o livro oficial da microsoft para preparação, infelizmente para essa prova eu não comprei, devido o valor elevado aqui no Brasil. Entretanto eu conheço os livros de outras certificações da microsoft que tirei e eles são bem completos e recomendo muito quando é possível encontrar com preços acessíveis.</p>
 
     <img src="/images/ms-900/book.jpg"  class="center"  style="border-radius: 10px;"  />
@@ -1777,13 +2157,13 @@ Basta ficar de olho na rede social deles, no último sábado dia 28/08/2021 eles
 <p>Esse eu realmente não indico a compra, nunca comprei devido o alto valor solicitado. 
 Se você optou por estudar tanto com vídeos do Youtube, Cbtnuggets ou KaSolution durante as aulas você vai encontrar exemplos de questões para te ajudar em sua preparação.</p>
 <p>Lógico que somente estudar utilizando os simulados não é uma boa prática, já que você só estaria decorando questões e não adquirindo conhecimento.</p>
-<p>Uma opção gratuita para testar seu conhecimento com questões é o site: <a href="https://www.itexams.com">IT Exams</a>.</p>
+<p>Uma opção gratuita para testar seu conhecimento com questões é o site: <a href="https://www.itexams.com" target="_blank" >IT Exams</a>.</p>
 
     <img src="/images/ms-900/itexams.png"  class="center"  style="border-radius: 10px;"  />
 
 
 <p>Outra forma porém essa paga é comprando simulados preparatórios no Udemy, existem vários na plataforma. 
-Eu comprei esse <a href="https://www.udemy.com/course/ms-900-5-practice-tests-on-ms-365-certification">aqui</a>e as questões foram realmente boas para minha preparação.</p>
+Eu comprei esse <a href="https://www.udemy.com/course/ms-900-5-practice-tests-on-ms-365-certification" target="_blank" >aqui</a>e as questões foram realmente boas para minha preparação.</p>
 
     <img src="/images/ms-900/udemy.png"  class="center"  style="border-radius: 10px;"  />
 
@@ -1916,7 +2296,7 @@ So we need to find some way to privesc this host.</p>
     <img src="/images/tryhackme/bountyhacker/sudo.png"  class="center"  style="border-radius: 10px;"  />
 
 
-<p>Let’s check our best friend GTFOBIns by going to <a href="https://gtfobins.github.io">https://gtfobins.github.io</a></p>
+<p>Let’s check our best friend GTFOBIns by going to <a href="https://gtfobins.github.io" target="_blank" >https://gtfobins.github.io</a></p>
 
     <img src="/images/tryhackme/bountyhacker/tar.png"  class="center"  style="border-radius: 10px;"  />
 
@@ -2197,7 +2577,7 @@ We only need to execute the payload in the target and wait for connection into t
 
 
 <h2 id="privileged-user-access">Privileged user access</h2>
-<p>Now that we have the users' flag, we need to focus on the administrator flag. Maybe the flag is in the administrator’s folder, but our user don&rsquo;t have access. We need to privesc our shell. A very useful checklist to do that:  <a href="https://book.hacktricks.xyz/windows/checklist-windows-privilege-escalation">Hacktricks</a>.</p>
+<p>Now that we have the users' flag, we need to focus on the administrator flag. Maybe the flag is in the administrator’s folder, but our user don&rsquo;t have access. We need to privesc our shell. A very useful checklist to do that:  <a href="https://book.hacktricks.xyz/windows/checklist-windows-privilege-escalation" target="_blank" >Hacktricks</a>.</p>
 
     <img src="/images/htb/archetype/checklist.png"  class="center"  style="border-radius: 10px;"  />
 
@@ -2281,7 +2661,7 @@ Nmap gives this answer:
 <p>Nmap shows: HttpFileServer, google it!</p>
 <p><code>Rejetto HTTP File Server</code></p>
 <p><strong>What is the CVE number to exploit this file server?</strong></p>
-<p><a href="https://www.exploit-db.com/exploits/39161">https://www.exploit-db.com/exploits/39161</a></p>
+<p><a href="https://www.exploit-db.com/exploits/39161" target="_blank" >https://www.exploit-db.com/exploits/39161</a></p>
 <p><code>2014-6287</code></p>
 <p><strong>Use Metasploit to get an initial shell. What is the user flag?</strong></p>
 <p>Open the msfconsole and search for rejetto:</p>
@@ -2315,7 +2695,7 @@ Nmap gives this answer:
 "PowerUp aims to be a clearinghouse of common Windows privilege escalation vectors that rely on misconfigurations."
 </blockquote>
 
-<p>You can download the script <a href="https://github.com/PowerShellMafia/PowerSploit/blob/master/Privesc/PowerUp.ps1">here</a>. Now you can use the upload command in Metasploit to upload the script.</p>
+<p>You can download the script <a href="https://github.com/PowerShellMafia/PowerSploit/blob/master/Privesc/PowerUp.ps1" target="_blank" >here</a>. Now you can use the upload command in Metasploit to upload the script.</p>
 
     <img src="/images/steelmountain/powerup.png"  class="center"  style="border-radius: 8px;"  />
 
@@ -2456,7 +2836,7 @@ Room&amp;rsquo;s intro note:
 
 
 <h2 id="task-1-intro">Task 1. Intro</h2>
-<p>This is a write up for &ldquo;The Cod Caper&rdquo; <a href="https://tryhackme.com/room/thecodcaper">room</a> at Try Hack Me.</p>
+<p>This is a write up for &ldquo;The Cod Caper&rdquo; <a href="https://tryhackme.com/room/thecodcaper" target="_blank" >room</a> at Try Hack Me.</p>
 <p>Room&rsquo;s intro note:</p>
 
 
@@ -2477,7 +2857,7 @@ Hello there my name is Pingu. I've come here to put in a request to get my fish 
 <p>We found 2 open ports, just pay attention to the nmap results, all answers for the first task are there.</p>
 <h2 id="task-3-web-enumeration">Task 3. Web Enumeration</h2>
 <p>Let&rsquo;s search for files and directories.</p>
-<p>You may use <code>gobuster</code> for that, but I would particularly go with my bash script. You can download my script <a href="http:/https://github.com/nmmorette/bash-scripts/blob/25f02fa424136f0d23090072a773892e19c5c5b2/webrecon.sh/">here</a>
+<p>You may use <code>gobuster</code> for that, but I would particularly go with my bash script. You can download my script <a href="http:/https://github.com/nmmorette/bash-scripts/blob/25f02fa424136f0d23090072a773892e19c5c5b2/webrecon.sh/" target="_blank" >here</a>
 Edit the file with a wordlist of your preference. I suggest the big.txt from <code>dirb</code>.</p>
 <p>Execute the <code>.\webrecon.sh</code> script in the target:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  .<span style="color:#ae81ff">\w</span>ebrecon.sh TARGET_IP
@@ -2565,7 +2945,7 @@ LinEnum is a bash script that searches for possible ways to priv esc. It is incr
 </blockquote>
 
 
-<p>Let&rsquo;s copy the <a href="https://github.com/rebootuser/LinEnum">Linenum</a> scritp:</p>
+<p>Let&rsquo;s copy the <a href="https://github.com/rebootuser/LinEnum" target="_blank" >Linenum</a> scritp:</p>
 <pre tabindex="0"><code class="language-cli" data-lang="cli"> scp {path to linenum} {user}@{host}:{path}
 </code></pre><p>After that, run <code>linenum.sh</code></p>
 <p>Go to SUID files section and find the answer to task 6 only question.</p>
@@ -2639,7 +3019,7 @@ We print 44 random characters(in this case A) and then our memory address in lit
 <li>The hash that we found in last task </li>
 <li>A little bit of patience</li>
 
-<p>Luckily hashcat supports cracking linux password hashes. You can find a list of hashcat modes <a href="https://hashcat.net/wiki/doku.php?id=example_hashes">here</a> and <a href="https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt">rockyou</a>(a popular wordlist) here (if you don&rsquo;t already have it on your system yet)</p>
+<p>Luckily hashcat supports cracking linux password hashes. You can find a list of hashcat modes <a href="https://hashcat.net/wiki/doku.php?id=example_hashes" target="_blank" >here</a> and <a href="https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt" target="_blank" >rockyou</a>(a popular wordlist) here (if you don&rsquo;t already have it on your system yet)</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"> hashcat -m <span style="color:#ae81ff">1800</span> -a <span style="color:#ae81ff">0</span> pingu.hash /usr/share/wordlists/rockyou.txt
 </code></pre></div>
     <img src="/images/thecodcaper/5.gif"  class="center"  style="border-radius: 3px;"  />
@@ -2660,8 +3040,8 @@ We print 44 random characters(in this case A) and then our memory address in lit
 THM suggestion reading:
 </blockquote>
 
-<p><a href="http://docs.pwntools.com/en/stable/">http://docs.pwntools.com/en/stable/</a></p>
-<p><a href="https://browserpwndbg.readthedocs.io/en/docs/">https://browserpwndbg.readthedocs.io/en/docs/</a></p>
+<p><a href="http://docs.pwntools.com/en/stable/" target="_blank" >http://docs.pwntools.com/en/stable/</a></p>
+<p><a href="https://browserpwndbg.readthedocs.io/en/docs/" target="_blank" >https://browserpwndbg.readthedocs.io/en/docs/</a></p>
 ]]></content>
         </item>
         
@@ -2678,13 +3058,13 @@ Step 3 Choose a theme In Hugo theme pages choose your favorite theme and downloa
 Unzip the files into the hugo default theme folder: ./Sites/YOURSITE/Themes
 Then copy the content of config.</description>
             <content type="html"><![CDATA[<h2 id="step-1-install-hugo">Step 1. Install Hugo</h2>
-<p>Go to <a href="https://github.com/spf13/hugo/releases">Hugo releases</a> and download the
+<p>Go to <a href="https://github.com/spf13/hugo/releases" target="_blank" >Hugo releases</a> and download the
 appropriate version for your OS and architecture.</p>
-<p>More complete instructions are available at <a href="https://gohugo.io/getting-started/installing/">Install Hugo</a></p>
+<p>More complete instructions are available at <a href="https://gohugo.io/getting-started/installing/" target="_blank" >Install Hugo</a></p>
 <h2 id="step-2-configure-your-git-hub-pages">Step 2. Configure your Git Hub Pages</h2>
 <p>You need a github account for this step.</p>
 <h2 id="step-3-choose-a-theme">Step 3 Choose a theme</h2>
-<p>In <a href="http://themes.hugo.io/">Hugo theme pages</a> choose your favorite theme and download to your computer.</p>
+<p>In <a href="http://themes.hugo.io/" target="_blank" >Hugo theme pages</a> choose your favorite theme and download to your computer.</p>
 <p>Unzip the files into the hugo default theme folder: ./Sites/YOURSITE/Themes</p>
 <p>Then copy the content of config.toml file in theme folder to the config.toml in your default site folder./Sites/YOUSITE/config.toml</p>
 <h2 id="step-4-running-hugo">Step 4 Running Hugo</h2>
@@ -2700,7 +3080,7 @@ appropriate version for your OS and architecture.</p>
 <h2 id="step-4-upload-site">Step 4 Upload site</h2>
 <p>Now  just upload the Public folder to your github.</p>
 <p>Tips for Hugo&rsquo;s markdown:</p>
-<p><a href="https://www.philipdaniels.com/blog/2016/hugo-blogging-cheatsheet/">https://www.philipdaniels.com/blog/2016/hugo-blogging-cheatsheet/</a></p>
+<p><a href="https://www.philipdaniels.com/blog/2016/hugo-blogging-cheatsheet/" target="_blank" >https://www.philipdaniels.com/blog/2016/hugo-blogging-cheatsheet/</a></p>
 ]]></content>
         </item>
         

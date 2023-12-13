@@ -203,7 +203,7 @@ if (!doNotTrack) {
 
 
 <p>​12<!-- raw HTML omitted -->th<!-- raw HTML omitted --> Aug 2023</p>
-<p>Machine Author(s): <strong><a href="https://app.hackthebox.com/users/8930">knightmare</a></strong></p>
+<p>Machine Author(s): <strong><a href="https://app.hackthebox.com/users/8930" target="_blank" >knightmare</a></strong></p>
 <h2 id="enumeration">Enumeration</h2>
 <p>Initial <code>nmap</code> scan:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#a6e22e">nmap</span> <span style="color:#ae81ff">10.10.11.227</span>
@@ -274,7 +274,7 @@ if (!doNotTrack) {
 <p>But it took too long, so I decided to explore another approach.</p>
 <p><img src="/images/keeper/Untitled%2011.png" alt="Untitled"></p>
 <p>While searching on Google for KeePass vulnerabilities, I came across <strong>CVE-2023-32784</strong>, which allows for dumping the master password from Keepass .dmp files.</p>
-<p><a href="https://github.com/CMEPW/keepass-dump-masterkey">https://github.com/CMEPW/keepass-dump-masterkey</a></p>
+<p><a href="https://github.com/CMEPW/keepass-dump-masterkey" target="_blank" >https://github.com/CMEPW/keepass-dump-masterkey</a></p>
 <p><img src="/images/keeper/Untitled%2012.png" alt="Untitled"></p>
 <p>I couldn&rsquo;t dump the entire password; some characters were missing. But a quick search on Google revealed the reason for the error: the password contains special characters.</p>
 <p><img src="/images/keeper/Untitled%2013.png" alt="Untitled"></p>

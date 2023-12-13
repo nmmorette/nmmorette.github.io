@@ -6,13 +6,31 @@
     <description>Recent content in Series on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/series/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>cheatsheet</title>
-      <link>https://nmmorette.github.io/series/cheatsheet/</link>
-      <pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate>
+      <title>Certification</title>
+      <link>https://nmmorette.github.io/series/certification/</link>
+      <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://nmmorette.github.io/series/cheatsheet/</guid>
+      <guid>https://nmmorette.github.io/series/certification/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>review</title>
+      <link>https://nmmorette.github.io/series/review/</link>
+      <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/series/review/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cheat sheet</title>
+      <link>https://nmmorette.github.io/series/cheat-sheet/</link>
+      <pubDate>Mon, 11 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/series/cheat-sheet/</guid>
       <description></description>
     </item>
     
@@ -22,24 +40,6 @@
       <pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/series/cybersec/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Certification</title>
-      <link>https://nmmorette.github.io/series/certification/</link>
-      <pubDate>Sat, 25 Nov 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/series/certification/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>review</title>
-      <link>https://nmmorette.github.io/series/review/</link>
-      <pubDate>Sat, 25 Nov 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/series/review/</guid>
       <description></description>
     </item>
     

@@ -200,7 +200,7 @@ if (!doNotTrack) {
 
 
 <h2 id="task-1-intro">Task 1. Intro</h2>
-<p>This is a write up for &ldquo;The Cod Caper&rdquo; <a href="https://tryhackme.com/room/thecodcaper">room</a> at Try Hack Me.</p>
+<p>This is a write up for &ldquo;The Cod Caper&rdquo; <a href="https://tryhackme.com/room/thecodcaper" target="_blank" >room</a> at Try Hack Me.</p>
 <p>Room&rsquo;s intro note:</p>
 
 
@@ -221,7 +221,7 @@ Hello there my name is Pingu. I've come here to put in a request to get my fish 
 <p>We found 2 open ports, just pay attention to the nmap results, all answers for the first task are there.</p>
 <h2 id="task-3-web-enumeration">Task 3. Web Enumeration</h2>
 <p>Let&rsquo;s search for files and directories.</p>
-<p>You may use <code>gobuster</code> for that, but I would particularly go with my bash script. You can download my script <a href="http:/https://github.com/nmmorette/bash-scripts/blob/25f02fa424136f0d23090072a773892e19c5c5b2/webrecon.sh/">here</a>
+<p>You may use <code>gobuster</code> for that, but I would particularly go with my bash script. You can download my script <a href="http:/https://github.com/nmmorette/bash-scripts/blob/25f02fa424136f0d23090072a773892e19c5c5b2/webrecon.sh/" target="_blank" >here</a>
 Edit the file with a wordlist of your preference. I suggest the big.txt from <code>dirb</code>.</p>
 <p>Execute the <code>.\webrecon.sh</code> script in the target:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  .<span style="color:#ae81ff">\w</span>ebrecon.sh TARGET_IP
@@ -309,7 +309,7 @@ LinEnum is a bash script that searches for possible ways to priv esc. It is incr
 </blockquote>
 
 
-<p>Let&rsquo;s copy the <a href="https://github.com/rebootuser/LinEnum">Linenum</a> scritp:</p>
+<p>Let&rsquo;s copy the <a href="https://github.com/rebootuser/LinEnum" target="_blank" >Linenum</a> scritp:</p>
 <pre tabindex="0"><code class="language-cli" data-lang="cli"> scp {path to linenum} {user}@{host}:{path}
 </code></pre><p>After that, run <code>linenum.sh</code></p>
 <p>Go to SUID files section and find the answer to task 6 only question.</p>
@@ -383,7 +383,7 @@ We print 44 random characters(in this case A) and then our memory address in lit
 <li>The hash that we found in last task </li>
 <li>A little bit of patience</li>
 
-<p>Luckily hashcat supports cracking linux password hashes. You can find a list of hashcat modes <a href="https://hashcat.net/wiki/doku.php?id=example_hashes">here</a> and <a href="https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt">rockyou</a>(a popular wordlist) here (if you don&rsquo;t already have it on your system yet)</p>
+<p>Luckily hashcat supports cracking linux password hashes. You can find a list of hashcat modes <a href="https://hashcat.net/wiki/doku.php?id=example_hashes" target="_blank" >here</a> and <a href="https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt" target="_blank" >rockyou</a>(a popular wordlist) here (if you don&rsquo;t already have it on your system yet)</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"> hashcat -m <span style="color:#ae81ff">1800</span> -a <span style="color:#ae81ff">0</span> pingu.hash /usr/share/wordlists/rockyou.txt
 </code></pre></div>
     <img src="/images/thecodcaper/5.gif"  class="center"  style="border-radius: 3px;"  />
@@ -404,8 +404,8 @@ We print 44 random characters(in this case A) and then our memory address in lit
 THM suggestion reading:
 </blockquote>
 
-<p><a href="http://docs.pwntools.com/en/stable/">http://docs.pwntools.com/en/stable/</a></p>
-<p><a href="https://browserpwndbg.readthedocs.io/en/docs/">https://browserpwndbg.readthedocs.io/en/docs/</a></p>
+<p><a href="http://docs.pwntools.com/en/stable/" target="_blank" >http://docs.pwntools.com/en/stable/</a></p>
+<p><a href="https://browserpwndbg.readthedocs.io/en/docs/" target="_blank" >https://browserpwndbg.readthedocs.io/en/docs/</a></p>
 
       </div>
     </article>
