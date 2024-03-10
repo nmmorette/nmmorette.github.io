@@ -105,7 +105,7 @@ Initially, I purchased the voucher for the exam, version V1, without including t
 <p>Some questions will require a flag, while others will ask about open ports on hosts, vulnerable services, and questions related to exploiting the host. There&rsquo;s no need to submit a report after the exam; you just have to answer the questions and complete the test.</p>
 <h2 id="how-to-study">How to Study</h2>
 <p>I need to divide this topic into two sections: how to study for the exam if you are a beginner, and how to study for the exam if you already work in the field of cybersecurity or have extensive experience with CTFs.</p>
-<h3 id="begginer">Begginer</h3>
+<h3 id="beginner">Beginner</h3>
 <p>If your knowledge in Cyber Security is very limited, I advise taking the course offered by INE itself (Penetration Testing Learning Path). They provide a comprehensive preparation for this certification, covering all the topics related to the exam. By completing the entire course and the labs, you will be prepared for this certification, as all the exam content is included in the course.</p>
 <h3 id="security-professional">Security Professional</h3>
 <p>If you are a professional in the field and already have knowledge in penetration testing, or are experienced in hacking machines on platforms like TryHackMe or Hack the Box, this certification will likely not present many challenges. Therefore, I believe it can be undertaken without extensive preparation, as was the case for me.</p>
