@@ -5,8 +5,83 @@
         <description>Recent content in Posts on Natan Maia Morette</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 12 Dec 2023 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 28 Feb 2024 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://nmmorette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Hackerviser - Arrow Warmup</title>
+            <link>https://nmmorette.github.io/posts/2024/02/hackerviser-arrow-warmup/</link>
+            <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2024/02/hackerviser-arrow-warmup/</guid>
+            <description>Arrow Introduction Telnet, short for Telecommunication Network, is a protocol used for remote terminal connections, allowing users to interact with a computer or network device over a network. Despite its age and simplicity, Telnet still plays a role in various networking scenarios. However, its lack of security features makes it a risky choice in today&amp;rsquo;s cybersecurity landscape.
+What is Telnet? Telnet operates on the Application Layer of the OSI model and uses a client-server architecture.</description>
+            <content type="html"><![CDATA[<h1 id="arrow">Arrow</h1>
+
+    <img src="/images/hackerviser/Arrow%20f172e2bab26f43969cf82c31f4a19955/Untitled.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h2 id="introduction">Introduction</h2>
+<p>Telnet, short for Telecommunication Network, is a protocol used for remote terminal connections, allowing users to interact with a computer or network device over a network. Despite its age and simplicity, Telnet still plays a role in various networking scenarios. However, its lack of security features makes it a risky choice in today&rsquo;s cybersecurity landscape.</p>
+<h3 id="what-is-telnet">What is Telnet?</h3>
+<p>Telnet operates on the Application Layer of the OSI model and uses a client-server architecture. It allows a user to establish a terminal session on a remote host, enabling them to execute commands as if they were directly connected to the system&rsquo;s console.</p>
+<h3 id="how-does-telnet-work">How Does Telnet Work?</h3>
+<p>Telnet works by establishing a TCP connection between a client and a server. Once the connection is established, the client sends commands and keystrokes to the server, which executes them and returns the results to the client. Telnet sessions typically operate on port 23, though this can be configured.</p>
+<h3 id="security-risks-associated-with-telnet">Security Risks Associated with Telnet</h3>
+<ol>
+<li>Lack of Encryption: Telnet transmits data, including usernames, passwords, and commands, in plain text. This makes it susceptible to eavesdropping and interception by malicious actors.</li>
+<li>Authentication Vulnerabilities: Telnet authentication mechanisms are often weak or nonexistent, leading to the risk of unauthorized access. Default credentials are commonly used, further exacerbating this issue.</li>
+<li>Session Hijacking: Since Telnet sessions lack encryption, attackers can potentially hijack active sessions, allowing them to manipulate or observe the ongoing communication between the client and server.</li>
+<li>Man-in-the-Middle Attacks: Telnet sessions are vulnerable to man-in-the-middle (MITM) attacks, where an attacker intercepts and modifies the communication between the client and server, leading to data manipulation or theft.</li>
+</ol>
+<h3 id="alternatives-to-telnet">Alternatives to Telnet</h3>
+<ol>
+<li>SSH (Secure Shell): SSH provides encrypted communication sessions over a network and offers strong authentication mechanisms, making it a more secure alternative to Telnet.</li>
+<li>Remote Desktop Protocol (RDP): RDP allows users to remotely access and control Windows-based systems, offering features like encryption and multi-factor authentication.</li>
+<li>Web-based Interfaces: Many network devices and servers provide web-based interfaces for remote management, offering secure communication over HTTPS.</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>While Telnet once served as a fundamental tool for remote terminal access, its inherent security vulnerabilities make it unsuitable for modern network environments. Organizations should transition to more secure alternatives like SSH and implement best practices to mitigate the risks associated with remote access protocols. By understanding the functionality and security risks of Telnet, network administrators can make informed decisions to safeguard their systems and data.</p>
+<h2 id="warmup---arrow---tasks">Warmup - Arrow - Tasks</h2>
+<h3 id="which-ports-are-open">Which port(s) are open?</h3>
+<p>Let’s start running <code>nmap</code> to find the open ports:</p>
+
+    <img src="/images/hackerviser/Arrow%20f172e2bab26f43969cf82c31f4a19955/Untitled%201.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h3 id="what-is-the-running-service-name">What is the running service name?</h3>
+<p>Now let’s improve or scan to get more info:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nmap -sS -A 172.20.6.209 -p <span style="color:#ae81ff">23</span>
+
+</code></pre></div>
+    <img src="/images/hackerviser/Arrow%20f172e2bab26f43969cf82c31f4a19955/Untitled%202.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Now we found the service running on port 23 is telnet.</p>
+<h3 id="whats-the-usernamepassword-you-use-to-connect-to-telnet">What&rsquo;s the username:password you use to connect to telnet?</h3>
+<p>First, attempt to establish a direct connection using Telnet:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">telnet 172.20.6.209
+</code></pre></div>
+    <img src="/images/hackerviser/Arrow%20f172e2bab26f43969cf82c31f4a19955/Untitled%203.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>After attempting to establish a Telnet connection, it&rsquo;s possible to observe a hint suggesting the use of default credentials.</p>
+
+    <img src="/images/hackerviser/Arrow%20f172e2bab26f43969cf82c31f4a19955/Untitled%204.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h3 id="what-is-the-working-directory-location-when-you-connect-to-telnet">What is the working directory location when you connect to telnet?</h3>
+<p>In Linux system to find the folder you are in just type <code>pwd</code>
+
+    <img src="/images/hackerviser/Arrow%20f172e2bab26f43969cf82c31f4a19955/Untitled%205.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+    <img src="/images/hackerviser/Arrow%20f172e2bab26f43969cf82c31f4a19955/Untitled%206.png"  class="center"  style="border-radius: 10px;"  />
+
+</p>
+]]></content>
+        </item>
         
         <item>
             <title>Review eJPTv2 - Junior Penetration Tester</title>

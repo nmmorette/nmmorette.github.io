@@ -6,7 +6,17 @@
     <description>Recent content on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hackerviser - Arrow Warmup</title>
+      <link>https://nmmorette.github.io/posts/2024/02/hackerviser-arrow-warmup/</link>
+      <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2024/02/hackerviser-arrow-warmup/</guid>
+      <description>Arrow Introduction Telnet, short for Telecommunication Network, is a protocol used for remote terminal connections, allowing users to interact with a computer or network device over a network. Despite its age and simplicity, Telnet still plays a role in various networking scenarios. However, its lack of security features makes it a risky choice in today&amp;rsquo;s cybersecurity landscape.
+What is Telnet? Telnet operates on the Application Layer of the OSI model and uses a client-server architecture.</description>
+    </item>
+    
     <item>
       <title>Review eJPTv2 - Junior Penetration Tester</title>
       <link>https://nmmorette.github.io/posts/2023/12/review-ejptv2-junior-penetration-tester/</link>
@@ -104,16 +114,6 @@ Pré requisitos É necessário estar rodando Windows 10 versão 2004 ou superior
 A nostalgic Wallpaper
 Using exiftool to check some attributes:
 exiftool WindowsXP.jpg ExifTool Version Number : 12.65 File Name : WindowsXP.jpg Directory : . File Size : 234 kB File Modification Date/Time : 2023:09:26 18:33:44-04:00 File Access Date/Time : 2023:09:26 18:33:49-04:00 File Inode Change Date/Time : 2023:09:26 18:33:48-04:00 File Permissions : -rwxrw-rw- File Type : JPEG File Type Extension : jpg MIME Type : image/jpeg XMP Toolkit : Image::ExifTool 11.</description>
-    </item>
-    
-    <item>
-      <title>TryHackme - Blue - Write Up</title>
-      <link>https://nmmorette.github.io/posts/2022/08/tryhackme-blue-write-up/</link>
-      <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/posts/2022/08/tryhackme-blue-write-up/</guid>
-      <description>Blue Enumeration Initiated the first scan using nmap: The scan results:
-sudo nmap -PA 10.10.248.155 Starting Nmap 7.94 ( https://nmap.org ) at 2023-10-10 19:48 EDT Nmap scan report for 10.10.248.155 Host is up (0.25s latency). Not shown: 991 closed tcp ports (reset) PORT STATE SERVICE 135/tcp open msrpc 139/tcp open netbios-ssn 445/tcp open microsoft-ds 3389/tcp open ms-wbt-server 49152/tcp open unknown 49153/tcp open unknown 49154/tcp open unknown 49158/tcp open unknown 49160/tcp open unknown Nmap done: 1 IP address (1 host up) scanned in 8.</description>
     </item>
     
   </channel>

@@ -6,7 +6,17 @@
     <description>Recent content in writeup on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/series/writeup/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/series/writeup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hackerviser - Arrow Warmup</title>
+      <link>https://nmmorette.github.io/posts/2024/02/hackerviser-arrow-warmup/</link>
+      <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2024/02/hackerviser-arrow-warmup/</guid>
+      <description>Arrow Introduction Telnet, short for Telecommunication Network, is a protocol used for remote terminal connections, allowing users to interact with a computer or network device over a network. Despite its age and simplicity, Telnet still plays a role in various networking scenarios. However, its lack of security features makes it a risky choice in today&amp;rsquo;s cybersecurity landscape.
+What is Telnet? Telnet operates on the Application Layer of the OSI model and uses a client-server architecture.</description>
+    </item>
+    
     <item>
       <title>TryHackme - Rootme - Write-Up</title>
       <link>https://nmmorette.github.io/posts/2023/11/tryhackme-rootme-write-up/</link>
@@ -103,16 +113,6 @@ sudo nmap -sS 10.129.153.125 -A -p22,80,443 Starting Nmap 7.92 ( https://nmap.or
       <guid>https://nmmorette.github.io/posts/2021/08/tryhackme-bounty-hacker-write-up/</guid>
       <description>First of all, let&amp;rsquo;s nmap the machine IP.
 └─$ sudo nmap -sS -Pn 10.10.207.23 [sudo] password for venomsnake: Host discovery disabled (-Pn). All addresses will be marked &amp;#39;up&amp;#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-15 07:43 -03 Nmap scan report for 10.10.207.23 Host is up (0.20s latency). Not shown: 967 filtered ports, 30 closed ports PORT STATE SERVICE 21/tcp open ftp 22/tcp open ssh 80/tcp open http Nmap done: 1 IP address (1 host up) scanned in 9.</description>
-    </item>
-    
-    <item>
-      <title>Hack the Box - Blue- Write Up</title>
-      <link>https://nmmorette.github.io/posts/2021/08/hack-the-box-blue-write-up/</link>
-      <pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/posts/2021/08/hack-the-box-blue-write-up/</guid>
-      <description>Enumeration Initial scan:
-└──╼ $sudo nmap -sS -Pn 10.10.10.40 Host discovery disabled (-Pn). All addresses will be marked &amp;#39;up&amp;#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-11 15:11 -03 Nmap scan report for 10.10.10.40 Host is up (0.45s latency). Not shown: 991 closed ports PORT STATE SERVICE 135/tcp open msrpc 139/tcp open netbios-ssn 445/tcp open microsoft-ds 49152/tcp open unknown 49153/tcp open unknown 49154/tcp open unknown 49155/tcp open unknown 49156/tcp open unknown 49157/tcp open unknown Second nmap scan with --script vuln only on the open ports:</description>
     </item>
     
   </channel>
