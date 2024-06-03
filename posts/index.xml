@@ -5,15 +5,243 @@
         <description>Recent content in Posts on Natan Maia Morette</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 28 Feb 2024 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Sat, 02 Mar 2024 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://nmmorette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>Hackerviser - Arrow Warmup</title>
-            <link>https://nmmorette.github.io/posts/2024/02/hackerviser-arrow-warmup/</link>
+            <title>Hackerviser Secure Command - Warmup Stage I</title>
+            <link>https://nmmorette.github.io/posts/2024/03/hackerviser-secure-command-warmup-stage-i/</link>
+            <pubDate>Sat, 02 Mar 2024 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2024/03/hackerviser-secure-command-warmup-stage-i/</guid>
+            <description>Secure Command Introduction Secure Shell (SSH) is a protocol used to securely access and manage devices on a network. It encrypts data to protect confidentiality and integrity, making SSH a preferred option over Telnet for remote administration.
+What is SSH? SSH is a cryptographic network protocol that facilitates secure communication over an unsecured network. Originally designed as a replacement for insecure protocols like Telnet, SSH ensures confidentiality and integrity of data exchanged between two networked devices.</description>
+            <content type="html"><![CDATA[<h1 id="secure-command">Secure Command</h1>
+
+    <img src="/images/hackerviser/Secure%20Command%20ec84e5c3b40a46d3ae24b4823e2bc7d0/Untitled.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h2 id="introduction"><strong>Introduction</strong></h2>
+<p>Secure Shell (SSH) is a protocol used to securely access and manage devices on a network. It encrypts data to protect confidentiality and integrity, making SSH a preferred option over Telnet for remote administration.</p>
+<h3 id="what-is-ssh">What is SSH?</h3>
+<p>SSH is a cryptographic network protocol that facilitates secure communication over an unsecured network. Originally designed as a replacement for insecure protocols like Telnet, SSH ensures confidentiality and integrity of data exchanged between two networked devices. It provides a secure channel over an unsecured network by encrypting the data during transmission.</p>
+<h3 id="key-features-and-benefits">Key Features and Benefits:</h3>
+<ol>
+<li><strong>Encryption</strong>: SSH employs strong encryption algorithms to secure communication, thwarting eavesdropping and data tampering attempts.</li>
+<li><strong>Authentication</strong>: It supports various authentication methods, including passwords, public-key cryptography, and multi-factor authentication, ensuring robust access control.</li>
+<li><strong>Port Forwarding</strong>: SSH&rsquo;s port forwarding capability allows users to securely tunnel traffic between local and remote systems, facilitating secure access to internal services.</li>
+<li><strong>File Transfer</strong>: With tools like SCP (Secure Copy Protocol) and SFTP (SSH File Transfer Protocol), SSH enables secure file transfer between systems.</li>
+<li><strong>Remote Administration</strong>: System administrators utilize SSH to manage servers and network devices remotely, executing commands and performing administrative tasks securely.</li>
+<li><strong>Tunneling</strong>: SSH tunneling enables users to bypass network restrictions and securely access services hosted on remote networks.</li>
+<li><strong>Automation</strong>: SSH can be seamlessly integrated into automated scripts and workflows, streamlining repetitive tasks and enhancing productivity.</li>
+</ol>
+<h3 id="the-future-of-ssh">The Future of SSH:</h3>
+<p>Despite being over two decades old, SSH continues to evolve, adapting to the changing needs of modern computing environments. With the emergence of cloud computing and distributed systems, SSH remains indispensable for secure remote access and management.</p>
+<p>Looking ahead, advancements in cryptography and networking technologies will likely further enhance SSH&rsquo;s security and performance, ensuring its relevance in the ever-evolving landscape of IT infrastructure.</p>
+<h3 id="conclusion">Conclusion:</h3>
+<p>SSH&rsquo;s enduring popularity is a testament to its reliability, security, and versatility. Whether you&rsquo;re a system administrator managing a fleet of servers or an individual user accessing your personal computer remotely, SSH empowers you with a secure and seamless remote access solution.</p>
+<p>As we navigate the complexities of the digital age, SSH stands firm as a beacon of trust, enabling us to traverse the vast expanse of the internet securely and with confidence.</p>
+<h2 id="tasks"><strong>Tasks</strong></h2>
+<h3 id="which-ports-are-open">Which port(s) are open?</h3>
+<p>Usually <code>ssh</code>runs in port 22, but  let&rsquo;s run <code>nmap</code> without a specific port.
+
+    <img src="/images/hackerviser/Secure%20Command%20ec84e5c3b40a46d3ae24b4823e2bc7d0/Untitled%201.png"  class="center"  style="border-radius: 10px;"  />
+
+</p>
+<p>Port 22 is open.</p>
+<h3 id="what-is-the-running-service-name">What is the running service name?</h3>
+<p>We got the service name with nmap
+
+    <img src="/images/hackerviser/Secure%20Command%20ec84e5c3b40a46d3ae24b4823e2bc7d0/Untitled%202.png"  class="center"  style="border-radius: 10px;"  />
+
+</p>
+<h3 id="what-is-masters-message-when-connecting-to-ssh-with-hackviserhackviser-credentials">What is “Master&rsquo;s Message” when connecting to SSH with hackviser:hackviser credentials?</h3>
+<p>Connection with <code>ssh</code>:
+
+    <img src="/images/hackerviser/Secure%20Command%20ec84e5c3b40a46d3ae24b4823e2bc7d0/Untitled%203.png"  class="center"  style="border-radius: 10px;"  />
+
+</p>
+<h3 id="what-is-the-command-to-change-user-in-linux">What is the command to change user in Linux?</h3>
+<p>The command to change the current user in Linux is <strong><code>su</code></strong>, which stands for &ldquo;switch user&rdquo; or &ldquo;substitute user&rdquo;. By default, when you run <strong><code>su</code></strong> without any arguments, it switches to the root user. If you want to switch to another user, you can specify the username as an argument.</p>
+<h3 id="whats-the-password-for-root-user">What&rsquo;s the password for root user?</h3>
+<p>Just tried to change to root with password root:</p>
+
+    <img src="/images/hackerviser/Secure%20Command%20ec84e5c3b40a46d3ae24b4823e2bc7d0/Untitled%204.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h3 id="what-is-the-parameter-of-the-ls-command-that-shows-hidden-files">What is the parameter of the ls command that shows hidden files?</h3>
+<p>The parameter of the <strong><code>ls</code></strong> command that shows hidden files is <strong><code>-a</code></strong> or <strong><code>--all</code></strong>. When you use <strong><code>ls -a</code></strong> or <strong><code>ls --all</code></strong>, it lists all files, including hidden files and directories. Hidden files and directories in Unix-like operating systems are those whose names start with a dot (.).</p>
+<h3 id="what-is-the-masters-advice">What is the master&rsquo;s advice?</h3>
+<p>Looking for files, I found the hidden file <code>.advice_of_the_master</code>in the root folder.</p>
+
+    <img src="/images/hackerviser/Secure%20Command%20ec84e5c3b40a46d3ae24b4823e2bc7d0/Untitled%205.png"  class="center"  style="border-radius: 10px;"  />
+
+
+]]></content>
+        </item>
+        
+        <item>
+            <title>Hackerviser 007 - Warmup Stage I</title>
+            <link>https://nmmorette.github.io/posts/2024/03/hackerviser-007-warmup-stage-i/</link>
+            <pubDate>Fri, 01 Mar 2024 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2024/03/hackerviser-007-warmup-stage-i/</guid>
+            <description>007 Introduction Remote Desktop Protocol (RDP) has become an indispensable tool in today&amp;rsquo;s digital landscape, enabling seamless remote access to computers and servers from anywhere in the world.
+What is Remote Desktop Protocol (RDP)? Remote Desktop Protocol (RDP) is a proprietary protocol developed by Microsoft, designed to facilitate remote desktop connections between computers over a network connection. It allows users to access and control a remote computer as if they were physically present at the machine.</description>
+            <content type="html"><![CDATA[<h1 id="007">007</h1>
+
+    <img src="/images/hackerviser/007%206e77e78d74f24abca6dc9f02881349d1/Untitled.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h2 id="introduction"><strong>Introduction</strong></h2>
+<p>Remote Desktop Protocol (RDP) has become an indispensable tool in today&rsquo;s digital landscape, enabling seamless remote access to computers and servers from anywhere in the world.</p>
+<h3 id="what-is-remote-desktop-protocol-rdp">What is Remote Desktop Protocol (RDP)?</h3>
+<p>Remote Desktop Protocol (RDP) is a proprietary protocol developed by Microsoft, designed to facilitate remote desktop connections between computers over a network connection. It allows users to access and control a remote computer as if they were physically present at the machine. RDP operates on TCP/IP and is available on most versions of Windows operating systems.</p>
+<h3 id="benefits-of-rdp">Benefits of RDP</h3>
+<ol>
+<li><strong>Remote Access</strong>: RDP enables users to remotely access their desktops, laptops, or servers from anywhere with an internet connection, providing flexibility and convenience for remote work scenarios.</li>
+<li><strong>Collaboration</strong>: RDP allows multiple users to connect to a single computer simultaneously, fostering collaboration and teamwork, especially in remote or distributed teams.</li>
+<li><strong>Resource Sharing</strong>: RDP enables the sharing of resources and applications across multiple devices, optimizing resource utilization and enhancing productivity.</li>
+<li><strong>Security</strong>: RDP incorporates robust encryption and authentication mechanisms to ensure secure remote connections, protecting sensitive data from unauthorized access.</li>
+</ol>
+<h3 id="best-practices-for-using-rdp">Best Practices for Using RDP</h3>
+<ol>
+<li><strong>Enable Network-Level Authentication (NLA)</strong>: NLA enhances security by requiring users to authenticate before establishing a remote desktop session, mitigating the risk of unauthorized access.</li>
+<li><strong>Use Strong Passwords</strong>: Ensure that strong, unique passwords are set for RDP connections to prevent brute-force attacks and unauthorized access to remote systems.</li>
+<li><strong>Implement Firewall Rules</strong>: Configure firewall rules to restrict RDP access to trusted IP addresses or networks, reducing the risk of unauthorized access from external sources.</li>
+<li><strong>Keep Software Updated</strong>: Regularly update RDP client and server software to patch security vulnerabilities and ensure the latest features and enhancements are available.</li>
+</ol>
+<h3 id="conclusion">Conclusion</h3>
+<p>Remote Desktop Protocol (RDP) revolutionizes the way we access and manage remote systems, offering unparalleled convenience, flexibility, and security. Whether you&rsquo;re a remote worker, IT administrator, or business owner, leveraging RDP can streamline operations, enhance collaboration, and drive productivity. By following best practices and deploying RDP securely, you can unlock the full potential of remote access technology and empower your workforce to thrive in today&rsquo;s interconnected world.</p>
+<h2 id="warmup---007---tasks"><strong>Warmup - 007 - Tasks</strong></h2>
+<h3 id="what-is-target-hostname">What is target hostname?</h3>
+<p>Usually RDP is on port 3389, you could run <code>nmap</code>directly to this port, but Let <code>nmap</code> with <code>-A</code>to get info about the service.
+
+    <img src="/images/hackerviser/007%206e77e78d74f24abca6dc9f02881349d1/Untitled%201.png"  class="center"  style="border-radius: 10px;"  />
+
+</p>
+<h3 id="what-does-rdp-stands-for">What does RDP stands for?</h3>
+<p>Remote Desktop Protocol</p>
+<h3 id="what-is-usually-the-most-privileged-username-in-windows">What is usually the most privileged username in Windows?</h3>
+<p>In Windows systems, the most privileged username is typically &ldquo;Administrator.&rdquo; This account has full access to system resources, including the ability to install software, modify system settings, and perform administrative tasks. It is important to safeguard the Administrator account with a strong password and limit its usage to necessary administrative tasks to ensure the security of the system. Additionally, it&rsquo;s recommended to create a separate, less privileged user account for everyday tasks to minimize the risk of accidental or malicious actions.</p>
+<h3 id="whats-the-windows-version">Whats the Windows version?</h3>
+<p>Let&rsquo;s attempt to establish an RDP connection to the target machine using the guessed Administrator user credentials.</p>
+<p>Various tools exist for setting up an RDP connection to a remote computer. Microsoft Remote Desktop, FreeRDP, rdesktop, and Remmina are among the options available for RDP connections.</p>
+<p>For the task at hand, let&rsquo;s utilize xfreerdp , usually pre-installed in Kali Linux. Since we dont have a password, lets try to connect with administrator and no password.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">xfreerdp /u:administrator /v:172.20.4.55  
+
+</code></pre></div>
+    <img src="/images/hackerviser/007%206e77e78d74f24abca6dc9f02881349d1/Untitled%202.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+    <img src="/images/hackerviser/007%206e77e78d74f24abca6dc9f02881349d1/Untitled%203.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>With the RDP connection open, lets use the command <code>winver</code>to check the windows version.</p>
+
+    <img src="/images/hackerviser/007%206e77e78d74f24abca6dc9f02881349d1/Untitled%204.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>It is also possible to get this info in <code>Powershell</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-ComputerInfo | Select-Object WindowsVersion
+</code></pre></div><h3 id="what-is-the-name-of-the-suspect-folder-under-the-c-directory">What is the name of the suspect folder under the C:\ directory?</h3>
+<p>Checking the <code>C:\</code> directory, there is a non common/default windows folder:
+
+    <img src="/images/hackerviser/007%206e77e78d74f24abca6dc9f02881349d1/Untitled%205.png"  class="center"  style="border-radius: 10px;"  />
+
+</p>
+<h3 id="which-user-owns-the-junk-folder">Which user owns the junk folder?</h3>
+<p>It is possible to check a owners folder in Properties&gt;Security&gt;Advanced:
+
+    <img src="/images/hackerviser/007%206e77e78d74f24abca6dc9f02881349d1/Untitled%206.png"  class="center"  style="border-radius: 10px;"  />
+
+</p>
+
+    <img src="/images/hackerviser/007%206e77e78d74f24abca6dc9f02881349d1/Untitled%207.png"  class="center"  style="border-radius: 10px;"  />
+
+
+]]></content>
+        </item>
+        
+        <item>
+            <title>Hackerviser Reddict - Warmup Stage I</title>
+            <link>https://nmmorette.github.io/posts/2024/02/hackerviser-reddict-warmup-stage-i/</link>
+            <pubDate>Thu, 29 Feb 2024 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2024/02/hackerviser-reddict-warmup-stage-i/</guid>
+            <description>Reddict Introduction Redis, short for Remote Dictionary Server, has emerged as a cornerstone in modern software development, revolutionizing how data is stored, cached, and processed. In this comprehensive guide, we will delve into the depths of Redis, exploring its features, use cases, and best practices. Whether you&amp;rsquo;re a seasoned developer seeking to optimize performance or a newcomer intrigued by the buzz surrounding Redis, this blog post aims to provide you with a thorough understanding of its capabilities and potential applications.</description>
+            <content type="html"><![CDATA[
+    <img src="/images/hackerviser/Reddict%20bd4eff79231a405e95112ae5c139f3a6/Untitled%208.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h1 id="reddict">Reddict</h1>
+<h2 id="introduction"><strong>Introduction</strong></h2>
+<p>Redis, short for Remote Dictionary Server, has emerged as a cornerstone in modern software development, revolutionizing how data is stored, cached, and processed. In this comprehensive guide, we will delve into the depths of Redis, exploring its features, use cases, and best practices. Whether you&rsquo;re a seasoned developer seeking to optimize performance or a newcomer intrigued by the buzz surrounding Redis, this blog post aims to provide you with a thorough understanding of its capabilities and potential applications.</p>
+<h3 id="understanding-redis">Understanding Redis</h3>
+<p>At its core, Redis is an in-memory data structure store, acting as a key-value database, cache, and message broker. Unlike traditional databases, Redis stores data primarily in RAM, enabling lightning-fast read and write operations. Its data model supports various data types, including strings, hashes, lists, sets, and sorted sets, allowing for versatile data manipulation.</p>
+<h2 id="warmup---reddict---tasks"><strong>Warmup - Reddict - Tasks</strong></h2>
+<h3 id="which-ports-are-open">Which port(s) are open?</h3>
+<p>Running <code>nmap</code>against the target ip
+
+    <img src="/images/hackerviser/Reddict%20bd4eff79231a405e95112ae5c139f3a6/Untitled.png"  class="center"  style="border-radius: 10px;"  />
+
+</p>
+<p>This first scan didin’t found any open ports, then running <code>nmap</code>again with the parameter <code>-p-</code>to scan all ports, it found the port <code>6379</code>.
+
+    <img src="/images/hackerviser/Reddict%20bd4eff79231a405e95112ae5c139f3a6/Untitled%201.png"  class="center"  style="border-radius: 10px;"  />
+
+</p>
+<h3 id="what-is-the-version-number-of-the-running-redis-service">What is the version number of the running Redis service?</h3>
+<p>Using <code>nmap</code>again with the <code>-A</code> to get more info about the service:
+
+    <img src="/images/hackerviser/Reddict%20bd4eff79231a405e95112ae5c139f3a6/Untitled%202.png"  class="center"  style="border-radius: 10px;"  />
+
+</p>
+<h3 id="what-is-the-command-line-utility-lets-you-interact-with-a-redis-database">What is the command-line utility lets you interact with a Redis database?</h3>
+<p>The command-line utility that allows you to interact with a Redis database is called <code>redis-cli.</code>This tool provides a command-line interface for executing Redis commands, querying data, and managing the Redis server. With <code>redis-cli</code>, you can perform various operations such as setting and retrieving keys, running Redis commands, monitoring server performance, and more, all directly from the command line.</p>
+<h3 id="what-is-the-response-when-the-ping-command-is-run-after-a-successful-connection-is-established">What is the response when the PING command is run after a successful connection is established?</h3>
+
+    <img src="/images/hackerviser/Reddict%20bd4eff79231a405e95112ae5c139f3a6/Untitled%203.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h3 id="what-command-returns-information-and-statistics-about-the-server">What command returns information and statistics about the server?</h3>
+<p>The <strong><code>INFO</code></strong> command is used to return information and statistics about the Redis server. When you run the <strong><code>INFO</code></strong> command in the <strong><code>redis-cli</code></strong> interface, it provides a detailed output containing various metrics such as memory usage, client connections, commands processed, and more. This information is valuable for monitoring the health and performance of the Redis server.
+
+    <img src="/images/hackerviser/Reddict%20bd4eff79231a405e95112ae5c139f3a6/Untitled%204.png"  class="center"  style="border-radius: 10px;"  />
+
+</p>
+<h3 id="which-command-returns-all-keys">Which command returns all keys?</h3>
+<p>The command used to retrieve all keys stored in a Redis database is <strong><code>KEYS *</code></strong>. When you run this command in the <strong><code>redis-cli</code></strong> interface, it returns a list of all keys present in the database.</p>
+<h3 id="how-many-key-value-pairs-are-there">How many key-value pairs are there?</h3>
+
+    <img src="/images/hackerviser/Reddict%20bd4eff79231a405e95112ae5c139f3a6/Untitled%205.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h3 id="which-command-retrieves-the-value-of-the-key">Which command retrieves the value of the key?</h3>
+<p>The command used to retrieve the value associated with a specific key in a Redis database is <strong><code>GET</code></strong>. You would use it like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">
+<span style="color:#66d9ef">GET</span> your_key_here
+
+</code></pre></div><h3 id="what-is-admins-sessiontoken-value">What is admin&rsquo;s sessionToken value?</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">GET session:admin-001
+</code></pre></div>
+    <img src="/images/hackerviser/Reddict%20bd4eff79231a405e95112ae5c139f3a6/Untitled%206.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+    <img src="/images/hackerviser/Reddict%20bd4eff79231a405e95112ae5c139f3a6/Untitled%207.png"  class="center"  style="border-radius: 10px;"  />
+
+
+]]></content>
+        </item>
+        
+        <item>
+            <title>Hackerviser Arrow - Warmup Stage I</title>
+            <link>https://nmmorette.github.io/posts/2024/02/hackerviser-arrow-warmup-stage-i/</link>
             <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
             
-            <guid>https://nmmorette.github.io/posts/2024/02/hackerviser-arrow-warmup/</guid>
+            <guid>https://nmmorette.github.io/posts/2024/02/hackerviser-arrow-warmup-stage-i/</guid>
             <description>Arrow Introduction Telnet, short for Telecommunication Network, is a protocol used for remote terminal connections, allowing users to interact with a computer or network device over a network. Despite its age and simplicity, Telnet still plays a role in various networking scenarios. However, its lack of security features makes it a risky choice in today&amp;rsquo;s cybersecurity landscape.
 What is Telnet? Telnet operates on the Application Layer of the OSI model and uses a client-server architecture.</description>
             <content type="html"><![CDATA[<h1 id="arrow">Arrow</h1>
@@ -21,7 +249,7 @@ What is Telnet? Telnet operates on the Application Layer of the OSI model and us
     <img src="/images/hackerviser/Arrow%20f172e2bab26f43969cf82c31f4a19955/Untitled.png"  class="center"  style="border-radius: 10px;"  />
 
 
-<h2 id="introduction">Introduction</h2>
+<h2 id="introduction"><strong>Introduction</strong></h2>
 <p>Telnet, short for Telecommunication Network, is a protocol used for remote terminal connections, allowing users to interact with a computer or network device over a network. Despite its age and simplicity, Telnet still plays a role in various networking scenarios. However, its lack of security features makes it a risky choice in today&rsquo;s cybersecurity landscape.</p>
 <h3 id="what-is-telnet">What is Telnet?</h3>
 <p>Telnet operates on the Application Layer of the OSI model and uses a client-server architecture. It allows a user to establish a terminal session on a remote host, enabling them to execute commands as if they were directly connected to the system&rsquo;s console.</p>
@@ -42,7 +270,7 @@ What is Telnet? Telnet operates on the Application Layer of the OSI model and us
 </ol>
 <h2 id="conclusion">Conclusion</h2>
 <p>While Telnet once served as a fundamental tool for remote terminal access, its inherent security vulnerabilities make it unsuitable for modern network environments. Organizations should transition to more secure alternatives like SSH and implement best practices to mitigate the risks associated with remote access protocols. By understanding the functionality and security risks of Telnet, network administrators can make informed decisions to safeguard their systems and data.</p>
-<h2 id="warmup---arrow---tasks">Warmup - Arrow - Tasks</h2>
+<h2 id="warmup---arrow---tasks"><strong>Warmup - Arrow - Tasks</strong></h2>
 <h3 id="which-ports-are-open">Which port(s) are open?</h3>
 <p>Let’s start running <code>nmap</code> to find the open ports:</p>
 
@@ -80,6 +308,90 @@ What is Telnet? Telnet operates on the Application Layer of the OSI model and us
     <img src="/images/hackerviser/Arrow%20f172e2bab26f43969cf82c31f4a19955/Untitled%206.png"  class="center"  style="border-radius: 10px;"  />
 
 </p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Hackerviser File Hunter - Warmup Stage I</title>
+            <link>https://nmmorette.github.io/posts/2024/02/hackerviser-file-hunter-warmup-stage-i/</link>
+            <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2024/02/hackerviser-file-hunter-warmup-stage-i/</guid>
+            <description>File Hunter Introduction File Transfer Protocol (FTP) is a standard network protocol used for transferring files between a client and a server on a computer network. Since its inception in the early days of the internet, FTP has remained a popular choice for facilitating file transfers, despite the emergence of more secure alternatives. In this blog post, we will delve into the fundamentals of FTP, its operation, security considerations, and alternatives available in today&amp;rsquo;s technology landscape.</description>
+            <content type="html"><![CDATA[<h1 id="file-hunter">File Hunter</h1>
+
+    <img src="/images/hackerviser/File%20Hunter%2009e09ac895ae4346a26594893322b46f/Untitled.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h2 id="introduction"><strong>Introduction</strong></h2>
+<p>File Transfer Protocol (FTP) is a standard network protocol used for transferring files between a client and a server on a computer network. Since its inception in the early days of the internet, FTP has remained a popular choice for facilitating file transfers, despite the emergence of more secure alternatives. In this blog post, we will delve into the fundamentals of FTP, its operation, security considerations, and alternatives available in today&rsquo;s technology landscape.</p>
+<h3 id="what-is-ftp">What is FTP?</h3>
+<p>FTP operates on the Application Layer of the OSI model and uses a client-server architecture. It enables users to transfer files over a TCP/IP network, allowing for the upload, download, and management of files between a client machine and a remote server.</p>
+<p>How Does FTP Work?
+FTP functions through a control connection and a separate data connection. The control connection is established on port 21 and handles commands and responses between the client and server, such as authentication, file manipulation, and directory navigation. The data connection, established on port 20 for active mode or dynamically assigned ports for passive mode, is used for transferring the actual file data.</p>
+<h3 id="types-of-ftp-connections">Types of FTP Connections</h3>
+<ol>
+<li>Active Mode: In active mode FTP, the client initiates a connection to the server&rsquo;s port 21 for control commands and to the server&rsquo;s port 20 for data transfer. This mode may encounter issues with firewalls and NAT configurations.</li>
+<li>Passive Mode: Passive mode FTP involves the client initiating both the control and data connections to the server. The server listens on a port range configured for passive mode data transfers, allowing it to bypass firewall restrictions and NAT traversal issues.</li>
+</ol>
+<h3 id="security-considerations">Security Considerations</h3>
+<ol>
+<li>Plain Text Authentication: Traditional FTP transmits usernames, passwords, and data in plain text, making it susceptible to eavesdropping and interception by malicious actors.</li>
+<li>FTPS (FTP Secure): FTPS adds a layer of security to FTP by encrypting the control and data connections using SSL/TLS protocols. It provides authentication and data integrity, addressing the security concerns of plain text FTP.</li>
+<li>SFTP (SSH File Transfer Protocol): SFTP is a separate protocol from FTP, utilizing SSH to secure file transfers with encryption and authentication mechanisms.</li>
+</ol>
+<h3 id="alternatives-to-ftp">Alternatives to FTP</h3>
+<ol>
+<li>SFTP (SSH File Transfer Protocol): SFTP provides secure file transfer capabilities over an encrypted SSH connection, offering stronger security than traditional FTP.</li>
+<li>SCP (Secure Copy Protocol): SCP allows for secure file transfers between hosts using the SSH protocol, offering simplicity and security.</li>
+<li>HTTPS: HTTPS enables secure file transfers over HTTP using SSL/TLS encryption, making it suitable for web-based file sharing and distribution.</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>While FTP remains a widely used protocol for file transfer, its inherent security vulnerabilities necessitate caution, especially when handling sensitive data. Organizations should consider implementing secure alternatives like FTPS, SFTP, or SCP to safeguard their file transfer operations against potential threats. By understanding the workings of FTP and its security implications, users can make informed decisions to ensure the confidentiality, integrity, and availability of their data during file transfers.</p>
+<h2 id="warmup---file-hunter---tasks"><strong>Warmup - File Hunter - Tasks</strong></h2>
+<h3 id="which-ports-are-open">Which port(s) are open?</h3>
+<p>Let&rsquo;s perform an <strong><code>nmap</code></strong> port scan on the target machine:</p>
+
+    <img src="/images/hackerviser/File%20Hunter%2009e09ac895ae4346a26594893322b46f/Untitled%201.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Port 21 is open.</p>
+<h3 id="what-does-ftp-stand-for">What does FTP stand for?</h3>
+<p>FTP stands for File Transfer Protocol.</p>
+<h3 id="what-username-did-you-connect-to-the-ftp">What username did you connect to the FTP?</h3>
+<p>Simply connected with the <strong><code>anonymous</code></strong> user.</p>
+
+    <img src="/images/hackerviser/File%20Hunter%2009e09ac895ae4346a26594893322b46f/Untitled%202.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h3 id="what-command-shows-which-commands-we-can-use-on-the-ftp-server">What command shows which commands we can use on the FTP server?</h3>
+<p>The <strong><code>help</code></strong> command displays all available FTP commands.</p>
+
+    <img src="/images/hackerviser/File%20Hunter%2009e09ac895ae4346a26594893322b46f/Untitled%203.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h3 id="what-is-the-name-of-the-file-on-the-ftp-server">What is the name of the file on the FTP server?</h3>
+<p>Using the <strong><code>ls</code></strong> command to list the files in the directory, we find the file named <strong><code>userlist</code></strong>.
+
+    <img src="/images/hackerviser/File%20Hunter%2009e09ac895ae4346a26594893322b46f/Untitled%204.png"  class="center"  style="border-radius: 10px;"  />
+
+</p>
+<h3 id="what-is-the-command-we-can-use-to-download-a-file-from-an-ftp-server">What is the command we can use to download a file from an FTP server?</h3>
+<p>You can use the <strong><code>get</code></strong> command to download the file:
+
+    <img src="/images/hackerviser/File%20Hunter%2009e09ac895ae4346a26594893322b46f/Untitled%205.png"  class="center"  style="border-radius: 10px;"  />
+
+</p>
+<h3 id="which-users-information-is-in-the-file">Which users' information is in the file?</h3>
+<p>Now, simply open the file to check its contents.
+
+    <img src="/images/hackerviser/File%20Hunter%2009e09ac895ae4346a26594893322b46f/Untitled%206.png"  class="center"  style="border-radius: 10px;"  />
+
+</p>
+
+    <img src="/images/hackerviser/File%20Hunter%2009e09ac895ae4346a26594893322b46f/Untitled%207.png"  class="center"  style="border-radius: 10px;"  />
+
+
 ]]></content>
         </item>
         

@@ -6,11 +6,11 @@
     <description>Recent content in Tags on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>cybersecurity</title>
       <link>https://nmmorette.github.io/tags/cybersecurity/</link>
-      <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 02 Mar 2024 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/tags/cybersecurity/</guid>
       <description></description>
@@ -19,16 +19,25 @@
     <item>
       <title>hackerviser</title>
       <link>https://nmmorette.github.io/tags/hackerviser/</link>
-      <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 02 Mar 2024 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/tags/hackerviser/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>stage1</title>
+      <link>https://nmmorette.github.io/tags/stage1/</link>
+      <pubDate>Sat, 02 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/stage1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>training</title>
       <link>https://nmmorette.github.io/tags/training/</link>
-      <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 02 Mar 2024 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/tags/training/</guid>
       <description></description>
@@ -37,7 +46,7 @@
     <item>
       <title>warmup</title>
       <link>https://nmmorette.github.io/tags/warmup/</link>
-      <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 02 Mar 2024 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/tags/warmup/</guid>
       <description></description>
@@ -85,15 +94,6 @@
       <pubDate>Mon, 11 Dec 2023 00:00:00 +0000</pubDate>
       
       <guid>https://nmmorette.github.io/tags/cheet-sheet/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cheat sheet</title>
-      <link>https://nmmorette.github.io/tags/cheat-sheet/</link>
-      <pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/tags/cheat-sheet/</guid>
       <description></description>
     </item>
     

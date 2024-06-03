@@ -6,15 +6,53 @@
     <description>Recent content in writeup on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/series/writeup/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/series/writeup/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hackerviser - Arrow Warmup</title>
-      <link>https://nmmorette.github.io/posts/2024/02/hackerviser-arrow-warmup/</link>
+      <title>Hackerviser Secure Command - Warmup Stage I</title>
+      <link>https://nmmorette.github.io/posts/2024/03/hackerviser-secure-command-warmup-stage-i/</link>
+      <pubDate>Sat, 02 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2024/03/hackerviser-secure-command-warmup-stage-i/</guid>
+      <description>Secure Command Introduction Secure Shell (SSH) is a protocol used to securely access and manage devices on a network. It encrypts data to protect confidentiality and integrity, making SSH a preferred option over Telnet for remote administration.
+What is SSH? SSH is a cryptographic network protocol that facilitates secure communication over an unsecured network. Originally designed as a replacement for insecure protocols like Telnet, SSH ensures confidentiality and integrity of data exchanged between two networked devices.</description>
+    </item>
+    
+    <item>
+      <title>Hackerviser 007 - Warmup Stage I</title>
+      <link>https://nmmorette.github.io/posts/2024/03/hackerviser-007-warmup-stage-i/</link>
+      <pubDate>Fri, 01 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2024/03/hackerviser-007-warmup-stage-i/</guid>
+      <description>007 Introduction Remote Desktop Protocol (RDP) has become an indispensable tool in today&amp;rsquo;s digital landscape, enabling seamless remote access to computers and servers from anywhere in the world.
+What is Remote Desktop Protocol (RDP)? Remote Desktop Protocol (RDP) is a proprietary protocol developed by Microsoft, designed to facilitate remote desktop connections between computers over a network connection. It allows users to access and control a remote computer as if they were physically present at the machine.</description>
+    </item>
+    
+    <item>
+      <title>Hackerviser Reddict - Warmup Stage I</title>
+      <link>https://nmmorette.github.io/posts/2024/02/hackerviser-reddict-warmup-stage-i/</link>
+      <pubDate>Thu, 29 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2024/02/hackerviser-reddict-warmup-stage-i/</guid>
+      <description>Reddict Introduction Redis, short for Remote Dictionary Server, has emerged as a cornerstone in modern software development, revolutionizing how data is stored, cached, and processed. In this comprehensive guide, we will delve into the depths of Redis, exploring its features, use cases, and best practices. Whether you&amp;rsquo;re a seasoned developer seeking to optimize performance or a newcomer intrigued by the buzz surrounding Redis, this blog post aims to provide you with a thorough understanding of its capabilities and potential applications.</description>
+    </item>
+    
+    <item>
+      <title>Hackerviser Arrow - Warmup Stage I</title>
+      <link>https://nmmorette.github.io/posts/2024/02/hackerviser-arrow-warmup-stage-i/</link>
       <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://nmmorette.github.io/posts/2024/02/hackerviser-arrow-warmup/</guid>
+      <guid>https://nmmorette.github.io/posts/2024/02/hackerviser-arrow-warmup-stage-i/</guid>
       <description>Arrow Introduction Telnet, short for Telecommunication Network, is a protocol used for remote terminal connections, allowing users to interact with a computer or network device over a network. Despite its age and simplicity, Telnet still plays a role in various networking scenarios. However, its lack of security features makes it a risky choice in today&amp;rsquo;s cybersecurity landscape.
 What is Telnet? Telnet operates on the Application Layer of the OSI model and uses a client-server architecture.</description>
+    </item>
+    
+    <item>
+      <title>Hackerviser File Hunter - Warmup Stage I</title>
+      <link>https://nmmorette.github.io/posts/2024/02/hackerviser-file-hunter-warmup-stage-i/</link>
+      <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2024/02/hackerviser-file-hunter-warmup-stage-i/</guid>
+      <description>File Hunter Introduction File Transfer Protocol (FTP) is a standard network protocol used for transferring files between a client and a server on a computer network. Since its inception in the early days of the internet, FTP has remained a popular choice for facilitating file transfers, despite the emergence of more secure alternatives. In this blog post, we will delve into the fundamentals of FTP, its operation, security considerations, and alternatives available in today&amp;rsquo;s technology landscape.</description>
     </item>
     
     <item>
@@ -72,47 +110,6 @@ exiftool WindowsXP.jpg ExifTool Version Number : 12.65 File Name : WindowsXP.jpg
       <guid>https://nmmorette.github.io/posts/2022/08/tryhackme-blue-write-up/</guid>
       <description>Blue Enumeration Initiated the first scan using nmap: The scan results:
 sudo nmap -PA 10.10.248.155 Starting Nmap 7.94 ( https://nmap.org ) at 2023-10-10 19:48 EDT Nmap scan report for 10.10.248.155 Host is up (0.25s latency). Not shown: 991 closed tcp ports (reset) PORT STATE SERVICE 135/tcp open msrpc 139/tcp open netbios-ssn 445/tcp open microsoft-ds 3389/tcp open ms-wbt-server 49152/tcp open unknown 49153/tcp open unknown 49154/tcp open unknown 49158/tcp open unknown 49160/tcp open unknown Nmap done: 1 IP address (1 host up) scanned in 8.</description>
-    </item>
-    
-    <item>
-      <title>Hack the Box - Forest - Write Up</title>
-      <link>https://nmmorette.github.io/posts/2022/06/hack-the-box-forest-write-up/</link>
-      <pubDate>Mon, 13 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/posts/2022/06/hack-the-box-forest-write-up/</guid>
-      <description>Forest Enumeration nmap Initian enumeration with nmap
-Some usefull information:
-Computer name: FOREST | NetBIOS computer name: FOREST\x00 | Domain name: htb.local | Forest name: htb.local | FQDN: FOREST.htb.local |_ System time: 2022-06-13T01:57:38-07:00 OS: Windows Server 2016 Standard 14393 (Windows Server 2016 Standard 6.3 3268/tcp open ldap Microsoft Windows Active Directory LDAP (Domain: htb.local, Site: Default-First-Site-Name) Users Lets enumerate users. For the user enumeration, we can search for objectClass as person and search for sAMAccountName:.</description>
-    </item>
-    
-    <item>
-      <title>Hack the Box - Paper - Write Up</title>
-      <link>https://nmmorette.github.io/posts/2022/04/hack-the-box-paper-write-up/</link>
-      <pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/posts/2022/04/hack-the-box-paper-write-up/</guid>
-      <description>Enumeration The journey begins with the execution of Nmap. This versatile tool offers a plethora of scanning options.
-sudo nmap -sS 10.129.153.125 -A -p22,80,443 Starting Nmap 7.92 ( https://nmap.org ) at 2022-04-04 13:30 -03 Nmap scan report for 10.129.153.125 Host is up (0.32s latency). PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 8.0 (protocol 2.0) | ssh-hostkey: | 2048 10:05:ea:50:56:a6:00:cb:1c:9c:93:df:5f:83:e0:64 (RSA) | 256 58:8c:82:1c:c6:63:2a:83:87:5c:2f:2b:4f:4d:c3:79 (ECDSA) |_ 256 31:78:af:d1:3b:c4:2e:9d:60:4e:eb:5d:03:ec:a0:22 (ED25519) 80/tcp open http Apache httpd 2.</description>
-    </item>
-    
-    <item>
-      <title>Hack the Box - Lame - Write Up</title>
-      <link>https://nmmorette.github.io/posts/2021/09/hack-the-box-lame-write-up/</link>
-      <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/posts/2021/09/hack-the-box-lame-write-up/</guid>
-      <description>Enumeration Initial scan:
-└─$ sudo nmap -sS -Pn 10.10.10.3 [sudo] password for venomsnake: Host discovery disabled (-Pn). All addresses will be marked &amp;#39;up&amp;#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-09-01 10:40 -03 Nmap scan report for 10.10.10.3 Host is up (0.17s latency). Not shown: 996 filtered ports PORT STATE SERVICE 21/tcp open ftp 22/tcp open ssh 139/tcp open netbios-ssn 445/tcp open microsoft-ds Nmap done: 1 IP address (1 host up) scanned in 20.</description>
-    </item>
-    
-    <item>
-      <title>TryHackme - Bounty Hacker - Write Up</title>
-      <link>https://nmmorette.github.io/posts/2021/08/tryhackme-bounty-hacker-write-up/</link>
-      <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/posts/2021/08/tryhackme-bounty-hacker-write-up/</guid>
-      <description>First of all, let&amp;rsquo;s nmap the machine IP.
-└─$ sudo nmap -sS -Pn 10.10.207.23 [sudo] password for venomsnake: Host discovery disabled (-Pn). All addresses will be marked &amp;#39;up&amp;#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-15 07:43 -03 Nmap scan report for 10.10.207.23 Host is up (0.20s latency). Not shown: 967 filtered ports, 30 closed ports PORT STATE SERVICE 21/tcp open ftp 22/tcp open ssh 80/tcp open http Nmap done: 1 IP address (1 host up) scanned in 9.</description>
     </item>
     
   </channel>
