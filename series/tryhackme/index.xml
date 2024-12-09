@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tryhackme on Natan Maia Morette</title>
+    <link>https://nmmorette.github.io/series/tryhackme/</link>
+    <description>Recent content in tryhackme on Natan Maia Morette</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/series/tryhackme/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TryHackme - Rootme - Write-Up</title>
+      <link>https://nmmorette.github.io/posts/2023/11/tryhackme-rootme-write-up/</link>
+      <pubDate>Wed, 22 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2023/11/tryhackme-rootme-write-up/</guid>
+      <description>RootMe A ctf for beginners, can you root me?
+https://tryhackme.com/room/rrootme
+Enumeration nmap Initial enumeration with nmap
+nmap 10.10.88.1 Starting Nmap 7.94SVN ( https://nmap.org ) at 2023-11-21 05:03 PST Nmap scan report for 10.10.88.1 Host is up (0.32s latency). Not shown: 996 closed tcp ports (conn-refused) PORT STATE SERVICE 1/tcp filtered tcpmux 22/tcp open ssh 80/tcp open http 2200/tcp filtered ici Nmap done: 1 IP address (1 host up) scanned in 27.</description>
+    </item>
+    
+    <item>
+      <title>TryHackme - OhSINT - Write-Up</title>
+      <link>https://nmmorette.github.io/posts/2022/08/tryhackme-ohsint-write-up/</link>
+      <pubDate>Wed, 24 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2022/08/tryhackme-ohsint-write-up/</guid>
+      <description>OhSINT - TryHackMe  What information can you possible get with just one photo?
+ First step is download the file and open it.
+A nostalgic Wallpaper
+Using exiftool to check some attributes:
+exiftool WindowsXP.jpg ExifTool Version Number : 12.65 File Name : WindowsXP.jpg Directory : . File Size : 234 kB File Modification Date/Time : 2023:09:26 18:33:44-04:00 File Access Date/Time : 2023:09:26 18:33:49-04:00 File Inode Change Date/Time : 2023:09:26 18:33:48-04:00 File Permissions : -rwxrw-rw- File Type : JPEG File Type Extension : jpg MIME Type : image/jpeg XMP Toolkit : Image::ExifTool 11.</description>
+    </item>
+    
+    <item>
+      <title>TryHackme - Blue - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2022/08/tryhackme-blue-write-up/</link>
+      <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2022/08/tryhackme-blue-write-up/</guid>
+      <description>Blue Enumeration Initiated the first scan using nmap: The scan results:
+sudo nmap -PA 10.10.248.155 Starting Nmap 7.94 ( https://nmap.org ) at 2023-10-10 19:48 EDT Nmap scan report for 10.10.248.155 Host is up (0.25s latency). Not shown: 991 closed tcp ports (reset) PORT STATE SERVICE 135/tcp open msrpc 139/tcp open netbios-ssn 445/tcp open microsoft-ds 3389/tcp open ms-wbt-server 49152/tcp open unknown 49153/tcp open unknown 49154/tcp open unknown 49158/tcp open unknown 49160/tcp open unknown Nmap done: 1 IP address (1 host up) scanned in 8.</description>
+    </item>
+    
+    <item>
+      <title>TryHackme - Bounty Hacker - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2021/08/tryhackme-bounty-hacker-write-up/</link>
+      <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/08/tryhackme-bounty-hacker-write-up/</guid>
+      <description>First of all, let&amp;rsquo;s nmap the machine IP.
+└─$ sudo nmap -sS -Pn 10.10.207.23 [sudo] password for venomsnake: Host discovery disabled (-Pn). All addresses will be marked &amp;#39;up&amp;#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-15 07:43 -03 Nmap scan report for 10.10.207.23 Host is up (0.20s latency). Not shown: 967 filtered ports, 30 closed ports PORT STATE SERVICE 21/tcp open ftp 22/tcp open ssh 80/tcp open http Nmap done: 1 IP address (1 host up) scanned in 9.</description>
+    </item>
+    
+    <item>
+      <title>TryHackme - Steel Mountain - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2021/07/tryhackme-steel-mountain-write-up/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-steel-mountain-write-up/</guid>
+      <description>Task 1. Introduction First of all, let&amp;rsquo;s nmap the machine IP.
+nmap -sS -A 10.10.169.181 -PnWe found a web service open port (80), let&amp;rsquo;s open the web page:
+Take a look at the source code:
+Who is the employee of the month?
+Bill Harper
+Task 2. Inicial Access Scan the machine with nmap. What is the other port running a web server on?
+Nmap gives this answer:
+8080</description>
+    </item>
+    
+    <item>
+      <title>TryHackme - The Cod Caper - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-write-up/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-write-up/</guid>
+      <description>Task 1. Intro This is a write up for &amp;ldquo;The Cod Caper&amp;rdquo; room at Try Hack Me.
+Room&amp;rsquo;s intro note:
+Hello there my name is Pingu. I&#39;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&#39;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server.</description>
+    </item>
+    
+  </channel>
+</rss>

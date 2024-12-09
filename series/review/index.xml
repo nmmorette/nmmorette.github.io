@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>review on Natan Maia Morette</title>
+    <link>https://nmmorette.github.io/series/review/</link>
+    <description>Recent content in review on Natan Maia Morette</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/series/review/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Review eJPTv2 - Junior Penetration Tester</title>
+      <link>https://nmmorette.github.io/posts/2023/12/review-ejptv2-junior-penetration-tester/</link>
+      <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2023/12/review-ejptv2-junior-penetration-tester/</guid>
+      <description>Introduction This is my review of the eJPTv2 certification offered by INE. Initially, I purchased the voucher for the exam, version V1, without including the training. Later, I was able to exchange it for the V2 version with INE, a process that went smoothly and without complications or costs.
+I decided not to participate in the training offered by INE, a choice based on my pre-existing experience in the field. This experience led me to believe that I already had the necessary knowledge to take the eJPT exam without the need for additional preparation.</description>
+    </item>
+    
+    <item>
+      <title>Review CNSP - Certified Network Security Practitioner</title>
+      <link>https://nmmorette.github.io/posts/2023/11/review-cnsp-certified-network-security-practitioner/</link>
+      <pubDate>Sat, 25 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2023/11/review-cnsp-certified-network-security-practitioner/</guid>
+      <description>CNSP - Certified Network Security Practitioner Who Should Take This Exam? CNSP (Certified Network Security Professional) is a certification designed for a wide range of professionals in the cybersecurity field. It&amp;rsquo;s particularly suitable for security engineers, network architects, penetration testers, and members of red and blue teams. Moreover, it&amp;rsquo;s an excellent choice for any security enthusiast who aims to test and enhance their understanding of network security.
+In my view, professionals with experience in networking or cybersecurity will find the exam relatively easy.</description>
+    </item>
+    
+  </channel>
+</rss>

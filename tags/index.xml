@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Natan Maia Morette</title>
+    <link>https://nmmorette.github.io/tags/</link>
+    <description>Recent content in Tags on Natan Maia Morette</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CVE</title>
+      <link>https://nmmorette.github.io/tags/cve/</link>
+      <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/cve/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vulnerability</title>
+      <link>https://nmmorette.github.io/tags/vulnerability/</link>
+      <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/vulnerability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WeGIA</title>
+      <link>https://nmmorette.github.io/tags/wegia/</link>
+      <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/wegia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cybersecurity</title>
+      <link>https://nmmorette.github.io/tags/cybersecurity/</link>
+      <pubDate>Sat, 02 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/cybersecurity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hackerviser</title>
+      <link>https://nmmorette.github.io/tags/hackerviser/</link>
+      <pubDate>Sat, 02 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/hackerviser/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stage1</title>
+      <link>https://nmmorette.github.io/tags/stage1/</link>
+      <pubDate>Sat, 02 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/stage1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>training</title>
+      <link>https://nmmorette.github.io/tags/training/</link>
+      <pubDate>Sat, 02 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/training/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>warmup</title>
+      <link>https://nmmorette.github.io/tags/warmup/</link>
+      <pubDate>Sat, 02 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/warmup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>certification</title>
+      <link>https://nmmorette.github.io/tags/certification/</link>
+      <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/certification/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ejpt</title>
+      <link>https://nmmorette.github.io/tags/ejpt/</link>
+      <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/ejpt/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
