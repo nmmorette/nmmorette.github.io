@@ -6,7 +6,38 @@
     <description>Recent content in Tags on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+<<<<<<< Updated upstream
     <lastBuildDate>Sat, 02 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+=======
+    <lastBuildDate>Fri, 06 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CVE</title>
+      <link>https://nmmorette.github.io/tags/cve/</link>
+      <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/cve/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vulnerability</title>
+      <link>https://nmmorette.github.io/tags/vulnerability/</link>
+      <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/vulnerability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WeGIA</title>
+      <link>https://nmmorette.github.io/tags/wegia/</link>
+      <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/wegia/</guid>
+      <description></description>
+    </item>
+    
+>>>>>>> Stashed changes
     <item>
       <title>cybersecurity</title>
       <link>https://nmmorette.github.io/tags/cybersecurity/</link>
@@ -70,6 +101,7 @@
       <description></description>
     </item>
     
+<<<<<<< Updated upstream
     <item>
       <title>INE</title>
       <link>https://nmmorette.github.io/tags/ine/</link>
@@ -97,5 +129,7 @@
       <description></description>
     </item>
     
+=======
+>>>>>>> Stashed changes
   </channel>
 </rss>

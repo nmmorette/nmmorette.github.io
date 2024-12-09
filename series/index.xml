@@ -6,7 +6,20 @@
     <description>Recent content in Series on Natan Maia Morette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+<<<<<<< Updated upstream
     <lastBuildDate>Sat, 02 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+=======
+    <lastBuildDate>Fri, 06 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CVE</title>
+      <link>https://nmmorette.github.io/series/cve/</link>
+      <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/series/cve/</guid>
+      <description></description>
+    </item>
+    
+>>>>>>> Stashed changes
     <item>
       <title>Hackerviser</title>
       <link>https://nmmorette.github.io/series/hackerviser/</link>
@@ -88,6 +101,7 @@
       <description></description>
     </item>
     
+<<<<<<< Updated upstream
     <item>
       <title>howtodo</title>
       <link>https://nmmorette.github.io/series/howtodo/</link>
@@ -97,5 +111,7 @@
       <description></description>
     </item>
     
+=======
+>>>>>>> Stashed changes
   </channel>
 </rss>
