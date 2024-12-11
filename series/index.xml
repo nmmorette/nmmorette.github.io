@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Series on Natan Maia Morette</title>
+    <link>https://nmmorette.github.io/series/</link>
+    <description>Recent content in Series on Natan Maia Morette</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Natan Morette</copyright>
+    <lastBuildDate>Wed, 11 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OSINT</title>
+      <link>https://nmmorette.github.io/series/osint/</link>
+      <pubDate>Wed, 11 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/series/osint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CVE</title>
+      <link>https://nmmorette.github.io/series/cve/</link>
+      <pubDate>Thu, 05 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/series/cve/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vulnerability research</title>
+      <link>https://nmmorette.github.io/series/vulnerability-research/</link>
+      <pubDate>Thu, 05 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/series/vulnerability-research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hackerviser</title>
+      <link>https://nmmorette.github.io/series/hackerviser/</link>
+      <pubDate>Fri, 01 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/series/hackerviser/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tryhackme</title>
+      <link>https://nmmorette.github.io/series/tryhackme/</link>
+      <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/series/tryhackme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>writeup</title>
+      <link>https://nmmorette.github.io/series/writeup/</link>
+      <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/series/writeup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HTB</title>
+      <link>https://nmmorette.github.io/series/htb/</link>
+      <pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/series/htb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>https://nmmorette.github.io/series/tutorial/</link>
+      <pubDate>Sat, 17 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/series/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>howtodo</title>
+      <link>https://nmmorette.github.io/series/howtodo/</link>
+      <pubDate>Wed, 30 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/series/howtodo/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
