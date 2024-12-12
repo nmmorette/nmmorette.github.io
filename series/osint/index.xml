@@ -9,11 +9,11 @@
     <copyright>Natan Morette</copyright>
     <lastBuildDate>Wed, 11 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/series/osint/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>OSINT - Básico na prática</title>
-      <link>https://nmmorette.github.io/posts/2024/12/osint-b%C3%A1sico-na-pr%C3%A1tica/</link>
+      <title>OSINT - Básico na prática pt-br</title>
+      <link>https://nmmorette.github.io/posts/2024/12/osint-b%C3%A1sico-na-pr%C3%A1tica-pt-br/</link>
       <pubDate>Wed, 11 Dec 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://nmmorette.github.io/posts/2024/12/osint-b%C3%A1sico-na-pr%C3%A1tica/</guid>
+      <guid>https://nmmorette.github.io/posts/2024/12/osint-b%C3%A1sico-na-pr%C3%A1tica-pt-br/</guid>
       <description>OSINT - Básico na prática Desafio Tryhackme ⚠️ Faça cadastro no site Tryhackme para participar do desafio.
 TryHackMe | Cyber Security Training
 Atalho Ferramentas úteis ⚠️ Confira esta página com diversas ferramentas úteis para OSINT, além de recomendações de livros, cursos e sites.
@@ -22,11 +22,11 @@ OSINT O que é OSINT? OSINT (Open Source Intelligence) é a prática de coletar 
     </item>
     
     <item>
-      <title>OSINT - Desafio OSINT</title>
-      <link>https://nmmorette.github.io/posts/2024/12/osint-desafio-osint/</link>
+      <title>OSINT - Desafio OSINT pt-br</title>
+      <link>https://nmmorette.github.io/posts/2024/12/osint-desafio-osint-pt-br/</link>
       <pubDate>Wed, 11 Dec 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://nmmorette.github.io/posts/2024/12/osint-desafio-osint/</guid>
+      <guid>https://nmmorette.github.io/posts/2024/12/osint-desafio-osint-pt-br/</guid>
       <description>Desafio OSINT Esse desafio foi feito para dois eventos em 2024, na GloboSecWeek2024 e também na turma CSSDC24 da ESG.
 O desafio é o mesmo para ambos, porém as Flags são diferentes.
 Links para o Desafio https://tryhackme.com/r/room/osintcssdc2024

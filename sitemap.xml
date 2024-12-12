@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://nmmorette.github.io/posts/2024/12/osint-b%C3%A1sico-na-pr%C3%A1tica/</loc>
+    <loc>https://nmmorette.github.io/posts/2024/12/osint-b%C3%A1sico-na-pr%C3%A1tica-pt-br/</loc>
     <lastmod>2024-12-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nmmorette.github.io/posts/2024/12/osint-desafio-osint/</loc>
+    <loc>https://nmmorette.github.io/posts/2024/12/osint-desafio-osint-pt-br/</loc>
     <lastmod>2024-12-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nmmorette.github.io/posts/2024/12/cve-2024-53470stored-xss-in-gateway_pagamento.php-function-wegia/</loc>
@@ -19,6 +19,9 @@
   </url><url>
     <loc>https://nmmorette.github.io/posts/2024/12/cve-2024-53473broken-access-control-wegia/</loc>
     <lastmod>2024-12-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/posts/2024/08/osint-ctf-menina-cyber-sec-and-hack-in-cariri/</loc>
+    <lastmod>2024-08-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nmmorette.github.io/posts/2024/03/hackerviser-secure-command-warmup-stage-i/</loc>
     <lastmod>2024-03-01T00:00:00+00:00</lastmod>
@@ -137,6 +140,12 @@
     <loc>https://nmmorette.github.io/tags/wegia/</loc>
     <lastmod>2024-12-05T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://nmmorette.github.io/tags/ctf/</loc>
+    <lastmod>2024-08-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nmmorette.github.io/series/ctf/</loc>
+    <lastmod>2024-08-10T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://nmmorette.github.io/tags/hackerviser/</loc>
     <lastmod>2024-03-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -184,9 +193,6 @@
   </url><url>
     <loc>https://nmmorette.github.io/tags/thesecopsgroup/</loc>
     <lastmod>2023-11-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nmmorette.github.io/tags/ctf/</loc>
-    <lastmod>2023-11-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nmmorette.github.io/tags/linux/</loc>
     <lastmod>2023-11-21T00:00:00+00:00</lastmod>

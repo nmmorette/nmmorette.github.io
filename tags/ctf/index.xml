@@ -7,7 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Natan Morette</copyright>
-    <lastBuildDate>Tue, 21 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OSINT CTF - Menina Cyber Sec and Hack in Cariri</title>
+      <link>https://nmmorette.github.io/posts/2024/08/osint-ctf-menina-cyber-sec-and-hack-in-cariri/</link>
+      <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2024/08/osint-ctf-menina-cyber-sec-and-hack-in-cariri/</guid>
+      <description>OSINT - CTF - MCS Solutions for the OSINT CTF challenges conducted by Menina de Cyber Sec and Hack in Cariri in August 2024.
+The Trip of My Dreams https://hackincariri.s3.amazonaws.com/meninadecybersec/osint/desafio+1/OSINT-easy-01.jpeg
+ The trip of my dreams
+“The photos from the trip turned out amazing!” This is the photo of where we had a snack after a long walk through the city. The flag is the name of the establishment where the cat is coming out of.</description>
+    </item>
+    
     <item>
       <title>TryHackme - Rootme - Write-Up</title>
       <link>https://nmmorette.github.io/posts/2023/11/tryhackme-rootme-write-up/</link>
@@ -102,16 +114,6 @@ sudo nmap -sS 10.129.153.125 -A -p22,80,443 Starting Nmap 7.92 ( https://nmap.or
       <guid>https://nmmorette.github.io/posts/2021/08/tryhackme-bounty-hacker-write-up/</guid>
       <description>First of all, let&amp;rsquo;s nmap the machine IP.
 └─$ sudo nmap -sS -Pn 10.10.207.23 [sudo] password for venomsnake: Host discovery disabled (-Pn). All addresses will be marked &amp;#39;up&amp;#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-15 07:43 -03 Nmap scan report for 10.10.207.23 Host is up (0.20s latency). Not shown: 967 filtered ports, 30 closed ports PORT STATE SERVICE 21/tcp open ftp 22/tcp open ssh 80/tcp open http Nmap done: 1 IP address (1 host up) scanned in 9.</description>
-    </item>
-    
-    <item>
-      <title>Hack the Box - Blue- Write Up</title>
-      <link>https://nmmorette.github.io/posts/2021/08/hack-the-box-blue-write-up/</link>
-      <pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nmmorette.github.io/posts/2021/08/hack-the-box-blue-write-up/</guid>
-      <description>Enumeration Initial scan:
-└──╼ $sudo nmap -sS -Pn 10.10.10.40 Host discovery disabled (-Pn). All addresses will be marked &amp;#39;up&amp;#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-11 15:11 -03 Nmap scan report for 10.10.10.40 Host is up (0.45s latency). Not shown: 991 closed ports PORT STATE SERVICE 135/tcp open msrpc 139/tcp open netbios-ssn 445/tcp open microsoft-ds 49152/tcp open unknown 49153/tcp open unknown 49154/tcp open unknown 49155/tcp open unknown 49156/tcp open unknown 49157/tcp open unknown Second nmap scan with --script vuln only on the open ports:</description>
     </item>
     
   </channel>

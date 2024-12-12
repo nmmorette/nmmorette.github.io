@@ -10,11 +10,11 @@
         <atom:link href="https://nmmorette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>OSINT - Básico na prática</title>
-            <link>https://nmmorette.github.io/posts/2024/12/osint-b%C3%A1sico-na-pr%C3%A1tica/</link>
+            <title>OSINT - Básico na prática pt-br</title>
+            <link>https://nmmorette.github.io/posts/2024/12/osint-b%C3%A1sico-na-pr%C3%A1tica-pt-br/</link>
             <pubDate>Wed, 11 Dec 2024 00:00:00 +0000</pubDate>
             
-            <guid>https://nmmorette.github.io/posts/2024/12/osint-b%C3%A1sico-na-pr%C3%A1tica/</guid>
+            <guid>https://nmmorette.github.io/posts/2024/12/osint-b%C3%A1sico-na-pr%C3%A1tica-pt-br/</guid>
             <description>OSINT - Básico na prática Desafio Tryhackme ⚠️ Faça cadastro no site Tryhackme para participar do desafio.
 TryHackMe | Cyber Security Training
 Atalho Ferramentas úteis ⚠️ Confira esta página com diversas ferramentas úteis para OSINT, além de recomendações de livros, cursos e sites.
@@ -172,11 +172,11 @@ Ambos desafios são iguais, alterando somente as flags.</p>
         </item>
         
         <item>
-            <title>OSINT - Desafio OSINT</title>
-            <link>https://nmmorette.github.io/posts/2024/12/osint-desafio-osint/</link>
+            <title>OSINT - Desafio OSINT pt-br</title>
+            <link>https://nmmorette.github.io/posts/2024/12/osint-desafio-osint-pt-br/</link>
             <pubDate>Wed, 11 Dec 2024 00:00:00 +0000</pubDate>
             
-            <guid>https://nmmorette.github.io/posts/2024/12/osint-desafio-osint/</guid>
+            <guid>https://nmmorette.github.io/posts/2024/12/osint-desafio-osint-pt-br/</guid>
             <description>Desafio OSINT Esse desafio foi feito para dois eventos em 2024, na GloboSecWeek2024 e também na turma CSSDC24 da ESG.
 O desafio é o mesmo para ambos, porém as Flags são diferentes.
 Links para o Desafio https://tryhackme.com/r/room/osintcssdc2024
@@ -301,11 +301,11 @@ Payload: &amp;lt;script&amp;gt;alert(&#39;Alert: XSS&#39;);&amp;lt;/script&amp;g
             <content type="html"><![CDATA[<h1 id="cve-2024-53470stored-xss-in-gateway_pagamentophp-function">CVE-2024-53470:Stored XSS in gateway_pagamento.php function</h1>
 <h2 id="vendor">Vendor</h2>
 <p>WeGIA (Web Gerenciador Institucional) is an integrated management system licensed under the GNU GPL v3.0, designed to enhance administration, control, and transparency for institutions.</p>
-<h2 id="affected-product-code-base">Affected Product Code Base</h2>
+<h3 id="affected-product-code-base">Affected Product Code Base</h3>
 <p>WeGIA - v3.2.0</p>
 <h2 id="vulnerability-description">Vulnerability Description</h2>
 <p>A stored Cross-Site Scripting (XSS) vulnerability was identified in the WeGIA application. This vulnerability allows unauthorized scripts to be executed within the user&rsquo;s browser context.</p>
-<h2 id="poc">POC</h2>
+<h3 id="poc">POC</h3>
 <p>File: <code>gateway_pagamento.php</code></p>
 <p>Payload: <code>&lt;script&gt;alert('Alert: XSS');&lt;/script&gt;</code></p>
 <p>Endpoint: <code>id=&quot;plataforma-endpoint&quot; name=&quot;endpoint&quot;</code></p>
@@ -352,11 +352,11 @@ Payload: &amp;lt;script&amp;gt;alert(&#39;Alert: XSS4&#39;);&amp;lt;/script&amp;
             <content type="html"><![CDATA[<h1 id="cve-2024-53471stored-xss-in-meio_pagamentophp-function">CVE-2024-53471:Stored XSS in meio_pagamento.php function</h1>
 <h2 id="vendor">Vendor</h2>
 <p>WeGIA (Web Gerenciador Institucional) is an integrated management system licensed under the GNU GPL v3.0, designed to enhance administration, control, and transparency for institutions.</p>
-<h2 id="affected-product-code-base">Affected Product Code Base</h2>
+<h3 id="affected-product-code-base">Affected Product Code Base</h3>
 <p>WeGIA - v3.2.0</p>
 <h2 id="vulnerability-description">Vulnerability Description</h2>
 <p>A stored Cross-Site Scripting (XSS) vulnerability was identified in the WeGIA application. This vulnerability allows unauthorized scripts to be executed within the user&rsquo;s browser context.</p>
-<h2 id="poc">POC</h2>
+<h3 id="poc">POC</h3>
 <p>File: <code>meio_pagamento.php</code></p>
 <p>Payload: <code>&lt;script&gt;alert('Alert: XSS4');&lt;/script&gt;</code></p>
 <p>Endpoint: <code>id=&quot;meio-pagamento-nome&quot;;name=&quot;nome&quot;</code></p>
@@ -387,11 +387,11 @@ Vulnerability Description A Cross-Site Request Forgery (CSRF) vulnerability was 
             <content type="html"><![CDATA[<h1 id="cve-2024-53472csrf-in-controlphp-to-change-password">CVE-2024-53472:CSRF in control.php to change password</h1>
 <h2 id="vendor">Vendor</h2>
 <p>WeGIA (Web Gerenciador Institucional) is an integrated management system licensed under the GNU GPL v3.0, designed to enhance administration, control, and transparency for institutions.</p>
-<h2 id="affected-product-code-base">Affected Product Code Base</h2>
+<h3 id="affected-product-code-base">Affected Product Code Base</h3>
 <p>WeGIA - v3.2.0</p>
 <h2 id="vulnerability-description">Vulnerability Description</h2>
 <p>A Cross-Site Request Forgery (CSRF) vulnerability was identified in the WeGIA application. This flaw enables an attacker to induce an authenticated user to perform unintended actions without their consent or awareness.</p>
-<h2 id="poc">POC</h2>
+<h3 id="poc">POC</h3>
 <p>This code allows an attacker to change the password of an authenticated user without their consent by loading this malicious page while the user is logged into the application.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
@@ -436,13 +436,13 @@ Vulnerability Description A Cross-Site Request Forgery (CSRF) vulnerability was 
 Affected Product Code Base WeGIA - v3.2.0
 Vulnerability Description A critical vulnerability was identified in the web application WeGIa. This vulnerability allows an attacker to change the password of the admin user by sending a POST request to the control.php endpoint without requiring authentication or authorization.</description>
             <content type="html"><![CDATA[<h1 id="cve-2024-53473broken-access-control">CVE-2024-53473:Broken Access Control</h1>
-<h1 id="vendor">Vendor</h1>
+<h2 id="vendor">Vendor</h2>
 <p>WeGIA (Web Gerenciador Institucional) is an integrated management system licensed under the GNU GPL v3.0, designed to enhance administration, control, and transparency for institutions.</p>
-<h2 id="affected-product-code-base">Affected Product Code Base</h2>
+<h3 id="affected-product-code-base">Affected Product Code Base</h3>
 <p>WeGIA - v3.2.0</p>
-<h1 id="vulnerability-description">Vulnerability Description</h1>
+<h2 id="vulnerability-description">Vulnerability Description</h2>
 <p>A critical vulnerability was identified in the web application WeGIa. This vulnerability allows an attacker to change the password of the admin user by sending a POST request to the control.php endpoint without requiring authentication or authorization.</p>
-<h1 id="poc">POC</h1>
+<h3 id="poc">POC</h3>
 <p>Burp Request:</p>
 
     <img src="/images/CVE/cve2024-53473.png"  class="center"  style="border-radius: 10px;"  />
@@ -454,14 +454,161 @@ Vulnerability Description A critical vulnerability was identified in the web app
   -H &#34;Origin: https://demo.wegia.org&#34; \
   --data-raw &#34;nova_senha=1234567<span style="color:#960050;background-color:#1e0010">&amp;</span>confirmar_senha=1234567<span style="color:#960050;background-color:#1e0010">&amp;</span>nomeClasse=FuncionarioControle<span style="color:#960050;background-color:#1e0010">&amp;</span>metodo=alterarSenha<span style="color:#960050;background-color:#1e0010">&amp;</span>redir=logout.php<span style="color:#960050;background-color:#1e0010">&amp;</span>id_pessoa=1<span style="color:#960050;background-color:#1e0010">&amp;</span>alterar=Alterar&#34;
 
-</code></pre></div><h1 id="reference">Reference</h1>
+</code></pre></div><h2 id="reference">Reference</h2>
 <p><a href="https://github.com/nilsonLazarin/WeGIA/issues/791" target="_blank" >https://github.com/nilsonLazarin/WeGIA/issues/791</a></p>
 <p><a href="https://www.wegia.org/" target="_blank" >https://www.wegia.org</a></p>
 <p><a href="https://github.com/nilsonmori/WeGIA" target="_blank" >https://github.com/nilsonmori/WeGIA</a></p>
-<h1 id="discoverer">Discoverer</h1>
+<h2 id="discoverer">Discoverer</h2>
 <blockquote>
 <p><a href="https://nmmorette.github.io" target="_blank" >Natan Maia Morette</a> and <a href="https://www.linkedin.com/in/diegocbcastro/" target="_blank" >Diego Cardoso Borda Castro</a>, Nov 2024.</p>
 </blockquote>
+]]></content>
+        </item>
+        
+        <item>
+            <title>OSINT CTF - Menina Cyber Sec and Hack in Cariri</title>
+            <link>https://nmmorette.github.io/posts/2024/08/osint-ctf-menina-cyber-sec-and-hack-in-cariri/</link>
+            <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
+            
+            <guid>https://nmmorette.github.io/posts/2024/08/osint-ctf-menina-cyber-sec-and-hack-in-cariri/</guid>
+            <description>OSINT - CTF - MCS Solutions for the OSINT CTF challenges conducted by Menina de Cyber Sec and Hack in Cariri in August 2024.
+The Trip of My Dreams https://hackincariri.s3.amazonaws.com/meninadecybersec/osint/desafio+1/OSINT-easy-01.jpeg
+ The trip of my dreams
+“The photos from the trip turned out amazing!” This is the photo of where we had a snack after a long walk through the city. The flag is the name of the establishment where the cat is coming out of.</description>
+            <content type="html"><![CDATA[<h1 id="osint---ctf---mcs">OSINT - CTF - MCS</h1>
+<p>Solutions for the OSINT CTF challenges conducted by Menina de Cyber Sec and Hack in Cariri in August 2024.</p>
+<h1 id="the-trip-of-my-dreams">The Trip of My Dreams</h1>
+<p><a href="https://hackincariri.s3.amazonaws.com/meninadecybersec/osint/desafio&#43;1/OSINT-easy-01.jpeg" target="_blank" >https://hackincariri.s3.amazonaws.com/meninadecybersec/osint/desafio+1/OSINT-easy-01.jpeg</a></p>
+<blockquote>
+<p>The trip of my dreams</p>
+<p>“The photos from the trip turned out amazing!” This is the photo of where we had a snack after a long walk through the city. The flag is the name of the establishment where the cat is coming out of. Example: MCS{PLACE_OF_THE_PHOTO}</p>
+<p>Points: 50</p>
+</blockquote>
+<p>The image below has the first clue for location, which is the Instagram of the place.
+
+    <img src="/images/OSINT-CTF-MCS/image.png"  class="center"  style="border-radius: 10px;"  />
+
+</p>
+<p>After a quick search on Instagram and looking at the profile, you can find the full address and the name of the place <code>Cafe Paulette</code>.
+
+    <img src="/images/OSINT-CTF-MCS/image%201.png"  class="center"  style="border-radius: 10px;"  />
+
+</p>
+<h1 id="which-city">Which City</h1>
+<blockquote>
+<p>It&rsquo;s important to know a bit of history, sometimes to not repeat mistakes, sometimes to replicate successes. This city hosted a large part of Hacking history and is your first clue to finding the character at the center of this story. The flag will be the name of the person in the format FIRSTNAME_LASTNAME. Example: MCS{FIRSTNAME_LASTNAME}</p>
+<p>Points: 300</p>
+</blockquote>
+<p><a href="https://hackincariri.s3.amazonaws.com/meninadecybersec/osint/desafio&#43;4/wherelegendborn.png" target="_blank" >https://hackincariri.s3.amazonaws.com/meninadecybersec/osint/desafio+4/wherelegendborn.png</a></p>
+<p>Using Google Images, you can find the location of the photo and quickly search on Google to learn some hacking history. This leads to the name <code>Kevin Mitnick</code>.</p>
+
+    <img src="/images/OSINT-CTF-MCS/image%202.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h1 id="the-eiffel-tower-is-beautiful">The Eiffel Tower is Beautiful!</h1>
+<blockquote>
+<p>My trip to Paris was a bit strange. As a good hacker, I brought the flag as a souvenir from there. But you&rsquo;ll have to retrieve it yourself, take this photo as a clue. The flag should be submitted in the format MCS{YOUR_FLAG_HERE}</p>
+<p>Points: 350</p>
+</blockquote>
+
+    <img src="/images/OSINT-CTF-MCS/image%203.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p><a href="https://hackincariri.s3.amazonaws.com/meninadecybersec/osint/desafio&#43;5/morri.jpeg" target="_blank" >https://hackincariri.s3.amazonaws.com/meninadecybersec/osint/desafio+5/morri.jpeg</a></p>
+<p>Analyzing the image metadata, you can find a username <code>@abellio356</code>.</p>
+
+    <img src="/images/OSINT-CTF-MCS/image%204.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>After that, using tools to search for usernames like <code>Instant Username Search</code>, you can identify some possible profiles on networks.</p>
+
+    <img src="/images/OSINT-CTF-MCS/image%205.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>On the profile of <code>X</code>, a message in Base64 stands out.</p>
+
+    <img src="/images/OSINT-CTF-MCS/image%206.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>After decoding it, you can find the flag.</p>
+
+    <img src="/images/OSINT-CTF-MCS/image%207.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h1 id="what-game-was-that">What Game Was That?</h1>
+<blockquote>
+<p>Name of the stadium where the match was played? The flag would be the concatenation of the date and the stadium name. Example: MCS{DDMMYYYY_STADIUM}</p>
+<p>Points: 150</p>
+</blockquote>
+<p><a href="https://hackincariri.s3.amazonaws.com/meninadecybersec/osint/desafio&#43;2/OSINT-easy-02.jpeg" target="_blank" >https://hackincariri.s3.amazonaws.com/meninadecybersec/osint/desafio+2/OSINT-easy-02.jpeg</a></p>
+
+    <img src="/images/OSINT-CTF-MCS/image%208.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>To discover which game this was, you first had to identify the team names by their abbreviations <code>LIV</code> and <code>PEÑ</code> through a brief Google search.</p>
+<p>Then, by analyzing matches between these two teams, it was possible to find the date of the match and the location.</p>
+
+    <img src="/images/OSINT-CTF-MCS/image%209.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h1 id="hack-in-cariri">Hack In Cariri</h1>
+<blockquote>
+<p>I know what Hack in Cariri did on January 19th, but do you? The flag must be submitted in the format MCS{YOUR_FLAG_HERE}</p>
+<p>Score: 800</p>
+</blockquote>
+<p>This flag involved joining the WhatsApp community of the CTF. Upon analyzing the data, there was a possible hint.</p>
+
+    <img src="/images/OSINT-CTF-MCS/image%2010.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+    <img src="/images/OSINT-CTF-MCS/image%2011.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>After that, it was just a matter of going to Instagram and searching for the post from that day to find the flag.</p>
+
+    <img src="/images/OSINT-CTF-MCS/image%2012.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h1 id="brazil-">Brazil 🇧🇷</h1>
+<blockquote>
+<p>Samuel recently visited some places in Brazil; he always leaves good reviews. The flag must be submitted in the format MCS{YOUR_FLAG_HERE}</p>
+<p>Score: 200</p>
+</blockquote>
+<p><a href="https://hackincariri.s3.amazonaws.com/meninadecybersec/osint/desafio&#43;3/ponte.png" target="_blank" >https://hackincariri.s3.amazonaws.com/meninadecybersec/osint/desafio+3/ponte.png</a></p>
+<p>Using Google image search, it was possible to find the exact image and the name of the location.</p>
+
+    <img src="/images/OSINT-CTF-MCS/image%2013.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+    <img src="/images/OSINT-CTF-MCS/image%2014.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>Analyzing the comments on the location name, it was possible to find the flag.</p>
+
+    <img src="/images/OSINT-CTF-MCS/image%2015.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<h1 id="menina-de-cybersec">Menina de Cybersec</h1>
+<blockquote>
+<p>And what has Menina de Cybersec been up to? Are you keeping up with our events? The flag must be submitted in the format MCS{YOUR_FLAG_HERE}</p>
+<p>Score: 800</p>
+</blockquote>
+<p>This flag involved joining the CTF Discord server, where the flag could be found.</p>
+
+    <img src="/images/OSINT-CTF-MCS/image%2016.png"  class="center"  style="border-radius: 10px;"  />
+
+
+<p>All challenges completed:</p>
+
+    <img src="/images/OSINT-CTF-MCS/image%2017.png"  class="center"  style="border-radius: 10px;"  />
+
+
+
+    <img src="/images/OSINT-CTF-MCS/image%2018.png"  class="center"  style="border-radius: 10px;"  />
+
+
 ]]></content>
         </item>
         
