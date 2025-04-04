@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Natan Maia Morette</title>
+    <link>https://nmmorette.github.io/tags/</link>
+    <description>Recent content in Tags on Natan Maia Morette</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Natan Morette</copyright>
+    <lastBuildDate>Tue, 11 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CTF</title>
+      <link>https://nmmorette.github.io/tags/ctf/</link>
+      <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/ctf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HTB</title>
+      <link>https://nmmorette.github.io/tags/htb/</link>
+      <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/htb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pentest</title>
+      <link>https://nmmorette.github.io/tags/pentest/</link>
+      <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/pentest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pwn</title>
+      <link>https://nmmorette.github.io/tags/pwn/</link>
+      <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/pwn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>https://nmmorette.github.io/tags/security/</link>
+      <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>writeup</title>
+      <link>https://nmmorette.github.io/tags/writeup/</link>
+      <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/writeup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cybersecurity</title>
+      <link>https://nmmorette.github.io/tags/cybersecurity/</link>
+      <pubDate>Wed, 11 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/cybersecurity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OSINT</title>
+      <link>https://nmmorette.github.io/tags/osint/</link>
+      <pubDate>Wed, 11 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/osint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CVE</title>
+      <link>https://nmmorette.github.io/tags/cve/</link>
+      <pubDate>Thu, 05 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/cve/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WeGIA</title>
+      <link>https://nmmorette.github.io/tags/wegia/</link>
+      <pubDate>Thu, 05 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/tags/wegia/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

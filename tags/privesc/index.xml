@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>privesc on Natan Maia Morette</title>
+    <link>https://nmmorette.github.io/tags/privesc/</link>
+    <description>Recent content in privesc on Natan Maia Morette</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Natan Morette</copyright>
+    <lastBuildDate>Mon, 15 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/privesc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TryHackme - Blue - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2022/08/tryhackme-blue-write-up/</link>
+      <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2022/08/tryhackme-blue-write-up/</guid>
+      <description>Blue Enumeration Initiated the first scan using nmap: The scan results:
+sudo nmap -PA 10.10.248.155 Starting Nmap 7.94 ( https://nmap.org ) at 2023-10-10 19:48 EDT Nmap scan report for 10.10.248.155 Host is up (0.25s latency). Not shown: 991 closed tcp ports (reset) PORT STATE SERVICE 135/tcp open msrpc 139/tcp open netbios-ssn 445/tcp open microsoft-ds 3389/tcp open ms-wbt-server 49152/tcp open unknown 49153/tcp open unknown 49154/tcp open unknown 49158/tcp open unknown 49160/tcp open unknown Nmap done: 1 IP address (1 host up) scanned in 8.</description>
+    </item>
+    
+    <item>
+      <title>TryHackme - CMEss - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2022/04/tryhackme-cmess-write-up/</link>
+      <pubDate>Sun, 03 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2022/04/tryhackme-cmess-write-up/</guid>
+      <description>CMesS TryHackMe | CMesS
+Enumeration nmap I started with a basic scan to identify open ports:
+sudo nmap -sS cmess.thm Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-31 15:58 -03 Nmap scan report for cmess.thm (10.10.172.41) Host is up (0.33s latency). Not shown: 998 closed tcp ports (reset) PORT STATE SERVICE 22/tcp open ssh 80/tcp open http Nmap done: 1 IP address (1 host up) scanned in 3.47 seconds Then I ran a more aggressive scan against those ports:</description>
+    </item>
+    
+    <item>
+      <title>TryHackme - Bounty Hacker - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2021/08/tryhackme-bounty-hacker-write-up/</link>
+      <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/08/tryhackme-bounty-hacker-write-up/</guid>
+      <description>First of all, let&amp;rsquo;s nmap the machine IP.
+└─$ sudo nmap -sS -Pn 10.10.207.23 [sudo] password for venomsnake: Host discovery disabled (-Pn). All addresses will be marked &amp;#39;up&amp;#39; and scan times will be slower. Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-15 07:43 -03 Nmap scan report for 10.10.207.23 Host is up (0.20s latency). Not shown: 967 filtered ports, 30 closed ports PORT STATE SERVICE 21/tcp open ftp 22/tcp open ssh 80/tcp open http Nmap done: 1 IP address (1 host up) scanned in 9.</description>
+    </item>
+    
+    <item>
+      <title>Hack the Box - Archetype - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2021/07/hack-the-box-archetype-write-up/</link>
+      <pubDate>Tue, 27 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/hack-the-box-archetype-write-up/</guid>
+      <description>Enumeration Initial scan:
+nmap -sSV 10.10.10.27Second nmap scan with --script vuln
+We found a possible starting point: CVE-2008-4250.
+SMB Enumeration The next step is to try to connect in the SMB service:
+smbclient -L \\10.10.10.27 -NIPC$: this hidden share is a special share used for inter-process communication. It doesn’t allow one to access files or directories like other shares, but rather allows one to communicate with processes running on the remote system.</description>
+    </item>
+    
+    <item>
+      <title>TryHackme - Steel Mountain - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2021/07/tryhackme-steel-mountain-write-up/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2021/07/tryhackme-steel-mountain-write-up/</guid>
+      <description>Task 1. Introduction First of all, let&amp;rsquo;s nmap the machine IP.
+nmap -sS -A 10.10.169.181 -PnWe found a web service open port (80), let&amp;rsquo;s open the web page:
+Take a look at the source code:
+Who is the employee of the month?
+Bill Harper
+Task 2. Inicial Access Scan the machine with nmap. What is the other port running a web server on?
+Nmap gives this answer:
+8080</description>
+    </item>
+    
+  </channel>
+</rss>

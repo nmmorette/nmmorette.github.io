@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WeGIA on Natan Maia Morette</title>
+    <link>https://nmmorette.github.io/tags/wegia/</link>
+    <description>Recent content in WeGIA on Natan Maia Morette</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Natan Morette</copyright>
+    <lastBuildDate>Thu, 05 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/wegia/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CVE-2024-53470:Stored XSS in gateway_pagamento.php function WeGIA</title>
+      <link>https://nmmorette.github.io/posts/2024/12/cve-2024-53470stored-xss-in-gateway_pagamento.php-function-wegia/</link>
+      <pubDate>Thu, 05 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2024/12/cve-2024-53470stored-xss-in-gateway_pagamento.php-function-wegia/</guid>
+      <description>CVE-2024-53470:Stored XSS in gateway_pagamento.php function Vendor WeGIA (Web Gerenciador Institucional) is an integrated management system licensed under the GNU GPL v3.0, designed to enhance administration, control, and transparency for institutions.
+Affected Product Code Base WeGIA - v3.2.0
+Vulnerability Description A stored Cross-Site Scripting (XSS) vulnerability was identified in the WeGIA application. This vulnerability allows unauthorized scripts to be executed within the user&amp;rsquo;s browser context.
+POC File: gateway_pagamento.php
+Payload: &amp;lt;script&amp;gt;alert(&#39;Alert: XSS&#39;);&amp;lt;/script&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>CVE-2024-53471:Stored XSS in meio_pagamento.php function WeGIA</title>
+      <link>https://nmmorette.github.io/posts/2024/12/cve-2024-53471stored-xss-in-meio_pagamento.php-function-wegia/</link>
+      <pubDate>Thu, 05 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2024/12/cve-2024-53471stored-xss-in-meio_pagamento.php-function-wegia/</guid>
+      <description>CVE-2024-53471:Stored XSS in meio_pagamento.php function Vendor WeGIA (Web Gerenciador Institucional) is an integrated management system licensed under the GNU GPL v3.0, designed to enhance administration, control, and transparency for institutions.
+Affected Product Code Base WeGIA - v3.2.0
+Vulnerability Description A stored Cross-Site Scripting (XSS) vulnerability was identified in the WeGIA application. This vulnerability allows unauthorized scripts to be executed within the user&amp;rsquo;s browser context.
+POC File: meio_pagamento.php
+Payload: &amp;lt;script&amp;gt;alert(&#39;Alert: XSS4&#39;);&amp;lt;/script&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>CVE-2024-53472:CSRF in control.php to change password WeGIA</title>
+      <link>https://nmmorette.github.io/posts/2024/12/cve-2024-53472csrf-in-control.php-to-change-password-wegia/</link>
+      <pubDate>Thu, 05 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2024/12/cve-2024-53472csrf-in-control.php-to-change-password-wegia/</guid>
+      <description>CVE-2024-53472:CSRF in control.php to change password Vendor WeGIA (Web Gerenciador Institucional) is an integrated management system licensed under the GNU GPL v3.0, designed to enhance administration, control, and transparency for institutions.
+Affected Product Code Base WeGIA - v3.2.0
+Vulnerability Description A Cross-Site Request Forgery (CSRF) vulnerability was identified in the WeGIA application. This flaw enables an attacker to induce an authenticated user to perform unintended actions without their consent or awareness.</description>
+    </item>
+    
+    <item>
+      <title>CVE-2024-53473:Broken Access Control WeGIA</title>
+      <link>https://nmmorette.github.io/posts/2024/12/cve-2024-53473broken-access-control-wegia/</link>
+      <pubDate>Thu, 05 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2024/12/cve-2024-53473broken-access-control-wegia/</guid>
+      <description>CVE-2024-53473:Broken Access Control Vendor WeGIA (Web Gerenciador Institucional) is an integrated management system licensed under the GNU GPL v3.0, designed to enhance administration, control, and transparency for institutions.
+Affected Product Code Base WeGIA - v3.2.0
+Vulnerability Description A critical vulnerability was identified in the web application WeGIa. This vulnerability allows an attacker to change the password of the admin user by sending a POST request to the control.php endpoint without requiring authentication or authorization.</description>
+    </item>
+    
+  </channel>
+</rss>

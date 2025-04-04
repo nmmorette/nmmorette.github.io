@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Natan Maia Morette</title>
+    <link>https://nmmorette.github.io/</link>
+    <description>Recent content on Natan Maia Morette</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Natan Morette</copyright>
+    <lastBuildDate>Tue, 11 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hack the Box - Cap - Write Up</title>
+      <link>https://nmmorette.github.io/posts/2025/02/hack-the-box-cap-write-up/</link>
+      <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2025/02/hack-the-box-cap-write-up/</guid>
+      <description>Cap Enumeration nmap - 10.10.10.245 Initial enumeration using nmap:
+21/tcp open ftp 22/tcp open ssh 80/tcp open http In these situations, I typically start with port 80 and begin the enumeration process there.
+80-HTTP 80/tcp open http gunicorn |_http-title: Security Dashboard |_http-server-header: gunicorn Analyzing the webpage, I identified some network functions, such as netstat and ifconfig.
+My first thought was to attempt command injection, but it was not possible. However, upon further inspection of the Security Snapshot page, I discovered the ability to download a .</description>
+    </item>
+    
+    <item>
+      <title>OSINT - Básico na prática pt-br</title>
+      <link>https://nmmorette.github.io/posts/2024/12/osint-b%C3%A1sico-na-pr%C3%A1tica-pt-br/</link>
+      <pubDate>Wed, 11 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2024/12/osint-b%C3%A1sico-na-pr%C3%A1tica-pt-br/</guid>
+      <description>OSINT - Básico na prática Desafio Tryhackme ⚠️ Faça cadastro no site Tryhackme para participar do desafio.
+TryHackMe | Cyber Security Training
+Atalho Ferramentas úteis ⚠️ Confira esta página com diversas ferramentas úteis para OSINT, além de recomendações de livros, cursos e sites.
+OSINT-NaPrática
+OSINT O que é OSINT? OSINT (Open Source Intelligence) é a prática de coletar e analisar informações de fontes públicas e disponíveis para qualquer pessoa. Essas fontes podem incluir:</description>
+    </item>
+    
+    <item>
+      <title>OSINT - Desafio OSINT pt-br</title>
+      <link>https://nmmorette.github.io/posts/2024/12/osint-desafio-osint-pt-br/</link>
+      <pubDate>Wed, 11 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2024/12/osint-desafio-osint-pt-br/</guid>
+      <description>Desafio OSINT Esse desafio foi feito para dois eventos em 2024, na GloboSecWeek2024 e também na turma CSSDC24 da ESG.
+O desafio é o mesmo para ambos, porém as Flags são diferentes.
+Links para o Desafio https://tryhackme.com/r/room/osintcssdc2024
+https://tryhackme.com/jr/osintglobosecweek2024
+Task 1 OSINT -Imagem Qual nome do usuário? Utilize o exiftoolpara verificar informações da imagem. Existem diversas versões online disponíveis, além da classfica versão em CLI.
+É possível encontrar um nome de usuário no campo Owner Name.</description>
+    </item>
+    
+    <item>
+      <title>CVE-2024-53470:Stored XSS in gateway_pagamento.php function WeGIA</title>
+      <link>https://nmmorette.github.io/posts/2024/12/cve-2024-53470stored-xss-in-gateway_pagamento.php-function-wegia/</link>
+      <pubDate>Thu, 05 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2024/12/cve-2024-53470stored-xss-in-gateway_pagamento.php-function-wegia/</guid>
+      <description>CVE-2024-53470:Stored XSS in gateway_pagamento.php function Vendor WeGIA (Web Gerenciador Institucional) is an integrated management system licensed under the GNU GPL v3.0, designed to enhance administration, control, and transparency for institutions.
+Affected Product Code Base WeGIA - v3.2.0
+Vulnerability Description A stored Cross-Site Scripting (XSS) vulnerability was identified in the WeGIA application. This vulnerability allows unauthorized scripts to be executed within the user&amp;rsquo;s browser context.
+POC File: gateway_pagamento.php
+Payload: &amp;lt;script&amp;gt;alert(&#39;Alert: XSS&#39;);&amp;lt;/script&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>CVE-2024-53471:Stored XSS in meio_pagamento.php function WeGIA</title>
+      <link>https://nmmorette.github.io/posts/2024/12/cve-2024-53471stored-xss-in-meio_pagamento.php-function-wegia/</link>
+      <pubDate>Thu, 05 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2024/12/cve-2024-53471stored-xss-in-meio_pagamento.php-function-wegia/</guid>
+      <description>CVE-2024-53471:Stored XSS in meio_pagamento.php function Vendor WeGIA (Web Gerenciador Institucional) is an integrated management system licensed under the GNU GPL v3.0, designed to enhance administration, control, and transparency for institutions.
+Affected Product Code Base WeGIA - v3.2.0
+Vulnerability Description A stored Cross-Site Scripting (XSS) vulnerability was identified in the WeGIA application. This vulnerability allows unauthorized scripts to be executed within the user&amp;rsquo;s browser context.
+POC File: meio_pagamento.php
+Payload: &amp;lt;script&amp;gt;alert(&#39;Alert: XSS4&#39;);&amp;lt;/script&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>CVE-2024-53472:CSRF in control.php to change password WeGIA</title>
+      <link>https://nmmorette.github.io/posts/2024/12/cve-2024-53472csrf-in-control.php-to-change-password-wegia/</link>
+      <pubDate>Thu, 05 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2024/12/cve-2024-53472csrf-in-control.php-to-change-password-wegia/</guid>
+      <description>CVE-2024-53472:CSRF in control.php to change password Vendor WeGIA (Web Gerenciador Institucional) is an integrated management system licensed under the GNU GPL v3.0, designed to enhance administration, control, and transparency for institutions.
+Affected Product Code Base WeGIA - v3.2.0
+Vulnerability Description A Cross-Site Request Forgery (CSRF) vulnerability was identified in the WeGIA application. This flaw enables an attacker to induce an authenticated user to perform unintended actions without their consent or awareness.</description>
+    </item>
+    
+    <item>
+      <title>CVE-2024-53473:Broken Access Control WeGIA</title>
+      <link>https://nmmorette.github.io/posts/2024/12/cve-2024-53473broken-access-control-wegia/</link>
+      <pubDate>Thu, 05 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2024/12/cve-2024-53473broken-access-control-wegia/</guid>
+      <description>CVE-2024-53473:Broken Access Control Vendor WeGIA (Web Gerenciador Institucional) is an integrated management system licensed under the GNU GPL v3.0, designed to enhance administration, control, and transparency for institutions.
+Affected Product Code Base WeGIA - v3.2.0
+Vulnerability Description A critical vulnerability was identified in the web application WeGIa. This vulnerability allows an attacker to change the password of the admin user by sending a POST request to the control.php endpoint without requiring authentication or authorization.</description>
+    </item>
+    
+    <item>
+      <title>OSINT CTF - Menina Cyber Sec and Hack in Cariri</title>
+      <link>https://nmmorette.github.io/posts/2024/08/osint-ctf-menina-cyber-sec-and-hack-in-cariri/</link>
+      <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2024/08/osint-ctf-menina-cyber-sec-and-hack-in-cariri/</guid>
+      <description>OSINT - CTF - MCS Solutions for the OSINT CTF challenges conducted by Menina de Cyber Sec and Hack in Cariri in August 2024.
+The Trip of My Dreams https://hackincariri.s3.amazonaws.com/meninadecybersec/osint/desafio+1/OSINT-easy-01.jpeg
+ The trip of my dreams
+“The photos from the trip turned out amazing!” This is the photo of where we had a snack after a long walk through the city. The flag is the name of the establishment where the cat is coming out of.</description>
+    </item>
+    
+    <item>
+      <title>Hackerviser Secure Command - Warmup Stage I</title>
+      <link>https://nmmorette.github.io/posts/2024/03/hackerviser-secure-command-warmup-stage-i/</link>
+      <pubDate>Fri, 01 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2024/03/hackerviser-secure-command-warmup-stage-i/</guid>
+      <description>Secure Command Introduction Secure Shell (SSH) is a protocol used to securely access and manage devices on a network. It encrypts data to protect confidentiality and integrity, making SSH a preferred option over Telnet for remote administration.
+What is SSH? SSH is a cryptographic network protocol that facilitates secure communication over an unsecured network. Originally designed as a replacement for insecure protocols like Telnet, SSH ensures confidentiality and integrity of data exchanged between two networked devices.</description>
+    </item>
+    
+    <item>
+      <title>Hackerviser 007 - Warmup Stage I</title>
+      <link>https://nmmorette.github.io/posts/2024/02/hackerviser-007-warmup-stage-i/</link>
+      <pubDate>Thu, 29 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2024/02/hackerviser-007-warmup-stage-i/</guid>
+      <description>007 Introduction Remote Desktop Protocol (RDP) has become an indispensable tool in today&amp;rsquo;s digital landscape, enabling seamless remote access to computers and servers from anywhere in the world.
+What is Remote Desktop Protocol (RDP)? Remote Desktop Protocol (RDP) is a proprietary protocol developed by Microsoft, designed to facilitate remote desktop connections between computers over a network connection. It allows users to access and control a remote computer as if they were physically present at the machine.</description>
+    </item>
+    
+  </channel>
+</rss>

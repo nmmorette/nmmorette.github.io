@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OSINT on Natan Maia Morette</title>
+    <link>https://nmmorette.github.io/series/osint/</link>
+    <description>Recent content in OSINT on Natan Maia Morette</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Natan Morette</copyright>
+    <lastBuildDate>Wed, 11 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/series/osint/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OSINT - Básico na prática pt-br</title>
+      <link>https://nmmorette.github.io/posts/2024/12/osint-b%C3%A1sico-na-pr%C3%A1tica-pt-br/</link>
+      <pubDate>Wed, 11 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2024/12/osint-b%C3%A1sico-na-pr%C3%A1tica-pt-br/</guid>
+      <description>OSINT - Básico na prática Desafio Tryhackme ⚠️ Faça cadastro no site Tryhackme para participar do desafio.
+TryHackMe | Cyber Security Training
+Atalho Ferramentas úteis ⚠️ Confira esta página com diversas ferramentas úteis para OSINT, além de recomendações de livros, cursos e sites.
+OSINT-NaPrática
+OSINT O que é OSINT? OSINT (Open Source Intelligence) é a prática de coletar e analisar informações de fontes públicas e disponíveis para qualquer pessoa. Essas fontes podem incluir:</description>
+    </item>
+    
+    <item>
+      <title>OSINT - Desafio OSINT pt-br</title>
+      <link>https://nmmorette.github.io/posts/2024/12/osint-desafio-osint-pt-br/</link>
+      <pubDate>Wed, 11 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2024/12/osint-desafio-osint-pt-br/</guid>
+      <description>Desafio OSINT Esse desafio foi feito para dois eventos em 2024, na GloboSecWeek2024 e também na turma CSSDC24 da ESG.
+O desafio é o mesmo para ambos, porém as Flags são diferentes.
+Links para o Desafio https://tryhackme.com/r/room/osintcssdc2024
+https://tryhackme.com/jr/osintglobosecweek2024
+Task 1 OSINT -Imagem Qual nome do usuário? Utilize o exiftoolpara verificar informações da imagem. Existem diversas versões online disponíveis, além da classfica versão em CLI.
+É possível encontrar um nome de usuário no campo Owner Name.</description>
+    </item>
+    
+  </channel>
+</rss>

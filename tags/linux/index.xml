@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on Natan Maia Morette</title>
+    <link>https://nmmorette.github.io/tags/linux/</link>
+    <description>Recent content in linux on Natan Maia Morette</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Natan Morette</copyright>
+    <lastBuildDate>Tue, 21 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nmmorette.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TryHackme - Rootme - Write-Up</title>
+      <link>https://nmmorette.github.io/posts/2023/11/tryhackme-rootme-write-up/</link>
+      <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nmmorette.github.io/posts/2023/11/tryhackme-rootme-write-up/</guid>
+      <description>RootMe Enumeration nmap Initial enumeration with nmap
+nmap 10.10.88.1 Starting Nmap 7.94SVN ( https://nmap.org ) at 2023-11-21 05:03 PST Nmap scan report for 10.10.88.1 Host is up (0.32s latency). Not shown: 996 closed tcp ports (conn-refused) PORT STATE SERVICE 1/tcp filtered tcpmux 22/tcp open ssh 80/tcp open http 2200/tcp filtered ici Nmap done: 1 IP address (1 host up) scanned in 27.19 seconds After conducting the initial enumeration using Nmap, I discovered two open ports: port 22, typically used for Secure Shell (SSH) connections, and port 80, which is the default port for HTTP traffic.</description>
+    </item>
+    
+  </channel>
+</rss>
