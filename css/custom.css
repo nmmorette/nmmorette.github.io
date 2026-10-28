@@ -1,0 +1,26 @@
+/* Box do banner de replica de advisory (shortcode layouts/shortcodes/advisory.html).
+   Usa as variaveis do tema para funcionar no modo claro e no escuro. */
+.advisory-notice {
+  border-left: 4px solid var(--accent, #298a29);
+  background: rgba(127, 127, 127, 0.08);
+  padding: 0.8rem 1.2rem;
+  margin: 1.5rem 0 2rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+.advisory-notice p { margin: 0.5rem 0; }
+.advisory-notice a { word-break: break-word; }
+
+/* Nota editorial no rodape do post, quando a replica diverge do registro oficial. */
+.editorial-note {
+  border-left: 4px solid #d29922;
+  background: rgba(210, 153, 34, 0.10);
+  padding: 0.8rem 1.2rem;
+  margin: 2rem 0;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+.editorial-note p { margin: 0.4rem 0; }
+
+/* Contagem de CVEs no topo da tabela em /achievements/. */
+.cve-count { font-size: 1.1rem; }
