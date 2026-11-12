@@ -43,6 +43,34 @@
   box-sizing: border-box;
 }
 
+/* Professional Associations em /whoami/: logo (mesmo tile branco do Hall of
+   Fame) ao lado de cada filiacao. */
+.assoc-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+.assoc-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin: 0.6rem 0;
+}
+.assoc-list li::before {
+  content: none;
+}
+.assoc-logo {
+  flex: 0 0 56px;
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 8px;
+  padding: 4px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 /* Badges do Accredible em /certifications/, no formato dos cards do Credly
    (150 x 270, imagem em cima, nome e emissor embaixo). Cores herdadas do
    tema, para acompanhar o modo claro e o escuro como o embed do Credly. */
